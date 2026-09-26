@@ -176,10 +176,37 @@ def main():
         # verification: recompute
         lhs = lam * S0 + S1
         verr = float(abs(lhs - r))
-        print(f"  N={N:3d}: x0={mm.nstr(x0, 12)} lambda={mm.nstr(lam, 20)} "
-              f"[{tag}] verify_err={verr:.2e}")
+        # x0 algebraicity (quadratic pslq) for the explicit-form table
+        x0r = mm.mpf(x0.real)
+        relx = mm.pslq([x0r ** 2, x0r, mm.mpf(1)], tol=mm.mpf('1e-28'),
+                       maxcoeff=10 ** 5)
+        x0_tag = (f"quadratic {relx[0]}v^2+{relx[1]}v+{relx[2]}=0"
+                  if relx else "higher-degree")
+        # radical form for quadratic lambda (positive-discriminant, rational
+        # coefficients): v = (-b +/- sqrt(disc)) / (2a)
+        lam_rad = ""
+        if tag.startswith("quadratic"):
+            import re as _re
+            m = _re.match(r"quadratic (-?\d+)v\^2\+(-?\d+)v\+(-?\d+)=0", tag)
+            if m:
+                a_, b_, c_ = map(int, m.groups())
+                disc = b_ * b_ - 4 * a_ * c_
+                r2 = int(mm.nstr(mm.sqrt(mm.mpf(disc)), 15).split('.')[0])                     if mm.sqrt(mm.mpf(disc)) == int(mm.sqrt(mm.mpf(disc)))                     else None
+                if r2 is None:
+                    r2 = None
+                root1 = (-b_ + mm.sqrt(mm.mpf(disc))) / (2 * a_)
+                root2 = (-b_ - mm.sqrt(mm.mpf(disc))) / (2 * a_)
+                pick = root1 if abs(root1 - lam) < abs(root2 - lam) else root2
+                sgn = "+" if disc >= 0 and pick == (-b_ + mm.sqrt(
+                    mm.mpf(disc))) / (2 * a_) else "-"
+                lam_rad = f"lambda = ({-b_} {sgn} sqrt({disc}))/{2*a_}"
+        print(f"  N={N:3d}: x0={mm.nstr(x0, 12)} [{x0_tag}]")
+        print(f"          lambda={mm.nstr(lam, 20)} [{tag}] {lam_rad}")
+        print(f"          verify_err={verr:.2e}")
         out["generation"].append({"N": N, "x0": mm.nstr(x0, 30),
+                                  "x0_tag": x0_tag,
                                   "lambda": mm.nstr(lam, 40),
+                                  "lambda_radical": lam_rad,
                                   "algebraic_tag": tag,
                                   "verify_err": verr})
 
