@@ -60,21 +60,28 @@ def train_vq(x, epochs=4000, n_codes=12):
     vq = VQAE(x.shape[1], 8, n_codes)
     opt = torch.optim.Adam(vq.parameters(), lr=2e-3)
     xt = torch.tensor(x, dtype=torch.float32)
+    ema = 0.95
     for step in range(epochs):
-        rec, z_e, z_q, _ = vq(xt)
+        rec, z_e, z_q, idx = vq(xt)
         loss = ((rec - xt) ** 2).mean() \
-            + 0.25 * ((z_e - z_q.detach()) ** 2).mean() \
+            + 0.05 * ((z_e - z_q.detach()) ** 2).mean() \
             + ((z_e.detach() - z_q) ** 2).mean()
         opt.zero_grad()
         loss.backward()
         opt.step()
-        with torch.no_grad():  # codebook re-estimation (k-means style)
+        with torch.no_grad():  # EMA codebook + dead-code reinjection
             z_e_all = vq.enc(xt)
             z_q_all, idx = vq.quantize(z_e_all)
-            for c in range(n_codes):
+            used = np.unique(idx.numpy())
+            for c in used:
                 mask = idx == c
-                if mask.any():
-                    vq.codes[c] = z_e_all[mask].mean(0)
+                vq.codes[c] = ema * vq.codes[c] \
+                    + (1 - ema) * z_e_all[mask].mean(0)
+            if step % 200 == 0 and len(used) < n_codes // 2:
+                dead = [c for c in range(n_codes) if c not in used]
+                for c in dead:
+                    j = int(np.random.default_rng(step).integers(0, len(xt)))
+                    vq.codes[c] = z_e_all[j]
     return vq
 
 
@@ -84,7 +91,7 @@ def main():
     vecs = [eisenstein_vec(w, 16) for w in weights]
     X, labels = [], []
     for li, v in enumerate(vecs):
-        for _ in range(3):
+        for _ in range(10):
             noisy = v + rng.normal(0, 2e-2, len(v))
             X.append(noisy / (np.linalg.norm(noisy) + 1e-12))
             labels.append(li)
@@ -116,7 +123,7 @@ def main():
     vecs_e = [eta_poly_pow(m, 16) for m in exps]
     Xt, labels_t = [], []
     for li, v in enumerate(vecs_e):
-        for _ in range(3):
+        for _ in range(10):
             noisy = v + rng.normal(0, 2e-2, len(v))
             Xt.append(noisy / (np.linalg.norm(noisy) + 1e-12))
             labels_t.append(li)
