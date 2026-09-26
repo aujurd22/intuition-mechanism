@@ -1,0 +1,55 @@
+{
+ "meta": {
+  "templates": [
+   "sq_plus",
+   "sq_minus",
+   "diff_squares",
+   "cube_plus",
+   "cube_minus",
+   "distrib2"
+  ],
+  "width": 64,
+  "vocab": 26,
+  "instances": 20,
+  "relabels": 3,
+  "seed": 0
+ },
+ "results": [
+  {
+   "b": 256,
+   "compression": 6.5,
+   "recon_loss": 0.02578,
+   "SD": 0.655,
+   "surface_dom": 0.023,
+   "ARI_struct": 0.023,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 512,
+   "compression": 3.2,
+   "recon_loss": 0.026,
+   "SD": 0.658,
+   "surface_dom": 0.029,
+   "ARI_struct": 0.038,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 1024,
+   "compression": 1.6,
+   "recon_loss": 0.02674,
+   "SD": 0.658,
+   "surface_dom": 0.027,
+   "ARI_struct": 0.042,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 1664,
+   "compression": 1.0,
+   "recon_loss": 0.02698,
+   "SD": 0.699,
+   "surface_dom": 0.025,
+   "ARI_struct": 0.07,
+   "ARI_surface": 0.0
+  }
+ ]
+}

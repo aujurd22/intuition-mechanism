@@ -85,21 +85,21 @@ def main():
     args = ap.parse_args()
 
     data = np.load(args.dataset, allow_pickle=True)
-    adj = data["adj"]
+    x = (data["adj"] if "adj" in data else data["x"]).astype(np.float32)
+    x = x.reshape(len(x), -1)
     family = data["family"]
     instance = data["instance"]
     meta = json.loads(str(data["meta"]))
-    n = meta["n"]
-    x = adj.reshape(len(adj), n * n)
-    print(f"dataset: {x.shape[0]} samples, families={meta['families']}, "
-          f"noise={meta['noise']}", flush=True)
+    fam_names = meta.get("families") or meta.get("templates")
+    print(f"dataset: {x.shape[0]} samples, families={fam_names}, "
+          f"noise={meta.get('noise', 'n/a')}", flush=True)
 
     results = []
     for b in [int(v) for v in args.bottlenecks.split(",")]:
         t0 = time.time()
         z, loss = train_ae(x, b, steps=args.steps)
         sd, surf = sd_metrics(z, family, instance, k=args.knn)
-        km = KMeans(n_clusters=len(meta["families"]), n_init=10,
+        km = KMeans(n_clusters=len(fam_names), n_init=10,
                     random_state=0).fit(z)
         ari_struct = ari(km.labels_, family)
         # surface ARI only meaningful when instances span clusters; instance

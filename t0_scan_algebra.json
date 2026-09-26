@@ -1,0 +1,73 @@
+{
+ "meta": {
+  "templates": [
+   "sq_plus",
+   "sq_minus",
+   "diff_squares",
+   "cube_plus",
+   "cube_minus",
+   "distrib2"
+  ],
+  "width": 64,
+  "vocab": 26,
+  "instances": 20,
+  "relabels": 3,
+  "seed": 0
+ },
+ "results": [
+  {
+   "b": 1,
+   "compression": 1664.0,
+   "recon_loss": 0.00773,
+   "SD": 0.166,
+   "surface_dom": 0.045,
+   "ARI_struct": 0.083,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 2,
+   "compression": 832.0,
+   "recon_loss": 0.01381,
+   "SD": 0.606,
+   "surface_dom": 0.028,
+   "ARI_struct": 0.078,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 4,
+   "compression": 416.0,
+   "recon_loss": 0.01442,
+   "SD": 0.671,
+   "surface_dom": 0.023,
+   "ARI_struct": 0.225,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 8,
+   "compression": 208.0,
+   "recon_loss": 0.01766,
+   "SD": 0.634,
+   "surface_dom": 0.024,
+   "ARI_struct": 0.216,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 32,
+   "compression": 52.0,
+   "recon_loss": 0.02268,
+   "SD": 0.591,
+   "surface_dom": 0.028,
+   "ARI_struct": 0.198,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 144,
+   "compression": 11.6,
+   "recon_loss": 0.02441,
+   "SD": 0.619,
+   "surface_dom": 0.029,
+   "ARI_struct": 0.052,
+   "ARI_surface": 0.0
+  }
+ ]
+}
