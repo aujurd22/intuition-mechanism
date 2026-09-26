@@ -1,0 +1,12 @@
+{
+ "question": "does a pure-noise surface tag (unique per instance, no family information) capture the discovered latent as it grows to dominate the input string?",
+ "probe": "each instance's 3 relabels share one tag -> tag capture inflates same-instance kNN recall; pure invariance keeps it at chance (~0.017). AE hyperparams frozen across tag_len; seed 0.",
+ "results": [
+  {"tag_len": 0,  "fam_knn@5": 0.772, "inst_knn@5": 0.011, "recon_mse": 0.0083},
+  {"tag_len": 16, "fam_knn@5": 0.759, "inst_knn@5": 0.013, "recon_mse": 0.0118},
+  {"tag_len": 32, "fam_knn@5": 0.742, "inst_knn@5": 0.016, "recon_mse": 0.0150},
+  {"tag_len": 64, "fam_knn@5": 0.718, "inst_knn@5": 0.046, "recon_mse": 0.0208}
+ ],
+ "verdict": "INVARIANT-ROBUST (mild salience gradient). At tag_len=64 the noise tag is >2x the formula content, yet family recall drops only 5.4pp (0.772->0.718) and instance (tag) recall rises to just 0.046 vs chance 0.017. Salience capture exists but is second-order; the algebraic family remains the dominant organizing axis of the latent.",
+ "ties_to_program": "supports L1 (structure = algebraic, not lexical): surface-dominant nuisance strings do not hijack the representation. Consistent with P13 (discovery needs the right OPERATOR, not more capacity) -- the failure mode there is absence of the extracting transform, not salience hijack."
+}
