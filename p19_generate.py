@@ -73,7 +73,7 @@ def main():
     # ---- calibration: N=5, x0=1/20, lambda=1/4 ----
     N, x0, lam = 5, mm.mpf(1) / 20, mm.mpf(1) / 4
     S0, S1 = sums(x0)
-    lhs = S0 + lam * S1
+    lhs = lam * S0 + S1
     target = rhs(N, x0)
     # identity shape: lhs = target/pi  (check the exact constant form)
     err = float(abs(lhs * mm.pi - target))
@@ -127,7 +127,7 @@ def main():
         lam_r = mm.rational(lam)
         is_alg = lam_r[1] is not None
         # verification: recompute lhs with recovered lambda
-        lhs = S0 + lam * S1
+        lhs = lam * S0 + S1
         err = float(abs(lhs * mm.pi - r))
         print(f"  {name}: tau_im={mm.nstr(tau_im, 8)} N={mm.nstr(N_eff, 10)}")
         print(f"    lambda = {mm.nstr(lam, 30)}")
