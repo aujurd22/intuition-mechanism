@@ -1,0 +1,66 @@
+{
+ "inherited_ari": 0.6735935414670892,
+ "embed_ari": 0.14190834624750942,
+ "rows": [
+  {
+   "seed": 0,
+   "n_codes": 8,
+   "ARI": 0.272
+  },
+  {
+   "seed": 0,
+   "n_codes": 12,
+   "ARI": 0.693
+  },
+  {
+   "seed": 0,
+   "n_codes": 16,
+   "ARI": 0.693
+  },
+  {
+   "seed": 0,
+   "n_codes": 24,
+   "ARI": 0.686
+  },
+  {
+   "seed": 1,
+   "n_codes": 8,
+   "ARI": 0.272
+  },
+  {
+   "seed": 1,
+   "n_codes": 12,
+   "ARI": 0.504
+  },
+  {
+   "seed": 1,
+   "n_codes": 16,
+   "ARI": 0.676
+  },
+  {
+   "seed": 1,
+   "n_codes": 24,
+   "ARI": 0.767
+  },
+  {
+   "seed": 2,
+   "n_codes": 8,
+   "ARI": 0.272
+  },
+  {
+   "seed": 2,
+   "n_codes": 12,
+   "ARI": 0.664
+  },
+  {
+   "seed": 2,
+   "n_codes": 16,
+   "ARI": 0.664
+  },
+  {
+   "seed": 2,
+   "n_codes": 24,
+   "ARI": 0.686
+  }
+ ]
+}
