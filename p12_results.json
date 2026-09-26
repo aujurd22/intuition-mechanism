@@ -1,0 +1,204 @@
+{
+ "plan": "P12",
+ "dataset": "hard-Eisenstein 12 weights x 10 instances, 16 coeffs, noise 2e-2, rng seed 0 (identical to t7_multiseed)",
+ "protocol": {
+  "codes_grid": [
+   8,
+   12,
+   16,
+   24,
+   32,
+   48,
+   64
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "train": "t7_multiseed.train_vq, 4000 epochs, imported verbatim"
+ },
+ "inherited_ari": 0.6735935414670892,
+ "per_codes": {
+  "8": {
+   "mean": 0.2723,
+   "std": 0.0,
+   "values": [
+    0.272,
+    0.272,
+    0.272
+   ],
+   "mean_gt_inherited": false
+  },
+  "12": {
+   "mean": 0.6205,
+   "std": 0.0833,
+   "values": [
+    0.693,
+    0.504,
+    0.664
+   ],
+   "mean_gt_inherited": false
+  },
+  "16": {
+   "mean": 0.6778,
+   "std": 0.0121,
+   "values": [
+    0.693,
+    0.676,
+    0.664
+   ],
+   "mean_gt_inherited": true
+  },
+  "24": {
+   "mean": 0.728,
+   "std": 0.0596,
+   "values": [
+    0.686,
+    0.812,
+    0.686
+   ],
+   "mean_gt_inherited": true
+  },
+  "32": {
+   "mean": 0.6411,
+   "std": 0.0495,
+   "values": [
+    0.582,
+    0.703,
+    0.638
+   ],
+   "mean_gt_inherited": false
+  },
+  "48": {
+   "mean": 0.56,
+   "std": 0.0347,
+   "values": [
+    0.571,
+    0.596,
+    0.513
+   ],
+   "mean_gt_inherited": false
+  },
+  "64": {
+   "mean": 0.4825,
+   "std": 0.0626,
+   "values": [
+    0.394,
+    0.529,
+    0.524
+   ],
+   "mean_gt_inherited": false
+  }
+ },
+ "rows": [
+  {
+   "n_codes": 8,
+   "seed": 0,
+   "ARI": 0.272
+  },
+  {
+   "n_codes": 8,
+   "seed": 1,
+   "ARI": 0.272
+  },
+  {
+   "n_codes": 8,
+   "seed": 2,
+   "ARI": 0.272
+  },
+  {
+   "n_codes": 12,
+   "seed": 0,
+   "ARI": 0.693
+  },
+  {
+   "n_codes": 12,
+   "seed": 1,
+   "ARI": 0.504
+  },
+  {
+   "n_codes": 12,
+   "seed": 2,
+   "ARI": 0.664
+  },
+  {
+   "n_codes": 16,
+   "seed": 0,
+   "ARI": 0.693
+  },
+  {
+   "n_codes": 16,
+   "seed": 1,
+   "ARI": 0.676
+  },
+  {
+   "n_codes": 16,
+   "seed": 2,
+   "ARI": 0.664
+  },
+  {
+   "n_codes": 24,
+   "seed": 0,
+   "ARI": 0.686
+  },
+  {
+   "n_codes": 24,
+   "seed": 1,
+   "ARI": 0.812
+  },
+  {
+   "n_codes": 24,
+   "seed": 2,
+   "ARI": 0.686
+  },
+  {
+   "n_codes": 32,
+   "seed": 0,
+   "ARI": 0.582
+  },
+  {
+   "n_codes": 32,
+   "seed": 1,
+   "ARI": 0.703
+  },
+  {
+   "n_codes": 32,
+   "seed": 2,
+   "ARI": 0.638
+  },
+  {
+   "n_codes": 48,
+   "seed": 0,
+   "ARI": 0.571
+  },
+  {
+   "n_codes": 48,
+   "seed": 1,
+   "ARI": 0.596
+  },
+  {
+   "n_codes": 48,
+   "seed": 2,
+   "ARI": 0.513
+  },
+  {
+   "n_codes": 64,
+   "seed": 0,
+   "ARI": 0.394
+  },
+  {
+   "n_codes": 64,
+   "seed": 1,
+   "ARI": 0.529
+  },
+  {
+   "n_codes": 64,
+   "seed": 2,
+   "ARI": 0.524
+  }
+ ],
+ "curve_shape": "non-monotone",
+ "c_star": null,
+ "verdict": "NON-ROBUST"
+}
