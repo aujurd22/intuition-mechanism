@@ -1,0 +1,10 @@
+{
+ "calibration": {
+  "N": 5,
+  "x0": "1/20",
+  "lambda": "1/4",
+  "abs_err_pi_scaled": 3.2374962833232943,
+  "pass": false
+ },
+ "generation": []
+}
