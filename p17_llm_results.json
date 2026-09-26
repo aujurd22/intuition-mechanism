@@ -1,0 +1,56 @@
+{
+ "accs": {
+  "A_lit": 0.235,
+  "B_counterfactual": 0.25,
+  "C_control": 0.0
+ },
+ "raw": {
+  "A_lit": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0
+  ],
+  "B_counterfactual": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   1,
+   0,
+   1
+  ],
+  "C_control": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "verdict": "INCONCLUSIVE",
+ "model": "Ternary-Bonsai-2-27B (PQ2), temp 0"
+}
