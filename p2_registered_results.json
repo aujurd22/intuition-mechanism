@@ -1,0 +1,132 @@
+{
+ "protocol": {
+  "draws": 10,
+  "instances_per_family": 2,
+  "samples_per_draw": 162
+ },
+ "rows": [
+  {
+   "b": 1,
+   "compression": 144.0,
+   "recon_loss": 0.10875,
+   "SD": 0.159,
+   "surface_dom": 0.051,
+   "ARI_struct_reg": 0.172,
+   "ARI_instance_reg": -0.006,
+   "gap_registered": 0.178,
+   "gap_std": 0.043
+  },
+  {
+   "b": 2,
+   "compression": 72.0,
+   "recon_loss": 0.03572,
+   "SD": 0.245,
+   "surface_dom": 0.047,
+   "ARI_struct_reg": 0.109,
+   "ARI_instance_reg": -0.005,
+   "gap_registered": 0.114,
+   "gap_std": 0.014
+  },
+  {
+   "b": 4,
+   "compression": 36.0,
+   "recon_loss": 0.03271,
+   "SD": 0.369,
+   "surface_dom": 0.042,
+   "ARI_struct_reg": 0.112,
+   "ARI_instance_reg": -0.007,
+   "gap_registered": 0.12,
+   "gap_std": 0.031
+  },
+  {
+   "b": 8,
+   "compression": 18.0,
+   "recon_loss": 0.01958,
+   "SD": 0.309,
+   "surface_dom": 0.045,
+   "ARI_struct_reg": 0.102,
+   "ARI_instance_reg": -0.006,
+   "gap_registered": 0.109,
+   "gap_std": 0.011
+  },
+  {
+   "b": 16,
+   "compression": 9.0,
+   "recon_loss": 0.02141,
+   "SD": 0.344,
+   "surface_dom": 0.047,
+   "ARI_struct_reg": 0.137,
+   "ARI_instance_reg": -0.008,
+   "gap_registered": 0.145,
+   "gap_std": 0.031
+  },
+  {
+   "b": 32,
+   "compression": 4.5,
+   "recon_loss": 0.02699,
+   "SD": 0.409,
+   "surface_dom": 0.04,
+   "ARI_struct_reg": 0.208,
+   "ARI_instance_reg": -0.01,
+   "gap_registered": 0.218,
+   "gap_std": 0.041
+  },
+  {
+   "b": 64,
+   "compression": 2.2,
+   "recon_loss": 0.0202,
+   "SD": 0.412,
+   "surface_dom": 0.044,
+   "ARI_struct_reg": 0.157,
+   "ARI_instance_reg": -0.009,
+   "gap_registered": 0.166,
+   "gap_std": 0.02
+  },
+  {
+   "b": 144,
+   "compression": 1.0,
+   "recon_loss": 0.02369,
+   "SD": 0.383,
+   "surface_dom": 0.04,
+   "ARI_struct_reg": 0.132,
+   "ARI_instance_reg": -0.001,
+   "gap_registered": 0.134,
+   "gap_std": 0.016
+  }
+ ],
+ "verdicts": {
+  "1": {
+   "in_window": false,
+   "p2_registered_hold": true
+  },
+  "2": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "4": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "8": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "16": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "32": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "64": {
+   "in_window": true,
+   "p2_registered_hold": true
+  },
+  "144": {
+   "in_window": true,
+   "p2_registered_hold": true
+  }
+ },
+ "verdict": "HOLDS in window"
+}
