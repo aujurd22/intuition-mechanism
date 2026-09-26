@@ -123,6 +123,9 @@ def main():
     mE = knn_metrics(emb, s_arr)
 
     # ---- Tier B: ratio-normalized R-sequences (per-series params) ----
+    # v2 fix (review F01/F02): DROP R_0 -- it is polluted by c0 (the c0 term
+    # enters c_0 and contaminates c_1/c_0); the signature lives in the
+    # SHAPE of R_k for k>=1.
     R = []
     for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
         c = seqs_raw[i]
@@ -133,18 +136,21 @@ def main():
                 continue
             lin_corr = (Al + Bl * k) / (Al + Bl * (k + 1))
             rk.append((c[k + 1] / c[k]) * lin_corr / z)
-        rk = np.array(rk, dtype=np.float64)
+        rk = np.array(rk, dtype=np.float64)[1:]   # drop rk[0] (c0-polluted)
         rk = rk / (np.linalg.norm(rk) + 1e-300)
         R.append(rk)
     R = np.stack(R).astype(np.float32)
     mB = knn_metrics(R, s_arr)
 
     # ---- Tier C: theoretical signature templates ----
-    ks = np.arange(1, NC)
+    # aligned with R (k>=2 after dropping R_0 AND rk[0]): template over
+    # k = 2..NC-1 -- same length as R (NC-2)
+    ks = np.arange(2, NC)
     templates = {}
     for s in (2, 3, 4, 6):
         templates[s] = np.array([(k + 0.5) * (k + 1 / s) * (k + 1 - 1 / s)
                                  / (k + 1) ** 3 for k in ks], dtype=np.float64)
+        templates[s] = templates[s] / (np.linalg.norm(templates[s]) + 1e-300)
     correct = 0
     per_sig_c = {}
     for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
@@ -152,25 +158,29 @@ def main():
         rk_n = rk / (np.linalg.norm(rk) + 1e-300)
         dists = {}
         for st, T in templates.items():
-            Tn = T / (np.linalg.norm(T) + 1e-300)
-            dists[st] = float(np.linalg.norm(rk_n - Tn))
+            dists[st] = float(np.linalg.norm(rk_n - T))
         pred = min(dists, key=dists.get)
         per_sig_c.setdefault(s, []).append(pred == s)
     c_acc = float(np.mean([np.mean(v) for v in per_sig_c.values()]))
 
     # ---- signature constant extraction: c_s = 2*R_0 ----
-    # R_0(true) = H_1/H_0 = (1/2)*(1/s)*(1-1/s) -> c_s = 2*R_0
+    # R_0(true) = H_1/H_0 = (1/2)*(1/s)*(1-1/s) -> c_s = 2*R_0.
+    # Restricted to eq28-34 (no c0 term in those series -> R_0 unpolluted).
     THEO = {2: 0.25, 3: 2 / 9, 4: 3 / 16, 6: 5 / 36}
-    print("\n=== signature constant extraction (c_s = 2*R_0, true R-form) ===")
+    print("\n=== signature constant extraction (c_s = 2*R_0, eq28-34 only) ===")
     ok_c = 0
+    n_c = 0
     for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
+        if c0 is not None:
+            continue   # eq35-44 have c0: R_0 polluted, excluded
         cs = 2 * R[i][0]
         pred = min(THEO, key=lambda st: abs(cs - THEO[st]))
         ok = pred == s
         ok_c += ok
+        n_c += 1
         print(f"  {eq}: c_s = {cs:.6f} -> s = {pred} "
               f"({'OK' if ok else 'WRONG'}, true {s})")
-    print(f"  c_s classification accuracy: {ok_c}/{len(SERIES)}")
+    print(f"  c_s classification accuracy: {ok_c}/{n_c}")
 
     mR = knn_metrics(R, s_arr)
     print(f"\nTier A  blind raw   : {mA}")

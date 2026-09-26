@@ -49,20 +49,14 @@ def main() -> int:
     t29 = sum((5 + 42 * k) * hyper3(mpf(1) / 2, mpf(1) / 2, mpf(1) / 2, k)
               * (mpf(1) / 64) ** k for k in range(60))
     check(29, t29, 16 / pi)
-    # eq 30: solve for z ((sqrt5-1)/2^8 transcription suspect)
+    # eq 30: NON-CIRCULAR verification -- z from the literature form
+    # ((3-sqrt5)/16)^(4n) with the 64^n basis normalization (external source),
+    # matching the numerically solved 3.3260e-4 independently.
     A30, B30 = 5 * sqrt(5) - 1, 42 * sqrt(5) + 30
-    try:
-        def sum30(zz):
-            return sum((A30 + B30 * k)
-                       * hyper3(mpf(1) / 2, mpf(1) / 2, mpf(1) / 2, k)
-                       * zz ** k for k in range(120))
-        z30 = findroot(lambda zz: sum30(zz) - 32 / pi,
-                       ((sqrt(5) - 1) / 2) ** 8)
-        print(f"  eq(30): solved z = {mp.nstr(z30, 25)}")
-        t30 = sum30(z30)
-        check(30, t30, 32 / pi)
-    except Exception as e:
-        print(f"  eq(30): solve failed {str(e)[:60]}")
+    z30 = 64 * ((3 - sqrt(5)) / 16) ** 4
+    t30 = sum((A30 + B30 * k) * hyper3(mpf(1) / 2, mpf(1) / 2, mpf(1) / 2, k)
+              * z30 ** k for k in range(120))
+    check(30, t30, 32 / pi)
 
     # ---- s=3 family (eq 31, 32) ----
     t31 = sum((2 + 15 * k) * hyper3(mpf(1) / 2, mpf(1) / 3, mpf(2) / 3, k)
