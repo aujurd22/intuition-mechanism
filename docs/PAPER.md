@@ -89,15 +89,21 @@ smallest Γ-gap.  Registered caveat: the pre-registered arithmetic band
 band-setting.
 
 **Proposition (Γ-constant).** Let H_s(k) = (1/2)_k(1/s)_k(1−1/s)_k/(k!)³.
-Then lim_{k→∞} H_s(k)·k^{3/2} = 1/(Γ(1/2)Γ(1/s)Γ(1−1/s)).
+Then lim_{k→∞} H_s(k)·k^{3/2} = 1/(Γ(1/2)Γ(1/s)Γ(1−1/s)), which by
+Euler's reflection formula collapses to the closed form
+
+  C_s = sin(π/s) / π^{3/2}.
+
 *Proof sketch:* (a)_k/k! = Γ(k+a)/(Γ(a)Γ(k+1)) ~ k^{a−1}/Γ(a) by Stirling;
 multiply the three factors; the exponents sum to −3/2 and the constants
-to the reciprocal Γ-triple.  The product converges as O(1/k); numerics:
-extrapolated constant matches the formula to 1.7–3.4e-17 for all four s
-(p16_gamma.py, after the registered revision).
+to the reciprocal Γ-triple, then apply the reflection formula.  The
+product converges as O(1/k); numerics: extrapolated constant matches the
+closed form to 1.7–3.4e-17 for all four s (p16_gamma.py, after the
+registered revision).
 *Corollary (a-priori confusability):* adjacent-s confusion is predicted
-by the Γ-gap |log C_a − log C_b|; the ordering {2,3} < {3,4} < {2,4} =
-{4,6} < {3,6} < {2,6} matches the empirical confusion counts.
+by the Γ-gap |log C_a − log C_b| = |log sin(π/a) − log sin(π/b)|; the
+ordering {2,3} < {3,4} < {2,4} = {4,6} < {3,6} < {2,6} matches the
+empirical confusion counts.
 
 ## 4b. Mechanical series generation (P18/P19 — the generation theorem)
 
