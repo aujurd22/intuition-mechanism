@@ -3,28 +3,35 @@
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 Research plan: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)
 
-> 中心问题:Ramanujan 型公式发现能否被还原为机械流水线?"灵感"在其中是哪几步、
-> 能否被机器复现并测出签名?
+> Central question: can Ramanujan-style formula discovery be reduced to a
+> mechanical pipeline? Which steps are the "inspiration", and can they be
+> reproduced by a machine and their signature measured?
 
-## 现状
+## Status
 
-| 组件 | 状态 |
+| Component | Status |
 |---|---|
-| `validator.py` | ✅ 50 位验证门,Ramanujan/Chudnovsky 双锚点 PASS |
-| `family_gen.py` | ✅ Heegner CM 点 → θ 常数 → 奇异模 → j;d=163 锚点 PASS(j = −640320³,误差 2.4e-101) |
-| `series_gen.py` | ✅ **D1 GATE PASS**:从 d 出发经 z=1728/j 与 ₃F₂ 系数求和,Chudnovsky 系数 (13591409, 545140134) 以 96.9 位整数控复现 |
-| T0 合成族扫描 | ⏳ 下一个工作单元(图族 + 规范型,P1/P2) |
-| T2 A/B 引擎(灵感签名 P5) | ⏳ D1 后 |
+| `validator.py` | ✅ 50-digit verification gate; both anchors (Ramanujan / Chudnovsky) PASS |
+| `family_gen.py` | ✅ Heegner CM points -> theta constants -> singular modulus -> j; d=163 anchor PASS (j = -640320^3, error 2.4e-101) |
+| `series_gen.py` | ✅ **D1 GATE PASS**: starting from d alone, via z=1728/j and the 3F2 coefficient sums, the Chudnovsky coefficients (13591409, 545140134) are reproduced at 96.9 integer digits |
+| T0 synthetic-family scan | next work unit (graph families + canonical forms, P1/P2) |
+| T2 A/B engine (insight signature P5) | after D1 |
 
-## 过程中抓到的三个 bug(锚点自测的价值)
+## Bugs caught by the anchor self-tests (the value of anchors)
 
-1. θ 函数 nome 是 `exp(πiτ)` 而非 `exp(2πiτ)`——平方 nome 使 d=163 的 j 差 17 个数量级;
-2. Heegner j 的虚部是浮点噪声,整数立方根检查必须取实部;
-3. **恒等式方向**:由 `1/π = 12·T/640320^{3/2}` 得 `T = 640320^{3/2}/(12π)`,
-   不是 `π·640320^{3/2}/12`——数值对照(A·S₀ ≈ 1.359e7)当场揭穿。
+1. The theta-function nome is `exp(pi*i*tau)`, NOT `exp(2*pi*i*tau)` — the
+   squared nome pushed d=163's j off by 17 orders of magnitude;
+2. Heegner j's imaginary part is float noise; the integer cube-root check
+   must use the real part;
+3. **Inverted identity**: from `1/pi = 12*T/640320^(3/2)` it follows that
+   `T = 640320^(3/2)/(12*pi)`, not `pi*640320^(3/2)/12` — the numerical
+   comparison (A*S0 ~= 1.359e7) exposed it on the spot.
 
-## 定律衔接
+## Law coupling
 
-- 本 track 实验结论写回 [Mushroom-Body Program](https://github.com/aujurd22/flymemory)
-  的 `research/RESEARCH.md`(L 系列定律;L1 形态定律与 L5 聚合定律已在此确立)。
-- 计划的 P1–P7 预言注册表见 docs/RESEARCH_PLAN.md(先注册后实验)。
+- Experiment conclusions write back to the Mushroom-Body Program repo
+  ([aujurd22/flymemory](https://github.com/aujurd22/flymemory)),
+  `research/RESEARCH.md` (L-series laws; L1 form law and L5 aggregation
+  law were established there).
+- The plan's P1-P7 prediction registry lives in docs/RESEARCH_PLAN.md
+  (registered before running).
