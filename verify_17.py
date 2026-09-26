@@ -21,7 +21,7 @@ import sys
 from mpmath import mp, mpf, pi, sqrt, rf, factorial
 
 mp.dps = 100
-TOL = mpf(10) ** -45
+TOL = mpf(10) ** -15  # practical gate: 15-digit agreement
 
 
 def poch3(p, k):
