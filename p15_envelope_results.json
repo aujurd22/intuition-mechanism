@@ -1,0 +1,76 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "chance": 0.24686192468619247,
+   "rows": {
+    "raw": {
+     "hit1": 0.404,
+     "hit3": 0.704,
+     "frac3": 0.371,
+     "macro": 0.371,
+     "ari": 0.037
+    },
+    "blind": {
+     "hit1": 0.946,
+     "hit3": 0.954,
+     "frac3": 0.903,
+     "macro": 0.903,
+     "ari": 0.325
+    },
+    "oracle": {
+     "hit1": 1.0,
+     "hit3": 1.0,
+     "frac3": 1.0,
+     "macro": 1.0,
+     "ari": 1.0
+    },
+    "blind_AE": {
+     "hit1": 0.875,
+     "hit3": 0.912,
+     "frac3": 0.783,
+     "macro": 0.783,
+     "ari": 0.325
+    }
+   },
+   "shuffled_hit1": 0.233,
+   "verdict": "PARTIAL"
+  },
+  {
+   "family": "ratio-form(p14)",
+   "chance": 0.24686192468619247,
+   "rows": {
+    "raw": {
+     "hit1": 0.629,
+     "hit3": 0.871,
+     "frac3": 0.542,
+     "macro": 0.542,
+     "ari": 0.0
+    },
+    "blind": {
+     "hit1": 0.992,
+     "hit3": 0.996,
+     "frac3": 0.974,
+     "macro": 0.974,
+     "ari": 0.361
+    },
+    "oracle": {
+     "hit1": 1.0,
+     "hit3": 1.0,
+     "frac3": 1.0,
+     "macro": 1.0,
+     "ari": 1.0
+    },
+    "blind_AE": {
+     "hit1": 0.992,
+     "hit3": 0.996,
+     "frac3": 0.976,
+     "macro": 0.976,
+     "ari": 0.353
+    }
+   },
+   "shuffled_hit1": 0.208,
+   "verdict": "PARTIAL"
+  }
+ ]
+}
