@@ -180,7 +180,7 @@ def main():
         (n1, n2), (c1, c2) = p
         return is_proportional(monos[n1][0], monos[n2][0])
 
-    SEED = ("E8", "E4^2") if args.seed_hit else None
+    SEED = ("E8", "E4*E4") if args.seed_hit else None
 
     def run_arm(memory: bool, seed: int):
         rng = random.Random(seed)
@@ -197,11 +197,11 @@ def main():
                 n1, n2 = rng.choice(hits)
                 w = monos[n1][1]
                 cands = [f for f in BASIS_NAMES
-                         if weight_of(n1) + weight_of(f) <= args.weight_cap]
+                         if monos[n1][1] + weight_of(f) <= args.weight_cap]
                 if cands:
                     f = rng.choice(cands)
                     m1, m2 = n1 + "*" + f, n2 + "*" + f
-                    w2 = weight_of(n2) + weight_of(f)
+                    w2 = monos[n2][1] + weight_of(f)
                     if (m1 in monos and m2 in monos
                             and frozenset((m1, m2)) not in seen):
                         recomb_events += 1
@@ -228,11 +228,11 @@ def main():
                 if steps_first is None:
                     steps_first = step
         post_rate = recomb_hits / recomb_events if recomb_events else None
+        cov = {f"steps_{k}": steps_to_hits.get(k) for k in (3, 5, 10)}
         return {"hits": len(hits), "steps_first": steps_first,
-                "steps_5": steps_to_hits.get(5),
                 "recomb_events": recomb_events,
                 "recomb_hits": recomb_hits,
-                "post_rate": post_rate}
+                "post_rate": post_rate, **cov}
 
     print(f"\n=== A/B ({args.trials} trials x budget {args.budget}) ===")
     summary = {}
@@ -251,8 +251,6 @@ def main():
     b_post = summary["B_memory"]["mean"]["post_rate"]
     print(f"\n=== P5 reading ===")
     print(f"  baseline hit rate (A): {a_rate:.3f}")
-    print(f"  B post-recombination hit rate: {b_post} "
-          f"(registered: >= 3x baseline)")
     print(f"  B post-recombination hit rate: {b_post} "
           f"(registered: >= 3x baseline)")
     for k in (3, 5, 10):

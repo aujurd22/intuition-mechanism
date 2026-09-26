@@ -1,348 +1,432 @@
 {
- "truth_pairs": 36,
+ "truth_pairs": 2929,
  "summary": {
   "A_random": {
    "runs": [
     {
-     "hits": 29,
+     "hits": 35,
+     "steps_first": 6,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 8,
+     "steps_5": 24,
+     "steps_10": 52
+    },
+    {
+     "hits": 43,
      "steps_first": 1,
-     "steps_5": 15,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 6,
+     "steps_5": 45,
+     "steps_10": 90
     },
     {
-     "hits": 31,
-     "steps_first": 8,
-     "steps_5": 22,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 32,
-     "steps_first": 1,
-     "steps_5": 12,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 32,
-     "steps_first": 2,
-     "steps_5": 11,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 28,
-     "steps_first": 2,
-     "steps_5": 10,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 28,
-     "steps_first": 2,
-     "steps_5": 19,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 33,
-     "steps_first": 1,
-     "steps_5": 7,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 30,
-     "steps_first": 2,
-     "steps_5": 18,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 33,
-     "steps_first": 1,
-     "steps_5": 11,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 32,
-     "steps_first": 2,
-     "steps_5": 13,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 31,
-     "steps_first": 2,
-     "steps_5": 19,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 31,
-     "steps_first": 2,
-     "steps_5": 8,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 33,
-     "steps_first": 2,
-     "steps_5": 11,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 30,
-     "steps_first": 3,
-     "steps_5": 19,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 27,
-     "steps_first": 3,
-     "steps_5": 8,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 29,
+     "hits": 41,
      "steps_first": 4,
-     "steps_5": 11,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 15,
+     "steps_5": 26,
+     "steps_10": 61
     },
     {
-     "hits": 26,
-     "steps_first": 1,
-     "steps_5": 19,
+     "hits": 33,
+     "steps_first": 5,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 8,
+     "steps_5": 26,
+     "steps_10": 53
     },
     {
-     "hits": 30,
-     "steps_first": 1,
-     "steps_5": 13,
+     "hits": 39,
+     "steps_first": 5,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 6,
+     "steps_5": 20,
+     "steps_10": 77
+    },
+    {
+     "hits": 37,
+     "steps_first": 1,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 10,
+     "steps_5": 21,
+     "steps_10": 54
+    },
+    {
+     "hits": 33,
+     "steps_first": 16,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 19,
+     "steps_5": 43,
+     "steps_10": 62
     },
     {
      "hits": 31,
-     "steps_first": 8,
-     "steps_5": 23,
+     "steps_first": 11,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 12,
+     "steps_5": 17,
+     "steps_10": 55
     },
     {
-     "hits": 34,
-     "steps_first": 5,
-     "steps_5": 15,
+     "hits": 41,
+     "steps_first": 1,
      "recomb_events": 0,
      "recomb_hits": 0,
-     "post_rate": null
+     "post_rate": null,
+     "steps_3": 2,
+     "steps_5": 29,
+     "steps_10": 56
+    },
+    {
+     "hits": 37,
+     "steps_first": 11,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 15,
+     "steps_5": 23,
+     "steps_10": 58
+    },
+    {
+     "hits": 48,
+     "steps_first": 4,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 6,
+     "steps_5": 16,
+     "steps_10": 48
+    },
+    {
+     "hits": 51,
+     "steps_first": 37,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 51,
+     "steps_5": 59,
+     "steps_10": 94
+    },
+    {
+     "hits": 30,
+     "steps_first": 7,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 8,
+     "steps_5": 23,
+     "steps_10": 62
+    },
+    {
+     "hits": 31,
+     "steps_first": 16,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 18,
+     "steps_5": 43,
+     "steps_10": 71
+    },
+    {
+     "hits": 37,
+     "steps_first": 1,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 3,
+     "steps_5": 15,
+     "steps_10": 53
+    },
+    {
+     "hits": 44,
+     "steps_first": 9,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 17,
+     "steps_5": 41,
+     "steps_10": 74
+    },
+    {
+     "hits": 42,
+     "steps_first": 1,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 14,
+     "steps_5": 20,
+     "steps_10": 82
+    },
+    {
+     "hits": 43,
+     "steps_first": 4,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 11,
+     "steps_5": 39,
+     "steps_10": 69
+    },
+    {
+     "hits": 29,
+     "steps_first": 3,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 20,
+     "steps_5": 31,
+     "steps_10": 68
+    },
+    {
+     "hits": 42,
+     "steps_first": 12,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null,
+     "steps_3": 16,
+     "steps_5": 37,
+     "steps_10": 51
     }
    ],
    "mean": {
-    "hits": 30.5,
-    "steps_first": 2.65,
-    "steps_5": 14.2,
+    "hits": 38.35,
+    "steps_first": 7.75,
     "recomb_events": 0.0,
     "recomb_hits": 0.0,
-    "post_rate": null
+    "post_rate": null,
+    "steps_3": 13.25,
+    "steps_5": 29.9,
+    "steps_10": 64.5
    }
   },
   "B_memory": {
    "runs": [
     {
-     "hits": 33,
+     "hits": 51,
      "steps_first": 1,
-     "steps_5": 14,
-     "recomb_events": 6,
-     "recomb_hits": 6,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 31,
-     "steps_first": 8,
-     "steps_5": 20,
-     "recomb_events": 0,
-     "recomb_hits": 0,
-     "post_rate": null
-    },
-    {
-     "hits": 31,
-     "steps_first": 1,
-     "steps_5": 13,
-     "recomb_events": 2,
-     "recomb_hits": 2,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 31,
-     "steps_first": 2,
-     "steps_5": 13,
-     "recomb_events": 2,
-     "recomb_hits": 2,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 27,
-     "steps_first": 2,
-     "steps_5": 9,
-     "recomb_events": 3,
-     "recomb_hits": 3,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 33,
-     "steps_first": 2,
-     "steps_5": 11,
-     "recomb_events": 3,
-     "recomb_hits": 3,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 32,
-     "steps_first": 1,
+     "recomb_events": 14,
+     "recomb_hits": 14,
+     "post_rate": 1.0,
+     "steps_3": 2,
      "steps_5": 6,
+     "steps_10": 30
+    },
+    {
+     "hits": 48,
+     "steps_first": 1,
+     "recomb_events": 18,
+     "recomb_hits": 18,
+     "post_rate": 1.0,
+     "steps_3": 4,
+     "steps_5": 17,
+     "steps_10": 54
+    },
+    {
+     "hits": 51,
+     "steps_first": 1,
+     "recomb_events": 9,
+     "recomb_hits": 9,
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 15,
+     "steps_10": 32
+    },
+    {
+     "hits": 59,
+     "steps_first": 1,
+     "recomb_events": 19,
+     "recomb_hits": 19,
+     "post_rate": 1.0,
+     "steps_3": 4,
+     "steps_5": 6,
+     "steps_10": 20
+    },
+    {
+     "hits": 58,
+     "steps_first": 1,
+     "recomb_events": 20,
+     "recomb_hits": 20,
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 16,
+     "steps_10": 40
+    },
+    {
+     "hits": 48,
+     "steps_first": 1,
+     "recomb_events": 14,
+     "recomb_hits": 14,
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 14,
+     "steps_10": 34
+    },
+    {
+     "hits": 48,
+     "steps_first": 1,
      "recomb_events": 8,
      "recomb_hits": 8,
-     "post_rate": 1.0
+     "post_rate": 1.0,
+     "steps_3": 7,
+     "steps_5": 12,
+     "steps_10": 33
     },
     {
-     "hits": 32,
-     "steps_first": 2,
-     "steps_5": 14,
-     "recomb_events": 4,
-     "recomb_hits": 4,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 32,
+     "hits": 37,
      "steps_first": 1,
-     "steps_5": 7,
-     "recomb_events": 5,
-     "recomb_hits": 5,
-     "post_rate": 1.0
+     "recomb_events": 8,
+     "recomb_hits": 8,
+     "post_rate": 1.0,
+     "steps_3": 6,
+     "steps_5": 10,
+     "steps_10": 55
     },
     {
-     "hits": 34,
-     "steps_first": 2,
-     "steps_5": 9,
-     "recomb_events": 4,
-     "recomb_hits": 4,
-     "post_rate": 1.0
+     "hits": 46,
+     "steps_first": 1,
+     "recomb_events": 9,
+     "recomb_hits": 9,
+     "post_rate": 1.0,
+     "steps_3": 3,
+     "steps_5": 12,
+     "steps_10": 35
     },
     {
-     "hits": 32,
-     "steps_first": 2,
+     "hits": 40,
+     "steps_first": 1,
+     "recomb_events": 11,
+     "recomb_hits": 11,
+     "post_rate": 1.0,
+     "steps_3": 5,
+     "steps_5": 8,
+     "steps_10": 40
+    },
+    {
+     "hits": 51,
+     "steps_first": 1,
+     "recomb_events": 17,
+     "recomb_hits": 17,
+     "post_rate": 1.0,
+     "steps_3": 4,
      "steps_5": 14,
-     "recomb_events": 3,
-     "recomb_hits": 3,
-     "post_rate": 1.0
+     "steps_10": 43
     },
     {
-     "hits": 32,
-     "steps_first": 2,
-     "steps_5": 17,
+     "hits": 48,
+     "steps_first": 1,
+     "recomb_events": 12,
+     "recomb_hits": 12,
+     "post_rate": 1.0,
+     "steps_3": 3,
+     "steps_5": 7,
+     "steps_10": 52
+    },
+    {
+     "hits": 45,
+     "steps_first": 1,
+     "recomb_events": 13,
+     "recomb_hits": 13,
+     "post_rate": 1.0,
+     "steps_3": 4,
+     "steps_5": 8,
+     "steps_10": 17
+    },
+    {
+     "hits": 50,
+     "steps_first": 1,
+     "recomb_events": 15,
+     "recomb_hits": 15,
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 8,
+     "steps_10": 35
+    },
+    {
+     "hits": 45,
+     "steps_first": 1,
+     "recomb_events": 13,
+     "recomb_hits": 13,
+     "post_rate": 1.0,
+     "steps_3": 7,
+     "steps_5": 10,
+     "steps_10": 33
+    },
+    {
+     "hits": 42,
+     "steps_first": 1,
+     "recomb_events": 11,
+     "recomb_hits": 11,
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 5,
+     "steps_10": 17
+    },
+    {
+     "hits": 52,
+     "steps_first": 1,
+     "recomb_events": 11,
+     "recomb_hits": 11,
+     "post_rate": 1.0,
+     "steps_3": 4,
+     "steps_5": 6,
+     "steps_10": 31
+    },
+    {
+     "hits": 42,
+     "steps_first": 1,
      "recomb_events": 7,
      "recomb_hits": 7,
-     "post_rate": 1.0
+     "post_rate": 1.0,
+     "steps_3": 2,
+     "steps_5": 4,
+     "steps_10": 42
     },
     {
-     "hits": 34,
-     "steps_first": 2,
-     "steps_5": 12,
-     "recomb_events": 4,
-     "recomb_hits": 4,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 35,
-     "steps_first": 3,
-     "steps_5": 11,
-     "recomb_events": 3,
-     "recomb_hits": 3,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 33,
-     "steps_first": 3,
-     "steps_5": 8,
-     "recomb_events": 2,
-     "recomb_hits": 2,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 32,
-     "steps_first": 4,
-     "steps_5": 10,
-     "recomb_events": 3,
-     "recomb_hits": 3,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 33,
+     "hits": 46,
      "steps_first": 1,
-     "steps_5": 19,
-     "recomb_events": 5,
-     "recomb_hits": 5,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 29,
-     "steps_first": 1,
+     "recomb_events": 10,
+     "recomb_hits": 10,
+     "post_rate": 1.0,
+     "steps_3": 4,
      "steps_5": 14,
-     "recomb_events": 6,
-     "recomb_hits": 6,
-     "post_rate": 1.0
+     "steps_10": 38
     },
     {
-     "hits": 33,
-     "steps_first": 8,
-     "steps_5": 12,
-     "recomb_events": 5,
-     "recomb_hits": 5,
-     "post_rate": 1.0
-    },
-    {
-     "hits": 33,
-     "steps_first": 5,
+     "hits": 36,
+     "steps_first": 1,
+     "recomb_events": 13,
+     "recomb_hits": 13,
+     "post_rate": 1.0,
+     "steps_3": 2,
      "steps_5": 10,
-     "recomb_events": 4,
-     "recomb_hits": 4,
-     "post_rate": 1.0
+     "steps_10": 64
     }
    ],
    "mean": {
-    "hits": 32.1,
-    "steps_first": 2.65,
-    "steps_5": 12.15,
-    "recomb_events": 3.95,
-    "recomb_hits": 3.95,
-    "post_rate": 1.0
+    "hits": 47.15,
+    "steps_first": 1.0,
+    "recomb_events": 12.6,
+    "recomb_hits": 12.6,
+    "post_rate": 1.0,
+    "steps_3": 3.55,
+    "steps_5": 10.1,
+    "steps_10": 37.25
    }
   }
  }
