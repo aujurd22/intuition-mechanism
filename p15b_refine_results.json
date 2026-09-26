@@ -1,0 +1,136 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "rows": {
+    "pass1 (P15)": {
+     "hit1": 0.946,
+     "hit3": 0.954,
+     "frac3": 0.903,
+     "macro": 0.903,
+     "ari": 0.325
+    },
+    "refined x1": {
+     "hit1": 0.946,
+     "hit3": 0.958,
+     "frac3": 0.911,
+     "macro": 0.911,
+     "ari": 0.24
+    },
+    "refined x2": {
+     "hit1": 0.946,
+     "hit3": 0.958,
+     "frac3": 0.911,
+     "macro": 0.911,
+     "ari": 0.24
+    },
+    "ladder_pass1": {
+     "class_levels": [
+      0.0066,
+      0.0088,
+      0.0116,
+      0.017
+     ],
+     "class_stds": [
+      0.0028,
+      0.0024,
+      0.0029,
+      0.0043
+     ],
+     "adjacent_gaps_sigma": [
+      0.85,
+      1.04,
+      1.46
+     ]
+    },
+    "ladder_refined": {
+     "class_levels": [
+      -2.6659,
+      -2.648,
+      -2.625,
+      -2.5808
+     ],
+     "class_stds": [
+      0.0211,
+      0.0174,
+      0.0219,
+      0.0324
+     ],
+     "adjacent_gaps_sigma": [
+      0.93,
+      1.16,
+      1.6
+     ]
+    }
+   },
+   "shuffled_hit1": 0.233,
+   "verdict": "PARTIAL"
+  },
+  {
+   "family": "ratio-form(p14)",
+   "rows": {
+    "pass1 (P15)": {
+     "hit1": 0.992,
+     "hit3": 0.996,
+     "frac3": 0.974,
+     "macro": 0.974,
+     "ari": 0.361
+    },
+    "refined x1": {
+     "hit1": 0.967,
+     "hit3": 0.992,
+     "frac3": 0.922,
+     "macro": 0.922,
+     "ari": -0.002
+    },
+    "refined x2": {
+     "hit1": 0.967,
+     "hit3": 0.992,
+     "frac3": 0.922,
+     "macro": 0.922,
+     "ari": -0.002
+    },
+    "ladder_pass1": {
+     "class_levels": [
+      0.0525,
+      0.0597,
+      0.0679,
+      0.0826
+     ],
+     "class_stds": [
+      0.0077,
+      0.0051,
+      0.0059,
+      0.0078
+     ],
+     "adjacent_gaps_sigma": [
+      1.1,
+      1.49,
+      2.12
+     ]
+    },
+    "ladder_refined": {
+     "class_levels": [
+      -2.2501,
+      -2.1942,
+      -2.1348,
+      -2.036
+     ],
+     "class_stds": [
+      0.0642,
+      0.0402,
+      0.046,
+      0.0574
+     ],
+     "adjacent_gaps_sigma": [
+      1.04,
+      1.37,
+      1.9
+     ]
+    }
+   },
+   "shuffled_hit1": 0.229,
+   "verdict": "PARTIAL"
+  }
+ ]
+}
