@@ -1,0 +1,349 @@
+{
+ "truth_pairs": 36,
+ "summary": {
+  "A_random": {
+   "runs": [
+    {
+     "hits": 29,
+     "steps_first": 1,
+     "steps_5": 15,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 31,
+     "steps_first": 8,
+     "steps_5": 22,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 32,
+     "steps_first": 1,
+     "steps_5": 12,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 32,
+     "steps_first": 2,
+     "steps_5": 11,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 28,
+     "steps_first": 2,
+     "steps_5": 10,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 28,
+     "steps_first": 2,
+     "steps_5": 19,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 33,
+     "steps_first": 1,
+     "steps_5": 7,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 30,
+     "steps_first": 2,
+     "steps_5": 18,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 33,
+     "steps_first": 1,
+     "steps_5": 11,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 32,
+     "steps_first": 2,
+     "steps_5": 13,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 31,
+     "steps_first": 2,
+     "steps_5": 19,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 31,
+     "steps_first": 2,
+     "steps_5": 8,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 33,
+     "steps_first": 2,
+     "steps_5": 11,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 30,
+     "steps_first": 3,
+     "steps_5": 19,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 27,
+     "steps_first": 3,
+     "steps_5": 8,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 29,
+     "steps_first": 4,
+     "steps_5": 11,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 26,
+     "steps_first": 1,
+     "steps_5": 19,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 30,
+     "steps_first": 1,
+     "steps_5": 13,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 31,
+     "steps_first": 8,
+     "steps_5": 23,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 34,
+     "steps_first": 5,
+     "steps_5": 15,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    }
+   ],
+   "mean": {
+    "hits": 30.5,
+    "steps_first": 2.65,
+    "steps_5": 14.2,
+    "recomb_events": 0.0,
+    "recomb_hits": 0.0,
+    "post_rate": null
+   }
+  },
+  "B_memory": {
+   "runs": [
+    {
+     "hits": 33,
+     "steps_first": 1,
+     "steps_5": 14,
+     "recomb_events": 6,
+     "recomb_hits": 6,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 31,
+     "steps_first": 8,
+     "steps_5": 20,
+     "recomb_events": 0,
+     "recomb_hits": 0,
+     "post_rate": null
+    },
+    {
+     "hits": 31,
+     "steps_first": 1,
+     "steps_5": 13,
+     "recomb_events": 2,
+     "recomb_hits": 2,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 31,
+     "steps_first": 2,
+     "steps_5": 13,
+     "recomb_events": 2,
+     "recomb_hits": 2,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 27,
+     "steps_first": 2,
+     "steps_5": 9,
+     "recomb_events": 3,
+     "recomb_hits": 3,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 33,
+     "steps_first": 2,
+     "steps_5": 11,
+     "recomb_events": 3,
+     "recomb_hits": 3,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 1,
+     "steps_5": 6,
+     "recomb_events": 8,
+     "recomb_hits": 8,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 2,
+     "steps_5": 14,
+     "recomb_events": 4,
+     "recomb_hits": 4,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 1,
+     "steps_5": 7,
+     "recomb_events": 5,
+     "recomb_hits": 5,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 34,
+     "steps_first": 2,
+     "steps_5": 9,
+     "recomb_events": 4,
+     "recomb_hits": 4,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 2,
+     "steps_5": 14,
+     "recomb_events": 3,
+     "recomb_hits": 3,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 2,
+     "steps_5": 17,
+     "recomb_events": 7,
+     "recomb_hits": 7,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 34,
+     "steps_first": 2,
+     "steps_5": 12,
+     "recomb_events": 4,
+     "recomb_hits": 4,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 35,
+     "steps_first": 3,
+     "steps_5": 11,
+     "recomb_events": 3,
+     "recomb_hits": 3,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 33,
+     "steps_first": 3,
+     "steps_5": 8,
+     "recomb_events": 2,
+     "recomb_hits": 2,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 32,
+     "steps_first": 4,
+     "steps_5": 10,
+     "recomb_events": 3,
+     "recomb_hits": 3,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 33,
+     "steps_first": 1,
+     "steps_5": 19,
+     "recomb_events": 5,
+     "recomb_hits": 5,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 29,
+     "steps_first": 1,
+     "steps_5": 14,
+     "recomb_events": 6,
+     "recomb_hits": 6,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 33,
+     "steps_first": 8,
+     "steps_5": 12,
+     "recomb_events": 5,
+     "recomb_hits": 5,
+     "post_rate": 1.0
+    },
+    {
+     "hits": 33,
+     "steps_first": 5,
+     "steps_5": 10,
+     "recomb_events": 4,
+     "recomb_hits": 4,
+     "post_rate": 1.0
+    }
+   ],
+   "mean": {
+    "hits": 32.1,
+    "steps_first": 2.65,
+    "steps_5": 12.15,
+    "recomb_events": 3.95,
+    "recomb_hits": 3.95,
+    "post_rate": 1.0
+   }
+  }
+ }
+}
