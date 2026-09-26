@@ -1,0 +1,64 @@
+{
+ "meta": {
+  "families": [
+   "cycle",
+   "path",
+   "star",
+   "bipartite",
+   "grid",
+   "double_cycle"
+  ],
+  "n": 12,
+  "instances": 20,
+  "relabels": 3,
+  "noise": 0.03,
+  "seed": 1
+ },
+ "results": [
+  {
+   "b": 1,
+   "compression": 144.0,
+   "recon_loss": 0.11231,
+   "SD": 0.163,
+   "surface_dom": 0.051,
+   "ARI_struct": 0.106,
+   "ARI_surface": 0.109
+  },
+  {
+   "b": 4,
+   "compression": 36.0,
+   "recon_loss": 0.02883,
+   "SD": 0.316,
+   "surface_dom": 0.053,
+   "ARI_struct": 0.144,
+   "ARI_surface": 0.131
+  },
+  {
+   "b": 8,
+   "compression": 18.0,
+   "recon_loss": 0.02396,
+   "SD": 0.311,
+   "surface_dom": 0.045,
+   "ARI_struct": 0.103,
+   "ARI_surface": 0.112
+  },
+  {
+   "b": 32,
+   "compression": 4.5,
+   "recon_loss": 0.02045,
+   "SD": 0.345,
+   "surface_dom": 0.04,
+   "ARI_struct": 0.112,
+   "ARI_surface": 0.102
+  },
+  {
+   "b": 144,
+   "compression": 1.0,
+   "recon_loss": 0.01943,
+   "SD": 0.335,
+   "surface_dom": 0.046,
+   "ARI_struct": 0.104,
+   "ARI_surface": 0.102
+  }
+ ]
+}
