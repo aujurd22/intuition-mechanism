@@ -55,6 +55,27 @@ quotients.  This converts D1's negative from "unexplained failure" to
 - Conway & Norton (1979), "Monstrous Moonshine" — origin of the linear
   relations among McKay–Thompson series.
 
+### The (A, B, z) derivation recipe (Cooper–Wan–Zudilin "holonomic alchemy")
+
+Source: arXiv:1512.04608 (Cooper, Wan, Zudilin 2015; Springer 2017).
+Level-6 recipe, mechanizable in four steps:
+
+1. Parametrize: **Z = (1/6)·P(q⁶)** (P = Ramanujan's Eisenstein series),
+   **X** = an eta-quotient modular function at level 6 (algebraic
+   variable; explicit form in the arXiv HTML).
+2. Z(X) satisfies a hypergeometric-type ODE → expanding Z as ΣA(n)Xⁿ
+   gives the P-recursive sequence A(n) (Domb/Apéry-like at level 6).
+3. Companion sequence B(n) from the second ODE solution.
+4. Evaluate at a singular modulus X₀ (CM point, algebraic): with the
+   weight-2 form dZ/dX,
+      Σ A(n)(a + b n)X₀ⁿ = C/π,
+   a, b, C algebraic — THE (A, B, z) of a Ramanujan–Sato series.
+
+This is the precise shape of D1-eta stage (iii): implementing steps 1-4
+mechanically (mpmath q-expansions + ODE coefficient extraction) closes
+the j→coefficients arrow.  Scoped as the next-session project; the
+night's value-table (j6B..j6E at 36 CM points) is the substrate.
+
 ## 2. Theory axis — formal anchors for "what to keep"
 
 - **Kolmogorov structure function / algorithmic sufficient statistic.**
