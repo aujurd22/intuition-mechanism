@@ -1,278 +1,35 @@
 {
+ "hits": 4,
  "total": 27,
- "hits": 0,
- "miss_list": [
-  1,
-  2,
-  3,
-  7,
-  11,
-  19,
-  43,
-  67,
-  163,
-  15,
-  20,
-  24,
-  35,
-  40,
-  51,
-  52,
-  88,
-  91,
-  115,
-  123,
-  148,
-  187,
-  232,
-  235,
-  267,
-  403,
-  427
- ],
- "rows": [
-  {
-   "d": 1,
-   "A": 11612623,
-   "B": 0,
-   "hit": false,
-   "rel": "3.53e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 2,
-   "A": 13370974,
-   "B": 0,
-   "hit": false,
-   "rel": "1.96e-9",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 3,
-   "A": 0,
-   "B": 0,
-   "hit": false,
-   "rel": "1.0",
-   "A_exact_ok": true,
-   "B_exact_ok": true
-  },
-  {
-   "d": 7,
-   "A": 14009602,
-   "B": 0,
-   "hit": false,
-   "rel": "2.39e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 11,
-   "A": 13640336,
-   "B": 0,
-   "hit": false,
-   "rel": "3.14e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
+ "series": [
   {
    "d": 19,
-   "A": 13593251,
-   "B": 0,
-   "hit": false,
-   "rel": "1.91e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
+   "base": 96,
+   "A": 25,
+   "B": 342,
+   "z": "-1728/96^3"
   },
   {
    "d": 43,
-   "A": 13591411,
-   "B": 0,
-   "hit": false,
-   "rel": "1.15e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
+   "base": 960,
+   "A": 789,
+   "B": 16254,
+   "z": "-1728/960^3"
   },
   {
    "d": 67,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "8.15e-10",
-   "A_exact_ok": false,
-   "B_exact_ok": true
+   "base": 5280,
+   "A": 10177,
+   "B": 261702,
+   "z": "-1728/5280^3"
   },
   {
    "d": 163,
+   "base": 640320,
    "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.83e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 15,
-   "A": 13599893,
-   "B": 0,
-   "hit": false,
-   "rel": "3.5e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 20,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "7.52e-11",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 24,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "5.16e-12",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 35,
-   "A": 13591423,
-   "B": 0,
-   "hit": false,
-   "rel": "1.28e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 40,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.95e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 51,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "2.17e-8",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 52,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 88,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 91,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.16e-11",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 115,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "2.62e-13",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 123,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "6.98e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 148,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 187,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 232,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 235,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 267,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 403,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
-  },
-  {
-   "d": 427,
-   "A": 13591409,
-   "B": 0,
-   "hit": false,
-   "rel": "1.88e-14",
-   "A_exact_ok": false,
-   "B_exact_ok": true
+   "B": 545140134,
+   "z": "-1728/640320^3"
   }
- ]
+ ],
+ "verify_50digit": true
 }
