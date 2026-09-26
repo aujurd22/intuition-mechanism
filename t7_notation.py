@@ -51,7 +51,13 @@ class VQAE(nn.Module):
     def forward(self, x):
         z_e = self.enc(x)
         z_q, idx = self.quantize(z_e)
-        rec = self.dec(z_q + (z_e - z_q).detach())  # straight-through
+        # standard straight-through: VALUE is z_q (quantized), GRADIENT flows
+        # to z_e. The inverted version (z_q + (z_e - z_q).detach()) gave the
+        # encoder values but routed gradients into the (buffer) codes -- the
+        # encoder never received task/recon gradients through the quantizer
+        # (found via the revival null result, 2026-09-26).
+        z_q_st = z_e + (z_q - z_e).detach()
+        rec = self.dec(z_q_st)  # straight-through
         return rec, z_e, z_q, idx
 
 
