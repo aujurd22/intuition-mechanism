@@ -1,0 +1,67 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "rows": {
+    "raw": {
+     "sil_naive": 0.7178,
+     "sil_corrected": 0.6748,
+     "ari": 0.054,
+     "hit1": 0.404
+    },
+    "direct": {
+     "sil_naive": 0.7169,
+     "sil_corrected": 0.6762,
+     "ari": 0.209,
+     "hit1": 0.946
+    },
+    "ratio": {
+     "sil_naive": 0.6826,
+     "sil_corrected": 0.7361,
+     "ari": 0.394,
+     "hit1": 0.838
+    }
+   },
+   "pick_naive": "raw",
+   "pick_corrected": "ratio",
+   "best_by_ari": "ratio",
+   "ci": [
+    0.0051,
+    0.1368
+   ],
+   "verdict": "CONFIRMED"
+  },
+  {
+   "family": "ratio-form(p14)",
+   "rows": {
+    "raw": {
+     "sil_naive": 0.751,
+     "sil_corrected": 0.4832,
+     "ari": 0.083,
+     "hit1": 0.629
+    },
+    "direct": {
+     "sil_naive": 0.6463,
+     "sil_corrected": 0.7359,
+     "ari": 0.288,
+     "hit1": 0.992
+    },
+    "ratio": {
+     "sil_naive": 0.987,
+     "sil_corrected": 0.6609,
+     "ari": 0.291,
+     "hit1": 1.0
+    }
+   },
+   "pick_naive": "ratio",
+   "pick_corrected": "direct",
+   "best_by_ari": "ratio",
+   "ci": [
+    0.0144,
+    0.1264
+   ],
+   "verdict": "NEGATIVE"
+  }
+ ],
+ "verdict": "NEGATIVE"
+}
