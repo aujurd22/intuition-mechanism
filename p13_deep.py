@@ -1,18 +1,25 @@
-"""P13 v2: deep invariant discovery -- combining FlyPoet (k-WTA sparse
-competition readout) and FlyMemory (two-phase consolidation) mechanisms
-into the representation search, addressing the user directive: "跑久一点,
-结合 flypoet/flymemory 的东西,深层次机制可能更隐蔽".
+"""P13 v2: deep invariant discovery -- composite transforms + k-WTA sparse
+readout + longer two-stage training, addressing the user directive:
+"跑久一点, 结合 flypoet/flymemory 的东西, 深层次机制可能更隐蔽".
+
+NAMING CORRECTION (review): the "two-phase consolidation" below is
+hard-example reweighting (train all -> continue on the worst-reconstructed
+half), NOT FlyMemory-style memory->replay->consolidation.  It reweights the
+LOSS, it does not store or replay anything.
+
+SCOPE CORRECTION (review): this v2 script ran a SINGLE cell (b=8, seed=0)
+per transform -- not a full grid.  The true b x seed grid on TRUE sequences
+(p13_deep's own sequence builder had a wrong per-k H factor) is
+p13_grid.py; its verdict supersedes the numbers here.
 
 Upgrades over p13_discovery.py:
-  1. COMPOSITE TRANSFORM STACKS (9 single x selected pairs), not single transforms
+  1. COMPOSITE TRANSFORM STACKS (singles + pairs), not single transforms
   2. k-WTA sparse readout (FlyPoet MBON pattern): latent -> top-k winner
-     set per sample, similarity = overlap of winner sets
-  3. TWO-PHASE consolidation training (FlyMemory): coarse pass then fine
-     re-estimation, 10x longer (30000 steps)
-  4. Full grid: {seeds} x {codebook} x {transforms} x {readouts},
-     single JSON artifact with all cells
+     mask, similarity = mask Jaccard (sign is nuisance, not identity)
+  3. Two-stage hard-example reweighting (see naming correction), 30000 steps
 
-Run:  python p13_deep.py            (full grid, ~10-20 min CPU)
+Run:  python p13_deep.py            (single cell per transform)
+      python p13_grid.py            (TRUE b x seed grid -- authoritative)
 """
 import itertools
 import json
@@ -152,9 +159,9 @@ def readout_all(z, labels):
 # ---------------- two-phase consolidation training ----------------
 
 def train_two_phase(x, b, seed, phase1=12000, phase2=18000):
-    """FlyMemory consolidation pattern: coarse full-batch pass, then fine
-    re-estimation on the harder middle samples (largest reconstruction
-    error), mimicking replay + consolidation."""
+    """Two-stage HARD-EXAMPLE REWEIGHTING (not memory consolidation): coarse
+    full-batch pass, then continue training only on the worst-reconstructed
+    half.  Reweights the loss; stores/replays nothing."""
     torch.manual_seed(seed)
     ae = AE(x.shape[1], b)
     opt = torch.optim.Adam(ae.parameters(), lr=2e-3)
