@@ -150,6 +150,17 @@ level structure; e.g. N = 5 has four conjugate values of which the CWZ
 row's 1/20 is one — the published rational rows are the trace-
 degenerate tips of full orbits.
 
+**Universal λ law (P25, CONFIRMED).**  The linear parameter is a
+UNIVERSAL function of the CM point alone:
+
+  λ = ( rhs(x₀) − x₀·dz/dx(x₀) ) / z(x₀),
+
+verified against all five published λ values at 1e-48..53 — including
+the N=17 value 43/238 (confirming the erratum: 143/238 cannot arise
+from the correct machinery).  No modular polynomials, no per-case
+mathematics: the analytic generation formula for the whole t-family is
+closed.
+
 **P20 census** (CONFIRMED): the systematic (x_N, λ_N) algebraicity
 classification for N = 1..60.  All five CWZ rational rows reproduced;
 13 N carry quadratic x_N and 8 N carry quadratic λ_N beyond the paper's

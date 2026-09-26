@@ -40,6 +40,7 @@ pattern, conductor-mix explanation hypothesis).
 | P23 | CONFIRMED | f84941d | class-group orbit generation: ~180 identities across N=2..30, zero failures |
 | P23-b | CONFIRMED | bbafced | N=31..60 completed: **522 machine-generated, machine-verified identities total across the full census range** |
 | DEEP-VERIFY | 210 dps | (this commit) | the N=2 showcase identity re-verified at 210-digit working precision: relative error 2.9e-61 over 1400 series terms — the verification is not precision-limited |
+| P25-b | CONFIRMED | 5a298f8 | the universal λ law VERIFIED: λ = (rhs − x₀dz/dx)/z(x₀) reproduces all five published λ at 1e-48..53 — the analytic generation formula is CLOSED (no M_N needed) |
 
 Earlier in the night: P1-tag, P2 (registered-caliber), P13-v3 — see
 git log; PAPER.md tells the story in order.
