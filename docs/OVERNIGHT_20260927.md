@@ -37,6 +37,8 @@ pattern, conductor-mix explanation hypothesis).
 | P20 | CONFIRMED + ERRATUM | 7e0117b | 60-row census; CWZ N=17 λ typo caught (43/238 vs 143/238) |
 | P21 | NEGATIVE (informative) | dc6ca6b | deg(x₀) bounded ≤ 9; residue-class structure; conductor-mix hypothesis |
 | P22 | CONFIRMED (upgraded) | 480b377 | negative-branch identities; A±2Num antisymmetry = the "±q" identity |
+| P23 | CONFIRMED | f84941d | class-group orbit generation: ~180 identities across N=2..30, zero failures |
+| P23-b | CONFIRMED | bbafced | N=31..60 completed: **522 machine-generated, machine-verified identities total across the full census range** |
 
 Earlier in the night: P1-tag, P2 (registered-caliber), P13-v3 — see
 git log; PAPER.md tells the story in order.
