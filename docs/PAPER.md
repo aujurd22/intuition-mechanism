@@ -122,6 +122,16 @@ Chan–Cooper 2012's tables (novel-to-our-sources; framework-derivable
 via CCL Thm 2.1 — the M_N modular-polynomial route is unnecessary for
 the numeric-recovery variant).
 
+**Showcase identity (N = 2, written out).**  With
+t(n) = Σ_{k≤n/2} C(n,2k)C(2k,k)²C(2n−4k,n−2k),  x₀ = (3√6−2)/50,
+λ = (6−√6)/15, N = 2:
+
+  Σ_{n≥0} (n + λ) t(n) x₀ⁿ = (1/(2π))·√12/√((1+4x₀)(1−4x₀)(1−8x₀)),
+
+numerically verified to the full 60-digit working precision.  The
+eight further identities (N = 6, 11, 12, 15, 19, 23, 29, 31) are in
+p19b_z12_results.json with their algebraic (x₀, λ).
+
 **P20 census** (CONFIRMED): the systematic (x_N, λ_N) algebraicity
 classification for N = 1..60.  All five CWZ rational rows reproduced;
 13 N carry quadratic x_N and 8 N carry quadratic λ_N beyond the paper's
@@ -130,6 +140,15 @@ Table 1**: at N = 17 the arXiv v2 table prints λ = 143/238, but eq
 (3.9) closes only with λ = 43/238 (80-digit solve; residual 4.8e-56
 vs 0.42 miss).  The first literature-erratum catch of the mechanical
 pipeline.
+
+**P21 census extension** (NEGATIVE as registered, informative):
+deg(x₀) is BOUNDED (≤ 9 for all N = 2..60, while h(−24N) reaches 30)
+with clean residue-class structure — deg 1 exactly at the CWZ five;
+deg 2 at N = 2, 11, 19, 23, 25, 35, 43, 47; deg 3 at N = 9, 27, 29,
+31, 37, 39, 41, 49, 53 — so the naive deg-vs-h(D) prediction fails:
+x is a level-12 function whose CM values live in ring-class fields of
+MIXED conductors (the level-12 η fractions shift the relevant order).
+Registered as the explanation hypothesis.
 
 ## 5. The generation side (D1, D1-eta)
 
