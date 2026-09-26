@@ -145,6 +145,8 @@ quotients.  This converts D1's negative from "unexplained failure" to
 ```
 
 
+## 3. Mapping table — what the theory gives us, what is ours
+
 | Program statement | Formal anchor | Status |
 |---|---|---|
 | "What to keep under compression" | Algorithmic sufficient statistic / KSF | language borrowed; our L1–L3 = empirical instantiation on a math family |
