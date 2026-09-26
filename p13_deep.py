@@ -128,11 +128,9 @@ def readout_kwta(z, labels, kwta_k=2, k=3):
     topk = torch.topk(torch.abs(W), kwta_k, dim=1)
     mask = torch.zeros_like(W)
     mask.scatter_(1, topk.indices, 1.0)
-    sparse = (mask * torch.sign(W)).numpy()
-    # Jaccard winner-set overlap kNN
-    inter = sparse @ sparse.T
-    union = (np.abs(sparse).sum(1)[:, None] + np.abs(sparse).sum(1)[None, :]
-             - inter)
+    # True Jaccard on winner masks (sign is nuisance, not identity)
+    inter = mask.numpy() @ mask.numpy().T
+    union = mask.numpy().sum(1)[:, None] + mask.numpy().sum(1)[None, :]             - inter
     jac = inter / (union + 1e-12)
     np.fill_diagonal(jac, -np.inf)
     idx = np.argsort(-jac, axis=1)[:, :k]
@@ -202,7 +200,7 @@ def main():
                           / (k ** 3))
             v = sign * (Al + Bl * k) * H * z ** k
             if k == 0 and c0 is not None:
-                v = c0
+                v += c0
             c.append(v)
         c = np.array(c, dtype=np.float64)
         seqs.append(c)
