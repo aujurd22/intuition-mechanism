@@ -1,0 +1,268 @@
+{
+ "rows": [
+  {
+   "N": 2,
+   "h": 4,
+   "n_forms": 2,
+   "n_distinct_x0": 2,
+   "deg_p21": 2,
+   "orbit_eq_degree": true,
+   "all_verified": true
+  },
+  {
+   "N": 3,
+   "h": 3,
+   "n_forms": 2,
+   "n_distinct_x0": 2,
+   "deg_p21": 1,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 4,
+   "h": 6,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 4,
+   "orbit_eq_degree": true,
+   "all_verified": true
+  },
+  {
+   "N": 5,
+   "h": 4,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 1,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 6,
+   "h": 8,
+   "n_forms": 4,
+   "n_distinct_x0": 3,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 7,
+   "h": 4,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 1,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 8,
+   "h": 8,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 4,
+   "orbit_eq_degree": true,
+   "all_verified": true
+  },
+  {
+   "N": 9,
+   "h": 8,
+   "n_forms": 6,
+   "n_distinct_x0": 4,
+   "deg_p21": 3,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 10,
+   "h": 8,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 4,
+   "orbit_eq_degree": true,
+   "all_verified": true
+  },
+  {
+   "N": 11,
+   "h": 8,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 2,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 12,
+   "h": 9,
+   "n_forms": 4,
+   "n_distinct_x0": 3,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 13,
+   "h": 4,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 1,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 14,
+   "h": 12,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 15,
+   "h": 10,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 4,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 16,
+   "h": 14,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 17,
+   "h": 4,
+   "n_forms": 4,
+   "n_distinct_x0": 4,
+   "deg_p21": 1,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 18,
+   "h": 14,
+   "n_forms": 6,
+   "n_distinct_x0": 4,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 19,
+   "h": 8,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 2,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 20,
+   "h": 12,
+   "n_forms": 8,
+   "n_distinct_x0": 7,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 21,
+   "h": 12,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 4,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 22,
+   "h": 12,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 23,
+   "h": 8,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 2,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 24,
+   "h": 18,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 25,
+   "h": 10,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 2,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 26,
+   "h": 16,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 9,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 27,
+   "h": 9,
+   "n_forms": 6,
+   "n_distinct_x0": 4,
+   "deg_p21": 3,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 28,
+   "h": 12,
+   "n_forms": 8,
+   "n_distinct_x0": 7,
+   "deg_p21": 8,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 29,
+   "h": 12,
+   "n_forms": 12,
+   "n_distinct_x0": 8,
+   "deg_p21": 3,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  },
+  {
+   "N": 30,
+   "h": 18,
+   "n_forms": 8,
+   "n_distinct_x0": 6,
+   "deg_p21": 8,
+   "orbit_eq_degree": false,
+   "all_verified": true
+  }
+ ],
+ "all_verified": true,
+ "orbit_match_fraction": 0.138,
+ "verdict": "PARTIAL"
+}
