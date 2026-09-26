@@ -1,0 +1,61 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "rows": {
+    "raw": {
+     "silhouette": 0.7178,
+     "hit1": 0.404,
+     "ari": 0.037
+    },
+    "direct": {
+     "silhouette": 0.7169,
+     "hit1": 0.946,
+     "ari": 0.325
+    },
+    "ratio": {
+     "silhouette": 0.6826,
+     "hit1": 0.838,
+     "ari": 0.087
+    },
+    "ensemble": {
+     "silhouette": 0.7154,
+     "hit1": 0.946,
+     "ari": 0.325
+    }
+   },
+   "selected": "raw",
+   "best_by_ari": "direct",
+   "selection_correct": false
+  },
+  {
+   "family": "ratio-form(p14)",
+   "rows": {
+    "raw": {
+     "silhouette": 0.751,
+     "hit1": 0.629,
+     "ari": 0.0
+    },
+    "direct": {
+     "silhouette": 0.6463,
+     "hit1": 0.992,
+     "ari": 0.361
+    },
+    "ratio": {
+     "silhouette": 0.987,
+     "hit1": 1.0,
+     "ari": 1.0
+    },
+    "ensemble": {
+     "silhouette": 0.6941,
+     "hit1": 1.0,
+     "ari": 0.451
+    }
+   },
+   "selected": "ratio",
+   "best_by_ari": "ratio",
+   "selection_correct": true
+  }
+ ],
+ "verdict": "PARTIAL"
+}
