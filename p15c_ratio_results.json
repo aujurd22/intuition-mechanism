@@ -1,0 +1,66 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "metrics": {
+    "hit1": 0.838,
+    "hit3": 0.904,
+    "frac3": 0.706,
+    "macro": 0.706,
+    "ari": 0.087
+   },
+   "ladder": {
+    "class_levels": [
+     -0.0022,
+     -0.0003,
+     0.0004,
+     0.0018
+    ],
+    "class_stds": [
+     0.0064,
+     0.0022,
+     0.002,
+     0.0015
+    ],
+    "adjacent_gaps_sigma": [
+     0.4,
+     0.33,
+     0.77
+    ]
+   },
+   "shuffled_hit1": 0.25,
+   "verdict": "NEGATIVE"
+  },
+  {
+   "family": "ratio-form(p14)",
+   "metrics": {
+    "hit1": 1.0,
+    "hit3": 1.0,
+    "frac3": 1.0,
+    "macro": 1.0,
+    "ari": 1.0
+   },
+   "ladder": {
+    "class_levels": [
+     0.0589,
+     0.0809,
+     0.0973,
+     0.1315
+    ],
+    "class_stds": [
+     0.0542,
+     0.0172,
+     0.0215,
+     0.0168
+    ],
+    "adjacent_gaps_sigma": [
+     0.55,
+     0.84,
+     1.77
+    ]
+   },
+   "shuffled_hit1": 0.237,
+   "verdict": "CONFIRMED"
+  }
+ ]
+}
