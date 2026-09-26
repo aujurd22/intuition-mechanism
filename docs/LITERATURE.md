@@ -98,7 +98,52 @@ quotients.  This converts D1's negative from "unexplained failure" to
 - **DANN/GRL** (Ganin et al.) — the L2 mechanism (used in P14 arm b with
   the registered supervision caveat).
 
-## 3. Mapping table — what the theory gives us, what is ours
+## 2b. Neighbouring field — ML symmetry/discovery (added 2026-09-27 night)
+
+- **SymmetryGAN** (Thaler, Phys. Rev. D 2022) — adversarial
+  unsupervised symmetry discovery;
+  https://jthaler.net/olympus/files/2022/03/symmetrygan.pdf
+- **Liu & Tegmark (2022), "Machine Learning Hidden Symmetries"** —
+  symmetries that become manifest only in a LEARNED coordinate system;
+  closest ML analogue to our envelope-removal (the right coordinates
+  reveal the invariant).  Difference: their method needs the symmetry
+  to exist as an exact transformation of a scalar observable; our
+  invariant is statistical (a class signal), not a pointwise symmetry.
+- **LieAugmenter (2026)** — symmetry discovery as learning
+  task-dependent augmentations; assumes a task loss (labels) — outside
+  our L3 blind setting, useful as L2 comparison.
+- **Ramanujan Machine** (Technion) — exhaustive computer search over
+  formula spaces producing new constants formulas; the canonical
+  "computer discovery" project.  Differentiation: massive compute over
+  a HUMAN-DESIGNED ansatz + post-hoc proof; our program measures which
+  levels of the discovery path need that ansatz (P13/P15) — the two
+  are complementary, and our testbed could benchmark such searchers.
+- **WZ-method line** — Guillera's WZ proofs; "analogues of WZ seeds and
+  Ramanujan-type 1/π series" (arXiv 2026-07): the proof side of
+  discovery; registered as the natural partner for candidate series
+  our pipeline might one day generate.
+- **Bhat & Sinha (Dec 2025)** — Ramanujan 1/π series linked to
+  logarithmic conformal field theories: a deeper physical substrate
+  for why signature-kernels are modular; candidate explanation for the
+  Γ-constant axis (P16).
+- **Galois groups of Apéry-like sequences mod p** (Nov 2025) —
+  computational structure of exactly the Domb/AZ sequences behind
+  level-6 Ramanujan–Sato; possible invariants for a future testbed
+  round.
+
+## 5. Observed-domain map (where our results sit)
+
+```
+ algorithmic statistics (KSF)          theory of "what to keep"
+ Fisher ancillarity                    theory of nuisance
+ IRM critique / nonlinear ICA          invariance ≠ identifiability
+ ML symmetry discovery                 needs labels/priors (L2)
+ Ramanujan Machine / WZ / Hemmecke     search WITH human ansatz (L1-L2)
+ ─────────────────────────────────────────────────────────────────
+ THIS PROGRAM: L1/L2 mechanized, L3 gap measured experimentally,
+ regime theorem, complementary schemes, Γ-axis proposition.
+```
+
 
 | Program statement | Formal anchor | Status |
 |---|---|---|
