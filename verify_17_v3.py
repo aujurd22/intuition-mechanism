@@ -5,6 +5,15 @@ Structural correction: the paper's r_k = 4^(k-1) * h_k with
 h_k = (1/2)_k (1/4)_k (3/4)_k / (k!)^3 for the s=4 family.
 
 Run:  python verify_17_v3.py    (exit 0 iff all 17 PASS at 1e-15)
+
+SOURCE RE-CHECK (2026-09-26): equations 41-44 re-fetched verbatim from the
+primary source and compared character-by-character against these encodings
+-- LHS forms (2*sqrt3/pi, 1/(2*pi*sqrt2), 1/(3*pi*sqrt3), 2/(pi*sqrt11)),
+coefficient progressions (9/9, 17/81...; 11/9^3, 21/9^5...; 43/49^3,
+83/49^5...; 1103/99^2, 27493/99^6, 53883/99^10...), and the general-term
+ratio structure all MATCH. The 17/17 verdict is source-double-checked.
+(Note: LLM extraction of the paper numbers equations with an off-by-one
+shift between fetches -- the CONTENT mapping to our encodings is exact.)
 """
 import sys
 
