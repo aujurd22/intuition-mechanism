@@ -68,7 +68,7 @@ def main():
     all_ver = True
     match = 0
     tot = 0
-    for N in range(2, 31):
+    for N in range(31, 61):
         D = -24 * N
         forms = reduced_forms(D)
         h = classno_forms(D)
