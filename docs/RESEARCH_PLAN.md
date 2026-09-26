@@ -1,145 +1,216 @@
-# 直觉机制复现研究计划（Insight Mechanism Reproduction Program）
+# Insight Mechanism Reproduction Program (Research Plan)
 
-> 版本 v1.0 · 2026-09-26 · 定位：Mushroom-Body Program 的扩展 track（T0–T3 为新增 testbed，产出写回 `research/RESEARCH.md`，新定律候选进入 L 系列）
+> Version v1.0 · 2026-09-26 · Positioning: an extension track of the
+> Mushroom-Body Program (T0–T3 are new testbeds; results write back to
+> `research/RESEARCH.md` in the FlyMemory repo; new law candidates enter
+> the L-series)
 >
-> 前序结论（2026-09-26 对话已定案）：
-> - Ramanujan 公式的得出 = 机械流水线（超几何展开骨架 + CM 点求值 + Legendre 关系 + 数值核对），灵感只是其中两次模式补全；
-> - 灵感四零件 = 压缩关联记忆、高温检索、压缩进度筛、串行验证，四者在计算上均有存在性证明；
-> - 突破口在三个接缝：①压缩何时诱导结构 ②私有记号锻造 ③卡壳→松弛元控制 + 离线重组。
-> - 本计划 = 把三个接缝变成可跑、可证伪、可写回定律体系的实验。
+> Prior conclusions (settled in the 2026-09-26 conversation):
+> - How Ramanujan's formulas were actually derived = a mechanical pipeline
+>   (hypergeometric expansion skeleton + CM-point evaluation + Legendre
+>   relations + numerical verification); "inspiration" was just two
+>   pattern-completion events within it;
+> - Inspiration decomposes into four parts — compression associative
+>   memory, high-temperature retrieval, compression progress filter,
+>   serial verification — each with a computational existence proof;
+> - The breakthrough lies in three seams: ① when compression induces
+>   structure ② private notation forging ③ impasse -> relaxation
+>   meta-control + offline recombination.
+> - This plan turns the three seams into runnable, falsifiable experiments
+>   that write back into the law system.
 
 ---
 
-## 0. 中心假说
+## 0. Central hypotheses
 
-**H0（结构诱导，对应接缝①）**
-在重建损失下强制压缩，最优编码器会收敛到族的生成骨架：使"表面无关但结构同源"的样本成为表征近邻。该效应存在**压缩率窗口**——欠压缩被表面特征支配，过压缩丢失全部结构——窗口内外结构支配率崩塌。
+**H0 (structure induction, seam ①)**
+Under reconstruction loss with forced compression, the optimal encoder
+converges to the family's generative skeleton: "surface-unrelated but
+structure-homologous" samples become representation neighbours. The effect
+has a compression-ratio WINDOW — under-compression is dominated by surface
+features, over-compression loses all structure — and structure-domination
+collapses outside the window (non-monotonic).
 
-**H1（引擎闭环，对应接缝③）**
-"提议器 + 毫秒验证器 + 情景记忆 + 离线压缩重组"闭环中，带重组的模式相对无记忆搜索有显著命中率优势，且存在可观测的**灵感签名**：重组事件后紧邻的有效命中率显著高于本底率。
+**H1 (engine loop, seam ③)**
+In the loop "proposer + millisecond verifier + episodic memory + offline
+compression recombination", the recombination mode has a significantly
+higher hit rate than memoryless search, with an observable INSIGHT
+SIGNATURE: the effective-hit rate immediately after a recombination event
+significantly exceeds the background rate.
 
-**H2（记号锻造，对应接缝②）**
-模型自造离散原语（私有记号）重建数学对象语料时，原语与真数学结构（eta 积、模形式骨架、CM 类）的对齐率高于继承人类记号的表征。
+**H2 (notation forging, seam ②)**
+When a model rebuilds a corpus of mathematical objects with self-forged
+discrete primitives (private notation), the alignment between primitives
+and true mathematical structure (eta products, modular-form skeletons, CM
+classes) exceeds that of representations inheriting human notation.
 
 ---
 
-## 1. 预言注册总表（先注册，后实验；证伪同样是产出）
+## 1. Registered predictions (register first, run second; falsification is a result too)
 
-| 编号 | 实验 | 预言 | 证伪条件 | 状态 |
+| ID | Experiment | Prediction | Falsification | Status |
 |------|------|------|----------|------|
-| P1 | T0 扫描 | 存在压缩率窗口 [c1,c2]，窗口内结构支配率 SD > 表面支配率 + 15pp，且窗口两端 SD 崩塌（非单调） | SD 单调或全程 ≤ 表面支配率 | registered |
-| P2 | T0 多族混合 | 窗口内隐空间聚类与结构标签的 ARI > 与表面标签的 ARI + 0.1 | 无窗口或反转 | registered |
-| P3 | T1 数学对象 | q 展开压缩表征按算术不变量（CM 判别式 / level / 权重）聚类的 ARI > 文本嵌入基线 + 0.15 | 与基线持平或更差 | registered |
-| P4 | T1 检索 | 以 17 条已知 Ramanujan 系列为锚，表征空间 top-k 检索同族候选的命中率 > 均匀基线与文本嵌入基线 | 持平 | registered |
-| P5 | T2 引擎 A/B | 带重组模式到首个有效公式的时间 ≤ 无记忆基线的 1/2，且"重组后 1 步内命中"事件率 > 本底率 3 倍 | 无优势 | **CONFIRMED**(v2 难空间+seed,2026-09-26):首新命中 B=1.0 vs A=7.75 步(7.75×),重组后命中率 1.0 vs 本底 0.128(7.8×);覆盖优势随候选耗尽衰减(第 10 个关系 1.7×)。v0 易空间曾判首命中无差异——空间难度是判定前提 |
-| P6 | 17→18 泛化 | 给定族内 17 个样本，模型对第 18 个有效成员的接受/排序命中率 > 均匀基线显著幅度 | 持平 | registered |
-| P7 | H2 记号 | 自造 codebook 原语-结构对齐率 > 继承表征的对齐率 | 反转 | **FALSIFIED**(v1+v2,2026-09-26):VQ codebook 对权重不变量对齐率 0.000-0.029 vs 继承 raw k-means 0.674/文本嵌入 0.142;机制=**MSE 重建目标对不变量无压力**(码本按几何密度分配即可最小化重建,无需对齐权重)——与 Tishby 信息瓶颈论证一致:压缩只保留目标奖励的信息。P7 复活条件:重建/训练目标必须显式奖励不变量保留(如下游任务损失),纯重建不够 |
-| P8 | T0 表面显著性 | 挂 40 字符唯一签名后,SD 在 c≈1 处崩塌(SD < 表面支配),中段压缩恢复 ≥0.5 —— 窗口变双侧(欠压缩墙以表面显著性为条件) | c=1 处 SD 仍高(≥0.5) | **FALSIFIED**(2026-09-26):c=1 处 SD=0.545 未崩,中段 c=13-52 反成谷(0.35-0.42);修订=表面显著性制造**中段干扰带**而非欠压缩墙,且结构支配在签名占信号 31% 时仍胜出(0.545 vs 0.069) |
+| P1 | T0 sweep | A compression window [c1,c2] exists with SD > surface-domination + 15pp inside and collapse at both ends (non-monotonic) | SD monotonic or always <= surface-domination | partial (over-compression wall confirmed both domains; under-compression end conditional on surface salience) |
+| P2 | T0 mixed families | Within-window latent clustering ARI vs structure labels > ARI vs surface labels + 0.1 | no window or reversal | rides on P1 |
+| P3 | T1 math objects | Compression representation of q-expansions clusters by arithmetic invariant (CM disc / level / weight) with ARI > text-embedding baseline + 0.15 | ties or worse | PARTIAL (holds on shape objects; fails on digit-identity objects — representation must match invariant type) |
+| P4 | T1 retrieval | With 17 known Ramanujan series as anchors, top-k retrieval of same-family candidates > uniform and text-embedding baselines | ties | blocked (needs series for general d) |
+| P5 | T2 engine A/B | Time to first valid formula with recombination <= 1/2 of memoryless baseline, and "hit within 1 step of recombination" rate > 3x background | no advantage | CONFIRMED (v2 hard space + seeded start: first fresh hit 7.75x faster; post-recombination rate 1.0 vs 0.128 = 7.8x) |
+| P6 | 17->18 generalization | Given 17 in-family samples, the model's acceptance/ranking hit rate for an 18th valid member > uniform baseline significantly | ties | blocked (needs series for general d) |
+| P7 | H2 notation | Self-forged codebook primitive-structure alignment > inherited representation alignment | reversal | FALSIFIED (v1+v2: MSE reconstruction puts no pressure on preserving the invariant; revival requires task-relevant objectives) |
+| P8 | T0 surface salience | With a unique 40-char surface tag per instance, SD collapses at c~=1 and recovers at mid compression (two-sided window) | c=1 SD stays high (>=0.5) | FALSIFIED (c=1 SD 0.545; surface salience creates a MID-compression interference valley instead) |
 
-阈值（15pp、0.1、0.15、3 倍）为初版，跑通基线后允许修订一次，修订须在注册表中留痕。
-
----
-
-## 2. Testbed 分级
-
-### T0 合成族（toy，纯 CPU，~1-10M 参数模型）
-
-**目的**：在结构标签可机械计算的环境里，把 H0 变成一条可扫描的曲线。
-
-**数据（两个域，证明普遍性）**：
-1. **代数恒等式族**：小型代数（如 (a+b)²、分配律、结合律模板）生成恒等式；表面噪声 = 变量重命名、项重排、等价代换；结构标签 = 模板同构类。
-2. **图族**：若干生成骨架（树/环/双分图变体）+ 随机重标记 + 随机装饰边；结构标签 = 同构类（用规范型算法机械计算）。
-
-**模型与扫描**：小型 transformer 自编码器 / VQ-VAE；瓶颈维度扫描（压缩率 c = 输入信息量 / 瓶颈容量，扫 2–3 个数量级）；交叉扫描族数 K（2/8/32）与表面噪声强度。
-
-**指标**：
-- 结构支配率 SD：锚点样本的 kNN 中"同结构且异表面"的占比；表面支配率对称定义；
-- 聚类 ARI（对结构标签 vs 表面标签）。
-
-**产出**：SD–压缩率曲线族；若 P1 成立 → 定律候选 **L5（结构诱导窗）**，进入 MB 定律体系。
-
-### T1 真数学对象库（CPU，数据全部自足生成，不依赖外部大语料）
-
-**目的**：验证 H0 在真数学结构上成立（P3/P4）。
-
-**数据生成（关键：全部可本地复算）**：
-- q 展开：eta 积、Eisenstein 级数、j(τ) = q⁻¹ + 744 + 196884q + …（mpmath 高精度直接求值）；
-- CM 判别式表：d ∈ Heegner 集 + 非类数 1 的样本，j((1+√−d)/2) 高精度求值；
-- 结构标签 = 判别式 / level / 权重 / 是否 CM。
-
-**基线**：通用文本嵌入模型对 q 展开字符串的嵌入 + 均匀随机检索。
-
-### T2 Ramanujan 引擎（端到端最小闭环，CPU 级）
-
-**组件**：
-1. **族生成器 D1**（亦是独立工件）：d → 有效 1/π 级数。按 Borwein 重构流水线实现：₂F₁(1/2,1/2;1;k²) 展开 → 奇异模 k_d（K′/K=√d）CM 点求值 → Legendre 关系 + 参数求导产生 (A+Bn) 因子 → 高精度浮点 + PSLQ 整数化。**验收判据：复现 Chudnovsky 系数（d=163 → 640320, 13591409, 545140134）**，再用未见 d 生成新级数。
-2. **验证器**：整数算术 + mpmath，50 位精度，毫秒级。
-3. **提议器**：小模型或模板组合器，输入 = 原材料词典（q 展开、二项式系数、j 值片段）。
-4. **情景记忆 + 离线重组**：失败邻域与成功模式写入；每 N 步触发压缩重组（复用 FlyMemory 的设计原则，本地向量库实现，不动线上 flymemory 服务）。
-
-**协议**：A/B 对比（A=无记忆持续搜索；B=带重组）。日志记录每次重组事件与命中事件的时间对齐——用于 P5 的灵感签名检验。
-
-**17→18 测试（P6）**：族生成器产出 ≥18 个不同 d 的有效级数，冻结 17 个为"已知"，测试模型在检索/提议分布中把第 18 个排前的能力。
-
-### T3（可选，第二阶段）证明任务移植
-
-miniF2F 小规模：impasse 检测（beam 耗尽 / 损失平台）→ 僵局状态写入情景记忆 → 离线压缩重组 → 重启检索。判据：证明率提升是否集中在需要跨域引理的题目。
+Thresholds (15pp, 0.1, 0.15, 3x) are v1; one revision is allowed after the
+baseline runs, and revisions must be recorded in this registry.
 
 ---
 
-## 3. 交付物
+## 2. Testbed tiers
 
-| 编号 | 交付物 | 验收 |
+### T0 synthetic families (toy, pure CPU, ~1-10M parameter models)
+
+**Purpose**: make H0 a scannable curve in an environment where structure
+labels are mechanically computable.
+
+**Data (two domains, for generality)**:
+1. Algebraic identity families: small algebra templates ((a+b)^2,
+   distributivity, associativity); surface noise = variable renaming, term
+   reordering, equivalent rewrites; structure label = template isomorphism class.
+2. Graph families: generation skeletons (tree / cycle / bipartite variants)
+   + random relabeling + random edge decoration; structure label =
+   isomorphism class (computed mechanically).
+
+**Model & sweep**: small transformer autoencoder / VQ-VAE; bottleneck sweep
+(compression c = input information / bottleneck capacity, 2-3 orders of
+magnitude); crossed with family count K (2/8/32) and surface-noise strength.
+
+**Metrics**:
+- Structure-domination SD: among an anchor's kNN, the fraction
+  "same-structure AND different-surface"; surface-domination defined
+  symmetrically;
+- Clustering ARI (against structure labels vs surface labels).
+
+**Output**: SD-vs-compression curve families; if P1 holds -> law candidate
+**L5 (structure-induction window)** enters the MB law system.
+
+### T1 real math objects (CPU, fully self-generated data)
+
+**Purpose**: test H0 on real mathematical structure (P3/P4).
+
+**Data generation (key: everything recomputable locally)**:
+- q-expansions: eta products, Eisenstein series,
+  j(tau) = q^-1 + 744 + 196884q + ... (mpmath high-precision direct evaluation);
+- CM discriminant table: d in the Heegner set + class-number-2 samples,
+  j((1+sqrt(-d))/2) at high precision;
+- structure labels = discriminant / level / weight / is-CM.
+
+**Baselines**: generic text-embedding model over the q-expansion strings +
+uniform random retrieval.
+
+### T2 Ramanujan engine (end-to-end minimal loop, CPU tier)
+
+**Components**:
+1. Family generator D1 (an artifact in its own right): d -> valid 1/pi
+   series. Implemented per the Borwein reconstruction pipeline: 2F1(1/2,1/2;1;k^2)
+   expansion -> singular modulus k_d at the CM point (K'/K=sqrt(d)) ->
+   Legendre relations + parameter differentiation produce the (A+Bn) factor
+   -> high-precision floats + PSLQ integerization. **Acceptance: reproduce
+   the Chudnovsky coefficients (d=163 -> 640320, 13591409, 545140134)**,
+   then generate new series for unseen d.
+2. Verifier: integer arithmetic + mpmath, 50-digit precision, milliseconds.
+3. Proposer: small model or template combinator over a raw-material
+   dictionary (q-expansions, binomial coefficients, j-value fragments).
+4. Episodic memory + offline recombination: failure neighbourhoods and
+   success patterns written in; compression-recombination triggered every N
+   steps (reuses FlyMemory design principles; local vector store, the live
+   flymemory service is untouched).
+
+**Protocol**: A/B comparison (A = memoryless persistent search; B = with
+recombination). Logs align every recombination event with hit events —
+for the P5 insight-signature test.
+
+**17->18 test (P6)**: the family generator produces >=18 valid series for
+distinct d; freeze 17 as "known", test whether the model ranks the 18th
+valid member first in retrieval/proposal distributions.
+
+### T3 (optional, second phase) proof-task transplant
+
+miniF2F small-scale: impasse detection (beam exhaustion / loss plateau) ->
+write the impasse state into episodic memory -> offline compression
+recombination -> restart search. Criterion: does the proof-rate gain
+concentrate on problems requiring cross-domain lemmas?
+
+---
+
+## 3. Deliverables
+
+| ID | Deliverable | Acceptance |
 |------|--------|------|
-| D1 | 族生成器（d → 整数级数） | 复现 Chudnovsky 系数 + 产出 ≥18 条新级数 |
-| D2 | T0 扫描曲线 + L5 候选定律（含注册预言 P1/P2 结果） | 曲线可复现脚本 + 一页结论 |
-| D3 | T2 A/B 对比报告 + 灵感签名分析 | P5 判定 + 事件日志 |
-| D4 | 17→18 泛化测试报告 | P6 判定 |
-| D5 | 全部写回 `research/RESEARCH.md`（新 testbed 章节 + L5 预言注册） | 文档合并 |
+| D1 | Family generator (d -> integer series) | Reproduces the Chudnovsky coefficients + produces >=18 new series |
+| D2 | T0 scan curves + L5 candidate law (with registered P1/P2 verdicts) | Reproducible script + one-page conclusion |
+| D3 | T2 A/B report + insight-signature analysis | P5 verdict + event logs |
+| D4 | 17->18 generalization report | P6 verdict |
+| D5 | Everything written back to FlyMemory `research/RESEARCH.md` | Document merge |
 
 ---
 
-## 4. 排期（串行执行；门禁：上一阶段判据未过则停下归因，不硬闯）
+## 4. Schedule (serial; gate: if a stage's acceptance fails, stop and attribute — never push through)
 
-| 阶段 | 内容 | 预算 | 门禁 |
+| Phase | Content | Budget | Gate |
 |------|------|------|------|
-| Phase 0（第 1 周内） | 验证器实现与测试；族生成器原型（先过 Chudnovsky 验收）；T0 合成族生成脚本；文本嵌入与均匀基线跑通 | 3–5 个工作单元 | D1 验收通过 |
-| Phase 1（第 2–3 周） | T0 全量扫描（压缩率 × 族数 × 噪声）；P1/P2 判定；L5 起草或负结果归因 | 过夜批任务 ×3–5 | P1/P2 有结论 |
-| Phase 2（第 4–6 周） | T1 数据管线与 P3/P4；T2 最小闭环（A 模式基线 → B 模式）；P5 | 2–3 周 | P3–P5 有结论 |
-| Phase 3（第 2 月起） | 17→18（P6）；H2 记号锻造（P7）；T3 视前四项结果决定；汇总写回 RESEARCH.md | 弹性 | — |
+| Phase 0 (week 1) | Verifier + tests; family-generator prototype (Chudnovsky acceptance first); T0 synthetic-family generation script; text-embedding and uniform baselines | 3-5 work units | D1 acceptance passes |
+| Phase 1 (weeks 2-3) | Full T0 sweep (compression x families x noise); P1/P2 verdicts; L5 draft or negative-result attribution | 3-5 overnight batches | P1/P2 concluded |
+| Phase 2 (weeks 4-6) | T1 data pipeline + P3/P4; T2 minimal loop (A baseline -> B); P5 | 2-3 weeks | P3-P5 concluded |
+| Phase 3 (month 2+) | 17->18 (P6); H2 notation forging (P7); T3 depending on results; write back to RESEARCH.md | elastic | — |
 
-**快速启动（第一个工作单元，今晚可跑）**：
-1. `validator.py`：1/π 级数 50 位验证函数 + 对 Ramanujan 9801 / Chudnovsky 两条已知公式的自测；
-2. `family_gen.py` 骨架：mpmath 100 位求值 j((1+√−d)/2) 与奇异模，PSLQ 整数化接口；
-3. T0 图族生成器 + 规范型（结构标签）计算。
-
----
-
-## 5. 硬纪律（沿用既有规则，逐条硬性）
-
-- **串行**：GPU 训练/批量扫描一律串行，不与 flymemory 服务、其他任务并行；启动前用 `python ctypes` 查内存（不用 PowerShell 内联，Git Bash 转义会坏）；
-- T0–T2 全部按 CPU 级设计（≤10M 参数、mpmath 精度受控），不进 32GB 红线；
-- 大语料流式处理；链式长任务加看门狗，禁 `tail -1` 吞退出码；
-- **先量后写**：每个实验先在注册表登记预言再开跑；阈值修订留痕；
-- 负结果按既有传统入"负结果链"（P1 证伪 = 结构诱导窗不存在，本身就是 MB program 的高价值结论）；
-- 不动线上 flymemory 库；引擎记忆用独立本地存储。
+**Quick start (first work unit)**:
+1. `validator.py`: 50-digit verification for 1/pi series + self-tests
+   against the two known formulas (Ramanujan 9801 / Chudnovsky); ✅ done
+2. `family_gen.py` skeleton: mpmath 100-digit j((1+sqrt(-d))/2) and
+   singular moduli, PSLQ integerization interface; ✅ done (d=163 anchor
+   PASS after the nome-squared bug fix)
+3. T0 graph-family generator + canonical (structure-label) computation. ✅ done
 
 ---
 
-## 6. 风险与证伪出口
+## 5. Hard discipline (inherited rules, each one hard)
 
-| 风险 | 出口 |
+- **Serial**: GPU training / batch scans run serially, never in parallel
+  with the flymemory service or other tasks; check memory with
+  `python ctypes` before starting (never PowerShell inline — Git Bash
+  escaping breaks it);
+- T0-T2 are all designed CPU-tier (<=10M params, controlled mpmath
+  precision) — never near the 32GB red line;
+- Stream large corpora; watchdogs on chained long tasks; never swallow
+  exit codes with `tail -1`;
+- **Measure first, write second**: register every prediction before
+  running; threshold revisions must leave a trail;
+- Negative results enter the negative-results chain per house tradition
+  (P1 falsified = the structure-induction window does not exist — itself a
+  high-value MB-program conclusion);
+- The live flymemory library is untouched; the engine uses its own local
+  store.
+
+---
+
+## 6. Risks & falsification exits
+
+| Risk | Exit |
 |------|------|
-| T0 无结构诱导窗 | 负结果 + 归因（数据族太浅？压缩目标形式不对？）→ 调整瓶颈目标（如加去噪/掩码）重扫一次，仍无则 L5 记为证伪 |
-| 族生成器 PSLQ 整数化失败 | 降级：数值级数仍可支撑 T2 验证器回路，整数化作为独立子问题挂起 |
-| T2 命中率过低无信号 | 先降空间：把提议空间从"任意 d"缩到"已知族内插值"，确认回路灵敏度后再放开 |
-| 基线太强（文本嵌入已聚类成功） | 结论转向："结构信息在表层即可读出"——仍然成立且有趣，P3 改判"表面充分性" |
+| No structure-induction window in T0 | Negative result + attribution (families too shallow? wrong compression objective?) -> adjust the bottleneck objective (add denoising/masking) and rescan once; still nothing => L5 recorded as falsified |
+| PSLQ integerization fails in the family generator | Downgrade: numeric series still support the T2 verifier loop; integerization hangs as a separate subproblem |
+| T2 hit rate too low for signal | Shrink the space first: restrict proposals from "any d" to "interpolation within known families", confirm loop sensitivity, then open up |
+| Baseline too strong (text embedding already clusters) | Conclusion pivots: "structure is readable from the surface" — still valid and interesting; P3 re-judged as "surface sufficiency" |
 
 ---
 
-## 7. 与 MB program 的衔接
+## 7. Coupling with the MB program
 
-- 本计划三接缝中，接缝①直接复用 MB 核心问题"压缩何时诱导结构"，T0/T1 是其受控实验；接缝③复用 FlyMemory 记忆设计原则；接缝②的 codebook 实验借用 FlyPoet 的激活压缩设施思路；
-- L5（结构诱导窗）为定律候选，待 P1/P2 判定后按 L 系列惯例定稿；
-- 灵感签名（P5）为前瞻预测，跑前已注册；
-- 全部结论按项目惯例写回主文档，保持单一事实源。
+- Of the three seams, seam ① directly reuses the MB core question "when
+  does compression induce structure"; T0/T1 are its controlled
+  experiments; seam ③ reuses FlyMemory's memory design principles; seam ②' s
+  codebook experiment borrows FlyPoet's activation-compression setup;
+- L5 (structure-induction window) is a law candidate, finalized after
+  P1/P2 verdicts per L-series convention;
+- The insight signature (P5) is a registered forward prediction;
+- All conclusions are written back to the main documents per house
+  convention, keeping a single source of truth.
