@@ -1,0 +1,8 @@
+{
+ "n": 240,
+ "n_per_class": 60,
+ "arm1_recon_knn": 0.475,
+ "arm2_dann_knn": 0.75,
+ "arm2_s_acc": 0.8833333253860474,
+ "arm3_family_acc": 0.975
+}
