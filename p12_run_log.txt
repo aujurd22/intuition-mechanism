@@ -1,0 +1,36 @@
+inherited raw KMeans ARI: 0.6736
+
+  codes= 8 seed=0: ARI=+0.272 [   6.8s]
+  codes= 8 seed=1: ARI=+0.272 [  12.4s]
+  codes= 8 seed=2: ARI=+0.272 [  18.0s]
+  codes=12 seed=0: ARI=+0.693 [  24.5s]
+  codes=12 seed=1: ARI=+0.504 [  30.2s]
+  codes=12 seed=2: ARI=+0.664 [  36.6s]
+  codes=16 seed=0: ARI=+0.693 [  43.3s]
+  codes=16 seed=1: ARI=+0.676 [  49.8s]
+  codes=16 seed=2: ARI=+0.664 [  57.4s]
+  codes=24 seed=0: ARI=+0.686 [  65.1s]
+  codes=24 seed=1: ARI=+0.812 [  72.3s]
+  codes=24 seed=2: ARI=+0.686 [  79.7s]
+  codes=32 seed=0: ARI=+0.582 [  87.8s]
+  codes=32 seed=1: ARI=+0.703 [  96.2s]
+  codes=32 seed=2: ARI=+0.638 [ 104.2s]
+  codes=48 seed=0: ARI=+0.571 [ 112.6s]
+  codes=48 seed=1: ARI=+0.596 [ 120.8s]
+  codes=48 seed=2: ARI=+0.513 [ 129.2s]
+  codes=64 seed=0: ARI=+0.394 [ 138.4s]
+  codes=64 seed=1: ARI=+0.529 [ 147.7s]
+  codes=64 seed=2: ARI=+0.524 [ 156.9s]
+
+=== P12 capacity curve (forged ARI by codebook size) ===
+  codes= 8: mean=0.272 std=0.000 vals=[0.272, 0.272, 0.272]
+  codes=12: mean=0.621 std=0.083 vals=[0.693, 0.504, 0.664]
+  codes=16: mean=0.678 std=0.012 vals=[0.693, 0.676, 0.664]  > inherited
+  codes=24: mean=0.728 std=0.060 vals=[0.686, 0.812, 0.686]  > inherited
+  codes=32: mean=0.641 std=0.049 vals=[0.582, 0.703, 0.638]
+  codes=48: mean=0.560 std=0.035 vals=[0.571, 0.596, 0.513]
+  codes=64: mean=0.482 std=0.063 vals=[0.394, 0.529, 0.524]
+
+curve_shape: non-monotone
+verdict: NON-ROBUST
+results -> p12_results.json

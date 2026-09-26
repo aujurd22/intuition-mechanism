@@ -1,0 +1,292 @@
+{
+ "A": [
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 199,
+   "rand_hits": 34,
+   "total_hits": 34
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 199,
+   "rand_hits": 34,
+   "total_hits": 34
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 197,
+   "rand_hits": 32,
+   "total_hits": 32
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 201,
+   "rand_hits": 31,
+   "total_hits": 31
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 203,
+   "rand_hits": 35,
+   "total_hits": 35
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 197,
+   "rand_hits": 36,
+   "total_hits": 36
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 193,
+   "rand_hits": 28,
+   "total_hits": 28
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 201,
+   "rand_hits": 31,
+   "total_hits": 31
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 208,
+   "rand_hits": 31,
+   "total_hits": 31
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 193,
+   "rand_hits": 25,
+   "total_hits": 25
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 210,
+   "rand_hits": 30,
+   "total_hits": 30
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 214,
+   "rand_hits": 30,
+   "total_hits": 30
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 206,
+   "rand_hits": 32,
+   "total_hits": 32
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 194,
+   "rand_hits": 33,
+   "total_hits": 33
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 211,
+   "rand_hits": 26,
+   "total_hits": 26
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 199,
+   "rand_hits": 32,
+   "total_hits": 32
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 202,
+   "rand_hits": 32,
+   "total_hits": 32
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 201,
+   "rand_hits": 30,
+   "total_hits": 30
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 213,
+   "rand_hits": 29,
+   "total_hits": 29
+  },
+  {
+   "recomb_events": 0,
+   "recomb_hits": 0,
+   "rand_props": 208,
+   "rand_hits": 35,
+   "total_hits": 35
+  }
+ ],
+ "B": [
+  {
+   "recomb_events": 110,
+   "recomb_hits": 4,
+   "rand_props": 109,
+   "rand_hits": 24,
+   "total_hits": 28
+  },
+  {
+   "recomb_events": 102,
+   "recomb_hits": 6,
+   "rand_props": 122,
+   "rand_hits": 18,
+   "total_hits": 24
+  },
+  {
+   "recomb_events": 117,
+   "recomb_hits": 5,
+   "rand_props": 116,
+   "rand_hits": 18,
+   "total_hits": 23
+  },
+  {
+   "recomb_events": 108,
+   "recomb_hits": 4,
+   "rand_props": 116,
+   "rand_hits": 19,
+   "total_hits": 23
+  },
+  {
+   "recomb_events": 85,
+   "recomb_hits": 4,
+   "rand_props": 126,
+   "rand_hits": 18,
+   "total_hits": 22
+  },
+  {
+   "recomb_events": 98,
+   "recomb_hits": 4,
+   "rand_props": 114,
+   "rand_hits": 21,
+   "total_hits": 25
+  },
+  {
+   "recomb_events": 99,
+   "recomb_hits": 6,
+   "rand_props": 116,
+   "rand_hits": 16,
+   "total_hits": 22
+  },
+  {
+   "recomb_events": 111,
+   "recomb_hits": 7,
+   "rand_props": 116,
+   "rand_hits": 19,
+   "total_hits": 26
+  },
+  {
+   "recomb_events": 95,
+   "recomb_hits": 1,
+   "rand_props": 125,
+   "rand_hits": 18,
+   "total_hits": 19
+  },
+  {
+   "recomb_events": 119,
+   "recomb_hits": 7,
+   "rand_props": 114,
+   "rand_hits": 19,
+   "total_hits": 26
+  },
+  {
+   "recomb_events": 94,
+   "recomb_hits": 5,
+   "rand_props": 115,
+   "rand_hits": 15,
+   "total_hits": 20
+  },
+  {
+   "recomb_events": 85,
+   "recomb_hits": 4,
+   "rand_props": 129,
+   "rand_hits": 20,
+   "total_hits": 24
+  },
+  {
+   "recomb_events": 112,
+   "recomb_hits": 5,
+   "rand_props": 112,
+   "rand_hits": 20,
+   "total_hits": 25
+  },
+  {
+   "recomb_events": 119,
+   "recomb_hits": 6,
+   "rand_props": 111,
+   "rand_hits": 21,
+   "total_hits": 27
+  },
+  {
+   "recomb_events": 105,
+   "recomb_hits": 4,
+   "rand_props": 109,
+   "rand_hits": 21,
+   "total_hits": 25
+  },
+  {
+   "recomb_events": 70,
+   "recomb_hits": 1,
+   "rand_props": 112,
+   "rand_hits": 13,
+   "total_hits": 14
+  },
+  {
+   "recomb_events": 106,
+   "recomb_hits": 4,
+   "rand_props": 125,
+   "rand_hits": 22,
+   "total_hits": 26
+  },
+  {
+   "recomb_events": 123,
+   "recomb_hits": 5,
+   "rand_props": 106,
+   "rand_hits": 20,
+   "total_hits": 25
+  },
+  {
+   "recomb_events": 89,
+   "recomb_hits": 5,
+   "rand_props": 132,
+   "rand_hits": 15,
+   "total_hits": 20
+  },
+  {
+   "recomb_events": 85,
+   "recomb_hits": 4,
+   "rand_props": 106,
+   "rand_hits": 10,
+   "total_hits": 14
+  }
+ ],
+ "background_pooled": 0.15564263322884012,
+ "recomb_events": 2032,
+ "recomb_hits": 91,
+ "post_rate": 0.04478346456692913,
+ "verdict": "NOT-SUPPORTED",
+ "note": "multiplicative operators (CROSS/SWAP/POWER-MIX) are all constructive in this ring (rate 1.0, low-weight spaces 1-dim); ADDITIVE-MIX is the first genuinely non-constructive operator"
+}

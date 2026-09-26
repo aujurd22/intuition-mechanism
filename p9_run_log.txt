@@ -1,0 +1,48 @@
+members: 20 (literature 17, mechanical 3)
+signatures: s=2: 3, s=3: 2, s=4: 10, s=6: 5
+windows per series: 55
+
+  fold  1/20 held-out eq28  (s=2): mse 0.0032 vs persistence 0.0000
+  fold  2/20 held-out eq29  (s=2): mse 0.0002 vs persistence 0.0000
+  fold  3/20 held-out eq30  (s=2): mse 0.0004 vs persistence 0.0000
+  fold  4/20 held-out eq31  (s=3): mse 0.0003 vs persistence 0.0000
+  fold  5/20 held-out eq32  (s=3): mse 0.0002 vs persistence 0.0000
+  fold  6/20 held-out eq33  (s=6): mse 0.0003 vs persistence 0.0000
+  fold  7/20 held-out eq34  (s=6): mse 0.0005 vs persistence 0.0000
+  fold  8/20 held-out eq35  (s=4): mse 0.0004 vs persistence 0.0000
+  fold  9/20 held-out eq36  (s=4): mse 0.0002 vs persistence 0.0000
+  fold 10/20 held-out eq37  (s=4): mse 0.0004 vs persistence 0.0000
+  fold 11/20 held-out eq38  (s=4): mse 0.0002 vs persistence 0.0000
+  fold 12/20 held-out eq39  (s=4): mse 0.0010 vs persistence 0.0000
+  fold 13/20 held-out eq40  (s=4): mse 0.0008 vs persistence 0.0000
+  fold 14/20 held-out eq41  (s=4): mse 0.0003 vs persistence 0.0000
+  fold 15/20 held-out eq42  (s=4): mse 0.0004 vs persistence 0.0000
+  fold 16/20 held-out eq43  (s=4): mse 0.0003 vs persistence 0.0000
+  fold 17/20 held-out eq44  (s=4): mse 0.0002 vs persistence 0.0000
+  fold 18/20 held-out d19   (s=6): mse 0.0004 vs persistence 0.0000
+  fold 19/20 held-out d43   (s=6): mse 0.0004 vs persistence 0.0000
+  fold 20/20 held-out d67   (s=6): mse 0.0002 vs persistence 0.0000
+
+--- P9 clustering results ---
+ARI latent vs s             : -0.082   <- main
+ARI input-repr log|c|[:8]   : -0.114   <- surface baseline 1
+ARI latent vs |c0| bins     : 0.420   <- surface baseline 2
+ARI invariant control (R)   : 1.000   <- health check
+ARI PCA-2 of latent vs s    : -0.082
+held-out MSE model 0.0005 vs persistence 0.0000
+
+verdict: NOT-SUPPORTED (latent -0.082 vs max baseline 0.420 + 0.15; margin -0.652)
+
+latent clusters:
+  cluster 0: eq30(s=2), eq34(s=6), eq37(s=4), eq38(s=4), eq42(s=4), eq43(s=4), d19(s=6)
+  cluster 1: eq28(s=2), eq29(s=2), eq31(s=3), eq32(s=3), eq33(s=6), eq35(s=4), eq36(s=4), eq40(s=4), eq41(s=4)
+  cluster 2: eq39(s=4), d43(s=6)
+  cluster 3: eq44(s=4), d67(s=6)
+
+PCA-2 coordinates by signature:
+  s=2: eq28:(+1.40,-0.37)  eq29:(+0.77,-0.02)  eq30:(-0.11,+0.28)
+  s=3: eq31:(+1.11,-0.19)  eq32:(+0.93,-0.10)
+  s=4: eq35:(+1.24,-0.25)  eq36:(+0.84,-0.05)  eq37:(+0.41,+0.14)  eq38:(-0.59,+0.32)  eq39:(-1.45,+0.19)  eq40:(+1.21,-0.23)  eq41:(+0.72,+0.01)  eq42:(-0.05,+0.27)  eq43:(-0.37,+0.30)  eq44:(-2.80,-0.46)
+  s=6: eq33:(+0.93,-0.10)  eq34:(-0.37,+0.30)  d19:(+0.28,+0.18)  d43:(-1.35,+0.21)  d67:(-2.76,-0.42)
+
+results -> D:\djr82\intuition-mechanism\p9_results.json
