@@ -125,14 +125,44 @@ remains open (registered limitation).
   construction WITH modular-forms knowledge vs testing whether the
   route is findable WITHOUT it.
 
+## 7b. The LLM baseline (P17) — memory vs mechanism
+
+A 27B reasoning model (Ternary-Bonsai-2, local) on the counterfactual
+testbed: literature-real series 0.235, counterfactual series 0.250 —
+both at chance (0.247), INCONCLUSIVE as a discriminator at this scale.
+Two registered secondary findings: with deliberately wrong few-shot
+labels the model answers from structure ZERO times (labels act as
+authority, suppressing computation); and raw decimal sequences do not
+reveal the signature even for literature-famous series — consistent
+with L3.  The memory-vs-mechanism discriminator stays open for
+stronger models or tool-scaffolded prompting.
+
+## 7c. The generation side, mechanically (P18, P19)
+
+P18 (CONFIRMED): the Cooper–Wan–Zudilin level-6 machinery Z(X) is
+implemented and verified numerically — third-order ODE residual 1e-63,
+differential identity 1e-68 — including the discovery that the sqrt
+branch has TWO SHEETS meeting at the stationary point X = 1/36.  The
+CM-point table yields EXACT RATIONALS (1/36, 1/54, 1/100, …): a
+mechanically generated Γ₀(6) class-invariant table.
+
+P19 (CALIBRATION-BLOCKED): mechanical generation of the series
+themselves is blocked on the λ_N definition (it requires the modular
+polynomial M_N's derivative, per CCL 2004 Theorem 2.1, under the
+X = 4x(1−x) convention) — implementation scoped at roughly half a
+session.  The verified substrate (Z/X machinery + X₀ table + sequence
+generators) is in the repo.
+
 ## 8. Open experiments (registered next steps)
 
 - Exact envelope identification via structural priors (known class
   count + ladder shape) — the remaining readout gap.
 - External-information routes: counterfactual perturbation access.
-- LLM baseline on the same testbed (memory vs mechanism discrimination).
+- LLM baseline at frontier scale + tool-scaffolded prompting (P17's
+  registered continuation).
 - D1-eta stage (iii): derive (A,B,z) from eta values for known members;
-  then novel-series generation.
+  then novel-series generation (P19 continuation: implement the
+  X = 4x(1−x) convention and the M_N modular-polynomial derivative).
 - Extending confusability theory: Γ-gap ⇒ a priori difficulty ranking
   for new invariant families.
 
