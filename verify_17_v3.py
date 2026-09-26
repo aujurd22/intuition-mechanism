@@ -95,14 +95,14 @@ def main() -> int:
     # ---- s=4 positive family (eq 40-44) ----
     POS = [
         (40, mpf(1), 1, 8, lambda k: mpf(9) ** k, 2 * sqrt(3) / pi),
-        (41, mpf(1) / 9, 1, 10, lambda k: mpf(9) ** (2 * k + 1) / 4,
+        (41, mpf(1) / 9, 1, 10, lambda k: mpf(9) ** (2 * k + 1),
          1 / (2 * pi * sqrt(2))),
-        (42, mpf(3) / 49, 3, 40, lambda k: mpf(49) ** (2 * k + 1) / 4,
+        (42, mpf(3) / 49, 3, 40, lambda k: mpf(49) ** (2 * k + 1),
          1 / (3 * pi * sqrt(3))),
-        (43, mpf(19) / 99, 19, 280, lambda k: mpf(99) ** (2 * k + 1) / 4,
+        (43, mpf(19) / 99, 19, 280, lambda k: mpf(99) ** (2 * k + 1),
          2 / (pi * sqrt(11))),
         (44, mpf(1103) / 99 ** 2, 1103, 26390,
-         lambda k: mpf(99) ** (4 * k + 2) / 4, 1 / (2 * pi * sqrt(2))),
+         lambda k: mpf(99) ** (4 * k + 2), 1 / (2 * pi * sqrt(2))),
     ]
     for eq, c0, A, B, Dk, target in POS:
         total = c0
