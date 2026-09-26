@@ -1,22 +1,17 @@
-"""P4 clean three-tier experiment (external-review action item).
+"""P4 clean three-tier experiment v2 (fixed: per-series normalization params).
 
-BUG FIXED: the earlier p4_anchors.py/p4_ratio.py built c_k as
-(A+Bk) * z^k -- the hypergeometric factor hyper3(1/2, 1/s, 1-1/s, k) was
-ADDED as a linear term instead of MULTIPLIED, so P4 v0/v1 measured garbage
-sequences and their "negative" verdicts are invalid (retracted).
+BUG FIXED (2026-09-26): the Tier B/C R-sequence construction used STALE loop
+variables (eq44's Al/Bl/z for every series) and an inverted linear-ratio
+correction. Now each series is normalized with its OWN parameters and the
+correction direction is right:
+  R_k = (c_{k+1}/c_k) * (A_lin + B_lin*k)/(A_lin + B_lin*(k+1)) * (1/z)
+     == (k+1/2)(k+1/s)(k+1-1/s)/(k+1)^3   -- the pure hypergeometric signature.
 
-Correct coefficient:  c_k = sign * (A_lin + B_lin*k) * H_k * z^k
-with H_k = (1/2)_k (1/s)_k (1-1/s)_k / (k!)^3,  s in {2,3,4,6}.
-
-Three tiers (external-review design):
-  A blind   : raw normalized c-sequences, kNN same-signature
-  B ratio   : R_k = (c_{k+1}/c_k) normalized by the (A+Bk) linear factor
-              and z -- leaves the pure hypergeometric signature
-  C template: R_k matched against the 4 theoretical signature templates
-              T_k(s) = (k+1/2)(k+1/s)(k+1-1/s)/(k+1)^3  -> s classification
-
-Metrics: hit@1, hit@3-any, mean same-family fraction@3, ARI, per-signature
-recall, and a properly computed chance baseline.
+Tiers:
+  A  blind raw (normalized c-sequences, kNN same-signature)
+  A' de-leaked text embedding
+  B  ratio-normalized R-sequences, kNN
+  C  signature constant extraction: c_s = 2*R_0 = (1/s)(1-1/s) -> s
 
 Run:  python p4_clean.py
 """
@@ -39,21 +34,17 @@ def hyper3(a, b, c, k):
     return float(rf(a, k) * rf(b, k) * rf(c, k) / factorial(k) ** 3)
 
 
-def h4(k):
-    return hyper3(0.5, 0.25, 0.75, k)
-
-
 # (eq, s, A_lin, B_lin, z, sign, c0) -- all from the VERIFIED encodings
 SERIES = [
     ("eq28", 2, 1, 6, 0.25, +1, None),
     ("eq29", 2, 5, 42, 1 / 64, +1, None),
     ("eq30", 2, 5 * np.sqrt(5) - 1, 42 * np.sqrt(5) + 30,
-     64 * ((3 - np.sqrt(5)) / 16) ** 4, +1, None),  # literature z (externally sourced)
+     64 * ((3 - np.sqrt(5)) / 16) ** 4, +1, None),
     ("eq31", 3, 2, 15, 2 / 27, +1, None),
     ("eq32", 3, 4, 33, 4 / 125, +1, None),
     ("eq33", 6, 1, 11, 4 / 125, +1, None),
     ("eq34", 6, 8, 133, (4 / 85) ** 3, +1, None),
-    ("eq35", 4, 3, 20, -1 / 8, -1, 1.5),                # 4/pi = 3/2 - (23/8)r1 + ...
+    ("eq35", 4, 3, 20, -1 / 8, -1, 1.5),
     ("eq36", 4, 3, 28, -1 / (3 * 16), -1, 0.75),
     ("eq37", 4, 23, 260, -1 / 324, -1, 23 / 18),
     ("eq38", 4, 41, 644, -1 / (5 * 72 ** 2), -1, 41 / 72),
@@ -67,23 +58,24 @@ SERIES = [
 
 
 def build():
+    """Correct c_k = sign*(A_lin+B_lin*k)*H_k*z^k (+c0 at k=0), H_k the
+    s-signature hypergeometric factor. Returns raw c-sequences (unnormalized)
+    + meta + rendered texts."""
     seqs, meta, texts = [], [], []
     for eq, s, Al, Bl, z, sign, c0 in SERIES:
         c = []
         for k in range(NC):
-            lin = Al + Bl * k
             H = hyper3(0.5, 1 / s, 1 - 1 / s, k)
-            v = sign * lin * H * z ** k
+            v = sign * (Al + Bl * k) * H * z ** k
             if c0 is not None and k == 0:
                 v += c0
             c.append(v)
         c = np.array(c, dtype=np.float64)
-        c = c / (np.linalg.norm(c) + 1e-300)
         seqs.append(c)
         meta.append({"eq": eq, "s": s})
         texts.append("Ramanujan series coefficients: "
                      + " ".join(f"{v:.6g}" for v in c[:16]))
-    return np.stack(seqs).astype(np.float32), meta, texts
+    return seqs, meta, texts
 
 
 def knn_metrics(rep, s_arr, k=3):
@@ -105,22 +97,20 @@ def knn_metrics(rep, s_arr, k=3):
 
 
 def main():
-    X, meta, texts = build()
+    seqs_raw, meta, texts = build()
     s_arr = np.array([m["s"] for m in meta])
+    X = np.stack([c / (np.linalg.norm(c) + 1e-300) for c in seqs_raw]).astype(np.float32)
     print(f"anchors: {len(X)}; signatures: "
           f"{[(s, int((s_arr == s).sum())) for s in (2, 3, 4, 6)]}")
 
-    # proper chance: E[same-s in 3 draws without replacement] per anchor
-    chances = []
+    chances, chances3 = [], []
     for i in range(len(X)):
         ns = int((s_arr == s_arr[i]).sum()) - 1
         others = len(X) - 1
-        # P(same-s in k=3 draws without replacement)
+        chances.append(ns / others)
         p0 = comb(others - ns, 3) / comb(others, 3) if others - ns >= 3 else 0.0
-        chances.append(1 - p0)
-    chance3 = float(np.mean(chances))
-    chance1 = float(np.mean([(s_arr == s_arr[i]).sum() - 1
-                             for i in range(len(X))]) / (len(X) - 1))
+        chances3.append(1 - p0)
+    chance1, chance3 = float(np.mean(chances)), float(np.mean(chances3))
     print(f"chance hit@1 = {chance1:.3f}; chance hit@3-any = {chance3:.3f}\n")
 
     emb = np.asarray(embed_texts(texts), dtype=np.float32)
@@ -131,17 +121,18 @@ def main():
     mA = knn_metrics(X, s_arr)
     # ---- Tier A': text embedding (de-leaked) ----
     mE = knn_metrics(emb, s_arr)
-    # ---- Tier B: ratio-normalized (z and linear factor divided out) ----
+
+    # ---- Tier B: ratio-normalized R-sequences (per-series params) ----
     R = []
     for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
-        c = X[i]
+        c = seqs_raw[i]
         rk = []
         for k in range(NC - 1):
             if abs(c[k]) < 1e-300:
                 rk.append(0.0)
                 continue
-            lin_ratio = (Al + Bl * k) / (Al + Bl * (k + 1))
-            rk.append((c[k + 1] / c[k]) / (lin_ratio * z))
+            lin_corr = (Al + Bl * k) / (Al + Bl * (k + 1))
+            rk.append((c[k + 1] / c[k]) * lin_corr / z)
         rk = np.array(rk, dtype=np.float64)
         rk = rk / (np.linalg.norm(rk) + 1e-300)
         R.append(rk)
@@ -167,20 +158,34 @@ def main():
         per_sig_c.setdefault(s, []).append(pred == s)
     c_acc = float(np.mean([np.mean(v) for v in per_sig_c.values()]))
 
+    # ---- signature constant extraction: c_s = 2*R_0 ----
+    # R_0(true) = H_1/H_0 = (1/2)*(1/s)*(1-1/s) -> c_s = 2*R_0
+    THEO = {2: 0.25, 3: 2 / 9, 4: 3 / 16, 6: 5 / 36}
+    print("\n=== signature constant extraction (c_s = 2*R_0, true R-form) ===")
+    ok_c = 0
+    for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
+        cs = 2 * R[i][0]
+        pred = min(THEO, key=lambda st: abs(cs - THEO[st]))
+        ok = pred == s
+        ok_c += ok
+        print(f"  {eq}: c_s = {cs:.6f} -> s = {pred} "
+              f"({'OK' if ok else 'WRONG'}, true {s})")
+    print(f"  c_s classification accuracy: {ok_c}/{len(SERIES)}")
+
     mR = knn_metrics(R, s_arr)
-    print(f"Tier A  blind raw   : {mA}")
+    print(f"\nTier A  blind raw   : {mA}")
     print(f"Tier A' embed       : {mE}")
-    print(f"Tier B  ratio-norm  : {mB}")
+    print(f"Tier B  ratio-norm  : {mR}")
     print(f"Tier C  template s-classification accuracy: {c_acc:.3f}")
-    print(f"  (per-signature: "
-          f"{ {s: round(float(np.mean(v)), 2) for s, v in per_sig_c.items()} })")
 
     with open("p4_clean_results.json", "w", encoding="utf-8") as f:
         json.dump({"chance_hit1": chance1, "chance_hit3": chance3,
-                   "tierA_raw": mA, "tierA_embed": mE, "tierB_ratio": mB,
+                   "tierA_raw": mA, "tierA_embed": mE, "tierB_ratio": mR,
                    "tierC_template_acc": c_acc,
                    "tierC_per_signature": {str(s): round(float(np.mean(v)), 2)
-                                           for s, v in per_sig_c.items()}},
+                                           for s, v in per_sig_c.items()},
+                   "cs_extract": {"eq": [m["eq"] for m in meta],
+                                  "c_s": [float(2 * r[0]) for r in R]}},
                   f, indent=1)
     print("results -> p4_clean_results.json")
 
