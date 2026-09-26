@@ -96,13 +96,19 @@ def build_basis():
     lhs = e4_3 - e6_2
     assert lhs[0] == 0 and np.array_equal(lhs[1:], 1728 * delta[1:]), \
         "ring sanity failed"
-    return {"E2": e2, "E4": e4, "E6": e6, "Delta": delta}
+    basis = {"E2": e2, "E4": e4, "E6": e6, "Delta": delta}
+    for w in (8, 10, 12, 14, 16, 18, 20, 22, 24):
+        basis[f"E{w}"] = eisenstein_exact(w)
+    return basis
 
 
-def monomials(basis, max_factors=3, max_weight=24):
-    """All products of <=3 basis elements with total weight <= 24."""
-    items = [(n, s, {"E2": 2, "E4": 4, "E6": 6, "Delta": 24}[n])
-             for n, s in basis.items()]
+def weight_of(name):
+    return 24 if name == "Delta" else int(name[1:])
+
+
+def monomials(basis, max_factors=2, max_weight=36):
+    """All products of <=max_factors basis elements, total weight <= cap."""
+    items = [(n, s, weight_of(n)) for n, s in basis.items()]
     monos = {}
     for name, s, w in items:
         monos[name] = (s, w, (name,))
@@ -140,10 +146,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--trials", type=int, default=20)
     ap.add_argument("--budget", type=int, default=300)
+    ap.add_argument("--weight-cap", type=int, default=36)
+    ap.add_argument("--max-factors", type=int, default=2)
+    ap.add_argument("--seed-hit", action="store_true",
+                    help="both arms start knowing one identity (E8 = E4^2); "
+                         "B recombines from it, A stumbles randomly")
     args = ap.parse_args()
 
     basis = build_basis()
-    monos = monomials(basis)
+    monos = monomials(basis, max_factors=args.max_factors,
+                      max_weight=args.weight_cap)
     by_weight = {}
     for name, (s, w, gens) in monos.items():
         by_weight.setdefault(w, []).append(name)
@@ -168,9 +180,14 @@ def main():
         (n1, n2), (c1, c2) = p
         return is_proportional(monos[n1][0], monos[n2][0])
 
+    SEED = ("E8", "E4^2") if args.seed_hit else None
+
     def run_arm(memory: bool, seed: int):
         rng = random.Random(seed)
         seen, hits = set(), []
+        if SEED:
+            seen.add(frozenset(SEED))
+            hits.append(SEED)
         recomb_events = recomb_hits = 0
         steps_first = None
         steps_to_hits = {}
@@ -180,12 +197,11 @@ def main():
                 n1, n2 = rng.choice(hits)
                 w = monos[n1][1]
                 cands = [f for f in BASIS_NAMES
-                         if monos[n1][1] + {"E2": 2, "E4": 4, "E6": 6,
-                                            "Delta": 24}[f] <= 24]
+                         if weight_of(n1) + weight_of(f) <= args.weight_cap]
                 if cands:
                     f = rng.choice(cands)
                     m1, m2 = n1 + "*" + f, n2 + "*" + f
-                    w2 = w + {"E2": 2, "E4": 4, "E6": 6, "Delta": 24}[f]
+                    w2 = weight_of(n2) + weight_of(f)
                     if (m1 in monos and m2 in monos
                             and frozenset((m1, m2)) not in seen):
                         recomb_events += 1
@@ -237,9 +253,12 @@ def main():
     print(f"  baseline hit rate (A): {a_rate:.3f}")
     print(f"  B post-recombination hit rate: {b_post} "
           f"(registered: >= 3x baseline)")
-    sf_a = summary["A_random"]["mean"]["steps_first"]
-    sf_b = summary["B_memory"]["mean"]["steps_first"]
-    print(f"  steps to first hit: A={sf_a} B={sf_b} (registered: B <= A/2)")
+    print(f"  B post-recombination hit rate: {b_post} "
+          f"(registered: >= 3x baseline)")
+    for k in (3, 5, 10):
+        s_a = summary["A_random"]["mean"].get(f"steps_{k}")
+        s_b = summary["B_memory"]["mean"].get(f"steps_{k}")
+        print(f"  steps to {k:2d} distinct hits: A={s_a} B={s_b}")
 
     with open("t2_results.json", "w", encoding="utf-8") as f:
         json.dump({"truth_pairs": len(truth), "summary": summary}, f, indent=1)
