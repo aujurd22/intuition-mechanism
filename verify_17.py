@@ -20,7 +20,7 @@ import sys
 
 from mpmath import mp, mpf, pi, sqrt, rf, factorial
 
-mp.dps = 60
+mp.dps = 100
 TOL = mpf(10) ** -45
 
 
