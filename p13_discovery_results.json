@@ -1,0 +1,69 @@
+{
+ "library": [
+  "identity",
+  "first_diff",
+  "second_diff",
+  "log_abs",
+  "log_ratio",
+  "norm",
+  "scale_removal",
+  "affine_removal",
+  "power_sqrt"
+ ],
+ "rows": [
+  {
+   "transform": "identity",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.27
+  },
+  {
+   "transform": "first_diff",
+   "SD": 0.373,
+   "ARI": -0.092,
+   "nuisance_corr": 0.428
+  },
+  {
+   "transform": "second_diff",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.36
+  },
+  {
+   "transform": "log_abs",
+   "SD": 0.353,
+   "ARI": -0.162,
+   "nuisance_corr": 0.938
+  },
+  {
+   "transform": "log_ratio",
+   "SD": 0.333,
+   "ARI": -0.162,
+   "nuisance_corr": 0.942
+  },
+  {
+   "transform": "norm",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.237
+  },
+  {
+   "transform": "scale_removal",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.308
+  },
+  {
+   "transform": "affine_removal",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.378
+  },
+  {
+   "transform": "power_sqrt",
+   "SD": 0.353,
+   "ARI": -0.092,
+   "nuisance_corr": 0.272
+  }
+ ]
+}
