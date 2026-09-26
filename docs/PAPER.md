@@ -122,8 +122,14 @@ Chan–Cooper 2012's tables (novel-to-our-sources; framework-derivable
 via CCL Thm 2.1 — the M_N modular-polynomial route is unnecessary for
 the numeric-recovery variant).
 
-**P20 census** (running at writing time): systematic (x_N, λ_N)
-classification for N = 1..60.
+**P20 census** (CONFIRMED): the systematic (x_N, λ_N) algebraicity
+classification for N = 1..60.  All five CWZ rational rows reproduced;
+13 N carry quadratic x_N and 8 N carry quadratic λ_N beyond the paper's
+table; and the census **caught a probable typo in the published CWZ
+Table 1**: at N = 17 the arXiv v2 table prints λ = 143/238, but eq
+(3.9) closes only with λ = 43/238 (80-digit solve; residual 4.8e-56
+vs 0.42 miss).  The first literature-erratum catch of the mechanical
+pipeline.
 
 ## 5. The generation side (D1, D1-eta)
 
