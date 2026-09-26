@@ -1,0 +1,63 @@
+{
+ "chance_mean_rank": 6.666666666666667,
+ "tiers": {
+  "A_blind": {
+   "per_member": {
+    "d19": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    },
+    "d43": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    },
+    "d67": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    }
+   },
+   "mean_rank": 1.0,
+   "norm_rank": 0.053,
+   "hit1": 3
+  },
+  "B_invariant": {
+   "per_member": {
+    "d19": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    },
+    "d43": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    },
+    "d67": {
+     "rank": 1,
+     "of": 19,
+     "closest_family": 6
+    }
+   },
+   "mean_rank": 1.0,
+   "norm_rank": 0.053,
+   "hit1": 3
+  }
+ },
+ "verdict": {
+  "A_blind": {
+   "mean_rank": 1.0,
+   "chance": 6.666666666666667,
+   "beats_chance": true,
+   "ratio": 6.67
+  },
+  "B_invariant": {
+   "mean_rank": 1.0,
+   "chance": 6.666666666666667,
+   "beats_chance": true,
+   "ratio": 6.67
+  }
+ }
+}

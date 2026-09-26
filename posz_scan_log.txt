@@ -1,0 +1,12 @@
+  d=   1  miss (no small integer relation on grid)
+  d=   2  miss (no small integer relation on grid)
+  d=  20  miss (no small integer relation on grid)
+  d=  24  miss (no small integer relation on grid)
+  d=  40  miss (no small integer relation on grid)
+  d=  52  miss (no small integer relation on grid)
+  d=  88  miss (no small integer relation on grid)
+  d= 148  miss (no small integer relation on grid)
+  d= 232  miss (no small integer relation on grid)
+
+=== positive-z scan: 0/9 d produced integer relations ===
+results -> D:\djr82\intuition-mechanism\posz_scan_results.json
