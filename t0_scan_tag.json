@@ -1,0 +1,82 @@
+{
+ "meta": {
+  "templates": [
+   "sq_plus",
+   "sq_minus",
+   "diff_squares",
+   "cube_plus",
+   "cube_minus",
+   "distrib2"
+  ],
+  "width": 128,
+  "vocab": 26,
+  "instances": 20,
+  "relabels": 3,
+  "seed": 0
+ },
+ "results": [
+  {
+   "b": 1,
+   "compression": 3328.0,
+   "recon_loss": 0.01677,
+   "SD": 0.301,
+   "surface_dom": 0.044,
+   "ARI_struct": 0.226,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 4,
+   "compression": 832.0,
+   "recon_loss": 0.02525,
+   "SD": 0.258,
+   "surface_dom": 0.051,
+   "ARI_struct": 0.07,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 16,
+   "compression": 208.0,
+   "recon_loss": 0.02556,
+   "SD": 0.438,
+   "surface_dom": 0.044,
+   "ARI_struct": 0.124,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 64,
+   "compression": 52.0,
+   "recon_loss": 0.02613,
+   "SD": 0.417,
+   "surface_dom": 0.048,
+   "ARI_struct": 0.011,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 256,
+   "compression": 13.0,
+   "recon_loss": 0.02653,
+   "SD": 0.35,
+   "surface_dom": 0.05,
+   "ARI_struct": 0.032,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 1024,
+   "compression": 3.2,
+   "recon_loss": 0.02644,
+   "SD": 0.402,
+   "surface_dom": 0.066,
+   "ARI_struct": 0.037,
+   "ARI_surface": 0.0
+  },
+  {
+   "b": 3328,
+   "compression": 1.0,
+   "recon_loss": 0.02726,
+   "SD": 0.545,
+   "surface_dom": 0.069,
+   "ARI_struct": 0.034,
+   "ARI_surface": 0.0
+  }
+ ]
+}

@@ -56,10 +56,15 @@ def main():
     ap.add_argument("--relabels", type=int, default=3)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--width", type=int, default=64)
+    ap.add_argument("--tag-len", type=int, default=0,
+                    help="append a unique per-instance random surface tag of "
+                         "this length (salience experiment: makes surface "
+                         "signal dominate; tests the under-compression wall)")
     ap.add_argument("--out", default="t0_algebra.npz")
     args = ap.parse_args()
 
     rng = random.Random(args.seed)
+    tag_rng = random.Random(args.seed + 999)
     templates = list(make_templates())[: args.templates]
     alphabet = sorted(set("".join(POOL) + "0123456789()+-*=^ "))
     ch2i = {c: i for i, c in enumerate(alphabet)}
@@ -73,6 +78,8 @@ def main():
         for inst_id in range(args.instances):
             names = rng.sample(POOL, 2)
             sub = {x: sp.Symbol(names[0]), y: sp.Symbol(names[1])}
+            tag = "".join(tag_rng.choice(POOL + [str(d) for d in range(10)])
+                          for _ in range(args.tag_len))
             terms = [t.subs(sub) for t in expanded]
             for r in range(args.relabels):
                 if r == 1:  # swap sides: LHS = expanded, RHS = compact form
@@ -83,6 +90,8 @@ def main():
                          + sp.sstr(expr.subs(sub)))
                 else:
                     s = render(terms, rng) + " = 0"
+                if args.tag_len:
+                    s = s + " TAG:" + tag
                 s = s[: args.width].ljust(args.width)
                 vec = np.zeros((W, V), dtype=np.float32)
                 for pos, ch in enumerate(s):
