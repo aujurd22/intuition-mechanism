@@ -1,0 +1,19 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  math-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install mpmath
+      - name: 50-digit validator (Ramanujan + Chudnovsky anchors)
+        run: python validator.py
+      - name: Heegner j-values (d=163 anchor)
+        run: python family_gen.py
+      - name: D1 gate (Chudnovsky coefficients from d=163)
+        run: python series_gen.py
