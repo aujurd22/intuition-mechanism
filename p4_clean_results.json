@@ -1,0 +1,29 @@
+{
+ "chance_hit1": 0.36764705882352944,
+ "chance_hit3": 0.6573529411764706,
+ "tierA_raw": {
+  "hit1": 5,
+  "hit3": 10,
+  "mean_frac3": 0.431,
+  "macro_recall": 0.217
+ },
+ "tierA_embed": {
+  "hit1": 6,
+  "hit3": 10,
+  "mean_frac3": 0.392,
+  "macro_recall": 0.233
+ },
+ "tierB_ratio": {
+  "hit1": 13,
+  "hit3": 15,
+  "mean_frac3": 0.373,
+  "macro_recall": 0.375
+ },
+ "tierC_template_acc": 0.25,
+ "tierC_per_signature": {
+  "2": 1.0,
+  "3": 0.0,
+  "6": 0.0,
+  "4": 0.0
+ }
+}
