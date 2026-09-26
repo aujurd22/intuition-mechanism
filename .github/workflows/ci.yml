@@ -17,3 +17,5 @@ jobs:
         run: python family_gen.py
       - name: D1 gate (Chudnovsky coefficients from d=163)
         run: python series_gen.py
+      - name: 17-series gate (Ramanujan 1914 eq 28-44)
+        run: python verify_17_v3.py

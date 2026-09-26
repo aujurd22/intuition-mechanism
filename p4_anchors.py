@@ -85,8 +85,6 @@ def main():
         c = []
         for k in range(NC):
             term = A(k) if k == 0 else A(k) + B(k) * k
-            term = term * B(k - 1 + 1 - 1) if False else term
-            h = B(k - 1 + 1 - 1) if False else None
             val = term * z(k) ** k
             if kind == "alt" and k >= 1:
                 val = (-1) ** k * term  # alternating sign on the continuation

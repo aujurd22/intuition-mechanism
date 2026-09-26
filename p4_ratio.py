@@ -80,8 +80,18 @@ def main():
         a = ari(km.labels_, s_arr)
         print(f"  {name:11s} hit@1={h1}/17  hit@3={h3}/17  ARI(vs s)={a:+.3f}")
 
+    metrics = {}
+    for name, rep in (("d1_centered", d1c.astype(np.float32)),
+                      ("d2", d2.astype(np.float32)),
+                      ("d1+d2", np.concatenate([d1c, d2], axis=1).astype(np.float32)),
+                      ("random", rng.standard_normal(d1c.shape).astype(np.float32))):
+        h1, h3 = knn(rep, 3)
+        km = KMeans(n_clusters=4, n_init=20, random_state=0).fit(rep)
+        metrics[name] = {"hit1": h1, "hit3": h3,
+                         "ARI": round(float(ari(km.labels_, s_arr)), 3)}
     with open("p4_ratio_results.json", "w", encoding="utf-8") as f:
-        json.dump({"note": "P4 v1 ratio-shape probe", "rows": rows}, f,
+        json.dump({"note": "P4 v1 ratio-shape probe", "rows": rows,
+                   "metrics": metrics, "chance_hit1": 0.368}, f,
                   indent=1, default=str)
     print("results -> p4_ratio_results.json")
 

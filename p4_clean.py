@@ -145,7 +145,10 @@ def main():
     # ---- Tier C: theoretical signature templates ----
     # aligned with R (k>=2 after dropping R_0 AND rk[0]): template over
     # k = 2..NC-1 -- same length as R (NC-2)
-    ks = np.arange(2, NC)
+    # v3 fix (review F01 residual): R starts at k=1 (rk[0] dropped), so the
+    # template must also start at k=1 -- starting at k=2 shifted the template
+    # one slot right and crushed Tier C to 0.25.
+    ks = np.arange(1, NC - 1)
     templates = {}
     for s in (2, 3, 4, 6):
         templates[s] = np.array([(k + 0.5) * (k + 1 / s) * (k + 1 - 1 / s)
@@ -169,11 +172,15 @@ def main():
     THEO = {2: 0.25, 3: 2 / 9, 4: 3 / 16, 6: 5 / 36}
     print("\n=== signature constant extraction (c_s = 2*R_0, eq28-34 only) ===")
     ok_c = 0
+    cs_all = {}
     n_c = 0
     for i, (eq, s, Al, Bl, z, sign, c0) in enumerate(SERIES):
         if c0 is not None:
             continue   # eq35-44 have c0: R_0 polluted, excluded
-        cs = 2 * R[i][0]
+        c = seqs_raw[i]
+        rk0 = (c[1] / c[0]) * (Al / (Al + Bl)) / z
+        cs = 2 * rk0
+        cs_all[eq] = cs
         pred = min(THEO, key=lambda st: abs(cs - THEO[st]))
         ok = pred == s
         ok_c += ok
@@ -194,8 +201,7 @@ def main():
                    "tierC_template_acc": c_acc,
                    "tierC_per_signature": {str(s): round(float(np.mean(v)), 2)
                                            for s, v in per_sig_c.items()},
-                   "cs_extract": {"eq": [m["eq"] for m in meta],
-                                  "c_s": [float(2 * r[0]) for r in R]}},
+                   "cs_extract": cs_all},
                   f, indent=1)
     print("results -> p4_clean_results.json")
 
