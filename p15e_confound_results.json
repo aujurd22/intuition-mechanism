@@ -1,0 +1,86 @@
+{
+ "results": [
+  {
+   "family": "cumulative-TRUE",
+   "rows": {
+    "baseline": {
+     "hit1": 0.946,
+     "hit3": 0.954,
+     "frac3": 0.903,
+     "macro": 0.903,
+     "ari": 0.325
+    },
+    "linear2D_blind": {
+     "hit1": 0.938,
+     "hit3": 0.95,
+     "frac3": 0.881,
+     "macro": 0.881,
+     "ari": 0.36
+    },
+    "quad2D_blind": {
+     "hit1": 0.783,
+     "hit3": 0.929,
+     "frac3": 0.717,
+     "macro": 0.717,
+     "ari": 0.179
+    },
+    "quad2D_oracle": {
+     "hit1": 0.958,
+     "hit3": 0.975,
+     "frac3": 0.886,
+     "macro": 0.886,
+     "ari": 0.395
+    },
+    "random2D_control": {
+     "hit1": 0.942,
+     "hit3": 0.971,
+     "frac3": 0.907,
+     "macro": 0.907,
+     "ari": 0.379
+    }
+   },
+   "verdict": "PARTIAL"
+  },
+  {
+   "family": "ratio-form(p14)",
+   "rows": {
+    "baseline": {
+     "hit1": 0.992,
+     "hit3": 0.996,
+     "frac3": 0.974,
+     "macro": 0.974,
+     "ari": 0.361
+    },
+    "linear2D_blind": {
+     "hit1": 0.787,
+     "hit3": 0.904,
+     "frac3": 0.612,
+     "macro": 0.613,
+     "ari": -0.001
+    },
+    "quad2D_blind": {
+     "hit1": 0.704,
+     "hit3": 0.842,
+     "frac3": 0.579,
+     "macro": 0.579,
+     "ari": -0.004
+    },
+    "quad2D_oracle": {
+     "hit1": 0.917,
+     "hit3": 0.967,
+     "frac3": 0.878,
+     "macro": 0.878,
+     "ari": 0.476
+    },
+    "random2D_control": {
+     "hit1": 0.946,
+     "hit3": 0.967,
+     "frac3": 0.872,
+     "macro": 0.872,
+     "ari": 0.348
+    }
+   },
+   "verdict": "NEGATIVE"
+  }
+ ]
+}
