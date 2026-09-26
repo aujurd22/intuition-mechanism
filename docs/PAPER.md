@@ -88,6 +88,43 @@ smallest Γ-gap.  Registered caveat: the pre-registered arithmetic band
 (1e-25) was an instrument-range error; recorded as a meta-lesson on
 band-setting.
 
+**Proposition (Γ-constant).** Let H_s(k) = (1/2)_k(1/s)_k(1−1/s)_k/(k!)³.
+Then lim_{k→∞} H_s(k)·k^{3/2} = 1/(Γ(1/2)Γ(1/s)Γ(1−1/s)).
+*Proof sketch:* (a)_k/k! = Γ(k+a)/(Γ(a)Γ(k+1)) ~ k^{a−1}/Γ(a) by Stirling;
+multiply the three factors; the exponents sum to −3/2 and the constants
+to the reciprocal Γ-triple.  The product converges as O(1/k); numerics:
+extrapolated constant matches the formula to 1.7–3.4e-17 for all four s
+(p16_gamma.py, after the registered revision).
+*Corollary (a-priori confusability):* adjacent-s confusion is predicted
+by the Γ-gap |log C_a − log C_b|; the ordering {2,3} < {3,4} < {2,4} =
+{4,6} < {3,6} < {2,6} matches the empirical confusion counts.
+
+## 4b. Mechanical series generation (P18/P19 — the generation theorem)
+
+**Theorem (Cooper–Wan–Zudilin, level 12; numerically verified).** Let
+z = ¼(6P(q¹²) − 3P(q⁶) + 2P(q⁴) − P(q²)) + 2η(2τ)η(4τ)η(6τ)η(12τ),
+x = η(2τ)η(4τ)η(6τ)η(12τ)/z, and t(n) = Σ_{k≤n/2} C(n,2k)C(2k,k)²·
+C(2n−4k,n−2k) (radius 1/8).  Then z = Σ t(n)xⁿ, q dx/dq =
+z·x·√((1+4x)(1−4x)(1−8x)), and for every CM point x₀ = x(τ₀),
+
+  Σ_{n≥0} (n + λ) t(n) x₀ⁿ = (1/(2π))·√(24/N)/√((1+4x₀)(1−4x₀)(1−8x₀)),
+
+with λ algebraic, recoverable numerically (the paper's own protocol).
+
+**P19 result:** the pipeline is implemented end-to-end.  Calibration:
+N=5 (x₀=1/20, λ=1/4) verified at 1.56e-61.  x₁₂ machinery validated
+against the paper's Table 1 at 1e-52..55.  Nine NEW-N identities
+(N = 2, 6, 11, 12, 15, 19, 23, 29, 31 — none in the CWZ table)
+verified to machine precision, with x₀ and λ recognized as explicit
+algebraic numbers, e.g. N=2: x₀ satisfies 50v²+4v−1=0 (v=(3√6−2)/50),
+λ = (6−√6)/15.  Novelty: absent from the CWZ table and from
+Chan–Cooper 2012's tables (novel-to-our-sources; framework-derivable
+via CCL Thm 2.1 — the M_N modular-polynomial route is unnecessary for
+the numeric-recovery variant).
+
+**P20 census** (running at writing time): systematic (x_N, λ_N)
+classification for N = 1..60.
+
 ## 5. The generation side (D1, D1-eta)
 
 d → τ → q → θ → k² → j is mechanized; j → (A,B,z) is NOT (0/27).
