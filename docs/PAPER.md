@@ -130,7 +130,19 @@ t(n) = Σ_{k≤n/2} C(n,2k)C(2k,k)²C(2n−4k,n−2k),  x₀ = (3√6−2)/50,
 
 numerically verified to the full 60-digit working precision.  The
 eight further identities (N = 6, 11, 12, 15, 19, 23, 29, 31) are in
-p19b_z12_results.json with their algebraic (x₀, λ).
+p19b_z12_results.json with their algebraic (x₀, λ); docs/IDENTITIES.md
+lists all 59 mechanically generated identities for N = 2..60, each
+re-verified at machine precision.
+
+**Class-group orbit generation (P23, CONFIRMED).**  The identity holds
+not just at the cusp-side representative but at EVERY conjugate CM
+point: enumerating the reduced forms of D = −24N and evaluating the
+level-12 machinery at each τ-form yields a verified identity per form —
+~180 identities across N = 2..30, zero failures.  The orbit size
+(distinct x₀ values modulo conjugation) is the class-group image on the
+level structure; e.g. N = 5 has four conjugate values of which the CWZ
+row's 1/20 is one — the published rational rows are the trace-
+degenerate tips of full orbits.
 
 **P20 census** (CONFIRMED): the systematic (x_N, λ_N) algebraicity
 classification for N = 1..60.  All five CWZ rational rows reproduced;
