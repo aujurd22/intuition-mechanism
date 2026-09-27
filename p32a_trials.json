@@ -1,0 +1,77 @@
+{
+ "sequences": {
+  "S1": [
+   1,
+   2,
+   6,
+   38,
+   214,
+   1332,
+   9024,
+   60132
+  ],
+  "S2": [
+   1,
+   1,
+   -7,
+   -23,
+   169,
+   1001,
+   -4879,
+   -48607
+  ],
+  "S3": [
+   1,
+   4,
+   28,
+   247,
+   2428,
+   25354,
+   275131,
+   3066277
+  ],
+  "S4": [
+   1,
+   2,
+   6,
+   29,
+   142,
+   792,
+   4659,
+   27372
+  ]
+ },
+ "class_of": {
+  "S1": "step3",
+  "S4": "step3",
+  "S2": "osc",
+  "S3": "smooth"
+ },
+ "trials": [
+  {
+   "trial": 1,
+   "held_out": "S4",
+   "subject_answer": "same structural class as S1 (step-3, no oscillation, radius ~1/9)",
+   "class_answer": "step3",
+   "correct": true
+  },
+  {
+   "trial": 2,
+   "held_out": "S2",
+   "subject_answer": null,
+   "correct": null
+  },
+  {
+   "trial": 3,
+   "held_out": "S3",
+   "subject_answer": null,
+   "correct": null
+  },
+  {
+   "trial": 4,
+   "held_out": "S1",
+   "subject_answer": null,
+   "correct": null
+  }
+ ]
+}
