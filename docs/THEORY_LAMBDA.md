@@ -120,7 +120,24 @@ statement that no N > 160 satisfies the criterion (genus theory
 bounds how often h(D_K)=4 with f=1 occurs; each candidate is a
 direct check).
 
-## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
+## Orbit-permutation question (registered refinement of the halted P24)
+
+Natural question: does the class group permute the CONJUGATES of lambda
+(the orbit lambda values = the other roots of lambda's minimal
+polynomial)?  A naive SL2-conjugation test tonight repeated P24's
+halted category error: at the class-group conjugate CM points (non-
+imaginary-axis tau) lambda takes COMPLEX values, so the comparison
+against the real cubic roots is ill-posed.  The correctly posed
+version (next session): pair each orbit lambda with a real one via
+the CCL mu-transformation
+
+    mu = (lambda - 1/2) * sqrt(1 - 4 a x - 16 c x^2),
+
+i.e. test whether the mu-values (not the raw lambdas) are permuted by
+the class group, and whether N=9's cubic is the mu-orbit polynomial.
+P23's orbit x-values (n_distinct_x0) are the substrate.
+
+## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
 
 - census N = 2..160: degree 1 = {3,5,7,13,17}; degree 2 = {2,11,19,23,
   25,35,43,47,55,73}; degree 3 = {9,27,29,31,37,41,49,53}; none below
