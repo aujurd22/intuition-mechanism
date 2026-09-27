@@ -24,6 +24,33 @@ locate the remaining gap with three theorems-shaped statements: the
 complementarity of envelope schemes, the regime theorem, and the
 salience-trap closure of internal criteria.
 
+## Abstract Part II (2026-09-28): recognition, novelty, and the
+arithmetic depth of a hidden parameter
+
+A second campaign moves from envelope invariants to WHOLE STRUCTURES.
+On a 4800-family generator corpus with pre-registered blind protocols:
+(1) cross-family structural recognition is real (878/1120 subject
+trials, two models); (2) it dissociates from novelty detection --
+blind judges classify known families at 75-80% but detect genuinely
+absent structure at chance (P32-h), and the deficit is CAUSALLY an
+extraction failure: supplying the four-feature sufficient cue lifts
+novelty to 20/20 (p = 9e-13) while context truncation does not
+(P32-i); (3) the sufficient cue itself -- three terms and a sign
+flag -- is discoverable from raw data by blind MDL search (P35-a) and
+its schema is inducible by an LLM from 24 examples (P35-b);
+(4) on the identity side, the algebraic degree of the hidden
+parameter lambda, censused over N = 2..160 with fully verified
+minimal polynomials, EXACTLY reproduces the human publication
+boundary of the family -- the five rational-lambda rows are
+precisely what the literature contains, and the machine census
+reaches two levels deeper, to a verified cubic-lambda identity at
+N = 9 with a closed radical form (P36-a); (5) blind judges read that
+depth off twelve digits of x0, separating deep from plain 15/15 in
+five consecutive runs across two model families (P36-c/d/e).  The
+testbed's moral: insight, here, is the extraction of a small,
+predictively valid sufficient structure -- and "which structure is
+worth keeping" turns out to be measurable as arithmetic depth.
+
 ## 1. The testbed
 
 - 17 verified Ramanujan–Sato series (mechanical 50-digit gates);
