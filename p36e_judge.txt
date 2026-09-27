@@ -1,0 +1,3 @@
+PLAIN: A, B, D, G, L
+DEEP: C, E, F, H, I, J, K, M, N, O, P, Q, R, S, T
+DEEP_RANKING: J, Q, E, N, R, P, M, F, C, O, T, K, H, I, S
