@@ -237,19 +237,9 @@ stronger models or tool-scaffolded prompting.
 
 ## 7c. The generation side, mechanically (P18, P19)
 
-P18 (CONFIRMED): the Cooper–Wan–Zudilin level-6 machinery Z(X) is
-implemented and verified numerically — third-order ODE residual 1e-63,
-differential identity 1e-68 — including the discovery that the sqrt
-branch has TWO SHEETS meeting at the stationary point X = 1/36.  The
-CM-point table yields EXACT RATIONALS (1/36, 1/54, 1/100, …): a
-mechanically generated Γ₀(6) class-invariant table.
-
-P19 (CALIBRATION-BLOCKED): mechanical generation of the series
-themselves is blocked on the λ_N definition (it requires the modular
-polynomial M_N's derivative, per CCL 2004 Theorem 2.1, under the
-X = 4x(1−x) convention) — implementation scoped at roughly half a
-session.  The verified substrate (Z/X machinery + X₀ table + sequence
-generators) is in the repo.
+Covered in section 4b above (P18 machinery, P19 generation,
+P20 census, P23 orbits, P25 universal lambda law) — see the
+experiment ledger for the full verdict chain.
 
 ## 8. Open experiments (registered next steps)
 
