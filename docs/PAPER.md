@@ -382,6 +382,8 @@ dilutes attention": it is "the sufficient cue must actually be
 computed, and nothing about having less material computes it."  The
 missing piece between representation and novelty decision is the
 wiring -- exactly the seam the program's next experiments target.
+The dissociation is model-robust: GLM-5.3-flash replicates it on the
+same trials (existing 15/20, new 6/20).
 
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a

@@ -1,0 +1,17 @@
+I: 1/12, smallest rational denominator
+L: 1/20, simple rational
+F: 1/32, simple rational
+G: 1/104, rational
+O: 1/200, rational
+J: root of a quadratic
+H: root of a quadratic
+E: root of a quadratic
+M: root of a quadratic
+C: root of a cubic
+A: root of a cubic
+D: root of a cubic
+N: root of a cubic
+B: root of a cubic
+K: root of a high-degree cubic
+
+RANKING: I,L,F,G,O,J,H,E,M,C,A,D,N,B,K

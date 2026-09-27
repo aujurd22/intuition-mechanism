@@ -1,0 +1,33 @@
+**Key observations (from the data):** t0=1, t1=2 always. Groups separate cleanly at early terms:
+
+- Group 5: t2 > 6 (22, 102, 54)
+- Group 3: t2 < 0, or t3 very negative (< −20)
+- Group 7: t2 = 6 with −20 < t3 < 20 (−16, −4, 6, 11)
+- Group 1: t3 > 20 (29, 38, 44)
+- Group G: t3 = 20, t4 > 70 (90, 230)
+- Group 4: t3 = 20, t4 < 70 (38, 54, 62)
+- Group 2 vs 8: t3 = 20, t4 = 70; group 2 has t5 > 250 (272, 282), group 8 has t5 < 250 (12, 212, 227)
+
+**Algorithm:**
+
+```
+1. Let t0..t11 be the terms.
+2. If t2 > 6:                        → group 5
+3. If t2 < 0:                        → group 3
+4. If t2 = 6:
+   5. If t3 > 20:                    → group 1
+   6. If t3 < -20:                   → group 3
+   7. If -20 < t3 < 20:              → group 7
+   8. If t3 = 20:
+      9. If t4 > 70:                 → group G
+      10. If t4 < 70:                → group 4
+      11. If t4 = 70:
+          12. If t5 > 250:           → group 2
+          13. If t5 < 250:           → group 8
+```
+
+**Totality:** t2 is always 6, negative, or >6 (branch 2–3); t3 always falls in exactly one of >20, =20, (−20,20), <−20 (branches 5–7); t4 in >70, =70, <70 (9–10); t5 in >250 or <250 (12–13). Every sequence reaches exactly one leaf.
+
+**Group assignments:** leaves at steps 2, 6 → **5, 3**; steps 3, 5, 7 → **3, 1, 7**; steps 9, 10, 12, 13 → **G, 4, 2, 8**.
+
+(Sign-change check is redundant here but consistent: groups 3, 4, 7, 8 always change sign; 1, 2, 5, G never do.)
