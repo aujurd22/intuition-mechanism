@@ -40,9 +40,10 @@ version of *insight as compression*.
 
 ## Current boundary and biggest unknowns
 
-1. **Cue extraction as the bottleneck** — now causally established (P32-i):
-   supplying the sufficient cue lifts the blind judge to 39/40 (novelty arm
-   20/20); truncation alone does not teach extraction.
+1. **Cue extraction as the bottleneck** — now causally established
+   (P32-i, replicated cross-model on GLM): supplying the sufficient cue
+   lifts the blind judge to 39/40 and 34/40 (novelty arm 20/20 and 17/20);
+   context truncation alone does not teach extraction.
 2. **Novelty detection** — absent in the blind judge, trivial for a reader
    with the structural representation: the open question is *wiring the
    structure representation to the novelty comparison*, not more
