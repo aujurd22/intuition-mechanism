@@ -1,0 +1,182 @@
+{
+ "rows": [
+  {
+   "trial": 1,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 7,
+   "correct": false
+  },
+  {
+   "trial": 2,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 2,
+   "correct": false
+  },
+  {
+   "trial": 3,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 3,
+   "correct": true
+  },
+  {
+   "trial": 4,
+   "subject_label": "B",
+   "mapped": 5,
+   "truth": 5,
+   "correct": true
+  },
+  {
+   "trial": 5,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 0,
+   "correct": true
+  },
+  {
+   "trial": 6,
+   "subject_label": "D",
+   "mapped": 0,
+   "truth": 1,
+   "correct": false
+  },
+  {
+   "trial": 7,
+   "subject_label": "E",
+   "mapped": 6,
+   "truth": 6,
+   "correct": true
+  },
+  {
+   "trial": 8,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 7,
+   "correct": false
+  },
+  {
+   "trial": 9,
+   "subject_label": "F",
+   "mapped": 1,
+   "truth": 1,
+   "correct": true
+  },
+  {
+   "trial": 10,
+   "subject_label": "D",
+   "mapped": 0,
+   "truth": 1,
+   "correct": false
+  },
+  {
+   "trial": 11,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 1,
+   "correct": false
+  },
+  {
+   "trial": 12,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 5,
+   "correct": false
+  },
+  {
+   "trial": 13,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 3,
+   "correct": true
+  },
+  {
+   "trial": 14,
+   "subject_label": "E",
+   "mapped": 6,
+   "truth": 6,
+   "correct": true
+  },
+  {
+   "trial": 15,
+   "subject_label": "E",
+   "mapped": 6,
+   "truth": 6,
+   "correct": true
+  },
+  {
+   "trial": 16,
+   "subject_label": "E",
+   "mapped": 6,
+   "truth": 6,
+   "correct": true
+  },
+  {
+   "trial": 17,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 4,
+   "correct": false
+  },
+  {
+   "trial": 18,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 0,
+   "correct": true
+  },
+  {
+   "trial": 19,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 1,
+   "correct": false
+  },
+  {
+   "trial": 20,
+   "subject_label": "E",
+   "mapped": 6,
+   "truth": 6,
+   "correct": true
+  },
+  {
+   "trial": 21,
+   "subject_label": "B",
+   "mapped": 5,
+   "truth": 5,
+   "correct": true
+  },
+  {
+   "trial": 22,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 0,
+   "correct": true
+  },
+  {
+   "trial": 23,
+   "subject_label": "C",
+   "mapped": 0,
+   "truth": 0,
+   "correct": true
+  },
+  {
+   "trial": 24,
+   "subject_label": "A",
+   "mapped": 3,
+   "truth": 5,
+   "correct": false
+  },
+  {
+   "trial": 25,
+   "subject_label": "B",
+   "mapped": 5,
+   "truth": 2,
+   "correct": false
+  }
+ ],
+ "score": "14/25",
+ "pvalue": 2.6009666357446423e-07,
+ "verdict": "PARTIAL"
+}
