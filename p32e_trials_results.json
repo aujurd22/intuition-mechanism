@@ -1,0 +1,1307 @@
+{
+ "rows": [
+  {
+   "trial": 1,
+   "holdout": "G5a29c0w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 2,
+   "holdout": "G2n49c3w11",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 3,
+   "holdout": "G3n47c2w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 4,
+   "holdout": "G4a37c2w10",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 5,
+   "holdout": "G5n13c1w20",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 6,
+   "holdout": "G5n17c2w10",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 7,
+   "holdout": "G2n58c2w21",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 8,
+   "holdout": "G5a05c3w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 9,
+   "holdout": "G4n37c0w20",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 10,
+   "holdout": "G5n55c3w21",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": false
+  },
+  {
+   "trial": 11,
+   "holdout": "G5n26c1w20",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 12,
+   "holdout": "G5n30c3w21",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": false
+  },
+  {
+   "trial": 13,
+   "holdout": "G2a22c0w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 14,
+   "holdout": "G3a41c2w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 15,
+   "holdout": "G5n43c1w11",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 16,
+   "holdout": "G5a20c3w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 17,
+   "holdout": "G4a01c3w11",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 18,
+   "holdout": "G5a31c2w10",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 19,
+   "holdout": "G3n08c1w20",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 20,
+   "holdout": "G3a08c2w21",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 21,
+   "holdout": "G3a20c0w11",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 22,
+   "holdout": "G2n04c3w20",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 23,
+   "holdout": "G3a45c0w11",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 24,
+   "holdout": "G4n14c2w10",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 25,
+   "holdout": "G5n40c3w11",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 26,
+   "holdout": "G3a15c0w20",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 27,
+   "holdout": "G2a33c0w10",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 28,
+   "holdout": "G4a13c2w11",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 29,
+   "holdout": "G2a06c2w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 30,
+   "holdout": "G3a01c0w21",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 31,
+   "holdout": "G5n24c0w20",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 32,
+   "holdout": "G2a45c2w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 33,
+   "holdout": "G3n05c0w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 34,
+   "holdout": "G3a13c3w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 35,
+   "holdout": "G2n17c0w20",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 36,
+   "holdout": "G2a24c0w20",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 37,
+   "holdout": "G2a56c0w10",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 38,
+   "holdout": "G2a11c0w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 39,
+   "holdout": "G3n51c1w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 40,
+   "holdout": "G3n37c1w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 41,
+   "holdout": "G2n46c2w10",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 42,
+   "holdout": "G5n44c3w21",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": false
+  },
+  {
+   "trial": 43,
+   "holdout": "G5a48c1w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 44,
+   "holdout": "G5a07c1w20",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 45,
+   "holdout": "G4n57c2w11",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 46,
+   "holdout": "G2a36c1w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 47,
+   "holdout": "G5n32c2w20",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 48,
+   "holdout": "G3n46c0w11",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 49,
+   "holdout": "G2n28c2w21",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 50,
+   "holdout": "G5n45c1w10",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 51,
+   "holdout": "G4n01c3w10",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 52,
+   "holdout": "G4n39c1w20",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 53,
+   "holdout": "G4a45c3w11",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 54,
+   "holdout": "G3a17c3w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 55,
+   "holdout": "G4n06c2w21",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 56,
+   "holdout": "G3n29c3w20",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 57,
+   "holdout": "G3n00c0w20",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 58,
+   "holdout": "G3a37c1w11",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 59,
+   "holdout": "G3n01c1w21",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 60,
+   "holdout": "G5a02c0w20",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": false
+  },
+  {
+   "trial": 61,
+   "holdout": "G4n22c3w11",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 62,
+   "holdout": "G3a40c0w21",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 63,
+   "holdout": "G4a52c3w20",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 64,
+   "holdout": "G3n53c2w11",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 65,
+   "holdout": "G3a41c2w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 66,
+   "holdout": "G3a42c0w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 67,
+   "holdout": "G3n20c0w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 68,
+   "holdout": "G4a50c2w11",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 69,
+   "holdout": "G2a08c3w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 70,
+   "holdout": "G2n43c1w21",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 71,
+   "holdout": "G5n46c3w10",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 72,
+   "holdout": "G5a25c1w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 73,
+   "holdout": "G2n48c3w20",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 74,
+   "holdout": "G5a38c2w10",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 75,
+   "holdout": "G5n05c2w20",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 76,
+   "holdout": "G3n23c1w10",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 77,
+   "holdout": "G4n59c2w20",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 78,
+   "holdout": "G5a53c1w20",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 79,
+   "holdout": "G4a35c2w10",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 80,
+   "holdout": "G4a32c2w20",
+   "truth": [
+    4,
+    "alt"
+   ],
+   "answer": [
+    4,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 81,
+   "holdout": "G2a23c2w10",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 82,
+   "holdout": "G3n17c2w11",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 83,
+   "holdout": "G2a38c2w10",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 84,
+   "holdout": "G5a41c1w20",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 85,
+   "holdout": "G2n17c0w20",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 86,
+   "holdout": "G3n08c1w20",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 87,
+   "holdout": "G5n37c0w21",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 88,
+   "holdout": "G5a27c3w20",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 89,
+   "holdout": "G4n57c2w11",
+   "truth": [
+    4,
+    "no"
+   ],
+   "answer": [
+    4,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 90,
+   "holdout": "G2n06c2w10",
+   "truth": [
+    2,
+    "no"
+   ],
+   "answer": [
+    2,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 91,
+   "holdout": "G5a39c2w10",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 92,
+   "holdout": "G3n41c3w21",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 93,
+   "holdout": "G5n01c3w11",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 94,
+   "holdout": "G5a54c0w21",
+   "truth": [
+    5,
+    "alt"
+   ],
+   "answer": [
+    5,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 95,
+   "holdout": "G2a50c0w21",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 96,
+   "holdout": "G3n29c3w20",
+   "truth": [
+    3,
+    "no"
+   ],
+   "answer": [
+    3,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 97,
+   "holdout": "G5n09c2w21",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 98,
+   "holdout": "G5n36c2w10",
+   "truth": [
+    5,
+    "no"
+   ],
+   "answer": [
+    5,
+    "no"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 99,
+   "holdout": "G3a57c3w10",
+   "truth": [
+    3,
+    "alt"
+   ],
+   "answer": [
+    3,
+    "alt"
+   ],
+   "correct": true
+  },
+  {
+   "trial": 100,
+   "holdout": "G2a28c3w11",
+   "truth": [
+    2,
+    "alt"
+   ],
+   "answer": [
+    2,
+    "alt"
+   ],
+   "correct": true
+  }
+ ],
+ "score": "96/100",
+ "pvalue": 4.649190140000213e-81,
+ "verdict": "CONFIRMED"
+}
