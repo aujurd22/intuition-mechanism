@@ -1,0 +1,14 @@
+All sequences share t0=1, t1=2. Groups 1,2,G stay positive; groups 3,4,5,7,8 eventually turn negative. Among positive sequences, t2 and t3 separate G (t3=20, t4≥90) from 1 (t3≥29) and 2 (t3=20, t4=70). Among negative sequences, t2 separates 5 (t2≥22) from 3,4,7,8 (t2≤6); t3 then separates 7 (t3≤11) from 3,4,8 (t3≥-52); t4 separates 4 (t4≤62) from 3 (t4≤-2) and 8 (t4=70); t5 separates 3 (t5≤1452) from 8 (t5≥12).
+
+```
+1. If sequence never changes sign (all terms ≥0):
+   2. If t3 == 20 and t4 >= 90: assign G.
+   3. Else if t3 >= 29: assign 1.
+   4. Else (t3 == 20 and t4 == 70): assign 2.
+5. Else (sequence changes sign, has negative term):
+   6. If t2 >= 22: assign 5.
+   7. Else if t3 <= 11: assign 7.
+   8. Else if t4 <= 62: assign 4.
+   9. Else if t5 <= 1452: assign 3.
+   10. Else: assign 8.
+```

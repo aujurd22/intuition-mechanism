@@ -1,0 +1,57 @@
+## Notes
+
+The corrected examples show that the old procedure mixed up several boundary rules:
+
+- **Group 3** is not defined by `t5 <= 1452`; in the corrected example, `t4 = 4102` and `t5 = 48252`. So the negative-sequence branch must use **`t4`** to separate group 3 from groups 4 and 8.
+- **Group 4** has `t4 = 66`, not `t4 <= 62`. The old threshold was too low.
+- **Group 8** has `t4 = 70`, `t5 = 102`, and then turns negative. It should be separated from group 2 by the later sign change, and from group 4 by `t4`.
+- **Group 7** is correctly caught early by `t3 <= 11` because its `t3 = -52`.
+- **Group 5** remains separated by `t2 >= 22`.
+- Among positive sequences, the corrected examples still support:
+  - `G`: `t3 = 20`, `t4 >= 90`
+  - `1`: `t3 >= 29`
+  - `2`: `t3 = 20`, `t4 = 70`, and remains nonnegative
+
+A revised total decision procedure is:
+
+```text
+1. If the sequence never changes sign (all terms >= 0):
+   2.     If t3 == 20 and t4 >= 90: assign G.
+   3.     Else if t3 >= 29: assign 1.
+   4.     Else (t3 == 20 and t4 == 70): assign 2.
+
+5. Else (the sequence has at least one negative term):
+   6.     If t2 >= 22: assign 5.
+   7.     Else if t3 <= 11: assign 7.
+   8.     Else if t4 >= 150: assign 3.
+   9.     Else if t4 == 70: assign 8.
+  10.     Else: assign 4.
+```
+
+This correctly classifies the corrected examples:
+
+- `3`: negative, `t2 = -42`, `t3 = -268`, `t4 = 4102 >= 150` → **3**
+- `5`: negative branch not needed because it is positive, but `t2 = 30 >= 22` would identify it if using the negative branch; in the positive branch it is separated by `t3 = 164 >= 29` → **1** under the old positive rule, so for this corrected universe, group 5 should be checked before the positive-sequence rule if it can appear as a positive sequence.
+- `7`: negative, `t2 = 6`, `t3 = -52 <= 11` → **7**
+- `1`: positive, `t3 = 32 >= 29` → **1**
+- `4`: negative, `t2 = 6`, `t3 = 20`, `t4 = 66`, not `70` → **4**
+- `G`: positive, `t3 = 20`, `t4 = 150 >= 90` → **G**
+- `8`: negative, `t2 = 6`, `t3 = 20`, `t4 = 70` → **8**
+- `2`: positive, `t3 = 20`, `t4 = 70` → **2**
+
+Because corrected group 5 is positive but has `t2 = 30`, the safest total rule is to check `t2 >= 22` before the positive-sequence classification.
+
+```text
+1. If t2 >= 22: assign 5.
+
+2. Else if the sequence never changes sign (all terms >= 0):
+   3.     If t3 == 20 and t4 >= 90: assign G.
+   4.     Else if t3 >= 29: assign 1.
+   5.     Else (t3 == 20 and t4 == 70): assign 2.
+
+6. Else (the sequence has at least one negative term):
+   7.     If t3 <= 11: assign 7.
+   8.     Else if t4 >= 150: assign 3.
+   9.     Else if t4 == 70: assign 8.
+  10.     Else: assign 4.
+```

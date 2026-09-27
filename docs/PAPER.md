@@ -383,6 +383,51 @@ computed, and nothing about having less material computes it."  The
 missing piece between representation and novelty decision is the
 wiring -- exactly the seam the program's next experiments target.
 
+**P35: the sufficient code is discoverable, by search and (half) by
+LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
+removes the knowledge.  An exhaustive MDL search over a blind,
+threshold-free feature space (equality-to-corpus-mode at each
+position, plus sign-flip) finds, on the full 4800-family corpus, the
+feature set {eq2=6, eq3=20, eq4=70, flip} -- exactly the P34-d tree
+-- with no labels, no generator, and no class count; 8 of 9 winner
+cells align with the true classes (~600 members each).  No
+late-position feature was ever selected: all compressible structure
+sits in the first five terms.  The LLM arm (P35-b) induces the right
+SCHEMA from 24 labeled examples (a decision tree over flip and early
+terms; 55.8% executed on 400 held-out, chance 12.5%) and one
+recalibration round lifts it to 76.2%, but thresholds fitted to 3
+examples per class never cover the parameter range -- the MDL code
+scores 400/400 on the same test.  Decomposition: where-to-look is
+inducible from tiny data; exact calibration is a data requirement.
+
+**P36: interestingness is mechanical, and it explains the literature
+(the night's headline).**  For every N in 2..160 the lambda of the
+t-family identity is computed at 50-60 digits and probed by PSLQ
+(every reported relation verified by residual < 1e-40 and direct
+identity substitution at error <= 5e-51).  The arithmetic depth of
+lambda forms an exact hierarchy: degree 1 for N in {3,5,7,13,17} --
+exactly and only the rows humans published; degree 2 for {11,19,23,
+25,35,43,47,73}; degree 3 for {9,27,29,31,37,49,53}.  The hidden
+parameter's algebraic degree reproduces the human editorial boundary
+of the family perfectly, and the machine census goes two levels past
+it.  The showcase is N=9: lambda satisfies 96 l^3 - 192 l^2 + 114 l
+- 17 = 0 (height 192, the cleanest non-rational relation found) with
+the exact radical
+
+  lambda_9 = 2/3 - (3 sqrt(2) + 19)^(1/3)/12
+             - 7/(12 (3 sqrt(2) + 19)^(1/3)),
+
+an identity one algebraic level deeper than anything published in
+this family.  And the depth is VISIBLE: a blind judge shown only x0
+to 12 digits separates deep from plain 15/15, names four rationals
+exactly (1/12, 1/32, 1/104, 1/200), and its full ranking correlates
+with true depth at |rho| = 0.79 (p = 4e-4; 0.51 as written before
+honoring its own final correction), above a mechanical
+rational-detector baseline (0.61).  Insight, on this testbed, is
+detecting arithmetic depth from the surface -- and the depth axis
+itself turned out to be exactly what the human authors were tracking
+all along.
+
 **Cumulative subject record: 878/1120 trials (78.4%) across two models
 and two window lengths (chance 140/1120) -- strong positive evidence
 for cross-family structural abstraction (recognition layer), while
