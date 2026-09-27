@@ -366,6 +366,23 @@ because novelty is unreadable.  Empirically the ladder now reads:
 recognition YES, novelty NO (for the blind judge), interestingness
 untested.
 
+**P32-i: the deficit is in extraction, causally (Arm S SUPPORTED).**
+Two interventions on the same 40 novelty trials separate the candidate
+mechanisms.  Supplying the cue-extraction procedure (the P34-d support
+signature) lifts the blind judge to 39/40 -- existing 19/20, new
+20/20 (p = 9e-13): the novelty-comparison step is trivial once the
+sufficient cue is computed, so the P32-h failure is an extraction
+failure, not a comparison failure.  Merely truncating every sequence
+to 8 terms does NOT teach extraction: new rises to 11/20 (p = .004)
+but existing collapses to 10/20 (p = .003 vs baseline) and the judge's
+NEW-answer rate flips from 7/40 to 19/40 -- truncation swaps a
+conservative bias for a liberal one and leaves net accuracy unchanged
+(21/40 vs 20/40).  So the causal story is not "too much context
+dilutes attention": it is "the sufficient cue must actually be
+computed, and nothing about having less material computes it."  The
+missing piece between representation and novelty decision is the
+wiring -- exactly the seam the program's next experiments target.
+
 **Cumulative subject record: 878/1120 trials (78.4%) across two models
 and two window lengths (chance 140/1120) -- strong positive evidence
 for cross-family structural abstraction (recognition layer), while

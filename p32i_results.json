@@ -1,0 +1,20 @@
+{
+ "armS": {
+  "total": "39/40",
+  "existing": "19/20",
+  "new": "20/20",
+  "said_NEW": 21,
+  "new_absorbed_by": {}
+ },
+ "armT": {
+  "total": "21/40",
+  "existing": "10/20",
+  "new": "11/20",
+  "said_NEW": 20,
+  "new_absorbed_by": {
+   "C": 3,
+   "A": 3,
+   "B": 3
+  }
+ }
+}
