@@ -75,3 +75,6 @@ candidate routes registered.
    for a formal non-numerical proof.
 4. P17 at frontier scale (API access required).
 5. PAPER.md → LaTeX (the skeleton is complete).
+6. Novelty: Chan–Cooper 2012 tables scanned under both conventions —
+   zero hits; the nine quadratic-x₀ identities fall outside the
+   published rational-x table structure (see the registry P19 row).
