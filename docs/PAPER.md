@@ -410,7 +410,13 @@ computed, and nothing about having less material computes it."  The
 missing piece between representation and novelty decision is the
 wiring -- exactly the seam the program's next experiments target.
 The dissociation is model-robust: GLM-5.3-flash replicates it on the
-same trials (existing 15/20, new 6/20).
+same trials (existing 15/20, new 6/20).  And the capstone (P39): the
+whole ladder -- support-pattern recognition feeding a novelty
+comparison -- runs as a 20-line mechanical pipeline at 40/40 on the
+same trials.  Everything above chance in this section is now either
+mechanized (recognition, novelty-given-the-code, the depth census)
+or localized to a specific missing wiring (extraction inside the LLM,
+interestingness-as-value).
 
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
