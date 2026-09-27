@@ -60,7 +60,41 @@ full orbits".  Exact classification (in terms of fixed points of
 Atkin-Lehner-type elements of Gamma_0(12)+ on the CM set, or of the
 12-isogeny self-pairing condition) is the registered open problem.
 
-## Empirical facts backing the note (all machine-verified tonight)
+## Refined statement (2026-09-28 05:00, after the first failure analysis)
+
+The naive "ring class field of disc(-24N)" story is WRONG, and the data
+says so in two independent ways:
+
+1. h(-24N) does not bound the observed degrees: N=6 has tau0 = i/2, a
+   CM point of the order disc(-16) with CLASS NUMBER 1 -- yet
+   x12(i/2) has degree 9 over Q.  (No field of degree 1 contains a
+   degree-9 number.)
+
+2. The correct statement: x12 = eta(q^2)eta(q^4)eta(q^6)eta(q^12)/z12
+   is a modular function for a GROUP WITH CHARACTER (the eta-product
+   carries a multiplier), so its CM values live in a RAY-class-type
+   field of K = Q(tau0) with conductor entangled with the level-12
+   eta-conductor and twisted by the multiplier character.  The N=6
+   anomaly (h(order)=1, deg(x0)=9 = 3^2) is the concrete fingerprint:
+   the field is a character-twist of a ray class field of Q(i) with
+   conductor built from the primes 2 and 3 -- and since tau0 = i/2
+   is 2-isogenous to i, the 2-part interacts with the order
+   conductor.
+
+Consequences for the open problem:
+
+- "x0 rational iff fixed by the Shimura action" survives, but the
+  action to use is the RAY-class action twisted by the eta-multiplier
+  character, not the plain ring-class action;
+- deg(lambda) = deg(x0) (20/20) says lambda and x0 generate the SAME
+  such twisted field generically -- consistent with lambda being a
+  rational expression in x0 and the same weight-2 forms;
+- the five rational rows are then exactly the N where the twisted
+  ray-class field collapses to Q -- a concrete, finitely checkable
+  condition (compute the character value of each class-group element
+  on each eta factor), which is the registered next computation.
+
+## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
 
 - census N = 2..160: degree 1 = {3,5,7,13,17}; degree 2 = {2,11,19,23,
   25,35,43,47,55,73}; degree 3 = {9,27,29,31,37,41,49,53}; none below
