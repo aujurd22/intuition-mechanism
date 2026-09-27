@@ -140,6 +140,13 @@ p19b_z12_results.json with their algebraic (x₀, λ); docs/IDENTITIES.md
 lists all 59 mechanically generated identities for N = 2..60, each
 re-verified at machine precision.
 
+*Literature anchoring:* the identity shape is exactly the
+Chan–Chan–Liu Theorem 2·1 structure specialized to the level-12
+t-family — CWZ state this explicitly ("Theorems 3.1 and 3.2 can be
+used in a theorem of Chan, Chan and Liu to produce a family of series
+for 1/π of the form (3.9)").  Our contribution is the registered,
+zero-human-mathematics pipeline that instantiates it.
+
 **Class-group orbit generation (P23, CONFIRMED).**  The identity holds
 not just at the cusp-side representative but at EVERY conjugate CM
 point: enumerating the reduced forms of D = −24N and evaluating the
