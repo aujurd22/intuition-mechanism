@@ -1,0 +1,28 @@
+{
+ "native_curve_part1": [
+  {
+   "window": 4,
+   "correct": 0,
+   "total": 25,
+   "accuracy": 0.0
+  },
+  {
+   "window": 5,
+   "correct": 0,
+   "total": 25,
+   "accuracy": 0.0
+  },
+  {
+   "window": 6,
+   "correct": 0,
+   "total": 25,
+   "accuracy": 0.0
+  },
+  {
+   "window": 7,
+   "correct": 0,
+   "total": 25,
+   "accuracy": 0.0
+  }
+ ]
+}
