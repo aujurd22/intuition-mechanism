@@ -1,0 +1,19 @@
+{
+ "criterion": "(f==1 and h(DK)==4) or (DK==-8 and f==3)",
+ "predicted": [
+  3,
+  5,
+  7,
+  13,
+  17
+ ],
+ "degree1_actual": [
+  3,
+  5,
+  7,
+  13,
+  17
+ ],
+ "false_positives": [],
+ "uncovered": []
+}

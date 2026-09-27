@@ -94,6 +94,32 @@ Consequences for the open problem:
   condition (compute the character value of each class-group element
   on each eta factor), which is the registered next computation.
 
+## The degeneration criterion, made exact (2026-09-28 05:05)
+
+Writing -24N = f^2 * D_K (D_K the fundamental discriminant of
+Q(sqrt(-6N)), f the conductor), the census says:
+
+    ** x0 in Q  <=>  [ f = 1 and h(D_K) = 4 ]  or  [ D_K = -8, f = 3 ] **
+
+verified EXHAUSTIVELY on N = 2..160: predicted {3,5,7,13,17} against
+the actual degree-1 rows with ZERO false positives and ZERO
+uncovered rows (p38_criterion_test.json).  Reading:
+
+- the f=1, h=4 case: the class group of the maximal order is
+  (Z/2)^2 (four classes, all 2-torsion -- genus theory), and the
+  level-12 degeneracy folds the four orbit values onto one rational
+  number;
+- the D_K=-8, f=3 case (N=3): the order class number is 2 and the
+  eta-quotient value lands in the rational fixed field of the
+  involution.
+
+What remains open is the PROOF that the eta-multiplier character
+kills exactly these cases (a finite, checkable computation per case
+via the Shimura action on the four eta factors), and the asymptotic
+statement that no N > 160 satisfies the criterion (genus theory
+bounds how often h(D_K)=4 with f=1 occurs; each candidate is a
+direct check).
+
 ## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
 
 - census N = 2..160: degree 1 = {3,5,7,13,17}; degree 2 = {2,11,19,23,
