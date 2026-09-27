@@ -508,6 +508,17 @@ experiment ledger for the full verdict chain.
   X = 4x(1−x) convention and the M_N modular-polynomial derivative).
 - Extending confusability theory: Γ-gap ⇒ a priori difficulty ranking
   for new invariant families.
+- P37/P38 (open theory): the proof that lambda is algebraic at CM
+  points for the level-12 family, and the exact degeneration criterion
+  deciding WHICH N give rational lambda (the class-number route is
+  falsified; the Atkin-Lehner / isogeny-self-pairing route is
+  registered) — see docs/THEORY_LAMBDA.md.
+- Independent-session replication of the P32-i causal scaffold
+  (Arm S), the one remaining caveat on the causal claim.
+- Novelty-as-wiring: connect the discovered sufficient code (P35-a)
+  to the novelty comparison end-to-end in one system, then extend to
+  interestingness-as-value (worth-pursuing), which the degree axis
+  does not yet capture.
 
 ## Reproducibility
 

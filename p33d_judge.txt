@@ -1,0 +1,45 @@
+## Reasoning
+
+We treat each discovery in the given chronological order and ask: how much does its parameter pair `(x0, lambda)` depart from the structure already seen?
+
+The early discoveries establish the reference structure:
+
+- `N=3`: `(0.08333333, 0.25)`
+- `N=5`: `(0.05, 0.25)`
+- `N=2`: `(0.10696938, 0.23670068)`
+- `N=7`: `(0.03125, 0.23809524)`
+- `N=11`: `(0.01379931, 0.21156557)`
+- `N=13`: `(0.00961538, 0.2)`
+
+By this point, the search has seen:
+- several rational/simple values of `x0`,
+- `lambda` near `0.25`, then drifting downward,
+- a general trend of decreasing `x0` and decreasing `lambda`.
+
+Later discoveries are ranked by how much they break or extend this pattern.
+
+### Chronological surprise assessment
+
+1. **N=3** — first discovery. No prior structure, but it defines the baseline. Not ranked as surprising in the later sense; it is expected as the first.
+2. **N=5** — very close to `N=3`: same `lambda=0.25`, smaller rational `x0`. Expected.
+3. **N=2** — `x0` is larger than `N=3`, and `lambda` is non-rational. This breaks the simple rational-value pattern somewhat, but still near `lambda≈0.25`. Moderately surprising.
+4. **N=7** — rational `x0=0.03125`, `lambda≈0.2381`. Fits the emerging pattern. Expected.
+5. **N=11** — non-rational `x0` and `lambda≈0.2116`. Continues the downward drift. Moderately expected.
+6. **N=13** — rational `x0=0.00961538`, `lambda=0.2`. Clean continuation. Expected.
+7. **N=6** — `x0≈0.0393`, larger than the recent trend, and `lambda≈0.2446`, unusually close to `0.25` again. This is a noticeable departure from the downward drift. Surprising.
+8. **N=17** — `x0=0.005`, `lambda≈0.1807`. Continues the downward trend. Expected.
+9. **N=12** — `x0≈0.0115`, larger than `N=17`, and `lambda≈0.2056`, higher than `N=17`. A small reversal, but not extreme. Moderately expected.
+10. **N=19** — `x0≈0.0037`, `lambda≈0.1726`. Continues downward. Expected.
+11. **N=23** — `x0≈0.00212`, `lambda≈0.1590`. Continues downward. Expected.
+12. **N=15** — `x0≈0.00686`, larger than `N=23`, and `lambda≈0.1897`, higher than `N=23`. Another upward reversal. Moderately surprising.
+13. **N=29** — `x0≈0.000999`, `lambda≈0.1431`. Continues downward. Expected.
+14. **N=25** — `x0≈0.001635`, larger than `N=29`, and `lambda≈0.1531`, higher than `N=29`. Reversal again, but within the already seen range. Moderately expected.
+15. **N=43** — `x0≈0.00022248`, much smaller than anything before, and `lambda≈0.1185`, much lower than anything before. This is the strongest extension of the downward trend and the most extreme departure from all prior values. Most surprising.
+
+The most surprising later discoveries are therefore those that either break the trend sharply or extend it to a new extreme. `N=43` is the clearest outlier. `N=6` is also surprising because it returns to high `lambda` after the trend had already moved lower. `N=15` is a moderate reversal. The clean continuations are the least surprising.
+
+## Ranking
+
+Most surprising = 1, most expected = 15.
+
+RANKING: N=43, N=6, N=15, N=2, N=12, N=25, N=11, N=23, N=29, N=19, N=17, N=13, N=7, N=5, N=3
