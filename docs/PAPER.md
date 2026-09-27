@@ -235,6 +235,39 @@ reveal the signature even for literature-famous series — consistent
 with L3.  The memory-vs-mechanism discriminator stays open for
 stronger models or tool-scaffolded prompting.
 
+## 7b2. The first positive L3 datapoint (P32-a) — cross-family distillation
+
+The internal-criteria closure (P15-d/e/f) showed that within ONE family,
+no purely internal criterion can identify the nuisance.  P32-a tested
+the obvious escape: **cross-family distillation** — can a frontier LLM
+identify the structural class of a NOVEL family from context families?
+
+Design fixes over the first P32 attempt: (i) the held-out families are
+SYNTHETIC, constructed for the experiment (parametrized binomial sums
+absent from training corpora) — removing the recall-vs-inference
+confound that made the original invalid (famous sequences are in every
+LLM's training data); (ii) the subject is the calling LLM itself,
+answering blind in-transcript before the mechanical ground-truth check;
+(iii) two of the four trials are OPEN judgments ("none of the context
+families matches").
+
+**Result: 4/4 structural identifications.**  The subject classified the
+held-out S4 with S1 from the step-3 fingerprint (identical first three
+terms then divergence, same radius), recognized S2 as an oscillating
+self-family distinct from all context, S3 as a smooth self-family with a
+deeper radius, and S1 as S4-class in reverse — including two "none of
+the above" open judgments answered correctly.
+
+Registered caveats: the subject judged its own experiment (ground truth
+mechanical by construction, but design-aware); four trials is a
+demonstration, not a statistics-grade sample.  Queued: multi-family
+expansion with independent judges.
+
+**Reading:** the L3 barrier conclusion is revised — "impossible within
+one family" stands, but the nuisance-identification prior IS
+distillable across families by a frontier LLM.  Intuition, on this
+testbed, is exactly the cross-family residue.
+
 ## 7c. The generation side, mechanically (P18, P19)
 
 Covered in section 4b above (P18 machinery, P19 generation,
