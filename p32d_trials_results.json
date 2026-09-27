@@ -1,0 +1,75 @@
+{
+ "results": [
+  {
+   "trial": 1,
+   "truth_class": "(2, 'alt')",
+   "verdict": "matched F05r0 -> (4, 'alt')",
+   "correct": false,
+   "note": "both flip negative around item 4-5"
+  },
+  {
+   "trial": 2,
+   "truth_class": "(5, 'no')",
+   "verdict": "matched F05r4 -> (4, 'alt')",
+   "correct": false,
+   "note": "same accelerating no-sign shape"
+  },
+  {
+   "trial": 3,
+   "truth_class": "(4, 'no')",
+   "verdict": "matched F00r0 -> (2, 'no')",
+   "correct": false,
+   "note": "same steep no-sign shape"
+  },
+  {
+   "trial": 4,
+   "truth_class": "(3, 'alt')",
+   "verdict": "named ?",
+   "correct": false,
+   "note": "different class: step-3 alt (collapse at item 4)"
+  },
+  {
+   "trial": 5,
+   "truth_class": "(4, 'no')",
+   "verdict": "matched F00r1 -> (2, 'no')",
+   "correct": false,
+   "note": "parallel mild rise"
+  },
+  {
+   "trial": 6,
+   "truth_class": "(3, 'alt')",
+   "verdict": "named ?",
+   "correct": false,
+   "note": "different class: (3,alt), item-4 dip 11"
+  },
+  {
+   "trial": 7,
+   "truth_class": "(2, 'alt')",
+   "verdict": "named ?",
+   "correct": false,
+   "note": "different class: (2,alt) large radius"
+  },
+  {
+   "trial": 8,
+   "truth_class": "(4, 'alt')",
+   "verdict": "matched F01r5 -> (2, 'alt')",
+   "correct": false,
+   "note": "closest (2,no) small-radius"
+  },
+  {
+   "trial": 9,
+   "truth_class": "(3, 'alt')",
+   "verdict": "named ?",
+   "correct": false,
+   "note": "same as trial 6"
+  },
+  {
+   "trial": 10,
+   "truth_class": "(5, 'no')",
+   "verdict": "named ?",
+   "correct": false,
+   "note": "different class: (4,alt) mild rise"
+  }
+ ],
+ "score": "0/10"
+}
