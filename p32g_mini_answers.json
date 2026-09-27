@@ -1,0 +1,102 @@
+[
+ {
+  "trial_id": "X01",
+  "answer": "2",
+  "raw_snip": "Answer: 2"
+ },
+ {
+  "trial_id": "X02",
+  "answer": "1",
+  "raw_snip": "Answer: 1"
+ },
+ {
+  "trial_id": "X03",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X04",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X05",
+  "answer": "2",
+  "raw_snip": "Answer: 2"
+ },
+ {
+  "trial_id": "X06",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X07",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X08",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X09",
+  "answer": "1",
+  "raw_snip": "Answer: 1"
+ },
+ {
+  "trial_id": "X10",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X11",
+  "answer": "2",
+  "raw_snip": "Answer: 2"
+ },
+ {
+  "trial_id": "X12",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X13",
+  "answer": "1",
+  "raw_snip": "Answer: 1"
+ },
+ {
+  "trial_id": "X14",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X15",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X16",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X17",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X18",
+  "answer": "3",
+  "raw_snip": "Answer: 3"
+ },
+ {
+  "trial_id": "X19",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ },
+ {
+  "trial_id": "X20",
+  "answer": "new",
+  "raw_snip": "Answer: new"
+ }
+]
