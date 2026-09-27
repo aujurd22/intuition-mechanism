@@ -406,8 +406,13 @@ t-family identity is computed at 50-60 digits and probed by PSLQ
 (every reported relation verified by residual < 1e-40 and direct
 identity substitution at error <= 5e-51).  The arithmetic depth of
 lambda forms an exact hierarchy: degree 1 for N in {3,5,7,13,17} --
-exactly and only the rows humans published; degree 2 for {11,19,23,
-25,35,43,47,73}; degree 3 for {9,27,29,31,37,49,53}.  The hidden
+exactly and only the rows humans published; degree 2 for {2,11,19,23,
+25,35,43,47,55,73}; degree 3 for {9,27,29,31,37,41,49,53}.  Across
+all 20 resolved rows where the x0 side is known, deg(lambda) equals
+deg(x0) exactly -- lambda lives in Q(x0) at the same degree, never
+deeper -- so the two-row census (x0 from P20/P21, lambda from this
+census) tightens the boundary further: humans published exactly the
+rows where BOTH hidden parameters are rational.  The hidden
 parameter's algebraic degree reproduces the human editorial boundary
 of the family perfectly, and the machine census goes two levels past
 it.  The showcase is N=9: lambda satisfies 96 l^3 - 192 l^2 + 114 l

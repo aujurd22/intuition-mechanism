@@ -3,15 +3,14 @@
   "N": 2,
   "x0": "0.106969384566990685891837044482353483518",
   "lambda": "0.236700683814454793453514395122288708363541919",
-  "deg": 3,
+  "deg": 2,
   "poly": [
-   -178,
-   1820,
-   -5847,
-   5640
+   -12,
+   15
   ],
   "residual": "2.73e-31",
-  "identity_err": "3.28e-28"
+  "identity_err": "3.28e-28",
+  "poly_note": "cubic found by PSLQ was (376x-89)*quadratic -- reducible; minimal relation is the quadratic 15l^2-12l+2, l=(6-sqrt6)/15"
  },
  {
   "N": 3,
@@ -343,7 +342,8 @@
   "N": 39,
   "x0": "0.0003320628693502052084429783712378796182166",
   "lambda": "0.124268681641265064904329298713592248602496643",
-  "deg": null
+  "deg": null,
+  "poly_note": "no relation deg<=6, coeff<=1e7 (higher-degree trials were tolerance artifacts: residuals 7-12 orders above the precision floor); lambda deeper than searchable height"
  },
  {
   "N": 40,
@@ -355,7 +355,15 @@
   "N": 41,
   "x0": "0.0002711417397308996965441052863627164314861",
   "lambda": "0.121290915454248990539946166382945182511335356",
-  "deg": null
+  "deg": 3,
+  "poly": [
+   -65159,
+   718238,
+   -1629504,
+   1129632
+  ],
+  "residual": "1.7e-46",
+  "poly_note": "found at maxcoeff 1e8"
  },
  {
   "N": 42,
@@ -469,7 +477,14 @@
   "N": 55,
   "x0": "0.0000739743528428136806053966647745483331795",
   "lambda": "0.105001823780104671598261716476139655922910523",
-  "deg": null
+  "deg": 2,
+  "poly": [
+   -90971,
+   1244760,
+   -3603600
+  ],
+  "residual": "8.8e-47",
+  "poly_note": "found at maxcoeff 1e8"
  },
  {
   "N": 56,
