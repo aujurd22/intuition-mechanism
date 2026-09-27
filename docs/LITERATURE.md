@@ -73,7 +73,43 @@ Level-6 recipe, mechanizable in four steps:
 
 This is the precise shape of D1-eta stage (iii): implementing steps 1-4
 mechanically (mpmath q-expansions + ODE coefficient extraction) closes
-the j→coefficients arrow.  Scoped as the next-session project; the
+the j→coefficients arrow.
+
+### CCL Theorem 2·1 — verbatim spec (extracted from cc2012.pdf, 2026-09-27)
+
+For ℓ ∈ {1,2,3,4,5,6(3 cases),8,9}, w = w(q) the hauptmodul and
+(a,b,c) ∈ Z³ per Table 1, with s(k), t(k) the sequences
+
+  (k+1)² s(k+1) = (a k² + a k + b) s(k) + c k² s(k−1)
+  (k+1)³ t(k+1) = −(2k+1)(a k² + a k + a − 2b) t(k) − (4c+a²)k³ t(k−1)
+
+(s(−1)=t(−1)=0, s(0)=t(0)=1), and
+
+  x = w(1 − a w − c w²)/(1 + c w²)²,   y = w·sqrt(1 − a w − c w²),
+
+ρ = 2π√(N/ℓ) (with ± and half-lattice variants), the identity pair is
+
+  (13)  √(1−4ax−16cx²) Σ (2k choose k) s(k) (k+λ) x^k = 1/ρ
+  (14)  √(1+2ay+(4c+a²)y²) Σ t(k) (k + 1/2 + µ) y^k = 1/ρ
+
+with the µ-transformation
+
+  µ = (λ − 1/2)·√(1−4ax−16cx²).
+
+Convergence: characteristic equations m² − am − c = 0 and
+m² + 2am + (a²+4c) = 0; by Poincaré, |s(k)|^{1/k} ≤ max|a±√(a²+4c)|/2
+and similarly for t.  Paper's own novelty accounting: of the 93×2 = 186
+series in Tables 3–12, 71 carry references and "the other 114 series ...
+are believed to be new".
+
+Implementation notes for the λ-route (next session):
+- our P25-b closed form λ = (rhs − x₀z′(x₀))/z(x₀) is the numeric
+  recovery of exactly this λ; the CCL route gives it via the
+  derivative of the modular polynomial instead — the two coincide
+  where both apply.
+- the companion µ-transformation is the analytic origin of the
+  quadratic-λ pairs observed in the P23/P24 orbit data (N=2:
+  λ-roots of 15v²−12v+2=0 pair across the ±q column).  Scoped as the next-session project; the
 night's value-table (j6B..j6E at 36 CM points) is the substrate.
 
 ## 2. Theory axis — formal anchors for "what to keep"
