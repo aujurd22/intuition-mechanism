@@ -61,6 +61,12 @@ def tsums(x0, ts, N):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--n0', type=int, default=2)
+    ap.add_argument('--n1', type=int, default=31)
+    ap.add_argument('--out', default='p23_orbit_results.json')
+    args = ap.parse_args()
     ts = t_seq(400)
     p21 = {r["N"]: r["deg_x0"] for r in
            json.load(open("p21_degree_results.json"))["rows"]}
@@ -68,7 +74,7 @@ def main():
     all_ver = True
     match = 0
     tot = 0
-    for N in range(31, 61):
+    for N in range(args.n0, args.n1):
         D = -24 * N
         forms = reduced_forms(D)
         h = classno_forms(D)
@@ -119,9 +125,9 @@ def main():
     out["verdict"] = verdict
     print(f"P23 verdict: {verdict}")
 
-    with open("p23_orbit_results.json", "w", encoding="utf-8") as f:
+    with open(args.out, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, default=str)
-    print("results -> p23_orbit_results.json")
+    print(f"results -> {args.out}")
 
 
 if __name__ == "__main__":
