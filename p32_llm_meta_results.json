@@ -1,0 +1,61 @@
+{
+ "armA": [
+  {
+   "held_out": "T",
+   "answer": "",
+   "correct": false
+  },
+  {
+   "held_out": "A",
+   "answer": "B",
+   "correct": false
+  },
+  {
+   "held_out": "B",
+   "answer": "B",
+   "correct": true
+  },
+  {
+   "held_out": "C",
+   "answer": "",
+   "correct": false
+  }
+ ],
+ "armB": [
+  {
+   "N": 2,
+   "pred": null,
+   "true": "0.23670068381445479345",
+   "hit": false
+  },
+  {
+   "N": 6,
+   "pred": null,
+   "true": "0.2445959213929386227",
+   "hit": false
+  },
+  {
+   "N": 11,
+   "pred": null,
+   "true": "0.21156556710521763433",
+   "hit": false
+  },
+  {
+   "N": 19,
+   "pred": null,
+   "true": "0.17261121562472330693",
+   "hit": false
+  },
+  {
+   "N": 23,
+   "pred": null,
+   "true": "0.15896370322170517893",
+   "hit": false
+  }
+ ],
+ "summary": {
+  "armA": "1/4",
+  "armA_chance": 0.25,
+  "armB": "0/5"
+ }
+}

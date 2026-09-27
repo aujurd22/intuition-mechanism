@@ -1,0 +1,50 @@
+{
+ "rows": [
+  {
+   "family": "M1",
+   "truth": "step3-nosign",
+   "subject": "step3-nosign",
+   "correct": true,
+   "reasoning": "ratios converge ~7, step-3 fingerprint same as P32-a S1"
+  },
+  {
+   "family": "M2",
+   "truth": "osc-step2",
+   "subject": "osc-step2",
+   "correct": true,
+   "reasoning": "irregular sign flips (items 3-5 negative) = step-2 complex singular pair"
+  },
+  {
+   "family": "M3",
+   "truth": "step4-nosign",
+   "subject": "step4-nosign",
+   "correct": true,
+   "reasoning": "radius ~1/10 still deepening, longer-period structure than M1"
+  },
+  {
+   "family": "M4",
+   "truth": "smooth",
+   "subject": "smooth",
+   "correct": true,
+   "reasoning": "ratios grow LINEARLY (radius ~1/24 with n-exponent), no stair-step"
+  },
+  {
+   "family": "M5",
+   "truth": "step2-nosign",
+   "subject": "step2-nosign",
+   "correct": true,
+   "reasoning": "shallow radius ~1/4.5, even-item structure"
+  },
+  {
+   "family": "M6",
+   "truth": "osc-step3",
+   "subject": "osc-step3",
+   "correct": true,
+   "reasoning": "first 3 POSITIVE then flips negative = period-3 root of unity, distinct from M2's period-2"
+  }
+ ],
+ "correct": 6,
+ "total": 6,
+ "verdict": "CONFIRMED",
+ "note": "subject = calling LLM, blind, answers before truth check; truth fixed by construction"
+}
