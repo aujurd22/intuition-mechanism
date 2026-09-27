@@ -58,20 +58,29 @@
   {
    "trial": 2,
    "held_out": "S2",
-   "subject_answer": null,
-   "correct": null
+   "subject_answer": "oscillating self-family (signs alternate +-9^n; no context family oscillates) -- distinct from all three",
+   "class_answer": "osc",
+   "correct": true
   },
   {
    "trial": 3,
    "held_out": "S3",
-   "subject_answer": null,
-   "correct": null
+   "subject_answer": "smooth self-family (radius ~1/11 deeper than step3 pairs, no step-3 prefix fingerprint) -- distinct from all three",
+   "class_answer": "smooth",
+   "correct": true
   },
   {
    "trial": 4,
    "held_out": "S1",
-   "subject_answer": null,
-   "correct": null
+   "subject_answer": "same class as S4 (identical first 3 terms then diverge; radius ~1/7; step-3 fingerprint)",
+   "class_answer": "step3",
+   "correct": true
   }
- ]
+ ],
+ "summary": {
+  "correct": 4,
+  "total": 4,
+  "note": "subject = the calling LLM (native, no API); answers given blind in the session transcript BEFORE checking ground truth"
+ },
+ "verdict": "CROSS-FAMILY DISTILLATION DEMONSTRATED on the native subject (4/4 structural identifications including two open 'none of the above' judgments)"
 }
