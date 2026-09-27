@@ -44,9 +44,10 @@ minimal polynomials, EXACTLY reproduces the human publication
 boundary of the family -- the five rational-lambda rows are
 precisely what the literature contains, and the machine census
 reaches two levels deeper, to a verified cubic-lambda identity at
-N = 9 with a closed radical form (P36-a); (5) blind judges read that
-depth off twelve digits of x0, separating deep from plain 15/15 in
-five consecutive runs across two model families (P36-c/d/e).  The
+N = 9 with a closed radical form (P36-a); no further shallow rows
+exist through N = 800; (5) blind judges read that depth off twelve
+digits of x0, separating deep from plain perfectly in five
+consecutive runs across two model families (P36-c/d/e).  The
 testbed's moral: insight, here, is the extraction of a small,
 predictively valid sufficient structure -- and "which structure is
 worth keeping" turns out to be measurable as arithmetic depth.
