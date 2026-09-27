@@ -268,6 +268,22 @@ one family" stands, but the nuisance-identification prior IS
 distillable across families by a frontier LLM.  Intuition, on this
 testbed, is exactly the cross-family residue.
 
+**P32-b/c replication (CONFIRMED).**  Six additional synthetic families
+spanning the full structural parameter space (step-2/3/4, oscillating
+periods 2 and 3, radii 1/4..1/12): the native subject classified all
+six correctly (6/6; chance of a perfect random assignment 2.1e-05) —
+including the period-3 vs period-2 oscillation distinction (M6 flips
+sign after three positive terms; M2 after two).  An INDEPENDENT BLIND
+JUDGE (a different model, doubao-seed-2.1-lite, thinking disabled, no
+class definitions, no class count) then grouped the same six sequences:
+pairwise agreement with the constructed truth 13/15 = 0.87, with both
+disagreements attributable to sequence-length granularity (step-3 vs
+step-4 indistinguishable at 8 terms).  The judge invented its own class
+names that closely parallel the constructed partition.  Combined:
+TEN synthetic families, ten correct classifications by the subject,
+plus an independent-judge replication at 0.87 — the cross-family
+distillation result stands on two independent models.
+
 ## 7c. The generation side, mechanically (P18, P19)
 
 Covered in section 4b above (P18 machinery, P19 generation,
