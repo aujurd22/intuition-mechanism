@@ -306,6 +306,32 @@ series was then pushed through five scale/robustness rounds:
   re-defined by appearance clustering (P34-b, silhouette 0.645) and
   the native window-curve measurement queued.
 
+**P34-d: the window curve is a cue-extraction curve, not an
+information curve (DOUBLE CONFIRMED).**  Extending the window curve
+to W17-20 (100 fresh blind trials, design committed before answering)
+and splitting the subject into two conditions separated the two
+effects P34-c had conflated.  Subject A (holistic pattern matching,
+the method behind the whole native curve) scored 47/75 (63%): W17
+40%, W18 76%, W19 72% -- the non-monotonic wiggle continues.  Subject
+B is a 6-line rule read off the generator's support structure: the
+k=1 term carries comb(n, step), which vanishes for n < step, so the
+first three informative terms decide everything -- t2 vs 6 (step 2),
+t3 vs 20 (step 3), t4 vs 70 (step 4), and flip-presence (step 5's
+sign).  Subject B scored 100/100, and an all-corpus census makes it
+exact: 100.0% (4800/4800) at every window >= 12, 99.1% at W10, 96.8%
+at W8, 87.5% at W5 -- every short-window miss is a (5,alt) family
+whose first flip has not yet surfaced, exactly the predicted hole.
+The conclusion inverts the P34-c reading: task information is total
+from W12 onward, yet the native subject never exceeds 76% there --
+the non-monotonic curve measures attention and cue extraction under
+growing distractor material, not information availability.  The
+information-window hypothesis survives as a claim about the subject
+(there is an optimal attention window) and is falsified as a claim
+about the task (the optimal classifier is monotone-perfect in W).
+At W17-20 the simplest possible script is perfect while the LLM sits
+at 63%: extra terms add zero information and dilute attention away
+from the three terms that decide everything.
+
 **Cumulative subject record: 878/1120 trials (78.4%) across two models
 and two window lengths (chance 140/1120).**  Two meta-lessons are
 registered as first-class results: (1) per-trial attention is

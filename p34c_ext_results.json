@@ -1,0 +1,1605 @@
+{
+ "w17": {
+  "n": 25,
+  "A_correct": 10,
+  "B_correct": 25,
+  "detail": [
+   {
+    "trial": 1,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 2,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 3,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 4,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 5,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 6,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 7,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 8,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 9,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 10,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 11,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 12,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 13,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 14,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 15,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 16,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 17,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 18,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 19,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 20,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 21,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 22,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 23,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 24,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 25,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   }
+  ]
+ },
+ "w18": {
+  "n": 25,
+  "A_correct": 19,
+  "B_correct": 25,
+  "detail": [
+   {
+    "trial": 1,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "3",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 2,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 3,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 4,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 5,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 6,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 7,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 8,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 9,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 10,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 11,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 12,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 13,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 14,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 15,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 16,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 17,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 18,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 19,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 20,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 21,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 22,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 23,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 24,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 25,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   }
+  ]
+ },
+ "w19": {
+  "n": 25,
+  "A_correct": 18,
+  "B_correct": 25,
+  "detail": [
+   {
+    "trial": 1,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 2,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 3,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 4,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 5,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 6,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 7,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 8,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 9,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 10,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 11,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "A": [
+     "4",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 12,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 13,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 14,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 15,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "A": [
+     "5",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 16,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 17,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 18,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "4",
+     "no"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 19,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 20,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "A": [
+     "2",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 21,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 22,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "A": [
+     "3",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 23,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "A": [
+     "5",
+     "no"
+    ],
+    "A_ok": true,
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 24,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "A": [
+     "2",
+     "alt"
+    ],
+    "A_ok": false,
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 25,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "A": [
+     "4",
+     "alt"
+    ],
+    "A_ok": true,
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   }
+  ]
+ },
+ "w20": {
+  "n": 25,
+  "A_correct": null,
+  "B_correct": 25,
+  "detail": [
+   {
+    "trial": 1,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 2,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 3,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 4,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 5,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 6,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 7,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 8,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 9,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 10,
+    "truth": [
+     "3",
+     "no"
+    ],
+    "B": [
+     "3",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 11,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 12,
+    "truth": [
+     "2",
+     "no"
+    ],
+    "B": [
+     "2",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 13,
+    "truth": [
+     "4",
+     "no"
+    ],
+    "B": [
+     "4",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 14,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 15,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 16,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 17,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 18,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 19,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 20,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 21,
+    "truth": [
+     "3",
+     "alt"
+    ],
+    "B": [
+     "3",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 22,
+    "truth": [
+     "5",
+     "alt"
+    ],
+    "B": [
+     "5",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 23,
+    "truth": [
+     "5",
+     "no"
+    ],
+    "B": [
+     "5",
+     "no"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 24,
+    "truth": [
+     "4",
+     "alt"
+    ],
+    "B": [
+     "4",
+     "alt"
+    ],
+    "B_ok": true
+   },
+   {
+    "trial": 25,
+    "truth": [
+     "2",
+     "alt"
+    ],
+    "B": [
+     "2",
+     "alt"
+    ],
+    "B_ok": true
+   }
+  ]
+ }
+}
