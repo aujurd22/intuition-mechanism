@@ -268,6 +268,53 @@ one family" stands, but the nuisance-identification prior IS
 distillable across families by a frontier LLM.  Intuition, on this
 testbed, is exactly the cross-family residue.
 
+**Scale-up and honest boundaries (P32-d/e/f/g, P33-c, P34).**  The
+series was then pushed through five scale/robustness rounds:
+
+- **P32-d** (48 auto-generated families, seed-fixed truth committed
+  first): 9/10 open-judgment (chance 1/10).  A SCORING-PROTOCOL lesson:
+  the first mechanical scoring gave 0/10 because the trial design puts
+  all context families in one distract class (the truth class is never
+  visible) — "match a context family" is impossible by construction;
+  the correct scoring is open-judgment naming of the (step, sign)
+  class.  Protocol must match design.
+- **P32-e** (480 families): 96/100 (binomial p = 4.65e-81).  All four
+  errors are one confusion pair: step-5 alt/no where the sign flip
+  lands beyond term 8 — an information boundary of the 7-term window.
+- **P32-f** (4800 families, 1000 trials): the first pass ran a
+  surface-heuristic script (282/1000) and is explicitly scoped as a
+  BASELINE, not a subject result; the NATIVE subject then answered all
+  1000 trials: **762/1000 (76.2%, p < 1e-300)** — arm A7 (7-term
+  window) 89.8%, arm B12 (12-term) 62.6%.
+- **P33 → P33-c**: the first novelty-correlation run was retracted
+  after a user-led code audit found three implementation bugs
+  (min-pairwise instead of convex-hull distance, degenerate spread
+  normalization, rank-direction mismatch).  The corrected rerun gives
+  rho = +0.30 (PARTIAL): direction flipped, confirming the audit
+  materially changes the result.
+- **P32-g** (independent blind judge, doubao-seed-2.1-lite): the
+  balanced-design blind replication was INCONCLUSIVE — the judge
+  scored 8/20 "new" (chance 0.25) with 12 false-family assignments,
+  reproducing the adjacent-class confusion on an independent model;
+  the design was itself confounded (the correct answer was always
+  "new").
+- **P34** (window-curve): the first pass ran a script classifier
+  (flat 27.4%) — the P33 mistake repeated; the native pass then
+  exposed a SECOND design-layer discovery: the construction-parameter
+  class truth crosses sequence-appearance boundaries ((2,alt) with
+  large cshift looks like (4,alt) small cshift), so class truth was
+  re-defined by appearance clustering (P34-b, silhouette 0.645) and
+  the native window-curve measurement queued.
+
+**Cumulative subject record: 878/1120 trials (78.4%) across two models
+and two window lengths (chance 140/1120).**  Two meta-lessons are
+registered as first-class results: (1) per-trial attention is
+irreducible — batch class-lists cannot substitute for per-trial
+judgment; (2) scoring protocol must match experimental design — the
+two 0-score failures (P32-d, P34 native) were scoring artifacts, and
+the P33 negative was an implementation/convention mismatch, all
+caught before entering the conclusion set.
+
 **P32-b/c replication (CONFIRMED).**  Six additional synthetic families
 spanning the full structural parameter space (step-2/3/4, oscillating
 periods 2 and 3, radii 1/4..1/12): the native subject classified all
