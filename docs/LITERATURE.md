@@ -75,6 +75,21 @@ This is the precise shape of D1-eta stage (iii): implementing steps 1-4
 mechanically (mpmath q-expansions + ODE coefficient extraction) closes
 the j→coefficients arrow.
 
+### Per-level sources identified (2026-09-27 novelty deep-check)
+
+- **Level 11/23**: Ge, "Level 11 and level 23 analogues of Ramanujan's
+  series for 1/π", MPhil Thesis, Massey University, 2015 — NOT
+  open-access; line-by-line (x, λ) comparison queued pending library
+  access.
+- **Level 17**: Huber, "Level 17 Ramanujan-Sato series"
+  (faculty.utrgv.edu/timothy.huber/research/17.pdf); Chan–Zudilin also
+  treat level 17.
+- **Chan–Cooper 2012** unifies 93×2 = 186 series (Tables 3–13, levels
+  1,2,3,4,5,6A,6B,6C,8,9) with RATIONAL x only; the paper's own novelty
+  accounting: 71 referenced, "the other 114 series ... are believed to
+  be new".  Our nine quadratic-x₀ identities fall outside those tables
+  (both-convention decimal scan: zero hits).
+
 ### CCL Theorem 2·1 — verbatim spec (extracted from cc2012.pdf, 2026-09-27)
 
 For ℓ ∈ {1,2,3,4,5,6(3 cases),8,9}, w = w(q) the hauptmodul and
