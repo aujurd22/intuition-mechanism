@@ -17,7 +17,7 @@ BASE = "https://ark.cn-beijing.volces.com/api/coding/v3"
 # Key MUST come from the environment (never committed -- GitHub Push
 # Protection blocks any commit containing it, by design).
 KEY = os.environ.get("ARK_API_KEY", "")
-MODEL = "glm-5.3-flash"
+MODEL = "doubao-seed-2.1-lite"
 
 
 def ask(prompt: str, temperature: float = 0.0,
@@ -83,3 +83,25 @@ def ask(prompt: str, temperature: float = 0.0,
                 if c.get("type") == "output_text":
                     parts.append(c["text"])
     return "\n".join(parts) if parts else ""
+
+
+def ask_chat(prompt: str, temperature: float = 0.0,
+             max_tokens: int = 16384) -> str:
+    """chat/completions endpoint -- reasoning separated into
+    reasoning_content, so the answer is always directly extracted
+    (no reasoning-budget starvation)."""
+    body = json.dumps({
+        "model": MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        # doubao-seed-2.1-lite supports thinking disablement (docs:
+        # thinking.type = "disabled"); keeps the answer channel clean
+        "thinking": {"type": "disabled"},
+    }).encode()
+    req = urllib.request.Request(
+        BASE + "/chat/completions", data=body,
+        headers={"Content-Type": "application/json",
+                 "Authorization": f"Bearer {KEY}"})
+    r = json.loads(urllib.request.urlopen(req, timeout=600).read())
+    return r["choices"][0]["message"].get("content", "") or ""

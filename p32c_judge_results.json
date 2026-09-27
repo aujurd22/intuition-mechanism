@@ -1,0 +1,105 @@
+{
+ "judge_output": "Sequence M1: class-positive-irregular-growth\nSequence M2: class-period-4-sign-switch\nSequence M3: class-positive-irregular-growth\nSequence M4: class-positive-rapid-growth\nSequence M5: class-positive-geometric-growth\nSequence M6: class-period-4-sign-switch",
+ "assignments": {
+  "M1": "positive-irregular-growth",
+  "M2": "period-4-sign-switch",
+  "M3": "positive-irregular-growth",
+  "M4": "positive-rapid-growth",
+  "M5": "positive-geometric-growth",
+  "M6": "period-4-sign-switch"
+ },
+ "detail": [
+  {
+   "pair": "M1-M2",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M1-M3",
+   "truth_same": false,
+   "judge_same": true,
+   "agree": false
+  },
+  {
+   "pair": "M1-M4",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M1-M5",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M1-M6",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M2-M3",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M2-M4",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M2-M5",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M2-M6",
+   "truth_same": false,
+   "judge_same": true,
+   "agree": false
+  },
+  {
+   "pair": "M3-M4",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M3-M5",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M3-M6",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M4-M5",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M4-M6",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  },
+  {
+   "pair": "M5-M6",
+   "truth_same": false,
+   "judge_same": false,
+   "agree": true
+  }
+ ],
+ "pairwise": "13/15",
+ "verdict": "CONFIRMED"
+}
