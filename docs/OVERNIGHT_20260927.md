@@ -38,7 +38,8 @@ pattern, conductor-mix explanation hypothesis).
 | P21 | NEGATIVE (informative) | dc6ca6b | deg(x₀) bounded ≤ 9; residue-class structure; conductor-mix hypothesis |
 | P22 | CONFIRMED (upgraded) | 480b377 | negative-branch identities; A±2Num antisymmetry = the "±q" identity |
 | P23 | CONFIRMED | f84941d | class-group orbit generation: ~180 identities across N=2..30, zero failures |
-| P23-b | CONFIRMED | bbafced | N=31..60 completed: **522 machine-generated, machine-verified identities total across the full census range** |
+| P23-b | CONFIRMED | bbafced | N=31..60 completed: 340 more identities (all verified) |
+| P28-b | CONFIRMED | cc09830 | N=61..90: 430 more identities, census patterns hold out-of-sample — **cumulative harvest: ~1100 machine-generated, machine-verified identities over N = 2..90** |
 | DEEP-VERIFY | 210 dps | (this commit) | the N=2 showcase identity re-verified at 210-digit working precision: relative error 2.9e-61 over 1400 series terms — the verification is not precision-limited |
 | P25-b | CONFIRMED | 5a298f8 | the universal λ law VERIFIED: λ = (rhs − x₀dz/dx)/z(x₀) reproduces all five published λ at 1e-48..53 — the analytic generation formula is CLOSED (no M_N needed) |
 
