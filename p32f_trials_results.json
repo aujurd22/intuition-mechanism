@@ -1,0 +1,9 @@
+{
+ "score": "282/1000",
+ "pvalue": 4.625814151230562e-40,
+ "armA": "149/500",
+ "armB": "133/500",
+ "errors_count": 718,
+ "CRITICAL_SCOPING_NOTE": "282/1000 is the SURFACE-HEURISTIC BASELINE, not the LLM-subject result: the heuristic script cannot encode the subject's actual pattern-level reasoning (P32-d showed 9/10 native). Native 1000-trial run queued as a batch answering session. The baseline shows 282/1000 (p=4.6e-40) achievable by surface features alone -- the native subject must beat THIS to claim structural (not surface) distillation at scale.",
+ "verdict": "BASELINE-ONLY"
+}
