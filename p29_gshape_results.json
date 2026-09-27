@@ -1,0 +1,10 @@
+{
+ "results": {
+  "linear": 0.37594201281519396,
+  "sqrt": 0.29699992846686346,
+  "quadratic": 0.27900909268046264,
+  "sqrt+lin": 0.0798063207987565
+ },
+ "best_form": "sqrt+lin",
+ "verdict": "NEGATIVE"
+}
