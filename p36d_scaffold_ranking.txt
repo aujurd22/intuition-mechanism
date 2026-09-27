@@ -1,0 +1,16 @@
+M: 1/12, simplest rational unit fraction.
+E: 1/2, simple rational unit fraction.
+F: 1/32, simple rational power of two.
+I: 1/200, simple rational unit fraction.
+H: 1/104, simple rational unit fraction.
+C: ~0.0138, near rational 1/72.
+L: ~0.0204, near rational 1/49.
+N: ~0.0037, near rational 1/270.
+K: ~0.0021, near rational 1/471.
+J: ~0.001, near rational 1/1000.
+G: ~0.0005, near rational 1/1976.
+D: ~0.0004, near rational 1/2446.
+B: ~0.00015, near rational 1/6588.
+A: ~0.00013, near rational 1/7928.
+O: ~0.00009, near rational 1/11354.
+RANKING: M,E,F,I,H,C,L,N,K,J,G,D,B,A,O

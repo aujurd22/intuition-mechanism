@@ -21,7 +21,7 @@ layer now has its own measured verdict:
 | Blind discovery (L2/L3) | can the system find the decomposition/invariant without labels? | **PARTIAL / open** | P15 arc: blind envelope removal works (0.946); three internal criterion routes closed (regime theorem); P32 series: cross-family structural abstraction is real |
 | Structure recognition (LLM subjects) | can an LLM see "same generator, new instance"? | **YES** | P32-f native 762/1000 (76.2%, p<1e-300; honestly scored PARTIAL vs its own pre-registered 90% bar); P32-h existing arm 16/20 (80%, p~4e-7) |
 | Novelty detection | can it see "this is NOT any of the known structures"? | **NO for the blind judge** | P32-h new arm 4/20 (20%, at the 25% guess line); judge declares NEW only 7/40 times; native structural subject 38/40 (information IS present) |
-| Interestingness | given something new, is it worth pursuing? | **UNTESTED** | P33-c only: LLM surprise vs parameter-space novelty rho=+0.30, n=5 |
+| Interestingness | given something new, is it worth pursuing? | **FIRST MEASURE (P36)** | lambda algebraic degree over N=2..160 EXACTLY reproduces the human publication boundary (degree-1 rows = the five published rows); blind judges detect deep/plain 15/15 x3 runs across two model families |
 
 ## The P34-d result (the current hinge)
 
@@ -40,9 +40,9 @@ version of *insight as compression*.
 
 ## Current boundary and biggest unknowns
 
-1. **Cue extraction as the bottleneck** — supported by dissociation, not yet
-   by causal intervention; the registered next step endogenously supplies /
-   withholds the sufficient cue and measures the effect (P32-i / P34-e).
+1. **Cue extraction as the bottleneck** — now causally established (P32-i):
+   supplying the sufficient cue lifts the blind judge to 39/40 (novelty arm
+   20/20); truncation alone does not teach extraction.
 2. **Novelty detection** — absent in the blind judge, trivial for a reader
    with the structural representation: the open question is *wiring the
    structure representation to the novelty comparison*, not more
