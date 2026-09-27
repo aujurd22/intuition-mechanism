@@ -1,0 +1,19 @@
+I need to assess each x0 by recognizing simple rational values versus non-rational algebraic approximations.
+
+Identity a: x0 ~0.0016351126, non-rational deep algebraic root.
+Identity b: x0 ~0.0203947652, non-rational deep algebraic root.
+Identity c: x0 ~0.0012723575, non-rational deep algebraic root.
+Identity d: x0 ~0.0037051168, non-rational deep algebraic root.
+Identity e: x0 ~0.0005061478, non-rational deep algebraic root.
+Identity f: x0=0.0833333333, exactly rational 1/12.
+Identity g: x0 ~0.0007907549, non-rational deep algebraic root.
+Identity h: x0 ~0.0004088079, non-rational deep algebraic root.
+Identity i: x0=0.0096153846, exactly rational 1/104.
+Identity j: x0=0.05, exactly rational 1/20.
+Identity k: x0 ~0.0001517885, non-rational deep algebraic root.
+Identity l: x0=0.005, exactly rational 1/200.
+Identity m: x0 ~0.0001261421, non-rational deep algebraic root.
+Identity n: x0=0.03125, exactly rational 1/32.
+Identity o: x0 ~0.0002224769, non-rational deep algebraic root.
+
+RANKING: a,b,c,d,e,g,h,k,m,o,f,i,j,l,n

@@ -19,11 +19,12 @@
   "lambda": "0.25",
   "deg": 1,
   "poly": [
-   4,
-   1
+   -1,
+   4
   ],
   "residual": "4.25",
-  "identity_err": "4.28e-50"
+  "identity_err": "4.28e-50",
+  "poly_note": "stored as [c0,c1]: c0 + c1*lambda = 0"
  },
  {
   "N": 4,
@@ -37,11 +38,12 @@
   "lambda": "0.25",
   "deg": 1,
   "poly": [
-   4,
-   1
+   -1,
+   4
   ],
   "residual": "4.25",
-  "identity_err": "1.07e-50"
+  "identity_err": "1.07e-50",
+  "poly_note": "stored as [c0,c1]: c0 + c1*lambda = 0"
  },
  {
   "N": 6,
@@ -55,11 +57,12 @@
   "lambda": "0.238095238095238095238095238095238095238095238",
   "deg": 1,
   "poly": [
-   21,
-   5
+   -5,
+   21
   ],
   "residual": "22.2",
-  "identity_err": "0.0"
+  "identity_err": "0.0",
+  "poly_note": "stored as [c0,c1]: c0 + c1*lambda = 0"
  },
  {
   "N": 8,
@@ -112,11 +115,12 @@
   "lambda": "0.2",
   "deg": 1,
   "poly": [
-   5,
-   1
+   -1,
+   5
   ],
   "residual": "5.2",
-  "identity_err": "0.0"
+  "identity_err": "0.0",
+  "poly_note": "stored as [c0,c1]: c0 + c1*lambda = 0"
  },
  {
   "N": 14,
@@ -142,11 +146,12 @@
   "lambda": "0.180672268907563025210084033613445378151260504",
   "deg": 1,
   "poly": [
-   238,
-   43
+   -43,
+   238
   ],
   "residual": "246.0",
-  "identity_err": "2.67e-51"
+  "identity_err": "2.67e-51",
+  "poly_note": "stored as [c0,c1]: c0 + c1*lambda = 0"
  },
  {
   "N": 18,
