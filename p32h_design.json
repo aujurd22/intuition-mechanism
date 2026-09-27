@@ -1,0 +1,726 @@
+{
+ "seed": 3301,
+ "n": 40,
+ "trials": [
+  {
+   "trial": 1,
+   "kind": "new",
+   "context": {
+    "A": "H4a0565",
+    "A'": "H4a0471",
+    "B": "H2n0077",
+    "B'": "H2n0272",
+    "C": "H5a0198",
+    "C'": "H5a0210"
+   },
+   "holdout": "H5n0259",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "no"
+   ]
+  },
+  {
+   "trial": 2,
+   "kind": "new",
+   "context": {
+    "A": "H2a0465",
+    "A'": "H2a0135",
+    "B": "H4n0222",
+    "B'": "H4n0356",
+    "C": "H5n0178",
+    "C'": "H5n0469"
+   },
+   "holdout": "H3a0495",
+   "truth": "NEW",
+   "holdout_class": [
+    "3",
+    "alt"
+   ]
+  },
+  {
+   "trial": 3,
+   "kind": "existing",
+   "context": {
+    "A": "H4a0405",
+    "A'": "H4a0482",
+    "B": "H2n0584",
+    "B'": "H2n0109",
+    "C": "H3a0538",
+    "C'": "H3a0278"
+   },
+   "holdout": "H3a0050",
+   "truth": "C",
+   "holdout_class": [
+    "3",
+    "alt"
+   ]
+  },
+  {
+   "trial": 4,
+   "kind": "new",
+   "context": {
+    "A": "H5n0353",
+    "A'": "H5n0457",
+    "B": "H2n0188",
+    "B'": "H2n0384",
+    "C": "H3n0289",
+    "C'": "H3n0149"
+   },
+   "holdout": "H4a0011",
+   "truth": "NEW",
+   "holdout_class": [
+    "4",
+    "alt"
+   ]
+  },
+  {
+   "trial": 5,
+   "kind": "new",
+   "context": {
+    "A": "H4n0491",
+    "A'": "H4n0205",
+    "B": "H3a0063",
+    "B'": "H3a0513",
+    "C": "H3n0354",
+    "C'": "H3n0522"
+   },
+   "holdout": "H5n0180",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "no"
+   ]
+  },
+  {
+   "trial": 6,
+   "kind": "new",
+   "context": {
+    "A": "H3n0359",
+    "A'": "H3n0588",
+    "B": "H2n0218",
+    "B'": "H2n0283",
+    "C": "H4n0032",
+    "C'": "H4n0477"
+   },
+   "holdout": "H5a0199",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 7,
+   "kind": "existing",
+   "context": {
+    "A": "H3n0320",
+    "A'": "H3n0408",
+    "B": "H2n0591",
+    "B'": "H2n0528",
+    "C": "H4a0305",
+    "C'": "H4a0141"
+   },
+   "holdout": "H4a0437",
+   "truth": "C",
+   "holdout_class": [
+    "4",
+    "alt"
+   ]
+  },
+  {
+   "trial": 8,
+   "kind": "existing",
+   "context": {
+    "A": "H4n0298",
+    "A'": "H4n0379",
+    "B": "H3n0014",
+    "B'": "H3n0165",
+    "C": "H5a0540",
+    "C'": "H5a0485"
+   },
+   "holdout": "H5a0406",
+   "truth": "C",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 9,
+   "kind": "existing",
+   "context": {
+    "A": "H4n0005",
+    "A'": "H4n0078",
+    "B": "H5a0260",
+    "B'": "H5a0395",
+    "C": "H5n0212",
+    "C'": "H5n0335"
+   },
+   "holdout": "H5n0049",
+   "truth": "C",
+   "holdout_class": [
+    "5",
+    "no"
+   ]
+  },
+  {
+   "trial": 10,
+   "kind": "new",
+   "context": {
+    "A": "H3n0576",
+    "A'": "H3n0251",
+    "B": "H2a0074",
+    "B'": "H2a0424",
+    "C": "H2n0168",
+    "C'": "H2n0307"
+   },
+   "holdout": "H3a0412",
+   "truth": "NEW",
+   "holdout_class": [
+    "3",
+    "alt"
+   ]
+  },
+  {
+   "trial": 11,
+   "kind": "new",
+   "context": {
+    "A": "H5a0398",
+    "A'": "H5a0215",
+    "B": "H2a0383",
+    "B'": "H2a0324",
+    "C": "H3n0160",
+    "C'": "H3n0168"
+   },
+   "holdout": "H4a0152",
+   "truth": "NEW",
+   "holdout_class": [
+    "4",
+    "alt"
+   ]
+  },
+  {
+   "trial": 12,
+   "kind": "new",
+   "context": {
+    "A": "H3a0130",
+    "A'": "H3a0249",
+    "B": "H4n0408",
+    "B'": "H4n0345",
+    "C": "H5a0500",
+    "C'": "H5a0268"
+   },
+   "holdout": "H3n0279",
+   "truth": "NEW",
+   "holdout_class": [
+    "3",
+    "no"
+   ]
+  },
+  {
+   "trial": 13,
+   "kind": "new",
+   "context": {
+    "A": "H3n0452",
+    "A'": "H3n0356",
+    "B": "H5a0341",
+    "B'": "H5a0079",
+    "C": "H5n0563",
+    "C'": "H5n0031"
+   },
+   "holdout": "H4a0583",
+   "truth": "NEW",
+   "holdout_class": [
+    "4",
+    "alt"
+   ]
+  },
+  {
+   "trial": 14,
+   "kind": "existing",
+   "context": {
+    "A": "H2a0273",
+    "A'": "H2a0219",
+    "B": "H5a0236",
+    "B'": "H5a0268",
+    "C": "H3a0234",
+    "C'": "H3a0217"
+   },
+   "holdout": "H2a0448",
+   "truth": "A",
+   "holdout_class": [
+    "2",
+    "alt"
+   ]
+  },
+  {
+   "trial": 15,
+   "kind": "new",
+   "context": {
+    "A": "H2a0297",
+    "A'": "H2a0414",
+    "B": "H5a0331",
+    "B'": "H5a0046",
+    "C": "H3a0233",
+    "C'": "H3a0568"
+   },
+   "holdout": "H4n0165",
+   "truth": "NEW",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  },
+  {
+   "trial": 16,
+   "kind": "existing",
+   "context": {
+    "A": "H2n0345",
+    "A'": "H2n0569",
+    "B": "H3n0352",
+    "B'": "H3n0371",
+    "C": "H4a0165",
+    "C'": "H4a0005"
+   },
+   "holdout": "H2n0414",
+   "truth": "A",
+   "holdout_class": [
+    "2",
+    "no"
+   ]
+  },
+  {
+   "trial": 17,
+   "kind": "existing",
+   "context": {
+    "A": "H4a0110",
+    "A'": "H4a0478",
+    "B": "H3n0366",
+    "B'": "H3n0037",
+    "C": "H5n0001",
+    "C'": "H5n0002"
+   },
+   "holdout": "H5n0163",
+   "truth": "C",
+   "holdout_class": [
+    "5",
+    "no"
+   ]
+  },
+  {
+   "trial": 18,
+   "kind": "new",
+   "context": {
+    "A": "H4a0232",
+    "A'": "H4a0034",
+    "B": "H2a0426",
+    "B'": "H2a0447",
+    "C": "H2n0379",
+    "C'": "H2n0073"
+   },
+   "holdout": "H4n0598",
+   "truth": "NEW",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  },
+  {
+   "trial": 19,
+   "kind": "existing",
+   "context": {
+    "A": "H2n0599",
+    "A'": "H2n0286",
+    "B": "H3n0088",
+    "B'": "H3n0586",
+    "C": "H3a0100",
+    "C'": "H3a0354"
+   },
+   "holdout": "H3a0384",
+   "truth": "C",
+   "holdout_class": [
+    "3",
+    "alt"
+   ]
+  },
+  {
+   "trial": 20,
+   "kind": "new",
+   "context": {
+    "A": "H4n0209",
+    "A'": "H4n0290",
+    "B": "H3a0092",
+    "B'": "H3a0153",
+    "C": "H4a0446",
+    "C'": "H4a0279"
+   },
+   "holdout": "H3n0402",
+   "truth": "NEW",
+   "holdout_class": [
+    "3",
+    "no"
+   ]
+  },
+  {
+   "trial": 21,
+   "kind": "new",
+   "context": {
+    "A": "H5a0296",
+    "A'": "H5a0585",
+    "B": "H4n0540",
+    "B'": "H4n0356",
+    "C": "H4a0511",
+    "C'": "H4a0144"
+   },
+   "holdout": "H2a0350",
+   "truth": "NEW",
+   "holdout_class": [
+    "2",
+    "alt"
+   ]
+  },
+  {
+   "trial": 22,
+   "kind": "existing",
+   "context": {
+    "A": "H3a0246",
+    "A'": "H3a0300",
+    "B": "H5n0436",
+    "B'": "H5n0571",
+    "C": "H2n0152",
+    "C'": "H2n0190"
+   },
+   "holdout": "H2n0590",
+   "truth": "C",
+   "holdout_class": [
+    "2",
+    "no"
+   ]
+  },
+  {
+   "trial": 23,
+   "kind": "existing",
+   "context": {
+    "A": "H2n0195",
+    "A'": "H2n0520",
+    "B": "H3a0067",
+    "B'": "H3a0276",
+    "C": "H2a0043",
+    "C'": "H2a0113"
+   },
+   "holdout": "H3a0491",
+   "truth": "B",
+   "holdout_class": [
+    "3",
+    "alt"
+   ]
+  },
+  {
+   "trial": 24,
+   "kind": "existing",
+   "context": {
+    "A": "H2a0152",
+    "A'": "H2a0054",
+    "B": "H5n0508",
+    "B'": "H5n0219",
+    "C": "H3n0504",
+    "C'": "H3n0206"
+   },
+   "holdout": "H3n0405",
+   "truth": "C",
+   "holdout_class": [
+    "3",
+    "no"
+   ]
+  },
+  {
+   "trial": 25,
+   "kind": "existing",
+   "context": {
+    "A": "H4n0331",
+    "A'": "H4n0317",
+    "B": "H2a0198",
+    "B'": "H2a0512",
+    "C": "H2n0197",
+    "C'": "H2n0078"
+   },
+   "holdout": "H4n0583",
+   "truth": "A",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  },
+  {
+   "trial": 26,
+   "kind": "existing",
+   "context": {
+    "A": "H4n0150",
+    "A'": "H4n0238",
+    "B": "H3n0079",
+    "B'": "H3n0353",
+    "C": "H2n0180",
+    "C'": "H2n0032"
+   },
+   "holdout": "H4n0444",
+   "truth": "A",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  },
+  {
+   "trial": 27,
+   "kind": "new",
+   "context": {
+    "A": "H3a0591",
+    "A'": "H3a0070",
+    "B": "H5a0524",
+    "B'": "H5a0457",
+    "C": "H4n0536",
+    "C'": "H4n0493"
+   },
+   "holdout": "H2a0546",
+   "truth": "NEW",
+   "holdout_class": [
+    "2",
+    "alt"
+   ]
+  },
+  {
+   "trial": 28,
+   "kind": "existing",
+   "context": {
+    "A": "H5n0447",
+    "A'": "H5n0205",
+    "B": "H5a0328",
+    "B'": "H5a0354",
+    "C": "H4a0089",
+    "C'": "H4a0165"
+   },
+   "holdout": "H5n0267",
+   "truth": "A",
+   "holdout_class": [
+    "5",
+    "no"
+   ]
+  },
+  {
+   "trial": 29,
+   "kind": "new",
+   "context": {
+    "A": "H3a0363",
+    "A'": "H3a0503",
+    "B": "H5n0566",
+    "B'": "H5n0164",
+    "C": "H2a0045",
+    "C'": "H2a0354"
+   },
+   "holdout": "H5a0517",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 30,
+   "kind": "new",
+   "context": {
+    "A": "H4a0457",
+    "A'": "H4a0171",
+    "B": "H2a0056",
+    "B'": "H2a0092",
+    "C": "H4n0446",
+    "C'": "H4n0063"
+   },
+   "holdout": "H5a0245",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 31,
+   "kind": "existing",
+   "context": {
+    "A": "H5a0270",
+    "A'": "H5a0206",
+    "B": "H2n0264",
+    "B'": "H2n0505",
+    "C": "H3a0178",
+    "C'": "H3a0028"
+   },
+   "holdout": "H2n0315",
+   "truth": "B",
+   "holdout_class": [
+    "2",
+    "no"
+   ]
+  },
+  {
+   "trial": 32,
+   "kind": "new",
+   "context": {
+    "A": "H5n0353",
+    "A'": "H5n0204",
+    "B": "H3a0068",
+    "B'": "H3a0534",
+    "C": "H4n0556",
+    "C'": "H4n0061"
+   },
+   "holdout": "H5a0261",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 33,
+   "kind": "new",
+   "context": {
+    "A": "H5n0139",
+    "A'": "H5n0176",
+    "B": "H2a0267",
+    "B'": "H2a0223",
+    "C": "H3a0589",
+    "C'": "H3a0177"
+   },
+   "holdout": "H5a0203",
+   "truth": "NEW",
+   "holdout_class": [
+    "5",
+    "alt"
+   ]
+  },
+  {
+   "trial": 34,
+   "kind": "existing",
+   "context": {
+    "A": "H2n0443",
+    "A'": "H2n0206",
+    "B": "H3a0021",
+    "B'": "H3a0241",
+    "C": "H4n0574",
+    "C'": "H4n0270"
+   },
+   "holdout": "H4n0431",
+   "truth": "C",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  },
+  {
+   "trial": 35,
+   "kind": "new",
+   "context": {
+    "A": "H5a0300",
+    "A'": "H5a0151",
+    "B": "H3a0253",
+    "B'": "H3a0594",
+    "C": "H5n0476",
+    "C'": "H5n0125"
+   },
+   "holdout": "H2n0130",
+   "truth": "NEW",
+   "holdout_class": [
+    "2",
+    "no"
+   ]
+  },
+  {
+   "trial": 36,
+   "kind": "new",
+   "context": {
+    "A": "H5a0185",
+    "A'": "H5a0468",
+    "B": "H5n0116",
+    "B'": "H5n0062",
+    "C": "H2a0351",
+    "C'": "H2a0119"
+   },
+   "holdout": "H3n0221",
+   "truth": "NEW",
+   "holdout_class": [
+    "3",
+    "no"
+   ]
+  },
+  {
+   "trial": 37,
+   "kind": "existing",
+   "context": {
+    "A": "H5a0282",
+    "A'": "H5a0477",
+    "B": "H2n0224",
+    "B'": "H2n0409",
+    "C": "H4n0320",
+    "C'": "H4n0359"
+   },
+   "holdout": "H2n0281",
+   "truth": "B",
+   "holdout_class": [
+    "2",
+    "no"
+   ]
+  },
+  {
+   "trial": 38,
+   "kind": "existing",
+   "context": {
+    "A": "H5n0105",
+    "A'": "H5n0416",
+    "B": "H3n0127",
+    "B'": "H3n0226",
+    "C": "H4a0216",
+    "C'": "H4a0359"
+   },
+   "holdout": "H3n0424",
+   "truth": "B",
+   "holdout_class": [
+    "3",
+    "no"
+   ]
+  },
+  {
+   "trial": 39,
+   "kind": "existing",
+   "context": {
+    "A": "H2a0076",
+    "A'": "H2a0235",
+    "B": "H3n0096",
+    "B'": "H3n0381",
+    "C": "H4a0518",
+    "C'": "H4a0042"
+   },
+   "holdout": "H4a0520",
+   "truth": "C",
+   "holdout_class": [
+    "4",
+    "alt"
+   ]
+  },
+  {
+   "trial": 40,
+   "kind": "existing",
+   "context": {
+    "A": "H5a0473",
+    "A'": "H5a0548",
+    "B": "H3n0428",
+    "B'": "H3n0545",
+    "C": "H4n0342",
+    "C'": "H4n0062"
+   },
+   "holdout": "H4n0513",
+   "truth": "C",
+   "holdout_class": [
+    "4",
+    "no"
+   ]
+  }
+ ]
+}

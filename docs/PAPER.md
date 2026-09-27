@@ -285,13 +285,26 @@ series was then pushed through five scale/robustness rounds:
   surface-heuristic script (282/1000) and is explicitly scoped as a
   BASELINE, not a subject result; the NATIVE subject then answered all
   1000 trials: **762/1000 (76.2%, p < 1e-300)** — arm A7 (7-term
-  window) 89.8%, arm B12 (12-term) 62.6%.
+  window) 89.8%, arm B12 (12-term) 62.6%.  VERDICT: **PARTIAL
+  (strong positive)** -- against the pre-registered criterion
+  (accuracy >= 90% AND fewer step-5 confusions in the 12-term arm) it
+  fails both conditions; the B12 < A7 reversal was later explained by
+  the P34-d decomposition (attention dilution, not an information
+  boundary -- that mechanism predicted the opposite direction and is
+  falsified).
 - **P33 → P33-c**: the first novelty-correlation run was retracted
   after a user-led code audit found three implementation bugs
   (min-pairwise instead of convex-hull distance, degenerate spread
   normalization, rank-direction mismatch).  The corrected rerun gives
-  rho = +0.30 (PARTIAL): direction flipped, confirming the audit
-  materially changes the result.
+  rho = +0.30 (PARTIAL, n=5): direction flipped, confirming the audit
+  materially changes the result.  A second user audit then caught a
+  residual bug in the corrected implementation: the inside-the-hull
+  branch was a no-op (boundary distance returned either way,
+  contradicting the registered definition "inside -> 0").  After the
+  fix the five judged points all lie OUTSIDE the prior hull, so every
+  distance and rho = +0.30 are unchanged bit-for-bit; the fix matters
+  for future full-census runs, where interior points now score 0 as
+  registered.
 - **P32-g** (independent blind judge, doubao-seed-2.1-lite): the
   balanced-design blind replication was INCONCLUSIVE — the judge
   scored 8/20 "new" (chance 0.25) with 12 false-family assignments,
@@ -332,8 +345,32 @@ At W17-20 the simplest possible script is perfect while the LLM sits
 at 63%: extra terms add zero information and dilute attention away
 from the three terms that decide everything.
 
+**P32-h: structure recognition without novelty detection
+(PARTIAL -- the dissociation).**  The balanced design the P32-g fix
+called for: 40 blind trials, 20 holdouts from context-present classes
+(third instances, different parameter triples) and 20 from classes
+absent from the context, answer space {A, B, C, NEW}.  The blind API
+judge (doubao-seed-2.1-lite, thinking disabled, 200-word bounded
+reasoning) splits cleanly down the ladder the program cares about:
+existing-family matching 16/20 (80%, p ~ 4e-7) -- but novelty
+detection 4/20 (20%, at the 25% guess line).  The judge declares NEW
+only 7 times in 40 (true: 20), and its new-trial misses are absorbed
+by the context families indiscriminately (A x9, B x5, C x2) -- a
+generic "must be one of the above" prior, not the adjacent-class
+boundary mode.  The native subject with the declared structural
+method scores 38/40 (both misses transcription slips), showing the
+information a correct novelty decision needs IS in the visible
+window (as P34-d established) -- the blind judge fails because its
+structure reading collapses under appearance variability, not
+because novelty is unreadable.  Empirically the ladder now reads:
+recognition YES, novelty NO (for the blind judge), interestingness
+untested.
+
 **Cumulative subject record: 878/1120 trials (78.4%) across two models
-and two window lengths (chance 140/1120).**  Two meta-lessons are
+and two window lengths (chance 140/1120) -- strong positive evidence
+for cross-family structural abstraction (recognition layer), while
+the flagship P32-f row is honestly scored PARTIAL against its own
+pre-registered criterion.**  Two meta-lessons are
 registered as first-class results: (1) per-trial attention is
 irreducible — batch class-lists cannot substitute for per-trial
 judgment; (2) scoring protocol must match experimental design — the

@@ -1,0 +1,504 @@
+{
+ "judge": {
+  "total": "20/40",
+  "existing": "16/20",
+  "new": "4/20",
+  "false_existing_to": {
+   "B": 5,
+   "A": 9,
+   "C": 2
+  },
+  "detail": {
+   "1": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "2": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "3": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "4": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "5": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "6": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "7": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "8": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "9": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "10": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "11": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "12": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "13": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "14": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "15": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "16": {
+    "answer": "B",
+    "truth": "A",
+    "kind": "existing",
+    "ok": false
+   },
+   "17": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "18": {
+    "answer": "C",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "19": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "20": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "21": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "22": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "23": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "24": {
+    "answer": "NEW",
+    "truth": "C",
+    "kind": "existing",
+    "ok": false
+   },
+   "25": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "26": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "27": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "28": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "29": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "30": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "31": {
+    "answer": "NEW",
+    "truth": "B",
+    "kind": "existing",
+    "ok": false
+   },
+   "32": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "33": {
+    "answer": "A",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "34": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "35": {
+    "answer": "C",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "36": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "37": {
+    "answer": "NEW",
+    "truth": "B",
+    "kind": "existing",
+    "ok": false
+   },
+   "38": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "39": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "40": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   }
+  }
+ },
+ "native": {
+  "total": "38/40",
+  "existing": "19/20",
+  "new": "19/20",
+  "false_existing_to": {
+   "B": 1
+  },
+  "detail": {
+   "1": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "2": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "3": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "4": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "5": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "6": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "7": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "8": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "9": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "10": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "11": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "12": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "13": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "14": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "15": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "16": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "17": {
+    "answer": "NEW",
+    "truth": "C",
+    "kind": "existing",
+    "ok": false
+   },
+   "18": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "19": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "20": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "21": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "22": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "23": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "24": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "25": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "26": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "27": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "28": {
+    "answer": "A",
+    "truth": "A",
+    "kind": "existing",
+    "ok": true
+   },
+   "29": {
+    "answer": "B",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": false
+   },
+   "30": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "31": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "32": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "33": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "34": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "35": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "36": {
+    "answer": "NEW",
+    "truth": "NEW",
+    "kind": "new",
+    "ok": true
+   },
+   "37": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "38": {
+    "answer": "B",
+    "truth": "B",
+    "kind": "existing",
+    "ok": true
+   },
+   "39": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   },
+   "40": {
+    "answer": "C",
+    "truth": "C",
+    "kind": "existing",
+    "ok": true
+   }
+  }
+ }
+}

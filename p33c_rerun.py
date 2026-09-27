@@ -48,8 +48,6 @@ def hull_distance(pt, prior):
     # distance from p to each hull edge segment
     best = np.inf
     n = len(hull_pts)
-    inside_test = True
-    # quick inside test: p inside hull => distance to boundary
     for i in range(n):
         a = hull_pts[i]
         b = hull_pts[(i + 1) % n]
@@ -67,7 +65,11 @@ def hull_distance(pt, prior):
         cross = (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0])
         signs.append(np.sign(cross))
     inside = all(s >= 0 for s in signs) or all(s <= 0 for s in signs)
-    return float(best if inside else best)   # boundary distance either way
+    # registered definition: inside the hull the novelty distance is 0
+    # (amendment 2026-09-28: the first implementation returned the
+    # boundary distance either way -- the inside branch was a no-op,
+    # caught in the user's audit)
+    return 0.0 if inside else float(best)
 
 
 def main():
