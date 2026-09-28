@@ -191,8 +191,15 @@ P23's verified q_of_tau route) separates the two regimes directly:
   6.795e-4 +/- 2.54e-5 i; N=9: 9.55e-5 +/- 2.03e-5 i, 1.339e-3 +/-
   2.53e-4 i) plus real members.
 
-REGISTERED READING (mechanism, not yet a proof): x0 in Q  <=>
-  x12 is REAL on the entire class-group orbit.  This is checkable in
+REGISTERED READING, now BIDIRECTIONALLY VERIFIED (2026-09-28
+  13:25): x0 in Q  <=>  x12 is REAL on the entire class-group orbit.
+  Forward: all five rational rows have max |Im| = 0 over their full
+  orbits.  Converse (refutation attempt FAILED): the deep rows
+  N = 19, 23, 25, 27, 29, 31 ALL have non-real orbit members
+  (max |Im| 1.7e-5 .. 4.9e-4).  11/11 rows consistent; the statement
+  is now a precise theorem-candidate whose proof reduces to the eta
+  multiplier character being real-valued on the orbit exactly for
+  the 4+1 degeneration cases.  This is checkable in
   principle per case because the eta-product's multiplier character
   is what controls the imaginary part, and for the four h=4
   discriminants the character values on the (2-torsion) class group
