@@ -1,0 +1,296 @@
+{
+ "TAU": 1.5,
+ "bend_order": {
+  "0": 0.013950778629972427,
+  "1": 0.01394799564076062,
+  "2": 0.014589882917860224,
+  "3": 0.01647520607101899
+ },
+ "recognition": "10/20",
+ "novelty": "6/20",
+ "end_absent": "4/11",
+ "interior_absent": "2/9",
+ "verdict": "NEGATIVE",
+ "detail": [
+  {
+   "trial": 1,
+   "truth": "1",
+   "ans": "2",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 2,
+   "truth": "NEW",
+   "ans": "2",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 3,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 1
+  },
+  {
+   "trial": 4,
+   "truth": "NEW",
+   "ans": "1",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 5,
+   "truth": "1",
+   "ans": "NEW",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 6,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 0
+  },
+  {
+   "trial": 7,
+   "truth": "2",
+   "ans": "NEW",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 8,
+   "truth": "NEW",
+   "ans": "1",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 9,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 0
+  },
+  {
+   "trial": 10,
+   "truth": "NEW",
+   "ans": "2",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 11,
+   "truth": "NEW",
+   "ans": "3",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 12,
+   "truth": "1",
+   "ans": "0",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 13,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 2
+  },
+  {
+   "trial": 14,
+   "truth": "NEW",
+   "ans": "2",
+   "ok": false,
+   "absent": 1
+  },
+  {
+   "trial": 15,
+   "truth": "2",
+   "ans": "3",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 16,
+   "truth": "NEW",
+   "ans": "3",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 17,
+   "truth": "NEW",
+   "ans": "2",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 18,
+   "truth": "NEW",
+   "ans": "1",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 19,
+   "truth": "3",
+   "ans": "3",
+   "ok": true,
+   "absent": 1
+  },
+  {
+   "trial": 20,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 3
+  },
+  {
+   "trial": 21,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 2
+  },
+  {
+   "trial": 22,
+   "truth": "0",
+   "ans": "NEW",
+   "ok": false,
+   "absent": 3
+  },
+  {
+   "trial": 23,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 2
+  },
+  {
+   "trial": 24,
+   "truth": "3",
+   "ans": "NEW",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 25,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 3
+  },
+  {
+   "trial": 26,
+   "truth": "NEW",
+   "ans": "1",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 27,
+   "truth": "0",
+   "ans": "2",
+   "ok": false,
+   "absent": 1
+  },
+  {
+   "trial": 28,
+   "truth": "3",
+   "ans": "3",
+   "ok": true,
+   "absent": 2
+  },
+  {
+   "trial": 29,
+   "truth": "NEW",
+   "ans": "0",
+   "ok": false,
+   "absent": 1
+  },
+  {
+   "trial": 30,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 1
+  },
+  {
+   "trial": 31,
+   "truth": "1",
+   "ans": "2",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 32,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 2
+  },
+  {
+   "trial": 33,
+   "truth": "1",
+   "ans": "0",
+   "ok": false,
+   "absent": 2
+  },
+  {
+   "trial": 34,
+   "truth": "NEW",
+   "ans": "1",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 35,
+   "truth": "1",
+   "ans": "1",
+   "ok": true,
+   "absent": 3
+  },
+  {
+   "trial": 36,
+   "truth": "3",
+   "ans": "3",
+   "ok": true,
+   "absent": 1
+  },
+  {
+   "trial": 37,
+   "truth": "NEW",
+   "ans": "NEW",
+   "ok": true,
+   "absent": 0
+  },
+  {
+   "trial": 38,
+   "truth": "NEW",
+   "ans": "2",
+   "ok": false,
+   "absent": 0
+  },
+  {
+   "trial": 39,
+   "truth": "NEW",
+   "ans": "0",
+   "ok": false,
+   "absent": 1
+  },
+  {
+   "trial": 40,
+   "truth": "0",
+   "ans": "0",
+   "ok": true,
+   "absent": 3
+  }
+ ]
+}
