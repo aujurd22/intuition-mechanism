@@ -294,7 +294,7 @@ concentrate on problems requiring cross-domain lemmas?
        within-class anomaly check catches some atypical samples but also
        rejects more known samples as false-NEW (36 vs 22 false rejections).
        The fundamental issue is that overlapping transition structures
-       make centroid-based novelty detection inherently unreliable --
+       make centroid-based novelty detection unreliable on this overlapping Markov family --
        the Markov family's bigram-rate space does not have the compact
        discrete partition structure that makes cell-level detection
        work on the t-family (P46/P39). This is the P46-c scope boundary
