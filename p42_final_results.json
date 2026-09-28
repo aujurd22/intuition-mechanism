@@ -1,0 +1,201 @@
+[
+ {
+  "m": 20,
+  "seed": 0,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 20,
+  "seed": 1,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 20,
+  "seed": 2,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 20,
+  "seed": 3,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 20,
+  "seed": 4,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "eq5=-1908",
+   "flip"
+  ],
+  "exact": false,
+  "pure": true,
+  "cells": 10
+ },
+ {
+  "m": 40,
+  "seed": 0,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "eq7=28632",
+   "flip"
+  ],
+  "exact": false,
+  "pure": true,
+  "cells": 12
+ },
+ {
+  "m": 40,
+  "seed": 1,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 40,
+  "seed": 2,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "eq7=28632",
+   "flip"
+  ],
+  "exact": false,
+  "pure": true,
+  "cells": 12
+ },
+ {
+  "m": 40,
+  "seed": 3,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "eq6=-13476",
+   "flip"
+  ],
+  "exact": false,
+  "pure": true,
+  "cells": 12
+ },
+ {
+  "m": 40,
+  "seed": 4,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 60,
+  "seed": 0,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 60,
+  "seed": 1,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 60,
+  "seed": 2,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 60,
+  "seed": 3,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ },
+ {
+  "m": 60,
+  "seed": 4,
+  "code": [
+   "eq2=6",
+   "eq3=20",
+   "eq4=70",
+   "flip"
+  ],
+  "exact": true,
+  "pure": true,
+  "cells": 9
+ }
+]
