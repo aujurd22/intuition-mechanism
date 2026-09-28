@@ -1,0 +1,108 @@
+{
+ "per_seed": {
+  "seed-5901": {
+   "bigram-rev": {
+    "det@FA10": 10.0,
+    "det@FA5": 10.0
+   },
+   "bigram-fwd": {
+    "det@FA10": 10.0,
+    "det@FA5": 10.0
+   },
+   "asym-rev": {
+    "det@FA10": 12.5,
+    "det@FA5": 5.0
+   },
+   "asym-fwd": {
+    "det@FA10": 25.0,
+    "det@FA5": 10.0
+   },
+   "AND-rev": {
+    "det@FA10": 5.0,
+    "det@FA5": 5.0
+   },
+   "AND-fwd": {
+    "det@FA10": 10.0,
+    "det@FA5": 10.0
+   }
+  },
+  "seed-5902": {
+   "bigram-rev": {
+    "det@FA10": 15.0,
+    "det@FA5": 15.0
+   },
+   "bigram-fwd": {
+    "det@FA10": 7.5,
+    "det@FA5": 7.5
+   },
+   "asym-rev": {
+    "det@FA10": 25.0,
+    "det@FA5": 10.0
+   },
+   "asym-fwd": {
+    "det@FA10": 22.5,
+    "det@FA5": 17.5
+   },
+   "AND-rev": {
+    "det@FA10": 20.0,
+    "det@FA5": 7.5
+   },
+   "AND-fwd": {
+    "det@FA10": 12.5,
+    "det@FA5": 10.0
+   }
+  },
+  "seed-5903": {
+   "bigram-rev": {
+    "det@FA10": 15.0,
+    "det@FA5": 15.0
+   },
+   "bigram-fwd": {
+    "det@FA10": 17.5,
+    "det@FA5": 17.5
+   },
+   "asym-rev": {
+    "det@FA10": 15.0,
+    "det@FA5": 12.5
+   },
+   "asym-fwd": {
+    "det@FA10": 25.0,
+    "det@FA5": 17.5
+   },
+   "AND-rev": {
+    "det@FA10": 22.5,
+    "det@FA5": 22.5
+   },
+   "AND-fwd": {
+    "det@FA10": 40.0,
+    "det@FA5": 40.0
+   }
+  }
+ },
+ "means": {
+  "bigram-rev": {
+   "det@FA10": 13.3,
+   "det@FA5": 13.3
+  },
+  "bigram-fwd": {
+   "det@FA10": 11.7,
+   "det@FA5": 11.7
+  },
+  "asym-rev": {
+   "det@FA10": 17.5,
+   "det@FA5": 9.2
+  },
+  "asym-fwd": {
+   "det@FA10": 24.2,
+   "det@FA5": 15.0
+  },
+  "AND-rev": {
+   "det@FA10": 15.8,
+   "det@FA5": 11.7
+  },
+  "AND-fwd": {
+   "det@FA10": 20.8,
+   "det@FA5": 20.0
+  }
+ }
+}
