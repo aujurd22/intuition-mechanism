@@ -1455,3 +1455,27 @@ the 2-torsion classes of the five rows (congruence conditions from
 P57's pair analysis), extract the character on each, and prove
 triviality on the five rows with the N=2/N=19 rows as nontrivial
 controls.
+
+## Transport blocker (2026-09-29 05:00, P63 addendum)
+
+First construction attempt for the transport matrices BLOCKED, with the
+obstruction now precise:
+
+1. Demanding gamma*tau_ab = tau0 exactly (tau_ab the reduced-form fixed
+   point) is over-constrained: for N=3's nontrivial class (2,0,9) the
+   Mobius+det system reduces to 6t^2 + 12u^2 = 1, no integer solutions.
+   The conjugate point is NOT tau0; it is whatever standard-form
+   representative the transported pair produces.
+
+2. The subgroup transport C' = <1/A mod L'> (from scaling the pair by
+   12/A) FAILS to be an X_0(12)-structure: for (2,0,9), 12*(1/2) = 6 is
+   in L' = <1, tau_ab>, so <1/2> has order 6, not 12.  The pair action
+   on X_0(12)-structures must therefore transport along the dual
+   isogeny direction (or use the level-N quotients directly), not by
+   naive lattice scaling.
+
+Step 4's remaining proof content is thus: derive the correct action of
+Cl(O) on X_0(12)-level structures (cyclic order-12 subgroups) and
+verify the extracted character (P63 tool) is trivial on its 2-torsion
+for the five rows.  The P63 extraction tool is ready; the class-action
+derivation is the open piece.
