@@ -124,3 +124,26 @@ Two design consequences:
 2. Cold start is a first-class term: an agent scored early faces
    near-empty storage and underperforms its plateau by the arrival
    transient.  Memory evaluations must report the arrival profile.
+
+## The unified coverage table (P52-P60, 2026-09-29 night)
+
+All families under ONE protocol (THRESH = mind/2 absolute, online
+streaming, EPI FIFO capacity):
+
+| family | R/mind | NN/mind | STR | EPI-ALL | reading |
+|---|---|---|---|---|---|
+| markov-standard | 0.432 | 0.427 | 64.6 | 68.5 | concentrated: tie, both viable |
+| markov-hard | 1.414 | 1.500 | 0.0 | 0.0 | no coverage anywhere |
+| markov-bimodal | 1.177 | 0.862 | 0.0 | 0.0 | no coverage |
+| envelope | 1.411 | 0.318 | 25.8 | 76.7 | extended+dense: EPI >> STR |
+| visual (P60) | 0.586 | 0.214 | 35.2 | 62.5 | extended: EPI >> STR |
+
+Two ratios order every row. The memory-type "choice" is read off the
+geometry, and the P55 refinement says the EPI column saturates at the
+THRESH-reachable plateau rather than at 100.
+
+Query-side companion (P59): the detection threshold l* exists
+(chance below ~12 tokens, ceiling at ~80 on markov-hard), and
+representation fusion halves it. Symmetric to the training-side
+discovery threshold m* (P40-b): discovery needs enough samples,
+detection needs enough query.

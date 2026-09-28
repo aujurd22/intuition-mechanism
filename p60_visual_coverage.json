@@ -1,0 +1,13 @@
+{
+ "R_over_mind": 0.586,
+ "NN_over_mind": 0.214,
+ "pred_STR": "NOT viable",
+ "pred_EPI": "viable",
+ "acc": {
+  "EPI1": 25.0,
+  "EPI3": 44.3,
+  "EPI10": 65.9,
+  "EPI-ALL": 62.5,
+  "STR": 35.2
+ }
+}
