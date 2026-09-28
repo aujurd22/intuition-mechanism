@@ -1,0 +1,132 @@
+{
+ "threshold": 0.9872427205093698,
+ "totals": {
+  "STR": [
+   283,
+   338
+  ],
+  "EPI-3": [
+   158,
+   338
+  ],
+  "EPI-8": [
+   219,
+   338
+  ],
+  "EPI-ALL": [
+   279,
+   338
+  ],
+  "EPI-CENT": [
+   54,
+   338
+  ]
+ },
+ "var_accept": {
+  "STR": 15,
+  "EPI-3": 0,
+  "EPI-8": 15,
+  "EPI-ALL": 14,
+  "EPI-CENT": 15
+ },
+ "var_n": 15,
+ "recovery": [
+  {
+   "era": 4,
+   "key": "2alt",
+   "absence": 2,
+   "STR": "2alt",
+   "EPI-3": "3no",
+   "EPI-8": "3no",
+   "EPI-ALL": "2alt",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 5,
+   "key": "4alt",
+   "absence": 3,
+   "STR": "4alt",
+   "EPI-3": "4alt",
+   "EPI-8": "4alt",
+   "EPI-ALL": "4alt",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 5,
+   "key": "3no",
+   "absence": 2,
+   "STR": "3no",
+   "EPI-3": "3no",
+   "EPI-8": "3no",
+   "EPI-ALL": "3no",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 6,
+   "key": "5no",
+   "absence": 5,
+   "STR": "5no",
+   "EPI-3": "3no",
+   "EPI-8": "2no",
+   "EPI-ALL": "5no",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 6,
+   "key": "2no",
+   "absence": 5,
+   "STR": "2no",
+   "EPI-3": "3no",
+   "EPI-8": "2no",
+   "EPI-ALL": "2no",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 6,
+   "key": "4no",
+   "absence": 3,
+   "STR": "4no",
+   "EPI-3": "5no",
+   "EPI-8": "5no",
+   "EPI-ALL": "5no",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 8,
+   "key": "3alt",
+   "absence": 4,
+   "STR": "3alt",
+   "EPI-3": "3alt",
+   "EPI-8": "3alt",
+   "EPI-ALL": "3alt",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 8,
+   "key": "5no",
+   "absence": 2,
+   "STR": "5no",
+   "EPI-3": "4no",
+   "EPI-8": "5no",
+   "EPI-ALL": "5no",
+   "EPI-CENT": "2no"
+  },
+  {
+   "era": 8,
+   "key": "2alt",
+   "absence": 4,
+   "STR": "2alt",
+   "EPI-3": "2alt",
+   "EPI-8": "2alt",
+   "EPI-ALL": "2alt",
+   "EPI-CENT": "2no"
+  }
+ ],
+ "footprint": {
+  "STR": {
+   "features": 4,
+   "cells": 9
+  },
+  "EPI-ALL": 338
+ }
+}
