@@ -1,0 +1,286 @@
+{
+ "results": [
+  {
+   "m_per_class": 10,
+   "seed": 0,
+   "code": [
+    "eq10=61713076",
+    "eq2=6",
+    "eq4=70",
+    "eq6=8124"
+   ],
+   "exact_match": false,
+   "cells": 7,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 10,
+   "seed": 1,
+   "code": [
+    "eq10=-6488204",
+    "eq11=-237286057512",
+    "eq3=20",
+    "eq4=70"
+   ],
+   "exact_match": false,
+   "cells": 6,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 10,
+   "seed": 2,
+   "code": [
+    "eq3=20",
+    "eq5=5052",
+    "eq7=28632",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 9,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 10,
+   "seed": 3,
+   "code": [
+    "eq10=-1337324",
+    "eq2=6",
+    "eq4=70",
+    "eq6=8124"
+   ],
+   "exact_match": false,
+   "cells": 7,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 10,
+   "seed": 4,
+   "code": [
+    "eq10=-84656",
+    "eq2=6",
+    "eq3=20",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 7,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 20,
+   "seed": 0,
+   "code": [
+    "eq10=-8138612",
+    "eq2=6",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 8,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 20,
+   "seed": 1,
+   "code": [
+    "eq2=6",
+    "eq4=70",
+    "eq5=-4068",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 8,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 20,
+   "seed": 2,
+   "code": [
+    "eq10=-132719",
+    "eq2=6",
+    "eq3=20",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 7,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 20,
+   "seed": 3,
+   "code": [
+    "eq2=6",
+    "eq4=70",
+    "eq5=892",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 9,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 20,
+   "seed": 4,
+   "code": [
+    "eq2=6",
+    "eq4=70",
+    "eq6=-1956",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 9,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 40,
+   "seed": 0,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq5=-388",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 8,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 40,
+   "seed": 1,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 40,
+   "seed": 2,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 40,
+   "seed": 3,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 40,
+   "seed": 4,
+   "code": [
+    "eq2=6",
+    "eq4=70",
+    "eq5=-68",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 8,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 60,
+   "seed": 0,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 60,
+   "seed": 1,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 60,
+   "seed": 2,
+   "code": [
+    "eq2=6",
+    "eq4=70",
+    "eq5=-388",
+    "flip"
+   ],
+   "exact_match": false,
+   "cells": 9,
+   "transfer_pure": false
+  },
+  {
+   "m_per_class": 60,
+   "seed": 3,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  },
+  {
+   "m_per_class": 60,
+   "seed": 4,
+   "code": [
+    "eq2=6",
+    "eq3=20",
+    "eq4=70",
+    "flip"
+   ],
+   "exact_match": true,
+   "cells": 9,
+   "transfer_pure": true
+  }
+ ],
+ "summary": [
+  {
+   "m_per_class": 10,
+   "exact_match_rate": 0.0,
+   "pure_transfer_rate": 0.0
+  },
+  {
+   "m_per_class": 20,
+   "exact_match_rate": 0.0,
+   "pure_transfer_rate": 0.0
+  },
+  {
+   "m_per_class": 40,
+   "exact_match_rate": 0.6,
+   "pure_transfer_rate": 0.6
+  },
+  {
+   "m_per_class": 60,
+   "exact_match_rate": 0.8,
+   "pure_transfer_rate": 0.8
+  }
+ ]
+}
