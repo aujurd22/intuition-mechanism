@@ -440,6 +440,44 @@ This is the pipeline's memory leg: the discovered code is not just a
 classifier, it is the memory representation whose persistence changes
 future behavior.
 
+## Part IV (2026-09-28): the condition law across four families
+
+The memory-type advantage is FAMILY-CONDITIONED.  Four families
+tested with the same protocol:
+
+  t-combinatorial  : discrete support signature  -> STR >> EPI
+  envelope ladder  : continuous 1-D, noisy       -> centroid fails
+  Markov authors   : overlapping transitions     -> STR ~ EPI
+  oscillators      : frequency signature + FFT   -> STR = EPI
+
+P43 quantifies the discovery threshold: the rank correlation between
+mutual information (does the feature inform?) and MDL gain (does the
+feature compress?) rises from rho = 0.565 at 10 families/class to
+rho = 0.890 at 60 -- the discovery threshold m* is where the two
+criteria converge.  Below m*, the compressor finds features that
+compress but do not inform; above m*, the two criteria agree.
+
+P47 maps the phase boundary on synthetic geometry: both memory arms
+rise monotonically with Delta/sigma (the class-gap-to-noise ratio),
+transitioning between ratio 1 and 2.  On matched geometry, STR
+(normalized centroid) >= EPI-ALL at every ratio -- the memory-type
+choice is secondary to the gap-to-noise ratio.
+
+P17-B resolves the model-strength question: six model families
+(bonsai-27B, doubao, deepseek-v4.1-flash, deepseek-v4-flash,
+minimax-m3, kimi-k2.8-preview) ALL fail the raw-decimal format on
+BOTH legs (A-lit and B-counterfactual at chance) -- the bottleneck
+is FORMAT-BOUND, not model-bound.  The R2 ratio-table scaffold
+doubles deepseek-v4-flash (0.25 -> 0.50), reproducing the P32-i
+extraction lesson: supplying the transform partially unlocks
+discrimination.
+
+THE CONDITION LAW: structural memory beats episodic memory on
+recovery and drift IFF (a) the sufficient statistic is discoverable
+at the available sample size AND (b) it is stable under online
+averaging.  Both conditions are family-dependent, both are
+measurable, and both are now quantified.
+
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
 removes the knowledge.  An exhaustive MDL search over a blind,
