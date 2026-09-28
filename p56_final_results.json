@@ -1,0 +1,16 @@
+{
+ "description": "P56 visual family memory comparison (color histograms, 4 palettes on color circle)",
+ "STR": {
+  "method": "normalized centroid (prototype)",
+  "correct": 124,
+  "total": 174,
+  "acc": 71.3
+ },
+ "EPI": {
+  "method": "3-instance episodic NN",
+  "correct": 164,
+  "total": 174,
+  "acc": 94.3
+ },
+ "condition_law": "consistent with P46-c: continuous overlapping statistics favor instance memory"
+}
