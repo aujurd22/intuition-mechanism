@@ -1,0 +1,41 @@
+{
+ "seed-5420": {
+  "NN_over_mind": 0.29,
+  "novel_min_over_mind": 0.588,
+  "detection_pct": 100.0,
+  "false_new_pct": 0.8,
+  "window_open": true
+ },
+ "seed-5421": {
+  "NN_over_mind": 0.3,
+  "novel_min_over_mind": 0.504,
+  "detection_pct": 100.0,
+  "false_new_pct": 0.0,
+  "window_open": true
+ },
+ "seed-5422": {
+  "NN_over_mind": 0.286,
+  "novel_min_over_mind": 0.693,
+  "detection_pct": 100.0,
+  "false_new_pct": 0.0,
+  "window_open": true
+ },
+ "seed-5423": {
+  "NN_over_mind": 0.299,
+  "novel_min_over_mind": 0.748,
+  "detection_pct": 100.0,
+  "false_new_pct": 0.8,
+  "window_open": true
+ },
+ "seed-5424": {
+  "NN_over_mind": 0.284,
+  "novel_min_over_mind": 0.587,
+  "detection_pct": 100.0,
+  "false_new_pct": 1.5,
+  "window_open": true
+ },
+ "summary": {
+  "window_open_seeds": 5,
+  "n_seeds": 5
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "ngram-2": {
+  "window_open_seeds": 5,
+  "n_seeds": 5,
+  "ratio_mean": 1.563,
+  "ratio_std": 0.107,
+  "novel_min_over_mind": [
+   0.719,
+   0.853,
+   0.662,
+   0.595,
+   0.695
+  ],
+  "NN_over_mind": [
+   0.46,
+   0.488,
+   0.438,
+   0.42,
+   0.441
+  ]
+ },
+ "ngram-3": {
+  "window_open_seeds": 0,
+  "n_seeds": 5,
+  "ratio_mean": 1.319,
+  "ratio_std": 0.058,
+  "novel_min_over_mind": [
+   0.936,
+   0.95,
+   0.896,
+   0.805,
+   0.891
+  ],
+  "NN_over_mind": [
+   0.679,
+   0.717,
+   0.657,
+   0.663,
+   0.678
+  ]
+ }
+}

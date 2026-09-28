@@ -1,0 +1,35 @@
+{
+ "ngram-2": {
+  "order_dim": 36,
+  "mind": 0.2720594852298721,
+  "NN_over_mind": 0.479,
+  "novel_min_over_mind": 0.705,
+  "novel_median_over_mind": 0.933,
+  "ratio_clearance_over_NN": 1.471,
+  "detection_pct": 100.0,
+  "false_new_pct": 36.9,
+  "window_open": true
+ },
+ "ngram-3": {
+  "order_dim": 216,
+  "mind": 0.2482657607595696,
+  "NN_over_mind": 0.662,
+  "novel_min_over_mind": 0.874,
+  "novel_median_over_mind": 1.076,
+  "ratio_clearance_over_NN": 1.32,
+  "detection_pct": 100.0,
+  "false_new_pct": 100.0,
+  "window_open": false
+ },
+ "ngram-4": {
+  "order_dim": 1296,
+  "mind": 0.1714270254741088,
+  "NN_over_mind": 1.072,
+  "novel_min_over_mind": 1.281,
+  "novel_median_over_mind": 1.319,
+  "ratio_clearance_over_NN": 1.195,
+  "detection_pct": 100.0,
+  "false_new_pct": 100.0,
+  "window_open": false
+ }
+}

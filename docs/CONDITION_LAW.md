@@ -193,10 +193,14 @@ pathology:
 Realized window (envelope family, EPI-ALL arm): NN/mind 0.318 < 0.5 <
 novel-clearance median 2.723 -- detection 95.0% at 6.7% false alarms.
 
-Corollary (registered as the next experiment): whether the window is
-reachable is a property of the REPRESENTATION. On the Markov family
-the held-out author's bigram profile clears LESS space (0.37 x mind)
-than known samples keep from their own storage (0.43 x mind) -- in
-bigram space a "new style" is not new. Refining the statistic
-(higher-order n-grams) is the candidate lever: P54 asks whether
-representation refinement moves the family into the window.
+Corollary (P54, verified): whether the window is reachable is a
+property of the REPRESENTATION, and the lever is CONTRAST, not
+resolution. Resolution refinement (higher-order n-grams) FAILED:
+sparsity inflates every pairwise distance, the clearance/coverage
+ratio falls (1.56 -> 1.32 -> 1.20), and the window closes at trigram
+(0/5 seeds, false-NEW 100%). Contrast-matched features SUCCEED: signed
+transition asymmetry packs the forward-cycle known authors to
+NN/mind 0.28-0.30 while the reverse-cycle novel author clears
+0.50-0.75 x mind -- 100% detection at 0-1.5% false alarms, 5/5 seeds.
+Design rule: encode the hypothesized novelty structure in the
+statistic; do not just raise its resolution.
