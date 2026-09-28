@@ -1412,3 +1412,28 @@ reciprocity + Ligozart's eta-product criterion)
 - CCL Thm 2.1 does NOT apply: its levels are {1..9}; matching the pure
   t(n) to its integer three-term recursion forces 5a^2 + 117a + 264 = 0
   (no integer root).
+
+## Orbit check (2026-09-29, P57): the naive pointwise route is dead
+
+Checked numerically (40-50 dps, p57/p58): x12 AND lambda take different
+values at the naive orbit points tau_ab/12 for ALL of N=2,3,5,7,13,17
+-- including the five degenerate rows.  Two consequences:
+
+1. The earlier note "all orbit values real (max |Im| = 0)" was a B=0
+   artifact: every reduced form of disc -24N for those N has B=0, so
+   the points are purely imaginary and realness is trivial.  At N=19
+   (disc -456) the B!=0 classes (5,+-2,23) and (10,+-8,13) give
+   complex lambda values -- the naive points are NOT Shimura
+   conjugate points.
+2. The conjugate points are the image of the class action on the PAIR
+   (lattice L0 = O/12, order-12 subgroup C0 = <1/12 + L0>): the
+   transport matrix's bottom row must be level-compatible, and the
+   eta-multiplier character enters exactly there.  Record correction:
+   lambda(N=2) is cubic (poly [-178,1820,-5847,5640]), not quadratic.
+
+Step 4 therefore remains open in its real form: prove the eta-multiplier
+character trivial on the 2-torsion classes OF THE TRANSPORTED ACTION
+(the character times the transported pair evaluates back to the
+principal value), which for the five rows is what forces lambda's
+orbit to collapse to the rational value even though x12's orbit does
+not collapse at the naive points.

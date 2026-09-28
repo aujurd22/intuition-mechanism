@@ -1,0 +1,40 @@
+{
+ "2": {
+  "h": 2,
+  "max_delta": "0.235644",
+  "lam0": "0.236700683814454793453514395122",
+  "invariant": false
+ },
+ "3": {
+  "h": 2,
+  "max_delta": "0.937344",
+  "lam0": "0.25",
+  "invariant": false
+ },
+ "5": {
+  "h": 4,
+  "max_delta": "1.79388",
+  "lam0": "0.25",
+  "invariant": false
+ },
+ "7": {
+  "h": 4,
+  "max_delta": "1.80577",
+  "lam0": "0.238095238095238095238095238095",
+  "invariant": false
+ },
+ "13": {
+  "h": 4,
+  "max_delta": "1.38978",
+  "lam0": "0.2",
+  "invariant": false
+ },
+ "17": {
+  "h": 4,
+  "max_delta": "0.74005",
+  "lam0": "0.180672268907563025210084033613",
+  "invariant": false
+ },
+ "R1p": false,
+ "R2p": true
+}
