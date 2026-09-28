@@ -1,0 +1,34 @@
+{
+ "markov-standard": {
+  "spread_ratio": 0.432,
+  "STR": 64.6,
+  "EPI1": 15.4,
+  "EPI3": 38.5,
+  "EPI10": 63.1,
+  "EPI-ALL": 68.5
+ },
+ "markov-hard": {
+  "spread_ratio": 1.414,
+  "STR": 0.0,
+  "EPI1": 0.0,
+  "EPI3": 0.0,
+  "EPI10": 0.0,
+  "EPI-ALL": 0.0
+ },
+ "markov-bimodal": {
+  "spread_ratio": 1.177,
+  "STR": 0.0,
+  "EPI1": 0.0,
+  "EPI3": 0.0,
+  "EPI10": 0.0,
+  "EPI-ALL": 0.0
+ },
+ "envelope-staircase": {
+  "spread_ratio": 1.411,
+  "STR": 25.8,
+  "EPI1": 28.3,
+  "EPI3": 55.0,
+  "EPI10": 73.3,
+  "EPI-ALL": 76.7
+ }
+}

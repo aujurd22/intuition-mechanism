@@ -1,0 +1,26 @@
+{
+ "markov-standard": {
+  "R_over_mind": 0.432,
+  "NN_over_mind": 0.427,
+  "thresh_over_mind": 0.5,
+  "EPI_ALL_viable_pred": "yes"
+ },
+ "markov-hard": {
+  "R_over_mind": 1.414,
+  "NN_over_mind": 1.5,
+  "thresh_over_mind": 0.5,
+  "EPI_ALL_viable_pred": "NO"
+ },
+ "markov-bimodal": {
+  "R_over_mind": 1.177,
+  "NN_over_mind": 0.862,
+  "thresh_over_mind": 0.5,
+  "EPI_ALL_viable_pred": "NO"
+ },
+ "envelope-staircase": {
+  "R_over_mind": 1.411,
+  "NN_over_mind": 0.318,
+  "thresh_over_mind": 0.5,
+  "EPI_ALL_viable_pred": "yes"
+ }
+}
