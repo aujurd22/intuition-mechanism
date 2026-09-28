@@ -1,0 +1,36 @@
+{
+ "markov-standard-EPI-ALL": {
+  "arm": "EPI-ALL",
+  "mind": 0.2973112274335911,
+  "thresh": 0.14865561371679556,
+  "novel_min_dist_over_mind": 0.366,
+  "novel_median_dist_over_mind": 0.423,
+  "detection_rate": 8.3,
+  "false_new_rate": 16.0
+ },
+ "markov-standard-STR": {
+  "arm": "STR",
+  "mind": 0.2973112274335911,
+  "novel_min_dist_over_mind": 0.318,
+  "novel_median_dist_over_mind": 0.431,
+  "detection_rate": 25.0,
+  "false_new_rate": 33.3
+ },
+ "markov-hard-EPI-ALL": {
+  "arm": "EPI-ALL",
+  "mind": 0.19989666752087287,
+  "thresh": 0.09994833376043644,
+  "novel_min_dist_over_mind": 0.86,
+  "novel_median_dist_over_mind": 1.067,
+  "detection_rate": 100.0,
+  "false_new_rate": 100.0
+ },
+ "markov-hard-STR": {
+  "arm": "STR",
+  "mind": 0.19989666752087287,
+  "novel_min_dist_over_mind": 0.589,
+  "novel_median_dist_over_mind": 0.789,
+  "detection_rate": 100.0,
+  "false_new_rate": 100.0
+ }
+}

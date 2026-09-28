@@ -1,0 +1,16 @@
+{
+ "STR": {
+  "arm": "STR",
+  "novel_min_over_mind": 0.98,
+  "novel_median_over_mind": 5.189,
+  "detection_pct": 100.0,
+  "false_new_pct": 80.0
+ },
+ "EPI-ALL": {
+  "arm": "EPI-ALL",
+  "novel_min_over_mind": 0.268,
+  "novel_median_over_mind": 2.723,
+  "detection_pct": 95.0,
+  "false_new_pct": 6.7
+ }
+}

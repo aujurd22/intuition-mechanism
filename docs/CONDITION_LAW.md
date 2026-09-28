@@ -164,3 +164,39 @@ These conditions are:
 The insight mechanism is thus: **find the sufficient statistic, verify
 it's outside the known hull, and decide**.  The bottleneck is step 1
 (extraction), not step 3 (decision).
+
+## C2 made quantitative: novelty is coverage (P53, 2026-09-29)
+
+The P50 statement "C2 = the new class must sit outside the known hull"
+is now a computable inequality in the sufficient-statistic geometry.
+
+Definitions (shared absolute threshold THRESH = mind/2):
+
+- known-coverage holds for arm A iff known samples fall within THRESH
+  of A's stored representation -- for EPI this is NN/mind < 0.5, for
+  STR it is R/mind < 0.5;
+- novel-clearance iff every (or most) novel-class samples sit beyond
+  THRESH from ALL stored items.
+
+LAW: novelty detection is meaningful iff known-coverage holds AND
+novel-clearance holds. Each failure mode is a distinct, predictable
+pathology:
+
+- clearance fails (novel inside the known cloud): the new class is
+  INVISIBLE to every arm -- detection 8-25% with healthy false-alarm
+  rates. No memory design fixes this; only changing the sufficient
+  statistic can.
+- coverage fails (nothing is within THRESH): "detection" is vacuous --
+  100% detection at 100% false alarms. This is the mechanism behind
+  the earlier "novelty detection unreliable" verdicts (P48-b).
+
+Realized window (envelope family, EPI-ALL arm): NN/mind 0.318 < 0.5 <
+novel-clearance median 2.723 -- detection 95.0% at 6.7% false alarms.
+
+Corollary (registered as the next experiment): whether the window is
+reachable is a property of the REPRESENTATION. On the Markov family
+the held-out author's bigram profile clears LESS space (0.37 x mind)
+than known samples keep from their own storage (0.43 x mind) -- in
+bigram space a "new style" is not new. Refining the statistic
+(higher-order n-grams) is the candidate lever: P54 asks whether
+representation refinement moves the family into the window.
