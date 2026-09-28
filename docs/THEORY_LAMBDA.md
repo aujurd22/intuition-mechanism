@@ -1437,3 +1437,21 @@ character trivial on the 2-torsion classes OF THE TRANSPORTED ACTION
 principal value), which for the five rows is what forces lambda's
 orbit to collapse to the rational value even though x12's orbit does
 not collapse at the naive points.
+
+## Multiplier tool (2026-09-29, P63)
+
+The exact eta-multiplier nu(gamma) is now available as a validated
+numerical EXTRaction: nu(gamma) is a 24th root of unity (nu^24 = 1 to
+1e-49 on all tested matrices); extract k(gamma) = round(24 arg(nu)/2pi)
+at one CM-quality tau and cross-check at a second (30/30 agreement,
+p63_eta_multiplier.json).  The Dedekind-sum closed form was NOT
+reconstructed (branch conventions for -M in SL_2 vs PSL_2 kept
+corrupting both the S/T word bookkeeping and the closed-form candidates'
+signs); for the finite character tables step 4 needs, extraction is
+exact and sufficient.
+
+Remaining for step 4: build the level-compatible transport matrices for
+the 2-torsion classes of the five rows (congruence conditions from
+P57's pair analysis), extract the character on each, and prove
+triviality on the five rows with the N=2/N=19 rows as nontrivial
+controls.
