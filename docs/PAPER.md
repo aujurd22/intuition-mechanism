@@ -424,6 +424,22 @@ at 40/40, but a fully blind end-to-end experiment (discovery on one
 split -> freeze -> novelty on unseen families) is the separate P40,
 not yet run.
 
+## Part III (2026-09-28): structural memory changes future behavior
+
+P46 closes the L8->L9 link at minimal scale: in an open-world stream
+(338 samples, 8 eras, classes that vanish, return, and drift), a
+structural-memory arm (P42-stabilized code, constant footprint)
+outperforms an episodic arm (3 prototypes per class) at 76.6% vs
+59.5% -- with the differences exactly where the theory says: on
+RETURNING classes absent 2-5 eras, structural memory recognizes the
+first sample 9/9 while episodic memory confuses 7/9 with the
+intervening classes (interference); on DRIFTED instances of old
+classes, structural memory accepts 15/15 (cell abstraction absorbs
+parameter drift) while episodic accepts 4/15 (instance brittleness).
+This is the pipeline's memory leg: the discovered code is not just a
+classifier, it is the memory representation whose persistence changes
+future behavior.
+
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
 removes the knowledge.  An exhaustive MDL search over a blind,
