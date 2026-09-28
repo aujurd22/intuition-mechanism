@@ -207,6 +207,52 @@ REGISTERED READING, now BIDIRECTIONALLY VERIFIED (2026-09-28
   eta2 eta4 eta6 eta12 makes cancel.  The remaining proof work is
   exactly this character computation on 4+1 cases.
 
+## The theorem candidate: genus theory explains the degeneration locus
+## (2026-09-28 18:00)
+
+The η-multiplier proof reduces to a GENUS THEORY statement:
+
+**Theorem candidate.** For the t-family at level 12, the class-group
+conjugates of x12(tau0) are ALL REAL if and only if the class group of
+the order of discriminant -24N is entirely 2-torsion.  In that case,
+lambda (a rational function of x12 and its log-derivative) is also
+real, and for h(D_K) = 4 it is rational.
+
+**Proof sketch.**
+1. The class group Cl(O_f) acts on the CM point tau0 by Shimura
+   reciprocity.  For each class, x12(tau^a) is algebraic in the ring
+   class field.
+2. Complex conjugation acts as the inverse class.  If Cl(O_f) is
+   entirely 2-torsion, then [a] = [-a] for every class, so the
+   conjugate points are all fixed by complex conjugation conjugated
+   by the class action → x12 values are real.
+3. lambda is a rational expression in x12 and x12'/x12 (weight-0
+   modular function from the P25-b formula).  Since both x12 and the
+   log-derivative are modular for Gamma_0(12), lambda is a level-12
+   modular function.  The Shimura reciprocity law says its CM values
+   lie in the ring class field.
+4. When Cl(O_f) = (Z/2)^k, every element is its own inverse, so the
+   Shimura action is trivial on the values → lambda is in the REAL
+   subfield of the ring class field.
+5. For h = 4 and class group (Z/2)^2, the ring class field is a
+   biquadratic extension of Q with three quadratic subfields -- all
+   real when the discriminant is negative.  Lambda lies in one of
+   these subfields.
+6. For h(D_K) > 4 or h(D_K) = 8 (containing Z/4), some orbit values
+   are genuinely complex → lambda can be complex or of higher degree.
+
+**Reduction to genus theory.**  h(D_K) = 4 with class group (Z/2)^2
+happens iff the discriminant has exactly 3 prime discriminant factors
+(genus theory: 2-rank = t-1 = 2).  The five rows {3,5,7,13,17} have
+D_K with t = 2 (N=3, D_K=-8, class group Z/2) or t = 3 (N=5,7,13,17).
+The f > 1 cases are controlled by the conductor degeneration.
+
+**What remains for a complete proof:** step 4 (the Shimura action is
+trivial on the eta-product values for 2-torsion classes) requires
+computing the eta-multiplier character, which is a finite check on
+4+1 cases.  The numerical evidence (all orbit values real for the
+five rows, max |Im| = 0.00e+00) is consistent.
+
 ## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
 
 - census N = 2..160: degree 1 = {3,5,7,13,17}; degree 2 = {2,11,19,23,
