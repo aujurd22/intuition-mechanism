@@ -125,3 +125,18 @@ Commit chain (session 2): 4fec85d (P52) -> 369f041 (P53) -> 9790766
 (P54) -> d8cdb5b (P55) -> e26b8c6 (P57) -> 6727e4c (P59) -> f843a65
 (P60) -> d36d6b9 (P61) -> 90c730e (P62) -> a6ccb0b (P63) -> 5443eee
 (transport blocker) -> 7d7e324 (P64).
+
+## Session 2 close (06:25)
+
+Interventional capstone: P65/P65-b. STR viability boundary crosses 50%
+at R/mind = 0.500 exactly (simplex geometry, sigma swept). The
+prototype/exemplar divergence is UNREACHABLE in single-scale families
+(NN/mind locked to R/mind); constructed two-scale classes decouple the
+ratios and restore it (+9 pts, consistent). Final form of the memory
+law written into MEMORY_LAW.md: boundary (0.5), two-scale condition,
+capacity-vs-plateau, novelty clearance, query floor l_min.
+
+Session 2 totals: 14 registry entries landed (P52-P65 + P65-b),
+6 confirmed, 5 falsified-with-mechanism, 2 clean negatives (P57 orbit,
+P61 single-law), 1 production audit, 1 theory sharpening (P57/P63:
+step 4 has its tool; the class-action derivation is the open piece).
