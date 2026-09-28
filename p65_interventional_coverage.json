@@ -1,0 +1,33 @@
+{
+ "mind": 10.0,
+ "0.3": {
+  "NN_over_mind": 0.303,
+  "STR": 99.0,
+  "EPI_ALL": 99.0
+ },
+ "0.4": {
+  "NN_over_mind": 0.402,
+  "STR": 92.3,
+  "EPI_ALL": 94.3
+ },
+ "0.5": {
+  "NN_over_mind": 0.501,
+  "STR": 47.9,
+  "EPI_ALL": 52.8
+ },
+ "0.6": {
+  "NN_over_mind": 0.599,
+  "STR": 14.0,
+  "EPI_ALL": 12.4
+ },
+ "0.8": {
+  "NN_over_mind": 0.793,
+  "STR": 0.6,
+  "EPI_ALL": 0.3
+ },
+ "1.2": {
+  "NN_over_mind": 1.16,
+  "STR": 0.0,
+  "EPI_ALL": 0.0
+ }
+}

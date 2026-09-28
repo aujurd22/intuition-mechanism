@@ -1,0 +1,24 @@
+{
+ "D": 5,
+ "mind": 10.0,
+ "cells": {
+  "sw3.0_f30": {
+   "R_over_mind": 0.285,
+   "NN_over_mind": 0.173,
+   "STR": 76.4,
+   "EPI_ALL": 86.1
+  },
+  "sw3.5_f35": {
+   "R_over_mind": 0.358,
+   "NN_over_mind": 0.217,
+   "STR": 68.3,
+   "EPI_ALL": 77.9
+  },
+  "sw4.0_f40": {
+   "R_over_mind": 0.447,
+   "NN_over_mind": 0.264,
+   "STR": 62.1,
+   "EPI_ALL": 70.9
+  }
+ }
+}

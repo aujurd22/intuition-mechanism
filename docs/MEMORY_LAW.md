@@ -147,3 +147,29 @@ Query-side companion (P59): the detection threshold l* exists
 representation fusion halves it. Symmetric to the training-side
 discovery threshold m* (P40-b): discovery needs enough samples,
 detection needs enough query.
+
+## Interventional confirmation (P65/P65-b, 2026-09-29)
+
+Regular-simplex families with sigma swept directly:
+
+| R/mind | STR | EPI-ALL |
+|---|---|---|
+| 0.30 | 99.0 | 99.0 |
+| 0.40 | 92.3 | 94.3 |
+| 0.50 | 47.9 | 52.8 |
+| 0.60 | 14.0 | 12.4 |
+| 0.80 | 0.6 | 0.3 |
+
+The prototype viability boundary crosses 50% at R/mind = 0.500
+exactly.  But single-scale Gaussians LOCK NN/mind ~ R/mind (both co-
+vary with sigma), so the arms never diverge: the divergence is not
+reachable in single-scale families.  Constructing two-scale classes
+(dense core + extended fringe, D=5) decouples the ratios and restores
+the divergence (+9 points EPI-ALL over STR, consistent across cells).
+
+FINAL FORM of the memory law: (1) prototype viability boundary at
+R/mind = 0.5 (interventionally confirmed); (2) the prototype/exemplar
+divergence exists only under two-scale class structure; (3) capacity
+trades against fringe coverage up to the reachable plateau (P55);
+(4) novelty adds the clearance condition (P53); (5) the query side has
+its own floor l_min ~ #free-statistic-entries (P64).
