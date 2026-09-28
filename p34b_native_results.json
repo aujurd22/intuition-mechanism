@@ -1,0 +1,34 @@
+{
+ "per_window": {
+  "w4": {
+   "correct": 6,
+   "n": 25
+  },
+  "w5": {
+   "correct": 1,
+   "n": 25
+  },
+  "w6": {
+   "correct": 1,
+   "n": 25
+  },
+  "w7": {
+   "correct": 1,
+   "n": 25
+  },
+  "w10": {
+   "correct": 2,
+   "n": 25
+  },
+  "w12": {
+   "correct": 6,
+   "n": 25
+  },
+  "w16": {
+   "correct": 5,
+   "n": 25
+  }
+ },
+ "total_correct": 22,
+ "total_n": 175
+}
