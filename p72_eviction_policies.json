@@ -1,0 +1,18 @@
+{
+ "core": {
+  "probe": 60.0,
+  "era1": 0.0
+ },
+ "LRU": {
+  "probe": 60.0,
+  "era1": 0.0
+ },
+ "random": {
+  "probe": 43.3,
+  "era1": 5.0
+ },
+ "fringe": {
+  "probe": 60.0,
+  "era1": 0.0
+ }
+}
