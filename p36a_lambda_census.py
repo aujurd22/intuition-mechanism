@@ -103,11 +103,11 @@ def main():
             deg, poly = 1, [rat[1], rat[0]]        # q x + p
             height = max(abs(rat[0]), rat[1])
         else:
-            poly = poly_rel_or_none(lam, 2, 10 ** 4)
+            poly = poly_rel_or_none(lam, 2, 10 ** 6)
             if poly:
                 deg, height = 2, max(abs(c) for c in poly)
             else:
-                poly = poly_rel_or_none(lam, 3, 10 ** 3)
+                poly = poly_rel_or_none(lam, 3, 10 ** 6)
                 if poly:
                     deg, height = 3, max(abs(c) for c in poly)
                 else:
