@@ -1,0 +1,32 @@
+{
+ "envelope-k3": {
+  "coverage_event_pct": 50.0,
+  "label_ok_pct": 46.7,
+  "accuracy_pct": 46.7
+ },
+ "envelope-k12": {
+  "coverage_event_pct": 75.8,
+  "label_ok_pct": 68.3,
+  "accuracy_pct": 68.3
+ },
+ "envelope-k40": {
+  "coverage_event_pct": 80.8,
+  "label_ok_pct": 72.5,
+  "accuracy_pct": 72.5
+ },
+ "markov-standard-k3": {
+  "coverage_event_pct": 44.6,
+  "label_ok_pct": 44.6,
+  "accuracy_pct": 44.6
+ },
+ "markov-standard-k12": {
+  "coverage_event_pct": 63.8,
+  "label_ok_pct": 63.8,
+  "accuracy_pct": 63.8
+ },
+ "markov-standard-k40": {
+  "coverage_event_pct": 67.7,
+  "label_ok_pct": 67.7,
+  "accuracy_pct": 67.7
+ }
+}

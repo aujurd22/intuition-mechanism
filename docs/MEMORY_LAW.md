@@ -93,3 +93,34 @@ strategy. "Store the mean" and "store instances" are two ends of one
 coverage dial; the agent-relevant question is not WHICH memory type
 but whether the stored representation's coverage ball(s) match the
 class support against the decision radius.
+
+## The coverage curve, quantitatively (P55, 2026-09-29)
+
+Instrumented decomposition of the EPI(k) arm:
+
+  accuracy = P(coverage event) - P(cross-class theft)
+
+Exact where f_cross = 0 (markov: 67.7 = 67.7 at k=40); envelope's
+8.3-point gap at k=40 is theft, matching its f_cross = 0.0075.
+
+The registered iid model a(k) = 1-(1-f)^k is FALSIFIED in shape: it
+predicts ~100% coverage at large k, measurement saturates at 67.7% /
+80.8%.  Reason: f is a population average over heterogeneous query
+positions.  Coverage is a MIXTURE -- queries in the class core are
+covered almost surely at any k; queries in the fringe are covered
+never -- so the curve rises to a plateau equal to the THRESH-reachable
+fraction of the class support (computable pre-run from full-storage
+geometry), with the pre-plateau transient set by the online arrival
+profile.  The k_eff = 6 reading of 40 stored samples conflates
+heterogeneity with correlation; do not use it.
+
+Two design consequences:
+
+1. Storage beyond the fringe-reachability of the class buys NOTHING
+   (accuracy plateaus): the marginal instance only helps queries whose
+   neighborhood is still empty -- spending samples on class cores is
+   waste.  (Connects to P40-b's discovery threshold: below m* the
+   fringe is most of the class.)
+2. Cold start is a first-class term: an agent scored early faces
+   near-empty storage and underperforms its plateau by the arrival
+   transient.  Memory evaluations must report the arrival profile.

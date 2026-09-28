@@ -1,0 +1,80 @@
+{
+ "envelope": {
+  "f_own": 0.2201,
+  "f_cross": 0.00755,
+  "A": 1.105,
+  "curve": {
+   "1": {
+    "measured": 23.3,
+    "online_model": 23.3
+   },
+   "2": {
+    "measured": 35.0,
+    "online_model": 40.6
+   },
+   "3": {
+    "measured": 46.7,
+    "online_model": 53.3
+   },
+   "5": {
+    "measured": 59.2,
+    "online_model": 69.4
+   },
+   "8": {
+    "measured": 64.2,
+    "online_model": 80.3
+   },
+   "12": {
+    "measured": 68.3,
+    "online_model": 84.3
+   },
+   "20": {
+    "measured": 71.7,
+    "online_model": 83.8
+   },
+   "40": {
+    "measured": 72.5,
+    "online_model": 82.4
+   }
+  }
+ },
+ "markov-standard": {
+  "f_own": 0.1893,
+  "f_cross": 0.0,
+  "A": 0.972,
+  "curve": {
+   "1": {
+    "measured": 17.7,
+    "online_model": 17.7
+   },
+   "2": {
+    "measured": 31.5,
+    "online_model": 31.5
+   },
+   "3": {
+    "measured": 44.6,
+    "online_model": 42.2
+   },
+   "5": {
+    "measured": 52.3,
+    "online_model": 56.9
+   },
+   "8": {
+    "measured": 60.0,
+    "online_model": 68.6
+   },
+   "12": {
+    "measured": 63.8,
+    "online_model": 74.8
+   },
+   "20": {
+    "measured": 67.7,
+    "online_model": 77.4
+   },
+   "40": {
+    "measured": 67.7,
+    "online_model": 77.6
+   }
+  }
+ }
+}
