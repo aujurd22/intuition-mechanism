@@ -478,6 +478,18 @@ at the available sample size AND (b) it is stable under online
 averaging.  Both conditions are family-dependent, both are
 measurable, and both are now quantified.
 
+## Part V: cross-family synthesis -- the prototype-exemplar law
+
+Across four families (combinatorial, continuous, Markov, oscillator),
+the memory-type advantage direction follows one rule: structural
+memory (prototype/cell abstraction) wins when the sufficient
+statistic produces a compact discrete partition; instance memory
+(exemplar/NN) wins or ties when the statistic is continuous or
+overlapping.  This is the prototype-exemplar dissociation from
+cognitive psychology (Medin & Schaffer 1978), replicated with a
+mechanistic pipeline where the "prototype" and "exemplar" are not
+hand-designed but discovered by the system itself (P42 stabilization).
+
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
 removes the knowledge.  An exhaustive MDL search over a blind,
