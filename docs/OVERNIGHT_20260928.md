@@ -53,3 +53,50 @@ flymemory repo research/RESEARCH.md (baaf1a3, aced3b2).
 3. P33 with n >= 20 (interestingness correspondence at scale), now
    with the mechanical lambda-degree rank as the value axis.
 4. PAPER.md -> LaTeX.
+
+# Session 2 (2026-09-29 00:20 - 03:30): the coverage arc
+
+Thread: the memory-type question rebuilt from geometry. Nine registry
+entries landed (P52-P60), six verified, three falsified productively,
+one open theory gap sharpened (P57).
+
+## Results in order
+
+- P52 coverage law: two geometry ratios (R/mind, NN/mind) explain every
+  cell of the 4-family x capacity-ladder grid; prototype's only edge is
+  denoising; capacity substitutes for structure, never the reverse.
+- P53 novelty = coverage + clearance: C2 made quantitative; window
+  realized (envelope/EPI-ALL 95% det @ 6.7% FA); markov novel author
+  invisible in bigram space = representation property, not arm property.
+- P54 contrast, not resolution: refinement falsified (ratio falls,
+  window closes); contrast-matched asymmetry features open it wide
+  (5/5 seeds, 100% @ ~0% FA).
+- P55 exact decomposition: accuracy = coverage-event - theft (exact
+  where f_cross=0); iid model falsified; plateau = THRESH-reachable
+  fraction; cold start is first-class.
+- P57 NEGATIVE (theory): naive orbit points are NOT Shimura conjugate
+  points; "all orbit values real" was a B=0 artifact; lambda(N=2) is
+  cubic not quadratic; step 4 of the genus-theorem stays open with the
+  ray-class transport as its precise content.
+- P59 query-side detection threshold l* exists (chance at 12 tokens,
+  ceiling at 80); fused space halves l*; AND fails, pooling wins.
+  Two detector bugs caught and corrected (LOO violation, tuple
+  broadcast) -- both had produced fake 100% detections.
+- P60 visual family joins the unified table: four families ordered by
+  two ratios.
+
+## Discipline notes
+
+Both false-100% detections in P59 were caught by prediction-vs-result
+sanity checks, not by eyeballing plausibility -- the register-first
+rule paid for itself twice tonight.
+
+## Queued next
+
+1. Ligozat eta-multiplier character implemented exactly (Dedekind-sum
+   route) + the level-compatible transport matrices; then step 4 of the
+   genus-theorem is either proven or precisely blocked.
+2. l* / m* symmetry: is there one law (sample-complexity of novelty)
+   with the two thresholds as its training/query projections?
+3. Coverage law on the real FlyMemory store (the service IS the
+   extended-support regime: heterogeneous entries, dense cores).
