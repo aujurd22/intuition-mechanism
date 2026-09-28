@@ -22,6 +22,7 @@ layer now has its own measured verdict:
 | Structure recognition (LLM subjects) | can an LLM see "same generator, new instance"? | **YES** | P32-f native 762/1000 (76.2%, p<1e-300; honestly scored PARTIAL vs its own pre-registered 90% bar); P32-h existing arm 16/20 (80%, p~4e-7) |
 | Novelty detection | can it see "this is NOT any of the known structures"? | **NO for the blind judge** | P32-h new arm 4/20 (20%, at the 25% guess line); judge declares NEW only 7/40 times; native structural subject 38/40 (information IS present) |
 | Interestingness | given something new, is it worth pursuing? | **FIRST MEASURE (P36)** | lambda algebraic degree over N=2..160 EXACTLY reproduces the human publication boundary (degree-1 rows = the five published rows); blind judges detect deep/plain 15/15 x3 runs across two model families |
+| Memory geometry (NEW, 2026-09-29) | which memory should an agent keep, and when is novelty detectable at all? | **TWO GEOMETRY RATIOS (P52-P60)** | R/mind governs prototype viability, NN/mind governs exemplar viability; four families ordered by the pair; accuracy = coverage-event - theft; novelty = coverage AND clearance; contrast (not resolution) opens the novelty window; query-side floor l_min ~ #free-statistic-entries (P64) |
 
 ## The P34-d result (the current hinge)
 

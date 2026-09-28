@@ -100,3 +100,28 @@ rule paid for itself twice tonight.
    with the two thresholds as its training/query projections?
 3. Coverage law on the real FlyMemory store (the service IS the
    extended-support regime: heterogeneous entries, dense cores).
+
+## Session 2 addendum (04:40-05:25)
+
+- P61: the (m, seqn) plane is three-region, not one law -- an absolute
+  query-resolution floor (~16 tokens), a training-side gate saturating
+  at the discovery threshold m* ~ 20, and a ceiling. More data cannot
+  buy back a too-short query.
+- P62: production FlyMemory audit (read-only): 7325 active memories in
+  a narrow anisotropic band (NN-cos 0.44-0.93), zero isolates, zero
+  near-duplicates; dark tail 99.86%/query; raw cosine is content-blind
+  for novelty in this band.
+- P63: exact eta-multiplier extraction validated (24th-root rounding,
+  two-tau cross-check, 30/30). Closed-form reconstruction abandoned
+  (branch bookkeeping), honestly. Transport-matrix first construction
+  BLOCKED with the obstruction precise (no gamma to tau0; subgroup
+  scaling fails the order-12 test) -- the class action on X_0(12)-
+  structures is step 4's real content.
+- P64: l_min scales with statistic dimension (~1 token per free entry:
+  K=6 -> 40 tokens, K=10 -> 80). Novelty screening budget = the
+  representation's own stabilization cost.
+
+Commit chain (session 2): 4fec85d (P52) -> 369f041 (P53) -> 9790766
+(P54) -> d8cdb5b (P55) -> e26b8c6 (P57) -> 6727e4c (P59) -> f843a65
+(P60) -> d36d6b9 (P61) -> 90c730e (P62) -> a6ccb0b (P63) -> 5443eee
+(transport blocker) -> 7d7e324 (P64).
