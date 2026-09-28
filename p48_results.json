@@ -1,0 +1,98 @@
+{
+ "results": {
+  "STR": [
+   227,
+   259
+  ],
+  "EPI": [
+   216,
+   259
+  ]
+ },
+ "novel_det": {
+  "STR": 2,
+  "EPI": 1
+ },
+ "recovery": [
+  {
+   "era": 3,
+   "author": "A",
+   "absence": 2,
+   "STR": "A",
+   "EPI": "A",
+   "truth": "A"
+  },
+  {
+   "era": 4,
+   "author": "C",
+   "absence": 2,
+   "STR": "C",
+   "EPI": "C",
+   "truth": "C"
+  },
+  {
+   "era": 4,
+   "author": "B",
+   "absence": 2,
+   "STR": "B",
+   "EPI": "B",
+   "truth": "B"
+  },
+  {
+   "era": 5,
+   "author": "D",
+   "absence": 2,
+   "STR": "D",
+   "EPI": "D",
+   "truth": "D"
+  },
+  {
+   "era": 5,
+   "author": "E",
+   "absence": 4,
+   "STR": "E",
+   "EPI": "E",
+   "truth": "E"
+  },
+  {
+   "era": 6,
+   "author": "A",
+   "absence": 3,
+   "STR": "A",
+   "EPI": "A",
+   "truth": "A"
+  },
+  {
+   "era": 6,
+   "author": "C",
+   "absence": 2,
+   "STR": "C",
+   "EPI": "C",
+   "truth": "C"
+  },
+  {
+   "era": 7,
+   "author": "B",
+   "absence": 3,
+   "STR": "B",
+   "EPI": "B",
+   "truth": "B"
+  },
+  {
+   "era": 8,
+   "author": "C",
+   "absence": 2,
+   "STR": "C",
+   "EPI": "C",
+   "truth": "C"
+  },
+  {
+   "era": 8,
+   "author": "E",
+   "absence": 2,
+   "STR": "E",
+   "EPI": "E",
+   "truth": "E"
+  }
+ ]
+}
