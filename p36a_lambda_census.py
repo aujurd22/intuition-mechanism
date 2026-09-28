@@ -88,7 +88,7 @@ def poly_rel_or_none(lam, degree, height):
 
 def main():
     rows = []
-    for N in range(2, 61):
+    for N in range(2, 201):
         try:
             x0, lam = params_for(N)
         except Exception as ex:
