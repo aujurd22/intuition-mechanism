@@ -1479,3 +1479,25 @@ Cl(O) on X_0(12)-level structures (cyclic order-12 subgroups) and
 verify the extracted character (P63 tool) is trivial on its 2-torsion
 for the five rows.  The P63 extraction tool is ready; the class-action
 derivation is the open piece.
+
+## Re-framing (2026-09-29 02:40, P68): attack x12's rationality, not transport
+
+x12(tau0) is RATIONAL for the five rows (1/12, 1/20, 1/32 -- the P19
+anchors).  A rational value is fixed by every Galois automorphism: no
+Shimura transport is needed for it.  Lambda then follows from x0 by
+the P25-b identity arithmetically (with r's sqrt-term collapsing at
+the rational x0 -- verify per row).
+
+The actual theorem is: x12(i*sqrt(N/24)) in Q happens exactly for
+N in {3,5,7,13,17} -- the level-12 analog of Weber's class-invariant
+rationality for idoneal orders.  Measured corroboration of the
+coprime-class picture: N=5's form (5,0,6) (the ONLY class coprime to
+the level across all five rows) has x12 collapsing exactly to the
+principal value; non-coprime classes do not collapse at naive points
+(their action runs through Hecke correspondences).
+
+Standard proof route (registered): reduce x12 to a Weber class
+invariant (eta-product identity between the level-12 Hauptmodul and
+level-6 or level-24 Weber functions), then invoke the classical
+Weber rationality theorem.  The idoneal-number connection
+(registered 2026-09-28) is the arithmetic core of that theorem.
