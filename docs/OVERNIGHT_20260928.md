@@ -140,3 +140,32 @@ Session 2 totals: 14 registry entries landed (P52-P65 + P65-b),
 6 confirmed, 5 falsified-with-mechanism, 2 clean negatives (P57 orbit,
 P61 single-law), 1 production audit, 1 theory sharpening (P57/P63:
 step 4 has its tool; the class-action derivation is the open piece).
+
+## Session 3 (2026-09-29 02:09 - 03:15): literature bridges + Weber reduction
+
+- P66 Hart condensation bridge: the consistent subset ~ the fringe set;
+  condensing ratio tracks boundary-carrying mass; label-consistency and
+  threshold-coverage are independent criteria.
+- P63 v3: closed-form eta multiplier restored (Wikipedia/Estermann form),
+  33/33 gate; v2's numeric extraction had a Re(gamma tau) branch bug.
+- P57/P68 re-framing: x12(tau0) is itself rational for the five rows --
+  no Galois transport needed; the theorem is Weber-type invariant
+  rationality; the SL2-transport campaigns attacked the wrong target.
+- P69 THE REDUCTION: x12(tau) = x6(2tau) exactly; level-6 census
+  d in [2,80]: rational locus = exactly {3,5,7,13,17}, inverse values
+  integer (12,20,32,104,200) -- a Ramanujan-type class invariant.
+- P69-b: arithmetic core = 2-elementary locus INTERSECT multiplier
+  triviality; 2-elementary locus {3,5,7,13,17,35,55,77}; the gap
+  {35,55,77} measured non-trivial multiplier; Kani Thm 32 anchor.
+- P69-c: the open lemma mapped into Schertz Thm 4 (2002).
+- P70/P70-b: production self-retrieval 100% hit@1; half-text cue 91.7%;
+  degradation knee at 10-25% cue matches the synthetic l_min law.
+- P71: explicit quadratic x6 over j6D found (eigen 1.7e-60);
+  discriminant-vanishing route falsified honestly.
+
+Commit chain: 3a09c9d (P66) -> c714d33 (P63v3) -> 5443eee (transport
+blocker) -> 7d7e324 (P64) -> d18bd9d (ledger) -> d36d6b9 (P61) ->
+90c730e (P62) -> a6ccb0b (P63) -> 7fadd56 (P70) -> 804556d (P70-b) ->
+6c03519 (P65) -> e26b8c6..(session 2) -> 3a09c9d..62fc043 (P69-b) ->
+7fcd38a (P69-c) -> 80e0321 -> c384050 (P68) -> 5413b3e (P69) -> 62fc043
+-> 7fcd38a -> 7fadd56 -> 804556d -> HEAD.
