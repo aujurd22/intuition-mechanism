@@ -50,13 +50,23 @@ def fmt(seq, n=12):
     return ", ".join(f"{v:.6g}" for v in seq[:n])
 
 
-def fewshot_prompt(examples, query):
+def fewshot_prompt(examples, query, scaffold=False):
     ex = "\n".join(f"(s={s}) {fmt(e)}" for s, e in examples)
-    return ("Coefficients of infinite series follow. Each series belongs "
+    base = ("Coefficients of infinite series follow. Each series belongs "
             "to a family labeled by its signature s in {2, 3, 4, 6}. "
             "Series of the same family share a structural constant.\n\n"
-            f"{ex}\n\nNew series:\n{fmt(query)}\n\n"
+            f"{ex}\n\nNew series:\n{fmt(query)}\n\n")
+    if scaffold:
+        return base + (
+            "TOOL -- successive ratios: compute r_n = c_n / c_{n+1} for "
+            "n = 0..5 and look at how r_n changes with n.  The signature "
+            "s is visible in the limit pattern of these ratios: r_n -> "
+            "z*(1 - (1-1/s)/n + ...) is NOT needed; simply compute r_n "
+            "for large n and identify the signature from the few-shot "
+            "examples' ratio behavior.  Compute at least three ratios "
+            "for the new series and compare with the examples' ratios.\n\n"
             "What is its signature s? Answer with ONE digit only.")
+    return base + "What is its signature s? Answer with ONE digit only."
 
 
 import re
