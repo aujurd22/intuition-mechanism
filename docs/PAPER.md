@@ -417,7 +417,12 @@ comparison -- runs as a 20-line mechanical pipeline at 40/40 on the
 same trials.  Everything above chance in this section is now either
 mechanized (recognition, novelty-given-the-code, the depth census)
 or localized to a specific missing wiring (extraction inside the LLM,
-interestingness-as-value).
+interestingness-as-value).  Scope caveat (registered): P39's pipeline
+CONSUMES the already-discovered tree -- P35-a shows the code is
+discoverable from unlabeled data, P39 shows the code drives novelty
+at 40/40, but a fully blind end-to-end experiment (discovery on one
+split -> freeze -> novelty on unseen families) is the separate P40,
+not yet run.
 
 **P35: the sufficient code is discoverable, by search and (half) by
 LLM.**  P34-d supplied the 6-line code with generator knowledge; P35-a
