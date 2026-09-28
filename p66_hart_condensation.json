@@ -1,0 +1,21 @@
+{
+ "markov-standard": {
+  "R_over_mind": 0.445,
+  "condensing_ratio": 0.038
+ },
+ "markov-hard": {
+  "R_over_mind": 1.434,
+  "condensing_ratio": 0.487
+ },
+ "visual": {
+  "R_over_mind": 0.53,
+  "condensing_ratio": 0.378
+ },
+ "twoscale-D5": {
+  "R_over_mind": 0.28,
+  "condensing_ratio": 0.131
+ },
+ "R1": true,
+ "R2": false,
+ "R3": true
+}
