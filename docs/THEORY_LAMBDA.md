@@ -176,7 +176,31 @@ that proves the criterion per case (why h=4 folds to rationality for
 THIS eta-quotient), which is now a finite case-check on exactly four
 maximal-order discriminants plus N=3.
 
-## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
+## The folding MECHANISM, observed numerically (2026-09-28 12:55)
+
+Computing x12 at every class-group conjugate of the CM point (using
+P23's verified q_of_tau route) separates the two regimes directly:
+
+- RATIONAL rows (N=5: D=-120; N=7: D=-168): every orbit value of x12
+  is REAL, forming a descending chain from the principal value
+  (N=5: 0.05 -> 0.001023 -> 1.042e-5 -> 3.37e-8 -> 0).  The tau0 of
+  the census is the orbit's MAXIMUM.  "Folding" is literal: the
+  class-group translates land on the real axis.
+- DEEP rows (N=2: deg 2; N=11: deg 2; N=9: deg 3): the orbit values
+  split into conjugate COMPLEX PAIRS (N=11: 3.663e-5 +/- 3.85e-6 i;
+  6.795e-4 +/- 2.54e-5 i; N=9: 9.55e-5 +/- 2.03e-5 i, 1.339e-3 +/-
+  2.53e-4 i) plus real members.
+
+REGISTERED READING (mechanism, not yet a proof): x0 in Q  <=>
+  x12 is REAL on the entire class-group orbit.  This is checkable in
+  principle per case because the eta-product's multiplier character
+  is what controls the imaginary part, and for the four h=4
+  discriminants the character values on the (2-torsion) class group
+  are forced to +-1 phases that the specific eta-signature
+  eta2 eta4 eta6 eta12 makes cancel.  The remaining proof work is
+  exactly this character computation on 4+1 cases.
+
+## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)## Empirical facts backing the note (all machine-verified tonight)
 
 - census N = 2..160: degree 1 = {3,5,7,13,17}; degree 2 = {2,11,19,23,
   25,35,43,47,55,73}; degree 3 = {9,27,29,31,37,41,49,53}; none below
