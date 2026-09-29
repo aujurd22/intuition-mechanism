@@ -72,7 +72,14 @@ answer from memory); lq >= 1 -> proceed.  l_min is measured, not
 assumed: #tokens at which the representation's own entries stabilize
 (P64: ~1 token per free statistic entry; production cross-check
 P70-b: knee at 6-12 tokens).
-[L5; P59/P61/P64/P70-b]
+Query-CONSTRUCTION layer (interface rules DR1-DR8, measured on the
+SQuAD substrate 2026-09-30): inject contrast-carrying context when
+available (gold/conversational head: P117/P120/P125), never
+constant-within-store metadata (P123: title -9pp), head-of-chunk only
+(P122-c: tail -32pp), prefix-first ordering (P120), 150-200 chars
+(P120), skip the reranker when a contrast-carrying prefix is present
+(P124: +24.6pp bare -> +1.2pp hybrid).
+[L5; P59/P61/P64/P70-b; DR layer: P116-P125]
 
 R6 (novelty screening).  Enable novelty reporting only when clr > 1
 with healthy known-coverage (both arms inside their Law-1 viability):
