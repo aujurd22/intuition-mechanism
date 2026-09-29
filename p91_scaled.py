@@ -41,6 +41,29 @@ def gdepth(N):
 DEGS = {N: DEG[N] for N in NS}
 GDS = {N: gdepth(N) for N in NS}
 
+def judge(nA, nB):
+    xA, lA = params_for(nA)
+    xB, lB = params_for(nB)
+    prompt = (f"Two verified mathematical identities (Ramanujan-type 1/pi series "
+              f"parameters):\n\nN={nA}: x0={xA:.6f}, lambda={lA:.6f}\n"
+              f"N={nB}: x0={xB:.6f}, lambda={lB:.6f}\n\n"
+              "Which is STRUCTURALLY MORE SURPRISING / unusual? Judge only the "
+              "structure of the numbers. Answer exactly one line: 'MORE: N=<n>'.")
+    ans = ask_chat(prompt, max_tokens=2048)
+    m = __import__("re").findall(r"N\s*=\s*(\d+)", ans)
+    return int(m[-1]) if m else None
+
+def swap_controlled(n_hi_gd, n_lo_gd):
+    """n_hi_gd has higher gdepth.  Returns 'high'/'low'/None (disagree)."""
+    votes = {"high": 0, "low": 0}
+    for first, second in ((n_lo_gd, n_hi_gd), (n_hi_gd, n_lo_gd)):
+        w = judge(first, second)
+        if w is None: continue
+        votes["high" if w == n_hi_gd else "low"] += 1
+    if votes["high"] > votes["low"]: return "high"
+    if votes["low"] > votes["high"]: return "low"
+    return None
+
 
 def run_experiment():
     # ---- deg-matched pairs: same degree, LOW vs HIGH gdepth ----
