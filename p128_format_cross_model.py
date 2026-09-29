@@ -21,7 +21,41 @@ sys.path.insert(0, ".")
 import json, re, random
 from p33_n20 import params_for, DEG, NS
 from llm_client import ask_chat
-from p91_scaled import gdepth
+
+
+def gdepth(N):
+    """Inlined copy of p91_scaled.gdepth — do NOT import p91_scaled: its
+    module-level code re-runs the API experiment and overwrites artifacts
+    (the 2026-09-30 incident, see registry P128)."""
+    D = -24 * N
+    sD = -1 if D < 0 else 1
+    n = abs(D); v = 0
+    while n % 2 == 0:
+        n //= 2; v += 1
+    odd = []
+    p = 3
+    while p * p <= n + 1:
+        if n % p == 0:
+            n //= p
+            cnt = 1
+            while n % p == 0:
+                n //= p; cnt += 1
+            odd.extend([(-1) ** ((p - 1) // 2) * p] * cnt)
+        p += 2
+    if n > 1:
+        odd.append((-1) ** ((n - 1) // 2) * n)
+    odd_prod = 1
+    for f in odd:
+        odd_prod *= f
+    if v % 2 == 0 and v >= 2:
+        part2 = [-4] * (v // 2)
+    elif v >= 3:
+        part2 = [sD * (1 if odd_prod > 0 else -1) * 8] + [-4] * ((v - 3) // 2)
+    elif v == 1:
+        part2 = [2]
+    else:
+        part2 = []
+    return len(set(part2 + odd)) - 1
 
 GDS = {N: gdepth(N) for N in NS}
 results = json.load(open("p91_scaled_results.json"))
