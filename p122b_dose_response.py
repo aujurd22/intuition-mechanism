@@ -117,6 +117,6 @@ for r_ in RATES:
     if rows:
         eff[str(r_)] = round(float(np.mean([n1 / nt for n1, nt in rows])), 3)
 out["effective_dose_q"] = eff
-out["n"] = res["q_alone"]["0.0"][1]
+out["n"] = res["q_alone"][0.0][1]
 json.dump(out, open("p122b_dose_response.json", "w"), indent=1)
 print(json.dumps(out, indent=1))
