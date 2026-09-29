@@ -69,6 +69,7 @@ variants: title injection, cross-article stores).
 | DR4 | C4: template dilution | Strip template headers before embedding; index only discriminative content |
 | DR5 | C5: query fragility | Meaning-preserving rewording is safe; do not score against high-dose perturbation; prefer expansion over substitution |
 | DR6 | C6: prefix hedge | Put a 150-200 char verbatim context prefix FIRST in the query; it hedges question-side paraphrase and carries the retrieval mass — protect its integrity |
+| DR7 | C6: prefix source (P122-c) | Take the prefix from the HEAD of the chunk (first sentences / definitional lead): head 98.8% vs tail 66.0% — a 32pp effect that dominates the prefix-length choice |
 
 ## The hybrid query optimization (P117)
 
