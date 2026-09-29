@@ -1501,3 +1501,35 @@ invariant (eta-product identity between the level-12 Hauptmodul and
 level-6 or level-24 Weber functions), then invoke the classical
 Weber rationality theorem.  The idoneal-number connection
 (registered 2026-09-28) is the arithmetic core of that theorem.
+
+## MAJOR CORRECTION (2026-09-29 16:05, P76): x12 is NOT modular
+
+Direct 40-digit test: x12(gamma tau) = x12(tau) FAILS for gamma =
+(1,0;12,1) in Gamma0(12) (deviation 3.6e-4, far above the 1e-25 gate)
+and for Gamma0(24)/Gamma0(48) elements; T-invariance holds.  The
+"Hauptmodul" claim of steps 2/4 is RETRACTED: x12 = W6(2tau)/z12 is a
+QUASIMODULAR function (z12 contains an E2 combination), not a modular
+one.  Consequences:
+
+1. "lambda in Q(x0) via Q(X0(12))" is retracted as a proof; the
+   deg(lambda) = deg(x0) census (P36-a, 22/22) stands as an empirical
+   law.  A candidate replacement explanation: CM values of
+   quasimodular forms are algebraic (Eisenstein-Kronecker theory for
+   the E2 part, CM for the modular part), and the depth hierarchy may
+   follow from the interplay.
+2. P69/P69-b's census results are numerical facts and stand, but
+   1/x6 is NOT a Weber-type class invariant in the strict (modular)
+   sense; the rationality locus {3,5,7,13,17} and the 2-elementary +
+   multiplier-triviality shape remain as measured phenomena.
+3. The failed SL2-transport campaigns (P57, P63 addendum) now have
+   their full explanation: there was no modular structure to
+   transport.
+4. P75's "exact quadratic" is an approximation (residual 1.2e-8 at
+   80 dps); an exact relation between modular u = 1/j6D and
+   quasimodular x6 cannot exist.
+
+What survives untouched: every numerical census (P36-a, P44, P69,
+P69-b), the five-row rationality phenomenon itself, the idoneal
+connection as a measured coincidence awaiting theory, and the CWZ
+identity machinery (which never claimed modularity -- it is a
+quasimodular framework from the start).
