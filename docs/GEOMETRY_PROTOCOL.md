@@ -62,6 +62,24 @@ One law-table row per substrate, with the fixed column set:
   substrate | N | encoder | NN-band | fringe% | degradation curve
   | eviction order + values | clearance rates | law verdicts.
 
+## The law table (as of 2026-09-30 07:20)
+
+| substrate | N / encoder | NN-band (p5/med/p95) | degradation (5/10/25/50/100% cue) | eviction core/LRU/rand/fringe | law verdicts |
+|---|---|---|---|---|---|
+| synthetic twoscale | families / native | n/a (constructed) | knee 10-25% (P64) | **100 / 92 / 92 / 54** (P72) | L1-L6 all pass; two-scale divergence demonstrated (P65-b) |
+| FlyMemory production | 7325 / L12-v2 | 0.439 / 0.691 / 0.929; isolate 0%, dup 0% (P62) | knee 6-12 tokens (P70-b) | not tested (live service) | L1/L5 pass; dark tail 99.86% + self-reach 100% both hold (P70) |
+| SQuAD paragraphs | 400 / L12-v2 | 0.549 / 0.731 / 0.824; isolate 0%, dup 0% (P90/P111-b) | 95.0/96.7/100/100/100 — knee < 5% (P90) | **42.5 / 30.0 / 38.2 / 30.0** (P90; random > LRU, cf. P112) | L1/L5/L6 pass; sibling confusion 25-50% = reranker space (P93-b); query-construction layer P116-P127 (DR1-DR10) |
+| Gaussian matrix (R^32) | 500 / none | n/a (constructed) | knee 10-25% (P110) | core = LRU (uniform density — L6 precondition fails) | L5 pass; L6 partial — density-heterogeneity precondition isolated (P110/P112) |
+| mathematical text | 21 / 50dps | median 0.997 (template anisotropy) | NON-MONOTONE 73.3/73.3/**53.3 dip**/... (P111) | not tested | L5 FAILS as stated — template dilution effect discovered; corpus-level, not item-level (P113) |
+
+Reading guide: the law table's job is localization, not celebration.
+A row fails a law exactly where its substrate violates the law's input
+condition (math text violates L5 via template anisotropy; the Gaussian
+matrix violates L6 via uniform density).  The query-construction layer
+(DR1-DR10, P116-P127) is measured on the SQuAD row and is
+encoder-relative (P127): hazards transfer across encoders, magnitudes
+do not.
+
 ## What this protocol does NOT cover
 
 - Write-path policies (flyloop's V7 axes) -- needs the online loop.
