@@ -87,8 +87,12 @@ within-store contrast at paragraph granularity.
 
 ## The reranker interaction (P124)
 
-Placeholder — running.  Question: does the hybrid prefix subsume the
-cross-encoder reranker (both attack the same contrast bottleneck)?
+The two remedies are ~95% substitutes.  Bare question: rerank lifts
+49.8 → 74.4 (+24.6pp).  With the hybrid prefix already present: 98.8 →
+100.0 (+1.2pp residual — cross-attention fixes only the last in-pool
+ranking error).  DR8: with contrast-carrying context available, skip
+the reranker (~1pp cost, POOL cross-attention passes saved per query);
+without it, the reranker is worth +24.6pp.
 
 ## The contrast gradient (P116)
 

@@ -1,0 +1,7 @@
+{
+ "A_bare_bi": 49.8,
+ "B_bare_rerank": 74.4,
+ "C_hyb_bi": 98.8,
+ "D_hyb_rerank": 100.0,
+ "n": 2823
+}
