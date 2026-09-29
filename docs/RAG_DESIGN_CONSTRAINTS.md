@@ -34,12 +34,30 @@ curve becomes NON-MONOTONE — adding template text without adding
 discriminative content HURTS retrieval.  The dip is a corpus-level
 phenomenon (template structure), not an item-level one.
 
-### C5. Synonym fragility: 50% substitution → 0% retrieval (P117-b)
+### C5. Query-side lexical fragility: dose-dependent (P122-b; supersedes P117-b)
 
-Replacing 50% of content words with synonyms COMPLETELY DESTROYS
-bi-encoder retrieval (top1 → 0%).  The MiniLM embedding is LEXICALLY
-SENSITIVE, not paraphrase-invariant.  Query reformulation is
-dangerous; query expansion (adding more terms) is safer.
+Bare-question retrieval degrades STEEPLY and dose-dependently under
+random-word substitution: top1 49.8 / 38.1 / 27.1 / 17.7 / 7.9 (%) at
+substitution dose 0 / 0.2 / 0.4 / 0.6 / 0.8.  Synonym substitution at
+the same nominal rate does NO damage (49.7 vs 49.8) — the earlier
+"50% synonyms → 0%" claim (P117-b) is RETRACTED (inconsistent with
+both measurements; script never archived).  The accurate picture: the
+bi-encoder is lexically sensitive, degradation is gradual in the
+substitution dose, and MEANING-PRESERVING rewording is safe while
+MEANING-DESTROYING rewording kills at high doses.
+
+### C6. Prefix injection hedges question-side damage (P122-b)
+
+With a verbatim 150-char context prefix in the query, destroying up
+to 80% of the question's content words costs only 0.9pp top1 (98.8 →
+97.9).  The prefix, not the question, carries the retrieval mass.
+Conversely the prefix itself is the more fragile asset: the same dose
+applied to the PREFIX drops top1 to 59.3.  Ordering matters too:
+prefix-first beats question-first at every length (P120), and 150-200
+chars suffice (P120 n=2823 curve: 81.3 @ 50ch, 95.0 @ 100ch, 99.9 @
+200ch).  SCOPE: the measured prefix is the gold paragraph's own head —
+a ceiling, not a deployable rule (P123 measures the deployable
+variants: title injection, cross-article stores).
 
 ## The design rules derived from these constraints
 
@@ -49,7 +67,8 @@ dangerous; query expansion (adding more terms) is safer.
 | DR2 | C2: sibling confusion | Deploy cross-encoder reranker on top-10 |
 | DR3 | C3: reranker value | Reranker can recover up to 33pp top1 |
 | DR4 | C4: template dilution | Strip template headers before embedding; index only discriminative content |
-| DR5 | C5: synonym fragility | Do NOT paraphrase queries; use original wording; expand rather than substitute |
+| DR5 | C5: query fragility | Meaning-preserving rewording is safe; do not score against high-dose perturbation; prefer expansion over substitution |
+| DR6 | C6: prefix hedge | Put a 150-200 char verbatim context prefix FIRST in the query; it hedges question-side paraphrase and carries the retrieval mass — protect its integrity |
 
 ## The hybrid query optimization (P117)
 
