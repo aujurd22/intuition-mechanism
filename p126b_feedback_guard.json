@@ -1,0 +1,125 @@
+{
+ "n": 2817,
+ "fresh_n": 2373,
+ "stale_n": 444,
+ "auc_s2": 0.737,
+ "auc_s3": 0.648,
+ "s2_mean_fresh": 0.657,
+ "s2_mean_stale": 0.472,
+ "always_anchor": 84.3,
+ "always_bare": 49.7,
+ "routing_s2": [
+  {
+   "theta": 0.3,
+   "top1": 80.6,
+   "trust": 91.9
+  },
+  {
+   "theta": 0.35,
+   "top1": 77.4,
+   "trust": 86.6
+  },
+  {
+   "theta": 0.4,
+   "top1": 74.3,
+   "trust": 81.7
+  },
+  {
+   "theta": 0.45,
+   "top1": 70.3,
+   "trust": 74.7
+  },
+  {
+   "theta": 0.5,
+   "top1": 66.5,
+   "trust": 68.4
+  },
+  {
+   "theta": 0.55,
+   "top1": 62.1,
+   "trust": 60.7
+  },
+  {
+   "theta": 0.6,
+   "top1": 57.4,
+   "trust": 53.1
+  },
+  {
+   "theta": 0.65,
+   "top1": 54.2,
+   "trust": 47.6
+  },
+  {
+   "theta": 0.7,
+   "top1": 51.6,
+   "trust": 43.0
+  },
+  {
+   "theta": 0.75,
+   "top1": 50.2,
+   "trust": 38.9
+  },
+  {
+   "theta": 0.8,
+   "top1": 49.8,
+   "trust": 34.3
+  }
+ ],
+ "routing_s3": [
+  {
+   "theta": 0.3,
+   "top1": 81.7,
+   "trust": 93.5
+  },
+  {
+   "theta": 0.35,
+   "top1": 80.1,
+   "trust": 88.8
+  },
+  {
+   "theta": 0.4,
+   "top1": 77.3,
+   "trust": 82.6
+  },
+  {
+   "theta": 0.45,
+   "top1": 74.6,
+   "trust": 74.3
+  },
+  {
+   "theta": 0.5,
+   "top1": 70.9,
+   "trust": 63.4
+  },
+  {
+   "theta": 0.55,
+   "top1": 65.0,
+   "trust": 46.9
+  },
+  {
+   "theta": 0.6,
+   "top1": 58.6,
+   "trust": 29.6
+  },
+  {
+   "theta": 0.65,
+   "top1": 53.9,
+   "trust": 15.1
+  },
+  {
+   "theta": 0.7,
+   "top1": 50.9,
+   "trust": 4.5
+  },
+  {
+   "theta": 0.75,
+   "top1": 49.8,
+   "trust": 0.4
+  },
+  {
+   "theta": 0.8,
+   "top1": 49.7,
+   "trust": 0.0
+  }
+ ]
+}
