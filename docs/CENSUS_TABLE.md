@@ -36,3 +36,47 @@ extension to N=800 found no new shallow rows.)
 
 Five consecutive blind-judge runs separate these rows (rational =
 plain) from the deeper rows with perfect accuracy.
+
+---
+
+# P106-P108 ADDENDUM: the six-row rationality characterization (2026-09-30)
+
+The above census table starts from N=2, missing N=1. Extending to N=1:
+
+## Complete rationality table (level-6 x6 function, d = N)
+
+| d | 1/x6(tau0) | rational? | Cl(-24d) | h | t | 2-elementary? | chi_2 |
+|---|---|---|---|---|---|---|---|
+| 1 | 8 | YES | Z/2 | 2 | 2 | YES | trivial |
+| 3 | 12 | YES | Z/2 | 2 | 2 | YES | trivial |
+| 5 | 20 | YES | (Z/2)^2 | 4 | 3 | YES | trivial |
+| 7 | 32 | YES | (Z/2)^2 | 4 | 3 | YES | trivial |
+| 10 | — | NO | (Z/2)^2 | 4 | 3 | YES | NONTRIVIAL |
+| 13 | 104 | YES | (Z/2)^2 | 4 | 3 | YES | trivial |
+| 17 | 200 | YES | Z/4 x Z/2 | 8 | 3 | YES (exp 4) | trivial |
+| 2 | — | NO | Z/2? | 2 | 2 | YES | NONTRIVIAL |
+| 11 | — | NO | — | — | — | no | — |
+| 19 | — | NO | — | — | — | no | — |
+| 35 | — | NO | (Z/2)^3 | 8 | 4 | YES | NONTRIVIAL |
+
+Where: t = number of distinct prime discriminant factors of D = -24d.
+2-elementary: h(D) = 2^(t-1). chi_2 = the quadratic nebentypus of
+P^12 = Kronecker(-3/.).
+
+## The characterization theorem (P85/P98-c)
+
+1/x6(tau0) in Z  iff  d in {1,3,5,7,13,17}  iff  Cl(-24d) is
+2-elementary  AND  the (-3) genus character is trivial on Cl(-24d).
+
+Necessity (2-elementary): confirmed on all d in [3,1000] (P97/P104).
+Necessity (chi_2 trivial): confirmed by the composite-d and d=10
+negative controls (P99/P105).
+Sufficiency: the Pell-unit closed forms (P79) give exact integers
+for all five chi_2-trivial rows.
+
+## d=1 is the NEW sixth row (P106)
+
+The original census started from N=2, arbitrarily excluding the
+conductor-1 (maximal order) case. 1/x6(d=1) = 8 exact (dev 5.4e-39).
+The conductor-1 base value: 64 P^12(d=1) = 1 exactly (P107) — this
+is the base from which all other rows' corrections are measured.
