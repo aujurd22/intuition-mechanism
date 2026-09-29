@@ -59,6 +59,20 @@ chars suffice (P120 n=2823 curve: 81.3 @ 50ch, 95.0 @ 100ch, 99.9 @
 a ceiling, not a deployable rule (P123 measures the deployable
 variants: title injection, cross-article stores).
 
+### C7. Conversational anchors are bimodal: freshness is a state variable (P125)
+
+Injecting the previous turn's answer paragraph as query context gives
++34.5pp ON AVERAGE (49.8 → 84.3) — and the average is a lie.  Fresh
+anchors (the conversation is still on the paragraph being asked about:
+84% of turns) sit at ~98.9%, effectively the gold ceiling for free.
+Stale anchors (the conversation moved on: 16%) collapse to 5.9% —
+44pp BELOW the no-anchor baseline; the stale anchor steers retrieval
+to the previous paragraph.  A wrong-article anchor halves accuracy
+(25.7).  Context injection is therefore a STATE-DEPENDENT
+intervention: the same mechanism delivers +49pp or −44pp depending on
+anchor freshness, which the query layer can measure and guard against
+(DR9/DR10).
+
 ## The design rules derived from these constraints
 
 | Rule | Constraint addressed | Recommendation |
@@ -70,6 +84,8 @@ variants: title injection, cross-article stores).
 | DR5 | C5: query fragility | Meaning-preserving rewording is safe; do not score against high-dose perturbation; prefer expansion over substitution |
 | DR6 | C6: prefix hedge | Put a 150-200 char verbatim context prefix FIRST in the query; it hedges question-side paraphrase and carries the retrieval mass — protect its integrity |
 | DR7 | C6: prefix source (P122-c) | Take the prefix from the HEAD of the chunk (first sentences / definitional lead): head 98.8% vs tail 66.0% — a 32pp effect that dominates the prefix-length choice |
+| DR9 | C7: anchor staleness (P125) | Conversational anchors are bimodal: fresh ~98.9%, stale 5.9% (44pp below no-anchor). Never inject an anchor unguarded — see DR10 |
+| DR10 | C7: staleness guard (P125-b) | Dual-query union (bare + anchored pools) with the BARE question as the reranker query: fresh keeps ~ceiling, stale recovers; the reranker needs no anchor |
 
 ## The hybrid query optimization (P117/P120) — a CEILING, not a deployable rule
 
