@@ -19,10 +19,11 @@ cited = {}
 for pid, body in entries.items():
     for f in re.findall(r"[\w/\\-]+\.(?:json|npy|txt|png|csv|npz)", body):
         f = f.strip().split()[-1]
-        m = re.match(r"(.*batch)(\d+)-(\d+)(\.\w+)$", f)
-        if m:  # range shorthand "batch1-10.json" expands to per-batch files
-            for i in range(int(m.group(2)), int(m.group(3)) + 1):
-                cited.setdefault(f"{m.group(1)}{i}{m.group(4)}", set()).add(pid)
+        m = re.match(r"(.*batch)(\d+)-(\d+)(_.*)?$", f)
+        if m and int(m.group(3)) > int(m.group(2)):
+            pre, lo, hi, suf = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4) or ""
+            for i in range(lo, hi + 1):
+                cited.setdefault(f"{pre}{i}{suf}", set()).add(pid)
             continue
         cited.setdefault(f, set()).add(pid)
 
