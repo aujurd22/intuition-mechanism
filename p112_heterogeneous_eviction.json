@@ -1,0 +1,11 @@
+{
+ "results": {
+  "core": 30.0,
+  "LRU": 30.0,
+  "random": 65.4,
+  "fringe": 30.0
+ },
+ "N": 500,
+ "budget": 150,
+ "finding": "random >> all deterministic on heterogeneous"
+}
