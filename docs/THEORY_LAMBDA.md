@@ -1,3 +1,7 @@
+# THEORY_LAMBDA — read this banner first
+
+**STATUS (2026-09-29, P76 falsification): every `THEOREM: lambda in Q(x0) via the Hauptmodul property` block below is RETRACTED.** x12 is NOT modular for Gamma0(12) (3.6e-4 deviation at (1,0;12,1), 40 dps). The blocks are kept only as an archive of the falsified route; the current theory lives in docs/RATIONALITY_LEMMA.md and docs/THEOREM_FIVE_ROWS.md. A reader searching `THEOREM` will hit the archived blocks first — check this banner before trusting any `QED` below the P76 section.
+
 # Theory note: the algebraic depth of lambda (P36-a/P37/P38)
 
 Status (2026-09-28): proof SKETCH + empirical laws; the complete proof is
@@ -273,6 +277,7 @@ discriminant -24N at level 12.  The five rows {3,5,7,13,17} are the
 idoneal numbers for the level-12 eta-quotient x12.
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -325,6 +330,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -379,6 +385,7 @@ reciprocity + Ligozart's eta-product criterion)
 ## Empirical facts backing the note (all machine-verified tonight)
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -431,6 +438,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -502,6 +510,7 @@ discriminant -24N at level 12.  The five rows {3,5,7,13,17} are the
 idoneal numbers for the level-12 eta-quotient x12.
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -554,6 +563,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -608,6 +618,7 @@ reciprocity + Ligozart's eta-product criterion)
 ## Empirical facts backing the note (all machine-verified tonight)
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -660,6 +671,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -731,6 +743,7 @@ discriminant -24N at level 12.  The five rows {3,5,7,13,17} are the
 idoneal numbers for the level-12 eta-quotient x12.
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -783,6 +796,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -837,6 +851,7 @@ reciprocity + Ligozart's eta-product criterion)
 ## Empirical facts backing the note (all machine-verified tonight)
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -889,6 +904,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -960,6 +976,7 @@ discriminant -24N at level 12.  The five rows {3,5,7,13,17} are the
 idoneal numbers for the level-12 eta-quotient x12.
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -1012,6 +1029,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -1066,6 +1084,7 @@ reciprocity + Ligozart's eta-product criterion)
 ## Empirical facts backing the note (all machine-verified tonight)
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -1118,6 +1137,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -1189,6 +1209,7 @@ discriminant -24N at level 12.  The five rows {3,5,7,13,17} are the
 idoneal numbers for the level-12 eta-quotient x12.
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -1241,6 +1262,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
@@ -1295,6 +1317,7 @@ reciprocity + Ligozart's eta-product criterion)
 ## Empirical facts backing the note (all machine-verified tonight)
 
 ## THEOREM: lambda in Q(x0) via the Hauptmodul property of Gamma_0(12)
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 18:20 — proof complete at the modular-function level)
 
 **Theorem.** Let tau0 be a CM point of disc(-24N), x0 = x12(tau0),
@@ -1347,6 +1370,7 @@ numbers (which parametrize orders with class group exponent <= 2).
 **Q.E.D. (modular function theory + genus 0 of X_0(12))**
 
 ## THEOREM (upgraded from sketch): lambda in Q(x12) via Hauptmodul property
+> **RETRACTED (P76, 2026-09-29): x12 is NOT modular for Gamma0(12) — the Hauptmodul premise of this block is false. Archive only.**
 ## (2026-09-28 23:30 — complete proof at the modular function theory level)
 
 **Theorem.** x12 is a Hauptmodul for the modular curve X_0(12)
