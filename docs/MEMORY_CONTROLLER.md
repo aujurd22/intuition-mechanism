@@ -24,20 +24,19 @@ self-improvement rule rather than post-hoc description.
 
 ## 2. Output rules (each bound to its law)
 
-R1 (type, v2 after the synthetic falsification).  Prototype iff
-r <= 0.5 AND ff <= 0.1 (the mean-ball covers essentially all class
-mass); exemplar iff nn <= 0.5 (prefer core-first eviction when the
-store is budgeted); otherwise report "no law applies" and fall back to
-the better-measured arm.  HISTORY: v1 used r <= 0.5 alone and was
-FALSIFIED by the synthetic suite (P73-synth): the Law-1 boundary is a
-VIABILITY boundary, not an optimality boundary -- at r = 0.297-0.468
-with ff = 0.19-0.27 the exemplar arm beats the prototype by 4-12
-points, because the fringe mass is exactly what the mean-ball never
-covers.  TIE ZONE (r ~ 0.4-0.55, ff ~ 0.1-0.3): the arm ordering
-FLIPS across seeds -- Laws 1-6 genuinely do not determine the choice
-there, and the controller's honest output is a degenerate choice with
-no-regression measured against the tie-zone distribution.
-[L1, L2, L6; P52/P65/P65-b, P73-synth]
+R1 (type, v4 final after two synthetic falsifications).  STARVED
+(per-class capacity <= ~3) and r <= 0.5 -> prototype: a capacity-1
+exemplar store IS a noisy prototype, and the denoised mean dominates it
+unconditionally (P52: STR 64.6 >> EPI1 15.4; P73-c: 60.0 vs 25.5 at
+sigma=1.8).  NON-STARVED -> exemplar with core-first eviction, at any
+r: with dense sampling the exemplar arm ties the prototype at the
+ceiling in the interior and beats it wherever the mean-ball misses mass
+(P73-b: epi = 100% at every sigma, proto 60-98).  The ff-gate of v2 is
+DROPPED (it was the wrong correction: ff only matters in the
+non-starved regime where both arms have coverage, and there the
+exemplar already wins).  Tie zone (r ~ 0.4-0.55, non-starved): ordering
+flips across seeds -- honest no-law, degenerate choice.
+[L1, L2, L3, L6; P52/P65/P65-b/P73-synth/P73-b/P73-c]
 
 R2 (capacity).  Grow the store until the marginal entry adds less than
 delta coverage (cov plateau reached, P55); never past it.  Expected
