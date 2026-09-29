@@ -20,10 +20,12 @@ Decompose, at the CM point tau0 = i*sqrt(d/6):
   E2(tau0) = E2*(tau0) + 3/(pi * Im tau0),
 
 where E2*(tau) = E2(tau) - 3/(pi Im tau) is a TRUE weight-2 modular
-form (for SL2(Z)), and its CM value E2*(tau0) is ALGEBRAIC (CM theory:
-E2* is a modular form, its values at CM points lie in ring class
-fields, computable via Eisenstein-Kronecker / Weierstrass zeta
-constants).
+form (for SL2(Z)); its CM value E2*(tau0) is algebraic UP TO THE
+STANDARD PERIOD NORMALIZATION -- i.e. an algebraic multiple of the CM
+period squared (Bruinier-van der Geer-style CM conventions), NOT a
+bare algebraic number.  The proof target is therefore precisely the
+RATIO Ec(tau0)/W6(tau0), in which the period factors cancel.  (Wording
+corrected per external review, 2026-09-29 18:45.)
 
 Every piece of the CWZ identity at tau0 then splits as
 
