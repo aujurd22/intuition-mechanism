@@ -1,0 +1,38 @@
+{
+ "Super_Bowl_50": {
+  "n_ctx": 54,
+  "n_q": 60,
+  "hit10": 95.0,
+  "top1_wrong_para": 50.0
+ },
+ "Nikola_Tesla": {
+  "n_ctx": 92,
+  "n_q": 60,
+  "hit10": 86.7,
+  "top1_wrong_para": 38.3
+ },
+ "Martin_Luther": {
+  "n_ctx": 98,
+  "n_q": 60,
+  "hit10": 83.3,
+  "top1_wrong_para": 36.7
+ },
+ "American_Broadcasting_Company": {
+  "n_ctx": 98,
+  "n_q": 60,
+  "hit10": 83.3,
+  "top1_wrong_para": 28.3
+ },
+ "Doctor_Who": {
+  "n_ctx": 64,
+  "n_q": 60,
+  "hit10": 80.0,
+  "top1_wrong_para": 36.7
+ },
+ "Economic_inequality": {
+  "n_ctx": 44,
+  "n_q": 60,
+  "hit10": 90.0,
+  "top1_wrong_para": 25.0
+ }
+}
