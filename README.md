@@ -9,7 +9,7 @@ artifacts). This README is only the compressed entry point.
 > mechanical pipeline? Which steps are the "inspiration", and can they be
 > reproduced by a machine and their signature measured?
 
-## Where the program stands (2026-09-28)
+## Where the program stands (2026-09-30)
 
 The original single question has decomposed into an empirical ladder. Each
 layer now has its own measured verdict:
@@ -23,6 +23,9 @@ layer now has its own measured verdict:
 | Novelty detection | can it see "this is NOT any of the known structures"? | **NO for the blind judge** | P32-h new arm 4/20 (20%, at the 25% guess line); judge declares NEW only 7/40 times; native structural subject 38/40 (information IS present) |
 | Interestingness | given something new, is it worth pursuing? | **FIRST MEASURE (P36)** | lambda algebraic degree over N=2..160 EXACTLY reproduces the human publication boundary (degree-1 rows = the five published rows); blind judges detect deep/plain 15/15 x3 runs across two model families |
 | Memory geometry (NEW, 2026-09-29) | which memory should an agent keep, and when is novelty detectable at all? | **TWO GEOMETRY RATIOS (P52-P60)** | R/mind governs prototype viability, NN/mind governs exemplar viability; four families ordered by the pair; accuracy = coverage-event - theft; novelty = coverage AND clearance; contrast (not resolution) opens the novelty window; query-side floor l_min ~ #free-statistic-entries (P64) |
+| Retrieval transfer (NEW, 2026-09-30) | do the memory laws survive OUTSIDE our own stack? | **YES -- three substrates (P90/P93-b/P94/P95)** | SQuAD 400-paragraph MiniLM corpus: degradation curve monotone (95->100), core-first eviction 42.5% > LRU 30%; within-article top1-wrong-sibling 25-50% = the reranker value gap; answer-sentence oracle lifts top1 47.8->81.1 (+33pp); OOD clearance near-perfect (AUROC 0.969). M1-M4 protocol complete for this substrate |
+| Math theorem (NEW, 2026-09-30) | WHY exactly N = 3,5,7,13,17? | **CHARACTERIZED (P76-P92/P97)** | x12 is quasimodular, NOT modular (P76 falsified the Hauptmodul route); P^12 IS Gamma0(6)-modular with quadratic nebentypus chi_2 (1e-58); P^12 CM values land in the genus field (Shimura); x6 in Q iff 2-elementary AND chi_2 trivial; m_d = exp(Cl)/2; out-of-sample [80,200] census: zero rational rows, theorem survives; remaining = one flagged lemma (Schertz Thm 4 scope) + write-up |
+| Interestingness (NEW, 2026-09-30) | is 'interesting' mechanically decidable? | **TWO-AXIS THEORY (P91-scaled/P92)** | surprise tracks genus-structure depth at fixed degree (8/9 = 88.9%, p = 0.039); utility REVERSES to prefer published-rational rows (13:3); the axes are dissociable; linear degree effect refuted by expansion (11:9, p = 0.82) |
 
 ## The P34-d result (the current hinge)
 
@@ -49,9 +52,18 @@ version of *insight as compression*.
    with the structural representation: the open question is *wiring the
    structure representation to the novelty comparison*, not more
    classification scale.
-3. **Interestingness** — no experiment yet separates "novel" from "worth
-   keeping / predicting"; P33 (n=5) is directional only.
-4. Math side: z-construction for the positive-j family; h=2 graded traces;
+3. **Interestingness** — now a TWO-AXIS theory (P98): surprise tracks
+   genus-structure depth (confirmed 88.9% at transitions, p = 0.039);
+   utility tracks published-rationality (13:3 reversal); linear degree
+   refuted by expansion (11:9, p = 0.82). Open: scale to 20 pairs per
+   cell; human-judge validation.
+4. Math side: five-row rationality theorem has a COMPLETE PROOF
+   ARCHITECTURE (P97/P89: quasimodular cancellation + quadratic
+   nebentypus = genus character + Pell-unit closed forms, norm 2^-12);
+   remaining = one flagged lemma (Schertz Thm 4 scope at non-coprime
+   classes) + formal write-up.  Out-of-sample census [80,200]: theorem
+   survives (zero rational rows where the 2-elementary locus is empty).
+5. z-construction for the positive-j family; h=2 graded traces;
    general-d 1/pi theory (blocks P4/P6 completion).
 
 ## Method notes (what keeps this honest)
