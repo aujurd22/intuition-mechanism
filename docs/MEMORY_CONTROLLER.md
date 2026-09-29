@@ -43,11 +43,17 @@ delta coverage (cov plateau reached, P55); never past it.  Expected
 capacity ~ fringe fraction x reachable support, NOT ~ total input.
 [L3, L6; P55/P66]
 
-R3 (eviction).  When budget binds, evict the most-covered entry first
-(maximum same-class neighbor count within THRESH).  Never evict by
-recency alone.  Guard: if ff-signal degenerates (no entry has >= 1
-neighbor within THRESH -- thin-coverage regime), fall back to LRU.
-[L6; P72/P72-b, P66]
+R3 (eviction, v2 after P113 end-to-end test).  When budget binds,
+FIRST check the redundancy-coverage correlation: compute
+corr(redundancy score, future coverage loss) on a training subset.
+If correlation is significant, use core-first eviction.  Otherwise
+fall back to random eviction (preserves coverage distribution without
+requiring the redundancy metric to be predictive).  Never evict by
+recency alone.  Guard: if ff-signal degenerates (thin-coverage
+regime), fall back to LRU.  [L6; P72/P72-b/P66; P113: SQuAD
+end-to-end test showed core-first = LRU = 30% < random 41.5% on
+uniform-density substrate — the core-first advantage requires
+density heterogeneity AND redundancy-coverage correlation]
 
 R4 (write verification, FINAL -- V7C data landed).  Verification
 depth is NOT a sensitive knob: the clean 2x2 (all four cells at one
