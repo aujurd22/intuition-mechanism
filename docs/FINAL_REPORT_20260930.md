@@ -1,16 +1,49 @@
-# FINAL NIGHT REPORT: 2026-09-29 evening → 2026-09-30 05:12
+# FINAL NIGHT REPORT: 2026-09-29 evening → 2026-09-30 07:06
 
 ## Executive summary
 
-~27 hours of continuous autonomous research across three lines
+~28 hours of continuous autonomous research across three lines
 (modular forms theory, agent memory systems, LLM interestingness
-judgment).  45+ registered experiments, ~45 commits pushed, 21
-documentation files (477 KB), 89 scripts, 240 data files.
+judgment), closing with a nine-experiment RAG design-language arc
+(P116-P127).  50+ registered experiments, ~55 commits pushed, 21
+documentation files, 95+ scripts, 250 data files.
 
 Three major theoretical results, five experimental laws replicated
 across multiple substrates, three small-sample signals honestly killed
 by expansion, one major theory falsified and replaced, one production
-system validated against theoretical predictions.
+system validated against theoretical predictions, and a complete
+query-construction design language (DR1-DR10) with two retracted
+claims and one open detector problem.
+
+## Line 0 (NEW): The RAG design language (P116-P127)
+
+Measured on SQuAD within-article retrieval, n=2823 questions, flymemory's
+paraphrase-multilingual-MiniLM-L12-v2 encoder:
+
+| # | Finding | Numbers |
+|---|---|---|
+| P116 | contrast gradient | verbatim 100 > keyword 75 > question 48.3 |
+| P117/P120 | gold-head prefix ceiling | 49.8 → 98.8; 200ch saturates; prefix-first wins at every L |
+| P122-c | topic-sentence effect | head 98.8 vs tail 66.0 (32pp — dominates length choice) |
+| P122-b | dose-response + hedge | bare question 49.8→7.9 @ dose 0.8; prefix hedges question damage (98.8→97.9) |
+| P123 | metadata injection FAILS | title −9.1pp (zero within-store contrast) |
+| P124 | reranker ≈ prefix substitutes | +24.6pp bare vs +1.2pp hybrid |
+| P125 | conversational anchor BIMODAL | fresh ~98.9 / stale 5.9 (−44pp) |
+| P125-b/c | guard recipes | weak arbiter fails (83.3); dual-rerank max wins (87.2, fresh 100.0) |
+| P126/126-b | staleness detectors | question-style AUC 0.639, retrieval-feedback 0.737 — both insufficient (routing needs ~0.95 given payoff asymmetry) |
+| P121 | census [1,300] | 6 TP + 294 TN, zero counterexamples (math line) |
+
+Two retractions: P117-b "synonyms → 0%" (false at both mild and hard
+perturbation); the "deployable hybrid rule" reading of P117/P120 (the
+prefix was gold-context — a ceiling).
+
+Two generalizable lessons: (i) an ARBITER must be conditioned at least
+as strongly as the better candidate source (weak arbiter truncates the
+strong channel); (ii) cross-encoder scores are not calibrated across
+queries — max over differently-conditioned scorers crowns confidence,
+not correctness (P125-c stale residual 19.1).
+
+## Line 1: Six-Row Rationality Theorem
 
 ## Line 1: Six-Row Rationality Theorem
 
@@ -91,15 +124,23 @@ LINEAR DEGREE refuted by expansion [p=0.82, P97-b]
 3. Composite-d exact field: identify the degree-4..8 field of
    P^12(35/55/77) in the genus field
 
+### RAG line (freshly opened, P116-P127)
+4. A calibrated staleness detector: both cheap signals rejected
+   (AUC 0.639 / 0.737 vs the ~0.95 the payoff asymmetry demands);
+   per-row data saved (p126b_rows.json) for detector development
+5. Encoder generality: P127 replication on all-MiniLM-L6-v2
+   (running at report time)
+6. Third substrate: replicate the DR rules on a non-Wikipedia corpus
+   (the rules are currently SQuAD + L12-v2 specific)
+
 ### Memory Geometry (medium priority)
-4. Test the controller on a production RAG system (not just FlyMemory)
-5. Test the hybrid query (+35pp) on a production RAG benchmark
-6. Matched-pair expansion to 20 pairs per cell with human judges (P102)
+7. Test the controller on a production RAG system (not just FlyMemory)
+8. Matched-pair expansion to 20 pairs per cell with human judges (P102)
 
 ### Interestingness (lower priority)
-7. Scale the matched-pair experiment to 20 pairs per cell with
+9. Scale the matched-pair experiment to 20 pairs per cell with
    balanced degree/gdepth (needs LLM API)
-8. Human validation design (P102) — requires human participants
+10. Human validation design (P102) — requires human participants
 
 ## The program-level insight
 
