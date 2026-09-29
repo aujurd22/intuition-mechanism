@@ -1,0 +1,317 @@
+[
+ {
+  "pair": [
+   5,
+   73
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   7,
+   23
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   5,
+   73
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   5,
+   23
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   13,
+   19
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 2,
+   "hi": 0,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   17,
+   47
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   17,
+   11
+  ],
+  "degrees": [
+   1,
+   2
+  ],
+  "votes": {
+   "lo": 2,
+   "hi": 0,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   5,
+   31
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   13,
+   49
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   13,
+   31
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 2,
+   "hi": 0,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   5,
+   53
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   17,
+   49
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   5,
+   53
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   17,
+   53
+  ],
+  "degrees": [
+   1,
+   3
+  ],
+  "votes": {
+   "lo": 0,
+   "hi": 2,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   73,
+   37
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 2,
+   "hi": 0,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   73,
+   37
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 2,
+   "hi": 0,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   25,
+   37
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   19,
+   31
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   19,
+   49
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   23,
+   29
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ },
+ {
+  "pair": [
+   19,
+   37
+  ],
+  "degrees": [
+   2,
+   3
+  ],
+  "votes": {
+   "lo": 1,
+   "hi": 1,
+   "abstain": 0
+  }
+ }
+]
