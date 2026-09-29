@@ -1,0 +1,14 @@
+{
+ "A_q_alone": 49.8,
+ "B_prev_anchor": 84.3,
+ "C_gold_ceiling": 98.8,
+ "B_stale_only": 5.9,
+ "E_random_anchor": 25.7,
+ "n_per_cond": {
+  "A_q_alone": 2823,
+  "B_prev_anchor": 2817,
+  "C_gold_ceiling": 2823,
+  "B_stale_only": 444,
+  "E_random_anchor": 2823
+ }
+}
