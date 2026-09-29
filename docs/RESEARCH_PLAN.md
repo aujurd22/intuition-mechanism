@@ -180,6 +180,7 @@ baseline runs, and revisions must be recorded in this registry.
 
 ---
 
+| P89-FIX | Precision correction on the composite-d genus-field claim | External-audit standard applied to ourselves: 100dps PSLQ in the full 8-element real genus basis gives only ~1e-15/1e-16 residuals for P^12(35/55/77) (a true field member fits to ~1e-90 at dps=100) -- exact membership in the real genus span is NOT established. Downgraded claims: (still true) P^12(35/55/77) in no single quadratic subfield (P80, clean); 1e-15-close to the real genus locus; x6(35) irrational (P87 independent). (downgraded) exact field of P^12(35/55/77) -- likely a degree-4..8 subfield of the real ring-class part -- is OPEN. The five prime rows are UNAFFECTED (each verified 1e-57..1e-62 against its own minimal polynomial). Also corrected: the registry's '4096 q^6' record -> P^12 ~ q^2 leading coefficient 1 (4096 = 2^12 is the (2P)^12 normalization). | P89 |
 ## 2. Testbed tiers
 
 ### T0 synthetic families (toy, pure CPU, ~1-10M parameter models)
