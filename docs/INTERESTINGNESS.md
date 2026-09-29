@@ -63,6 +63,24 @@ judgments, not one.
   whether it models HUMAN interestingness is the next question, not
   this one.
 
+## The judge landscape (P119 / P128 / P128-c, 2026-09-30)
+
+Structural judgment is a MODEL x FORMAT interaction — calibrate both
+axes before any experiment (tool: format_calibration.py, 40 calls):
+
+| model | forced-choice | absolute rho_gdepth | verdict |
+|---|---|---|---|
+| deepseek-v4.1-flash | 88.9% (p=.039) | 0.254 ns | FORCED |
+| deepseek-v4-flash | 63.2% ns | 0.609 (14/14 pairs) | ABSOLUTE |
+| doubao-seed-2.1-lite | 78.9% (p=.019) | 0.079 ns | FORCED |
+| kimi-k2.8-preview | 57.9% ns | 0.08 | NO-SIGNAL |
+| minimax-m3 | 63.2% ns | -0.188 | NO-SIGNAL |
+
+The deepseek siblings SPLIT on format; doubao replicates the gdepth
+axis on an independent family via forced choice; kimi/minimax are
+floor in both.  The earlier single-model "forced > absolute" rule
+(P119) is a model-instance property, not a format law.
+
 ## The connection to the five-row theorem
 
 The surprise axis (genus depth) is exactly the axis along which the

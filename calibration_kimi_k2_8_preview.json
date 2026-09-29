@@ -1,0 +1,14 @@
+{
+ "model": "kimi-k2.8-preview",
+ "forced": {
+  "k": 11,
+  "n": 19,
+  "rate": 57.9,
+  "p": 0.6476
+ },
+ "absolute": {
+  "n": 20,
+  "rho_gdepth": 0.08
+ },
+ "recommended_format": "NO-SIGNAL (do not use as judge)"
+}

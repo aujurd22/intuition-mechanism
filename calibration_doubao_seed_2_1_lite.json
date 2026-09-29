@@ -1,0 +1,14 @@
+{
+ "model": "doubao-seed-2.1-lite",
+ "forced": {
+  "k": 15,
+  "n": 19,
+  "rate": 78.9,
+  "p": 0.0192
+ },
+ "absolute": {
+  "n": 20,
+  "rho_gdepth": 0.079
+ },
+ "recommended_format": "FORCED"
+}

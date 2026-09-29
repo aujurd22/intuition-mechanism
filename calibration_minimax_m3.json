@@ -1,0 +1,14 @@
+{
+ "model": "minimax-m3",
+ "forced": {
+  "k": 12,
+  "n": 19,
+  "rate": 63.2,
+  "p": 0.3593
+ },
+ "absolute": {
+  "n": 20,
+  "rho_gdepth": -0.188
+ },
+ "recommended_format": "NO-SIGNAL (do not use as judge)"
+}
