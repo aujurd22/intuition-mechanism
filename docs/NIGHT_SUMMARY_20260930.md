@@ -124,3 +124,35 @@ preferences under different framings.
 
 ~30 commits from 02:09 to 04:15 (2026-09-30), all pushed and verified.
 HEAD at time of writing: post-P111-b.
+
+## Morning extension (04:15 → 07:30): the RAG design-language arc
+
+A nine-experiment arc (P116-P127) that converted the coverage-law
+program into a query-construction design language, measured on SQuAD
+within-article retrieval at n=2823 (encoder:
+paraphrase-multilingual-MiniLM-L12-v2):
+
+| P | result |
+|---|---|
+| P116 | contrast gradient: verbatim 100 > keyword 75 > question 48.3 |
+| P117/P120 | gold-head prefix ceiling 49.8 -> 98.8; saturates at ~200ch; prefix-first wins at every length |
+| P121 | math census extended to d in [1,300]: 6 TP + 294 TN, zero counterexamples; missing P118-c artifact regenerated |
+| P122 | synonym substitution does NO damage -> P117-b "0%" claim RETRACTED |
+| P122-b | random-word dose-response 49.8 -> 7.9; the prefix hedges question-side damage (98.8 -> 97.9 at dose 0.8) |
+| P122-c | topic-sentence effect: head 98.8 vs tail 66.0 (32pp) — but see P127 |
+| P123 | title/metadata injection FAILS (-9.1pp): zero within-store contrast = pure dilution |
+| P124 | reranker and prefix are ~95% substitutes: +24.6pp bare, +1.2pp hybrid |
+| P125 | conversational anchor is BIMODAL: fresh ~98.9 / stale 5.9 (-44pp) |
+| P125-b | guard v1 (bare-question arbiter) FAILS: 83.3 < 84.3 — weak arbiter truncates the strong channel |
+| P125-c | guard v2 (dual rerank, elementwise max) WINS: 87.2, fresh 100.0, stale 19.1 residual |
+| P126/126-b | staleness detectors rejected: AUC 0.639 (question style) / 0.737 (retrieval feedback); routing needs ~0.95 given the payoff asymmetry |
+| P127 | second-encoder replication: hazards transfer (bimodal anchor, dilution, ceiling), magnitudes are encoder-specific (head-tail gap 32.8pp L12 vs 5.2pp L6) |
+
+Two retractions (P117-b synonym claim; the "deployable hybrid" reading
+of P117/P120 — the prefix was gold-context, i.e. a ceiling) and two
+generalizable lessons (arbiter conditioning; cross-query score
+calibration) are recorded in the registry and in
+docs/RAG_DESIGN_CONSTRAINTS.md (C1-C7, DR1-DR10).
+
+Provenance audit: 150 artifact citations scanned, 148 present, 2
+annotated as never-archived live-service probes (P70/P70-b).
