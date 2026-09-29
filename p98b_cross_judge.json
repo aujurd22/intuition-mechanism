@@ -1,0 +1,1166 @@
+{
+ "deepseek-v4.1-flash": {
+  "deg_high_gdepth": 28,
+  "deg_decided": 38,
+  "deg_pairs": [
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": true
+   }
+  ],
+  "util_rational": 15,
+  "util_decided": 16,
+  "util_pairs": [
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   }
+  ]
+ },
+ "kimi-k2.8-preview": {
+  "deg_high_gdepth": 20,
+  "deg_decided": 38,
+  "deg_pairs": [
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": true
+   }
+  ],
+  "util_rational": 10,
+  "util_decided": 16,
+  "util_pairs": [
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   }
+  ]
+ },
+ "minimax-m3": {
+  "deg_high_gdepth": 22,
+  "deg_decided": 38,
+  "deg_pairs": [
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     29
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     53
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     2,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     9,
+     37
+    ],
+    "pick_high": true
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": false
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "pick_high": true
+   }
+  ],
+  "util_rational": 8,
+  "util_decided": 16,
+  "util_pairs": [
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     3,
+     29
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     5,
+     37
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     53
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     17,
+     49
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     7,
+     27
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": false
+   },
+   {
+    "pair": [
+     13,
+     9
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   },
+   {
+    "pair": [
+     17,
+     2
+    ],
+    "pick_rational": true
+   }
+  ]
+ }
+}
