@@ -1,0 +1,16 @@
+{
+ "A_bare": 60.4,
+ "C_goldhead": 93.5,
+ "T_goldtail": 88.3,
+ "X_title": 50.8,
+ "F_fresh_anchor": 94.3,
+ "S_stale_anchor": 11.3,
+ "n": {
+  "A_bare": 2823,
+  "C_goldhead": 2823,
+  "T_goldtail": 2823,
+  "X_title": 2823,
+  "F_fresh_anchor": 2373,
+  "S_stale_anchor": 444
+ }
+}

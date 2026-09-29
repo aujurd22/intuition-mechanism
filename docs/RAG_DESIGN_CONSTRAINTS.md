@@ -83,7 +83,7 @@ anchor freshness, which the query layer can measure and guard against
 | DR4 | C4: template dilution | Strip template headers before embedding; index only discriminative content |
 | DR5 | C5: query fragility | Meaning-preserving rewording is safe; do not score against high-dose perturbation; prefer expansion over substitution |
 | DR6 | C6: prefix hedge | Put a 150-200 char verbatim context prefix FIRST in the query; it hedges question-side paraphrase and carries the retrieval mass — protect its integrity |
-| DR7 | C6: prefix source (P122-c) | Take the prefix from the HEAD of the chunk (first sentences / definitional lead): head 98.8% vs tail 66.0% — a 32pp effect that dominates the prefix-length choice |
+| DR7 | C6: prefix source (P122-c, P127) | Take the prefix from the HEAD of the chunk — but the magnitude is encoder-specific: head−tail gap 32.8pp on L12-v2 vs 5.2pp on all-MiniLM-L6-v2. Direction holds on both; calibrate per encoder |
 | DR9 | C7: anchor staleness (P125) | Conversational anchors are bimodal: fresh ~98.9%, stale 5.9% (44pp below no-anchor). Never inject an anchor unguarded — see DR10 |
 | DR10 | C7: staleness guard (P125-b) | Dual-query union (bare + anchored pools) with the BARE question as the reranker query: fresh keeps ~ceiling, stale recovers; the reranker needs no anchor |
 
