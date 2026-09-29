@@ -49,10 +49,16 @@ recency alone.  Guard: if ff-signal degenerates (no entry has >= 1
 neighbor within THRESH -- thin-coverage regime), fall back to LRU.
 [L6; P72/P72-b, P66]
 
-R4 (write verification).  Verification depth = f(eps, r): deep
-verification when support is sparse (r large); at full support the
-depth term is minor (V7A: +0.29-0.45 n.s.) -- but see V7C (the clean
-2x2 at one matcher regime) before fixing the exact coefficient.
+R4 (write verification, FINAL -- V7C data landed).  Verification
+depth is NOT a sensitive knob: the clean 2x2 (all four cells at one
+matcher regime, harness-side V7C) gives the write-depth effect as
+-0.99 with CI [-2.29, +0.31] -- SIGN-UNDETERMINED at current n; the
+earlier "~5:1" ratio is RETRACTED to a point estimate ~2:1 with an
+undetermined depth sign.  The controller therefore does NOT tune
+verification depth: any depth within the substrate's cheap options is
+acceptable; the coverage/support axis (R1/R2) carries all the
+sensitivity.  The +0.29-0.45 (n.s., V7A) mild preference for deep
+writes at full support remains as a tie-breaker only.
 [L4; V7A/V7C]
 
 R5 (query gate).  lq < 1 -> mark retrieval unreliable (report, do not
