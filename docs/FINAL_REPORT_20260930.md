@@ -99,10 +99,18 @@ existing design choices, validating the framework.
 
 ## Line 3: Interestingness (two-axis theory)
 
-SURPRISE = genus-structure-depth detection [88.9%, p=0.039, P91-scaled]
+SURPRISE = genus-structure-depth detection [88.9%, p=0.039, P91-scaled;
+REPLICATED at 78.9%, p=0.019 on doubao-seed-2.1-lite, P128-c — now an
+independent-family result]
 UTILITY = proximity to published rationality [13:3 reversal, P92]
 DISSOCIATION confirmed [same pairs, opposite preferences, P92]
 LINEAR DEGREE refuted by expansion [p=0.82, P97-b]
+JUDGE LANDSCAPE (P128 series): structural judgment is a model x format
+interaction — deepseek-v4.1 carries via forced choice, its sibling
+v4-flash via ABSOLUTE (reversal), doubao via forced, kimi/minimax are
+floor in both.  Format calibration is now a mandatory pre-step
+(format_calibration.py, P128-b).  P119's "forced > absolute" retracted
+to a model-instance property.
 
 ## The cross-cutting findings
 
