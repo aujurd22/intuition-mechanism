@@ -108,3 +108,27 @@ What changed since P69-c: the Schertz mapping survives only for the
 MODULAR pieces (f2, the eta products); x6 itself is quasimodular, and
 the rationality is carried by the Ec/W6 cancellation whose algebraic
 content is exactly these Weber units.
+
+## P89 correction + mechanism (2026-09-29 19:40)
+
+Three registry errors fixed and one MECHANISM found:
+
+1. (13,1;12,1) IS in Gamma0(6) (c = 12 = 0 mod 6).  The earlier
+   "NOT in Gamma0(6)" note was wrong.
+2. q-expansion: P^12 ~ q^2 (1 + O(q)), leading coefficient 1
+   (P ~ q^(1/6)).  The "4096 q^6" record was wrong (4096 = 2^12 is
+   the (2P)^12 normalization; the exponent is 2).
+3. THE MECHANISM: P^12 is modular of level 6 with QUADRATIC
+   nebentypus chi_2 (Ligozat conditions pass; numerically
+   P^12(gamma tau) = chi_2(gamma) P^12(tau) to 1e-58 for four
+   gammas, chi_2 = (+1,-1,-1,-1)).  A quadratic nebentypus under
+   Shimura reciprocity is a GENUS character -- so P^12's CM values
+   land in the genus field of D = -24d AUTOMATICALLY.  This is the
+   domain half of the stabilizer theorem, now with a standard-theory
+   address (the five rows: chi_2 trivial on the relevant classes ->
+   value in Q; composite d: chi_2 nontrivial -> value spans the full
+   real genus field, as measured in P89 step 1).
+
+The x6 rationality then follows from the Ec/W6 cancellation (P83-A):
+x6 = 4/(Ec/W6 + 8), and Ec/W6 = 24 R_d with R_d in Q -- the chain is
+nebentypus-triviality (Piece A/B algebraic) + cancellation (P83-A).
