@@ -17,7 +17,7 @@ BASE = "https://ark.cn-beijing.volces.com/api/coding/v3"
 # Key MUST come from the environment (never committed -- GitHub Push
 # Protection blocks any commit containing it, by design).
 KEY = os.environ.get("ARK_API_KEY", "")
-MODEL = "doubao-seed-2.1-lite"
+MODEL = os.environ.get("ARK_MODEL", "doubao-seed-2.1-lite")
 
 
 def ask(prompt: str, temperature: float = 0.0,
@@ -95,10 +95,11 @@ def ask_chat(prompt: str, temperature: float = 0.0,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": temperature,
         "max_tokens": max_tokens,
-        # doubao-seed-2.1-lite supports thinking disablement (docs:
-        # thinking.type = "disabled"); keeps the answer channel clean
-        "thinking": {"type": "disabled"},
     }).encode()
+    # thinking.type=disabled is accepted across ark chat models (verified:
+    # doubao-seed-2.1-lite AND deepseek-v4.1-flash; reasoning_chars -> 0)
+    body = json.dumps({**json.loads(body),
+                       "thinking": {"type": "disabled"}}).encode()
     req = urllib.request.Request(
         BASE + "/chat/completions", data=body,
         headers={"Content-Type": "application/json",
