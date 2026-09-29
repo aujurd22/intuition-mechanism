@@ -83,3 +83,26 @@ identity, so step 3 is where it dies.
 
 If V1-V3 pass, the lemma is reduced to CM computations of modular
 objects only -- the transport-free proof the program wanted.
+
+## The d=3 chain, fully closed numerically (P78-V4/V5, 2026-09-29 17:15)
+
+  f2(tau0) = 2^(1/4)                    [eta(2t0)/eta(t0) = 2^(-1/4), elementary]
+  f2(3 tau0)^12 = 392 - 160 sqrt6       [Weber class invariant, Z[sqrt6], norm 64]
+  P = f2(tau0) f2(3 tau0)/2             [identity]
+  P^12 = (392 - 160 sqrt6)/512 = 49/64 - (5/16) sqrt6
+  dlogP(tau0) = (pi i/3) * 10 * W6      [CM derivative form, numerically exact]
+  Ec/W6 = 40  =>  x6(tau0) = 1/12  =>  lambda = 1/4.
+
+Every arrow verified to 50+ digits.  The single literature citation
+needed for a complete proof: f2(3 tau0)^12 = 392 - 160 sqrt6 is a
+standard Ramanujan class-invariant table value at n=2 (Weber Table VI
+family); its derivation from first principles is the Schertz-Thm-1
+machinery applied at h(D=-8)=1.  The four other rows (d = 5, 7, 13,
+17) follow the same skeleton with their own Weber values, and the
+composite-d failures (35, 55, 77) are the multiplier nontriviality
+measured in P69-b.
+
+What changed since P69-c: the Schertz mapping survives only for the
+MODULAR pieces (f2, the eta products); x6 itself is quasimodular, and
+the rationality is carried by the Ec/W6 cancellation whose algebraic
+content is exactly these Weber units.
