@@ -1,0 +1,71 @@
+{
+ "deg_matched": [
+  {
+   "pair": [
+    2,
+    29
+   ],
+   "gdepths": [
+    1,
+    2
+   ],
+   "degree": 3,
+   "picked": 29,
+   "picked_high_gdepth": true
+  },
+  {
+   "pair": [
+    3,
+    5
+   ],
+   "gdepths": [
+    1,
+    2
+   ],
+   "degree": 1,
+   "picked": 3,
+   "picked_high_gdepth": false
+  },
+  {
+   "pair": [
+    11,
+    35
+   ],
+   "gdepths": [
+    2,
+    3
+   ],
+   "degree": 2,
+   "picked": 11,
+   "picked_high_gdepth": false
+  }
+ ],
+ "gdepth_matched": [
+  {
+   "pair": [
+    3,
+    2
+   ],
+   "degrees": [
+    1,
+    3
+   ],
+   "gdepth": 1,
+   "picked": 2,
+   "picked_high_degree": true
+  },
+  {
+   "pair": [
+    5,
+    29
+   ],
+   "degrees": [
+    1,
+    3
+   ],
+   "gdepth": 2,
+   "picked": 29,
+   "picked_high_degree": true
+  }
+ ]
+}
