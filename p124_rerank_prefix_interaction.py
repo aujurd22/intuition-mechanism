@@ -64,8 +64,9 @@ for t in titles:
             pool = order[:POOL]
             scores = reranker.predict([(query, paras[j]) for j in pool])
             best = pool[int(np.argmax(scores))]
-            acc[c.replace("_bi", "_rerank")][0] += int(best == gi)
-            acc[c.replace("_bi", "_rerank")][1] += 1
+            rc = {"A_bare_bi": "B_bare_rerank", "C_hyb_bi": "D_hyb_rerank"}[c]
+            acc[rc][0] += int(best == gi)
+            acc[rc][1] += 1
 
 out = {c: round(100 * s / n, 1) for c, (s, n) in acc.items()}
 out["n"] = acc["A_bare_bi"][1]

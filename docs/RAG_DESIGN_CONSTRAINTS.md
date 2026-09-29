@@ -71,12 +71,24 @@ variants: title injection, cross-article stores).
 | DR6 | C6: prefix hedge | Put a 150-200 char verbatim context prefix FIRST in the query; it hedges question-side paraphrase and carries the retrieval mass — protect its integrity |
 | DR7 | C6: prefix source (P122-c) | Take the prefix from the HEAD of the chunk (first sentences / definitional lead): head 98.8% vs tail 66.0% — a 32pp effect that dominates the prefix-length choice |
 
-## The hybrid query optimization (P117)
+## The hybrid query optimization (P117/P120) — a CEILING, not a deployable rule
 
-Context-injection query augmentation (prepend context[:150] + question)
-lifts top1 from 55.6% to 91.1% (+35.5pp).  Prefix length sweep:
-20ch = 60%, 50ch = 80%, 100ch = 97.8%, 150ch+ = 100%.  The optimal
-prefix is 150 characters.
+Context-injection query augmentation (prepend gold-head[:150] + question)
+lifts top1 from 49.8% to 98.8% (+49pp at n=2823).  Prefix length curve
+(P120, n=2823, prefix-first): 81.3% @ 50ch, 95.0% @ 100ch, 99.9% @ 200ch
+— 150-200 chars suffice.  Prefix-first beats question-first at every
+length (P120 order effect).  Head-of-chunk is essential (P122-c): head
+98.8% vs tail 66.0% — the topic sentence carries the mass.  SCOPE: the
+injected prefix is the gold paragraph's own head — this measures the
+CEILING of context injection.  The deployable variant fails: title
+injection (metadata always available at query time) LOSES 9.1pp
+within-article and 7.2pp cross-article (P123) — a title has zero
+within-store contrast at paragraph granularity.
+
+## The reranker interaction (P124)
+
+Placeholder — running.  Question: does the hybrid prefix subsume the
+cross-encoder reranker (both attack the same contrast bottleneck)?
 
 ## The contrast gradient (P116)
 
@@ -101,13 +113,17 @@ self-reachability are complementary, not contradictory.
 
 ## The unified principle
 
-All five constraints reduce to one principle: **contrast** — the
-amount of discriminative content in the query relative to the noise
-space.  The hybrid query maximizes contrast by combining context
-structure with question semantics.  The synonym substitution destroys
-contrast by replacing discriminative tokens.  The template dilution
-reduces contrast by adding non-discriminative prefix.  The query
-floor sets a minimum contrast threshold.  The sibling confusion is
-the failure mode when contrast is insufficient to separate siblings.
+All constraints reduce to one principle: **contrast** — the amount of
+discriminative content in the query relative to the noise space.  The
+hybrid query maximizes contrast by combining context structure with
+question semantics.  Word substitution destroys contrast by replacing
+discriminative tokens (P122-b: dose-dependent).  Template dilution and
+title injection (P123) reduce contrast by adding non-discriminative
+content — even REAL metadata fails when it has no within-store
+contrast.  The query floor sets a minimum contrast threshold.  The
+sibling confusion is the failure mode when contrast is insufficient to
+separate siblings.  The prefix hedge (C6) works because the prefix, not
+the question, carries the contrast — which is also why the prefix
+itself is the fragile asset.
 
 **RAG retrieval quality = contrast / noise_space_volume.**
