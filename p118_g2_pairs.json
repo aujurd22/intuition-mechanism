@@ -1,0 +1,184 @@
+{
+ "records": [
+  {
+   "pair": [
+    43,
+    19
+   ],
+   "w1": 43,
+   "w2": 19,
+   "consistent": false
+  },
+  {
+   "pair": [
+    53,
+    23
+   ],
+   "w1": 53,
+   "w2": 23,
+   "consistent": false
+  },
+  {
+   "pair": [
+    25,
+    19
+   ],
+   "w1": 25,
+   "w2": 19,
+   "consistent": false
+  },
+  {
+   "pair": [
+    11,
+    37
+   ],
+   "w1": 11,
+   "w2": 37,
+   "consistent": false
+  },
+  {
+   "pair": [
+    17,
+    23
+   ],
+   "w1": 17,
+   "w2": 23,
+   "consistent": false
+  },
+  {
+   "pair": [
+    49,
+    37
+   ],
+   "w1": 49,
+   "w2": 37,
+   "consistent": false
+  },
+  {
+   "pair": [
+    31,
+    11
+   ],
+   "w1": 31,
+   "w2": 11,
+   "consistent": false
+  },
+  {
+   "pair": [
+    73,
+    11
+   ],
+   "pick": 73,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    7,
+    37
+   ],
+   "w1": 7,
+   "w2": 37,
+   "consistent": false
+  },
+  {
+   "pair": [
+    47,
+    17
+   ],
+   "w1": 47,
+   "w2": 17,
+   "consistent": false
+  },
+  {
+   "pair": [
+    31,
+    47
+   ],
+   "w1": 31,
+   "w2": 47,
+   "consistent": false
+  },
+  {
+   "pair": [
+    19,
+    11
+   ],
+   "w1": 19,
+   "w2": 11,
+   "consistent": false
+  },
+  {
+   "pair": [
+    19,
+    5
+   ],
+   "pick": 19,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    73,
+    13
+   ],
+   "pick": 73,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    43,
+    25
+   ],
+   "w1": 43,
+   "w2": 25,
+   "consistent": false
+  },
+  {
+   "pair": [
+    13,
+    17
+   ],
+   "pick": 13,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    29,
+    31
+   ],
+   "w1": 29,
+   "w2": 31,
+   "consistent": false
+  },
+  {
+   "pair": [
+    7,
+    47
+   ],
+   "pick": 47,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    17,
+    73
+   ],
+   "pick": 73,
+   "swap_consistent": true
+  },
+  {
+   "pair": [
+    37,
+    25
+   ],
+   "w1": 37,
+   "w2": 25,
+   "consistent": false
+  }
+ ],
+ "summary": {
+  "hi_wins": 4,
+  "lo_wins": 2,
+  "n_dec": 6,
+  "p": 0.6875
+ }
+}
