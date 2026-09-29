@@ -134,3 +134,33 @@ and R = DlogF/(12 W6) = Ec/(24 W6) = 5/3 (7.4e-41).  Piece B is now:
 cancellation identity (elementary) + E2* CM values algebraic
 (standard) + Ec/W6 in Q (Piece A's Pell units).  No numerics remain
 inside the derivation.
+
+## FINAL PROOF STRUCTURE (2026-09-30 01:00, P97 out-of-sample)
+
+The complete logical architecture of the five-row theorem:
+
+  LEVEL FACTS.  P^12 in M0(Gamma0(6), chi_2)  [Ligozat + 120dps numeric]
+  GENUS DESCENT.  P^12 CM values in the genus field  [quadratic
+      nebentypus = genus character via Shimura; numeric: 7-dim spans at
+      35/55/77, single quadratics at 3/5/7/13/17]
+  CANCELLATION.  D log Delta(k tau) = k E2*(k tau) + k-independent
+      correction; the +/- combination cancels identically  [P83-A,
+      elementary]
+  PERIOD ALGEBRAICITY.  E2* CM values algebraic after period
+      normalization  [standard CM; Bruinier-vdG conventions]
+  DERIVATIVE RATIO.  R_d = P'/(2 pi i P W6) = (Ec/W6)/24 = 5/3, 3, 5,
+      17, 33  [numerically exact; mechanism = cancellation + period
+      algebraicity + Pell-unit closed forms of P82]
+  CONCLUSION.  x6 = 1/(6 R_d + 2) in Q for the five rows.
+
+  OUT-OF-SAMPLE (P97): zero rational rows in d in [80,200] where the
+  2-elementary locus is empty -- the characterization's necessity
+  direction survives on undiscovery data.
+
+  REMAINING FORMAL GAP (one): the Schertz Thm 4 scope at non-coprime
+  classes (the transport lemma for chi_2's non-coprime action).
+  Everything else is citation-level assembly.
+
+The theorem is no longer "numerics suggest": it is a statement with a
+complete proof architecture, one flagged lemma, and out-of-sample
+survival on undiscovery data.
