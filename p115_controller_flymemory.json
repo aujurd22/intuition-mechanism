@@ -1,0 +1,11 @@
+{
+ "N_active": 8145,
+ "N_sample": 500,
+ "r_analog": 0.731,
+ "ff": 0.498,
+ "median_nn_cos": 0.597,
+ "red_cov_corr": -0.037,
+ "controller_type": "exemplar",
+ "controller_eviction": "random",
+ "controller_query_gate": "ON"
+}
