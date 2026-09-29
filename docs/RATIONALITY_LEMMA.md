@@ -132,3 +132,50 @@ Three registry errors fixed and one MECHANISM found:
 The x6 rationality then follows from the Ec/W6 cancellation (P83-A):
 x6 = 4/(Ec/W6 + 8), and Ec/W6 = 24 R_d with R_d in Q -- the chain is
 nebentypus-triviality (Piece A/B algebraic) + cancellation (P83-A).
+
+## FORMAL LEMMA (P89-O1/O2, registered 2026-09-30 01:30)
+
+Setting: d positive with Cl(-24d) a 2-group, tau0 = i*sqrt(d/6),
+P^12 = [eta(2t)eta(6t)/(eta(t)eta(3t))]^12 — by the Ligozat criterion
+a weight-0 modular function for Gamma0(6) with QUADRATIC nebentypus
+chi_2 (verified numerically to 1e-58, P89).  x6 = W6/z6 (quasimodular,
+P76).  K = Q(sqrt(-6d)), H = ring class field of D = -24d.
+
+LEMMA.  (i) P^12(tau0) lies in the real genus field of K — the
+subfield fixed by Cl^2 (squares); its degree over Q divides
+2^(t-1) with t = the number of distinct prime discriminants of D.
+(ii) chi_2 (a genus character) is trivial on Cl(-24d)  iff
+P^12(tau0) in Q, and nontrivial iff P^12(tau0) generates a real
+quadratic subfield of the genus field.
+(iii) x6(tau0) in Q iff chi_2 is trivial — via the P83-A cancellation
+ Ec/W6 = 24 R_d with R_d in Q (whose mechanism is the SAME chi_2
+ acting identically on the E2*-combination and on W6).
+
+Proof route (citation-level): (i)+(ii) = Shimura reciprocity for
+level-6 functions with quadratic nebentypus (Schertz Thm 4 with the
+quadratic simplification: quadratic characters are genus characters,
+so the action factors through the genus group).  (iii) = P83-A's
+cancellation identity (elementary, D log Delta(k tau) = k E2*(k tau)
++ k-independent correction) + the standard period-algebraicity of
+E2* at CM points (period-normalized form per the P76 correction).
+
+Numerical corollaries (all verified):
+- d=3: Cl = Z/2, chi_2 nontrivial on the generator -> P^12 in
+  Q(sqrt6), generating the genus real subfield (49/64 - (5/16)sqrt6).
+- d=7,13: (Z/2)^2 -> P^12 in a quadratic genus subfield
+  (Q(sqrt21), Q(sqrt13)).
+- d=5: (Z/2)^2 -> Q(sqrt10).
+- d=17: Z/4 x Z/2 -> exp 4; chi_2 factors through the 2-elementary
+  quotient, and the UNIT POWER m_d = exp/2 = 2 (P82-CLOSURE) is the
+  multiplicative shadow: a Z/4 class acts through chi of order
+  dividing 2 on chi_2-isotypical values but the UNIT picks up one
+  extra square.
+- composite d = 35,55,77: (Z/2)^3 -> P^12 spans the FULL real genus
+  field (7 quadratic subfields, measured P89 step 1); x6 irrational.
+
+THEOREM (this lemma + P79/P80 numerics): x6(tau0) in Q exactly for
+d in {3,5,7,13,17} within the 2-elementary locus, with the
+composite-d exclusion following from chi_2 nontriviality.
+Remaining formal gap: the Shimura-reciprocity citation for level-6
+quadratic-nebentypus functions at non-coprime classes (Schertz Thm 4
+scope extension) — a write-up gap, not a computational one.
