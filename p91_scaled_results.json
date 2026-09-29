@@ -1,0 +1,322 @@
+{
+ "pairs": {
+  "deg_matched": [
+   {
+    "pair": [
+     3,
+     5
+    ],
+    "degree": 1,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     3,
+     7
+    ],
+    "degree": 1,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     3,
+     13
+    ],
+    "degree": 1,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     3,
+     17
+    ],
+    "degree": 1,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     11,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     19,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     23,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     25,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     43,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     47,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     73,
+     35
+    ],
+    "degree": 2,
+    "gdepths": [
+     2,
+     3
+    ],
+    "pick": "low"
+   },
+   {
+    "pair": [
+     2,
+     31
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     2,
+     53
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     2,
+     29
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     2,
+     49
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     9,
+     53
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     27,
+     29
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     9,
+     31
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     9,
+     49
+    ],
+    "degree": 3,
+    "gdepths": [
+     1,
+     2
+    ],
+    "pick": "high"
+   }
+  ],
+  "gdepth_matched": [
+   {
+    "pair": [
+     3,
+     2
+    ],
+    "gdepth": 1,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     3,
+     9
+    ],
+    "gdepth": 1,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     5,
+     29
+    ],
+    "gdepth": 2,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     5,
+     31
+    ],
+    "gdepth": 2,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": "high"
+   },
+   {
+    "pair": [
+     7,
+     29
+    ],
+    "gdepth": 2,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": null
+   },
+   {
+    "pair": [
+     7,
+     31
+    ],
+    "gdepth": 2,
+    "degrees": [
+     1,
+     3
+    ],
+    "pick": null
+   }
+  ]
+ },
+ "summary": {
+  "deg": {
+   "n_consistent": 9,
+   "k_high": 8,
+   "rate": 88.9,
+   "p_two_sided": 0.0391
+  },
+  "gdepth": {
+   "n_consistent": 3,
+   "k_high": 3,
+   "rate": 100.0,
+   "p_two_sided": 0.25
+  }
+ }
+}
