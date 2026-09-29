@@ -91,3 +91,21 @@ skeleton; the unified theorem statement above is registered but the
 formal write-up has not been done.  This document is the honest line
 between computational discovery (complete) and theorem (three
 citations away).
+
+## Piece A update (P81, 2026-09-29 17:55): the Pell unit form
+
+  392 - 160 sqrt6 = 8 (sqrt3 - sqrt2)^4,  (sqrt3-sqrt2)(sqrt3+sqrt2) = 1.
+
+So for d = 3:  P(tau0)^12 = (sqrt3 - sqrt2)^4 / 64,  and the universal
+norm 2^-12 across all five rows is elementary: each row's closed form
+is (unit of norm 1) x (a power-of-2 normalization).  The five Weber
+values are elliptic units normalized by the same 2-power; their
+"unit parts" are Pell units of the respective real quadratic genus
+subfields (Q(sqrt6): fundamental unit sqrt3+sqrt2; the other four
+rows' unit parts are queued for the same treatment).
+
+Literature anchor (Piece A citation chain COMPLETE at the structural
+level): Berndt, Chan, Kang, Zhang, Pacific J. Math 202(2) (2002)
+267-304 -- the J_n eta-quotient series of Ramanujan's Notebook III
+p. 392 (berndt2002.pdf in repo root).  Our d=3 value sits on the
+norm/conjugate branch of the same table family.
