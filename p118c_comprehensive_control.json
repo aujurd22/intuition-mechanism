@@ -1,0 +1,42 @@
+{
+ "range": [
+  1,
+  100
+ ],
+ "dps": 50,
+ "hits": [
+  [
+   1,
+   "8.0"
+  ],
+  [
+   3,
+   "12.0"
+  ],
+  [
+   5,
+   "20.0"
+  ],
+  [
+   7,
+   "32.0"
+  ],
+  [
+   13,
+   "104.0"
+  ],
+  [
+   17,
+   "200.0"
+  ]
+ ],
+ "unexpected_hits": [],
+ "confusion": {
+  "TP": 6,
+  "FN": 0,
+  "FP": 0,
+  "TN": 294
+ },
+ "method": "1/x6 = Ec/(4 W6) + 2, Ec = 4 + 24(L1+L3-L2-L6), Lambert series",
+ "note": "regenerated 2026-09-30 (registered artifact p118c_comprehensive_control.json was missing from the repo)"
+}
