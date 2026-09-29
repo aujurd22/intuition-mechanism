@@ -25,7 +25,7 @@ self-improvement rule rather than post-hoc description.
 ## 2. Output rules (each bound to its law)
 
 R1 (type, v4 final after two synthetic falsifications).  STARVED
-(per-class capacity <= ~3) and r <= 0.5 -> prototype: a capacity-1
+(per-class capacity <= cap*(r, D), the measured crossover curve: D=6 gives 1/3/5/5 at r = 0.15/0.25/0.35/0.45; D=12 gives 1/2/8/12 -- P74) and r <= 0.5 -> prototype: a capacity-1
 exemplar store IS a noisy prototype, and the denoised mean dominates it
 unconditionally (P52: STR 64.6 >> EPI1 15.4; P73-c: 60.0 vs 25.5 at
 sigma=1.8).  NON-STARVED -> exemplar with core-first eviction, at any
@@ -74,6 +74,18 @@ R7 (rehearsal).  Refresh budget goes to fringe entries first
 (complement of R3: evicting the core = rehearsing the fringe by
 construction).
 [L6; P72]
+
+R8 (substrate feasibility, from the harness's G1 lesson).  Every R1-R7
+output must pass a substrate-feasibility check before execution: can
+the memory engine ACTUALLY represent this policy's writes?  A policy
+that is optimal in the abstract layer (e.g., capacity 13 per class)
+but violates an encoding constraint (entry-size limits, chunk
+atomicity, key structure) is not in the feasible policy set and must
+be rejected BEFORE the run -- the G1 failure mode was a statistically
+correct mutation that the substrate could not express.  The
+feasibility predicates are substrate-specific and belong to the
+harness; the controller's obligation is the explicit gate.
+[G1 findings, harness repo]
 
 ## 3. Falsifiable predictions for the controller (registered)
 
