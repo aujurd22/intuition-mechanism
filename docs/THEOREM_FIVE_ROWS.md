@@ -109,3 +109,28 @@ level): Berndt, Chan, Kang, Zhang, Pacific J. Math 202(2) (2002)
 267-304 -- the J_n eta-quotient series of Ramanujan's Notebook III
 p. 392 (berndt2002.pdf in repo root).  Our d=3 value sits on the
 norm/conjugate branch of the same table family.
+
+## P82/P83 (2026-09-29 18:05): the universal form and the strict d=3 derivation
+
+P82 (verified):  64 P(tau0)^12 = eps_d^2 for all five rows, where
+eps_d is a power (m_d in {-1,-2}) of the norm-1 Pell unit of the
+genus real subfield:
+  eps_3 = 5-2sqrt6 = (sqrt3-sqrt2)^2
+  eps_5 = 19-6sqrt10 = (3+sqrt10)^-2
+  eps_7 = (55+12sqrt21)^-1
+  eps_13 = (649+180sqrt13)^-1
+  eps_17 = (35+6sqrt34)^-2.
+Open datum: a uniform rule for m_d (conjecture: fixed by the
+multiplier character's order).
+
+P83-A (d=3, strict):  F = 64P^12 = 64[Delta(2t)Delta(6t)/(Delta(t)Delta(3t))]^(1/2).
+Key identity:  D log Delta(k tau) = k E2*(k tau) + 3/(pi Im tau),
+whose correction term is k-INDEPENDENT -- so in
+F = 64[ratio]^(1/2) (two numerator terms, two denominator terms)
+the quasimodular corrections CANCEL IDENTICALLY:
+  D log F = (1/2)[2E2*(2t) + 6E2*(6t) - E2*(t) - 3E2*(3t)],
+purely modular.  At tau0 this combination equals Ec(tau0) exactly,
+and R = DlogF/(12 W6) = Ec/(24 W6) = 5/3 (7.4e-41).  Piece B is now:
+cancellation identity (elementary) + E2* CM values algebraic
+(standard) + Ec/W6 in Q (Piece A's Pell units).  No numerics remain
+inside the derivation.
