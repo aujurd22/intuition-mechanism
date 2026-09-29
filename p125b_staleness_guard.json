@@ -1,0 +1,12 @@
+{
+ "all": 83.3,
+ "fresh": 83.4,
+ "stale": 83.1,
+ "first_turn": 83.3,
+ "n": {
+  "all": 2823,
+  "fresh": 2373,
+  "stale": 444,
+  "first_turn": 6
+ }
+}

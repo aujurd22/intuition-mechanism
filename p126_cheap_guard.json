@@ -1,0 +1,67 @@
+{
+ "n_turns_with_history": 2817,
+ "fresh_n": 2373,
+ "stale_n": 444,
+ "s_mean_fresh": 0.491,
+ "s_mean_stale": 0.407,
+ "separation_auc": 0.639,
+ "always_bare_top1": 49.7,
+ "always_anchor_top1": 84.3,
+ "routing_curve": [
+  {
+   "theta": 0.3,
+   "top1": 77.5,
+   "trust_rate": 83.6
+  },
+  {
+   "theta": 0.35,
+   "top1": 74.7,
+   "trust_rate": 77.6
+  },
+  {
+   "theta": 0.4,
+   "top1": 70.6,
+   "trust_rate": 68.4
+  },
+  {
+   "theta": 0.45,
+   "top1": 67.0,
+   "trust_rate": 58.4
+  },
+  {
+   "theta": 0.5,
+   "top1": 62.8,
+   "trust_rate": 47.5
+  },
+  {
+   "theta": 0.55,
+   "top1": 58.9,
+   "trust_rate": 36.4
+  },
+  {
+   "theta": 0.6,
+   "top1": 54.8,
+   "trust_rate": 26.1
+  },
+  {
+   "theta": 0.65,
+   "top1": 52.5,
+   "trust_rate": 16.6
+  },
+  {
+   "theta": 0.7,
+   "top1": 51.0,
+   "trust_rate": 9.2
+  },
+  {
+   "theta": 0.75,
+   "top1": 50.2,
+   "trust_rate": 3.6
+  },
+  {
+   "theta": 0.8,
+   "top1": 49.8,
+   "trust_rate": 1.3
+  }
+ ]
+}
