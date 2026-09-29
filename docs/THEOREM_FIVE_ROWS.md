@@ -164,3 +164,24 @@ The complete logical architecture of the five-row theorem:
 The theorem is no longer "numerics suggest": it is a statement with a
 complete proof architecture, one flagged lemma, and out-of-sample
 survival on undiscovery data.
+
+## The character-theoretic closure (P98-c, 2026-09-30 03:40)
+
+The quadratic nebentypus of P^12 is IDENTIFIED: chi_2 = Kronecker
+(-3/.), the nontrivial Dirichlet character mod 3 = the genus character
+associated to the prime 3 in D = -24d.  Verified: all 24 tested
+Gamma0(6) elements give ratio = chi_2(a mod 6) = +1 iff a = 1 mod 6,
+-1 iff a = 5 mod 6 (120 dps).
+
+Mechanism: by Shimura reciprocity, chi_2 as nebentypus becomes the
+genus character of the -3 component in the class-field Galois action.
+This is WHY P^12's CM values land in the genus field (Prop O1): the
+nebentypus IS the genus character.  And chi_2 = (-3/.) is trivial on
+Cl(-24d) exactly when no class carries a nontrivial (-3) genus
+component — for prime d in {3,5,7,13,17} this holds (all classes
+trivial), for composite d in {35,55,77} it fails (measured nontrivial,
+P69-b).
+
+The theorem's character-theoretic form: x6(tau0) in Q iff the (-3)
+genus character is trivial on Cl(-24d).  The 2-elementary condition
+ensures no higher characters contribute.
