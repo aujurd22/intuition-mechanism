@@ -24,9 +24,20 @@ self-improvement rule rather than post-hoc description.
 
 ## 2. Output rules (each bound to its law)
 
-R1 (type).  r <= 0.5 -> prototype; nn <= 0.5 and ts -> exemplar;
-both -> hybrid (prototype for the core, exemplars for the fringe).
-[L1, L2; P52/P65/P65-b]
+R1 (type, v2 after the synthetic falsification).  Prototype iff
+r <= 0.5 AND ff <= 0.1 (the mean-ball covers essentially all class
+mass); exemplar iff nn <= 0.5 (prefer core-first eviction when the
+store is budgeted); otherwise report "no law applies" and fall back to
+the better-measured arm.  HISTORY: v1 used r <= 0.5 alone and was
+FALSIFIED by the synthetic suite (P73-synth): the Law-1 boundary is a
+VIABILITY boundary, not an optimality boundary -- at r = 0.297-0.468
+with ff = 0.19-0.27 the exemplar arm beats the prototype by 4-12
+points, because the fringe mass is exactly what the mean-ball never
+covers.  TIE ZONE (r ~ 0.4-0.55, ff ~ 0.1-0.3): the arm ordering
+FLIPS across seeds -- Laws 1-6 genuinely do not determine the choice
+there, and the controller's honest output is a degenerate choice with
+no-regression measured against the tie-zone distribution.
+[L1, L2, L6; P52/P65/P65-b, P73-synth]
 
 R2 (capacity).  Grow the store until the marginal entry adds less than
 delta coverage (cov plateau reached, P55); never past it.  Expected

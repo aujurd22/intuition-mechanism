@@ -1,0 +1,58 @@
+{
+ "gauss-tight": {
+  "r": 0.252,
+  "nn": 0.163,
+  "ff": 0.0,
+  "accs": {
+   "proto": 98.0,
+   "epi-all": 98.0,
+   "core": 98.0,
+   "LRU": 98.0
+  },
+  "controller": 98.0,
+  "choice": "prototype",
+  "best_fixed": 98.0
+ },
+ "markov-std": {
+  "r": 0.468,
+  "nn": 0.459,
+  "ff": 0.269,
+  "accs": {
+   "proto": 54.61538461538461,
+   "epi-all": 50.0,
+   "core": 48.46153846153846,
+   "LRU": 49.23076923076923
+  },
+  "controller": 48.5,
+  "choice": "exemplar",
+  "best_fixed": 54.6
+ },
+ "markov-hard": {
+  "r": 1.358,
+  "nn": 1.419,
+  "ff": 1.0,
+  "accs": {
+   "proto": 0.0,
+   "epi-all": 0.0,
+   "core": 0.0,
+   "LRU": 0.0
+  },
+  "controller": 0.0,
+  "choice": "max-of-fixed",
+  "best_fixed": 0.0
+ },
+ "twoscale": {
+  "r": 0.266,
+  "nn": 0.184,
+  "ff": 0.191,
+  "accs": {
+   "proto": 78.18181818181819,
+   "epi-all": 82.72727272727273,
+   "core": 82.72727272727273,
+   "LRU": 81.81818181818181
+  },
+  "controller": 82.7,
+  "choice": "exemplar",
+  "best_fixed": 82.7
+ }
+}
