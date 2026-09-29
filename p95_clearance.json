@@ -1,0 +1,11 @@
+{
+ "mean_auroc": 0.969,
+ "per_store": {
+  "Super_Bowl_50": 0.995,
+  "Nikola_Tesla": 0.938,
+  "Martin_Luther": 0.99,
+  "American_Broadcasting_Company": 0.944,
+  "Doctor_Who": 0.95,
+  "Economic_inequality": 1.0
+ }
+}
