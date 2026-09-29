@@ -127,7 +127,8 @@
    2
   ]
  ],
- "rho_degree": 0.622077922077922,
- "rho_gdepth": 0.622077922077922,
- "rho_partial": 0.35064935064935066
+ "rho_degree": 0.485,
+ "rho_gdepth": 0.485,
+ "rho_partial": 0.146,
+ "CORRECTION": "The originally registered rho values (0.622/0.622/0.351) came from a buggy inline spearman that computed argsort-correlation instead of rank-correlation. Correct ties-averaged values: 0.485/0.485/0.146. Caught by external re-computation."
 }

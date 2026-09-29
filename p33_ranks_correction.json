@@ -1,0 +1,5 @@
+{
+ "v1_rho_ties_averaged": 0.4123521463875827,
+ "v3_rho_ties_averaged": 0.48512017222068554,
+ "note": "P88's inline spearman was an argsort-correlation bug; v1/v2/v3's rank_of also mishandled ties (no average-rank correction). Correct ties-averaged values recorded here. v2 ranks not stored -- flagged for re-run."
+}
