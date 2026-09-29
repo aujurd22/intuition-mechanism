@@ -28,7 +28,7 @@ mm.mp.dps = 40
 CENSUS = json.load(open("p36a_lambda_census.json"))
 DEG = {r["N"]: r["deg"] for r in CENSUS
        if "deg" in r and "error" not in r}
-NS = sorted(DEG)          # 21 identities with known degrees
+NS = sorted(N for N, g in DEG.items() if g is not None)   # the 21 known-degree rows
 
 
 def params_for(N):
