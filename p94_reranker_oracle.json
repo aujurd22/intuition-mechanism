@@ -1,0 +1,37 @@
+{
+ "Super_Bowl_50": {
+  "raw_top1": 50.0,
+  "oracle_top1": 88.3,
+  "n": 60
+ },
+ "Nikola_Tesla": {
+  "raw_top1": 43.3,
+  "oracle_top1": 78.3,
+  "n": 60
+ },
+ "Martin_Luther": {
+  "raw_top1": 51.7,
+  "oracle_top1": 91.7,
+  "n": 60
+ },
+ "American_Broadcasting_Company": {
+  "raw_top1": 46.7,
+  "oracle_top1": 71.7,
+  "n": 60
+ },
+ "Doctor_Who": {
+  "raw_top1": 40.0,
+  "oracle_top1": 80.0,
+  "n": 60
+ },
+ "Economic_inequality": {
+  "raw_top1": 55.0,
+  "oracle_top1": 76.7,
+  "n": 60
+ },
+ "pooled": {
+  "raw": 47.8,
+  "oracle": 81.1,
+  "n": 360
+ }
+}
