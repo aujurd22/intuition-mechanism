@@ -1,89 +1,136 @@
-# The Character Obstruction Theorem (P85 formalization)
+# The Character Obstruction Theorem — CLOSED and CORRECTED (P132)
 
-Status: registered 2026-09-30 00:05.  This is the formalization of the
-P69-b measured gap and the P89 nebentypus mechanism, stated as three
-checkable propositions.  It is the "why exactly these five" half of the
-five-row theorem.
+Status: 2026-09-30, final.  This revision closes the one remaining
+formal gap registered in the previous version ("the Schertz-Thm-4
+transport lemma at non-coprime classes", P114) and corrects the
+character-theoretic criterion that the previous version stated.  The
+numerical six-row theorem is untouched (P121: 6 TP + 294 TN over
+d in [1, 300]).
 
 ## Setting
 
-d positive, in the 2-elementary locus (Cl(-24d) a 2-group, genus theory).
-tau0 = i*sqrt(d/6).  P = eta(2tau)eta(6tau)/(eta(tau)eta(3tau)) --
-modular of level 6 with a multiplier of order 12;  P^12 has QUADRATIC
-nebentypus chi_2 on Gamma0(6) (P89: numerically +-1 to 1e-58; in
-theory via the Ligozat nebentypus formula).  x6 = W6/z6, quasimodular
-(P76).  H = ring class field of D = -24d; G = its real genus
-subfield chain.
+d positive, in the 2-elementary locus {1,3,5,7,10,13,17,35,55,77}
+(Cl(-24d) a 2-group).  tau0 = i*sqrt(d/6).  P = eta(2t)eta(6t)/
+(eta(t)eta(3t)), modular of level 6; P^12 has quadratic nebentypus
+chi_2 on Gamma0(6) (Ligozat criterion; verified +-1 to 1e-58, P89).
+x6 = W6/z6, quasimodular (P76).  H = ring class field of D = -24d,
+H_gen = its genus field.  K = Q(sqrt(D/4-normalized)).
 
-## The three propositions
+## Lemma A (coprime representatives — the gap dissolves)
 
-### Prop O1 (field containment via quadratic nebentypus)
+Every primitive binary quadratic form of any discriminant is SL2(Z)-
+equivalent to a form whose leading coefficient is coprime to 6.
 
-P^12(tau0) lies in the real genus field of D = -24d.
+Proof.  Let [A,B,C] be primitive, F(x,y) = Ax^2+Bxy+Cy^2.  For p in
+{2,3}: F is nonzero mod p as a form (primitivity), hence F(x,1) is a
+nonzero poly of degree <= 2 over F_p, hence vanishes for at most 2
+residues mod p while there are p >= 2 residues — pick x_p with
+F(x_p,1) =/= 0 mod p (mod 2 both residues cannot vanish: that would
+force A = B = C = 0 mod 2).  CRT gives x0 mod 6 with gcd(F(x0,1),6)=1.
+Set (a,b) = (x0,1), choose (c,d) by x0*d - c = 1 (extended gcd), and
+G = F(a*u+b*v, c*u+d*v).  Then G is a primitive form of the same
+discriminant with leading coefficient F(x0,1), coprime to 6.  QED.
 
-Mechanism (Shimura reciprocity, quadratic case): a modular function
-whose nebentypus is quadratic has CM values on which the ring class
-Gal(H/K) acts through its GENUS quotient Cl/Cl^2; the further action
-of the real-cl-conjugation element splits the field into real
-quadratic factors.  Hence P^12(tau0) is a rational combination of the
-sqrt(p*_S) -- the real genus basis.
+Consequence: every class of Pic(O) admits an ideal representative of
+norm coprime to 6 (the ideal of G has norm G_A).  Therefore the
+coprimality hypothesis of the Schertz-Thm-4 transport is satisfiable
+for EVERY class of EVERY order in the locus — **there are no
+"non-coprime classes"**.  The registered obstruction (P114: "the
+generator class (2,0,9) for d=3 has all forms with even A") checked
+only REDUCED forms; the explicit equivalence [2,0,9] ~ [11,18,9]
+(A = 11, gcd = 1, same discriminant -72) is a counterexample, and the
+lemma makes it general.  THE REGISTERED FORMAL GAP IS CLOSED.
 
-Numerical support: five rows in a single real quadratic subfield
-(P79, exact); composite rows in the full real genus field
-(P89 step 1, 7-dim recognition); single-subfield membership
-NEGATIVELY probed at 15 s-values (P80).
+Mechanical verification: p132_coprime_representatives.py — for all 10
+locus discriminants, every class exhibits an explicit 6-coprime
+representative with discriminant and primitiveness checked
+(48 classes total, 48/48 pass).
 
-Formal gap: writing (i) with Schertz Thm 4's N-system bookkeeping
-(gcd(A, 6) = 1 representatives + the chi_2 consistency) -- a citation-
-level assembly.
+## Prop O1 (genus containment) — PROVED
 
-### Prop O2 (the stabilizer identity)
+For 2-elementary d, every algebraic modular value at tau0 — in
+particular P^12(tau0), W6(tau0), x6(tau0) — lies in H_gen.
 
-Stab_{Cl}(P^12(tau0)) = ker(chi_2 viewed as a character of Cl via the
-Artin map), where chi_2(𝔞) is the evaluation of the eta-quotient
-nebentypus on the Artin-associated matrix.
+Proof.  (i) CM theorem: a modular function with algebraic q-expansion
+evaluated at the CM point of the order O lies in H.  (ii) Genus theory
+of orders: H_gen = the fixed field of Pic(O)^2 inside H.
+(iii) Pic(O) 2-elementary => Pic(O)^2 = {1} => H_gen = H.
+Combining: the value lies in H = H_gen.  NO transport and NO
+coprimality is used — the non-coprime classes are irrelevant to
+containment.  QED.
 
-Why this is the right form: a quadratic nebentypus means the value's
-Galois orbit is the chi_2-isotypical orbit -- each class either fixes
-the value (chi = +1) or sends it to the OTHER root of the same
-quadratic minimal polynomial (chi = -1).  Extra collapse (a larger
-stabilizer) would require the value to be annihilated by a genus
-character it does not carry -- possible in principle, excluded by
-the P80/P92 measurements at d = 35/55/77 (the value spans the full
-4-dim locus, no extra collapse) and by the five rows' minimial
-polynomial 4096x^2 - 6272x + 1 (exactly quadratic, no collapse).
+Numerical confirmation: h(D) = 2^(t-1) on all 10 locus rows
+(p132 table; also the closed forms' fields sit inside H_gen — the
+prime-discriminant signs were re-derived: 2-pd is +8 iff
+(D/8) = +1 mod 4 i.e. D/8 = 1 mod 4; the odd p-pd is (−1)^((p−1)/2)p;
+e.g. d=7 has pds {-8,-3,-7}, so sqrt21 = sqrt(-3)sqrt(-7) IS in
+H_gen, resolving an apparent contradiction).
 
-Formal gap: the Schertz-Thm-4 transport for chi_2 at the
-non-coprime classes -- the one place where the level-structure
-subtlety (P63 addendum) still needs a lemma.
+## Prop O2 (stabilizer = support-character kernel) — CORRECTED, verified
 
-### Prop O3 (the obstruction direction)
+The previous version identified the rationality-relevant character with
+chi_2 = Kronecker(-3/.) on every row.  That identification is
+ROW-DEPENDENT and fails on d in {7,13}.  The corrected statement:
 
-chi_2 trivial on Cl(-24d)  <=>  P^12(tau0) in Q
- <=>  x6(tau0) in Q  (via the cancellation chain of P83-A:
-     Ec/W6 = 24 R_d with R_d rational iff x6 rational).
+Let the SUPPORT sqrt(s_d) be the single real genus coordinate carried
+by P^12(tau0) (the P79 closed forms), i.e. the prime-discriminant
+product whose sign flip sends P^12(tau0) to its algebraic conjugate:
 
-"=>": immediate from O2 (trivial stabilizer = full class group fixed
-the value = Q).  "<=": requires that Q-rationality of x6 forces the
-FULL orbit to collapse -- which is O2 plus the non-degeneracy of the
-quadratic (the minimal polynomial 4096x^2 - 6272x + 1 has two DISTINCT
-roots, so rationality = both roots equal = stabilizer everything).
+    d=3:  s = 24  = (-8)(-3)   support char = chi(-3) (= chi(-8))
+    d=5:  s = 40  = (8)(5)     support char = chi(8)chi(5) (= chi(-3))
+    d=7:  s = 21  = (-3)(-7)   support char = chi(-3)chi(-7) (= chi(-8))
+    d=13: s = 13  (generator)  support char = chi(13) (= chi(8)chi(-3))
+    d=17: s = 136 = (8)(17)    support char = chi(8)chi(17) (= chi(-3))
 
-## The theorem this yields (once O1-O3 are formal)
+(the parenthesized equalities are the product relation
+chi(-8)chi(-3)chi(odd pds) = 1 on the genus group).  Then
 
-x6(tau0) in Q  iff  d is in the 2-elementary locus  AND  chi_2 is
-trivial on Cl(-24d).
+    Stab_{Pic(O)}(P^12(tau0)) = ker(chi_support),
 
-The census locus {3,5,7,13,17} is then exactly the intersection, and
-the composite-d failures are chi_2-nontrivial rows -- turning the
-P69-b measurement into the theorem's content.
+because Gal(H_gen/K) = Pic(O) acts on H_gen by the sign vector and
+P^12(tau0) = a - b*sqrt(s_d) with b =/= 0 (P79).  Mechanically:
+chi_support == chi_2 (= Kronecker(-3,.)) on 100% of classes for
+d in {3,5,17} and on only 2/4 classes for d in {7,13} — exactly the
+rows where the registered identification was wrong; for d=7/13 the
+correct stabilizer kernel is ker(chi(-8)) / ker(chi(13)).
 
-## What remains
+## Prop O3 — RETRACTED as stated; corrected criterion
 
-1. The Schertz-Thm-4 transport lemma at non-coprime classes
-   (the P63-addendum subtlety, now the only structural gap).
-2. O2's non-collapse at t >= 3 (d=35/55/77 measured: value spans
-   the 4-dim locus -- supports no-collapse, formal write-up pending).
-3. m_d = exp(Cl)/2 (P82-CLOSURE) is the multiplicative shadow of the
-   same story at the level of UNITS rather than x6 -- connecting the
-   Pell-unit powers to chi_2's order would unify Pieces A and B.
+RETRACTED: "chi_2 (Kronecker(-3,.)) trivial on Cl  <=>  x6 in Q".
+Mechanically, chi_2 is NONTRIVIAL on the class group of EVERY locus
+row (P132 table: values {+1,-1} on all ten) — the criterion never
+fires, so it cannot be the separator.  (The previous version's
+transport formula sigma(f) = chi_2(A) f(tau0) is also false as stated:
+for d=3, sigma is the sqrt6-conjugate 49/64 + (5/16)sqrt6, not
+-P^12.)
+
+CORRECTED:  x6(tau0) in Q  <=>  2-elementary AND P^12(tau0) has
+single-coordinate support AND the pair (P^12, W6) satisfies the
+Pell-unit normalization 64 P^12 = eps_d^{±1} (P79/P82) — the last is
+the deep content, carried by the CM-derivative cancellation chain
+(P83-A/P84), not by genus theory alone.  Genus theory supplies the
+FIELD (O1) and the ORBIT STRUCTURE (O2); the Pell chain supplies the
+RATIONALITY.
+
+## Status of the six-row theorem
+
+- Census ground truth: P121, d in [1,300], 6 TP + 294 TN, 0 FP/FN.
+- "<=" (six rows rational): PROVEN by the closed-form/Pell chain
+  (P79-P84); now complemented by O1 (the values live in the right
+  field) and O2-corrected (the orbit structure).
+- "=>" (all other d irrational): census-proven; the character-theoretic
+  explanation is the corrected support story above, with the
+  composite-d multi-coordinate support measured (P89 step 1) and the
+  d=10 case (t=3, h=4, still irrational) pinning the criterion on the
+  Pell normalization rather than on h or t.
+
+## What actually remains (paper-level)
+
+1. The Schertz citation for the transport ON COPRIME CLASSES (now
+   sufficient everywhere by Lemma A) — assembly, not discovery.
+2. A conceptual explanation of WHY the support picks sqrt(s_d) and the
+   Pell normalization holds for exactly {1,3,5,7,13,17} — the honest
+   open question behind the six-row theorem (the census is complete;
+   this is the "why" layer).
+3. m_d = exp(Cl)/2 (P82) unification with the support-character
+   picture.

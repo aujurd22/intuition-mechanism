@@ -1,0 +1,565 @@
+{
+ "all_classes_6coprime": true,
+ "report": {
+  "1": {
+   "D": -24,
+   "h": 2,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      6
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      3
+     ],
+     "coprime_rep": true,
+     "rep_A": 5,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "3": {
+   "D": -72,
+   "h": 2,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      18
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      9
+     ],
+     "coprime_rep": true,
+     "rep_A": 11,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "5": {
+   "D": -120,
+   "h": 4,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      30
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      15
+     ],
+     "coprime_rep": true,
+     "rep_A": 17,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      10
+     ],
+     "coprime_rep": true,
+     "rep_A": 13,
+     "chi2": 1
+    },
+    {
+     "form": [
+      5,
+      0,
+      6
+     ],
+     "coprime_rep": true,
+     "rep_A": 5,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "7": {
+   "D": -168,
+   "h": 4,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      42
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      21
+     ],
+     "coprime_rep": true,
+     "rep_A": 23,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      14
+     ],
+     "coprime_rep": true,
+     "rep_A": 17,
+     "chi2": -1
+    },
+    {
+     "form": [
+      6,
+      0,
+      7
+     ],
+     "coprime_rep": true,
+     "rep_A": 7,
+     "chi2": 1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "10": {
+   "D": -240,
+   "h": 4,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      60
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      3,
+      0,
+      20
+     ],
+     "coprime_rep": true,
+     "rep_A": 23,
+     "chi2": -1
+    },
+    {
+     "form": [
+      4,
+      0,
+      15
+     ],
+     "coprime_rep": true,
+     "rep_A": 19,
+     "chi2": 1
+    },
+    {
+     "form": [
+      5,
+      0,
+      12
+     ],
+     "coprime_rep": true,
+     "rep_A": 5,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "13": {
+   "D": -312,
+   "h": 4,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      78
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      39
+     ],
+     "coprime_rep": true,
+     "rep_A": 41,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      26
+     ],
+     "coprime_rep": true,
+     "rep_A": 29,
+     "chi2": -1
+    },
+    {
+     "form": [
+      6,
+      0,
+      13
+     ],
+     "coprime_rep": true,
+     "rep_A": 13,
+     "chi2": 1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "17": {
+   "D": -408,
+   "h": 4,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      102
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      51
+     ],
+     "coprime_rep": true,
+     "rep_A": 53,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      34
+     ],
+     "coprime_rep": true,
+     "rep_A": 37,
+     "chi2": 1
+    },
+    {
+     "form": [
+      6,
+      0,
+      17
+     ],
+     "coprime_rep": true,
+     "rep_A": 17,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "35": {
+   "D": -840,
+   "h": 8,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      210
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      105
+     ],
+     "coprime_rep": true,
+     "rep_A": 107,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      70
+     ],
+     "coprime_rep": true,
+     "rep_A": 73,
+     "chi2": 1
+    },
+    {
+     "form": [
+      5,
+      0,
+      42
+     ],
+     "coprime_rep": true,
+     "rep_A": 5,
+     "chi2": -1
+    },
+    {
+     "form": [
+      6,
+      0,
+      35
+     ],
+     "coprime_rep": true,
+     "rep_A": 35,
+     "chi2": -1
+    },
+    {
+     "form": [
+      7,
+      0,
+      30
+     ],
+     "coprime_rep": true,
+     "rep_A": 7,
+     "chi2": 1
+    },
+    {
+     "form": [
+      10,
+      0,
+      21
+     ],
+     "coprime_rep": true,
+     "rep_A": 31,
+     "chi2": 1
+    },
+    {
+     "form": [
+      14,
+      0,
+      15
+     ],
+     "coprime_rep": true,
+     "rep_A": 29,
+     "chi2": -1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "55": {
+   "D": -1320,
+   "h": 8,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      330
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      165
+     ],
+     "coprime_rep": true,
+     "rep_A": 167,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      110
+     ],
+     "coprime_rep": true,
+     "rep_A": 113,
+     "chi2": -1
+    },
+    {
+     "form": [
+      5,
+      0,
+      66
+     ],
+     "coprime_rep": true,
+     "rep_A": 5,
+     "chi2": -1
+    },
+    {
+     "form": [
+      6,
+      0,
+      55
+     ],
+     "coprime_rep": true,
+     "rep_A": 55,
+     "chi2": 1
+    },
+    {
+     "form": [
+      10,
+      0,
+      33
+     ],
+     "coprime_rep": true,
+     "rep_A": 43,
+     "chi2": 1
+    },
+    {
+     "form": [
+      11,
+      0,
+      30
+     ],
+     "coprime_rep": true,
+     "rep_A": 11,
+     "chi2": -1
+    },
+    {
+     "form": [
+      15,
+      0,
+      22
+     ],
+     "coprime_rep": true,
+     "rep_A": 37,
+     "chi2": 1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  },
+  "77": {
+   "D": -1848,
+   "h": 8,
+   "rows": [
+    {
+     "form": [
+      1,
+      0,
+      462
+     ],
+     "coprime_rep": true,
+     "rep_A": 1,
+     "chi2": 1
+    },
+    {
+     "form": [
+      2,
+      0,
+      231
+     ],
+     "coprime_rep": true,
+     "rep_A": 233,
+     "chi2": -1
+    },
+    {
+     "form": [
+      3,
+      0,
+      154
+     ],
+     "coprime_rep": true,
+     "rep_A": 157,
+     "chi2": 1
+    },
+    {
+     "form": [
+      6,
+      0,
+      77
+     ],
+     "coprime_rep": true,
+     "rep_A": 77,
+     "chi2": -1
+    },
+    {
+     "form": [
+      7,
+      0,
+      66
+     ],
+     "coprime_rep": true,
+     "rep_A": 7,
+     "chi2": 1
+    },
+    {
+     "form": [
+      11,
+      0,
+      42
+     ],
+     "coprime_rep": true,
+     "rep_A": 11,
+     "chi2": -1
+    },
+    {
+     "form": [
+      14,
+      0,
+      33
+     ],
+     "coprime_rep": true,
+     "rep_A": 47,
+     "chi2": -1
+    },
+    {
+     "form": [
+      21,
+      0,
+      22
+     ],
+     "coprime_rep": true,
+     "rep_A": 43,
+     "chi2": 1
+    }
+   ],
+   "all_classes_6coprime": true,
+   "chi2_trivial": false
+  }
+ }
+}
