@@ -40,15 +40,23 @@ The program split into three interlocking lines as it ran:
 
 ## 1. The mathematics line: the six-row rationality theorem
 
-**Theorem (census-complete).**  Let tau0 = i*sqrt(d/6) and x6 = W6/z6
-(an explicit level-6 function built from Dedekind eta products).  Then
+**Statement (exhaustively verified for d ∈ [1,300]).**
+Let tau0 = i*sqrt(d/6) and x6 = W6/z6 (an explicit level-6 function
+built from Dedekind eta products).  Then
 
-    1/x6(tau0) ∈ Z  exactly for d ∈ {1, 3, 5, 7, 13, 17},
+    1/x6(tau0) ∈ Z  exactly for d ∈ {1, 3, 5, 7, 13, 17}
+                    — verified exhaustively for all d ∈ [1, 300] —
 
-with values **8, 12, 20, 32, 104, 200**.  Verified with ZERO
-counterexamples over the full range d ∈ [1, 300] (P121: 6 true
-positives, 294 true negatives, 0 false anything, 50 dps, two
-independent code paths agreeing to 3.5e-17).
+with values **8, 12, 20, 32, 104, 200** (P121: 6 true positives, 294
+true negatives, 0 false anything, 50 dps, two independent code paths
+agreeing to 3.5e-17; an earlier independent census at [80,200]
+agrees).  SCOPE, stated precisely: "exactly" is CENSUS-CONDITIONAL —
+exhaustively proved on [1,300], theorem-shaped on the 2-elementary
+locus (all ten rows measured, mechanism below), and a conjecture
+globally: no counterexample is known or expected anywhere, but a
+general proof beyond d = 300 is not given (it would need, e.g., a
+proof that the class group is never 2-elementary beyond d = 77 —
+verified by enumeration only up to d = 500).
 
 ![six-row theorem](docs/fig_sixrow.png)
 
@@ -77,10 +85,12 @@ arithmetic data alone — this is the classical class-invariant TABLE
 layer (Ramanujan 1914 / Weber Table VI), which historically never had
 a closed rule either.
 
-Full statement, proof labels and the P132 correction history:
-[docs/THEOREM_FIVE_ROWS.md](docs/THEOREM_FIVE_ROWS.md),
-[docs/CHARACTER_OBSTRUCTION.md](docs/CHARACTER_OBSTRUCTION.md),
-[docs/DEEP_STRUCTURES.md](docs/DEEP_STRUCTURES.md).
+The four-layer chain **field → orbit → unit → rationality** — each
+layer with content, input, output, proof type, verification, and
+failure mode, plus the full scope statement — is written out in
+[docs/DEEP_STRUCTURES.md Part I](docs/DEEP_STRUCTURES.md).  Statement
+and proof labels: [docs/THEOREM_FIVE_ROWS.md](docs/THEOREM_FIVE_ROWS.md);
+the genus-theory layer: [docs/CHARACTER_OBSTRUCTION.md](docs/CHARACTER_OBSTRUCTION.md).
 
 ---
 
@@ -190,7 +200,7 @@ ceiling), each with a registry pointer.
 | Invariant recognition | is recognition mechanical given the invariant? | **YES** — 17/17 both tiers; blind envelope removal 0.946 (P4/P15) |
 | Structure recognition | can an LLM see "same generator, new instance"? | **YES** (76.2%, p<1e-300) |
 | Novelty detection | blind judge sees "new"? | **NO** (4/20) — but trivial with the structural representation handed over (38/40): wiring problem, not scale problem |
-| Math theorem | WHY exactly {1,3,5,7,13,17}? | **CHARACTERIZED, census-complete** — elliptic-unit three-layer structure (P134); support characters per row (P132); census [1,300] zero errors (P121); open core = the class-invariant table layer |
+| Math theorem | WHY exactly {1,3,5,7,13,17}? | **CHARACTERIZED — verified exhaustively on [1,300], theorem-shaped on the 2-elementary locus, conjectural globally** — elliptic-unit chain field→orbit→unit→rationality (P134/P135); support characters per row (P132); census [1,300] zero errors (P121); open core = the class-invariant table layer + global completeness |
 | Interestingness | is "interesting" mechanically decidable? | **TWO-AXIS THEORY, formalized (P133)** — surprise (degree-matched, locality clause) + utility (cross-family) + landscape theorem (model×format); every cell multi-run |
 | Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |

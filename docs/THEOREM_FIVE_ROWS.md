@@ -1,8 +1,14 @@
 # THEOREM: The five-row rationality of x6 (P80)
 
-Status: 2026-09-29 17:45.  The complete statement, with the proof
-reduced to three pieces whose numerical content is fully verified in
-this repo and whose remaining formal work is literature-level.
+Status: 2026-09-29 17:45; SCOPE BANNER added 2026-09-30 (P135).
+
+> SCOPE: "exactly" below is CENSUS-CONDITIONAL — exhaustively
+> verified for all d in [1, 300] (P121), theorem-shaped on the
+> 2-elementary locus (all ten rows measured), CONJECTURAL globally.
+> No general proof beyond d = 300 is claimed; the completeness
+> argument (2-elementary closure verified to d = 500 + support
+> degree) covers the tested range.  The full chain with per-layer
+> scope: docs/DEEP_STRUCTURES.md Part I.
 
 ## Theorem (statement)
 
