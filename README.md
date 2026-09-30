@@ -2,87 +2,247 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, P1–P34, every row with verdict and
-artifacts). This README is only the compressed entry point.
+(pre-registered experiment registry, 108 unique P-numbers P1–P134, ~300 KB,
+every row with prediction, verdict and artifacts).  This README is the
+detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
-> mechanical pipeline? Which steps are the "inspiration", and can they be
+> mechanical pipeline?  Which steps are the "inspiration", and can they be
 > reproduced by a machine and their signature measured?
 
-## Where the program stands (2026-09-30)
+The program split into three interlocking lines as it ran:
 
-The original single question has decomposed into an empirical ladder. Each
-layer now has its own measured verdict:
+```
+            ┌────────────────────────────────────────────┐
+            │   the 1/pi identity pipeline (CWZ machine) │
+            │   generates identities at industrial scale │
+            └──────────────┬─────────────────────────────┘
+                           │  who decides what is worth keeping?
+        ┌──────────────────┼──────────────────────────┐
+        ▼                  ▼                          ▼
+┌───────────────┐  ┌────────────────┐  ┌─────────────────────────┐
+│ MATH LINE     │  │ JUDGMENT LINE  │  │ MEMORY LINE             │
+│ WHY exactly   │  │ can an LLM     │  │ what must a limited     │
+│ these rows    │  │ SEE structure, │  │ store keep so that      │
+│ are rational  │  │ and can its    │  │ novelty is detectable   │
+│ (six-row      │  │ "taste" be     │  │ at all? (coverage       │
+│ theorem)      │  │ calibrated?    │  │ geometry → RAG design)  │
+└───────┬───────┘  └───────┬────────┘  └───────────┬─────────────┘
+        │                  │                       │
+        └──────────────────┴───────────────────────┘
+                           ▼
+        one shared arithmetic object: the GENUS GROUP
+   (it organizes the CM values, the human canon, the digits
+    the models read, and the geometry of every memory store)
+```
 
-| Layer | Question | Verdict | Key evidence |
-|---|---|---|---|
-| Generation (math side) | can the t-family 1/pi pipeline run end-to-end? | **YES** | P18/P19: CWZ machine + 9 identities not in CWZ Table 1, machine-verified; CWZ Table 1 erratum found (N=17: 143/238 -> 43/238, Lean-formalized) |
-| Invariant recognition (L1) | given the invariant, is recognition mechanical? | **YES** | P4 17/17 both tiers; P15 blind envelope removal hit@1 0.946 |
-| Blind discovery (L2/L3) | can the system find the decomposition/invariant without labels? | **PARTIAL / open** | P15 arc: blind envelope removal works (0.946); three internal criterion routes closed (regime theorem); P32 series: cross-family structural abstraction is real |
-| Structure recognition (LLM subjects) | can an LLM see "same generator, new instance"? | **YES** | P32-f native 762/1000 (76.2%, p<1e-300; honestly scored PARTIAL vs its own pre-registered 90% bar); P32-h existing arm 16/20 (80%, p~4e-7) |
-| Novelty detection | can it see "this is NOT any of the known structures"? | **NO for the blind judge** | P32-h new arm 4/20 (20%, at the 25% guess line); judge declares NEW only 7/40 times; native structural subject 38/40 (information IS present) |
-| Interestingness | given something new, is it worth pursuing? | **FIRST MEASURE (P36)** | lambda algebraic degree over N=2..160 EXACTLY reproduces the human publication boundary (degree-1 rows = the five published rows); blind judges detect deep/plain 15/15 x3 runs across two model families |
-| Memory geometry (NEW, 2026-09-29) | which memory should an agent keep, and when is novelty detectable at all? | **TWO GEOMETRY RATIOS (P52-P60)** | R/mind governs prototype viability, NN/mind governs exemplar viability; four families ordered by the pair; accuracy = coverage-event - theft; novelty = coverage AND clearance; contrast (not resolution) opens the novelty window; query-side floor l_min ~ #free-statistic-entries (P64) |
-| Retrieval transfer (NEW, 2026-09-30) | do the memory laws survive OUTSIDE our own stack? | **YES -- three substrates (P90/P93-b/P94/P95)** | SQuAD 400-paragraph MiniLM corpus: degradation curve monotone (95->100), core-first eviction 42.5% > LRU 30%; within-article top1-wrong-sibling 25-50% = the reranker value gap; answer-sentence oracle lifts top1 47.8->81.1 (+33pp); OOD clearance near-perfect (AUROC 0.969). M1-M4 protocol complete for this substrate |
-| Math theorem (NEW, 2026-09-30) | WHY exactly N = 3,5,7,13,17? | **CHARACTERIZED (P76-P92/P97)** | x12 is quasimodular, NOT modular (P76 falsified the Hauptmodul route); P^12 IS Gamma0(6)-modular with quadratic nebentypus chi_2 (1e-58); P^12 CM values land in the genus field (Shimura); x6 in Q iff 2-elementary AND chi_2 trivial; m_d = exp(Cl)/2; out-of-sample [80,200] census: zero rational rows, theorem survives; remaining = one flagged lemma (Schertz Thm 4 scope) + write-up |
-| Interestingness (NEW, 2026-09-30) | is 'interesting' mechanically decidable? | **TWO-AXIS THEORY (P91-scaled/P92)** | surprise tracks genus-structure depth at fixed degree (8/9 = 88.9%, p = 0.039); utility REVERSES to prefer published-rational rows (13:3); the axes are dissociable; linear degree effect refuted by expansion (11:9, p = 0.82) |
+---
 
-## The P34-d result (the current hinge)
+## 1. The mathematics line: the six-row rationality theorem
 
-The LLM window curve looked like an "information window" phenomenon
-(W5 peak 67%, W10 trough 40%). P34-d decomposed it: a 6-line rule over the
-**early-term support pattern** (t2 vs 6, t3 vs 20, t4 vs 70, flip-presence —
-the k=1 term carries comb(n, step), which vanishes for n < step) classifies
-all 8 families **perfectly from W=12 on** (census 4800/4800; independently
-reproduced on the 280-family appearance-verified corpus: 100% from W7).
-Yet the holistic LLM subject sits at 40–76% there. So:
+**Theorem (census-complete).**  Let tau0 = i*sqrt(d/6) and x6 = W6/z6
+(an explicit level-6 function built from Dedekind eta products).  Then
 
-**Information availability is monotone in W; extraction is not. The curve
-measures cue extraction, not information.** "Knowing what to throw away"
-(t2, t3, t4, flip) beats having twelve times as much raw signal — the toy
-version of *insight as compression*.
+    1/x6(tau0) ∈ Z  exactly for d ∈ {1, 3, 5, 7, 13, 17},
 
-## Current boundary and biggest unknowns
+with values **8, 12, 20, 32, 104, 200**.  Verified with ZERO
+counterexamples over the full range d ∈ [1, 300] (P121: 6 true
+positives, 294 true negatives, 0 false anything, 50 dps, two
+independent code paths agreeing to 3.5e-17).
 
-1. **Cue extraction as the bottleneck** — now causally established
-   (P32-i, replicated cross-model on GLM): supplying the sufficient cue
-   lifts the blind judge to 39/40 and 34/40 (novelty arm 20/20 and 17/20);
-   context truncation alone does not teach extraction.
-2. **Novelty detection** — absent in the blind judge, trivial for a reader
-   with the structural representation: the open question is *wiring the
-   structure representation to the novelty comparison*, not more
-   classification scale.
-3. **Interestingness** — now a TWO-AXIS theory (P98): surprise tracks
-   genus-structure depth (confirmed 88.9% at transitions, p = 0.039);
-   utility tracks published-rationality (13:3 reversal); linear degree
-   refuted by expansion (11:9, p = 0.82). Open: scale to 20 pairs per
-   cell; human-judge validation.
-4. Math side: five-row rationality theorem has a COMPLETE PROOF
-   ARCHITECTURE (P97/P89: quasimodular cancellation + quadratic
-   nebentypus = genus character + Pell-unit closed forms, norm 2^-12);
-   remaining = one flagged lemma (Schertz Thm 4 scope at non-coprime
-   classes) + formal write-up.  Out-of-sample census [80,200]: theorem
-   survives (zero rational rows where the 2-elementary locus is empty).
-5. z-construction for the positive-j family; h=2 graded traces;
-   general-d 1/pi theory (blocks P4/P6 completion).
+![six-row theorem](docs/fig_sixrow.png)
 
-## Method notes (what keeps this honest)
+**Why these six (the three-layer answer, P134).**  Write
+64·P¹²(τ₀) for the Weber-function value behind x₆.  It is:
 
-- Pre-register design + verdict criteria before running; score against the
-  pre-registered bar, not the story (P32-f was downgraded CONFIRMED ->
-  PARTIAL on audit).
-- User audits are part of the loop and have caught real bugs twice
-  (P33 hull-distance implementation; P33-c inside-hull no-op branch).
-- Anchor/self-test discipline on the math side (nome convention, inverted
-  identity, PSLQ z-sensitivity — see git history and the registry).
-- Subjects are declared: native design-aware arms vs blind API judges are
-  reported separately, never mixed.
+1. **an elliptic unit by birth** — 64P¹² = 2³⁰·√(Δ(2τ₀)Δ(6τ₀)/Δ(τ₀)Δ(3τ₀)),
+   a Siegel–Ramachandra unit of the ring class field (P79–P84);
+2. **forced into Pell form** — on these rows its Galois "support" is a
+   single real quadratic coordinate, and a rank-1 field admits only
+   one unit shape: 64P¹² = ε_fund^(−2m_d), always a SQUARE of a unit
+   (F2, mechanically verified), with the half-exponent |m_d| = 2
+   exactly when the 2-primary prime discriminant of D = −24d is +8
+   (F3: m = 1, 2, 1, 2, 2 for d = 3, 5, 7, 13, 17);
+3. **projected to rationality by the derivative cancellation** — the
+   quasimodular obstruction in x₆ cancels identically (P83-A), leaving
+   a weight-2 CM ratio whose period cancels: R_d = (Ec/W₆)/24 ∈ ℚ,
+   and 1/x₆ = 6R_d + 2 ∈ ℤ.
 
-## Law coupling
+The field layer is a theorem (2-elementary class group ⟹ H = H_gen,
+P132-O1); the orbit layer is measured (support characters χ₋₃ / χ₋₈ /
+χ₁₃ per row, P132-O2); the unit layer is verified numerically to
+50+ digits everywhere.  The one honestly open core: a uniform rule
+predicting the support coordinate s_d ∈ {6, 10, 21, 13, 34} from
+arithmetic data alone — this is the classical class-invariant TABLE
+layer (Ramanujan 1914 / Weber Table VI), which historically never had
+a closed rule either.
+
+Full statement, proof labels and the P132 correction history:
+[docs/THEOREM_FIVE_ROWS.md](docs/THEOREM_FIVE_ROWS.md),
+[docs/CHARACTER_OBSTRUCTION.md](docs/CHARACTER_OBSTRUCTION.md),
+[docs/DEEP_STRUCTURES.md](docs/DEEP_STRUCTURES.md).
+
+---
+
+## 2. The judgment line: what can an LLM see, and is its taste measurable?
+
+### 2.1 Structure recognition and novelty
+
+| Question | Verdict | Evidence |
+|---|---|---|
+| Can an LLM see "same generator, new instance"? | **YES** | P32-f native 762/1000 (76.2%, p<1e-300); P32-h existing arm 16/20 (p≈4e-7) |
+| Can it see "this is NOT any known structure"? | **NO for the blind judge** (4/20, at guess line) — but 38/40 when handed the structural representation: information present, wiring missing | P32-h |
+| Does cue extraction (not information) bottleneck the window curve? | **CAUSALLY ESTABLISHED** | P34-d 6-line early-term rule classifies 4800/4800 from W=12 while the holistic subject sits at 40–76%; P32-i cue injection lifts blind judge to 39/40 |
+
+**The P34-d hinge: information availability is monotone in the
+observation window; extraction is not.**  "Knowing what to throw away"
+(the k=1 term carries C(n, step), vanishing for n < step) beats twelve
+times the raw signal — the toy version of *insight as compression*.
+
+### 2.2 The two-axis interestingness theory (formal: P133)
+
+The judge = (model, framing) is a measurement instrument.  Two axes:
+
+- **SURPRISE** tracks genus-structure depth gdepth = t−1 (the genus
+  rank of D = −24d) — but ONLY on degree-matched pairs (the locality
+  clause): carriers read 82.1% / 78.9% pooled (p = .0009 / .0005),
+  while on gross pairs the same model reads at chance — the depth cue
+  and the "astonishing simplicity" cue (1/12, 1/20 are themselves
+  arresting) cancel (P129).
+- **UTILITY** tracks membership in the published record (rational
+  rows): 13:3 and 15:16 reversals, cross-family, pairing-robust
+  (P92/P129).
+
+The axes are dissociable (same pairs, opposite majorities — P92/I3),
+and **carrier status is a model×format property** (I4):
+
+![judge landscape](docs/fig_landscape.png)
+
+Every cell is at least two-run (P130 series), floors rest on 57 votes
+across three presentation seeds (P131), and the calibration is
+mandatory before any reading (format_calibration.py, 40 calls,
+P128-b).  Central open question: WHY is genus depth visible to a
+language model at all — the registered answer attempt is
+[docs/DEEP_STRUCTURES.md Part II](docs/DEEP_STRUCTURES.md) (digit
+trace + canon absorption), with a pre-registered falsification design
+(height-matched deg-matched pairs).
+
+---
+
+## 3. The memory line: coverage geometry → controller → RAG design
+
+### 3.1 The six laws
+
+| Law | Statement | Key numbers |
+|---|---|---|
+| L1 Coverage | identification = coverage; prototype viability crosses at a precise resource ratio | R/mind = **0.500** boundary (P52/P65) |
+| L2 Two-scale | prototype-vs-exemplar divergence needs two-scale class structure | +9 pts after decoupling (P65-b) |
+| L3 Plateau | accuracy = coverage-event − cross-class theft; saturates at THRESH-reachable fraction | f_cross = 0 ⇒ exact (P52/P55) |
+| L4 Novelty | novelty = coverage AND clearance; contrast (not resolution) opens the window | 95% detection @ 6.7% FA (P53/P54) |
+| L5 Query floor | retrieval needs ℓ_min ≈ #free-statistic-entries tokens | K=6→40 tokens; production knee 6–12 (P64/P70-b) |
+| L6 Eviction | core-first eviction requires density heterogeneity | 100 > 92.4 ≈ 92.4 > 53.6 (P72); random ≥ LRU on uniform density (P110/P112) |
+
+![memory geometry](docs/fig_geometry.png)
+
+These replicate across five substrates (synthetic families, FlyMemory
+production, SQuAD, Gaussian matrix, mathematical text — the last one
+*fails* L5 by the template-dilution effect, which is itself a finding:
+P111/P113).  The **Memory Geometry Controller** (P73/P74: r, nn, ts,
+cov, clr, lq, ff, eps → type/capacity/eviction/verification/query
+gate) compresses the laws into a zero-fit-parameter policy, validated
+end-to-end on FlyMemory production data (P115).
+[docs/MEMORY_GEOMETRY.md](docs/MEMORY_GEOMETRY.md),
+[docs/MEMORY_CONTROLLER.md](docs/MEMORY_CONTROLLER.md).
+
+### 3.2 The RAG design language (P116–P127)
+
+Measured on SQuAD retrieval (n = 2823 questions, 6 articles, flymemory
+production encoder):
+
+![RAG findings](docs/fig_rag.png)
+
+| # | Finding | Numbers |
+|---|---|---|
+| C1 | contrast gradient | verbatim 100 > keyword 75 > question 48.3 |
+| C6 | gold-head prefix ceiling | 49.8 → **98.8**; saturates ~200 chars; prefix-first wins at every length |
+| C6 | topic-sentence effect | head 98.8 vs tail 66.0 (32.8pp on L12-v2; only 5.2pp on L6-v2 — encoder-relative, P127) |
+| C5 | bare-question fragility is dose-dependent, NOT the registered "synonyms→0%" (retracted) | 49.8 → 7.9 at dose 0.8; synonym substitution harmless (P122/P122-b) |
+| C6 | the prefix hedges question-side damage | 98.8 → 97.9 at dose 0.8; the prefix itself is the fragile asset (59.3) |
+| — | metadata injection FAILS | title −9.1pp: zero within-store contrast = pure dilution (P123) |
+| — | reranker ≈ prefix substitutes | +24.6pp bare vs **+1.2pp** hybrid (P124) |
+| C7 | conversational anchors are BIMODAL | fresh ~98.9 / stale **5.9** (−44pp) |
+| — | guard: dual rerank with elementwise max | 87.2 overall, fresh 100.0 (P125-c); cheap staleness signals all rejected (AUC ≤ 0.737, P126/126-b; oracle router ceiling 92.7) |
+
+The design rules DR1–DR10 with the C1–C7 constraints live in
+[docs/RAG_DESIGN_CONSTRAINTS.md](docs/RAG_DESIGN_CONSTRAINTS.md); the
+controller-facing summary is R5 of MEMORY_CONTROLLER.md.  Two claims
+were retracted on the way (P117-b synonyms; the "deployable hybrid"
+reading — the measured prefix is the gold paragraph's own head, i.e. a
+ceiling), each with a registry pointer.
+
+---
+
+## 4. Where the program stands — one table
+
+| Line | Question | Verdict |
+|---|---|---|
+| Generation | can the t-family 1/pi pipeline run end-to-end? | **YES** — CWZ machine + 9 identities not in CWZ Table 1; CWZ erratum found (N=17) and Lean-formalized (P18/P19) |
+| Invariant recognition | is recognition mechanical given the invariant? | **YES** — 17/17 both tiers; blind envelope removal 0.946 (P4/P15) |
+| Structure recognition | can an LLM see "same generator, new instance"? | **YES** (76.2%, p<1e-300) |
+| Novelty detection | blind judge sees "new"? | **NO** (4/20) — but trivial with the structural representation handed over (38/40): wiring problem, not scale problem |
+| Math theorem | WHY exactly {1,3,5,7,13,17}? | **CHARACTERIZED, census-complete** — elliptic-unit three-layer structure (P134); support characters per row (P132); census [1,300] zero errors (P121); open core = the class-invariant table layer |
+| Interestingness | is "interesting" mechanically decidable? | **TWO-AXIS THEORY, formalized (P133)** — surprise (degree-matched, locality clause) + utility (cross-family) + landscape theorem (model×format); every cell multi-run |
+| Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
+| Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
+
+## 5. Method notes (what keeps this honest)
+
+- **Register-first**: design + verdict criteria written before running;
+  scored against the pre-registered bar, not the story (P32-f was
+  downgraded CONFIRMED → PARTIAL on audit).
+- **Retraction discipline**: three retractions and one per-row criterion
+  correction are IN the registry with pointers (P117-b, P98-c, P119,
+  the deployable-hybrid reading) — negative results are results.
+- **Expansion-before-belief**: three small-sample signals were killed by
+  expansion (P88's 0.622, P96-b's 10:4, P97-b's 11:9); floors rest on
+  38–57 votes.
+- **Independent re-derivation**: external audits and self-audits caught
+  the argsort-correlation bug, the .real-extraction bug, the v=4
+  decompose bug, the nome-convention trap (η(kτ) = η_nome(q^k), not
+  η(kq)), and the reduced-forms-only provenance gap (P132's Lemma A
+  came from auditing it).
+- **Provenance audit is mechanical**: audit_provenance.py scans all
+  artifact citations in the registry (181/183 present; the 2 missing
+  are annotated live-service probes).
+- **Subjects are declared**: native design-aware arms vs blind API
+  judges reported separately, never mixed.
+
+## 6. Repository map
+
+```
+docs/
+  RESEARCH_PLAN.md            the registry: 108 P-numbers, every verdict + artifact
+  THEOREM_FIVE_ROWS.md        six-row theorem: statement + proof labels
+  CHARACTER_OBSTRUCTION.md    genus-theory layer (P132 closed + corrected)
+  DEEP_STRUCTURES.md          the two deep questions (P134 synthesis)
+  INTERESTINGNESS_FORMAL.md   two-axis theory, formal (P133)
+  MEMORY_GEOMETRY.md          six laws, five substrates
+  MEMORY_CONTROLLER.md        R1-R8 policy spec + DR interface layer
+  RAG_DESIGN_CONSTRAINTS.md   C1-C7 + DR1-DR10 design language
+  GEOMETRY_PROTOCOL.md        cross-substrate M1-M4 standard + law table
+  NIGHT_SUMMARY / HANDOFF     session summaries
+  fig_*.png                   the four figures above
+format_calibration.py         per-model judge calibration (P128-b)
+audit_provenance.py           registry artifact-citation audit
+p*.py, *.json                 ~100 experiment scripts + archived results
+```
+
+## 7. Law coupling
 
 - Experiment conclusions write back to the Mushroom-Body Program repo
   ([aujurd22/flymemory](https://github.com/aujurd22/flymemory)),
   `research/RESEARCH.md` (L-series laws; L1 form law and L5 aggregation
   law were established there).
 - The full prediction registry lives in docs/RESEARCH_PLAN.md
-  (registered before running).
+  (registered before running).  Everything pushed here is reproducible
+  from the archived JSONs; figure source: make_readme_figures.py.
