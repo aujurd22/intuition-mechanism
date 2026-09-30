@@ -89,3 +89,16 @@ five rows are the chi_2-trivial locus; the composite rows carry the
 full genus field.  The mechanical-interestingness proxy and the
 arithmetic obstruction are the same object seen from the judge side
 and the class-field side respectively.
+
+## The closing cross-model experiment (P129, 2026-09-30 08:13)
+
+Doubao (the independent forced-choice carrier) completes the picture:
+
+- Axis 2 (utility = published-rationality proximity) replicates across
+  families: 15/16 prefer the published-rational identity as a seed
+  (deepseek original 13/3).  Cross-family result.
+- Axis 1 (surprise = genus-depth) has a SHARP scope: 78.9% (p=.019,
+  bit-stable across presentation seeds) on DEG-MATCHED pairs, but
+  exactly chance (8/16) on the gross rational-vs-deep pairs — the
+  depth cue and the astonishing-simplicity cue cancel there.  Axis 1
+  experiments must degree-match; Axis 2 survives any pairing.
