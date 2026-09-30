@@ -1,0 +1,75 @@
+{
+ "v4.1_forced": {
+  "pooled": "23/28",
+  "rate": 82.1,
+  "p": 0.0009,
+  "per_run": [
+   "8/9",
+   "15/19"
+  ]
+ },
+ "v4.1_absolute": {
+  "rhos": [
+   0.254,
+   0.23
+  ]
+ },
+ "v4flash_forced": {
+  "pooled": "25/38",
+  "rate": 65.8,
+  "p": 0.073,
+  "per_run": [
+   "12/19",
+   "13/19"
+  ]
+ },
+ "v4flash_absolute": {
+  "rhos": [
+   0.609,
+   0.447
+  ]
+ },
+ "doubao_forced": {
+  "pooled": "30/38",
+  "rate": 78.9,
+  "p": 0.0005,
+  "per_run": [
+   "15/19",
+   "15/19"
+  ]
+ },
+ "doubao_absolute": {
+  "rhos": [
+   0.079
+  ]
+ },
+ "kimi_forced": {
+  "pooled": "35/57",
+  "rate": 61.4,
+  "p": 0.1112,
+  "per_run": [
+   "11/19",
+   "12/19",
+   "12/19"
+  ]
+ },
+ "kimi_absolute": {
+  "rhos": [
+   0.08
+  ]
+ },
+ "minimax_forced": {
+  "pooled": "20/38",
+  "rate": 52.6,
+  "p": 0.8714,
+  "per_run": [
+   "12/19",
+   "8/19"
+  ]
+ },
+ "minimax_absolute": {
+  "rhos": [
+   -0.188
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "model": "kimi-k2.8-preview",
+ "seed": 2222,
+ "k": 12,
+ "n": 19,
+ "rate": 63.2,
+ "p": 0.3593,
+ "pooled_k": 35,
+ "pooled_n": 57,
+ "pooled_rate": 61.4,
+ "pooled_p": 0.1112
+}
