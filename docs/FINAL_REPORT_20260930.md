@@ -111,6 +111,12 @@ v4-flash via ABSOLUTE (reversal), doubao via forced, kimi/minimax are
 floor in both.  Format calibration is now a mandatory pre-step
 (format_calibration.py, P128-b).  P119's "forced > absolute" retracted
 to a model-instance property.
+CLOSING REPLICATION (P129): doubao forced-choice is bit-stable across
+presentation seeds (15/19 = 78.9% twice); Axis 2 (utility) replicates
+cross-family at 15/16; Axis 1 (surprise) scope refined — 78.9% on
+deg-matched pairs but exactly chance on gross pairs (the depth cue and
+the astonishing-simplicity cue cancel): Axis 1 experiments must
+degree-match.
 
 ## The cross-cutting findings
 
