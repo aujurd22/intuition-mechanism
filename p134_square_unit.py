@@ -56,7 +56,7 @@ for d, (a, b, s) in CLOSED.items():
     rows.append({"d": d, "s": s, "norm": int(norm),
                  "eps_fund": f"{x}+{y}sqrt({s})", "exponent": e,
                  "half_exponent": half, "two_pd": TWO_PD[d],
-                 "rule_m2_iff_2pd_plus8": (half == 2) == (TWO_PD[d] == 8)})
+                 "rule_m2_iff_2pd_plus8": (abs(half) == 2) == (TWO_PD[d] == 8)})
 
 out = {"rows": rows,
        "findings": {

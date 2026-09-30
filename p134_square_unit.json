@@ -18,7 +18,7 @@
    "exponent": -4,
    "half_exponent": -2,
    "two_pd": 8,
-   "rule_m2_iff_2pd_plus8": false
+   "rule_m2_iff_2pd_plus8": true
   },
   {
    "d": 7,
@@ -38,7 +38,7 @@
    "exponent": -4,
    "half_exponent": -2,
    "two_pd": 8,
-   "rule_m2_iff_2pd_plus8": false
+   "rule_m2_iff_2pd_plus8": true
   },
   {
    "d": 17,
@@ -48,12 +48,12 @@
    "exponent": -4,
    "half_exponent": -2,
    "two_pd": 8,
-   "rule_m2_iff_2pd_plus8": false
+   "rule_m2_iff_2pd_plus8": true
   }
  ],
  "findings": {
   "F1_unit": true,
   "F2_square": true,
-  "F3_two_pd_rule": false
+  "F3_two_pd_rule": true
  }
 }
