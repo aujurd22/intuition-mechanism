@@ -1,0 +1,8 @@
+{
+ "model": "deepseek-v4-flash",
+ "seed": 777,
+ "k": 13,
+ "n": 19,
+ "rate": 68.4,
+ "p": 0.1671
+}
