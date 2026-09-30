@@ -118,6 +118,16 @@ deg-matched pairs but exactly chance on gross pairs (the depth cue and
 the astonishing-simplicity cue cancel): Axis 1 experiments must
 degree-match.
 
+SEED-SOLIDIFYING ROUND (P130 series, 08:20-08:45): every judge-landscape
+cell re-run at presentation seed 777. Carriers replicate: v4.1 forced
+78.9% p=.019 (single-order scope), v4-flash absolute rho 0.447 + 7/8
+pairs, doubao forced bit-identical. Nulls replicate: v4.1 absolute
+0.230. Floors pooled to 38 votes: kimi 60.5%, minimax 52.6%. The
+staleness-detector open problem is now bounded: the (s2, s3) cosine
+feature family is formally insufficient (5-fold CV 84.1% vs always-
+anchor 84.3%), and the oracle router ceiling is 92.7% — future work
+needs reranker-disagreement or set-overlap features (registered).
+
 ## The cross-cutting findings
 
 | Finding | Source | Significance |
