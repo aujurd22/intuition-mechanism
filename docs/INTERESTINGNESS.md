@@ -81,6 +81,13 @@ axis on an independent family via forced choice; kimi/minimax are
 floor in both.  The earlier single-model "forced > absolute" rule
 (P119) is a model-instance property, not a format law.
 
+Every cell above is now TWO-RUN (P130 series, seeds 20260930 + 777):
+the three carrier cells replicate (v4.1 forced 78.9% p=.019 single-
+order; v4-flash absolute rho 0.447 + 7/8 pairs; doubao forced 78.9%
+bit-identical), both nulls replicate (v4.1 absolute 0.230; doubao
+absolute re-confirmed), and both floors rest on pooled 38 votes
+(kimi 60.5%, minimax 52.6%).
+
 ## The connection to the five-row theorem
 
 The surprise axis (genus depth) is exactly the axis along which the
