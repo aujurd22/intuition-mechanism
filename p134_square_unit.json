@@ -1,0 +1,59 @@
+{
+ "rows": [
+  {
+   "d": 3,
+   "s": 6,
+   "norm": 1,
+   "eps_fund": "5+2sqrt(6)",
+   "exponent": -2,
+   "half_exponent": -1,
+   "two_pd": -8,
+   "rule_m2_iff_2pd_plus8": true
+  },
+  {
+   "d": 5,
+   "s": 10,
+   "norm": 1,
+   "eps_fund": "3+1sqrt(10)",
+   "exponent": -4,
+   "half_exponent": -2,
+   "two_pd": 8,
+   "rule_m2_iff_2pd_plus8": false
+  },
+  {
+   "d": 7,
+   "s": 21,
+   "norm": 1,
+   "eps_fund": "55+12sqrt(21)",
+   "exponent": -2,
+   "half_exponent": -1,
+   "two_pd": -8,
+   "rule_m2_iff_2pd_plus8": true
+  },
+  {
+   "d": 13,
+   "s": 13,
+   "norm": 1,
+   "eps_fund": "18+5sqrt(13)",
+   "exponent": -4,
+   "half_exponent": -2,
+   "two_pd": 8,
+   "rule_m2_iff_2pd_plus8": false
+  },
+  {
+   "d": 17,
+   "s": 34,
+   "norm": 1,
+   "eps_fund": "35+6sqrt(34)",
+   "exponent": -4,
+   "half_exponent": -2,
+   "two_pd": 8,
+   "rule_m2_iff_2pd_plus8": false
+  }
+ ],
+ "findings": {
+  "F1_unit": true,
+  "F2_square": true,
+  "F3_two_pd_rule": false
+ }
+}
