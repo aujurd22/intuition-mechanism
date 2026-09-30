@@ -81,6 +81,11 @@ axis on an independent family via forced choice; kimi/minimax are
 floor in both.  The earlier single-model "forced > absolute" rule
 (P119) is a model-instance property, not a format law.
 
+Final pooled resolution (P131/P131-b, 08:53): carrier cells — v4.1
+forced 23/28 = 82.1% (p=.0009), doubao forced 30/38 = 78.9% (p=.0005);
+weak cell — v4-flash forced 25/38 = 65.8% (p=.073); floors at triple
+seeds — kimi 35/57 = 61.4% (p=.11), minimax 33/57 = 57.9% (p=.29).
+
 Every cell above is now TWO-RUN (P130 series, seeds 20260930 + 777):
 the three carrier cells replicate (v4.1 forced 78.9% p=.019 single-
 order; v4-flash absolute rho 0.447 + 7/8 pairs; doubao forced 78.9%

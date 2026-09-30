@@ -1,0 +1,12 @@
+{
+ "model": "minimax-m3",
+ "seed": 2222,
+ "k": 13,
+ "n": 19,
+ "rate": 68.4,
+ "p": 0.1671,
+ "pooled_k": 33,
+ "pooled_n": 57,
+ "pooled_rate": 57.9,
+ "pooled_p": 0.2892
+}
