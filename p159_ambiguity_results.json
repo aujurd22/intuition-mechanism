@@ -1,0 +1,770 @@
+[
+ {
+  "family": "doubling",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "nexts": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "true8": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   30,
+   52,
+   84,
+   128
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is double the previous term.",
+  "mentions_prime": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "nexts": [
+   5,
+   8,
+   13,
+   21
+  ],
+  "true8": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   3,
+   1,
+   -4,
+   -13
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the sum of the two previous terms.",
+  "mentions_prime": null
+ },
+ {
+  "family": "squares",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   1,
+   4,
+   9,
+   16
+  ],
+  "nexts": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "true8": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the square of its position number (n\u00b2).",
+  "mentions_prime": null
+ },
+ {
+  "family": "triangular",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   1,
+   3,
+   6,
+   10
+  ],
+  "nexts": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "true8": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the sum of the first n positive integers (triangular numbers).",
+  "mentions_prime": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   5,
+   8,
+   11,
+   14
+  ],
+  "nexts": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "true8": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "overfit_capture": true,
+  "rule": "Add 3 to the previous term.",
+  "mentions_prime": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   -2,
+   4,
+   -8,
+   16
+  ],
+  "nexts": [
+   -32,
+   64,
+   -128,
+   256
+  ],
+  "true8": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   130,
+   388,
+   844,
+   1552
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the previous term multiplied by -2.",
+  "mentions_prime": null
+ },
+ {
+  "family": "cubes",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   1,
+   8,
+   27,
+   64
+  ],
+  "nexts": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "true8": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the cube of its position in the sequence (n\u00b3).",
+  "mentions_prime": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "deepseek-v4-flash",
+  "disc4": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "nexts": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "true8": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "overfit_capture": true,
+  "rule": "Add 2 to the previous term.",
+  "mentions_prime": false
+ },
+ {
+  "family": "doubling",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "nexts": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "true8": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   30,
+   52,
+   84,
+   128
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 2 and multiply each term by 2 to get the next term.",
+  "mentions_prime": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "nexts": [
+   5,
+   8,
+   13,
+   21
+  ],
+  "true8": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   3,
+   1,
+   -4,
+   -13
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the sum of the two preceding terms, starting with t1=1 and t2=1.",
+  "mentions_prime": null
+ },
+ {
+  "family": "squares",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   1,
+   4,
+   9,
+   16
+  ],
+  "nexts": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "true8": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "overfit_capture": true,
+  "rule": "The nth term is n squared, where n is the term's position in the sequence.",
+  "mentions_prime": null
+ },
+ {
+  "family": "triangular",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   1,
+   3,
+   6,
+   10
+  ],
+  "nexts": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "true8": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 1, then add consecutive positive integers increasing by 1 each step.",
+  "mentions_prime": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   5,
+   8,
+   11,
+   14
+  ],
+  "nexts": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "true8": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 5 and add 3 to each previous term to get the next term.",
+  "mentions_prime": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   -2,
+   4,
+   -8,
+   16
+  ],
+  "nexts": [
+   -32,
+   64,
+   -128,
+   256
+  ],
+  "true8": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   130,
+   388,
+   844,
+   1552
+  ],
+  "overfit_capture": true,
+  "rule": "Start at -2 and multiply each term by -2 to get the next term.",
+  "mentions_prime": null
+ },
+ {
+  "family": "cubes",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   1,
+   8,
+   27,
+   64
+  ],
+  "nexts": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "true8": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "overfit_capture": true,
+  "rule": "The nth term is n cubed (n multiplied by itself three times).",
+  "mentions_prime": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "doubao-seed-2.1-lite",
+  "disc4": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "nexts": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "true8": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 1 and add 2 to each previous term to get the next term.",
+  "mentions_prime": false
+ },
+ {
+  "family": "doubling",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   2,
+   4,
+   8,
+   16
+  ],
+  "nexts": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "true8": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   30,
+   52,
+   84,
+   128
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is double the previous term (powers of 2).",
+  "mentions_prime": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "nexts": [
+   5,
+   8,
+   13,
+   21
+  ],
+  "true8": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   3,
+   1,
+   -4,
+   -13
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the sum of the two preceding terms (Fibonacci sequence).",
+  "mentions_prime": null
+ },
+ {
+  "family": "squares",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   1,
+   4,
+   9,
+   16
+  ],
+  "nexts": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "true8": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   25,
+   36,
+   49,
+   64
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the square of its position (n\u00b2).",
+  "mentions_prime": null
+ },
+ {
+  "family": "triangular",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   1,
+   3,
+   6,
+   10
+  ],
+  "nexts": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "true8": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   15,
+   21,
+   28,
+   36
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the previous term plus an increment that increases by 1 (add 2, then 3, then 4, ...).",
+  "mentions_prime": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   5,
+   8,
+   11,
+   14
+  ],
+  "nexts": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "true8": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   17,
+   20,
+   23,
+   26
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 5 and add 3 each time.",
+  "mentions_prime": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   -2,
+   4,
+   -8,
+   16
+  ],
+  "nexts": [
+   -32,
+   64,
+   -128,
+   256
+  ],
+  "true8": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   130,
+   388,
+   844,
+   1552
+  ],
+  "overfit_capture": true,
+  "rule": "Multiply the previous term by -2 (or equivalently, alternate signs while doubling the absolute value).",
+  "mentions_prime": null
+ },
+ {
+  "family": "cubes",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   1,
+   8,
+   27,
+   64
+  ],
+  "nexts": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "true8": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   125,
+   216,
+   343,
+   512
+  ],
+  "overfit_capture": true,
+  "rule": "Each term is the cube of its position in the sequence (n\u00b3).",
+  "mentions_prime": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "kimi-k2.8-preview",
+  "disc4": [
+   1,
+   3,
+   5,
+   7
+  ],
+  "nexts": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "true8": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 0,
+  "poly4": [
+   9,
+   11,
+   13,
+   15
+  ],
+  "overfit_capture": true,
+  "rule": "Start at 1 and add 2 to get each subsequent term (the sequence of odd numbers).",
+  "mentions_prime": false
+ }
+]
