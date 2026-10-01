@@ -1,0 +1,36 @@
+{
+ "n": 1000,
+ "accuracy_overall": 100.0,
+ "accuracy_in_band": 100.0,
+ "accuracy_out_of_band": 100.0,
+ "ece_pooled": 0.007496,
+ "ece_in_band": 2.1e-05,
+ "ece_out_of_band": 0.0107,
+ "near_integer_rows": [
+  978
+ ],
+ "risk_coverage": [
+  {
+   "coverage": 0.5,
+   "accuracy": 100.0
+  },
+  {
+   "coverage": 0.8,
+   "accuracy": 100.0
+  },
+  {
+   "coverage": 0.9,
+   "accuracy": 100.0
+  },
+  {
+   "coverage": 0.95,
+   "accuracy": 100.0
+  },
+  {
+   "coverage": 1.0,
+   "accuracy": 100.0
+  }
+ ],
+ "latency_ms_per_verify": 0.24,
+ "cost_per_verify_usd": 0.0
+}

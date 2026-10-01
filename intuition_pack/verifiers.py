@@ -5,7 +5,11 @@ gets a verdict + audit trail), never "read and weighed" by the model.
 """
 from mpmath import mp, mpf, exp, pi, sqrt as msqrt
 
-mp.dps = 30
+mp.dps = 60
+_CUT = mpf(10) ** -(mp.dps - 12)   # scales with precision: P142 probe
+# caught fixed 1e-24 cutoffs destroying large-d evaluations (q itself
+# falls below a fixed cutoff, the series degenerates, and the verdict
+# reads 0.5-confidence garbage out of band)
 
 
 def _eta(q):
@@ -16,7 +20,7 @@ def _eta(q):
         p1 = n * (3 * n - 1) // 2
         p2 = n * (3 * n + 1) // 2
         s += sg * (q ** p1 + q ** p2)
-        if q ** p1 < mpf(10) ** -24:
+        if q ** p1 < _CUT:
             break
         n += 1
     return q ** (mpf(1) / 24) * s
@@ -31,7 +35,7 @@ def lambert_one_over_x6(d: int):
         n = 1
         while True:
             qn = q ** (k * n)
-            if qn < mpf(10) ** -25:
+            if qn < _CUT:
                 break
             s += mpf(n) * qn / (1 - qn)
             n += 1
@@ -79,10 +83,22 @@ def lambert_sixrow(payload: dict) -> dict:
     """
     d = int(payload["d"])
     v = lambert_one_over_x6(d)
-    r = round(float(v)) if abs(float(v)) < 1e12 else None
-    resid = abs(v - r) if r is not None else None
-    tol = mpf("1e-12") * max(1, abs(r)) if r is not None else None
-    is_int = resid is not None and resid < tol
+    # integrality decided entirely in the mp domain (P142: float-rounding
+    # capped large-d rows at a fake 0.5 confidence)
+    fl = mp.floor(v)
+    frac = v - fl
+    r = int(fl)
+    resid = min(frac, 1 - frac)
+    tol = mpf("1e-9")   # absolute: at 60dps the float noise of |v|~1e17
+    # is ~1e-43, so 1e-9 sits far above numerics and far below "maybe
+    # integer"; the earlier scaled tolerance let 2.85e12-scale rows pass
+    # anything (P142 catch)
+    # three-band verdict (P142 discovery: d=978=6*163 gives a
+    # Ramanujan near-integer 262537412640768746 - residual 7.5e-13,
+    # the e^(pi*sqrt(163)) signature — an exact-integer test must not
+    # call it RATIONAL, nor garbage NOT)
+    is_int = resid < mpf("1e-30")
+    is_near = (not is_int) and resid < tol
     in_band = CENSUS_BAND[0] <= d <= CENSUS_BAND[1]
     p_rat = _p_rational(resid, tol)
     if not in_band:
@@ -90,8 +106,13 @@ def lambert_sixrow(payload: dict) -> dict:
         # verified out of band (P135 scope) — cap and flag
         p_rat = min(p_rat, 0.99) if is_int else max(p_rat, 0.01)
     conf = max(p_rat, 1.0 - p_rat)   # confidence in the emitted verdict
+    verdict = ("RATIONAL" if is_int else
+               "NEAR_INTEGER" if is_near else "NOT")
+    if is_near:
+        p_rat = 0.5   # genuinely ambiguous at machine precision
+        conf = 0.5
     return {
-        "verdict": "RATIONAL" if is_int else "NOT",
+        "verdict": verdict,
         "confidence": round(conf, 6),
         "typed": {
             "kind": "choice",
