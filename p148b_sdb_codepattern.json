@@ -1,0 +1,27 @@
+{
+ "A_zero_shot": {
+  "acc_3seeds": [
+   83.3,
+   100.0,
+   100.0
+  ],
+  "mean": 94.4
+ },
+ "B_pack": {
+  "acc_3seeds": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "mean": 100.0
+ },
+ "transfer_llm_acc": 100.0,
+ "transfer_mech_verdicts": [
+  "IMPURE",
+  "PURE",
+  "IMPURE",
+  "PURE"
+ ],
+ "transfer_mech_matches_labels": true,
+ "mdl_ratio_reference": 13.02
+}
