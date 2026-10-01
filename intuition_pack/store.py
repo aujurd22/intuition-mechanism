@@ -19,10 +19,15 @@ import urllib.request
 from .pack import Pack
 
 
+_DEFAULT_ROOT = os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "packs")
+
+
 class LocalFileStore:
-    def __init__(self, root="packs"):
-        self.root = root
-        os.makedirs(root, exist_ok=True)
+    def __init__(self, root=None):
+        # default: <repo>/packs — independent of the MCP launch cwd
+        self.root = root or os.environ.get("INTUITION_PACK_ROOT") or _DEFAULT_ROOT
+        os.makedirs(self.root, exist_ok=True)
 
     def _path(self, domain):
         safe = "".join(c if c.isalnum() or c in "-_" else "_" for c in domain)
