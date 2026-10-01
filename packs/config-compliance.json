@@ -1,0 +1,406 @@
+{
+ "domain": "config-compliance",
+ "charter": "Single evidence source: verify EVERY field of the config against the schema (types, ranges, enum, patterns, nested tls.cert); one violation fails the config. Always confirm with the schema_check verifier before answering.",
+ "exemplars": [
+  {
+   "d": "dc203",
+   "inputs": {
+    "object": {
+     "host": "db01",
+     "port": 5432,
+     "retries": 3,
+     "mode": "http",
+     "tls": {
+      "enabled": true,
+      "cert": "server-pem"
+     }
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "PASS",
+   "note": "all fields within schema"
+  },
+  {
+   "d": "dc03",
+   "inputs": {
+    "object": {
+     "host": "db01",
+     "port": 5432,
+     "retries": 3,
+     "mode": "http",
+     "tls": {
+      "enabled": true,
+      "cert": "server-pem"
+     }
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "PASS",
+   "note": "all fields within schema"
+  },
+  {
+   "d": "dc201",
+   "inputs": {
+    "object": {
+     "host": "db01",
+     "port": 5432,
+     "retries": 3,
+     "mode": "http",
+     "tls": {
+      "enabled": true,
+      "cert": "server-pem"
+     }
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "PASS",
+   "note": "all fields within schema"
+  },
+  {
+   "d": "dc101",
+   "inputs": {
+    "object": {
+     "host": "db01",
+     "port": 5432,
+     "retries": 8,
+     "mode": "http",
+     "tls": {
+      "enabled": true,
+      "cert": "server-pem"
+     }
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "FAIL",
+   "note": "schema_check catches the violation mechanically"
+  },
+  {
+   "d": "dc104",
+   "inputs": {
+    "object": {
+     "host": "db01",
+     "port": 5432,
+     "retries": 3,
+     "mode": "http"
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "FAIL",
+   "note": "schema_check catches the violation mechanically"
+  },
+  {
+   "d": "dc103",
+   "inputs": {
+    "object": {
+     "host": "DB01",
+     "port": 5432,
+     "retries": 3,
+     "mode": "http",
+     "tls": {
+      "enabled": true,
+      "cert": "server-pem"
+     }
+    },
+    "schema": {
+     "type": "object",
+     "required": [
+      "host",
+      "port",
+      "retries",
+      "mode",
+      "tls"
+     ],
+     "properties": {
+      "host": {
+       "type": "string",
+       "pattern": "[a-z]"
+      },
+      "port": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 65535
+      },
+      "retries": {
+       "type": "integer",
+       "minimum": 1,
+       "maximum": 5
+      },
+      "mode": {
+       "type": "string",
+       "enum": [
+        "http",
+        "grpc"
+       ]
+      },
+      "tls": {
+       "type": "object",
+       "required": [
+        "enabled"
+       ],
+       "properties": {
+        "enabled": {
+         "type": "boolean"
+        },
+        "cert": {
+         "type": "string",
+         "pattern": "[a-z]"
+        }
+       }
+      }
+     }
+    }
+   },
+   "label": "FAIL",
+   "note": "schema_check catches the violation mechanically"
+  }
+ ],
+ "verifier": {
+  "name": "schema_check",
+  "rule": "JSON-schema-subset validation; violations reported with path + constraint",
+  "executed_by": "agent"
+ },
+ "version": 1,
+ "created_at": 1790860283.3830285,
+ "source": "P149/P150 generated domain",
+ "triggers": [
+  "config",
+  "schema",
+  "\u914d\u7f6e",
+  "schema"
+ ]
+}

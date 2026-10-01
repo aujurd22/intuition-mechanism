@@ -1,0 +1,24 @@
+{
+ "A_zero": {
+  "seeds": [
+   50.0,
+   58.3,
+   58.3
+  ],
+  "mean": 55.5,
+  "min": 50.0,
+  "max": 58.3
+ },
+ "B_pack": {
+  "seeds": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "mean": 100.0,
+  "min": 100.0,
+  "max": 100.0
+ },
+ "single_turn_gain": 44.5,
+ "verdict": "COMPRESSION (build the pack)"
+}
