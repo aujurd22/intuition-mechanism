@@ -1,0 +1,1807 @@
+{
+ "math": {
+  "aggregate": {
+   "seed_accs": [
+    84.4,
+    68.8,
+    84.4
+   ],
+   "mean_acc": 79.2,
+   "n_items": 32
+  },
+  "ids": [
+   974,
+   348,
+   935,
+   812,
+   184,
+   421,
+   722,
+   3,
+   678,
+   653,
+   7,
+   505,
+   942,
+   320,
+   884,
+   420,
+   628,
+   17,
+   655,
+   5,
+   560,
+   948,
+   1,
+   821,
+   13,
+   122,
+   94,
+   991,
+   943,
+   809,
+   740,
+   147
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": 974,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 348,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 935,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 812,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 184,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 421,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 722,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 3,
+     "truth": "RATIONAL",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 678,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 653,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 7,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 505,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 942,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 320,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 884,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 420,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 628,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 17,
+     "truth": "RATIONAL",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 655,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 5,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 560,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 948,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 1,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 821,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 13,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 122,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 94,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 991,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 943,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 809,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 740,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 147,
+     "truth": "NOT",
+     "pred": "NOT"
+    }
+   ],
+   "1": [
+    {
+     "id": 974,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 348,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 935,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 812,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 184,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 421,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 722,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 3,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 678,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 653,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 7,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 505,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 942,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 320,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 884,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 420,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 628,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 17,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 655,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 5,
+     "truth": "RATIONAL",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 560,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 948,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 1,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 821,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 13,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 122,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 94,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 991,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 943,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 809,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 740,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 147,
+     "truth": "NOT",
+     "pred": "NOT"
+    }
+   ],
+   "2": [
+    {
+     "id": 974,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 348,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 935,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 812,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 184,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 421,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 722,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 3,
+     "truth": "RATIONAL",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 678,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 653,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 7,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 505,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 942,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 320,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 884,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 420,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 628,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 17,
+     "truth": "RATIONAL",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 655,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 5,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 560,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 948,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 1,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 821,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 13,
+     "truth": "RATIONAL",
+     "pred": "NOT"
+    },
+    {
+     "id": 122,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 94,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 991,
+     "truth": "NOT",
+     "pred": "RATIONAL"
+    },
+    {
+     "id": 943,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 809,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 740,
+     "truth": "NOT",
+     "pred": "NOT"
+    },
+    {
+     "id": 147,
+     "truth": "NOT",
+     "pred": "NOT"
+    }
+   ]
+  }
+ },
+ "sci_data": {
+  "aggregate": {
+   "seed_accs": [
+    87.5,
+    93.8,
+    100.0
+   ],
+   "mean_acc": 93.8,
+   "n_items": 16
+  },
+  "ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": 1,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 2,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 3,
+     "truth": "NORMAL",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 4,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 5,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 6,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 7,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 8,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 9,
+     "truth": "NORMAL",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 10,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 11,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 12,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 13,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 14,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 15,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 16,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    }
+   ],
+   "1": [
+    {
+     "id": 1,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 2,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 3,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 4,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 5,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 6,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 7,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 8,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 9,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 10,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 11,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 12,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 13,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 14,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 15,
+     "truth": "ANOMALOUS",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 16,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    }
+   ],
+   "2": [
+    {
+     "id": 1,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 2,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 3,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 4,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 5,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 6,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 7,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 8,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 9,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 10,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 11,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 12,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 13,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    },
+    {
+     "id": 14,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 15,
+     "truth": "ANOMALOUS",
+     "pred": "ANOMALOUS"
+    },
+    {
+     "id": 16,
+     "truth": "NORMAL",
+     "pred": "NORMAL"
+    }
+   ]
+  }
+ },
+ "code_pattern": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 20
+  },
+  "ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": 1,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 2,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 3,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 4,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 5,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 6,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 7,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 8,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 9,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 10,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 11,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 12,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 13,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 14,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 15,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 16,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 17,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 18,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 19,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 20,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    }
+   ],
+   "1": [
+    {
+     "id": 1,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 2,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 3,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 4,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 5,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 6,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 7,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 8,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 9,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 10,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 11,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 12,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 13,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 14,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 15,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 16,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 17,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 18,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 19,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 20,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    }
+   ],
+   "2": [
+    {
+     "id": 1,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 2,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 3,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 4,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 5,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 6,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 7,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 8,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 9,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 10,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 11,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 12,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 13,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 14,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 15,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 16,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 17,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 18,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    },
+    {
+     "id": 19,
+     "truth": "PURE",
+     "pred": "PURE"
+    },
+    {
+     "id": 20,
+     "truth": "IMPURE",
+     "pred": "IMPURE"
+    }
+   ]
+  }
+ },
+ "date_logic": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 5
+  },
+  "ids": [
+   "date_logic#0",
+   "date_logic#1",
+   "date_logic#2",
+   "date_logic#3",
+   "date_logic#5"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "date_logic#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "date_logic#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "1": [
+    {
+     "id": "date_logic#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "date_logic#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "2": [
+    {
+     "id": "date_logic#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "date_logic#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "date_logic#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ]
+  }
+ },
+ "string_ops": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 6
+  },
+  "ids": [
+   "string_ops#0",
+   "string_ops#1",
+   "string_ops#2",
+   "string_ops#3",
+   "string_ops#4",
+   "string_ops#5"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "string_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "1": [
+    {
+     "id": "string_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "2": [
+    {
+     "id": "string_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "string_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "string_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ]
+  }
+ },
+ "list_ops": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 6
+  },
+  "ids": [
+   "list_ops#0",
+   "list_ops#1",
+   "list_ops#2",
+   "list_ops#3",
+   "list_ops#4",
+   "list_ops#5"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "list_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "1": [
+    {
+     "id": "list_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ],
+   "2": [
+    {
+     "id": "list_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "list_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "list_ops#5",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    }
+   ]
+  }
+ },
+ "numeric": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 5
+  },
+  "ids": [
+   "numeric#0",
+   "numeric#2",
+   "numeric#3",
+   "numeric#4",
+   "numeric#5"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "numeric#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "numeric#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "numeric#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "numeric#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "numeric#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "numeric#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "numeric#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ]
+  }
+ },
+ "dict_ops": {
+  "aggregate": {
+   "seed_accs": [
+    80.0,
+    100.0,
+    80.0
+   ],
+   "mean_acc": 86.7,
+   "n_items": 5
+  },
+  "ids": [
+   "dict_ops#0",
+   "dict_ops#1",
+   "dict_ops#2",
+   "dict_ops#3",
+   "dict_ops#4"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "dict_ops#0",
+     "truth": "PASS",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "dict_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "dict_ops#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "dict_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "dict_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "dict_ops#0",
+     "truth": "PASS",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#1",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#2",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "dict_ops#3",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dict_ops#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ]
+  }
+ },
+ "recursion": {
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    100.0,
+    100.0
+   ],
+   "mean_acc": 100.0,
+   "n_items": 6
+  },
+  "ids": [
+   "recursion#0",
+   "recursion#1",
+   "recursion#2",
+   "recursion#3",
+   "recursion#4",
+   "recursion#5"
+  ],
+  "seeds": {
+   "0": [
+    {
+     "id": "recursion#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "recursion#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "recursion#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "recursion#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "recursion#0",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#1",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#2",
+     "truth": "FAIL",
+     "pred": "FAIL"
+    },
+    {
+     "id": "recursion#3",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#4",
+     "truth": "PASS",
+     "pred": "PASS"
+    },
+    {
+     "id": "recursion#5",
+     "truth": "PASS",
+     "pred": "PASS"
+    }
+   ]
+  }
+ }
+}
