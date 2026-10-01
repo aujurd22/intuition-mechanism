@@ -1,0 +1,56 @@
+{
+ "code_pattern": {
+  "mean_H": 0.0,
+  "mean_H_given_truth": 0.0,
+  "unanimous_pct": 100.0,
+  "SCR_proxy": 1.0
+ },
+ "date_logic": {
+  "mean_H": 0.1007,
+  "mean_H_given_truth": 0.1007,
+  "unanimous_pct": 80.0,
+  "SCR_proxy": 0.8993
+ },
+ "dict_ops": {
+  "mean_H": 0.1528,
+  "mean_H_given_truth": 0.1528,
+  "unanimous_pct": 80.0,
+  "SCR_proxy": 0.8472
+ },
+ "list_ops": {
+  "mean_H": 0.0,
+  "mean_H_given_truth": 0.0,
+  "unanimous_pct": 100.0,
+  "SCR_proxy": 1.0
+ },
+ "math": {
+  "mean_H": 0.2307,
+  "mean_H_given_truth": 0.2307,
+  "unanimous_pct": 71.9,
+  "SCR_proxy": 0.7693
+ },
+ "numeric": {
+  "mean_H": 0.1837,
+  "mean_H_given_truth": 0.1837,
+  "unanimous_pct": 80.0,
+  "SCR_proxy": 0.8163
+ },
+ "recursion": {
+  "mean_H": 0.0839,
+  "mean_H_given_truth": 0.0839,
+  "unanimous_pct": 83.3,
+  "SCR_proxy": 0.9161
+ },
+ "sci_data": {
+  "mean_H": 0.357,
+  "mean_H_given_truth": 0.357,
+  "unanimous_pct": 50.0,
+  "SCR_proxy": 0.643
+ },
+ "string_ops": {
+  "mean_H": 0.0839,
+  "mean_H_given_truth": 0.0839,
+  "unanimous_pct": 83.3,
+  "SCR_proxy": 0.9161
+ }
+}

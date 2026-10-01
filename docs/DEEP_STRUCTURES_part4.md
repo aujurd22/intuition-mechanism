@@ -77,3 +77,43 @@ Plus the classic trap: odd numbers 1,3,5,7... with a membership probe
 on 9 (odd: YES; the 'all primes' hallucination: NO).
 
 Results: p154_counterexample_results.json (3 models x 8 families).
+
+## IV.4 SCR MEASURED (P155) — residual disagreement across independent judges
+
+Operationalization: H_before per probe = binary entropy of the 9
+judgments (3 models x 3 seeds, P153 archive) around the judgment
+distribution.  The mechanical verifier's H_after = 0 (deterministic),
+so the RESIDUAL H is exactly the un-collapsed hypothesis space that
+survives after each judge's independent discovery attempt.
+
+| domain | residual H | unanimous% | reading |
+|---|---|---|---|
+| code_pattern | 0.000 | 100% | FULL COLLAPSE — the purity rule transferred identically to every judge |
+| list_ops | 0.000 | 100% | full collapse |
+| string_ops / recursion | 0.084 | 83% | near-collapse |
+| date_logic / dict_ops / numeric | 0.10-0.18 | 80% | near-collapse |
+| math | 0.231 | 72% | partial — models share most of the rule, split on a probe subset |
+| sci_data | 0.357 | 50% | NO collapse — every judge carries a PRIVATE hypothesis |
+
+TWO findings:
+
+1. The collapse ordering REPRODUCES the accuracy ordering (Spearman
+   ~1.0 across the nine domains) — residual disagreement is a
+   domain-intrinsic property, not judge noise.  A domain is a
+   compression domain iff independent judges COLLAPSE to the same
+   structure — which is the P144/P146 boundary rediscovered from the
+   judge side.
+
+2. sci_data is UNDERDETERMINED: doubao reads 93.8% (high accuracy)
+   while disagreeing with the other two judges — at least two
+   DIFFERENT transferable structures fit the discovery set.  This is
+   the textbook underdetermination of theory by evidence, appearing
+   as a measurement.  The SCR frame says what to do: raise H_before
+   by widening the probe carrier until the private hypotheses diverge
+   (regime change did not separate them; a carrier that breaks BOTH
+   candidate rules would).
+
+CENTRAL QUESTION operationalized: "what kind of compression produces
+transferable structure" = "which discovery sets drive residual H to 0
+across independent judges" — measurable per domain, per probe, with
+the archive already on disk.
