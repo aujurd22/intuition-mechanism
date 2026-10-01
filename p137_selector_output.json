@@ -1,0 +1,66 @@
+{
+ "ranking": [
+  {
+   "id": "OQ1",
+   "title": "Staleness detector: set-overlap feature (prev-para vs bare top-3 identity overlap)",
+   "score": 3.864,
+   "feasibility": 1.0,
+   "info_gain": 0.864,
+   "surprise": 1.0,
+   "utility": 1.0,
+   "registry_hits": 95,
+   "verifier": "local_data"
+  },
+  {
+   "id": "OQ4",
+   "title": "Uniform rule for the support coordinate s_d (the class-invariant table layer)",
+   "score": 2.882,
+   "feasibility": 0.9,
+   "info_gain": 0.582,
+   "surprise": 1.0,
+   "utility": 0.4,
+   "registry_hits": 64,
+   "verifier": "numeric"
+  },
+  {
+   "id": "OQ2",
+   "title": "Census extension d in [300, 1000] (2-elementary + six-row negative control)",
+   "score": 2.682,
+   "feasibility": 0.9,
+   "info_gain": 0.482,
+   "surprise": 0.3,
+   "utility": 1.0,
+   "registry_hits": 53,
+   "verifier": "numeric"
+  },
+  {
+   "id": "OQ3",
+   "title": "Height-matched deg-matched mediation test (does the judge read gdepth or height?)",
+   "score": 2.668,
+   "feasibility": 0.55,
+   "info_gain": 0.718,
+   "surprise": 1.0,
+   "utility": 0.4,
+   "registry_hits": 79,
+   "verifier": "api_llm"
+  },
+  {
+   "id": "OQ5",
+   "title": "Third-corpus DR replication (non-Wikipedia)",
+   "score": 2.491,
+   "feasibility": 1.0,
+   "info_gain": 0.191,
+   "surprise": 0.3,
+   "utility": 1.0,
+   "registry_hits": 21,
+   "verifier": "local_data"
+  }
+ ],
+ "human_order_analogue": [
+  "census [1,300] (done, =OQ2 class)",
+  "staleness detector (done, =OQ1 class)",
+  "calibration matrix (done)",
+  "chain write-out (done, =P135)"
+ ],
+ "weights": "equal v1"
+}

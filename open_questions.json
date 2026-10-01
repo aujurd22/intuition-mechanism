@@ -1,0 +1,54 @@
+{
+  "open_questions": [
+    {
+      "id": "OQ1",
+      "title": "Staleness detector: set-overlap feature (prev-para vs bare top-3 identity overlap)",
+      "description": "P130-b exhausted the cosine feature family (CV 84.1 vs always-anchor 84.3, oracle router 92.7). Registered next features: (ii) set feature — is the bare top-3 one of the same paragraphs as the anchor's region, a SET-membership signal rather than a mean cosine. Computable purely from p126b_rows.json? No — needs the per-row bare top-3 ids, not stored. Requires a re-run pass over the cached embeddings (local, no API).",
+      "verifier": "local_data",
+      "cost_estimate": "medium (local re-embedding pass, ~10 min)",
+      "unlocks": ["deployable guard v3", "P125-c residual 19.1 -> ~0?"],
+      "new_axis": true,
+      "near_published": true
+    },
+    {
+      "id": "OQ2",
+      "title": "Census extension d in [300, 1000] (2-elementary + six-row negative control)",
+      "description": "P121 covered [1,300]. The completeness argument (2-elementary closure) is verified only to d=500 by form enumeration (P104/P117-b). Extending the Lambert-series census to [300,1000] AND the 2-elementary enumeration to [300,1000] widens the exhaustive-verification band at zero conceptual risk.",
+      "verifier": "numeric",
+      "cost_estimate": "low (pure local mpmath, ~20 min for 700 values at reduced dps)",
+      "unlocks": ["six-row theorem verified band x3", "2-elementary closure band x2"],
+      "new_axis": false,
+      "near_published": true
+    },
+    {
+      "id": "OQ3",
+      "title": "Height-matched deg-matched mediation test (does the judge read gdepth or height?)",
+      "description": "P129/II.3 registered falsification design: equalize denominator size / CF period length within deg-matched pairs, keep gdepth different. Needs pair construction from the census + ~40 API calls.",
+      "verifier": "api_llm",
+      "cost_estimate": "medium (pair construction + 40 calls)",
+      "unlocks": ["I1 mediation resolved", "two-axis theory sharpened or demoted"],
+      "new_axis": true,
+      "near_published": false
+    },
+    {
+      "id": "OQ4",
+      "title": "Uniform rule for the support coordinate s_d (the class-invariant table layer)",
+      "description": "s_d in {6,10,21,13,34} follows no known pattern in d; this is the Ramanujan/Weber table layer. Any 'rule' candidate must reproduce all five + predict d=1 (s=1 trivially) and fail on 35/55/77 (multi-support).",
+      "verifier": "numeric",
+      "cost_estimate": "high (open math; no candidate rule known)",
+      "unlocks": ["six-row theorem fully uniform"],
+      "new_axis": true,
+      "near_published": false
+    },
+    {
+      "id": "OQ5",
+      "title": "Third-corpus DR replication (non-Wikipedia)",
+      "description": "DR1-DR10 magnitudes are SQuAD+L12-v2 specific (P127). Replicate the prefix/order/source findings on a different corpus.",
+      "verifier": "local_data",
+      "cost_estimate": "medium-high (new corpus + full sweep)",
+      "unlocks": ["DR generality"],
+      "new_axis": false,
+      "near_published": true
+    }
+  ]
+}
