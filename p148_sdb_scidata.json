@@ -1,0 +1,13 @@
+{
+ "A_charter_only": {
+  "discovery_acc": 100.0,
+  "transfer_acc": 100.0,
+  "surprise_detected": true
+ },
+ "B_with_verifier_hint": {
+  "discovery_acc": 100.0,
+  "transfer_acc": 75.0,
+  "surprise_detected": true
+ },
+ "mdl_ratio_reference": 19.5
+}
