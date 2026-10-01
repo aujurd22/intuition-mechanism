@@ -1,0 +1,84 @@
+{
+ "domain": "ramanujan-sixrow",
+ "charter": "Single evidence source: the stored exemplar set below is the exhaustively verified rational locus; judge a candidate by matching it against these exemplars, then CONFIRM by executing the registered verifier. Never weigh raw numbers yourself.",
+ "exemplars": [
+  {
+   "d": 1,
+   "inputs": {
+    "x0": "0.125000",
+    "lam": "-9.680667",
+    "d": 1
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 8"
+  },
+  {
+   "d": 3,
+   "inputs": {
+    "x0": "0.083333",
+    "lam": "0.250000",
+    "d": 3
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 12"
+  },
+  {
+   "d": 5,
+   "inputs": {
+    "x0": "0.050000",
+    "lam": "0.250000",
+    "d": 5
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 20"
+  },
+  {
+   "d": 7,
+   "inputs": {
+    "x0": "0.031250",
+    "lam": "0.238095",
+    "d": 7
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 32"
+  },
+  {
+   "d": 13,
+   "inputs": {
+    "x0": "0.009615",
+    "lam": "0.200000",
+    "d": 13
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 104"
+  },
+  {
+   "d": 17,
+   "inputs": {
+    "x0": "0.005000",
+    "lam": "0.180672",
+    "d": 17
+   },
+   "label": "RATIONAL",
+   "note": "1/x6 = 200"
+  },
+  {
+   "d": 10,
+   "inputs": {
+    "x0": "0.016708",
+    "lam": "0.217853",
+    "d": 10
+   },
+   "label": "NOT",
+   "note": "2-elementary yet irrational: the nearest miss in the locus \u2014 do not generalize from 'small d' or '2-elementary'"
+  }
+ ],
+ "verifier": {
+  "name": "lambert_sixrow",
+  "rule": "verifier(1/x6) integer to 1e-12 => RATIONAL",
+  "executed_by": "agent"
+ },
+ "version": 3,
+ "created_at": 1790841691.6209974,
+ "source": "P121 census + P138 protocol"
+}
