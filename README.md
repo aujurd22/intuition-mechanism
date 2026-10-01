@@ -2,7 +2,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 108 unique P-numbers P1–P134, ~300 KB,
+(pre-registered experiment registry, 110+ unique P-numbers P1–P154, ~330 KB,
 every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
@@ -137,6 +137,32 @@ language model at all — the registered answer attempt is
 trace + canon absorption), with a pre-registered falsification design
 (height-matched deg-matched pairs).
 
+### 2.3 Insight Arena (P152–P153): the formal benchmark
+
+**Discovery Score = mean(Compression, Novelty, Verification, Transfer)**,
+all four mechanically computed; the **Insight-vs-Hallucination boundary
+is the Verification component** — a stated rule is an INSIGHT iff it
+survives mechanical probe verification AND transfers out-of-carrier.
+
+Arena v2 mega-run (P153): 3 models × 8 domains × 3 seeds = **909
+item-level judgments**, every one archived with id/truth/pred:
+
+| Domain | deepseek | doubao | kimi | n/model |
+|---|---|---|---|---|
+| math (census) | 77.1 | 79.2 | 76.0 | 96 |
+| sci-data | 81.2 | 93.8 | 79.2 | 48 |
+| code-pattern | 100 | 100 | 100 | 60 |
+| 5 elementary code domains | 94–100 | 86–100 | 93–100 | 15–18 |
+
+Three standing results: (1) **math is the resistant domain** — no model
+exceeds 80% at n=96 (the shrinking law has a floor); (2) code-pattern
+saturated cross-model (variance elimination); (3) elementary domains
+confirmed at scale. The math track's first run also caught a textbook
+HALLUCINATION: the judge stated "RATIONAL iff class number 1" (a
+famous-hypothesis-shaped guess) — 5/6 probes, boundary refused INSIGHT.
+The Insight-vs-Hallucination boundary is now mechanically enforced, not
+judged (P152).
+
 ---
 
 ## 3. The memory line: coverage geometry → controller → RAG design
@@ -157,7 +183,13 @@ trace + canon absorption), with a pre-registered falsification design
 These replicate across five substrates (synthetic families, FlyMemory
 production, SQuAD, Gaussian matrix, mathematical text — the last one
 *fails* L5 by the template-dilution effect, which is itself a finding:
-P111/P113).  The **Memory Geometry Controller** (P73/P74: r, nn, ts,
+P111/P113).  The **generalization stack** (P145–P151): probe (compression-domain
+detector, with the positive-only-poisoning and form-sensitivity laws) →
+conditional pack build → verifier registry (10 verifiers incl. a
+template library: schema_check/set_match/all_match) → mechanical gate →
+multi-domain hook routing. Three live domains; the **auto-scan loop**
+(auto_scan_loop.py, scheduled daily) re-probes candidate domains and
+builds only where the shrinking-law window is still open.  The **Memory Geometry Controller** (P73/P74: r, nn, ts,
 cov, clr, lq, ff, eps → type/capacity/eviction/verification/query
 gate) compresses the laws into a zero-fit-parameter policy, validated
 end-to-end on FlyMemory production data (P115).

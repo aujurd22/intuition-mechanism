@@ -30,7 +30,21 @@ for pid, body in entries.items():
 missing, present = [], 0
 for f, pids in sorted(cited.items()):
     base = os.path.basename(f)
-    if os.path.exists(f) or os.path.exists(base) or os.path.exists("docs/" + base):
+    def exists_any(name):
+        # exact, then suffix match (model-suffixed artifacts like
+        # p144_doubao-seed-2.1-lite.json get mis-split by the citation
+        # regex at "2." — P149 audit false positive fix)
+        if os.path.exists(name) or os.path.exists("docs/" + name):
+            return True
+        try:
+            candidates = ["."] + [d for d in os.listdir(".")
+                                  if os.path.isdir(d) and not d.startswith(".")]
+            return any(fn.endswith(name)
+                       for cand in candidates
+                       for fn in os.listdir(cand))
+        except OSError:
+            return False
+    if exists_any(base):
         present += 1
     else:
         missing.append((base, sorted(pids)))
