@@ -199,11 +199,16 @@ def register_constraint(name, fn):
     CONSTRAINT_FNS[name] = fn
 
 
+from . import verifier_templates as _vt
+
 VERIFIERS = {
     "lambert_sixrow": lambert_sixrow,
     "integer_check": integer_check,
     "pytest_check": pytest_check,
     "constraint_check": constraint_check,
+    "schema_check": _vt.schema_check,
+    "set_match": _vt.set_match,
+    "all_match": _vt.all_match,
 }
 
 

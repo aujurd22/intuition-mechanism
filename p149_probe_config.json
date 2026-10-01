@@ -1,0 +1,16 @@
+{
+ "domain": "config-compliance",
+ "curve": {
+  "0": {
+   "acc": 91.7
+  },
+  "2": {
+   "acc": 100.0
+  },
+  "3": {
+   "acc": 100.0
+  }
+ },
+ "gain_k3": 8.299999999999997,
+ "verdict": "SATURATED-IN-BATCH"
+}

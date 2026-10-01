@@ -1,0 +1,742 @@
+[
+ {
+  "id": "dc203",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc03",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc201",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc02",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc101",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 8,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ },
+ {
+  "id": "dc01",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc104",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http"
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ },
+ {
+  "id": "dc103",
+  "object": {
+   "host": "DB01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ },
+ {
+  "id": "dc105",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": ""
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ },
+ {
+  "id": "dc202",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": true
+ },
+ {
+  "id": "dc102",
+  "object": {
+   "host": "db01",
+   "port": 5432,
+   "retries": 3,
+   "mode": "ftp",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ },
+ {
+  "id": "dc100",
+  "object": {
+   "host": "db01",
+   "port": 99999,
+   "retries": 3,
+   "mode": "http",
+   "tls": {
+    "enabled": true,
+    "cert": "server-pem"
+   }
+  },
+  "schema": {
+   "type": "object",
+   "required": [
+    "host",
+    "port",
+    "retries",
+    "mode",
+    "tls"
+   ],
+   "properties": {
+    "host": {
+     "type": "string",
+     "pattern": "[a-z]"
+    },
+    "port": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 65535
+    },
+    "retries": {
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "mode": {
+     "type": "string",
+     "enum": [
+      "http",
+      "grpc"
+     ]
+    },
+    "tls": {
+     "type": "object",
+     "required": [
+      "enabled"
+     ],
+     "properties": {
+      "enabled": {
+       "type": "boolean"
+      },
+      "cert": {
+       "type": "string",
+       "pattern": "[a-z]"
+      }
+     }
+    }
+   }
+  },
+  "passes": false
+ }
+]
