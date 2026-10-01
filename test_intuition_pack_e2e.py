@@ -73,6 +73,16 @@ def main():
     assert report["PASS"], report
     print("GATE PASS")
 
+    print("== typed output + score (P141) ==")
+    from intuition_pack.verifiers import score_candidates
+    for d in (3, 35, 500):
+        out = run_verifier("lambert_sixrow", {"d": d})
+        print(f"  d={d:>3} {out['verdict']:>8} conf={out['confidence']:<9} "
+              f"basis={out['confidence_basis']} opts={out['typed']['options']}")
+    sc = score_candidates([{"d": 35}, {"d": 3}, {"d": 500}])
+    print("  score order:", [(c["d"], round(c["p_rational"], 3)) for c in sc])
+    assert sc[0]["p_rational"] >= sc[-1]["p_rational"]
+
     print("== flymemory probe ==")
     from intuition_pack.store import FlyMemoryStore
     try:

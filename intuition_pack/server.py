@@ -18,7 +18,7 @@ from mcp.server.fastmcp import FastMCP
 
 from intuition_pack.pack import build_pack, Pack
 from intuition_pack.store import get_store
-from intuition_pack.verifiers import run_verifier, VERIFIERS
+from intuition_pack.verifiers import run_verifier, VERIFIERS, score_candidates
 from intuition_pack.regression import mechanical_gate, load_testset
 from intuition_pack.route import route
 
@@ -49,11 +49,27 @@ def pack_get(domain: str) -> str:
     if raw is None:
         return json.dumps({"error": f"no pack for domain {domain!r}"})
     pack = Pack.from_json(raw)
+    judge_prior = None
+    try:
+        land = json.load(open(os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+            "p131_landscape_consolidated.json"), encoding="utf-8"))
+        judge_prior = {
+            "note": "P131 landscape: fast-classification carrier rates "
+                    "(LLM layer, before mechanical verification)",
+            "forced_choice_pooled": land.get("v4.1_forced", {}).get("rate"),
+            "carriers": ["deepseek-v4.1-flash(forced)",
+                         "doubao-seed-2.1-lite(forced)",
+                         "deepseek-v4-flash(absolute)"],
+        }
+    except Exception:
+        pass
     return json.dumps({"domain": domain, "version": pack.version,
                        "charter": pack.charter,
                        "prompt_block": pack.prompt_block(),
                        "verifier": pack.verifier.name,
-                       "verifier_rule": pack.verifier.rule})
+                       "verifier_rule": pack.verifier.rule,
+                       "judge_prior": judge_prior})
 
 
 @mcp.tool()
@@ -72,6 +88,14 @@ def verify(domain: str, payload: dict) -> str:
     pack = Pack.from_json(raw)
     out = run_verifier(pack.verifier.name, payload)
     return json.dumps(out)
+
+
+@mcp.tool()
+def score(domain: str, candidates: list) -> str:
+    """Jev `score` analogue: order candidates by P(RATIONAL), descending.
+    Each item carries its typed choice distribution — the agent applies
+    its own confidence threshold.  Candidates: [{"d": int}]."""
+    return json.dumps({"scored": score_candidates(candidates)})
 
 
 @mcp.tool()

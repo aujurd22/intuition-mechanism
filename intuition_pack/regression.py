@@ -78,6 +78,27 @@ def mechanical_gate(pack: Pack, testset: list) -> dict:
     checks["G4b_n"] = len(perturb_rows)
     checks["G4_errors"] = wrong + pw
 
+    # G5 typed-output consistency (P141): every verifier verdict must carry
+    # a normalized choice distribution consistent with the verdict, and the
+    # confidence must agree with the verdict direction.
+    import math as _math
+    g5_bad = []
+    for probe_d in (1, 3, 5, 7, 13, 17, 35, 55, 77, 10):
+        out = run_verifier(pack.verifier.name, {"d": probe_d})
+        typed = out.get("typed") or {}
+        opts = typed.get("options") or {}
+        if abs(sum(opts.values()) - 1.0) > 1e-3:
+            g5_bad.append({"d": probe_d, "issue": "options not normalized",
+                           "sum": sum(opts.values())})
+        verdict_p = opts.get(out["verdict"], 0.0)
+        if verdict_p < 0.99 and out.get("in_band", False):
+            g5_bad.append({"d": probe_d, "issue": "in-band verdict < 0.99",
+                           "verdict": out["verdict"], "p": verdict_p})
+        if not (out.get("confidence", 0) >= 0.5):
+            g5_bad.append({"d": probe_d, "issue": "confidence < 0.5"})
+    checks["G5_typed_consistency"] = (len(g5_bad) == 0)
+    checks["G5_errors"] = g5_bad
+
     checks["PASS"] = all(v for k, v in checks.items()
                          if k.startswith("G") and isinstance(v, bool))
     return checks

@@ -42,12 +42,40 @@ def lambert_one_over_x6(d: int):
     return ec / (4 * w6) + 2
 
 
+CENSUS_BAND = (1, 300)   # P121: exhaustively verified, zero errors
+
+
+def _p_rational(resid, tol):
+    """P(1/x6 is an integer) from the residual/tolerance ratio.
+
+    In the census band the method IS the ground truth (P121 exhaustive
+    census, two code paths at 3.5e-17): the integer rows (residual
+    ~1e-40) and the irrational rows (residual = O(1)) are completely
+    separated, so the confidence saturates — reported honestly below
+    1.0, never a fake 1.0.
+    """
+    if tol is None or resid is None or tol <= 0:
+        return 0.5
+    ratio = float(resid / tol)
+    if ratio < 1e-6:
+        return 1.0 - 1e-6
+    if ratio < 1:
+        return 0.999
+    if ratio > 1e6:
+        return 1e-6
+    if ratio > 1:
+        return 0.001
+    return 0.5
+
+
 def lambert_sixrow(payload: dict) -> dict:
     """Verifier for the ramanujan-sixrow domain.
 
     payload: {"d": int}  (or {"x0": ...} ignored — the census is indexed by d)
-    Decision rule: 1/x6 integer to 1e-12 relative tolerance => RATIONAL.
-    Audit trail: the value itself.
+    Decision rule: 1/x6 integer to a scaled absolute tolerance => RATIONAL.
+    Output is Jev-typed (P141): verdict + calibrated confidence + a choice
+    distribution the agent can threshold on, with the confidence basis
+    made explicit (in/out of the exhaustive census band).
     """
     d = int(payload["d"])
     v = lambert_one_over_x6(d)
@@ -55,8 +83,26 @@ def lambert_sixrow(payload: dict) -> dict:
     resid = abs(v - r) if r is not None else None
     tol = mpf("1e-12") * max(1, abs(r)) if r is not None else None
     is_int = resid is not None and resid < tol
+    in_band = CENSUS_BAND[0] <= d <= CENSUS_BAND[1]
+    p_rat = _p_rational(resid, tol)
+    if not in_band:
+        # numeric test unchanged, but the completeness argument is not
+        # verified out of band (P135 scope) — cap and flag
+        p_rat = min(p_rat, 0.99) if is_int else max(p_rat, 0.01)
+    conf = max(p_rat, 1.0 - p_rat)   # confidence in the emitted verdict
     return {
         "verdict": "RATIONAL" if is_int else "NOT",
+        "confidence": round(conf, 6),
+        "typed": {
+            "kind": "choice",
+            "options": {"RATIONAL": round(p_rat, 6),
+                        "NOT": round(1.0 - p_rat, 6)},
+            "threshold_hint": "agent-side gate; band-internal judgments "
+                              "are census-exhaustive",
+        },
+        "confidence_basis": ("census_exhaustive_band" if in_band
+                             else "out_of_band_numeric_only"),
+        "in_band": in_band,
         "value": float(v),
         "nearest_integer": r,
         "residual": float(resid) if resid is not None else None,
@@ -90,3 +136,29 @@ def run_verifier(name: str, payload: dict) -> dict:
 
 
 import time  # noqa: E402
+
+def score_candidates(candidates: list) -> list:
+    """Jev `score` analogue: order candidates by P(RATIONAL), descending —
+    the "closeness to the rational locus" ordering.  Each item carries its
+    typed choice distribution so the agent can apply its own threshold.
+    candidates: [{"d": int} | {"value": float}, ...]
+    """
+    scored = []
+    for c in candidates:
+        if "d" in c:
+            out = lambert_sixrow({"d": c["d"]})
+        else:
+            out = integer_check({"value": c["value"]})
+        typed = out.get("typed") or {
+            "options": {"INTEGER": 1.0 if out["verdict"] == "INTEGER" else 0.0,
+                        "NONINTEGER": 0.0 if out["verdict"] == "INTEGER" else 1.0}}
+        opts = typed["options"]
+        p_rat = opts.get("RATIONAL", opts.get("INTEGER", 0.0))
+        scored.append({**c, "verdict": out["verdict"],
+                       "p_rational": p_rat,
+                       "confidence": out.get("confidence"),
+                       "confidence_basis": out.get("confidence_basis", "generic"),
+                       "residual": out.get("residual"),
+                       "in_band": out.get("in_band", True)})
+    scored.sort(key=lambda x: -x["p_rational"])
+    return scored
