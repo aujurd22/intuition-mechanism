@@ -131,12 +131,15 @@
   "rule": "per-constraint mechanical evaluation; any violation => FAIL",
   "executed_by": "agent"
  },
- "version": 4,
+ "version": 5,
  "created_at": 1790852697.660584,
  "source": "P147 generated domain",
  "triggers": [
   "constrained",
   "constraint",
-  "\u7ea6\u675f"
+  "constraints",
+  "\u7ea6\u675f",
+  "violation",
+  "\u8fdd\u4f8b"
  ]
 }

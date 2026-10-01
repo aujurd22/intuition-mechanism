@@ -40,8 +40,20 @@ def route(text: str, packs: list):
     best = None
     for pack in packs:
         trig = [t.lower() for t in (pack.triggers or [pack.domain])]
-        # T1 explicit trigger word (whole-word)
-        t1 = any(re.search(r"\b" + re.escape(t) + r"\b", low) for t in trig)
+        # T1 explicit trigger word; whole-word for ASCII, substring for
+        # CJK (\b is meaningless between CJK word chars — P147 catch:
+        # "约束" never matched inside "满足约束：")
+        def _hit(t):
+            # alnum-lookaround boundary instead of \b: CJK chars are
+            # unicode \w, so \b fails on both "满足约束：" (CJK-CJK) and
+            # "constraints吗" (ASCII-CJK) — the lookarounds only reject
+            # [a-zA-Z0-9] neighbors, which is the boundary we mean
+            if t.isascii():
+                return re.search(
+                    r"(?<![a-zA-Z0-9])" + re.escape(t) + r"(?![a-zA-Z0-9])",
+                    low) is not None
+            return t in low
+        t1 = any(_hit(t) for t in trig)
         # T2 stimulus shape: pack input keys present AND a numeric pair in text
         pack_keys = set()
         for e in pack.exemplars:
@@ -50,7 +62,8 @@ def route(text: str, packs: list):
         # also bare d=NN + a judgment verb
         verb = any(v in low for v in
                    ("判断", "判定", "verify", "rational", "integer",
-                    "是不是", "是否", "classify", "判别"))
+                    "是不是", "是否", "classify", "判别", "满足",
+                    "satisfy", "satisfies", "检查", "check"))
         dnum = re.search(r"\bd\s*[=:：]\s*(\d{1,4})\b", low)
         t2 = shape or (dnum and verb and pack_keys & {"d"})
         # T3 trigger word + verb (e.g. "用直觉包判断")
