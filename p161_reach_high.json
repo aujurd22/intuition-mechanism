@@ -1,0 +1,35 @@
+{
+ "measured": [
+  {
+   "bits": 20,
+   "median_s": 0.339
+  },
+  {
+   "bits": 30,
+   "median_s": 0.368
+  },
+  {
+   "bits": 40,
+   "median_s": 0.387
+  },
+  {
+   "bits": 50,
+   "median_s": 0.371
+  },
+  {
+   "bits": 60,
+   "median_s": 0.373
+  },
+  {
+   "bits": 70,
+   "median_s": 0.658
+  }
+ ],
+ "ceiling": "70 bits fast, 90 bits exceeds 10+ minutes per attempt (killed)",
+ "reference_gnfs": {
+  "rsa_250": "829 bits (2020)",
+  "rsa_260": "862 bits (2026, GPU sieving, ~4900 GPU-days)",
+  "rsa_1024": "~78x RSA-260 cost (~$30M est.)"
+ },
+ "verdict": "quadratic-form/CF family dies ~70 bits; GNFS 862; gap = 13x bits = astronomically exponential"
+}
