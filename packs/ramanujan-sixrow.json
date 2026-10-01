@@ -78,7 +78,15 @@
   "rule": "verifier(1/x6) integer to 1e-12 => RATIONAL",
   "executed_by": "agent"
  },
- "version": 3,
- "created_at": 1790841691.6209974,
- "source": "P121 census + P138 protocol"
+ "version": 4,
+ "created_at": 1790842390.0332716,
+ "source": "P121 census + P138 protocol",
+ "triggers": [
+  "ramanujan",
+  "sixrow",
+  "\u516d\u884c",
+  "1/pi",
+  "x0",
+  "lambda"
+ ]
 }

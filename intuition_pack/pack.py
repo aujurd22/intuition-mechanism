@@ -28,6 +28,7 @@ class Pack:
     version: int = 1
     created_at: float = field(default_factory=time.time)
     source: str = ""       # provenance: which experiments distilled this pack
+    triggers: list = field(default_factory=list)  # mechanical route keys
 
     def to_json(self) -> str:
         return json.dumps(asdict(self), indent=1)
@@ -50,7 +51,9 @@ class Pack:
 
 
 def build_pack(domain: str, charter: str, exemplars: list, verifier: dict,
-               source: str = "") -> Pack:
+               source: str = "", triggers: list = None) -> Pack:
+    default_triggers = [domain] + [t for t in domain.split("-")]
     return Pack(domain=domain, charter=charter,
                 exemplars=[Exemplar(**e) for e in exemplars],
-                verifier=VerifierSpec(**verifier), source=source)
+                verifier=VerifierSpec(**verifier), source=source,
+                triggers=triggers or default_triggers)

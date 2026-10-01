@@ -20,6 +20,7 @@ from intuition_pack.pack import build_pack, Pack
 from intuition_pack.store import get_store
 from intuition_pack.verifiers import run_verifier, VERIFIERS
 from intuition_pack.regression import mechanical_gate, load_testset
+from intuition_pack.route import route
 
 mcp = FastMCP("intuition-pack")
 
@@ -71,6 +72,25 @@ def verify(domain: str, payload: dict) -> str:
     pack = Pack.from_json(raw)
     out = run_verifier(pack.verifier.name, payload)
     return json.dumps(out)
+
+
+@mcp.tool()
+def route_text(text: str) -> str:
+    """Mechanical trigger: does this input touch a registered pack domain?
+    Zero-LLM routing (mechanical hook > model self-trigger, per the
+    measured reliability ranking).  Returns the matched domain or null."""
+    store = get_store()
+    packs = []
+    for dom in store.list():
+        raw = store.get(dom)
+        if raw:
+            try:
+                packs.append(Pack.from_json(raw))
+            except Exception:
+                pass
+    hit = route(text, packs)
+    return json.dumps({"matched": hit[0] if hit else None,
+                       "rule": hit[1] if hit else None})
 
 
 @mcp.tool()
