@@ -1,0 +1,15 @@
+{
+ "curve": {
+  "0": {
+   "acc": 100.0
+  },
+  "2": {
+   "acc": 100.0
+  },
+  "8": {
+   "acc": 100.0
+  }
+ },
+ "gain_k8": 0.0,
+ "verdict": "DISTRIBUTIONAL (do not build)"
+}

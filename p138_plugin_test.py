@@ -121,35 +121,41 @@ PROMPTS = {
           "Answer exactly one line: 'VERDICT: RATIONAL' or 'VERDICT: NOT'."),
 }
 
-MODELS = ["deepseek-v4-flash", "doubao-seed-2.1-lite"]
-out = {}
-for model in MODELS:
-    os.environ["ARK_MODEL"] = model
-    # llm_client reads ARK_MODEL at import time -> reload
-    import importlib
-    import llm_client
-    importlib.reload(llm_client)
-    res = {}
-    for cond in ("A", "B", "C"):
-        n = {"pos": [0, 0], "neg": [0, 0], "perturb": [0, 0]}
-        for t in TEST:
-            prompt = PROMPTS[cond].format(
-                d=t["d"], x0=t["x0"], lam=t["lam"], verifier=t["verifier"])
-            ans = llm_client.ask_chat(prompt, max_tokens=512)
-            pred = 1 if re.search(r"VERDICT:\s*RATIONAL", ans, re.I) else \
-                0 if re.search(r"VERDICT:\s*NOT", ans, re.I) else None
-            key = t["kind"]
-            n[key][1] += 1
-            if pred is not None and pred == t["truth"]:
-                n[key][0] += 1
-        res[cond] = {k: {"correct": v[0], "n": v[1],
-                         "acc": round(100 * v[0] / v[1], 1)}
-                     for k, v in n.items()}
-        res[cond]["overall"] = round(
-            100 * sum(v[0] for v in n.values()) / sum(v[1] for v in n.values()), 1)
-    out[model] = res
-    print(model, json.dumps(res, indent=1))
+def run_experiment():
+    MODELS = ["deepseek-v4-flash", "doubao-seed-2.1-lite"]
+    out = {}
+    for model in MODELS:
+        os.environ["ARK_MODEL"] = model
+        # llm_client reads ARK_MODEL at import time -> reload
+        import importlib
+        import llm_client
+        importlib.reload(llm_client)
+        res = {}
+        for cond in ("A", "B", "C"):
+            n = {"pos": [0, 0], "neg": [0, 0], "perturb": [0, 0]}
+            for t in TEST:
+                prompt = PROMPTS[cond].format(
+                    d=t["d"], x0=t["x0"], lam=t["lam"], verifier=t["verifier"])
+                ans = llm_client.ask_chat(prompt, max_tokens=512)
+                pred = 1 if re.search(r"VERDICT:\s*RATIONAL", ans, re.I) else \
+                    0 if re.search(r"VERDICT:\s*NOT", ans, re.I) else None
+                key = t["kind"]
+                n[key][1] += 1
+                if pred is not None and pred == t["truth"]:
+                    n[key][0] += 1
+            res[cond] = {k: {"correct": v[0], "n": v[1],
+                             "acc": round(100 * v[0] / v[1], 1)}
+                         for k, v in n.items()}
+            res[cond]["overall"] = round(
+                100 * sum(v[0] for v in n.values()) / sum(v[1] for v in n.values()), 1)
+        out[model] = res
+        print(model, json.dumps(res, indent=1))
 
-json.dump({"testset": TEST, "results": out},
-          open("p138_plugin_test.json", "w"), indent=1)
-print("saved p138_plugin_test.json")
+    json.dump({"testset": TEST, "results": out},
+              open("p138_plugin_test.json", "w"), indent=1)
+    print("saved p138_plugin_test.json")
+
+
+
+if __name__ == "__main__":
+    run_experiment()

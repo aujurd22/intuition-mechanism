@@ -141,9 +141,35 @@ def integer_check(payload: dict) -> dict:
             "value": v, "nearest_integer": int(r)}
 
 
+
+
+def pytest_check(payload: dict, timeout: int = 10) -> dict:
+    """Verifier for the code-pass-fail domain: EXECUTE code+tests in a
+    subprocess.  This is the 'verifier-rich' class of domains (P136):
+    the ground truth is the test suite itself."""
+    import subprocess
+    prog = payload["code"] + "\n" + payload["test"]
+    try:
+        r = subprocess.run([sys.executable, "-c", prog],
+                           capture_output=True, timeout=timeout,
+                           text=True)
+        passed = (r.returncode == 0)
+        trail = (r.stderr or "")[:300]
+    except subprocess.TimeoutExpired:
+        passed, trail = False, "timeout"
+    return {"verdict": "PASS" if passed else "FAIL",
+            "confidence": 1.0 - 1e-9,
+            "typed": {"kind": "choice",
+                      "options": {"PASS": 1.0 - 1e-9 if passed else 1e-9,
+                                  "FAIL": 1e-9 if passed else 1.0 - 1e-9}},
+            "confidence_basis": "direct_execution",
+            "exec_trail": trail}
+
+
 VERIFIERS = {
     "lambert_sixrow": lambert_sixrow,
     "integer_check": integer_check,
+    "pytest_check": pytest_check,
 }
 
 
@@ -157,6 +183,7 @@ def run_verifier(name: str, payload: dict) -> dict:
 
 
 import time  # noqa: E402
+import sys  # noqa: E402
 
 def score_candidates(candidates: list) -> list:
     """Jev `score` analogue: order candidates by P(RATIONAL), descending —

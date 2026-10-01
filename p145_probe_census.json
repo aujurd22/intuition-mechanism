@@ -1,0 +1,17 @@
+{
+ "domain": "ramanujan-sixrow",
+ "curve": {
+  "0": {
+   "acc": 95.5
+  },
+  "2": {
+   "acc": 77.3
+  },
+  "8": {
+   "acc": 100.0
+  }
+ },
+ "gain_k8": 4.5,
+ "verdict": "DISTRIBUTIONAL (do not build)",
+ "note": "complete-pack probe (contrast declaration + boundary negative)"
+}
