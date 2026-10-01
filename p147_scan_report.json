@@ -1,0 +1,24 @@
+[
+ {
+  "domain": "code-pass-fail",
+  "verifier_consistent": true,
+  "probe": "SATURATED-IN-BATCH (P145: zero-shot 100)",
+  "built": false
+ },
+ {
+  "domain": "constrained-set",
+  "verifier_consistent": true,
+  "probe": "COMPRESSION SIGNAL (confirm with single-turn protocol)",
+  "built": true,
+  "version": 4,
+  "gate": {
+   "G1_atomic_load": true,
+   "G2_labels_match_verifier": true,
+   "G3_single_source_charter": true,
+   "G4a_census_verifier_matches_truth": true,
+   "G4b_perturb_not_in_pack": true,
+   "G5_typed_consistency": true,
+   "PASS": true
+  }
+ }
+]

@@ -1,0 +1,142 @@
+{
+ "domain": "constrained-set",
+ "charter": "Single evidence source: judge EVERY claimed constraint against the object mechanically; one violation fails the claim. Confirm with the constraint_check verifier.",
+ "exemplars": [
+  {
+   "d": "cs01",
+   "inputs": {
+    "object": [
+     7,
+     19,
+     31,
+     37,
+     41,
+     59,
+     67
+    ],
+    "constraints": [
+     {
+      "name": "len_is_7",
+      "text": "the list has exactly 7 elements"
+     },
+     {
+      "name": "all_prime",
+      "text": "every element is a prime number"
+     },
+     {
+      "name": "strictly_increasing",
+      "text": "the elements are strictly increasing"
+     }
+    ]
+   },
+   "label": "PASS",
+   "note": "all satisfied"
+  },
+  {
+   "d": "cs02",
+   "inputs": {
+    "object": [
+     7,
+     19,
+     31,
+     37,
+     41,
+     59,
+     67
+    ],
+    "constraints": [
+     {
+      "name": "len_is_7",
+      "text": "the list has exactly 7 elements"
+     },
+     {
+      "name": "all_prime",
+      "text": "every element is a prime number"
+     },
+     {
+      "name": "strictly_increasing",
+      "text": "the elements are strictly increasing"
+     }
+    ]
+   },
+   "label": "PASS",
+   "note": "all satisfied"
+  },
+  {
+   "d": "cs06",
+   "inputs": {
+    "object": [
+     10,
+     16,
+     18,
+     22,
+     46,
+     38,
+     40
+    ],
+    "constraints": [
+     {
+      "name": "len_is_7",
+      "text": "the list has exactly 7 elements"
+     },
+     {
+      "name": "all_even",
+      "text": "every element is even"
+     },
+     {
+      "name": "max_min_diff_30",
+      "text": "max - min == 30"
+     },
+     {
+      "name": "no_duplicates",
+      "text": "the elements are pairwise distinct"
+     }
+    ]
+   },
+   "label": "FAIL",
+   "note": "violated: max_min_diff_30"
+  },
+  {
+   "d": "cs08",
+   "inputs": {
+    "object": [
+     3,
+     7,
+     20,
+     21,
+     27,
+     28
+    ],
+    "constraints": [
+     {
+      "name": "sum_is_100",
+      "text": "the elements sum to exactly 100"
+     },
+     {
+      "name": "no_duplicates",
+      "text": "the elements are pairwise distinct"
+     },
+     {
+      "name": "strictly_increasing",
+      "text": "the elements are strictly increasing"
+     }
+    ]
+   },
+   "label": "FAIL",
+   "note": "violated: sum_is_100"
+  }
+ ],
+ "verifier": {
+  "name": "constraint_check",
+  "rule": "per-constraint mechanical evaluation; any violation => FAIL",
+  "executed_by": "agent"
+ },
+ "version": 4,
+ "created_at": 1790852697.660584,
+ "source": "P147 generated domain",
+ "triggers": [
+  "constrained",
+  "constraint",
+  "\u7ea6\u675f"
+ ]
+}

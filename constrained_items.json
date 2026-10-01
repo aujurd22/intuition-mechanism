@@ -1,0 +1,390 @@
+[
+ {
+  "id": "cs01",
+  "object": [
+   7,
+   19,
+   31,
+   37,
+   41,
+   59,
+   67
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs02",
+  "object": [
+   7,
+   19,
+   31,
+   37,
+   41,
+   59,
+   67
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": true,
+  "note": "generator fallback"
+ },
+ {
+  "id": "cs03",
+  "object": [
+   2,
+   4,
+   12,
+   18,
+   26,
+   38
+  ],
+  "constraints": [
+   {
+    "name": "sum_is_100",
+    "text": "the elements sum to exactly 100"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs04",
+  "object": [
+   2,
+   4,
+   12,
+   18,
+   26,
+   38
+  ],
+  "constraints": [
+   {
+    "name": "sum_is_100",
+    "text": "the elements sum to exactly 100"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   }
+  ],
+  "passes": true,
+  "note": "generator fallback"
+ },
+ {
+  "id": "cs05",
+  "object": [
+   10,
+   16,
+   18,
+   22,
+   36,
+   38,
+   40
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "max_min_diff_30",
+    "text": "max - min == 30"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs06",
+  "object": [
+   10,
+   16,
+   18,
+   22,
+   46,
+   38,
+   40
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "max_min_diff_30",
+    "text": "max - min == 30"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   }
+  ],
+  "passes": false,
+  "violated": "max_min_diff_30"
+ },
+ {
+  "id": "cs07",
+  "object": [
+   3,
+   7,
+   14,
+   21,
+   27,
+   28
+  ],
+  "constraints": [
+   {
+    "name": "sum_is_100",
+    "text": "the elements sum to exactly 100"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs08",
+  "object": [
+   3,
+   7,
+   20,
+   21,
+   27,
+   28
+  ],
+  "constraints": [
+   {
+    "name": "sum_is_100",
+    "text": "the elements sum to exactly 100"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": false,
+  "violated": "sum_is_100"
+ },
+ {
+  "id": "cs09",
+  "object": [
+   29,
+   37,
+   41,
+   43,
+   47,
+   59
+  ],
+  "constraints": [
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   },
+   {
+    "name": "max_min_diff_30",
+    "text": "max - min == 30"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs10",
+  "object": [
+   29,
+   37,
+   41,
+   43,
+   43,
+   59
+  ],
+  "constraints": [
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "no_duplicates",
+    "text": "the elements are pairwise distinct"
+   },
+   {
+    "name": "max_min_diff_30",
+    "text": "max - min == 30"
+   }
+  ],
+  "passes": false,
+  "violated": "no_duplicates"
+ },
+ {
+  "id": "cs11",
+  "object": [
+   8,
+   14,
+   18,
+   20,
+   44,
+   60,
+   66
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "contains_20",
+    "text": "the value 20 is present"
+   }
+  ],
+  "passes": true
+ },
+ {
+  "id": "cs12",
+  "object": [
+   8,
+   14,
+   18,
+   14,
+   44,
+   60,
+   66
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_even",
+    "text": "every element is even"
+   },
+   {
+    "name": "contains_20",
+    "text": "the value 20 is present"
+   }
+  ],
+  "passes": false,
+  "violated": "contains_20"
+ },
+ {
+  "id": "cs91",
+  "object": [
+   7,
+   19,
+   31,
+   31,
+   41,
+   59,
+   67
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": false,
+  "violated": "strictly_increasing"
+ },
+ {
+  "id": "cs92",
+  "object": [
+   7,
+   19,
+   31,
+   11,
+   41,
+   59,
+   67
+  ],
+  "constraints": [
+   {
+    "name": "len_is_7",
+    "text": "the list has exactly 7 elements"
+   },
+   {
+    "name": "all_prime",
+    "text": "every element is a prime number"
+   },
+   {
+    "name": "strictly_increasing",
+    "text": "the elements are strictly increasing"
+   }
+  ],
+  "passes": false,
+  "violated": "strictly_increasing"
+ }
+]

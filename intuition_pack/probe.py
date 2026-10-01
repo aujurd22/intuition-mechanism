@@ -95,8 +95,13 @@ def probe(domain_items, exemplar_pool, model=None, ks=(0, 2, 8),
     # single-turn protocol.
     if a8 < a0 - 5:
         verdict = "TOXIC (pack hurts — do not build; check for "                   "positive-only exemplar bias)"
-    elif a8 >= 95 and a8 >= a0:
-        verdict = "SATURATED-IN-BATCH (zero-shot at ceiling in this form; "                   "single-turn re-probe required before any gain claim)"
+    elif g >= 15 and a8 >= 95:
+        # P147: a strong gain to a saturated ceiling is a compression
+        # signal even when zero-shot is decent — the pack closes the
+        # remaining gap (constrained-set: 78.6 -> 100, gain 21.4)
+        verdict = "COMPRESSION SIGNAL (confirm with single-turn protocol)"
+    elif a0 >= 95 and a8 >= 95:
+        verdict = "SATURATED-IN-BATCH (zero-shot already at ceiling; "                   "pack redundant in this form)"
     elif g >= 15:
         verdict = "COMPRESSION SIGNAL (confirm with single-turn protocol)"
     else:

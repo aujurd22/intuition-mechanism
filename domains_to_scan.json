@@ -1,0 +1,653 @@
+{
+ "domains": [
+  {
+   "domain": "code-pass-fail",
+   "verifier": "pytest_check",
+   "verifier_rule": "execution: exit 0 => PASS",
+   "items": [
+    {
+     "payload": {
+      "code": "def sum_evens(nums):\n    return sum(n for n in nums if n % 2 == 0)\n",
+      "test": "assert sum_evens([1,2,3,4]) == 6\nassert sum_evens([]) == 0\nassert sum_evens([2]) == 2\n"
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "code": "def sum_evens(nums):\n    total = 0\n    for n in range(1, len(nums)):\n        if nums[n] % 2 == 0:\n            total += nums[n]\n    return total\n",
+      "test": "assert sum_evens([1,2,3,4]) == 6\nassert sum_evens([]) == 0\nassert sum_evens([2]) == 2\n"
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "code": "def clip(v, lo, hi):\n    return max(lo, min(v, hi))\n",
+      "test": "assert clip(5, 0, 10) == 5\nassert clip(-3, 0, 10) == 0\nassert clip(15, 0, 10) == 10\n"
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "code": "def safe_div(a, b):\n    return a / b\n",
+      "test": "assert safe_div(6, 3) == 2\nassert safe_div(1, 0) == 0\n"
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "code": "def safe_div(a, b):\n    if b == 0:\n        return 0\n    return a / b\n",
+      "test": "assert safe_div(6, 3) == 2\nassert safe_div(1, 0) == 0\n"
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "code": "def last_word_len(s):\n    return len(s.split(' ')[-1])\n",
+      "test": "assert last_word_len('hello world') == 5\nassert last_word_len('a  b ') == 1\n"
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "code": "def last_word_len(s):\n    return len(s.split()[-1]) if s.split() else 0\n",
+      "test": "assert last_word_len('hello world') == 5\nassert last_word_len('a  b ') == 1\nassert last_word_len('') == 0\n"
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "code": "def is_sorted(lst):\n    return all(lst[i] < lst[i+1] for i in range(len(lst)-1))\n",
+      "test": "assert is_sorted([1,2,2,3]) == True\nassert is_sorted([3,1]) == False\n"
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "code": "def is_sorted(lst):\n    return all(lst[i] <= lst[i+1] for i in range(len(lst)-1))\n",
+      "test": "assert is_sorted([1,2,2,3]) == True\nassert is_sorted([3,1]) == False\n"
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "code": "def count_vowels(s):\n    return sum(1 for c in s if c in 'aeiou')\n",
+      "test": "assert count_vowels('ApplE') == 2\nassert count_vowels('XYZ') == 0\n"
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "code": "def count_vowels(s):\n    return sum(1 for c in s.lower() if c in 'aeiou')\n",
+      "test": "assert count_vowels('ApplE') == 2\nassert count_vowels('XYZ') == 0\n"
+     },
+     "passes": true
+    }
+   ],
+   "exemplar_pool": [
+    {
+     "passes": true
+    },
+    {
+     "passes": false
+    },
+    {
+     "passes": true
+    },
+    {
+     "passes": false
+    }
+   ],
+   "probe_result": "SATURATED-IN-BATCH (P145: zero-shot 100)",
+   "build": false
+  },
+  {
+   "domain": "constrained-set",
+   "verifier": "constraint_check",
+   "verifier_rule": "per-constraint mechanical evaluation; any violation => FAIL",
+   "items": [
+    {
+     "payload": {
+      "object": [
+       7,
+       19,
+       31,
+       37,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       7,
+       19,
+       31,
+       37,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       2,
+       4,
+       12,
+       18,
+       26,
+       38
+      ],
+      "constraints": [
+       {
+        "name": "sum_is_100",
+        "text": "the elements sum to exactly 100"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       2,
+       4,
+       12,
+       18,
+       26,
+       38
+      ],
+      "constraints": [
+       {
+        "name": "sum_is_100",
+        "text": "the elements sum to exactly 100"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       10,
+       16,
+       18,
+       22,
+       36,
+       38,
+       40
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "max_min_diff_30",
+        "text": "max - min == 30"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       10,
+       16,
+       18,
+       22,
+       46,
+       38,
+       40
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "max_min_diff_30",
+        "text": "max - min == 30"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       }
+      ]
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "object": [
+       3,
+       7,
+       14,
+       21,
+       27,
+       28
+      ],
+      "constraints": [
+       {
+        "name": "sum_is_100",
+        "text": "the elements sum to exactly 100"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       3,
+       7,
+       20,
+       21,
+       27,
+       28
+      ],
+      "constraints": [
+       {
+        "name": "sum_is_100",
+        "text": "the elements sum to exactly 100"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "object": [
+       29,
+       37,
+       41,
+       43,
+       47,
+       59
+      ],
+      "constraints": [
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       },
+       {
+        "name": "max_min_diff_30",
+        "text": "max - min == 30"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       29,
+       37,
+       41,
+       43,
+       43,
+       59
+      ],
+      "constraints": [
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       },
+       {
+        "name": "max_min_diff_30",
+        "text": "max - min == 30"
+       }
+      ]
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "object": [
+       8,
+       14,
+       18,
+       20,
+       44,
+       60,
+       66
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "contains_20",
+        "text": "the value 20 is present"
+       }
+      ]
+     },
+     "passes": true
+    },
+    {
+     "payload": {
+      "object": [
+       8,
+       14,
+       18,
+       14,
+       44,
+       60,
+       66
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "contains_20",
+        "text": "the value 20 is present"
+       }
+      ]
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "object": [
+       7,
+       19,
+       31,
+       31,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": false
+    },
+    {
+     "payload": {
+      "object": [
+       7,
+       19,
+       31,
+       11,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "passes": false
+    }
+   ],
+   "exemplar_pool": [
+    {
+     "passes": true
+    },
+    {
+     "passes": true
+    },
+    {
+     "passes": false
+    },
+    {
+     "passes": false
+    }
+   ],
+   "probe_result": "COMPRESSION SIGNAL (confirm with single-turn protocol)",
+   "build": true,
+   "charter": "Single evidence source: judge EVERY claimed constraint against the object mechanically; one violation fails the claim. Confirm with the constraint_check verifier.",
+   "exemplars": [
+    {
+     "d": "cs01",
+     "inputs": {
+      "object": [
+       7,
+       19,
+       31,
+       37,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "label": "PASS",
+     "note": "all satisfied"
+    },
+    {
+     "d": "cs02",
+     "inputs": {
+      "object": [
+       7,
+       19,
+       31,
+       37,
+       41,
+       59,
+       67
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_prime",
+        "text": "every element is a prime number"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "label": "PASS",
+     "note": "all satisfied"
+    },
+    {
+     "d": "cs06",
+     "inputs": {
+      "object": [
+       10,
+       16,
+       18,
+       22,
+       46,
+       38,
+       40
+      ],
+      "constraints": [
+       {
+        "name": "len_is_7",
+        "text": "the list has exactly 7 elements"
+       },
+       {
+        "name": "all_even",
+        "text": "every element is even"
+       },
+       {
+        "name": "max_min_diff_30",
+        "text": "max - min == 30"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       }
+      ]
+     },
+     "label": "FAIL",
+     "note": "violated: max_min_diff_30"
+    },
+    {
+     "d": "cs08",
+     "inputs": {
+      "object": [
+       3,
+       7,
+       20,
+       21,
+       27,
+       28
+      ],
+      "constraints": [
+       {
+        "name": "sum_is_100",
+        "text": "the elements sum to exactly 100"
+       },
+       {
+        "name": "no_duplicates",
+        "text": "the elements are pairwise distinct"
+       },
+       {
+        "name": "strictly_increasing",
+        "text": "the elements are strictly increasing"
+       }
+      ]
+     },
+     "label": "FAIL",
+     "note": "violated: sum_is_100"
+    }
+   ],
+   "source": "P147 generated domain",
+   "triggers": [
+    "constrained",
+    "constraint",
+    "\u7ea6\u675f"
+   ]
+  }
+ ]
+}

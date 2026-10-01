@@ -1,0 +1,16 @@
+{
+ "domain": "constrained-set",
+ "curve": {
+  "0": {
+   "acc": 78.6
+  },
+  "2": {
+   "acc": 71.4
+  },
+  "4": {
+   "acc": 100.0
+  }
+ },
+ "gain_k4": 21.400000000000006,
+ "verdict": "SATURATED-IN-BATCH"
+}

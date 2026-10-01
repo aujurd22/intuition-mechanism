@@ -166,10 +166,44 @@ def pytest_check(payload: dict, timeout: int = 10) -> dict:
             "exec_trail": trail}
 
 
+
+
+def constraint_check(payload: dict) -> dict:
+    """Verifier for constrained-set domains: evaluate each claimed
+    constraint against the object, return a STRUCTURED violation report
+    (which constraints fail) — the auditability payload no LLM judgment
+    can produce reliably."""
+    obj = payload["object"]
+    results = []
+    for c in payload["constraints"]:
+        fn = CONSTRAINT_FNS[c["name"]]
+        results.append({"name": c["name"], "ok": bool(fn(obj))})
+    violated = [r["name"] for r in results if not r["ok"]]
+    passed = not violated
+    return {"verdict": "PASS" if passed else "FAIL",
+            "confidence": 1.0 - 1e-9,
+            "typed": {"kind": "choice",
+                      "options": {"PASS": 1.0 - 1e-9 if passed else 1e-9,
+                                  "FAIL": 1e-9 if passed else 1.0 - 1e-9}},
+            "confidence_basis": "direct_execution",
+            "violated_constraints": violated,
+            "per_constraint": results}
+
+
+from .constraint_fns import BUILT_IN as _BUILT_IN_CONSTRAINTS
+
+CONSTRAINT_FNS = dict(_BUILT_IN_CONSTRAINTS)   # + runtime register_constraint
+
+
+def register_constraint(name, fn):
+    CONSTRAINT_FNS[name] = fn
+
+
 VERIFIERS = {
     "lambert_sixrow": lambert_sixrow,
     "integer_check": integer_check,
     "pytest_check": pytest_check,
+    "constraint_check": constraint_check,
 }
 
 

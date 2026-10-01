@@ -45,7 +45,13 @@ class Pack:
         in P138): charter + labeled exemplars, nothing else."""
         lines = [self.charter, "", "Calibration exemplars (exhaustively verified):"]
         for e in self.exemplars:
-            ins = ", ".join(f"{k}={v}" for k, v in e.inputs.items())
+            parts = []
+            for k, v in e.inputs.items():
+                if isinstance(v, (list, dict)):
+                    parts.append(f"{k}={json.dumps(v, ensure_ascii=False)}")
+                else:
+                    parts.append(f"{k}={v}")
+            ins = ", ".join(parts)
             lines.append(f"  {ins}  -> {e.label}" + (f"   [{e.note}]" if e.note else ""))
         return "\n".join(lines)
 
