@@ -1,0 +1,66 @@
+{
+ "domains": [
+  {
+   "domain": "csv_parser",
+   "status": "no-build",
+   "items": [
+    {
+     "id": "csv_parser#1",
+     "code": "def parse_csv_line(line):\n    return line.split(',')\n",
+     "test": "assert parse_csv_line('a,b,c') == ['a','b','c']\nassert parse_csv_line('x,'y,z'') == ['x','y,z']\n",
+     "passes": false
+    },
+    {
+     "id": "csv_parser#2",
+     "code": "import json\n\ndef parse_json_line(line):\n    return json.loads(line)\n",
+     "test": "assert parse_json_line('{\"a\": 1}') == {'a': 1}\n",
+     "passes": true
+    },
+    {
+     "id": "csv_parser#3",
+     "code": "def first_field(line):\n    return line.split(',')[0]\n",
+     "test": "assert first_field('a,b') == 'a'\nassert first_field('') == ''\n",
+     "passes": true
+    },
+    {
+     "id": "csv_parser#4",
+     "code": "def parse_csv_line(line):\n    return next(csv.reader([line]))\n",
+     "test": "assert parse_csv_line('a,b') == ['a','b']\n",
+     "passes": false
+    }
+   ],
+   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier."
+  },
+  {
+   "domain": "queue_semantics",
+   "status": "saturated",
+   "items": [
+    {
+     "id": "queue_semantics#0",
+     "code": "from collections import deque\n\nclass Q:\n    def __init__(self):\n        self.q = deque()\n    def push(self, x):\n        self.q.append(x)\n    def pop(self):\n        return self.q.popleft() if self.q else None\n",
+     "test": "q = Q()\nq.push(1)\nq.push(2)\nassert q.pop() == 1\nassert q.pop() == 2\nassert q.pop() is None\n",
+     "passes": true
+    },
+    {
+     "id": "queue_semantics#1",
+     "code": "class Q:\n    def __init__(self):\n        self.q = []\n    def push(self, x):\n        self.q.append(x)\n    def pop(self):\n        return self.q.pop() if self.q else None\n",
+     "test": "q = Q()\nq.push(1)\nq.push(2)\nassert q.pop() == 1\nassert q.pop() == 2\n",
+     "passes": false
+    },
+    {
+     "id": "queue_semantics#2",
+     "code": "class Q:\n    def __init__(self):\n        self.q = deque()\n    def push(self, x):\n        self.q.appendleft(x)\n    def pop(self):\n        return self.q.popleft() if self.q else None\n",
+     "test": "q = Q()\nq.push(1)\nq.push(2)\nassert q.pop() == 1\n",
+     "passes": false
+    },
+    {
+     "id": "queue_semantics#3",
+     "code": "from collections import deque\n\nclass Q:\n    def __init__(self):\n        self.q = deque()\n    def push(self, x):\n        self.q.append(x)\n    def pop(self):\n        return self.q.popleft() if self.q else None\n    def size(self):\n        return len(self.q)\n",
+     "test": "q = Q()\nq.push(1)\nassert q.size() == 1\nassert q.pop() == 1\nassert q.size() == 0\n",
+     "passes": true
+    }
+   ],
+   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier."
+  }
+ ]
+}

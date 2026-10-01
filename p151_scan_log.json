@@ -1,0 +1,23 @@
+[
+ {
+  "domain": "csv_parser",
+  "ts": "2026-10-01 21:30",
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_gain": 0.0,
+  "verdict": "NO COMPRESSION (no build)"
+ },
+ {
+  "domain": "queue_semantics",
+  "ts": "2026-10-01 21:30",
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "verdict": "SATURATED"
+ }
+]

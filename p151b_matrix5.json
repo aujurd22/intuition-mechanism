@@ -1,0 +1,56 @@
+{
+ "date_logic": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ },
+ "string_ops": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ },
+ "list_ops": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ },
+ "numeric": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ },
+ "dict_ops": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ },
+ "recursion": {
+  "batch_acc": 100.0,
+  "single_turn": [
+   100.0,
+   100.0
+  ],
+  "single_mean": 100.0,
+  "verdict": "SATURATED (single-turn at ceiling)"
+ }
+}
