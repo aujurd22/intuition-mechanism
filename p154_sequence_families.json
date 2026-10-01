@@ -1,0 +1,231 @@
+[
+ {
+  "name": "doubling",
+  "discovery": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "true_continuation": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "overfit_continuation": [
+   510,
+   1004,
+   1936,
+   3632
+  ],
+  "rule": "a_n = 2^n",
+  "weak": "all powers grow by doubling / all even",
+  "membership_trap": null
+ },
+ {
+  "name": "fibonacci",
+  "discovery": [
+   1,
+   1,
+   2,
+   3,
+   5,
+   8,
+   13,
+   21
+  ],
+  "true_continuation": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "overfit_continuation": [
+   21,
+   -41,
+   -320,
+   -1165
+  ],
+  "rule": "a_n = a_(n-1) + a_(n-2), a_1=a_2=1",
+  "weak": "increasing / all positive",
+  "membership_trap": null
+ },
+ {
+  "name": "squares",
+  "discovery": [
+   1,
+   4,
+   9,
+   16,
+   25,
+   36,
+   49,
+   64
+  ],
+  "true_continuation": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "overfit_continuation": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "rule": "a_n = n^2",
+  "weak": "increasing, differences odd",
+  "membership_trap": null
+ },
+ {
+  "name": "triangular",
+  "discovery": [
+   1,
+   3,
+   6,
+   10,
+   15,
+   21,
+   28,
+   36
+  ],
+  "true_continuation": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "overfit_continuation": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "rule": "a_n = n(n+1)/2",
+  "weak": "increasing",
+  "membership_trap": null
+ },
+ {
+  "name": "arithmetic3",
+  "discovery": [
+   5,
+   8,
+   11,
+   14,
+   17,
+   20,
+   23,
+   26
+  ],
+  "true_continuation": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "overfit_continuation": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "rule": "a_n = 3n + 2",
+  "weak": "all \u2261 2 mod 3",
+  "membership_trap": null
+ },
+ {
+  "name": "alt_geometric",
+  "discovery": [
+   -2,
+   4,
+   -8,
+   16,
+   -32,
+   64,
+   -128,
+   256
+  ],
+  "true_continuation": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "overfit_continuation": [
+   12610,
+   79756,
+   312880,
+   948880
+  ],
+  "rule": "a_n = (-2)^n",
+  "weak": "magnitude doubles",
+  "membership_trap": null
+ },
+ {
+  "name": "cubes",
+  "discovery": [
+   1,
+   8,
+   27,
+   64,
+   125,
+   216,
+   343,
+   512
+  ],
+  "true_continuation": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "overfit_continuation": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "rule": "a_n = n^3",
+  "weak": "grows fast, odd/even mix",
+  "membership_trap": null
+ },
+ {
+  "name": "odd_trap",
+  "discovery": [
+   1,
+   3,
+   5,
+   7,
+   9,
+   11,
+   13,
+   15
+  ],
+  "true_continuation": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "overfit_continuation": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "rule": "a_n = 2n - 1 (odd numbers)",
+  "weak": "all odd",
+  "membership_trap": {
+   "q": 9,
+   "true": true,
+   "wrong_rule": "all primes",
+   "wrong_answer": false
+  }
+ }
+]

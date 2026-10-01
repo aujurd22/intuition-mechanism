@@ -1,0 +1,79 @@
+# Part IV — The Formal Definition (P154, from the user's V2 directive)
+
+## IV.1 The definition
+
+> **Insight is verified compression of experience into transferable
+> structure.**
+
+Four necessary conditions, each mechanically checkable:
+
+| # | Condition | Mechanical check | Failure mode |
+|---|---|---|---|
+| 1 | **Compression** — the stated structure is SHORTER than the experience it covers | mdl_ratio = bits(data)/bits(rule) > 1 | restatement (rule ≈ data length) |
+| 2 | **Verification** — the structure survives mechanical testing on data NOT used to form it | verifier(probe set) agreement = 1.0 | hallucination (compressed but wrong) |
+| 3 | **Transfer** — the structure holds when the CARRIER changes (regime, shape, field) | probe accuracy = 1.0 on out-of-carrier items | overfit (fits discovery set only) |
+| 4 | **Novelty** — the structure is not a restatement of the input | rule statement absent from charter; rule adds a predicate the data did not display verbatim | paraphrase |
+
+**Boundary (mechanical, not judged):**
+  INSIGHT         = conditions 1 ∧ 2 ∧ 3 ∧ 4
+  HALLUCINATION   = compression present, verification < 1
+  OVERFIT         = verification 1 on discovery set, transfer < 1
+  PARAPHRASE      = novelty fails
+The P152 arena run demonstrated the boundary catching a real case: the
+judge's "class number 1" rule scored 5/6 on probes — famous-hypothesis
+SHAPE, verification failure — refused INSIGHT status mechanically.
+
+## IV.2 Search-space collapse (SCR)
+
+The four conditions presuppose a search space that COLLAPSED.  The
+collapse is measurable as prediction-entropy reduction:
+
+    H_before = entropy of the candidate-continuation distribution
+               BEFORE the structure is committed
+    H_after  = entropy AFTER
+    SCR      = H_before / H_after
+
+Operationalization without eliciting a distribution: the ENSEMBLE
+spread of predicted continuations across models x seeds.  P153's
+math-track data is the first measurement: across three models the
+predicted continuations of the census probes disagreed massively
+(76-79% agreement with a fixed rule = high H_before relative to a
+solved domain, where all models read 100%).
+
+The chain closes:  Compression REDUCES the description, Verification
+TESTS the reduction, Transfer ESTABLISHES it beyond the discovery
+carrier, Novelty GUARANTEES the reduction was not already given.
+Insight = the event of H collapsing under all four guards.
+
+## IV.3 What still separates this from a general intelligence definition
+
+- H_before is operationalized as ENSEMBLE spread (model-relative), not
+  as an absolute count of the hypothesis space — an absolute SCR needs
+  a hypothesis-space grammar, which is domain-specific (P135's open
+  core: the class-invariant table layer is exactly an unenumerated H).
+- Condition 4 (Novelty) is currently "not stated in charter" — a
+  conservative bound; true novelty vs training-set membership remains
+  open (the P152 math-track HALLUCINATION rule, class-number-1, IS
+  likely in training corpora — flagged, not resolved).
+- The curiosity loop (direction 5): H_before is also the INFORMATION-
+  GAIN signal for experiment selection (P137's greedy loop) — the two
+  halves of the program share the same quantity.
+
+---
+
+# Part V — Experiment 2: counterexample pressure (P154)
+
+The user's Experiment 2, mechanized: 8 sequence families with
+execution-generatable truth, each probed for (a) stated rule,
+(b) 4-term continuation, (c) membership judgment.  Mechanical scoring
+against THREE attractors:
+
+  TRUE continuation        (the strong explanation wins)
+  degree-7 polyfit         (the overfit attractor: fits the 8 discovery
+                            terms perfectly, diverges after)
+  weakest-consistent rule  (e.g. 'all even' / 'all odd')
+
+Plus the classic trap: odd numbers 1,3,5,7... with a membership probe
+on 9 (odd: YES; the 'all primes' hallucination: NO).
+
+Results: p154_counterexample_results.json (3 models x 8 families).

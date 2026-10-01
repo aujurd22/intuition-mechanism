@@ -1,0 +1,530 @@
+[
+ {
+  "family": "doubling",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is double the previous term, starting from 2.",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "true4": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is the sum of the two preceding terms.",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "true4": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "squares",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is the square of its position number (n\u00b2).",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "true4": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "triangular",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is the sum of the first n natural numbers (triangular numbers).",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "true4": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "deepseek-v4-flash",
+  "rule": "Add 3 to the previous term.",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "true4": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is the previous term multiplied by -2.",
+  "nexts": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "true4": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "cubes",
+  "model": "deepseek-v4-flash",
+  "rule": "The sequence is the cubes of positive integers (1\u00b3, 2\u00b3, 3\u00b3, ...).",
+  "nexts": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "true4": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": true,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "deepseek-v4-flash",
+  "rule": "Each term is the next odd number, increasing by 2.",
+  "nexts": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "true4": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": true,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": false
+ },
+ {
+  "family": "doubling",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "Start at 2, and multiply each term by 2 to get the next term.",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "true4": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "Each term after the first two is the sum of the two preceding terms.",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "true4": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "squares",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "The nth term is n squared, the product of n multiplied by itself.",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "true4": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "triangular",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "The nth term is the nth triangular number, equal to n(n+1)/2, formed by adding consecutive positive integers starting from 1.",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "true4": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": true,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "Start at 5 and add 3 to each previous term.",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "true4": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "Start at -2, then multiply each term by -2 to get the next term.",
+  "nexts": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "true4": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "cubes",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "The nth term is n cubed, i.e. n multiplied by itself three times.",
+  "nexts": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "true4": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "doubao-seed-2.1-lite",
+  "rule": "Start at 1 and add 2 to each previous term.",
+  "nexts": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "true4": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": false
+ },
+ {
+  "family": "doubling",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is double the previous term (powers of 2 starting from 2).",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "true4": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "fibonacci",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is the sum of the two preceding terms.",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "true4": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "squares",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is the square of its position in the sequence (n\u00b2).",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "true4": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "triangular",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term adds the next consecutive integer (triangular numbers: n(n+1)/2).",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "true4": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "arithmetic3",
+  "model": "kimi-k2.8-preview",
+  "rule": "Start at 5 and add 3 to get each subsequent term.",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "true4": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "alt_geometric",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is the previous term multiplied by -2 (equivalently, t_n = (-2)^n).",
+  "nexts": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "true4": [
+   -512,
+   1024,
+   -2048,
+   4096
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": false,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "cubes",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is n cubed (n\u00b3) for successive positive integers n.",
+  "nexts": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "true4": [
+   729,
+   1000,
+   1331,
+   1728
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": true,
+  "member9_answer": "NO",
+  "mentions_prime_on_odd_trap": null
+ },
+ {
+  "family": "odd_trap",
+  "model": "kimi-k2.8-preview",
+  "rule": "Each term is the previous term plus 2, starting from 1 (the odd positive integers).",
+  "nexts": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "true4": [
+   17,
+   19,
+   21,
+   23
+  ],
+  "strong_hits": 4,
+  "overfit_capture": false,
+  "rule_mentions_weak": true,
+  "member9_answer": "YES",
+  "mentions_prime_on_odd_trap": false
+ }
+]
