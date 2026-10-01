@@ -1,0 +1,32 @@
+{
+ "sci_data": {
+  "compression": 0.0,
+  "novelty": 1.0,
+  "verification": 1.0,
+  "transfer": 1.0,
+  "discovery_score": 0.75,
+  "insight_vs_hallucination": "NO-TRANSFER (fits discovery set only)",
+  "law_stated": "The series are damped sinusoidal oscillations with a period of 8 samples (repeating every 8 points) and exponential decay; anomalies occur when the sign of the waveform is flipped or the phase is shifted at certain points, breaking the smooth alternating pattern.",
+  "mdl": 10.09
+ },
+ "math": {
+  "compression": 0.0,
+  "novelty": 1.0,
+  "verification": 0.833,
+  "transfer": 0.833,
+  "discovery_score": 0.667,
+  "insight_vs_hallucination": "HALLUCINATION (verification failed)",
+  "law_stated": "RATIONAL iff the imaginary quadratic field Q(\u221a-d) has class number 1.",
+  "mdl": 8.24
+ },
+ "code_pattern": {
+  "compression": 0.0,
+  "novelty": 1.0,
+  "verification": 1.0,
+  "transfer": 1.0,
+  "discovery_score": 0.75,
+  "insight_vs_hallucination": "NO-TRANSFER (fits discovery set only)",
+  "law_stated": "A function is PURE if it does not modify its inputs or any external state, and IMPURE if it mutates its arguments or external state.",
+  "mdl": 10.87
+ }
+}
