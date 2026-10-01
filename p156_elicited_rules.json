@@ -1,0 +1,5 @@
+{
+ "deepseek-v4-flash": "A series is ANOMALOUS if, at any point where the sign of the value changes from positive to negative (or vice versa) across consecutive non-zero samples, the sign of the subsequent value does not follow the expected alternating pattern of the normal damped oscillation (i.e., the sequence of signs is not strictly alternating with each zero-crossing, but instead shows a sign repetition or a skipped reversal).",
+ "doubao-seed-2.1-lite": "A series is NORMAL if every consecutive group of four non-zero samples alternates sign as positive-positive-positive-negative or negative-negative-negative-positive, repeating this 4-sample sign pattern consistently across the entire series; it is ANOMALOUS if any non-zero sample has a sign that deviates from this repeating 4-sample alternating sign pattern.",
+ "kimi-k2.8-preview": "A series is NORMAL if the signs of its nonzero values follow a consistent repeating four-phase cycle (positive-positive-negative-negative) with the sign of each nonzero value matching the sign of the first nonzero value in its phase block, and ANOMALOUS if any nonzero value breaks this phase-sign consistency."
+}

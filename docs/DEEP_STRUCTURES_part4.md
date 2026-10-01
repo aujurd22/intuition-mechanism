@@ -117,3 +117,30 @@ CENTRAL QUESTION operationalized: "what kind of compression produces
 transferable structure" = "which discovery sets drive residual H to 0
 across independent judges" — measurable per domain, per probe, with
 the archive already on disk.
+
+## IV.5 THE VERBALIZATION GAP, measured (P156)
+
+Protocol: elicit each model's stated rule for the sci-data discovery
+set (3 models, same 10 series, charter demands a portable rule), then
+IMPLEMENT the stated rules literally and score them.
+
+Result: ALL THREE stated rules fail on 5/10 discovery series — every
+one misclassifies exactly the NORMAL series (a T=2 damped sine at
+dt=0.25 has +++--- sign blocks; "strict alternation" (deepseek),
+"+++− 4-blocks" (doubao), "++−− cycle" (kimi) all reject those).  On
+the T4/T6 discriminator probes, all three implemented rules collapse
+to ALWAYS-ANOMALOUS.
+
+Yet the models' OPERATIVE judgments run 79-94% correct on the same
+probes (P153) — far above their stated rules.
+
+    stated rule accuracy   ≈ 50% (worse than the all-NORMAL prior)
+    operative accuracy     ≈ 79-94%
+
+CONCLUSION (Polanyi's paradox, quantified): the models know a sign-
+structure rule they CANNOT state.  The verbalization channel is the
+bottleneck, not the knowledge.  DESIGN CONSEQUENCE for the Arena
+(backend for P152's choice): the Verification component MUST score
+probe agreement — scoring rule-statement quality would deny INSIGHT
+status to every judge on this domain, including the 79-94%-accurate
+ones.  "We know more than we can tell" is now a measured number.
