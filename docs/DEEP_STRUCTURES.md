@@ -313,3 +313,89 @@ Either outcome is a clean result.  Until run, I1 carries the caveat
   model's blind preference tracks the genus group at all — is
   explained one level down (canon absorption of digit traces) and
   leaves one level open (per-se mediation, II.3).
+
+---
+
+# Part III — Can the three missing components be mechanized? (P136)
+
+The components named in the closing discussion — representation
+construction, proof-discovery leaps, problem selection — share one
+structure: each is a SEARCH over a space of compressed proposals whose
+objective is "make the downstream judgment cheaper".  They differ
+mainly in FEEDBACK DELAY, which orders their mechanization difficulty.
+
+## III.1 Component-by-component
+
+### Representation construction — mechanizable in principle; small-scale proof exists in-program
+
+Evidence: P35 (blind MDL rediscovery — compression alone recovered the
+structural representation without labels); gdepth itself is
+mechanically computable (factor D, count prime discriminants) — the
+hard part was thinking to factor it at all.
+
+Mechanism: search over invariant-tuple spaces with objective
+  MDL + downstream judgment error.
+The representation/equivalence circularity ("what counts as the same"
+depends on the representation and vice versa) is broken by the task
+loss: a GOOD representation is one that makes the judgment stack
+cheap.  Hard part: the search space is unbounded and math needs exact
+invariants, not approximate embeddings.
+
+### Proof-discovery leaps — the most mechanized already, because a
+### "leap" decomposes into three mechanical operations
+
+Our own L4 cancellation chain decomposes as:
+  (1) anomaly detection (the 1e-8 deviations; the wrong attribution
+      "(13,1;12,1) not in Gamma0(6)" that hid the chi_2 sign flip);
+  (2) matching against STANDARD TABLES (chi_2 = Kronecker(-3,.) was
+      not invented — it was RECOGNIZED in Ligozat's criterion and the
+      genus-character tables; Schertz Thm 4 is a citation);
+  (3) citation assembly.
+Mechanism: verifier-guarded proposal loops over theory connections
+(the same loop that generated and verified the identities).  Hard
+part: theories without tables — our flagship theorem bottoms out at
+the s_d class-invariant table; a leap into table-less territory has
+nothing to match against.
+
+### Problem selection — the registry is already the mechanization
+### substrate; the value function is the open half
+
+What actually drove P1-P134: (a) anomaly size (the CWZ erratum, the
+mechanism-hiding misattribution), (b) cheap-next-step-first (censuses
+before theory), (c) the registered open-question list.  Mechanism:
+greedy scoring of the open-question registry by
+  expected information gain x feasibility.
+FunSearch/AlphaEvolve mechanized this WITHIN fixed problems; the
+registry generalizes the substrate.  Hard part: the LONG-HORIZON
+value function — choosing a ten-year program has no ex-ante
+verifiable objective; this is precisely where Lenat's AM stalled
+(value-function drift without an external verifier).
+
+## III.2 The unified thesis (testable)
+
+The three components are the same proposal-verify-compress loop at
+different feedback timescales:
+
+    component            verifier                  feedback     status
+    proof leap           Lean / census / numeric   sec-min      essentially mechanized
+    representation       MDL + judgment error      hours-days   small-scale proof, general open
+    problem selection    info gain (+ value fn)    months-years greedy now; long-horizon open
+
+METHANIZATION DIFFICULTY PROPORTIONAL TO FEEDBACK DELAY — a testable
+ordering, not a philosophy.  The fast end is done (this program's
+month is the existence proof); the slow end needs a value function,
+and the two-axis theory supplies its seed: surprise and utility ARE
+measured taste — plugging them into the registry's greedy loop is
+version 1 of mechanized problem selection.
+
+## III.3 Honest counterweights
+
+- AM (Lenat 1976): the canonical stall — a selection mechanism
+  without an external verifier drifts; our registry avoids this only
+  because the census/verifier layer is real.
+- Table irreducibility: even the flagship theorem bottoms out at the
+  class-invariant table; some layers may stay lookup for the
+  foreseeable future — "mechanized" does not mean "table-free".
+- Circularity: P32's cross-family abstraction required an
+  appearance-verified corpus; representation learning inherits the
+  same caveat until the task-loss objective is actually run.
