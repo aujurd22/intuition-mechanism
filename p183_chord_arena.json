@@ -1,0 +1,6 @@
+{
+ "domain": "musical-chord",
+ "n": 16,
+ "judge_acc": 43.8,
+ "stated_rule": "A tone pair is consonant if its frequency ratio is not among the discordant ratios 1.229, 1.060, 1.292, or 1.315 as observed in the given examples."
+}
