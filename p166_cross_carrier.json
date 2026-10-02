@@ -1,0 +1,74 @@
+[
+ {
+  "model": "deepseek-v4-flash",
+  "base": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "amb": true
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "base": [
+   1,
+   3,
+   5,
+   7,
+   9,
+   11
+  ],
+  "amb": true
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "base": [
+   1,
+   4,
+   9,
+   16,
+   25,
+   36
+  ],
+  "amb": true
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "base": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "amb": true
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "base": [
+   1,
+   3,
+   5,
+   7,
+   9,
+   11
+  ],
+  "amb": true
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "base": [
+   1,
+   4,
+   9,
+   16,
+   25,
+   36
+  ],
+  "amb": true
+ }
+]
