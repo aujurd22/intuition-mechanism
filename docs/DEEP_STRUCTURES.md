@@ -240,6 +240,31 @@ explanation rather than a restatement.
    boundary where the theory hands over to the classical
    Ramanujan/Weber class-invariant tables.
 
+   P185 update (2026-10-03): the core is now COMPRESSED, not closed.
+   (a) s_d = c_d · d with c_d ∈ {1,2,3} — a theorem-level candidate
+   set from the Hecke genus-field structure (the real quadratic
+   subfields of Gen(-24d) are exactly {√2, √d, √2d} for d ≡ 1 mod 4
+   and {√6, √2d, √3d} for d ≡ 3 mod 4), so the table layer is 2 bits
+   per row.  (b) Congruence conjecture for those bits: c_d = 2 iff
+   d ≡ 2 mod 3, else c_d = 1 (d ≡ 1 mod 4) / 3 (d ≡ 3 mod 4) — a
+   genus-character evaluation (chi_3 trivial on the unit's class iff
+   (-3/d) = -1), 4/4 on testable rows (d=3 ramified).  (c) Genus
+   descent of P^12 verified UNIVERSALLY for primes through d=67
+   (18/18, residual-checked PSLQ): quadraticity is six-row-only,
+   generic primes span the full quartic genus real part; the six-row
+   theorem's remaining content is therefore exactly the stabilizer
+   collapse (P89 target) plus the c_d rule.  (d) The genus-coordinate
+   sizes separate rows by 15 orders of magnitude (six rows 1e0-1e7,
+   generic ~1e22; intermediates d=11, d=47 flagged) — the coordinate
+   size is itself a structural surprise meter.  Artifacts:
+   p185_landing_structure.py/.json.  Method note: two PSLQ artifacts
+   (silent None at default maxsteps; false non-descent at maxcoeff
+   1e20 when true coefficients are ~1e22) — residual verification +
+   adaptive maxcoeff are now protocol-grade, as is the withdrawal of
+   the naive orbit evaluation f(alpha_x) (twisted, not conjugate:
+   needs the Schertz coprime-transport lemma, = Prop O2 made
+   concrete).
+
 ---
 
 # Part II — Q-LLM: why the genus/support structure is visible to
