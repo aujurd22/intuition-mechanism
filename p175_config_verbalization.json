@@ -1,0 +1,11 @@
+{
+ "model": "doubao",
+ "stated_rule": "A deployment config is COMPLIANT if and only if its host is a lowercase string, port is an integer between 1 and 65535 inclusive, retries is an integer between 1 and 5 inclusive, mode is one of the allowed enum values \"http\" or \"grpc\", and its tls object contains a boolean enabled field and a lowercase string cert field.",
+ "code_acc": 25.0,
+ "tp": 2,
+ "fp": 0,
+ "tn": 0,
+ "fn": 6,
+ "operative_acc": 95.8,
+ "gap": 70.8
+}
