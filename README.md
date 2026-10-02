@@ -1,14 +1,53 @@
 # Intuition-Mechanism Program
 
+**Build your own System-One judge: verified, calibrated, audit-trail included.**
+
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 110+ unique P-numbers P1–P154, ~330 KB,
+(pre-registered experiment registry, 110+ unique P-numbers P1–P169, ~350 KB,
 every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
 > mechanical pipeline?  Which steps are the "inspiration", and can they be
 > reproduced by a machine and their signature measured?
+
+## What you get (the intuition-pack plugin, P140-P169)
+
+This repo ships `intuition_pack/` — an open protocol for building **your
+own Jev-class judgment engine** against any domain, without training:
+
+```
+pack_probe      is your domain a compression domain?  (learning curve)
+pack_build      distill contrast exemplars + charter + verifier spec
+verify / score  mechanical verdicts with full audit trails + abstain
+regression      mechanical gate — a pack version ships only if it passes
+hook / MCP      auto-injection into your agent's context per domain
+```
+
+Every judgment passes **four mechanically-checked conditions**
+(Compression / Verification / Transfer / Novelty) — the
+Insight-vs-Hallucination boundary is enforced by code, not by a judge's
+opinion.  Your data stays local; the verifier registry (10 verifiers +
+templates) covers execution, predicate, numeric, schema, set, and regex
+shapes.
+
+Measured positioning vs [Jev](https://arxiv.org/html/2609.37647v1)
+(the trained System-One discriminator this protocol was benchmarked
+against): on the shared dataset (SMS Spam, n=200) zero-shot LLM judges
+tie it (96.0-97.0% vs 96.5%) and the pack lifts to **97.5% with a
+confidence gate at 99.5% / 91% coverage** (Jev: 95.5% / 63%); on
+verifier-backed domains the mechanical layer scores **100% with ECE
+0.0075 at $0 and 0.37 ms**.  What this is NOT: a replacement for Jev's
+breadth (37 datasets, 432 ms forward pass).  What it is: the
+**distillation source and calibration harness** — every judgment in the
+archive has passed mechanical verification, so the same pipeline that
+judges your domain also produces the training data (and the daily
+auto-scan keeps re-finding where the window is open).
+
+> **Insight is verified compression of experience into transferable
+> structure.**  Four conditions, mechanically enforced.  Everything else
+> is hallucination — and that boundary is measurable.
 
 The program split into three interlocking lines as it ran:
 
