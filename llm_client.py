@@ -44,7 +44,11 @@ def ask(prompt: str, temperature: float = 0.0,
     last_err = None
     for attempt in range(5):
         try:
-            r = json.loads(urllib.request.urlopen(req, timeout=600).read())
+            # P186-c lesson: a hung socket can wedge a 600s-timeout call for
+            # ~50min across retries. effort=minimal answers arrive in <60s,
+            # so bound each attempt at 150s (5 attempts ~13min worst case,
+            # then the effort=low fallback below still gets its 900s).
+            r = json.loads(urllib.request.urlopen(req, timeout=150).read())
             parts = []
             for item in r.get("output", []):
                 if item.get("type") == "message":
