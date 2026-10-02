@@ -1,0 +1,234 @@
+{
+ "experiment": "P-LAW1",
+ "n_items": 20,
+ "method_hits": {
+  "BRUTE": {
+   "h1": 1.0,
+   "h3": 1.0
+  },
+  "MDL": {
+   "h1": 1.0,
+   "h3": 1.0
+  },
+  "PIPE": {
+   "h1": 1.0,
+   "h3": 1.0
+  }
+ },
+ "budget_mean": {
+  "BRUTE": 1277.35,
+  "MDL": 1.0,
+  "PIPE": 1.0
+ },
+ "spearman": {
+  "rho": -0.8262115241422637,
+  "p": 1.7712284989598773e-09
+ },
+ "verdict": "LAW-NULL",
+ "pair_data": [
+  {
+   "item": 0,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 0
+  },
+  {
+   "item": 1,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 1,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 2,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 3,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 3
+  },
+  {
+   "item": 4,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 0
+  },
+  {
+   "item": 5,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 5,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 6,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 7,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 3
+  },
+  {
+   "item": 8,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 0
+  },
+  {
+   "item": 9,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 9,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 10,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 11,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 3
+  },
+  {
+   "item": 12,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 0
+  },
+  {
+   "item": 13,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 3,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 4,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 5,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 6,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 7,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 8,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 9,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 13,
+   "score_rank": 10,
+   "held_hit": false,
+   "family": 1
+  },
+  {
+   "item": 14,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 14,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 15,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 3
+  },
+  {
+   "item": 16,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 0
+  },
+  {
+   "item": 17,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 17,
+   "score_rank": 2,
+   "held_hit": true,
+   "family": 1
+  },
+  {
+   "item": 18,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 2
+  },
+  {
+   "item": 19,
+   "score_rank": 1,
+   "held_hit": true,
+   "family": 3
+  }
+ ]
+}
