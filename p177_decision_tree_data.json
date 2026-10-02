@@ -1,0 +1,119 @@
+[
+ {
+  "name": "census (six-row)",
+  "verifier": "yes",
+  "rare_pos": true,
+  "unique_rule": true,
+  "zero_shot_ge90": false,
+  "label": "COMPRESSION",
+  "evidence": "P138 +41-50pp; P153 909 judgments"
+ },
+ {
+  "name": "constrained-set",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": false,
+  "label": "COMPRESSION",
+  "evidence": "P169 doubao 85.2%, deepseek 55.6%"
+ },
+ {
+  "name": "config-compliance",
+  "verifier": "yes",
+  "rare_pos": true,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "COMPRESSION",
+  "evidence": "P150 single-turn gain 44.5pp; P175 gap 70.8pp"
+ },
+ {
+  "name": "code-pass-fail",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169 all models 95-100%"
+ },
+ {
+  "name": "python-traps",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169 doubao/kimi 100%"
+ },
+ {
+  "name": "date_logic",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 93-100%"
+ },
+ {
+  "name": "string_ops",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 94-100%"
+ },
+ {
+  "name": "list_ops",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 100%"
+ },
+ {
+  "name": "numeric",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 80-100%"
+ },
+ {
+  "name": "dict_ops",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 86-100%"
+ },
+ {
+  "name": "recursion",
+  "verifier": "yes",
+  "rare_pos": false,
+  "unique_rule": true,
+  "zero_shot_ge90": true,
+  "label": "SATURATED",
+  "evidence": "P169/P153 all models 83-100%"
+ },
+ {
+  "name": "IMDB sentiment",
+  "verifier": "no",
+  "rare_pos": false,
+  "unique_rule": false,
+  "zero_shot_ge90": true,
+  "label": "DISTRIBUTIONAL",
+  "evidence": "P144 pack no gain \u00b13pp"
+ },
+ {
+  "name": "AG News topic",
+  "verifier": "no",
+  "rare_pos": false,
+  "unique_rule": false,
+  "zero_shot_ge90": true,
+  "label": "DISTRIBUTIONAL",
+  "evidence": "P144 pack no gain \u00b13pp"
+ }
+]
