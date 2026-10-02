@@ -81,7 +81,7 @@
   "a_hits": 0,
   "b_hits": 0,
   "amb": true,
-  "rule": "Each term is the sum of the two preceding terms, starting from 1 and 1."
+  "rule": "Each term is the sum of the two immediately preceding terms, starting from 1 and 1."
  },
  {
   "model": "kimi-k2.8-preview",
@@ -94,8 +94,8 @@
   ],
   "a_hits": 0,
   "b_hits": 0,
-  "amb": false,
-  "rule": "Each term is double the previous term."
+  "amb": true,
+  "rule": "Each term is double the previous term (powers of 2 starting from 32)."
  },
  {
   "model": "kimi-k2.8-preview",
@@ -109,7 +109,7 @@
   "a_hits": 0,
   "b_hits": 0,
   "amb": true,
-  "rule": "Each term is the cube of its position number (n\u00b3)."
+  "rule": "Each term is the cube of its position (n\u00b3)."
  },
  {
   "model": "kimi-k2.8-preview",
