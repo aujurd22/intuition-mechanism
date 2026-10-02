@@ -50,8 +50,10 @@ HEAD at wrap: 3af42ef (+ part4 correction d0c16e3). All pushed.
 - c_d congruence rule: proof via Shimura-reciprocity multiplier computation
   (Schertz Prop 2 style) — the 2-bit table layer's mechanism.
 - Coefficient-meter intermediates {11, 23, 47, 83}: predictor unknown.
-- Corrected math-track formal rerun (p186c) was left finishing in background;
-  the corrected range already rests on 16 clean runs in p186_batch_knob.json
-  and p186b_api_surface.json.
+- Corrected math-track FORMAL rerun (p186c, 3 models x 3 seeds, unbuffered,
+  hardened client): deepseek MEAN 90.6% (row recall 16/18); doubao MEAN 82.3%
+  (seed0 19/32 with a bad stated rule vs seed2 32/32 — run-to-run variance is
+  RULE-QUALITY variance, the pack-relevant lever); kimi slow/queued. The
+  retracted 76-79% is replaced by ~82-95% central with rows recalled.
 - Provenance audit: 259/261 artifacts present (p70/p70-b JSONs missing are
   pre-existing gaps from 09-29, numbers live in registry text).
