@@ -189,3 +189,78 @@ doubao 出现 4 次过度自信失败（噪声窗无声转弱规则）——失�
 Mushroom-Body Program track.
 [Benchmark code](sdb/), [arena](sdb/arena.py),
 [plugin](intuition_pack/), [registry](docs/RESEARCH_PLAN.md).*
+
+---
+
+## 9. v2 UPDATE (2026-10-03): results from P144-P175
+
+The following experiments were added after the v1.0 specification was
+written.  They extend, confirm, and sometimes refute the original
+predictions.
+
+### 9.1 The shrinking law quantified (P146 × P153)
+
+The set of compression domains SHRINKS as model generations advance:
+12 domains tested, 6 SATURATED (zero-shot at ceiling), shrinking law
+confirmed 8 times.  The durable asset is NOT a library of packs but
+the detector-plus-pipeline speed.
+
+### 9.2 The verbalization gap is UNIVERSAL (P170 + P175 + P176)
+
+Measured across 3 models × 4 domains: stated-rule code accuracy is
+always FAR below operative accuracy (gap 12-100pp).  The gap is at
+the KNOWLEDGE level (implementing the stated rule gives chance-level
+results) and is NOT domain-type dependent (appears on both
+continuous/semantic and discrete/syntactic domains).
+
+    Domain              Operative   Stated-rule-code   Gap
+    sci_data            79-94%      ~50%               50pp
+    config-compliance   95.8%       25.0%              70.8pp
+    code-pass-fail      100%        0% (impl bugs)     confounded
+
+DESIGN CONSEQUENCE: never score rule-statement quality.  Always use
+probe agreement (the V component).
+
+### 9.3 The Insight Boundary Benchmark detects the failure mode (P164)
+
+Noise control: perturbing one term in the discovery window causes
+model-separable failures (deepseek 16/24, doubao 20/24, kimi 22/24
+anomaly detection) and the first observed overconfidence failures
+(doubao: 4 noisy windows where the judge switched rules without
+declaring the underdetermination).
+
+### 9.4 Ambiguity awareness transfers across carriers (P166)
+
+6/6 YES on a polynomial carrier after training on arithmetic sequences
+— the ambiguity declaration is a protocol property, not a domain
+reflex.
+
+### 9.5 Late-divergence refusal (P171)
+
+All judges refuse to commit to either branch under genuine
+late-divergence ambiguity (9/9 A=0 B=0 amb=True) — the ideal behavior
+under genuine underdetermination.
+
+### 9.6 Per-model probe verdicts (P169)
+
+The 12-domain matrix shows CONSISTENT model hierarchy: doubao ≥ kimi >
+deepseek on execution domains.  The probe verdict must be PER-MODEL
+(P128-c extended to pack candidates by P169).
+
+---
+
+## 10. THE SHARP FORMULATION (updated)
+
+> The program mechanized the judgments that don't require taste.
+> What it failed to mechanize is taste itself — and the program's
+> own history (needing human review to catch peripheral errors) is
+> the best evidence for why.
+
+The boundary is drawn by "does this step have a mechanical verifier?"
+NOT by "how hard is it."  The boundary is empirical, not a theorem —
+it moves as verification technology advances.
+
+**Insight is verified compression of experience into transferable
+structure.**  The four conditions are the operational definition of
+"verified" and "transferable."  Everything else is hallucination,
+overfit, or paraphrase — and the boundary between them is measurable.
