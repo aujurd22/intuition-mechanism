@@ -1,0 +1,6 @@
+{
+ "domain": "color-harmony",
+ "n": 6,
+ "judge_acc": 100.0,
+ "stated_rule": "A palette is HARMONIOUS if all its colors have pairwise hue separation of at least 30\u00b0, and every color falls within acceptable saturation and lightness ranges; otherwise, it is DISCORDANT."
+}
