@@ -1,0 +1,128 @@
+[
+ {
+  "model": "deepseek-v4-flash",
+  "pair": "doubling_vs_product",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is double the previous term."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "pair": "cubes_vs_product",
+  "nexts": [
+   343,
+   512,
+   729,
+   1000
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is the cube of its position in the sequence (n\u00b3)."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "pair": "fib_vs_even_fib",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is the sum of the two preceding terms."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "pair": "doubling_vs_product",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Start at 32 and multiply each term by 2 to get the next term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "pair": "cubes_vs_product",
+  "nexts": [
+   343,
+   512,
+   729,
+   1000
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "The nth term is n cubed, starting with n=1."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "pair": "fib_vs_even_fib",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is the sum of the two preceding terms, starting from 1 and 1."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "pair": "doubling_vs_product",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": false,
+  "rule": "Each term is double the previous term."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "pair": "cubes_vs_product",
+  "nexts": [
+   343,
+   512,
+   729,
+   1000
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is the cube of its position number (n\u00b3)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "pair": "fib_vs_even_fib",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_hits": 0,
+  "b_hits": 0,
+  "amb": true,
+  "rule": "Each term is the sum of the two preceding terms."
+ }
+]
