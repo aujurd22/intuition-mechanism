@@ -1,0 +1,48 @@
+{
+ "description": "x4 orbit adaptive-precision residuals (P160)",
+ "protocol": "dps raised until residual stabilizes (dps > log10|v| + 40)",
+ "measurements": [
+  {
+   "d": 978,
+   "log10_v": 17.4,
+   "residual": 7.499e-13,
+   "stable_dps": 140
+  },
+  {
+   "d": 3912,
+   "log10_v": 34.8,
+   "residual": 1.637e-10,
+   "stable_dps": 140
+  },
+  {
+   "d": 15648,
+   "log10_v": 69.7,
+   "residual": 3.085e-07,
+   "stable_dps": 200
+  },
+  {
+   "d": 4314,
+   "log10_v": 36.6,
+   "residual": 1.275e-05,
+   "stable_dps": 140
+  },
+  {
+   "d": 17256,
+   "log10_v": 73.2,
+   "residual": 0.4393,
+   "stable_dps": 140
+  },
+  {
+   "d": 1392,
+   "log10_v": 20.8,
+   "residual": 7.828e-06,
+   "stable_dps": 140
+  },
+  {
+   "d": 5568,
+   "log10_v": 41.6,
+   "residual": 0.00174,
+   "stable_dps": 140
+  }
+ ]
+}
