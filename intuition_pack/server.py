@@ -18,7 +18,7 @@ from mcp.server.fastmcp import FastMCP
 
 from intuition_pack.pack import build_pack, Pack
 from intuition_pack.store import get_store
-from intuition_pack.verifiers import run_verifier, VERIFIERS, score_candidates
+from intuition_pack.verifiers import (run_verifier, VERIFIERS, score_candidates, needs_verification)
 from intuition_pack.regression import mechanical_gate, load_testset
 from intuition_pack.route import route
 
@@ -96,6 +96,16 @@ def score(domain: str, candidates: list) -> str:
     Each item carries its typed choice distribution — the agent applies
     its own confidence threshold.  Candidates: [{"d": int}]."""
     return json.dumps({"scored": score_candidates(candidates)})
+
+
+@mcp.tool()
+def needs_verification_check(domain: str, verdict_json: str,
+                             threshold: float = 0.9) -> str:
+    """Jev-nouli-aligned abstain check: flag a verdict as ABSTAIN-candidate
+    when its confidence sits below the agent's threshold.  The agent then
+    escalates (deeper compute / human / another domain's verifier)."""
+    out = json.loads(verdict_json)
+    return json.dumps(needs_verification(out, threshold))
 
 
 @mcp.tool()

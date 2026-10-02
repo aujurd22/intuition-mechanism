@@ -133,11 +133,17 @@ def lambert_sixrow(payload: dict) -> dict:
 
 
 def integer_check(payload: dict) -> dict:
-    """Generic integer check on a supplied value (domain-independent)."""
+    """Generic integer check on a supplied value (domain-independent).
+    P162 update: full typed output (consistency across all verifiers)."""
     v = float(payload["value"])
     r = round(v)
     ok = abs(v - r) < 1e-9 * max(1.0, abs(v))
     return {"verdict": "INTEGER" if ok else "NONINTEGER",
+            "confidence": 1.0 - 1e-9,
+            "typed": {"kind": "choice",
+                      "options": {"INTEGER": 1.0 - 1e-9 if ok else 1e-9,
+                                  "NONINTEGER": 1e-9 if ok else 1.0 - 1e-9}},
+            "confidence_basis": "direct_execution",
             "value": v, "nearest_integer": int(r)}
 
 
@@ -249,3 +255,17 @@ def score_candidates(candidates: list) -> list:
                        "in_band": out.get("in_band", True)})
     scored.sort(key=lambda x: -x["p_rational"])
     return scored
+
+
+def needs_verification(out: dict, threshold: float = 0.9) -> dict:
+    """P162 nouli-aligned: flag any verdict whose confidence sits below
+    the agent's threshold as ABSTAIN-candidate.  Purely a wrapper — the
+    agent decides whether to escalate (deep compute, human, or another
+    domain's verifier)."""
+    conf = out.get("confidence", 1.0)
+    if conf < threshold:
+        out["abstain_recommended"] = True
+        out["reason"] = (f"confidence {conf} < agent threshold {threshold}")
+    else:
+        out["abstain_recommended"] = False
+    return out
