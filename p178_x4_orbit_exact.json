@@ -1,0 +1,50 @@
+[
+ {
+  "orig_d": 1,
+  "x4_d": 4,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "8.0",
+  "v4": "15.547351903923"
+ },
+ {
+  "orig_d": 3,
+  "x4_d": 12,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "12.0",
+  "v4": "87.102053510938"
+ },
+ {
+  "orig_d": 5,
+  "x4_d": 20,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "20.0",
+  "v4": "311.76383081776"
+ },
+ {
+  "orig_d": 7,
+  "x4_d": 28,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "32.0",
+  "v4": "887.91827712647"
+ },
+ {
+  "orig_d": 13,
+  "x4_d": 52,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "104.0",
+  "v4": "10391.993066993"
+ },
+ {
+  "orig_d": 17,
+  "x4_d": 68,
+  "orig_exact": true,
+  "x4_exact": false,
+  "v1": "200.0",
+  "v4": "39191.998162567"
+ }
+]
