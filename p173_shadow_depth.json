@@ -1,0 +1,65 @@
+[
+ {
+  "d": 978,
+  "h": 24,
+  "residual": 7.499e-13,
+  "log_resid": -12.124996646399959,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": true
+ },
+ {
+  "d": 3912,
+  "h": 52,
+  "residual": 1.637e-10,
+  "log_resid": -9.785951320588058,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ },
+ {
+  "d": 15648,
+  "h": 99,
+  "residual": 3.085e-07,
+  "log_resid": -6.510744831630739,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ },
+ {
+  "d": 4314,
+  "h": 124,
+  "residual": 1.275e-05,
+  "log_resid": -4.894489815230026,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ },
+ {
+  "d": 17256,
+  "h": 252,
+  "residual": 0.4393,
+  "log_resid": -0.35723879673467956,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ },
+ {
+  "d": 1392,
+  "h": 35,
+  "residual": 7.828e-06,
+  "log_resid": -5.106349183014037,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ },
+ {
+  "d": 5568,
+  "h": 68,
+  "residual": 0.00174,
+  "log_resid": -2.7594507517174,
+  "t": 3,
+  "has_heegner": true,
+  "is_6x_heegner": false
+ }
+]
