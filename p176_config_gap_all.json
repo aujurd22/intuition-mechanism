@@ -1,0 +1,22 @@
+[
+ {
+  "model": "deepseek-v4-flash",
+  "stated_rule": "A config is COMPLIANT if and only if the host is all lowercase, port is an integer between 1 and 65535, retries is an integer between 1 and 5, mode is exactly \"http\" or \"grpc\", and tls is an object with a boolean \"enabled\" and a lowercase string \"cert\".",
+  "code_acc": 25.0,
+  "tp": 2,
+  "fp": 0,
+  "tn": 0,
+  "fn": 6,
+  "err": 0
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "stated_rule": "A config is compliant iff host is a lowercase string, port is an integer 1-65535, retries is an integer 1-5, mode is \"http\" or \"grpc\", and tls is an object with enabled boolean and cert lowercase string.",
+  "code_acc": 25.0,
+  "tp": 2,
+  "fp": 0,
+  "tn": 0,
+  "fn": 6,
+  "err": 0
+ }
+]
