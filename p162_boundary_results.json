@@ -1,0 +1,422 @@
+[
+ {
+  "model": "deepseek-v4-flash",
+  "family": "doubling",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_cont": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "b_cont": [
+   40832,
+   363904,
+   1816448,
+   6656896
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 95,
+  "rule": "Each term is double the previous term, starting from 2."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "squares",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "a_cont": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "b_cont": [
+   40401,
+   362980,
+   1814521,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 95,
+  "rule": "The sequence is the squares of the positive integers (1\u00b2, 2\u00b2, 3\u00b2, ...)."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "fibonacci",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_cont": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "b_cont": [
+   40354,
+   362935,
+   1814489,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 100,
+  "rule": "Each term is the sum of the two preceding terms."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "arithmetic3",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "a_cont": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "b_cont": [
+   40349,
+   362912,
+   1814435,
+   6652838
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 100,
+  "rule": "Add 3 to the previous term."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "triangular",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "a_cont": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "b_cont": [
+   40365,
+   362935,
+   1814466,
+   6652878
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 95,
+  "rule": "Each term is the sum of the first n positive integers (triangular numbers)."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "doubling",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_cont": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "b_cont": [
+   40832,
+   363904,
+   1816448,
+   6656896
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 99,
+  "rule": "Start at 2 and multiply each term by 2 to get the next term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "squares",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "a_cont": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "b_cont": [
+   40401,
+   362980,
+   1814521,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 99,
+  "rule": "The nth term is n squared, starting with n=1."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "fibonacci",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_cont": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "b_cont": [
+   40354,
+   362935,
+   1814489,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 99,
+  "rule": "Each term after the first two is the sum of the two immediately preceding terms."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "arithmetic3",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "a_cont": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "b_cont": [
+   40349,
+   362912,
+   1814435,
+   6652838
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 99,
+  "rule": "Start at 5 and add 3 to each previous term to get the next term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "triangular",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "a_cont": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "b_cont": [
+   40365,
+   362935,
+   1814466,
+   6652878
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 99,
+  "rule": "Start at 1, add 2, then 3, then 4, and so on, increasing the added amount by 1 each step."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "doubling",
+  "nexts": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "a_cont": [
+   512,
+   1024,
+   2048,
+   4096
+  ],
+  "b_cont": [
+   40832,
+   363904,
+   1816448,
+   6656896
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 95,
+  "rule": "Each term is double the previous term (powers of 2, starting from 2^1)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "squares",
+  "nexts": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "a_cont": [
+   81,
+   100,
+   121,
+   144
+  ],
+  "b_cont": [
+   40401,
+   362980,
+   1814521,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 98,
+  "rule": "Each term is the square of its position index n (t_n = n\u00b2)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "fibonacci",
+  "nexts": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "a_cont": [
+   34,
+   55,
+   89,
+   144
+  ],
+  "b_cont": [
+   40354,
+   362935,
+   1814489,
+   6652944
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 98,
+  "rule": "Each term is the sum of the two preceding terms."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "arithmetic3",
+  "nexts": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "a_cont": [
+   29,
+   32,
+   35,
+   38
+  ],
+  "b_cont": [
+   40349,
+   362912,
+   1814435,
+   6652838
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 98,
+  "rule": "Start at 5 and add 3 to each term to get the next."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "triangular",
+  "nexts": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "a_cont": [
+   45,
+   55,
+   66,
+   78
+  ],
+  "b_cont": [
+   40365,
+   362935,
+   1814466,
+   6652878
+  ],
+  "branch": "A",
+  "a_hits": 4,
+  "b_hits": 0,
+  "ambiguity_declared": true,
+  "confidence": 95,
+  "rule": "Each term is the previous term plus an incrementally increasing integer (triangular numbers: add 2, 3, 4, ...)."
+ }
+]
