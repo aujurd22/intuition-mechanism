@@ -29,6 +29,7 @@ def main():
                   + "\n\nTASK: State the hidden rule separating RATIONAL from "
                   "NOT in ONE sentence (applicable to unseen d).\nFormat:\nRULE: <sentence>")
     out = {}
+    rules_store = {}
     for model in MODELS:
         os.environ["ARK_MODEL"] = model
         importlib.reload(llm_client)
@@ -38,6 +39,7 @@ def main():
         for seed in SEEDS:
             rule_m = re.search(r"RULE:\s*(.+)", llm_client.ask(law_prompt), re.S)
             rule = rule_m.group(1).strip() if rule_m else "(none stated)"
+            rules_store[f"{model}/seed{seed}"] = rule
             preds = []
             CHUNK = 10
             for s in range(0, len(probes), CHUNK):
@@ -62,8 +64,9 @@ def main():
                       "row_recall": f"{rows_ok}/{rows_total}",
                       "err_counts": {str(d): all_errs.count(d) for d in sorted(set(all_errs))}}
         print(f"{model} MEAN {out[model]['mean']}%  row_recall {out[model]['row_recall']}")
-    json.dump(out, open("p186c_math_fixed.json", "w"), indent=1)
-    print("saved p186c_math_fixed.json")
+    json.dump({"models": out, "rules": rules_store},
+              open("p186c_math_fixed.json", "w"), indent=1)
+    print("saved p186c_math_fixed.json (with rule texts)")
 
 if __name__ == "__main__":
     main()
