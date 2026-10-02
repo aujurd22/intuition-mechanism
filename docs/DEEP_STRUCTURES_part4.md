@@ -38,7 +38,13 @@ spread of predicted continuations across models x seeds.  P153's
 math-track data is the first measurement: across three models the
 predicted continuations of the census probes disagreed massively
 (76-79% agreement with a fixed rule = high H_before relative to a
-solved domain, where all models read 100%).
+solved domain, where all models read 100%).  [P186 CORRECTION
+2026-10-03: the 76-79% figure was a chunking-misalignment artifact —
+the corrected math track reads 94-100% with rows fully recalled, so
+the math domain is NOT a high-H_before outlier; the SCR framing here
+survives but this particular measurement must be redone on a domain
+whose difficulty is real (candidate: the d=421-type hard probes that
+survive clean runs).]
 
 The chain closes:  Compression REDUCES the description, Verification
 TESTS the reduction, Transfer ESTABLISHES it beyond the discovery
