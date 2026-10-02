@@ -1,5 +1,9 @@
 # Intuition-Mechanism Program
 
+<p align="center">
+  <a href="README.zh-CN.md">中文</a> · <b>English</b>
+</p>
+
 **Build your own System-One judge: verified, calibrated, audit-trail included.**
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
