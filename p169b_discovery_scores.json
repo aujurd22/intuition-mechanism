@@ -1,0 +1,38 @@
+{
+ "constrained-set": {
+  "compression": 1.0,
+  "novelty": 1.0,
+  "verification": 0.556,
+  "transfer": 0.556,
+  "discovery_score": 0.778,
+  "insight_vs_hallucination": "HALLUCINATION (verification failed)",
+  "mdl_ratio": 155.4
+ },
+ "config-compliance": {
+  "compression": 1.0,
+  "novelty": 1.0,
+  "verification": 0.875,
+  "transfer": 0.875,
+  "discovery_score": 0.938,
+  "insight_vs_hallucination": "HALLUCINATION (verification failed)",
+  "mdl_ratio": 250.2
+ },
+ "code-pass-fail": {
+  "compression": 1.0,
+  "novelty": 1.0,
+  "verification": 0.714,
+  "transfer": 0.714,
+  "discovery_score": 0.857,
+  "insight_vs_hallucination": "HALLUCINATION (verification failed)",
+  "mdl_ratio": 94.8
+ },
+ "python-traps": {
+  "compression": 1.0,
+  "novelty": 1.0,
+  "verification": 0.875,
+  "transfer": 0.875,
+  "discovery_score": 0.938,
+  "insight_vs_hallucination": "HALLUCINATION (verification failed)",
+  "mdl_ratio": 98.7
+ }
+}
