@@ -1,0 +1,11 @@
+{
+ "model": "kimi-k2.8-preview",
+ "stated_rule": "A config is compliant exactly when `host` is a lowercase string, `port` is an integer from 1 to 65535, `retries` is an integer from 1 to 5, `mode` is either `http` or `grpc`, and `tls` is an object whose `enabled` is a boolean and whose `cert` is a lowercase string.",
+ "code_acc": 25.0,
+ "operative_acc": 87.5,
+ "gap": 62.5,
+ "tp": 2,
+ "fp": 1,
+ "tn": 0,
+ "fn": 5
+}
