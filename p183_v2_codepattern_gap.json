@@ -1,0 +1,31 @@
+{
+ "model": "deepseek-v4-flash",
+ "stated_rule": "A function is PURE if it does not modify its inputs or any external state, and IMPURE if it mutates its arguments or relies on side effects.",
+ "code_acc": 50.0,
+ "tp": 2,
+ "fp": 2,
+ "tn": 0,
+ "fn": 0,
+ "results": [
+  {
+   "id": "dp07",
+   "truth": "IMPURE",
+   "pred": "PURE"
+  },
+  {
+   "id": "dp08",
+   "truth": "PURE",
+   "pred": "PURE"
+  },
+  {
+   "id": "dp09",
+   "truth": "IMPURE",
+   "pred": "PURE"
+  },
+  {
+   "id": "dp10",
+   "truth": "PURE",
+   "pred": "PURE"
+  }
+ ]
+}
