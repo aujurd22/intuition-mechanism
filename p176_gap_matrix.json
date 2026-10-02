@@ -1,0 +1,36 @@
+{
+ "deepseek-v4-flash": {
+  "constrained-set": {
+   "stated_rule_code_acc": 33.3,
+   "operative_acc": 55.6,
+   "gap": 22.3
+  },
+  "config-compliance": {
+   "stated_rule_code_acc": 75.0,
+   "operative_acc": 87.5,
+   "gap": 12.5
+  },
+  "code-pass-fail": {
+   "stated_rule_code_acc": 0.0,
+   "operative_acc": 71.4,
+   "gap": 71.4
+  }
+ },
+ "doubao-seed-2.1-lite": {
+  "constrained-set": {
+   "stated_rule_code_acc": 33.3,
+   "operative_acc": 85.2,
+   "gap": 51.9
+  },
+  "config-compliance": {
+   "stated_rule_code_acc": 0.0,
+   "operative_acc": 95.8,
+   "gap": 95.8
+  },
+  "code-pass-fail": {
+   "stated_rule_code_acc": 0.0,
+   "operative_acc": 100.0,
+   "gap": 100.0
+  }
+ }
+}
