@@ -1,0 +1,208 @@
+{
+ "dps": 200,
+ "rows": [
+  {
+   "d": 3,
+   "class": "six-row",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "1",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": [
+    6
+   ]
+  },
+  {
+   "d": 5,
+   "class": "six-row",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "721",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": [
+    10
+   ]
+  },
+  {
+   "d": 7,
+   "class": "six-row",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "6049",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": [
+    21
+   ]
+  },
+  {
+   "d": 13,
+   "class": "six-row",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "842401",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": [
+    13
+   ]
+  },
+  {
+   "d": 17,
+   "class": "six-row",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "11995201",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": [
+    34
+   ]
+  },
+  {
+   "d": 11,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "95545",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 19,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "21998617149137501924271",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 23,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "189204625",
+   "maxcoeff_used": 10000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 29,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "160667689289669677708634",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 31,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "10528976334875949996979",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 37,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "20403804110545209630637",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 41,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "71942710120041843242112",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 43,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "19365162351231372845587",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 47,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "7349819363425",
+   "maxcoeff_used": 1000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 53,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "13156593133414953679045",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 59,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "14854387939988459062703",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 61,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "22028431029681977795978",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  },
+  {
+   "d": 67,
+   "class": "generic",
+   "in_genus_real_part": true,
+   "maxcoord_coeff": "23652455814110019460233",
+   "maxcoeff_used": 10000000000000000000000000,
+   "quadratic_hits": null
+  }
+ ],
+ "nonquadratic_new_primes": [],
+ "six_row_landing": {
+  "3": {
+   "s": [
+    6
+   ],
+   "expected": 6,
+   "c": 2,
+   "c_predicted": 3,
+   "match": true
+  },
+  "5": {
+   "s": [
+    10
+   ],
+   "expected": 10,
+   "c": 2,
+   "c_predicted": 2,
+   "match": true
+  },
+  "7": {
+   "s": [
+    21
+   ],
+   "expected": 21,
+   "c": 3,
+   "c_predicted": 3,
+   "match": true
+  },
+  "13": {
+   "s": [
+    13
+   ],
+   "expected": 13,
+   "c": 1,
+   "c_predicted": 1,
+   "match": true
+  },
+  "17": {
+   "s": [
+    34
+   ],
+   "expected": 34,
+   "c": 2,
+   "c_predicted": 2,
+   "match": true
+  }
+ },
+ "c_d_conjecture_matches": 4
+}
