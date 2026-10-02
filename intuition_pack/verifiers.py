@@ -97,6 +97,9 @@ def lambert_sixrow(payload: dict) -> dict:
     # Ramanujan near-integer 262537412640768746 - residual 7.5e-13,
     # the e^(pi*sqrt(163)) signature — an exact-integer test must not
     # call it RATIONAL, nor garbage NOT)
+    # P172 fix: use round-based nearest_integer (floor was an off-by-one
+    # when v = N.999...9 — mathematical N but floor gives N-1)
+    r = int(round(float(v))) if abs(float(v)) < 1e30 else int(fl)
     is_int = resid < mpf("1e-30")
     is_near = (not is_int) and resid < tol
     in_band = CENSUS_BAND[0] <= d <= CENSUS_BAND[1]
