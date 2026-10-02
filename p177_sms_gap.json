@@ -1,0 +1,6 @@
+{
+ "operative_acc": 94.5,
+ "stated_rule_acc": 97.0,
+ "gap_pp": -2.5,
+ "stated_rule": "Messages that contain promotional offers, prize claims, urgent calls to action, or explicit/sexual content are classified as SPAM, while personal, conversational, or casual messages are classified as HAM."
+}
