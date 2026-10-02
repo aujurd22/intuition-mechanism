@@ -144,3 +144,60 @@ bottleneck, not the knowledge.  DESIGN CONSEQUENCE for the Arena
 probe agreement — scoring rule-statement quality would deny INSIGHT
 status to every judge on this domain, including the 79-94%-accurate
 ones.  "We know more than we can tell" is now a measured number.
+
+## IV.6 EXTERNAL REVIEW SYNTHESIS (2026-10-03)
+
+An external reviewer's analysis added three refinements to the
+program's self-understanding, each confirmed correct:
+
+### R1: The boundary is drawn by "does this step have a mechanical verifier?"
+
+Not by "how hard is it" — by "is there external ground truth."  All
+successful mechanizations have external verifiers: math identities
+(census), code (test suite), config (schema check), constraints
+(predicates).  All failures are in domains without verifiers:
+interestingness (model×format fragile, P128-c), representation beauty
+(FlyPoet), blind representation discovery (L3).
+
+This is Kahneman–Klein's condition for expert intuition reliability
+("environment has regularity + quality feedback") engineered into a
+plugin.  The four-condition Insight definition IS this condition made
+operational.
+
+### R2: The boundary is empirical, not a theorem
+
+"NOT YET mechanized" ≠ "CANNOT be mechanized."  The boundary moves as
+verification technology advances (formal proof assistants, executable
+specifications).  P146's shrinking law is the time-axis version.  The
+correct reading: first draft of a map whose coordinates have errors
+but whose existence is confirmed.
+
+### R3: Even inside the boundary, there are layers
+
+The six-row theorem is new knowledge (three-layer explanation,
+Heegner shadows, duplication law).  The memory-line six laws are clean
+re-derivations of known ML theory (Hart 1968, Cover-Hart).  Both are
+valuable; they should be cited differently.
+
+### R4: The repo as self-demonstrating experiment
+
+The mechanical loop produced correct mathematical core but peripheral
+accounting errors caught by human review — the reviewer called this
+"the thing outside the boundary was employed exactly once in this
+repo."  This is the program's thesis demonstrated on itself: taste
+(catching that the accounts don't balance) resists mechanization,
+and the mechanical loop's own output confirms the boundary.
+
+### The sharp formulation
+
+> The program mechanized the judgments that don't require taste.
+> What it failed to mechanize is taste itself — and the program's
+> own history (needing human review to catch peripheral errors)
+> is the best evidence for why.
+
+This connects to:
+- P136: mechanization difficulty ∝ feedback delay
+- P156: verbalization gap is at knowledge level (not expressiveness)
+- P164: the benchmark detects the failure mode
+- Kahneman–Klein: expert intuition requires "regular environment + quality feedback"
+- Polanyi: "we know more than we can tell" (P170 quantified this)
