@@ -1,0 +1,38 @@
+{
+ "deepseek-v4-flash": {
+  "A": {
+   "acc": 96.0,
+   "n": 200,
+   "gate_coverage": 82.5,
+   "gate_acc": 95.8,
+   "mean_conf": 94.4,
+   "ms_per": 1366.0
+  },
+  "B": {
+   "acc": 97.0,
+   "n": 200,
+   "gate_coverage": 70.5,
+   "gate_acc": 97.9,
+   "mean_conf": 94.0,
+   "ms_per": 1368.0
+  }
+ },
+ "doubao-seed-2.1-lite": {
+  "A": {
+   "acc": 97.0,
+   "n": 200,
+   "gate_coverage": 89.0,
+   "gate_acc": 98.9,
+   "mean_conf": 95.6,
+   "ms_per": 1557.0
+  },
+  "B": {
+   "acc": 97.5,
+   "n": 200,
+   "gate_coverage": 91.0,
+   "gate_acc": 99.5,
+   "mean_conf": 95.6,
+   "ms_per": 1287.0
+  }
+ }
+}

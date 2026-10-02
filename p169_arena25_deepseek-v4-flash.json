@@ -1,0 +1,546 @@
+{
+ "constrained-set": {
+  "seeds": {
+   "0": [
+    {
+     "id": "cs06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs09",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs10",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs12",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs91",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs92",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "cs06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs09",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs10",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs12",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs91",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs92",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "cs06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs09",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs10",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cs12",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs91",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cs92",
+     "pred": "PASS"
+    }
+   ]
+  },
+  "truth": [
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "FAIL",
+   "FAIL"
+  ],
+  "ids": [
+   "cs06",
+   "cs07",
+   "cs08",
+   "cs09",
+   "cs10",
+   "cs11",
+   "cs12",
+   "cs91",
+   "cs92"
+  ],
+  "aggregate": {
+   "seed_accs": [
+    55.6,
+    44.4,
+    66.7
+   ],
+   "mean_acc": 55.6,
+   "verify_agreement": 55.6,
+   "n_items": 9
+  }
+ },
+ "config-compliance": {
+  "seeds": {
+   "0": [
+    {
+     "id": "dc101",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc01",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc104",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc103",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc105",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc202",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc102",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc100",
+     "pred": "FAIL"
+    }
+   ],
+   "1": [
+    {
+     "id": "dc101",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc01",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc104",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc103",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc105",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc202",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc102",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc100",
+     "pred": "FAIL"
+    }
+   ],
+   "2": [
+    {
+     "id": "dc101",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc01",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc104",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc103",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc105",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc202",
+     "pred": "PASS"
+    },
+    {
+     "id": "dc102",
+     "pred": "FAIL"
+    },
+    {
+     "id": "dc100",
+     "pred": "FAIL"
+    }
+   ]
+  },
+  "truth": [
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "FAIL",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "FAIL"
+  ],
+  "ids": [
+   "dc101",
+   "dc01",
+   "dc104",
+   "dc103",
+   "dc105",
+   "dc202",
+   "dc102",
+   "dc100"
+  ],
+  "aggregate": {
+   "seed_accs": [
+    87.5,
+    87.5,
+    87.5
+   ],
+   "mean_acc": 87.5,
+   "verify_agreement": 87.5,
+   "n_items": 8
+  }
+ },
+ "code-pass-fail": {
+  "seeds": {
+   "0": [
+    {
+     "id": "cf06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf09",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cf10",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf12",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "cf06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf09",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cf10",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf12",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "cf06",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf07",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf08",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf09",
+     "pred": "FAIL"
+    },
+    {
+     "id": "cf10",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf11",
+     "pred": "PASS"
+    },
+    {
+     "id": "cf12",
+     "pred": "PASS"
+    }
+   ]
+  },
+  "truth": [
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS"
+  ],
+  "ids": [
+   "cf06",
+   "cf07",
+   "cf08",
+   "cf09",
+   "cf10",
+   "cf11",
+   "cf12"
+  ],
+  "aggregate": {
+   "seed_accs": [
+    71.4,
+    71.4,
+    71.4
+   ],
+   "mean_acc": 71.4,
+   "verify_agreement": 71.4,
+   "n_items": 7
+  }
+ },
+ "python-traps": {
+  "seeds": {
+   "0": [
+    {
+     "id": "pt05",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt06",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt07",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt08",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt09",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt10",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt11",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt12",
+     "pred": "PASS"
+    }
+   ],
+   "1": [
+    {
+     "id": "pt05",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt06",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt07",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt08",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt09",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt10",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt11",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt12",
+     "pred": "PASS"
+    }
+   ],
+   "2": [
+    {
+     "id": "pt05",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt06",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt07",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt08",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt09",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt10",
+     "pred": "PASS"
+    },
+    {
+     "id": "pt11",
+     "pred": "FAIL"
+    },
+    {
+     "id": "pt12",
+     "pred": "PASS"
+    }
+   ]
+  },
+  "truth": [
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS",
+   "FAIL",
+   "PASS"
+  ],
+  "ids": [
+   "pt05",
+   "pt06",
+   "pt07",
+   "pt08",
+   "pt09",
+   "pt10",
+   "pt11",
+   "pt12"
+  ],
+  "aggregate": {
+   "seed_accs": [
+    100.0,
+    75.0,
+    87.5
+   ],
+   "mean_acc": 87.5,
+   "verify_agreement": 87.5,
+   "n_items": 8
+  }
+ }
+}
