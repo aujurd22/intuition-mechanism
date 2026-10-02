@@ -1,0 +1,155 @@
+{
+ "deepseek-v4-flash": {
+  "seed0_chunk8": {
+   "acc": 0.96875,
+   "row_recall": 1.0,
+   "errors": [
+    {
+     "d": 421,
+     "pred": "RATIONAL"
+    }
+   ],
+   "unparsed": 0
+  },
+  "seed0_chunk32": {
+   "acc": 1.0,
+   "row_recall": 1.0,
+   "errors": [],
+   "unparsed": 0
+  },
+  "seed1_chunk8": {
+   "acc": 0.9375,
+   "row_recall": 1.0,
+   "errors": [
+    {
+     "d": 421,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 653,
+     "pred": "RATIONAL"
+    }
+   ],
+   "unparsed": 0
+  },
+  "seed1_chunk32": {
+   "acc": 0.875,
+   "row_recall": 1.0,
+   "errors": [
+    {
+     "d": 421,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 653,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 821,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 809,
+     "pred": "RATIONAL"
+    }
+   ],
+   "unparsed": 0
+  }
+ },
+ "doubao-seed-2.1-lite": {
+  "seed0_chunk8": {
+   "acc": 1.0,
+   "row_recall": 1.0,
+   "errors": [],
+   "unparsed": 0
+  },
+  "seed0_chunk32": {
+   "acc": 1.0,
+   "row_recall": 1.0,
+   "errors": [],
+   "unparsed": 0
+  },
+  "seed1_chunk8": {
+   "acc": 0.75,
+   "row_recall": 0.6666666666666666,
+   "errors": [
+    {
+     "d": 935,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 421,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 3,
+     "pred": "NOT"
+    },
+    {
+     "d": 653,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 7,
+     "pred": "NOT"
+    },
+    {
+     "d": 505,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 821,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 809,
+     "pred": "RATIONAL"
+    }
+   ],
+   "unparsed": 0
+  },
+  "seed1_chunk32": {
+   "acc": 0.71875,
+   "row_recall": 0.6666666666666666,
+   "errors": [
+    {
+     "d": 421,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 3,
+     "pred": "NOT"
+    },
+    {
+     "d": 653,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 7,
+     "pred": "NOT"
+    },
+    {
+     "d": 505,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 884,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 655,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 821,
+     "pred": "RATIONAL"
+    },
+    {
+     "d": 809,
+     "pred": "RATIONAL"
+    }
+   ],
+   "unparsed": 0
+  }
+ }
+}

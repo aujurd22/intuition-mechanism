@@ -264,3 +264,18 @@ it moves as verification technology advances.
 structure.**  The four conditions are the operational definition of
 "verified" and "transferable."  Everything else is hallucination,
 overfit, or paraphrase — and the boundary between them is measurable.
+
+
+## v1.2 correction (2026-10-03, P186)
+
+The math-track numbers cited from p153_v2 (76-79% accuracy, "unsaturated
+math-resistant domain") were produced by a chunking bug: the math track was
+the only track with a static all-probes apply header, so every batched call
+resent the full 32-probe list and the parser zipped the first len(chunk)
+answers onto the next chunk's items. Under a perfect model this caps the
+track at 84.4% with forced errors exactly at the observed positions.
+Corrected runs (per-chunk builder, rule injected per call): 94-100%
+accuracy, row recall 6/6. The math track is NOT an unsaturated floor; the
+shrinking-law evidence rests on the distributional (P144) and saturation
+(P145/P146) legs, which used correctly aligned builders. See RESEARCH_PLAN
+P186 for the full diagnosis.

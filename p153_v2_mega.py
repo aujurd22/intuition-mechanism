@@ -46,14 +46,22 @@ def math_tracks(probes):
                   + "\n\nTASK: State the hidden rule separating RATIONAL from "
                   "NOT in ONE sentence (applicable to unseen d).\n"
                   "Format:\nRULE: <sentence>")
-    probe_lines = [f"{i}: d={p['d']}, x0={p['x0']}, lambda={p['lam']}"
-                   for i, p in enumerate(probes, 1)]
-    apply_head = ("Using the rule you discovered, classify each held-out d.\n"
-                  + "\n".join(probe_lines)
-                  + "\nAnswer one line each: '<i>: RATIONAL' or '<i>: NOT'.")
+    # P186 fix: this track previously used a STATIC apply_head listing ALL
+    # probes with global indices — every chunk call resent the full list and
+    # the parser zipped the first len(chunk) answers onto the NEXT chunk's
+    # items, capping the track at 84.4% under a perfect model (the 76-79%
+    # "unsaturated plateau" was this bug, not model limits). Per-chunk
+    # builder, aligned with the other tracks.
+    def math_block(chunk):
+        lines = [f"{i}: d={p['d']}, x0={p['x0']}, lambda={p['lam']}"
+                 for i, p in enumerate(chunk, 1)]
+        return ("Using the rule you discovered, classify each held-out d.\n"
+                + "\n".join(lines)
+                + "\nAnswer one line each: '<i>: RATIONAL' or '<i>: NOT'.")
+
     return {"law_prompt": law_prompt, "truth": [p["truth"] for p in probes],
             "tokens": "RATIONAL|NOT", "law_call": law_prompt,
-            "apply_head": apply_head,
+            "apply_head_builder": math_block,
             "probes": [{"id": p["d"]} for p in probes]}
 
 

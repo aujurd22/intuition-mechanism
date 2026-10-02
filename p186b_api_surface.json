@@ -1,0 +1,38 @@
+{
+ "ask_chat": {
+  "0": {
+   "acc": 0.90625,
+   "row_recall": 1.0,
+   "errors": [
+    421,
+    653,
+    147
+   ],
+   "unparsed": 0
+  },
+  "1": {
+   "acc": 1.0,
+   "row_recall": 1.0,
+   "errors": [],
+   "unparsed": 0
+  }
+ },
+ "ask": {
+  "0": {
+   "acc": 0.96875,
+   "row_recall": 1.0,
+   "errors": [
+    147
+   ],
+   "unparsed": 0
+  },
+  "1": {
+   "acc": 0.96875,
+   "row_recall": 1.0,
+   "errors": [
+    421
+   ],
+   "unparsed": 0
+  }
+ }
+}
