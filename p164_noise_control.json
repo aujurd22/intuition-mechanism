@@ -1,0 +1,1442 @@
+[
+ {
+  "model": "deepseek-v4-flash",
+  "family": "doubling",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 8,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term, except the third term which is 10 instead of 8."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "doubling",
+  "kpos": 5,
+  "perturbed_value": 34,
+  "clean_value": 32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term, except the 5th term which is 34 instead of 32."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "doubling",
+  "kpos": 7,
+  "perturbed_value": 130,
+  "clean_value": 128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term, except when the result would be 130 instead of 128."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "fibonacci",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 2,
+  "anomaly_detected": false,
+  "anom_pos_named": 4,
+  "ambiguity": true,
+  "nexts": [
+   34,
+   55
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the sum of the two previous terms, except the first two terms are given as 1 and 1."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "fibonacci",
+  "kpos": 5,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   34,
+   55
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the sum of the two previous terms, except that the 5th term is 4 instead of 3."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "fibonacci",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   33,
+   54
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Each term is the sum of the two previous terms, except the 7th term is 12 instead of 13."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "squares",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence lists the squares of positive integers, but with the second term (4) repeated as the third term (8 is not a square, so this is an anomaly)."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "squares",
+  "kpos": 5,
+  "perturbed_value": 24,
+  "clean_value": 25,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence lists perfect squares, except 24 replaces 25."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "squares",
+  "kpos": 7,
+  "perturbed_value": 48,
+  "clean_value": 49,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence lists perfect squares, except the 7th term is 48 instead of 49."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "triangular",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 6,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Add consecutive integers starting with +2, then +5, +2, +5, +6, +7, +8..."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "triangular",
+  "kpos": 5,
+  "perturbed_value": 14,
+  "clean_value": 15,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Add consecutive integers starting from 2, but skip adding 4 (so the increments are 2, 3, 4, 4, 7, 7, 8...)."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "triangular",
+  "kpos": 7,
+  "perturbed_value": 30,
+  "clean_value": 28,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   39,
+   49
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Add consecutive integers starting with +2, but skip adding 5 (so the +5 step is omitted)."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "arithmetic3",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 11,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   32
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 2,
+  "rule": "Add 3, then add 2, then add 4, then repeat adding 3, 2, 4."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "arithmetic3",
+  "kpos": 5,
+  "perturbed_value": 16,
+  "clean_value": 17,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   32
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 2,
+  "rule": "Add 3, then add 3, then add 3, then add 2, then add 4, then add 3, then add 3, repeating the pattern of +3, +3, +3, +2, +4."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "arithmetic3",
+  "kpos": 7,
+  "perturbed_value": 22,
+  "clean_value": 23,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   31
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 1,
+  "rule": "Add 3, but skip any number that is a multiple of 7."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "alt_geometric",
+  "kpos": 3,
+  "perturbed_value": -6,
+  "clean_value": -8,
+  "anomaly_detected": false,
+  "anom_pos_named": 4,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term multiplied by -2, except the fourth term which is 16 instead of 12."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "alt_geometric",
+  "kpos": 5,
+  "perturbed_value": -30,
+  "clean_value": -32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term multiplied by -2, except the 5th term which is -30 instead of -32."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "alt_geometric",
+  "kpos": 7,
+  "perturbed_value": -126,
+  "clean_value": -128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term multiplied by -2."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "cubes",
+  "kpos": 3,
+  "perturbed_value": 26,
+  "clean_value": 27,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence is the cubes of the positive integers, except the third term is 26 instead of 27."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "cubes",
+  "kpos": 5,
+  "perturbed_value": 124,
+  "clean_value": 125,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence is the cubes of the natural numbers (1\u00b3, 2\u00b3, 3\u00b3, ...), except the 5th term is 124 instead of 125."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "cubes",
+  "kpos": 7,
+  "perturbed_value": 342,
+  "clean_value": 343,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence is the cubes of the natural numbers (1\u00b3, 2\u00b3, 3\u00b3, ...), except the 7th term is incorrect."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "odd_trap",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": false,
+  "anom_pos_named": 2,
+  "ambiguity": true,
+  "nexts": [
+   17,
+   19
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 2,
+  "rule": "Odd numbers, but with 3 and 4 swapped in order."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "odd_trap",
+  "kpos": 5,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": false,
+  "anom_pos_named": 4,
+  "ambiguity": true,
+  "nexts": [
+   17,
+   19
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 2,
+  "rule": "Odd numbers, but skipping 9 and including 8."
+ },
+ {
+  "model": "deepseek-v4-flash",
+  "family": "odd_trap",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   13,
+   14
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 0,
+  "rule": "All odd numbers in increasing order, except 12 is inserted after 11."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "doubling",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 8,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Starting from term 2, each term doubles the previous value, except term 3 which equals 10 instead of the expected 8."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "doubling",
+  "kpos": 5,
+  "perturbed_value": 34,
+  "clean_value": 32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term, except the fifth term is 34 instead of the expected 32."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "doubling",
+  "kpos": 7,
+  "perturbed_value": 130,
+  "clean_value": 128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the smallest positive integer power of 2 whose decimal digits sum to the value of the preceding term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "fibonacci",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 2,
+  "anomaly_detected": false,
+  "anom_pos_named": 2,
+  "ambiguity": true,
+  "nexts": [
+   34,
+   55
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Starting from the third term, each term equals the sum of the two immediately preceding terms."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "fibonacci",
+  "kpos": 5,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   33,
+   54
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Starting from the 4th term, each term equals the sum of the three immediately preceding terms."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "fibonacci",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   33,
+   54
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Each term is the sum of the two preceding terms, with the first two terms equal to 1."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "squares",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "For n \u2265 2, the nth term is n\u00b2, except the first term is 1."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "squares",
+  "kpos": 5,
+  "perturbed_value": 24,
+  "clean_value": 25,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": false,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "For n \u2265 1, t(n) = n\u00b2, except t(5) = 24."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "squares",
+  "kpos": 7,
+  "perturbed_value": 48,
+  "clean_value": 49,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is n squared, except for a single erroneous value."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "triangular",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 6,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   38,
+   43
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Start at 1, then alternately add 2, add 5, add 2, add 5, and so on."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "triangular",
+  "kpos": 5,
+  "perturbed_value": 14,
+  "clean_value": 15,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Start at 1, then add 2, 3, 4, 5, 6, 7, 8 successively to get each next term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "triangular",
+  "kpos": 7,
+  "perturbed_value": 30,
+  "clean_value": 28,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is the nth triangular number, equal to n(n+1)/2."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "arithmetic3",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 11,
+  "anomaly_detected": false,
+  "anom_pos_named": null,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   31
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 1,
+  "rule": "Start at 5, then add 3, then add 2, repeating the +3, +2 cycle."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "arithmetic3",
+  "kpos": 5,
+  "perturbed_value": 16,
+  "clean_value": 17,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   32
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 2,
+  "rule": "Start at 5, add 3 repeatedly."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "arithmetic3",
+  "kpos": 7,
+  "perturbed_value": 22,
+  "clean_value": 23,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   25,
+   28
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 0,
+  "rule": "Start at 5 and add 3 each time, except the term at position 7 should be 23 rather than 22."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "alt_geometric",
+  "kpos": 3,
+  "perturbed_value": -6,
+  "clean_value": -8,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Starting from term 2, each term is -2 multiplied by the immediately preceding term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "alt_geometric",
+  "kpos": 5,
+  "perturbed_value": -30,
+  "clean_value": -32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": false,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term multiplied by -2."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "alt_geometric",
+  "kpos": 7,
+  "perturbed_value": -126,
+  "clean_value": -128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term multiplied by -2."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "cubes",
+  "kpos": 3,
+  "perturbed_value": 26,
+  "clean_value": 27,
+  "anomaly_detected": false,
+  "anom_pos_named": 1,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is n cubed, except the first term is 1 instead of 1 cubed."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "cubes",
+  "kpos": 5,
+  "perturbed_value": 124,
+  "clean_value": 125,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": false,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is the cube of n, i.e., t(n) = n\u00b3."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "cubes",
+  "kpos": 7,
+  "perturbed_value": 342,
+  "clean_value": 343,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": false,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is n cubed, except for one erroneous entry."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "odd_trap",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   17,
+   19
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 2,
+  "rule": "Start at 1 and add 2 to each term to get the next term."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "odd_trap",
+  "kpos": 5,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   16,
+   17
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 0,
+  "rule": "List positive integers that contain only straight line segments when written in English (no curved letters)."
+ },
+ {
+  "model": "doubao-seed-2.1-lite",
+  "family": "odd_trap",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   13,
+   17
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 0,
+  "rule": "Positive odd integers in increasing order, with the term at position 7 replaced by 12."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "doubling",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 8,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term doubles the previous term, starting from 2."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "doubling",
+  "kpos": 5,
+  "perturbed_value": 34,
+  "clean_value": 32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term doubles the previous term (multiply by 2)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "doubling",
+  "kpos": 7,
+  "perturbed_value": 130,
+  "clean_value": 128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   512,
+   1024
+  ],
+  "true9_10": [
+   512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term (powers of 2: 2^n)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "fibonacci",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 2,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   34,
+   55
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the sum of the two preceding terms (Fibonacci-like recurrence)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "fibonacci",
+  "kpos": 5,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   34,
+   55
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the sum of the previous two terms (Fibonacci recurrence)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "fibonacci",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   33,
+   54
+  ],
+  "true9_10": [
+   34,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Each term is the sum of the previous two terms."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "squares",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "Squares of positive integers: n^2 (1, 4, 9, 16, 25, ...)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "squares",
+  "kpos": 5,
+  "perturbed_value": 24,
+  "clean_value": 25,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "Perfect squares (n\u00b2), except the 5th term is 24 instead of 25."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "squares",
+  "kpos": 7,
+  "perturbed_value": 48,
+  "clean_value": 49,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   81,
+   100
+  ],
+  "true9_10": [
+   81,
+   100
+  ],
+  "nexts_ok": 2,
+  "rule": "Terms are n\u00b2 except the 7th term is 48 instead of 49."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "triangular",
+  "kpos": 3,
+  "perturbed_value": 8,
+  "clean_value": 6,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   46,
+   57
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 0,
+  "rule": "Each term is the previous term plus an increment that increases by 2 each time (differences are 2, 4, 6, 8, ...)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "triangular",
+  "kpos": 5,
+  "perturbed_value": 14,
+  "clean_value": 15,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Add consecutive integers starting with 2 (differences increase by 1: +2, +3, +4, ...)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "triangular",
+  "kpos": 7,
+  "perturbed_value": 30,
+  "clean_value": 28,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   45,
+   55
+  ],
+  "true9_10": [
+   45,
+   55
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is the previous term plus an increment that increases by 1 each step (adding 2, 3, 4, 5, ...)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "arithmetic3",
+  "kpos": 3,
+  "perturbed_value": 10,
+  "clean_value": 11,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   28,
+   31
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 0,
+  "rule": "Start at 5 and repeatedly add 3, except add 2 after the first term (alternating increments of 3 and 2 starting with 3)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "arithmetic3",
+  "kpos": 5,
+  "perturbed_value": 16,
+  "clean_value": 17,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   29,
+   32
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 2,
+  "rule": "Start at 5 and add 3 each time."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "arithmetic3",
+  "kpos": 7,
+  "perturbed_value": 22,
+  "clean_value": 23,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   25,
+   28
+  ],
+  "true9_10": [
+   29,
+   32
+  ],
+  "nexts_ok": 0,
+  "rule": "Each term increases by 3, except the 7th term increases by 2."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "alt_geometric",
+  "kpos": 3,
+  "perturbed_value": -6,
+  "clean_value": -8,
+  "anomaly_detected": false,
+  "anom_pos_named": 2,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Start at -2 and multiply by -2 each step, so term n = (-2)^n."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "alt_geometric",
+  "kpos": 5,
+  "perturbed_value": -30,
+  "clean_value": -32,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term with alternating sign, i.e. \\(a_n = -2a_{n-1}\\)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "alt_geometric",
+  "kpos": 7,
+  "perturbed_value": -126,
+  "clean_value": -128,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   -512,
+   1024
+  ],
+  "true9_10": [
+   -512,
+   1024
+  ],
+  "nexts_ok": 2,
+  "rule": "Each term is double the previous term with alternating signs, i.e. \\(a_n = (-1)^n \\cdot 2^n\\) starting from \\(n=1\\)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "cubes",
+  "kpos": 3,
+  "perturbed_value": 26,
+  "clean_value": 27,
+  "anomaly_detected": false,
+  "anom_pos_named": 2,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence consists of perfect cubes, n\u00b3, starting from n=1."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "cubes",
+  "kpos": 5,
+  "perturbed_value": 124,
+  "clean_value": 125,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The nth term is n cubed (n\u00b3)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "cubes",
+  "kpos": 7,
+  "perturbed_value": 342,
+  "clean_value": 343,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   729,
+   1000
+  ],
+  "true9_10": [
+   729,
+   1000
+  ],
+  "nexts_ok": 2,
+  "rule": "The sequence is the cubes of natural numbers n\u00b3."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "odd_trap",
+  "kpos": 3,
+  "perturbed_value": 4,
+  "clean_value": 5,
+  "anomaly_detected": true,
+  "anom_pos_named": 3,
+  "ambiguity": true,
+  "nexts": [
+   17,
+   19
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 2,
+  "rule": "All positive odd integers except 5."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "odd_trap",
+  "kpos": 5,
+  "perturbed_value": 8,
+  "clean_value": 9,
+  "anomaly_detected": true,
+  "anom_pos_named": 5,
+  "ambiguity": true,
+  "nexts": [
+   16,
+   17
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 0,
+  "rule": "Positive integers whose binary representation contains an odd number of 1-bits (odious numbers)."
+ },
+ {
+  "model": "kimi-k2.8-preview",
+  "family": "odd_trap",
+  "kpos": 7,
+  "perturbed_value": 12,
+  "clean_value": 13,
+  "anomaly_detected": true,
+  "anom_pos_named": 7,
+  "ambiguity": true,
+  "nexts": [
+   13,
+   15
+  ],
+  "true9_10": [
+   17,
+   19
+  ],
+  "nexts_ok": 0,
+  "rule": "Numbers that contain no letter 'e' when written in English."
+ }
+]
