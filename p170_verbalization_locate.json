@@ -1,0 +1,13 @@
+{
+ "deepseek-v4-flash": {
+  "error": "no code block"
+ },
+ "doubao-seed-2.1-lite": {
+  "code_acc": 50.0,
+  "n": 14
+ },
+ "kimi-k2.8-preview": {
+  "code_acc": 50.0,
+  "n": 14
+ }
+}
