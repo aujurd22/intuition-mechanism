@@ -5,7 +5,8 @@ beneficiary) + glm (strong, expected harmed). 3 seeds per cell. Answer:
 strong model suffer — attention dilution or hypothesis-space pollution?"""
 import os, sys, json, re, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-MODELS = ["doubao-seed-2.1-lite", "glm-5.3-flash"]
+import os as _os
+MODELS = _os.environ.get("P227_MODELS", "doubao-seed-2.1-lite,glm-5.3-flash").split(",")
 DOSES = [0, 1, 3, 6]
 SEEDS = [0, 1, 2, 3, 4]
 
@@ -25,6 +26,13 @@ def main():
     ]
     test_band = sorted(set(list(range(1201, 2001, 7))[:20] + list(range(1501, 2001, 13))[:20]))
     out = {}
+    if _os.path.exists("p227_dose_response.json"):
+        try:
+            prev = json.load(open("p227_dose_response.json", encoding="utf-8"))
+            for mk, mv in prev.items():
+                out.setdefault(mk, {}).update(mv)
+        except Exception:
+            pass
     for model in MODELS:
         os.environ["ARK_MODEL"] = model
         import importlib as il
@@ -60,6 +68,7 @@ def main():
                 div_accs.append(sum(div_ok) / max(len(div_ok), 1))
             out[model][f"dose{dose}"] = {"acc": sum(accs)/len(accs), "div_acc": sum(div_accs)/len(div_accs),
                                          "seeds": [round(a, 3) for a in accs]}
+            json.dump(out, open("p227_dose_response.json", "w"), indent=1)
             print(f"{model} dose{dose}: acc={out[model][f'dose{dose}']['acc']:.3f} "
                   f"div={out[model][f'dose{dose}']['div_acc']:.3f} seeds={[round(a,3) for a in accs]}")
     json.dump(out, open("p227_dose_response.json", "w"), indent=1)

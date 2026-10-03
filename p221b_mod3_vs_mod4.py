@@ -53,7 +53,7 @@ def run(component, seed, epochs=2500, wd=5.0):
 def main():
     out = {}
     for comp in [4, 3]:
-        runs = [run(comp, s) for s in (0, 1)]
+        runs = [run(comp, s) for s in (0, 1, 2, 3, 4)]
         fin = [r["final_test"] for r in runs]
         out[f"mod{comp}"] = {"final_test": fin, "mean": sum(fin)/len(fin)}
         print(f"mod-{comp}-only: final test = {[round(f,3) for f in fin]}")
