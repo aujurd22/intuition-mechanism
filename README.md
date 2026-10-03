@@ -26,7 +26,7 @@ not the reason. We let AI models guess the rule from data, then use **code
 as the judge**: a guessed rule only counts if it passes unseen exam
 questions — one miss and it is a hallucination.
 
-**Three things we learned:**
+**Three things a week of intensive research surfaced:**
 
 1. **The math**: *why* exactly those six numbers is now almost fully
    explained — the class group decides which values are even eligible, and
