@@ -46,6 +46,8 @@ The lemma to prove (the successor of the Schertz mapping):
   a measured amount (the multiplier nontriviality of P69-b is its
   fingerprint).
 
+> **CORRECTION (P195, 2026-10-03):** the 2-elementary census for D=-24d is **22 rows in [1,1000]** = {1,2,3,5,7,10,13,17,35,55,77} ∪ 4×{1,2,3,5,7,10,13,17,35,55,77}. The earlier 11-row account missed ALL d ≡ 0 (mod 4) rows: the P172 enumerator double-counted |b|=a boundary forms (inflating h) and mis-decomposed the v2≥4 2-part into non-prime discriminants (miscounting t). Six-row integrality theorem, its proof, and the P185/P188 results are unaffected (different census; the missed rows are composite-d non-integrality rows). External review credit; local defense of P172 withdrawn. See RESEARCH_PLAN P195 / p195_2elem_corrected.py.
+
 Proof strategy (concrete, no transport needed):
 
 1. Reduce E2*(k*tau0) for k = 1,2,3,6 to Weierstrass-zeta quasi-period

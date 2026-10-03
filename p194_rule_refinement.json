@@ -1,0 +1,26 @@
+{
+ "deepseek-v4-flash": {
+  "rounds": [
+   {
+    "rule": "A row is RATIONAL if and only if the discriminant of the associated elliptic curve (or the corresponding modular form level) is a perfect square, which occurs exactly when d is a prime congruent to 1 mod 4 or d = 1, 3, 5, 7, 13, 17 (i.e., d is a prime of the form 4k+1 or a small exceptional prime), while all other d (including composites and primes \u2261 3 mod 4) yield NOT.",
+    "errs": [],
+    "n_errs": 0
+   }
+  ],
+  "final_rows": 6,
+  "final_sinks": 6,
+  "calls_used": 2
+ },
+ "doubao-seed-2.1-lite": {
+  "rounds": [
+   {
+    "rule": "A row is RATIONAL if and only if its d value is an odd squarefree divisor of 175 (i.e., d \u2208 {1, 3, 5, 7, 13, 17} as listed), and NOT otherwise.",
+    "errs": [],
+    "n_errs": 0
+   }
+  ],
+  "final_rows": 6,
+  "final_sinks": 6,
+  "calls_used": 2
+ }
+}
