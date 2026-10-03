@@ -1,0 +1,35 @@
+{
+ "shadow_case": {
+  "zone": 3,
+  "status": "VERIFIED",
+  "rule": "SPECIAL iff d = 4*d' with d' in {1, 2} (i.e. d = 4 or 8); otherwise ordinary",
+  "verdict": "MECHANISM",
+  "note": "rule survives all 11 shadow-divergent rows",
+  "ts": 1791043514.141541
+ },
+ "mechanism_case": {
+  "zone": 3,
+  "status": "REFUTED",
+  "rule": "SPECIAL iff d mod 12 in {1, 5}",
+  "verdict": "SHADOW-DETECTED",
+  "note": "rule fails 3/6 shadow-divergent rows \u2014 it is window-bound, not mechanism",
+  "failing_rows": [
+   {
+    "d": 1205,
+    "expected": "SPECIAL",
+    "got": "ORDINARY"
+   },
+   {
+    "d": 1213,
+    "expected": "SPECIAL",
+    "got": "ORDINARY"
+   },
+   {
+    "d": 1241,
+    "expected": "SPECIAL",
+    "got": "ORDINARY"
+   }
+  ],
+  "ts": 1791043516.3322332
+ }
+}

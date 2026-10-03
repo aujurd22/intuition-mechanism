@@ -12,6 +12,7 @@
 不是零幻觉。
 """
 import json
+import re
 import time
 import os
 import sys
@@ -172,3 +173,51 @@ def enforce(question: str, ask_fn, kind: str = "sixrow",
     audit({"enforce": "exhausted", "rounds": max_rounds,
            "question": question[:80]})
     return final
+
+
+# ---------------- v2.2: zone-3 shadow-contrast testing (P221) ----------------
+#
+# zone 3 (shadow rules, P-LAW1) upgrade: from ABSTAIN stub to an EXECUTABLE
+# contrast test. A rule-type claim is tested against SHADOW-DIVERGENT rows
+# (rows where the claimed rule and its shadow neighborhood disagree):
+#   - rule survives all divergent rows -> MECHANISM (ships with evidence)
+#   - rule fails any divergent row     -> SHADOW-DETECTED (refuted; the
+#     failing rows are the concrete refutation, P-LAW1 zone)
+
+
+def gate_zone3(rule_text: str, ask_fn, shadow_rows: list,
+               extract=None, max_rows: int = 12) -> dict:
+    """Test a rule-claim against shadow-divergent rows.
+
+    shadow_rows: [{"d": int, "expect": "SPECIAL"|"ordinary"}, ...] — rows in
+        the shadow-divergent region (where claim and its shadow differ).
+    ask_fn(prompt) -> str : the model asked to classify each row.
+    Returns receipt: SHADOW-DETECTED (with failing rows) or MECHANISM.
+    """
+    rows = shadow_rows[:max_rows]
+    listing = "\n".join(f"  d={r['d']}" for r in rows)
+    prompt = (f"Apply this rule to each row and classify:\nRULE: {rule_text}\n\n"
+              f"Rows:\n{listing}\n\n"
+              "Answer one line per row: 'd=<d>: SPECIAL' or 'd=<d>: ordinary'.")
+    text = ask_fn(prompt)
+    extract = extract or (lambda t: re.findall(
+        r"d\s*=\s*(\d+)\s*[:\-]\s*(SPECIAL|ordinary)", t, re.I))
+    got = {int(d): lab.upper() for d, lab in extract(text)}
+    fails = []
+    for r in rows:
+        pred = got.get(r["d"], "MISSING")
+        if pred != r["expect"].upper():
+            fails.append({"d": r["d"], "expected": r["expect"], "got": pred})
+    if fails:
+        receipt = {"zone": 3, "status": "REFUTED", "rule": rule_text[:200],
+                   "verdict": "SHADOW-DETECTED",
+                   "note": (f"rule fails {len(fails)}/{len(rows)} shadow-divergent "
+                            f"rows — it is window-bound, not mechanism"),
+                   "failing_rows": fails, "ts": time.time()}
+    else:
+        receipt = {"zone": 3, "status": "VERIFIED", "rule": rule_text[:200],
+                   "verdict": "MECHANISM",
+                   "note": f"rule survives all {len(rows)} shadow-divergent rows",
+                   "ts": time.time()}
+    audit(receipt)
+    return receipt
