@@ -1,0 +1,83 @@
+[
+ {
+  "source": "P198",
+  "model": "deepseek-v4-flash",
+  "task": "4x landing (11 rows)",
+  "calls": 2,
+  "rows": 11,
+  "errs_start": 6,
+  "errs_final": 0
+ },
+ {
+  "source": "P198",
+  "model": "doubao-seed-2.1-lite",
+  "task": "4x landing (11 rows)",
+  "calls": 2,
+  "rows": 11,
+  "errs_start": 4,
+  "errs_final": 0
+ },
+ {
+  "source": "P205",
+  "model": "deepseek-v4-flash",
+  "task": "4x loop + 9x gate",
+  "calls": 3,
+  "rows": 11,
+  "errs_start": 2,
+  "errs_final": 3
+ },
+ {
+  "source": "P205",
+  "model": "doubao-seed-2.1-lite",
+  "task": "4x loop + 9x gate",
+  "calls": 3,
+  "rows": 11,
+  "errs_start": 10,
+  "errs_final": 1
+ },
+ {
+  "source": "P205",
+  "model": "kimi-k2.8-preview",
+  "task": "4x loop + 9x gate",
+  "calls": 3,
+  "rows": 11,
+  "errs_start": 5,
+  "errs_final": 0
+ },
+ {
+  "source": "P205",
+  "model": "glm-5.3-flash",
+  "task": "4x loop + 9x gate",
+  "calls": 3,
+  "rows": 11,
+  "errs_start": 8,
+  "errs_final": 2
+ },
+ {
+  "source": "P212",
+  "model": "doubao-seed-2.1-lite/d=421",
+  "task": "single claim (VERIFIED)",
+  "calls": 2,
+  "rows": 1,
+  "errs_start": 0,
+  "errs_final": 0
+ },
+ {
+  "source": "P212",
+  "model": "glm-5.3-flash/d=978",
+  "task": "single claim (ABSTAIN)",
+  "calls": 1,
+  "rows": 1,
+  "errs_start": 1,
+  "errs_final": 0
+ },
+ {
+  "source": "P212",
+  "model": "glm-5.3-flash/d=5",
+  "task": "single claim (VERIFIED)",
+  "calls": 1,
+  "rows": 1,
+  "errs_start": 0,
+  "errs_final": 0
+ }
+]
