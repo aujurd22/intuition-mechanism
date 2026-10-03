@@ -25,7 +25,8 @@ def main():
                       "Answer IMMEDIATELY with exactly one word: RATIONAL or NOT.")
             ans = llm_client.ask(prompt).strip()
             claim_word = "RATIONAL" if "RATIONAL" in ans.upper()[:30] else ("NOT" if "NOT" in ans.upper()[:30] else "?")
-            r = gate_claim(f"d={d} is RATIONAL", kind="sixrow", payload={"d": d})
+            r = gate_claim(f"d={d} model claims {claim_word}", kind="sixrow",
+                           payload={"d": d, "claimed": claim_word if claim_word in ("RATIONAL", "NOT") else None})
             ledger[r["status"]] += 1
             reached_user_raw = claim_word  # ungated: model word ships as-is
             model_wrong = claim_word != TRUTH[d]

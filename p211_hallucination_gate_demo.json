@@ -11,10 +11,10 @@
     "d": 5,
     "model_claim": "NOT",
     "model_wrong": true,
-    "gate_status": "VERIFIED",
+    "gate_status": "REFUTED",
     "truth": "RATIONAL",
     "wrong_reached_user_ungated": true,
-    "wrong_reached_user_gated": true
+    "wrong_reached_user_gated": false
    },
    {
     "d": 13,
@@ -47,7 +47,7 @@
     "d": 11,
     "model_claim": "NOT",
     "model_wrong": false,
-    "gate_status": "REFUTED",
+    "gate_status": "VERIFIED",
     "truth": "NOT",
     "wrong_reached_user_ungated": false,
     "wrong_reached_user_gated": false
@@ -63,12 +63,12 @@
    }
   ],
   "ungated_errors": 2,
-  "gated_errors": 1
+  "gated_errors": 0
  },
  "glm-5.3-flash": {
   "ledger": {
-   "VERIFIED": 3,
-   "REFUTED": 2,
+   "VERIFIED": 5,
+   "REFUTED": 0,
    "ABSTAIN": 1,
    "SPECULATION": 0
   },
@@ -113,7 +113,7 @@
     "d": 11,
     "model_claim": "NOT",
     "model_wrong": false,
-    "gate_status": "REFUTED",
+    "gate_status": "VERIFIED",
     "truth": "NOT",
     "wrong_reached_user_ungated": false,
     "wrong_reached_user_gated": false
@@ -122,7 +122,7 @@
     "d": 421,
     "model_claim": "NOT",
     "model_wrong": false,
-    "gate_status": "REFUTED",
+    "gate_status": "VERIFIED",
     "truth": "NOT",
     "wrong_reached_user_ungated": false,
     "wrong_reached_user_gated": false

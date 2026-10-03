@@ -56,6 +56,13 @@ try:
 except FileNotFoundError:
     print("[SKIP] p196 artifact (inline run) — registry table is the record")
 
+# --- P202-c/P205 protocol: GENERIC semantics present in truth file (anti-lattice-pseudo) ---
+d9 = json.load(open("p205_truth_9x.json", encoding="utf-8"))
+bad = [k for k, v in d9.items()
+       if v.get("landing") in ("FULL", None) and v.get("semantic") != "GENERIC"]
+check("P205 truth: GENERIC semantics on all FULL rows (single-pass lattice trap guarded)",
+      bad == [], True)
+
 # --- P186-c/d accuracy cells ---
 try:
     m = json.load(open("p186c_math_fixed.json", encoding="utf-8"))["models"]
