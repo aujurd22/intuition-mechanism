@@ -17,9 +17,9 @@ detailed entry point.
 
 ## TL;DR — the program in plain words
 
-**What is this?** A three-year attempt to take apart what "I feel this is
-right" means — for AI and for us — using one clean math mystery as the test
-rig. There exist six *magic numbers* (1, 3, 5, 7, 13, 17) that make a
+**What is this?** An intensive one-week research sprint (with deeper roots
+in a four-repo program) taking apart what "I feel this is right" means —
+for AI and for us — using one clean math mystery as the test rig. There exist six *magic numbers* (1, 3, 5, 7, 13, 17) that make a
 certain quantity land exactly on integers (8, 12, 20, 32, 104, 200); every
 other value misses forever. Classical number theory knew the phenomenon but
 not the reason. We let AI models guess the rule from data, then use **code
