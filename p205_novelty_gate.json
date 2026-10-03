@@ -1,0 +1,173 @@
+{
+ "deepseek-v4-flash": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "For d in the 4x-shadow family, the landing is quadratic if and only if the genus generators are exactly {2, 3} (i.e., d has no prime factor other than 2 and 3, and specifically d = 4 or 8); otherwise, if any odd prime p \u2265 5 divides d, the landing is FULL.",
+    "n_errs": 2,
+    "errs": [
+     [
+      4,
+      3,
+      "MISSING"
+     ],
+     [
+      8,
+      6,
+      "MISSING"
+     ]
+    ]
+   },
+   {
+    "round": 2,
+    "rule": "For special denominators d in the 4x-shadow family, the landing is quadratic Q(sqrt(s)) exactly when d is of the form 4p where p is prime (including p=1 for d=4) and p \u2261 1 or 3 mod 8, with s = 3p if p \u2261 1 mod 3, s = 6p if p \u2261 2 mod 3, and s = 2p if p \u2261 0 mod 3; otherwise the landing is FULL.",
+    "n_errs": 3,
+    "errs": [
+     [
+      20,
+      "FULL",
+      15
+     ],
+     [
+      52,
+      "FULL",
+      39
+     ],
+     [
+      68,
+      "FULL",
+      51
+     ]
+    ]
+   }
+  ],
+  "final_rule": "For special denominators d in the 4x-shadow family, the landing is quadratic Q(sqrt(s)) exactly when d is of the form 4p where p is prime (including p=1 for d=4) and p \u2261 1 or 3 mod 8, with s = 3p if p \u2261 1 mod 3, s = 6p if p \u2261 2 mod 3, and s = 2p if p \u2261 0 mod 3; otherwise the landing is FULL.",
+  "gate": "PASS-STRONG",
+  "transfer_claim": "SPECIFIC",
+  "gate_errs": [],
+  "gate_raw": "TRANSFER: SPECIFIC  \nWHY: The 4x-shadow rule depends on the prime factorization of d/4, but here the denominators are multiples of 9, not 4, so the structure of the genus generators and the quadratic field condition differ.  \n\nPREDICTIONS:  \nd=9: FULL  \nd=18: FULL  \nd=27: FULL  \nd=45: FULL  \nd=63: FULL  \nd=90: FULL  \nd=117: FULL  \nd=153: FULL  \nd=315: FULL  \nd=495: FULL  \nd=693: FULL"
+ },
+ "doubao-seed-2.1-lite": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "In the 4x-shadow family, P^12(tau0) lands in the quadratic field Q(sqrt(s)) with squareclass s = 3d/4 modulo squares; if this squareclass degenerates to a square/rational class, the row is FULL.",
+    "n_errs": 10,
+    "errs": [
+     [
+      4,
+      3,
+      "MISSING"
+     ],
+     [
+      8,
+      6,
+      "MISSING"
+     ],
+     [
+      20,
+      "FULL",
+      15
+     ],
+     [
+      28,
+      "FULL",
+      21
+     ],
+     [
+      40,
+      "FULL",
+      30
+     ],
+     [
+      52,
+      "FULL",
+      39
+     ],
+     [
+      68,
+      "FULL",
+      51
+     ],
+     [
+      140,
+      "FULL",
+      105
+     ],
+     [
+      220,
+      "FULL",
+      165
+     ],
+     [
+      308,
+      "FULL",
+      231
+     ]
+    ]
+   },
+   {
+    "round": 2,
+    "rule": "(none)",
+    "n_errs": 1,
+    "errs": [
+     [
+      12,
+      "FULL",
+      9
+     ]
+    ]
+   }
+  ],
+  "final_rule": "(none)",
+  "gate": "FAIL",
+  "transfer_claim": "TRANSFERS",
+  "gate_errs": [
+   [
+    9,
+    9
+   ],
+   [
+    18,
+    9
+   ],
+   [
+    27,
+    9
+   ],
+   [
+    45,
+    9
+   ],
+   [
+    63,
+    9
+   ],
+   [
+    90,
+    9
+   ],
+   [
+    117,
+    9
+   ],
+   [
+    153,
+    9
+   ],
+   [
+    315,
+    9
+   ],
+   [
+    495,
+    9
+   ],
+   [
+    693,
+    9
+   ]
+  ],
+  "gate_raw": "## Analysis\n\nThe previous family\u2019s rule was about **9x-shadow rows** and their genus generators. Since this new family is explicitly described as a **different conductor** but still consists of 9x-shadow rows, the relevant structural pattern is the same: rows with certain generator signatures either land at a specified shadow depth or are full.\n\nLooking at the listed rows:\n\n- `d=9`: genus generators `[2]`\n- `d=18`: genus generators `[2, 3]`\n- `d=27`: genus generators `[6]`\n- `d=45`: genus genera"
+ }
+}

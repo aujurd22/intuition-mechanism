@@ -1,0 +1,81 @@
+{
+ "9": {
+  "gens": [
+   2
+  ],
+  "landing": "FULL"
+ },
+ "18": {
+  "gens": [
+   2,
+   3
+  ],
+  "landing": "FULL"
+ },
+ "27": {
+  "gens": [
+   6
+  ],
+  "landing": "FULL"
+ },
+ "45": {
+  "gens": [
+   2,
+   5
+  ],
+  "landing": "FULL"
+ },
+ "63": {
+  "gens": [
+   6,
+   14
+  ],
+  "landing": "FULL"
+ },
+ "90": {
+  "gens": [
+   2,
+   3,
+   5
+  ],
+  "landing": "FULL"
+ },
+ "117": {
+  "gens": [
+   2,
+   13
+  ],
+  "landing": "FULL"
+ },
+ "153": {
+  "gens": [
+   2,
+   17
+  ],
+  "landing": "FULL"
+ },
+ "315": {
+  "gens": [
+   5,
+   6,
+   14
+  ],
+  "landing": "FULL"
+ },
+ "495": {
+  "gens": [
+   5,
+   6,
+   22
+  ],
+  "landing": "FULL"
+ },
+ "693": {
+  "gens": [
+   2,
+   21,
+   33
+  ],
+  "landing": "FULL"
+ }
+}
