@@ -199,7 +199,7 @@ try:
     a217 = json.load(open("p217_antishadow_pilot.json", encoding="utf-8"))
     dl = a217["doubao-seed-2.1-lite"]["causal_delta_divergent"]
     gl = a217["glm-5.3-flash"]["causal_delta_divergent"]
-    check("C11 anti-shadow two-sided (+weak/-strong)", dl > 0.05 and gl < -0.05,
+    check("C11 anti-shadow two-sided (n=2 seeds/arm; see P217 for per-seed spread)", dl > 0.05 and gl < -0.05,
           f"doubao {dl:+.3f}, glm {gl:+.3f}")
 except FileNotFoundError:
     check("C11 anti-shadow artifact", False, "missing")
@@ -207,7 +207,7 @@ except FileNotFoundError:
 # ---- C12: P219 prime-factor decomposition ----
 try:
     m = json.load(open("p219_mechinterp_full.json", encoding="utf-8"))["mantel"]
-    check("C219->C12 grokking decomposition: mod4 learned (+), mod3 not (-)",
+    check("C12 grokking decomposition (n=1 training run; Mantel over 66 class pairs): mod4 learned (+), mod3 not (-)",
           m["mod4"] > 0.3 and m["mod3"] < 0, f"mod4 {m['mod4']}, mod3 {m['mod3']}")
 except FileNotFoundError:
     check("C12 mechinterp artifact", False, "missing")
