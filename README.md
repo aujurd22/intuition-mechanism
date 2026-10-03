@@ -112,6 +112,52 @@ The program split into three interlocking lines as it ran:
 
 ---
 
+## Experiment map: why we ran it, what it returned, what it verified
+
+Every experiment is pre-registered with its success criterion before
+running. This section answers three questions per series: **why run it,
+what came out, what did the number verify (or refute)**.
+
+### Mathematics line
+
+| Series | Why | What we did / got | Verified / refuted |
+|---|---|---|---|
+| Six-row census (P121/P157) | Before explaining "exactly six", confirm there really are exactly six | Scanned d = 1..5000: integer rows still only {1,3,5,7,13,17}, zero counterexamples | The phenomenon is **real**; bonus: 9 near-integer shadow rows (d=978 residual 7.5e-13 = e^(pi sqrt 163) signature) |
+| Heegner-shadow hypothesis (P157) | Guess: shadows = 6xHeegner — if true, shadows echo the theorem | Only 402, 978 are 6xHeegner | Hypothesis **refuted** — but the refutation exposed the x4 dilution structure, worth more than the guess |
+| Three-layer proof chain (P134/P135) | "Is" is not "why" — label every step's proof type | field -> orbit -> unit -> rationality chain, each step tagged theorem / measurement / identity | The six-row specialness **decomposes** into field collapse (proved) + single support (measured) + 2-adic half-exponent (ruled); no layer relies on mystery |
+| Landing compression (P185/P188) | Which quadratic field — classical tables, never explained | Table layer compressed to 2 bits (s = c*d, c in {1,2,3}); action character = chi3/chi2/chi_d by (d mod 3, d mod 4), exact 5/5 | A century-old table replaced by **two grade-school remainder rules**; one theorem remains |
+| Locus correction (P172 -> P195/P196) | External review challenged the census list | Enumerator double bug found (boundary forms + 2-part decomposition): true locus 22 rows, not 11; new rows pass genus landing 11/11 | **External review right, local defense withdrawn**; corrected theory self-consistent — and the self-audit blind spot is now quantified |
+| Universal descent (P185) | The sketch's descent step was verified on only 9 rows | 18/18 primes pass (12 brand-new) | P115 sketch **vindicated**; quadratic collapse confirmed as a further, six-row-only event |
+| PSLQ protocol (P160/P185) | Once almost took an artifact for a missing structure | Two silent-artifact classes caught (default maxsteps -> None; tight maxcoeff -> false negative) | Protocol fixed: **residual check + adaptive bounds for every numeric relation** — a reusable method output |
+
+### Judgment line
+
+| Series | Why | What we did / got | Verified / refuted |
+|---|---|---|---|
+| Insight Arena, 909 judgments (P152/P153) | "Intuition is mechanizable" needs repeatable measurement, not anecdotes | 3 models x 8-12 domains x 3 seeds, every judgment archived with truth | Benchmark **has discriminative power** (noise control P164: shuffled data collapses scores to chance) — not a rubber stamp |
+| Measurement correction (P186) | math-track scores looked suspiciously low, and all three models made *identical* errors | Reproduced the perfect-model ceiling 84.4% under the chunking bug, forced errors matching observations | The 76-79% plateau was **our bug, not a model limit**; "cross-model identical errors = measurement bug" is now a meta-law |
+| Verbalization gap series (P170 -> P184) | How do you grade a judge — by asking it to explain itself? | Models executing their own stated rules: complex rules 25-50% (chance), simple 100%; replicated across 3 models, all tracks | **No** — the gap is universal (50-100pp), lives in knowledge not expression, and tracks rule complexity; design rule fixed: grade judges by probe agreement, never by self-explanation |
+| Ambiguity awareness (P171) | True insight hesitates under insufficient evidence; hallucination doesn't — is that measurable? | Late-divergence pressure test: 9/9 judges correctly refuse to commit | Boundary behavior **is measurable** — "knowing what it doesn't know" works as a judge qualification |
+| Shrinking law (P144/P146) | Which domains does our method even apply to? | Textbook-trap domains already saturated zero-shot this model generation | The effective domain set **shrinks with model progress** — the durable asset is the detector + pipeline, not a pile of packs |
+| P-LAW1 (with flymemory) | Does MDL score predict which rules pass verification? | Shadow-rule experiment: rho = -0.826 — higher score predicts choosing the WRONG rule | **Verification cannot be outsourced to compression priors** — the program's own decisive refutation of its v1 theory |
+
+### Discovery-loop experiments (L4)
+
+| Series | Why | What we did / got | Verified / refuted |
+|---|---|---|---|
+| Masked replay (P189) | Is family formation the bottleneck? | 12 bare values, axis hidden: family pick 6/6 free; intension all fitting shadow rules | **Clustering is cheap, intension is expensive** — the bottleneck is explanation, not recognition |
+| Precision knob (P193) | Are the judge's stubborn errors display-driven or rule-internal? | Display precision 6 -> 12 digits (64x information): error set bit-identical | The ambiguity **lives in the rule** — aim ammunition at rules, not at data clarity |
+| Refinement loop + integration (P194/P198) | Parts built — does the circuit run assembled? | Full propose -> exam -> feedback -> revise loop on a real open edge: 2 rounds, 4 calls, zero errors; round-1 hypothesis (s = c*d') mechanically refuted | The loop **runs**; but with negative-example-dominant data it converges to memorization — **passing all verification is not discovering** |
+| Pricing (P190) | Can discovery cost be quantified? | ~3.3 error-bits per accepted rule; d=421 the persistent sink; rule length uncorrelated with score | Discovery efficiency has **a unit price** — "how expensive is intuition" is now bookkeeping, not philosophy |
+
+**The meta-claim these experiments jointly verify**: intuition is not
+beyond discussion — it decomposes into four mechanical gates (compression,
+verification, transfer, novelty) plus a measurable boundary. Inside the
+gates, machines already work; outside, the remainder now has precise names
+and a scale.
+
+---
+
 ## 1. The mathematics line: the six-row rationality theorem
 
 **Statement (exhaustively verified for d ∈ [1,300]).**
