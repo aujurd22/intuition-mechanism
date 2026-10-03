@@ -1,0 +1,54 @@
+{
+ "doubao-seed-2.1-lite": {
+  "rounds": [
+   {
+    "round": 1,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 2,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 3,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 4,
+    "score": 1.0,
+    "err": null
+   }
+  ],
+  "best": 1.0,
+  "improvement": 0.0
+ },
+ "glm-5.3-flash": {
+  "rounds": [
+   {
+    "round": 1,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 2,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 3,
+    "score": 1.0,
+    "err": null
+   },
+   {
+    "round": 4,
+    "score": 1.0,
+    "err": null
+   }
+  ],
+  "best": 1.0,
+  "improvement": 0.0
+ }
+}
