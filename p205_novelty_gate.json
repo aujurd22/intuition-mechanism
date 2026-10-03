@@ -169,5 +169,61 @@
    ]
   ],
   "gate_raw": "## Analysis\n\nThe previous family\u2019s rule was about **9x-shadow rows** and their genus generators. Since this new family is explicitly described as a **different conductor** but still consists of 9x-shadow rows, the relevant structural pattern is the same: rows with certain generator signatures either land at a specified shadow depth or are full.\n\nLooking at the listed rows:\n\n- `d=9`: genus generators `[2]`\n- `d=18`: genus generators `[2, 3]`\n- `d=27`: genus generators `[6]`\n- `d=45`: genus genera"
+ },
+ "kimi-k2.8-preview": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "The 4x-shadow lands in a quadratic field exactly when every prime factor exceeding 3 is congruent to 1 modulo 4; for quadratic landings the quadratic field is Q(sqrt(3d/4)), while any prime factor exceeding 3 congruent to 3 modulo 4 gives FULL.",
+    "n_errs": 5,
+    "errs": [
+     [
+      12,
+      "FULL",
+      9
+     ],
+     [
+      20,
+      "FULL",
+      15
+     ],
+     [
+      40,
+      "FULL",
+      30
+     ],
+     [
+      52,
+      "FULL",
+      39
+     ],
+     [
+      68,
+      "FULL",
+      51
+     ]
+    ]
+   },
+   {
+    "round": 2,
+    "rule": "In the 4x-shadow family, only the pure 2-power denominators \\(d=4,8\\) have quadratic landing; every listed denominator divisible by an odd prime is FULL.",
+    "n_errs": 0,
+    "errs": []
+   }
+  ],
+  "final_rule": "In the 4x-shadow family, only the pure 2-power denominators \\(d=4,8\\) have quadratic landing; every listed denominator divisible by an odd prime is FULL.",
+  "gate": "FAIL",
+  "transfer_claim": "TRANSFERS",
+  "gate_errs": [
+   [
+    9,
+    2
+   ],
+   [
+    27,
+    6
+   ]
+  ],
+  "gate_raw": "TRANSFER: TRANSFERS  \nWHY: The structural rule is that pure powers of the shadow conductor land, so here the pure \\(3\\)-powers \\(d=9,27\\) land at their unique genus generators.  \nPREDICTIONS:  \nd=9: LANDING s=2  \nd=18: FULL  \nd=27: LANDING s=6  \nd=45: FULL  \nd=63: FULL  \nd=90: FULL  \nd=117: FULL  \nd=153: FULL  \nd=315: FULL  \nd=495: FULL  \nd=693: FULL"
  }
 }
