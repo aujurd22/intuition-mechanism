@@ -10,7 +10,8 @@ Scoring:
 """
 import os, sys, json, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-MODELS = ["deepseek-v4-flash", "doubao-seed-2.1-lite"]
+import os as _os
+MODELS = _os.environ.get("P205_MODELS", "deepseek-v4-flash,doubao-seed-2.1-lite").split(",")
 ALL_D = [4, 8, 12, 20, 28, 40, 52, 68, 140, 220, 308]
 TRUTH = {4: 3, 8: 6}
 GENS = json.load(open("p198_truth_newrows.json"))  # genus gens per d
@@ -19,6 +20,8 @@ D9 = sorted(T9)
 
 def parse_preds(ans):
     out = {}
+    if _os.path.exists("p205_novelty_gate.json"):
+        out = json.load(open("p205_novelty_gate.json", encoding="utf-8"))
     for line in ans.splitlines():
         m = re.search(r"d\s*=\s*(\d+)\s*[:\-]\s*(FULL|LANDING\s*s\s*=\s*(\d+))", line, re.I)
         if m:
@@ -28,6 +31,8 @@ def parse_preds(ans):
 def main():
     import importlib, llm_client
     out = {}
+    if _os.path.exists("p205_novelty_gate.json"):
+        out = json.load(open("p205_novelty_gate.json", encoding="utf-8"))
     for model in MODELS:
         os.environ["ARK_MODEL"] = model
         importlib.reload(llm_client)
@@ -87,6 +92,7 @@ def main():
                       "gate": gate, "transfer_claim": transfer_claim,
                       "gate_errs": gerrs, "gate_raw": gans[:500]}
         print(f"{model} NOVELTY GATE: {gate}  transfer_claim={transfer_claim}  errs={gerrs}")
+        json.dump(out, open("p205_novelty_gate.json", "w"), indent=1)
     json.dump(out, open("p205_novelty_gate.json", "w"), indent=1)
     print("saved p205_novelty_gate.json")
 
