@@ -1,0 +1,94 @@
+{
+ "4": {
+  "gens": [
+   2,
+   3
+  ],
+  "quadratic_landing": [
+   3
+  ]
+ },
+ "8": {
+  "gens": [
+   2,
+   3
+  ],
+  "quadratic_landing": [
+   6
+  ]
+ },
+ "12": {
+  "gens": [
+   2,
+   3
+  ],
+  "quadratic_landing": null
+ },
+ "20": {
+  "gens": [
+   2,
+   3,
+   5
+  ],
+  "quadratic_landing": null
+ },
+ "28": {
+  "gens": [
+   2,
+   3,
+   7
+  ],
+  "quadratic_landing": null
+ },
+ "40": {
+  "gens": [
+   2,
+   3,
+   5
+  ],
+  "quadratic_landing": null
+ },
+ "52": {
+  "gens": [
+   2,
+   3,
+   13
+  ],
+  "quadratic_landing": null
+ },
+ "68": {
+  "gens": [
+   2,
+   3,
+   17
+  ],
+  "quadratic_landing": null
+ },
+ "140": {
+  "gens": [
+   2,
+   3,
+   5,
+   7
+  ],
+  "quadratic_landing": null
+ },
+ "220": {
+  "gens": [
+   2,
+   3,
+   5,
+   11
+  ],
+  "quadratic_landing": null
+ },
+ "308": {
+  "gens": [
+   2,
+   3,
+   7,
+   11
+  ],
+  "quadratic_landing": null
+ }
+}

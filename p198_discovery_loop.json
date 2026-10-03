@@ -1,0 +1,144 @@
+{
+ "deepseek-v4-flash": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "For d=4d', if d' is prime then landing field is Q(\u221a(3d')), else FULL.",
+    "preds": {
+     "12": "FULL",
+     "20": "15",
+     "28": "21",
+     "40": "FULL",
+     "52": "39",
+     "68": "51",
+     "140": "FULL",
+     "220": "FULL",
+     "308": "FULL"
+    },
+    "n_errs": 6,
+    "errs": [
+     {
+      "d": 4,
+      "truth": 3,
+      "pred": "MISSING"
+     },
+     {
+      "d": 8,
+      "truth": 6,
+      "pred": "MISSING"
+     },
+     {
+      "d": 20,
+      "truth": "FULL",
+      "pred": 15
+     },
+     {
+      "d": 28,
+      "truth": "FULL",
+      "pred": 21
+     },
+     {
+      "d": 52,
+      "truth": "FULL",
+      "pred": 39
+     },
+     {
+      "d": 68,
+      "truth": "FULL",
+      "pred": 51
+     }
+    ],
+    "raw": ") \u2192 FULL  \n- d=52 \u2192 d'=13 (prime) \u2192 s=39  \n- d=68 \u2192 d'=17 (prime) \u2192 s=51  \n- d=140 \u2192 d'=35 (composite) \u2192 FULL  \n- d=220 \u2192 d'=55 (composite) \u2192 FULL  \n- d=308 \u2192 d'=77 (composite) \u2192 FULL  \n\nSo rule: If d/4 is prime, landing field is Q(\u221a(3d/4)); otherwise FULL.\n\nRULE: For d=4d', if d' is prime then landing field is Q(\u221a(3d')), else FULL.\n\nPREDICTIONS:  \nd=12: FULL  \nd=20: LANDING s=15  \nd=28: LANDING s=21  \nd=40: FULL  \nd=52: LANDING s=39  \nd=68: LANDING s=51  \nd=140: FULL  \nd=220: FULL  \nd=308: FULL"
+   },
+   {
+    "round": 2,
+    "rule": "** For d=4d', the landing field is quadratic only when d'=1 or 2, with s=3d'; otherwise it is FULL.",
+    "preds": {
+     "4": "3",
+     "8": "6",
+     "12": "FULL",
+     "20": "FULL",
+     "28": "FULL",
+     "40": "FULL",
+     "52": "FULL",
+     "68": "FULL",
+     "140": "FULL",
+     "220": "FULL",
+     "308": "FULL"
+    },
+    "n_errs": 0,
+    "errs": [],
+    "raw": "ikely FULL (since 3 is prime odd)  \n- d=40 (d/4=10) \u2192 ?  \n- d=140 (d/4=35) \u2192 ?  \n- d=220 (d/4=55) \u2192 ?  \n- d=308 (d/4=77) \u2192 ?  \n\nGiven the pattern, it seems only d/4 \u2208 {1,2} give quadratic, all others FULL.  \n\nThus rule:  \n**RULE:** For d=4d', the landing field is quadratic only when d'=1 or 2, with s=3d'; otherwise it is FULL.\n\nPREDICTIONS:  \nd=4: LANDING s=3  \nd=8: LANDING s=6  \nd=12: FULL  \nd=20: FULL  \nd=28: FULL  \nd=40: FULL  \nd=52: FULL  \nd=68: FULL  \nd=140: FULL  \nd=220: FULL  \nd=308: FULL"
+   }
+  ],
+  "calls_used": 2,
+  "solved": true
+ },
+ "doubao-seed-2.1-lite": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "For a 4x-shadow row d=4d', reduce the genus real part by the known prime-row rule applied to d' (or equivalently to d/4): if d' is one of the six special prime rows, the landing is quadratic with s=c\u00b7d' (equivalently s=c\u00b7d/4); otherwise the row spans the full genus real part.",
+    "preds": {
+     "4": "3",
+     "8": "6",
+     "12": "3",
+     "20": "FULL",
+     "28": "21",
+     "40": "FULL",
+     "52": "39",
+     "68": "51",
+     "140": "FULL",
+     "220": "FULL",
+     "308": "FULL"
+    },
+    "n_errs": 4,
+    "errs": [
+     {
+      "d": 12,
+      "truth": "FULL",
+      "pred": 3
+     },
+     {
+      "d": 28,
+      "truth": "FULL",
+      "pred": 21
+     },
+     {
+      "d": 52,
+      "truth": "FULL",
+      "pred": 39
+     },
+     {
+      "d": 68,
+      "truth": "FULL",
+      "pred": 51
+     }
+    ],
+    "raw": "RULE: For a 4x-shadow row d=4d', reduce the genus real part by the known prime-row rule applied to d' (or equivalently to d/4): if d' is one of the six special prime rows, the landing is quadratic with s=c\u00b7d' (equivalently s=c\u00b7d/4); otherwise the row spans the full genus real part.\n\nPREDICTIONS:\nd=4: LANDING s=3\nd=8: LANDING s=6\nd=12: LANDING s=3\nd=20: FULL\nd=28: LANDING s=21\nd=40: FULL\nd=52: LANDING s=39\nd=68: LANDING s=51\nd=140: FULL\nd=220: FULL\nd=308: FULL"
+   },
+   {
+    "round": 2,
+    "rule": "For \\(d=4d'\\), the only quadratic landing fields in this family are the solved base rows \\(d=4\\) with \\(s=3\\) and \\(d=8\\) with \\(s=6\\); all remaining rows with composite odd part or with \\(p\\equiv1\\pmod3\\) span the full genus real part.",
+    "preds": {
+     "4": "3",
+     "8": "6",
+     "12": "FULL",
+     "20": "FULL",
+     "28": "FULL",
+     "40": "FULL",
+     "52": "FULL",
+     "68": "FULL",
+     "140": "FULL",
+     "220": "FULL",
+     "308": "FULL"
+    },
+    "n_errs": 0,
+    "errs": [],
+    "raw": " 3\\) that were previously guessed as quadratic; the corrected truth is that they are FULL.\n\n## Predictions\n\nRULE: For \\(d=4d'\\), the only quadratic landing fields in this family are the solved base rows \\(d=4\\) with \\(s=3\\) and \\(d=8\\) with \\(s=6\\); all remaining rows with composite odd part or with \\(p\\equiv1\\pmod3\\) span the full genus real part.\n\nPREDICTIONS:\nd=4: LANDING s=3\nd=8: LANDING s=6\nd=12: FULL\nd=20: FULL\nd=28: FULL\nd=40: FULL\nd=52: FULL\nd=68: FULL\nd=140: FULL\nd=220: FULL\nd=308: FULL"
+   }
+  ],
+  "calls_used": 2,
+  "solved": true
+ }
+}
