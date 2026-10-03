@@ -8,13 +8,44 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 110+ unique P-numbers P1–P169, ~350 KB,
-every row with prediction, verdict and artifacts).  This README is the
+(pre-registered experiment registry, 198 numbered rows P1–P198, every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
 > mechanical pipeline?  Which steps are the "inspiration", and can they be
 > reproduced by a machine and their signature measured?
+
+## TL;DR — the program in plain words
+
+**What is this?** A three-year attempt to take apart what "I feel this is
+right" means — for AI and for us — using one clean math mystery as the test
+rig. There exist six *magic numbers* (1, 3, 5, 7, 13, 17) that make a
+certain quantity land exactly on integers (8, 12, 20, 32, 104, 200); every
+other value misses forever. Classical number theory knew the phenomenon but
+not the reason. We let AI models guess the rule from data, then use **code
+as the judge**: a guessed rule only counts if it passes unseen exam
+questions — one miss and it is a hallucination.
+
+**Three things we learned:**
+
+1. **The math**: *why* exactly those six numbers is now almost fully
+   explained — the class group decides which values are even eligible, and
+   two grade-school remainder rules (d mod 3 and d mod 4) pick the landing
+   field. One theorem remains.
+2. **The AI behavior**: what a model *says* its rule is and what it
+   *actually uses* are routinely different — stated rules score ~50% (pure
+   chance) when executed, operative judgments score ~90%. Models know more
+   than they can say, and their *wrong stated rules predict their exact
+   errors*.
+3. **The method**: an automated "propose → exam → feed back errors → revise"
+   loop now runs end-to-end. It self-corrects — and, measurably, it
+   *memorizes rather than discovers* when data lacks positive examples.
+   That failure mode is itself a quantified result.
+
+**Entry points**: story-only → keep reading; reproduce numbers →
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (198 numbered experiments,
+each with prediction/verdict/artifacts); use the judge toolkit → the
+plugin section below.
 
 ## What you get (the intuition-pack plugin, P140-P169)
 
@@ -192,15 +223,24 @@ survives mechanical probe verification AND transfers out-of-carrier.
 Arena v2 mega-run (P153): 3 models × 8 domains × 3 seeds = **909
 item-level judgments**, every one archived with id/truth/pred:
 
-| Domain | deepseek | doubao | kimi | n/model |
-|---|---|---|---|---|
-| math (census) | 77.1 | 79.2 | 76.0 | 96 |
-| sci-data | 81.2 | 93.8 | 79.2 | 48 |
-| code-pattern | 100 | 100 | 100 | 60 |
-| 5 elementary code domains | 94–100 | 86–100 | 93–100 | 15–18 |
+| Domain | deepseek | doubao | kimi |
+|---|---|---|---|
+| math (census, P186-corrected) | 90.6–94.8 | 82.3–91.7 | 89.6–90.7 |
+| sci-data | 81.2 | 93.8 | 79.2 |
+| code-pattern | 100 | 100 | 100 |
+| 5 elementary code domains | 94–100 | 86–100 | 93–100 |
 
-Three standing results: (1) **math is the resistant domain** — no model
-exceeds 80% at n=96 (the shrinking law has a floor); (2) code-pattern
+> **Measurement correction (P186, 2026-10-03).** The math track's earlier
+> 76–79% was a **chunking bug**: every batched call resent the full
+> 32-probe list and the parser zipped answers onto the wrong items. A
+> perfect model under that bug scores exactly 84.4% with forced errors at
+> precisely the observed positions — and the errors were bit-identical
+> across three models (model noise never replicates exactly; measurement
+> bugs do). Corrected: **87.9–89.9% cross-model, row recall 94/108**.
+
+Three standing results: (1) **the verbalization gap tracks rule
+complexity** (P184) — executed stated-rules score 25–50% on complex rules
+and 100% on simple ones, independent of domain type; (2) code-pattern
 saturated cross-model (variance elimination); (3) elementary domains
 confirmed at scale. The math track's first run also caught a textbook
 HALLUCINATION: the judge stated "RATIONAL iff class number 1" (a
@@ -277,7 +317,7 @@ ceiling), each with a registry pointer.
 | Invariant recognition | is recognition mechanical given the invariant? | **YES** — 17/17 both tiers; blind envelope removal 0.946 (P4/P15) |
 | Structure recognition | can an LLM see "same generator, new instance"? | **YES** (76.2%, p<1e-300) |
 | Novelty detection | blind judge sees "new"? | **NO** (4/20) — but trivial with the structural representation handed over (38/40): wiring problem, not scale problem |
-| Math theorem | WHY exactly {1,3,5,7,13,17}? | **CHARACTERIZED — verified exhaustively on [1,300], theorem-shaped on the 2-elementary locus, conjectural globally** — elliptic-unit chain field→orbit→unit→rationality (P134/P135); support characters per row (P132); census [1,300] zero errors (P121); open core = the class-invariant table layer + global completeness |
+| Math theorem | WHY exactly {1,3,5,7,13,17}? | **NEARLY CLOSED — census [1,5000] zero errors (P121/P157); landing field compressed to 2 bits s=c·d (P185); action-character table χ* = χ₃/χ₂/χ_d by (d mod 3, d mod 4), exact 5/5 (P188); corrected 2-elementary locus 22 rows with genus landing 22/22 (P195/P196); ONE theorem remains (P89 stabilizer = why the action character takes these values — P192 four-step algorithm ready) |
 | Interestingness | is "interesting" mechanically decidable? | **TWO-AXIS THEORY, formalized (P133)** — surprise (degree-matched, locality clause) + utility (cross-family) + landscape theorem (model×format); every cell multi-run |
 | Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
