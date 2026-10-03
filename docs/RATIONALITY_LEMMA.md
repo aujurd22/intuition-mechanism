@@ -91,6 +91,16 @@ objects only -- the transport-free proof the program wanted.
 ## The d=3 chain, fully closed numerically (P78-V4/V5, 2026-09-29 17:15)
 
   f2(tau0) = 2^(1/4)                    [eta(2t0)/eta(t0) = 2^(-1/4), elementary]
+
+  STATUS (2026-10-04, P202 archaeology closed + P211-b): both records above
+  REPRODUCE EXACTLY under the current f2 = sqrt2*eta(2tau)/eta(tau)
+  implementation (ratio = 1.0 at 50 dps for both) — the P202 "divergence"
+  flag was a cross-dynasty comparison error (these are d=3-chain values;
+  tau0 = i/sqrt2) and was withdrawn as P202-c. The d=5 chain has its own
+  values (f2(tau0_d5) = 1.1172..., f2(3tau0_d5) = 0.6905..., identity
+  P^12 = [f2(tau0) f2(3tau0)/2]^12 verified ratio = 1.0). The whole chain
+  is now machine-checked as entries C1-C12 of verify_certificate.py
+  (single command: py -3 verify_certificate.py && py -3 registry_check.py).
   f2(3 tau0)^12 = 392 - 160 sqrt6       [Weber class invariant, Z[sqrt6], norm 64]
   P = f2(tau0) f2(3 tau0)/2             [identity]
   P^12 = (392 - 160 sqrt6)/512 = 49/64 - (5/16) sqrt6
