@@ -149,6 +149,8 @@ what came out, what did the number verify (or refute)**.
 | Precision knob (P193) | Are the judge's stubborn errors display-driven or rule-internal? | Display precision 6 -> 12 digits (64x information): error set bit-identical | The ambiguity **lives in the rule** — aim ammunition at rules, not at data clarity |
 | Refinement loop + integration (P194/P198) | Parts built — does the circuit run assembled? | Full propose -> exam -> feedback -> revise loop on a real open edge: 2 rounds, 4 calls, zero errors; round-1 hypothesis (s = c*d') mechanically refuted | The loop **runs**; but with negative-example-dominant data it converges to memorization — **passing all verification is not discovering** |
 | Pricing (P190) | Can discovery cost be quantified? | ~3.3 error-bits per accepted rule; d=421 the persistent sink; rule length uncorrelated with score | Discovery efficiency has **a unit price** — "how expensive is intuition" is now bookkeeping, not philosophy |
+| Representation x architecture grid (P204) | Does discovery hide in conv nets? | 2 tasks x 3 representations x 3 architectures, 3 seeds: on a modular rule the modular axis gives 1.000 to ANY architecture; conv nets partially substitute for a missing axis (0.774); on the real census rule the modular axis UNDERPERFORMS decimal (0.700 < 0.978) |
+| **Verified/refuted**: discovery learnability = MATCH between representation equivariance, architecture bias, and the true rule's group — a wrong axis is worse than none |
 
 **The meta-claim these experiments jointly verify**: intuition is not
 beyond discussion — it decomposes into four mechanical gates (compression,
