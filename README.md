@@ -371,6 +371,21 @@ ceiling), each with a registry pointer.
 | Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
 
+### Hallucination gate (v1)
+
+**The output toll booth: every LLM claim ships in one of four states** —
+VERIFIED (machine-verified, evidence attached) / REFUTED (intercepted) /
+ABSTAIN / SPECULATION (novel claims ship labeled — in the insight-frontier
+zone, a genuinely novel claim is behaviorally indistinguishable from a
+hallucination until verified, so it ships labeled, not silenced).
+
+Live demo (2 models x 6 probes incl. the 978 near-integer trap):
+intercepts wrong claims, downgrades trap sentences to abstain, and even
+**corrected a model's false negative** (the model said NOT, the verifier
+overruled it). MCP registration in `hallucination_gate/server.py`.
+
+---
+
 ## 5. Method notes (what keeps this honest)
 
 - **Register-first**: design + verdict criteria written before running;
