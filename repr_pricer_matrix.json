@@ -1,0 +1,50 @@
+{
+ "synthetic: decimal -> modular": {
+  "total": 0.977,
+  "verdict": "POSITIVE: switch worth it",
+  "breakdown": {
+   "mlp": 0.477,
+   "kwta": 0.499
+  }
+ },
+ "synthetic: raw -> modular": {
+  "total": 1.0,
+  "verdict": "POSITIVE: switch worth it",
+  "breakdown": {
+   "mlp": 0.5,
+   "kwta": 0.5
+  }
+ },
+ "synthetic: decimal -> raw": {
+  "total": -0.023,
+  "verdict": "NEUTRAL",
+  "breakdown": {
+   "mlp": -0.023,
+   "kwta": -0.001
+  }
+ },
+ "census: decimal -> modular": {
+  "total": -0.553,
+  "verdict": "NEGATIVE: wrong-axis penalty",
+  "breakdown": {
+   "mlp": -0.278,
+   "kwta": -0.275
+  }
+ },
+ "census: raw -> modular": {
+  "total": -0.477,
+  "verdict": "NEGATIVE: wrong-axis penalty",
+  "breakdown": {
+   "mlp": -0.194,
+   "kwta": -0.283
+  }
+ },
+ "census: decimal -> raw": {
+  "total": -0.076,
+  "verdict": "NEUTRAL",
+  "breakdown": {
+   "mlp": -0.084,
+   "kwta": 0.007
+  }
+ }
+}
