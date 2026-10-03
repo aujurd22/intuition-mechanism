@@ -1,0 +1,214 @@
+\begin{thebibliography}{10}
+
+\bibitem{bars1999}
+Francesc Bars.
+\newblock Bielliptic modular curves.
+\newblock {\em J. Number Theory}, 76(1):154--165, 1999.
+
+\bibitem{birch1969}
+Brian~J. Birch.
+\newblock Weber's class invariants.
+\newblock {\em Mathematika}, 16:283--294, 1969.
+
+\bibitem{broker-lauter-sutherland2012}
+Reinier Br\"{o}ker, Kristin Lauter, and Andrew~V. Sutherland.
+\newblock Modular polynomials via isogeny volcanoes.
+\newblock {\em Math. Comp.}, 81(278):1201--1231, 2012.
+
+\bibitem{broker-stevenhagen-constructing}
+Reinier Br\"{o}ker and Peter Stevenhagen.
+\newblock Constructing elliptic curves of prime order.
+\newblock In {\em Computational arithmetic geometry}, volume 463 of {\em
+  Contemp. Math.}, pages 17--28. Amer. Math. Soc., Providence, RI, 2008.
+
+\bibitem{cremona1992}
+John Cremona.
+\newblock {\em Algorithms for modular elliptic curves}.
+\newblock Cambridge University Press, Cambridge, 1992.
+
+\bibitem{pauli-cummins2003}
+Chris~J. Cummins and Sebastian Pauli.
+\newblock Congruence subgroups of {${\rm PSL}(2,{\Bbb Z})$} of genus less than
+  or equal to 24.
+\newblock {\em Experiment. Math.}, 12(2):243--255, 2003.
+\newblock Interactive database at
+  \url{https://mathstats.uncg.edu/sites/pauli/congruence/csg1.html}.
+
+\bibitem{enge2009complexity}
+Andreas Enge.
+\newblock The complexity of class polynomial computation via floating point
+  approximations.
+\newblock {\em Math. Comp.}, 78(266):1089--1107, 2009.
+
+\bibitem{enge-morain2002}
+Andreas Enge and Fran\c{c}ois Morain.
+\newblock Comparing invariants for class fields of imaginary quadratric fields.
+\newblock In {\em Algorithmic number theory ({S}ydney, 2002)}, volume 2369 of
+  {\em Lecture Notes in Comput. Sci.}, pages 252--266. Springer, Berlin, 2002.
+
+\bibitem{enge-morain2014}
+Andreas Enge and Fran\c{c}ois Morain.
+\newblock Generalised {W}eber functions.
+\newblock {\em Acta Arith.}, 164(4):309--342, 2014.
+
+\bibitem{enge-schertz2004}
+Andreas Enge and Reinhard Schertz.
+\newblock Constructing elliptic curves over finite fields using double
+  eta-quotients.
+\newblock {\em Journal de Théorie des Nombres de Bordeaux}, 16:555–568,
+  2004.
+
+\bibitem{enge-schertz2005}
+Andreas Enge and Reinhard Schertz.
+\newblock Modular curves of composite level.
+\newblock {\em Acta Arith.}, 118(2):129--141, 2005.
+
+\bibitem{enge-schertz2013}
+Andreas Enge and Reinhard Schertz.
+\newblock Singular values of multiple eta-quotients for ramified primes.
+\newblock {\em LMS Journal of Computation and Mathematics}, 16:407–418, 2013.
+
+\bibitem{enge-streng}
+Andreas Enge and Marco Streng.
+\newblock Schertz style class invariants for genus two, 2016.
+\newblock preprint, \href{https://arxiv.org/abs/1610.04505}{arXiv:1610.04505}.
+
+\bibitem{enge-sutherland2010}
+Andreas Enge and Andrew~V. Sutherland.
+\newblock Class invariants by the {CRT} method.
+\newblock In {\em Algorithmic number theory}, volume 6197 of {\em Lecture Notes
+  in Comput. Sci.}, pages 142--156. Springer, Berlin, 2010.
+
+\bibitem{furumoto-hasegawa1999}
+Masahiro Furumoto and Yuji Hasegawa.
+\newblock Hyperelliptic quotients of modular curves {$X_0(N)$}.
+\newblock {\em Tokyo J. Math.}, 22(1):105--125, 1999.
+
+\bibitem{galbraiththesis1996}
+Steven Galbraith.
+\newblock {\em Equations for modular curves}.
+\newblock PhD thesis, St.~Cross College.
+\newblock \url{https://www.math.auckland.ac.nz/~sgal018/thesis.pdf}.
+
+\bibitem{gee1999}
+Alice Gee.
+\newblock Class invariants by {S}himura's reciprocity law.
+\newblock volume~11, pages 45--72. 1999.
+\newblock Les XX\`emes Journ\'{e}es Arithm\'{e}tiques (Limoges, 1997).
+
+\bibitem{gee-stevenhagen1998}
+Alice Gee and Peter Stevenhagen.
+\newblock Generating class fields using {S}himura reciprocity.
+\newblock In {\em Algorithmic number theory ({P}ortland, {OR}, 1998)}, volume
+  1423 of {\em Lecture Notes in Comput. Sci.}, pages 441--453. Springer,
+  Berlin, 1998.
+
+\bibitem{hindry-silverman}
+Marc Hindry and Joseph~H. Silverman.
+\newblock {\em Diophantine geometry}, volume 201 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 2000.
+\newblock An introduction.
+
+\bibitem{jeon2018}
+Daeyeol Jeon.
+\newblock Bielliptic modular curves {$X_0^+(N)$}.
+\newblock {\em J. Number Theory}, 185:319--338, 2018.
+
+\bibitem{Kim}
+Henry~H. Kim.
+\newblock Functoriality for the exterior square of {${\rm GL}_4$} and the
+  symmetric fourth of {${\rm GL}_2$}.
+\newblock {\em J. Amer. Math. Soc.}, 16(1):139--183, 2003.
+\newblock With appendix 1 by Dinakar Ramakrishnan and appendix 2 by Kim and
+  Peter Sarnak.
+
+\bibitem{littlewood1928}
+John~E. Littlewood.
+\newblock On the class-number of the corpus $p(\sqrt{-k})$.
+\newblock {\em Proc. Lond. Math. Soc.}, 27:358--372, 1928.
+
+\bibitem{lmfdb}
+The {LMFDB Collaboration}.
+\newblock The {L}-functions and modular forms database.
+\newblock \url{http://www.lmfdb.org}, 2022.
+\newblock [Online; accessed March and August 2022].
+
+\bibitem{mahler1960}
+Kurt Mahler.
+\newblock An application of {J}ensen's formula to polynomials.
+\newblock {\em Mathematika}, 7:98--100, 1960.
+
+\bibitem{martindale2020}
+Chloe Martindale.
+\newblock Hilbert modular polynomials.
+\newblock {\em J. Number Theory}, 213:464--498, 2020.
+
+\bibitem{milio-robert2020}
+Enea Milio and Damien Robert.
+\newblock Modular polynomials on {H}ilbert surfaces.
+\newblock {\em J. Number Theory}, 216:403--459, 2020.
+
+\bibitem{newman1}
+Morris Newman.
+\newblock Construction and application of a class of modular functions.
+\newblock {\em Proc. London Math. Soc. (3)}, 7:334--350, 1957.
+
+\bibitem{ogg1974}
+Andrew~P. Ogg.
+\newblock Hyperelliptic modular curves.
+\newblock {\em Bull. Soc. Math. France}, 102:449--462, 1974.
+
+\bibitem{rs2010choosing}
+Karl Rubin and Alice Silverberg.
+\newblock Choosing the correct elliptic curve in the {CM} method.
+\newblock {\em Math. Comp.}, 79(269):545--561, 2010.
+
+\bibitem{schertz1976}
+Reinhard Schertz.
+\newblock Die singul\"aren {W}erte der {W}eberschen {F}unktionen
+  {$\mathfrak{f}$, $\mathfrak{f}_1$, $\mathfrak{f}_{2}$, $\gamma_{2}$,
+  $\gamma_{3}$}.
+\newblock {\em J. Reine Angew. Math.}, 286/287:46--74, 1976.
+
+\bibitem{schertz2002weber}
+Reinhard Schertz.
+\newblock Weber's class invariants revisited.
+\newblock {\em J. Th\'{e}or. Nombres Bordeaux}, 14(1):325--343, 2002.
+
+\bibitem{Selberg}
+Atle Selberg.
+\newblock On the estimation of {F}ourier coefficients of modular forms.
+\newblock In {\em Proc. {S}ympos. {P}ure {M}ath., {V}ol. {VIII}}, pages 1--15.
+  Amer. Math. Soc., Providence, R.I., 1965.
+
+\bibitem{shimura1971}
+Goro Shimura.
+\newblock {\em Introduction to the arithmetic theory of automorphic functions}.
+\newblock Kan\^{o} Memorial Lectures, No. 1. Iwanami Shoten Publishers, Tokyo;
+  Princeton University Press, Princeton, N.J., 1971.
+\newblock Publications of the Mathematical Society of Japan, No. 11.
+
+\bibitem{sutherland2011crt}
+Andrew~V. Sutherland.
+\newblock Computing {H}ilbert class polynomials with the {C}hinese remainder
+  theorem.
+\newblock {\em Math. Comp.}, 80(273):501--538, 2011.
+
+\bibitem{sutherland2012crt}
+Andrew~V. Sutherland.
+\newblock Accelerating the {CM} method.
+\newblock {\em LMS J. Comput. Math.}, 15:172--204, 2012.
+
+\bibitem{sage}
+{The Sage Developers}.
+\newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
+  ({V}ersion 9.5)}, 2022.
+\newblock {\tt https://www.sagemath.org}.
+
+\bibitem{weber3}
+Heinrich Weber.
+\newblock {\em Algebraische Zahlen}, volume~3 of {\em Lehrbuch der Algebra}.
+\newblock Friedrich Vieweg, 1908.
+
+\end{thebibliography}
