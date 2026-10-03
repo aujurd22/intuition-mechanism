@@ -1,0 +1,40 @@
+{
+ "doubao-seed-2.1-lite": {
+  "A_baseline": {
+   "acc": 0.7,
+   "divergent_acc": 0.6625,
+   "seeds": [
+    0.583,
+    0.817
+   ]
+  },
+  "B_antishadow": {
+   "acc": 0.875,
+   "divergent_acc": 0.85,
+   "seeds": [
+    0.883,
+    0.867
+   ]
+  },
+  "causal_delta_divergent": 0.188
+ },
+ "glm-5.3-flash": {
+  "A_baseline": {
+   "acc": 0.9666666666666667,
+   "divergent_acc": 0.9625,
+   "seeds": [
+    0.933,
+    1.0
+   ]
+  },
+  "B_antishadow": {
+   "acc": 0.8916666666666666,
+   "divergent_acc": 0.8375,
+   "seeds": [
+    0.783,
+    1.0
+   ]
+  },
+  "causal_delta_divergent": -0.125
+ }
+}
