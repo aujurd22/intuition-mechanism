@@ -57,3 +57,24 @@ HEAD at wrap: 3af42ef (+ part4 correction d0c16e3). All pushed.
   retracted 76-79% is replaced by ~82-95% central with rows recalled.
 - Provenance audit: 259/261 artifacts present (p70/p70-b JSONs missing are
   pre-existing gaps from 09-29, numbers live in registry text).
+
+
+## Continuation block (07:36-08:40, HEAD 3cc036c)
+
+- P185-c: regulator fit for the coefficient meter REJECTED (r=0.548;
+  counterexamples d=83 largest-sumRi intermediate vs d=19 smallest generic).
+- P187 / P187-b: stabilizer transport pilot. N-system construction succeeds
+  (all 4 classes of Cl(-120) got gcd(A,6)=1, B=0 mod 12 representatives);
+  naive evaluation fails (twisted); web retrieval located the clean statement
+  (Houben-Stevenhagen Prop 4.1: orbit = {psi(tau_i)}, base needs N|c) and
+  exposed the ray-vs-ring class field subtlety — the gap is narrowed to ONE
+  line of Schertz Thm 7 (the KtN->Q_t quotient construction). Clean
+  born-digital sources committed: gee_stevenhagen1999.pdf, gee_thesis.pdf;
+  further: Enge-Schertz 2009, Yui-Zagier 1997.
+- P186-d: second formal rerun WITH rule texts stored. Verbatim rule-to-error
+  correspondence: kimi seed2's wrong rule "RATIONAL iff d+1 is prime"
+  reproduces exactly its row errors {3,7,17,5,13} (d+1 composite); kimi
+  seed0's correct surface rule "1/x0 integer" behaves accordingly. Two
+  independent 9/9 runs now bracket the corrected math track: grand mean
+  89.9%, rows 94/108. Stated-rule correctness is INDEPENDENT of operative
+  accuracy (deepseek confabulates yet wins) — the verbalization gap again.
