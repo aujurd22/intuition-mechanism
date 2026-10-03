@@ -1,0 +1,72 @@
+{
+ "doubao-seed-2.1-lite/d=421": {
+  "note": "chronic false positive",
+  "answer": "NOT",
+  "ship_status": "VERIFIED",
+  "evidence": {
+   "verdict": "NOT",
+   "confidence": 0.99,
+   "in_band": false,
+   "value": 268394120880.20264
+  },
+  "rounds_used": 2,
+  "trace": [
+   {
+    "round": 1,
+    "model_text": "RATIONAL",
+    "claim": "RATIONAL",
+    "gate_status": "REFUTED",
+    "note": "model claimed RATIONAL, machine verdict NOT (1/x6 = 268394120880.20264) \u2014 intercepted"
+   },
+   {
+    "round": 2,
+    "model_text": "NOT",
+    "claim": "NOT",
+    "gate_status": "VERIFIED",
+    "note": "machine verdict NOT, claim consistent"
+   }
+  ]
+ },
+ "glm-5.3-flash/d=978": {
+  "note": "near-integer trap",
+  "answer": "(abstain: machine confidence 0.5 on this row \u2014 no reliable answer shipped. machine evidence: {\"verdict\": \"NEAR_INTEGER\", \"confidence\": 0.5, \"in_band\": false, \"value\": 2.6253741264076874e+17})",
+  "ship_status": "ABSTAIN",
+  "evidence": {
+   "verdict": "NEAR_INTEGER",
+   "confidence": 0.5,
+   "in_band": false,
+   "value": 2.6253741264076874e+17
+  },
+  "rounds_used": 1,
+  "trace": [
+   {
+    "round": 1,
+    "model_text": "RATIONAL",
+    "claim": "RATIONAL",
+    "gate_status": "ABSTAIN",
+    "note": "near-integer trap (Ramanujan shadow): machine confidence 0.5 \u2014 claim downgraded, do not ship as fact"
+   }
+  ]
+ },
+ "glm-5.3-flash/d=5": {
+  "note": "plain row",
+  "answer": "RATIONAL",
+  "ship_status": "VERIFIED",
+  "evidence": {
+   "verdict": "RATIONAL",
+   "confidence": 0.999999,
+   "in_band": true,
+   "value": 20.0
+  },
+  "rounds_used": 1,
+  "trace": [
+   {
+    "round": 1,
+    "model_text": "RATIONAL",
+    "claim": "RATIONAL",
+    "gate_status": "VERIFIED",
+    "note": "machine verdict RATIONAL, claim consistent"
+   }
+  ]
+ }
+}

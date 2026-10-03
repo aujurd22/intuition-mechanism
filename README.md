@@ -379,6 +379,15 @@ ABSTAIN / SPECULATION (novel claims ship labeled — in the insight-frontier
 zone, a genuinely novel claim is behaviorally indistinguishable from a
 hallucination until verified, so it ships labeled, not silenced).
 
+**Architecture & data flow (v2.1)**: the gate is a **harness component**
+sitting between model and user, not a post-hoc filter. Data flow: model
+claim -> toll booth -> on REFUTED the refutation evidence is fed BACK to the
+model for regeneration (max 3 rounds) -> only VERIFIED answers (with
+evidence) or honest abstains (with machine evidence, never the model text)
+reach the user. Live case: the model's chronic d=421 false positive was
+refuted in round 1, corrected after seeing the refutation in round 2, and
+shipped as the correct answer.
+
 Live demo (2 models x 6 probes incl. the 978 near-integer trap):
 intercepts wrong claims, downgrades trap sentences to abstain, and even
 **corrected a model's false negative** (the model said NOT, the verifier
