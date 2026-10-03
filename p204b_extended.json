@@ -1,0 +1,6 @@
+{
+ "syn/decimal/transformer": 0.880199670791626,
+ "syn/decimal/cnn_wd": 0.7770382563273112,
+ "syn/modular/mlp_5seeds": 1.0,
+ "cen/decimal/transformer": 0.9944628874460856
+}
