@@ -1,0 +1,134 @@
+{
+ "doubao-seed-2.1-lite": {
+  "ledger": {
+   "VERIFIED": 3,
+   "REFUTED": 2,
+   "ABSTAIN": 1,
+   "SPECULATION": 0
+  },
+  "rows": [
+   {
+    "d": 5,
+    "model_claim": "NOT",
+    "model_wrong": true,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": true,
+    "wrong_reached_user_gated": true
+   },
+   {
+    "d": 13,
+    "model_claim": "RATIONAL",
+    "model_wrong": false,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 17,
+    "model_claim": "RATIONAL",
+    "model_wrong": false,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 978,
+    "model_claim": "NOT",
+    "model_wrong": false,
+    "gate_status": "ABSTAIN",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 11,
+    "model_claim": "NOT",
+    "model_wrong": false,
+    "gate_status": "REFUTED",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 421,
+    "model_claim": "RATIONAL",
+    "model_wrong": true,
+    "gate_status": "REFUTED",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": true,
+    "wrong_reached_user_gated": false
+   }
+  ],
+  "ungated_errors": 2,
+  "gated_errors": 1
+ },
+ "glm-5.3-flash": {
+  "ledger": {
+   "VERIFIED": 3,
+   "REFUTED": 2,
+   "ABSTAIN": 1,
+   "SPECULATION": 0
+  },
+  "rows": [
+   {
+    "d": 5,
+    "model_claim": "RATIONAL",
+    "model_wrong": false,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 13,
+    "model_claim": "RATIONAL",
+    "model_wrong": false,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 17,
+    "model_claim": "RATIONAL",
+    "model_wrong": false,
+    "gate_status": "VERIFIED",
+    "truth": "RATIONAL",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 978,
+    "model_claim": "RATIONAL",
+    "model_wrong": true,
+    "gate_status": "ABSTAIN",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": true,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 11,
+    "model_claim": "NOT",
+    "model_wrong": false,
+    "gate_status": "REFUTED",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   },
+   {
+    "d": 421,
+    "model_claim": "NOT",
+    "model_wrong": false,
+    "gate_status": "REFUTED",
+    "truth": "NOT",
+    "wrong_reached_user_ungated": false,
+    "wrong_reached_user_gated": false
+   }
+  ],
+  "ungated_errors": 1,
+  "gated_errors": 0
+ }
+}
