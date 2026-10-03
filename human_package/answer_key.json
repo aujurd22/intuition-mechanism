@@ -1,0 +1,19 @@
+{
+  "exam1_landing": {
+    "shown_rows": {"4": "CLEAN(s=3)", "8": "CLEAN(s=6)", "12": "ordinary", "20": "ordinary", "28": "ordinary", "40": "ordinary", "140": "ordinary", "220": "ordinary"},
+    "novelty_gate_rows": {"52": "ordinary", "68": "ordinary", "308": "ordinary", "9": "ordinary", "18": "ordinary", "27": "ordinary", "45": "ordinary", "63": "ordinary"},
+    "note": "9x rows (9,18,27,45,63) are the novelty gate: all ordinary. A subject extrapolating 'CLEAN iff d=4*prime' will wrongly mark none of 52/68/308 but the real test is whether they ask about the 9x family's different conductor."
+  },
+  "exam2_masked": {
+    "values": ["0.005000/0.180672 (d=17,SPECIAL)", "0.009615/0.200000 (d=13,SPECIAL)", "0.031250/0.238095 (d=7,SPECIAL)", "0.050000/0.250000 (d=5,SPECIAL)", "0.083333/0.250000 (d=3,SPECIAL)", "0.125000/-9.680667 (d=1,SPECIAL)", "0.016708/? (near-integer shadow d=13-adjacent, NOT)", "0.000000/0.024768 (deep non-row d=991, ordinary)"],
+    "scoring": "2a correct pick = first six; 2c mechanism-oriented if asking about parameter axis"
+  },
+  "exam3_verbalization": {
+    "scoring": "deviation rate = fraction of the subject's own test predictions contradicting their stated rule (compute from exam1 answers vs 1a text)"
+  },
+  "llm_reference": {
+    "novelty_gate": "deepseek PASS-STRONG, glm PASS-WEAK, kimi FAIL(2/11), doubao FAIL(11/11)",
+    "masking": "both LLM models collapsed at 0.25 without the d axis",
+    "verbalization_gap": "LLM complex rules 50-100pp deviation; simple rules 0pp"
+  }
+}
