@@ -1,67 +1,70 @@
 {
- "deepseek-v4-flash": {
-  "seed_accs": [
-   96.9,
-   75.0,
-   100.0
-  ],
-  "mean": 90.6,
-  "row_recall": "16/18",
-  "err_counts": {
-   "3": 1,
-   "7": 1,
-   "421": 2,
-   "505": 1,
-   "653": 1,
-   "809": 1,
-   "821": 1,
-   "991": 1
+ "models": {
+  "deepseek-v4-flash": {
+   "seed_accs": [
+    100.0,
+    96.9,
+    87.5
+   ],
+   "mean": 94.8,
+   "row_recall": "18/18",
+   "err_counts": {
+    "147": 1,
+    "421": 1,
+    "653": 1,
+    "809": 1,
+    "821": 1
+   }
+  },
+  "doubao-seed-2.1-lite": {
+   "seed_accs": [
+    75.0,
+    100.0,
+    100.0
+   ],
+   "mean": 91.7,
+   "row_recall": "16/18",
+   "err_counts": {
+    "3": 1,
+    "7": 1,
+    "421": 1,
+    "505": 1,
+    "653": 1,
+    "809": 1,
+    "821": 1,
+    "935": 1
+   }
+  },
+  "kimi-k2.8-preview": {
+   "seed_accs": [
+    90.6,
+    100.0,
+    78.1
+   ],
+   "mean": 89.6,
+   "row_recall": "12/18",
+   "err_counts": {
+    "3": 1,
+    "5": 1,
+    "7": 1,
+    "13": 2,
+    "17": 1,
+    "94": 1,
+    "122": 1,
+    "348": 1,
+    "420": 1
+   }
   }
  },
- "doubao-seed-2.1-lite": {
-  "seed_accs": [
-   59.4,
-   87.5,
-   100.0
-  ],
-  "mean": 82.3,
-  "row_recall": "14/18",
-  "err_counts": {
-   "1": 1,
-   "3": 1,
-   "7": 1,
-   "13": 1,
-   "320": 1,
-   "421": 1,
-   "505": 2,
-   "628": 1,
-   "653": 1,
-   "655": 1,
-   "809": 1,
-   "821": 1,
-   "884": 1,
-   "935": 1,
-   "974": 1,
-   "991": 1
-  }
- },
- "kimi-k2.8-preview": {
-  "seed_accs": [
-   93.8,
-   84.4,
-   93.8
-  ],
-  "mean": 90.7,
-  "row_recall": "18/18",
-  "err_counts": {
-   "94": 1,
-   "122": 1,
-   "147": 2,
-   "421": 1,
-   "653": 1,
-   "809": 1,
-   "821": 1,
-   "935": 1
-  }
+ "rules": {
+  "deepseek-v4-flash/seed0": "A row is RATIONAL if and only if the discriminant of the associated elliptic curve (or the corresponding modular equation) is a perfect square, which occurs exactly when the value of \\(1/(6x_0)\\) is an integer.",
+  "deepseek-v4-flash/seed1": "A row is RATIONAL if and only if the discriminant of the associated elliptic curve (or the corresponding modular equation) is a perfect square, which occurs exactly when the squarefree part of d is 1, 3, 5, 7, 13, or 17 (i.e., d is of the form n^2, 3n^2, 5n^2, 7n^2, 13n^2, or 17n^2 for integer n), while all other d yield irrational lambda.",
+  "deepseek-v4-flash/seed2": "A row is RATIONAL if and only if the discriminant of the associated elliptic curve (or the corresponding modular equation) is a perfect square, which occurs exactly when d is a squarefree integer congruent to 1, 3, 5, or 7 modulo 8 (i.e., d \u2261 1, 3, 5, 7 mod 8) and d is not divisible by any prime \u2261 3 mod 4 to an odd power, and in the given list this corresponds to d being a prime or product of distinct primes all \u2261 1 mod 4 (or d=1,3,5,7,13,17), while the NOT cases have d with at least one prime factor \u2261 3 mod 4 to an odd exponent or d \u2261 2 mod 4, etc.",
+  "doubao-seed-2.1-lite/seed0": "A row is RATIONAL if and only if d is a squarefree odd integer whose prime factors are all congruent to 1 modulo 4 (i.e., d \u2208 {1, 5, 13, 17, 29, 37, ...}), and NOT otherwise.",
+  "doubao-seed-2.1-lite/seed1": "A parameter pair is RATIONAL if and only if its associated denominator value d is an odd divisor of 24 (i.e., d \u2208 {1, 3, 5, 7, 13, 17}), and NOT otherwise.",
+  "doubao-seed-2.1-lite/seed2": "A parameter pair is RATIONAL if and only if its associated denominator value d is an odd prime divisor of 24 (i.e., d \u2208 {1, 3, 5, 7, 13, 17}), and NOT otherwise.",
+  "kimi-k2.8-preview/seed0": "A row is RATIONAL exactly when \\(1/x_0\\) is an integer, and NOT otherwise.",
+  "kimi-k2.8-preview/seed1": "The row is RATIONAL exactly when \\(d=1\\) or \\(d\\) is an odd prime less than 18; all other \\(d\\) give NOT.",
+  "kimi-k2.8-preview/seed2": "A row is RATIONAL exactly when \\(d+1\\) is a prime number, and NOT otherwise."
  }
 }
