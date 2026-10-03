@@ -1,0 +1,14 @@
+{
+ "deepseek-v4-flash": {
+  "masked_acc": 0.25,
+  "need_d": 0,
+  "verdict": "COLLAPSES-WITHOUT-D",
+  "raw": "row1: CLEAN  \nrow2: CLEAN  \nrow3: ordinary  \nrow4: ordinary  \nrow5: ordinary  \nrow6: ordinary  \nrow7: ordinary  \nrow8: ordinary  \n\n(Note: I matched the given (x0, lambda) pairs directly to the original list, so no d\u2011value was needed for these exact rows. If the d values were masked but the pairs were permuted, I would need the d to decide.)"
+ },
+ "doubao-seed-2.1-lite": {
+  "masked_acc": 0.25,
+  "need_d": 0,
+  "verdict": "COLLAPSES-WITHOUT-D",
+  "raw": "row1: CLEAN\nrow2: CLEAN\nrow3: ordinary\nrow4: ordinary\nrow5: ordinary\nrow6: ordinary\nrow7: ordinary\nrow8: ordinary"
+ }
+}
