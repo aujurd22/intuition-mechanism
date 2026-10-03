@@ -225,5 +225,78 @@
    ]
   ],
   "gate_raw": "TRANSFER: TRANSFERS  \nWHY: The structural rule is that pure powers of the shadow conductor land, so here the pure \\(3\\)-powers \\(d=9,27\\) land at their unique genus generators.  \nPREDICTIONS:  \nd=9: LANDING s=2  \nd=18: FULL  \nd=27: LANDING s=6  \nd=45: FULL  \nd=63: FULL  \nd=90: FULL  \nd=117: FULL  \nd=153: FULL  \nd=315: FULL  \nd=495: FULL  \nd=693: FULL"
+ },
+ "glm-5.3-flash": {
+  "rounds": [
+   {
+    "round": 1,
+    "rule": "The 4x-shadow lands in Q(sqrt(3d/4)) whenever 3d/4 is not a perfect square; if 3d/4 is a perfect square the shadow degenerates and the row is FULL.",
+    "n_errs": 8,
+    "errs": [
+     [
+      20,
+      "FULL",
+      15
+     ],
+     [
+      28,
+      "FULL",
+      21
+     ],
+     [
+      40,
+      "FULL",
+      30
+     ],
+     [
+      52,
+      "FULL",
+      39
+     ],
+     [
+      68,
+      "FULL",
+      51
+     ],
+     [
+      140,
+      "FULL",
+      105
+     ],
+     [
+      220,
+      "FULL",
+      165
+     ],
+     [
+      308,
+      "FULL",
+      231
+     ]
+    ]
+   },
+   {
+    "round": 2,
+    "rule": "The 4x-shadow lands in a quadratic field Q(sqrt(3d/4)) only when d has no odd prime factor (d = 4\u00b72^k, k \u2264 1, i.e. d = 4 or 8); any odd prime divisor of d forces FULL.",
+    "n_errs": 2,
+    "errs": [
+     [
+      4,
+      3,
+      "MISSING"
+     ],
+     [
+      8,
+      6,
+      "MISSING"
+     ]
+    ]
+   }
+  ],
+  "final_rule": "The 4x-shadow lands in a quadratic field Q(sqrt(3d/4)) only when d has no odd prime factor (d = 4\u00b72^k, k \u2264 1, i.e. d = 4 or 8); any odd prime divisor of d forces FULL.",
+  "gate": "PASS-WEAK",
+  "transfer_claim": "TRANSFERS",
+  "gate_errs": [],
+  "gate_raw": "TRANSFER: TRANSFERS\nWHY: Every d in this family (9, 18, 27, 45, 63, 90, 117, 153, 315, 495, 693) has an odd prime divisor, so the rule \u2014 which forbids landing whenever any odd prime divides d \u2014 forces FULL in every row regardless of conductor.\n\nPREDICTIONS:\nd=9: FULL\nd=18: FULL\nd=27: FULL\nd=45: FULL\nd=63: FULL\nd=90: FULL\nd=117: FULL\nd=153: FULL\nd=315: FULL\nd=495: FULL\nd=693: FULL"
  }
 }
