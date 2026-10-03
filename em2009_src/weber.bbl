@@ -1,0 +1,164 @@
+\begin{thebibliography}{10}
+
+\bibitem{AtMo93}
+A.~O.~L. Atkin and F.~Morain.
+\newblock Elliptic curves and primality proving.
+\newblock {\em Mathematics of Computation}, 61(203):29--68, 1993.
+
+\bibitem{Birch69}
+B.~J. Birch.
+\newblock Weber's class invariants.
+\newblock {\em Mathematika}, 16:283--294, 1969.
+
+\bibitem{Buell89}
+D.~A. Buell.
+\newblock {\em Binary quadratic forms (Classical theory and modern
+  computations)}.
+\newblock Springer-Verlag, 1989.
+
+\bibitem{Cohn78}
+H.~Cohn.
+\newblock {\em A classical invitation to algebraic numbers and class fields}.
+\newblock Universitext. Springer-Verlag, 1978.
+
+\bibitem{Dedekind76}
+R.~Dedekind.
+\newblock Erl\"auterungen zu den vorstehenden {F}ragmenten.
+\newblock In R.~Dedekind and H.~Weber, editors, {\em Bernhard Riemann's
+  gesammelte mathematische Werke und wissenschaftlicher Nachla{\ss}}, pages
+  438--447. Teubner, Leipzig, 1876.
+
+\bibitem{Deuring58}
+M.~Deuring.
+\newblock Die {K}lassenk{\"o}rper der komplexen {M}ultiplikation.
+\newblock In {\em Enzyklop{\"a}die der mathematischen Wissenschaften mit
+  Einschlu{\ss} ihrer Anwendungen}, volume I 2, Heft 10, Teil II. Teubner,
+  Stuttgart, 1958.
+
+\bibitem{EnMo02}
+A.~Enge and F.~Morain.
+\newblock Comparing invariants for class fields of imaginary quadratic fields.
+\newblock In C.~Fieker and D.~R. Kohel, editors, {\em Algorithmic Number
+  Theory}, volume 2369 of {\em Lecture Notes in Comput. Sci.}, pages 252--266.
+  Springer-Verlag, 2002.
+\newblock 5th International Symposium, ANTS-V, Sydney, Australia, July 2002,
+  Proceedings.
+
+\bibitem{EnSc04}
+A.~Enge and R.~Schertz.
+\newblock Constructing elliptic curves over finite fields using double
+  eta-quotients.
+\newblock {\em Journal de Th\'eorie des Nombres de Bordeaux}, 16:555--568,
+  2004.
+
+\bibitem{EnSc05}
+A.~Enge and R.~Schertz.
+\newblock Modular curves of composite level.
+\newblock {\em Acta Arith.}, 181(2):129--141, 2005.
+
+\bibitem{Enge07}
+Andreas Enge.
+\newblock {\em Courbes alg\'ebriques et cryptologie}.
+\newblock Habilitation \`a diriger des re\-cher\-ches, Universit\'e Denis
+  Diderot, Paris 7, 2007.
+
+\bibitem{Enge09}
+Andreas Enge.
+\newblock The complexity of class polynomial computation via floating point
+  approximations.
+\newblock {\em Mathematics of Computation}, 78(266):1089--1107, 2009.
+
+\bibitem{EnSc12}
+Andreas Enge and Reinhard Schertz.
+\newblock Singular values of multiple eta-quotients for ramified primes.
+\newblock Technical Report 768375, HAL-INRIA, 2012.
+\newblock To appear in LMS Journal of Computation and Mathematics.
+
+\bibitem{FrScTe10}
+David Freemann, Michael Scott, and Edlyn Teske.
+\newblock A taxonomy of pairing-friendly elliptic curves.
+\newblock {\em Journal of Cryptology}, 23(2):224--280, 2010.
+
+\bibitem{Gee99}
+A.~Gee.
+\newblock Class invariants by {S}himura's reciprocity law.
+\newblock {\em J.~Th\'eor. Nombres Bordeaux}, 11:45--72, 1999.
+
+\bibitem{GeSt98}
+A.~Gee and P.~Stevenhagen.
+\newblock Generating class fields using {S}himura reciprocity.
+\newblock In J.~P. Buhler, editor, {\em Algorithmic Number Theory}, volume 1423
+  of {\em Lecture Notes in Comput. Sci.}, pages 441--453. Springer-Verlag,
+  1998.
+\newblock Third International Symposium, ANTS-III, Portland, Oregon, June 1998,
+  Proceedings.
+
+\bibitem{Gee01}
+Alice Chia~Ping Gee.
+\newblock {\em Class fields by {S}himura reciprocity}.
+\newblock Proefschrift, Universiteit Leiden, 2001.
+
+\bibitem{Hajir93b}
+F.~Hajir.
+\newblock Elliptic units of cyclic unramified extensions of complex quadratic
+  fields.
+\newblock {\em Acta Arith.}, {LXIV}:69--85, 1993.
+
+\bibitem{Hajir93}
+F.~Hajir.
+\newblock {\em Unramified elliptic units}.
+\newblock Phd in mathematics, Princeton University, June 1993.
+
+\bibitem{HaVi97}
+F.~Hajir and F.~R. Villegas.
+\newblock Explicit elliptic units, {I}.
+\newblock {\em Duke Math. J.}, 90(3):495--521, 1997.
+
+\bibitem{Meyer70}
+C.~Meyer.
+\newblock {B}e\-mer\-kun\-gen zum {S}atz von {H}eegner--{S}tark \"uber die
+  ima\-gin\"ar-qua\-dra\-ti\-schen {Z}ahl\-k\"orper mit der {K}lassen\-zahl
+  {E}ins.
+\newblock {\em Journal f\"ur die reine und angewandte Mathematik},
+  242:179--214, 1970.
+
+\bibitem{Morain07}
+François Morain.
+\newblock Computing the cardinality of {CM} elliptic curves using torsion
+  points.
+\newblock {\em Journal de Théorie des Nombres de Bordeaux}, 19(3):663--681,
+  2007.
+
+\bibitem{Schertz02}
+R.~Schertz.
+\newblock Weber's class invariants revisited.
+\newblock {\em J.~Th\'eor. Nombres Bordeaux}, 14(1):325--343, 2002.
+
+\bibitem{Schertz76}
+Reinhard Schertz.
+\newblock Die singul\"aren {W}erte der {W}eberschen {F}unktionen $\mathfrak
+  {f}$, $\mathfrak {f}_1$, $\mathfrak {f}_2$, $\gamma_2$, $\gamma_3$.
+\newblock {\em Journal f\"ur die reine und angewandte Mathematik},
+  286/287:46--74, 1976.
+
+\bibitem{Schertz09}
+Reinhard Schertz.
+\newblock {\em Complex Multiplikation}.
+\newblock Cambridge University Press, Cambridge, 2009.
+
+\bibitem{Shimura71}
+Goro Shimura.
+\newblock {\em Introduction to the Arithmetic Theory of Automorphic Functions}.
+\newblock Iwanami Shoten and Princeton University Press, 1971.
+
+\bibitem{Stark69}
+H.~M. Stark.
+\newblock On the {"gap"} in a theorem of {H}eegner.
+\newblock {\em J.~Number Theory}, 1:16--27, 1969.
+
+\bibitem{Weber02-III}
+H.~Weber.
+\newblock {\em Lehrbuch der Algebra}, volume III.
+\newblock Chelsea Publishing Company, New York, 1902.
+
+\end{thebibliography}
