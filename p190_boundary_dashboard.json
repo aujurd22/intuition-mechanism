@@ -1,0 +1,95 @@
+{
+ "rows": [
+  {
+   "model": "deepseek-v4-flash",
+   "seed": 0,
+   "acc": 100.0,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 210
+  },
+  {
+   "model": "deepseek-v4-flash",
+   "seed": 1,
+   "acc": 96.9,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 341
+  },
+  {
+   "model": "deepseek-v4-flash",
+   "seed": 2,
+   "acc": 87.5,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 555
+  },
+  {
+   "model": "doubao-seed-2.1-lite",
+   "seed": 0,
+   "acc": 75.0,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 174
+  },
+  {
+   "model": "doubao-seed-2.1-lite",
+   "seed": 1,
+   "acc": 100.0,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 155
+  },
+  {
+   "model": "doubao-seed-2.1-lite",
+   "seed": 2,
+   "acc": 100.0,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 161
+  },
+  {
+   "model": "kimi-k2.8-preview",
+   "seed": 0,
+   "acc": 90.6,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 74
+  },
+  {
+   "model": "kimi-k2.8-preview",
+   "seed": 1,
+   "acc": 100.0,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 105
+  },
+  {
+   "model": "kimi-k2.8-preview",
+   "seed": 2,
+   "acc": 78.1,
+   "law_calls": 1,
+   "apply_calls": 4,
+   "rule_len": 76
+  }
+ ],
+ "boundary": {
+  "421": 2,
+  "653": 2,
+  "809": 2,
+  "821": 2,
+  "3": 2,
+  "7": 2,
+  "13": 2,
+  "147": 1,
+  "505": 1,
+  "935": 1,
+  "5": 1,
+  "17": 1,
+  "94": 1,
+  "122": 1,
+  "348": 1,
+  "420": 1
+ },
+ "bits_per_rule": 2.5555555555555554
+}

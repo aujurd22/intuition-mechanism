@@ -1,0 +1,81 @@
+{
+ "deepseek-v4-flash": {
+  "seed0": {
+   "family_exact": true,
+   "integer_noted": true,
+   "hyp_words": [
+    "parameter",
+    "hidden",
+    "exact"
+   ],
+   "hyp_count": 3,
+   "cluster_raw": "FAMILY: 20.0, 12.0, 32.0, 8.0, 200.0, 104.0  \nSPECIAL: These are all integers that are exactly divisible by 4, and they appear to be the only numbers in the list that are multiples of 4.  \nHIDDEN: The rule is simply that the family consists of numbers that are multiples of 4, with no other hidden parameter.",
+   "rule": "Numbers that are exact integers (with no fractional part) are SPECIAL, while all others are ordinary.",
+   "rule_integer": true
+  },
+  "seed1": {
+   "family_exact": true,
+   "integer_noted": true,
+   "hyp_words": [
+    "hidden",
+    "exact",
+    "integer value"
+   ],
+   "hyp_count": 3,
+   "cluster_raw": "FAMILY: 32.0, 8.0, 200.0, 12.0, 104.0, 20.0  \nSPECIAL: These are all exact integers that are also perfect squares, cubes, or simple multiples of 4, 8, or 10 \u2014 specifically they are all numbers that can be expressed as \\( n \\times 2^k \\) where \\( n \\) is an integer and \\( k \\) is a non\u2011negative integer, and they are all integers in the list.  \nHIDDEN: The non\u2011members are all non\u2011integer decimals, so the hidden rule is simply that the family consists of the integer values in the list.",
+   "rule": "Numbers that are perfect squares (the square of an integer) are SPECIAL, while all others are ordinary.",
+   "rule_integer": true
+  }
+ },
+ "doubao-seed-2.1-lite": {
+  "seed0": {
+   "family_exact": true,
+   "integer_noted": true,
+   "hyp_words": [
+    "hidden"
+   ],
+   "hyp_count": 1,
+   "cluster_raw": "FAMILY: 20.0, 12.0, 32.0, 8.0, 200.0, 104.0\nSPECIAL: These are the whole-number (integer) values in the list; all the other entries have non-zero digits after the decimal point.\nHIDDEN: none",
+   "rule": "A number is SPECIAL if and only if it is a whole number with no fractional decimal part (i.e., it ends in \".0\" when written out), while ordinary numbers have non-zero digits after the decimal point.",
+   "rule_integer": true
+  },
+  "seed1": {
+   "family_exact": true,
+   "integer_noted": true,
+   "hyp_words": [
+    "hidden",
+    "integer value"
+   ],
+   "hyp_count": 2,
+   "cluster_raw": "FAMILY: 32.0, 8.0, 200.0, 12.0, 104.0, 20.0\nSPECIAL: These are the only numbers in the list that are whole integers (no fractional part), while the remaining six have non-zero decimal components.\nHIDDEN: My best guess is that these integer values are likely rounded or truncated versions of real-world measurements (e.g., lengths, weights, or counts) from a dataset, while the non-integers are unrounded raw calculated values or precise sensor readings.",
+   "rule": "A number is SPECIAL if and only if it is a whole number (has no fractional part, i.e., its decimal value is exactly an integer).",
+   "rule_integer": true
+  }
+ },
+ "kimi-k2.8-preview": {
+  "seed0": {
+   "family_exact": true,
+   "integer_noted": false,
+   "hyp_words": [
+    "hidden",
+    "generat"
+   ],
+   "hyp_count": 2,
+   "cluster_raw": "FAMILY: 20.0, 12.0, 32.0, 8.0, 200.0, 104.0  \nSPECIAL: They are the whole-number members and are all divisible by 4.  \nHIDDEN: Best guess is a modulo-4/generating rule of the form `n = 4k`; otherwise none.",
+   "rule": "A number is SPECIAL exactly when it is a whole number divisible by 4 (written with .0); otherwise it is ordinary.",
+   "rule_integer": true
+  },
+  "seed1": {
+   "family_exact": true,
+   "integer_noted": false,
+   "hyp_words": [
+    "hidden",
+    "exact"
+   ],
+   "hyp_count": 2,
+   "cluster_raw": "FAMILY: 32.0, 8.0, 200.0, 12.0, 104.0, 20.0  \nSPECIAL: They are exactly the whole-number multiples of 4 in the list; the decimal-valued entries are not.  \nHIDDEN: none",
+   "rule": "A number is SPECIAL exactly when it is a whole number written with a trailing \u201c.0,\u201d while any number with a nonzero fractional part is ordinary.",
+   "rule_integer": true
+  }
+ }
+}
