@@ -1,0 +1,69 @@
+{
+ "opt": 436.76666666666665,
+ "rules": [
+  {
+   "i": 0,
+   "desc": "sort the numbers in descending order and take the first five",
+   "body": "    s = sorted(lst, reverse=True)[:5]",
+   "score": 436.76666666666665,
+   "good": true,
+   "score_over_opt": 1.0
+  },
+  {
+   "i": 1,
+   "desc": "pick the five numbers closest to 100",
+   "body": "    s = sorted(lst, key=lambda x: abs(x - 100))[-5:]",
+   "score": 77.13333333333334,
+   "good": false,
+   "score_over_opt": 0.17660077844768376
+  },
+  {
+   "i": 2,
+   "desc": "pick the five numbers farthest from the mean of the list",
+   "body": "    m = sum(lst)/len(lst)\n    s = sorted(lst, key=lambda x: -abs(x - m))[:5]",
+   "score": 222.33333333333334,
+   "good": false,
+   "score_over_opt": 0.5090437304434099
+  },
+  {
+   "i": 3,
+   "desc": "sort by last digit in descending order and take the first five",
+   "body": "    s = sorted(lst, key=lambda x: -(x % 10))[:5]",
+   "score": 281.46666666666664,
+   "good": false,
+   "score_over_opt": 0.6444325726932764
+  },
+  {
+   "i": 4,
+   "desc": "pick the five numbers closest to the mean of the list",
+   "body": "    m = sum(lst)/len(lst)\n    s = sorted(lst, key=lambda x: abs(x - m))[:5]",
+   "score": 262.3,
+   "good": false,
+   "score_over_opt": 0.6005494924826376
+  },
+  {
+   "i": 5,
+   "desc": "sort the numbers in ascending order and take the first five",
+   "body": "    s = sorted(lst)[:5]",
+   "score": 77.13333333333334,
+   "good": false,
+   "score_over_opt": 0.17660077844768376
+  },
+  {
+   "i": 6,
+   "desc": "pick numbers above 50, then take the five largest of those",
+   "body": "    f = [x for x in lst if x > 50]\n    s = sorted(f, reverse=True)[:5] if len(f) >= 5 else sorted(lst, reverse=True)[:5]",
+   "score": 436.76666666666665,
+   "good": true,
+   "score_over_opt": 1.0
+  },
+  {
+   "i": 7,
+   "desc": "sort by the number of divisors of each number, descending",
+   "body": "    s = sorted(lst, key=lambda x: -sum(1 for i in range(1, int(abs(x)) + 1) if abs(x) % i == 0))[:5]",
+   "score": 303.4,
+   "good": false,
+   "score_over_opt": 0.6946500801343204
+  }
+ ]
+}
