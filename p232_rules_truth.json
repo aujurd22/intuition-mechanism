@@ -1,0 +1,210 @@
+{
+ "opt": 436.76666666666665,
+ "labeled": [
+  {
+   "desc": "sort descending, first five",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest to 100",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "farthest from mean",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "last digit descending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest to mean",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "ascending first five",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "above 50, five largest",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "divisor count descending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "square descending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five largest odds",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five largest evens",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "farthest from 50",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five largest primes",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five smallest",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "mod 7 descending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "above median, five largest",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "bit length descending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "largest digit sums",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "random shuffle five",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest to 75",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "largest squares",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "every other number",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "descending even positions",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "divisible by 3, five largest",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "mod 10 ascending",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "first five as-is",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest to 30",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "farthest from 60",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest mapping to 60..100",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five smallest dup",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "fewest digits first",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "smallest digit sums",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "divisible by 5, first five",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "ascending by square",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "closest to zero",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "every third number",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "five most frequent",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "reverse digit sum sort",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "most divisors",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "last five as-is",
+   "good": null,
+   "error": "runtime"
+  },
+  {
+   "desc": "tens digit ascending",
+   "good": null,
+   "error": "runtime"
+  }
+ ]
+}
