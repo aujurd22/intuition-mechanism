@@ -1,0 +1,20 @@
+{
+ "d=5": {
+  "note": "plain row",
+  "ship_status": "VERIFIED",
+  "rounds": 1,
+  "answer": "RATIONAL"
+ },
+ "d=978": {
+  "note": "near-integer trap",
+  "ship_status": "ABSTAIN",
+  "rounds": 1,
+  "answer": "(abstain: machine confidence insufficient \u2014 no reliable answer shipped. evidence: {\"verdict\": \"NEAR_INTEGER\", \"confidenc"
+ },
+ "d=11": {
+  "note": "non-row",
+  "ship_status": "VERIFIED",
+  "rounds": 2,
+  "answer": "NOT"
+ }
+}
