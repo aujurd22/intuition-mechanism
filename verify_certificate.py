@@ -17,7 +17,7 @@ Certificate entries (each = a load-bearing claim of the proof chain):
   C8  action-character rule chi* by (d mod 3, d mod 4) on the six rows (P188)
 Run: py -3 verify_certificate.py   (all numeric at 50+ dps; algebra double-check)
 """
-import sys, json
+import sys, json, random
 from mpmath import mp, mpf, exp, pi, sqrt as msqrt, floor
 from fractions import Fraction
 mp.dps = 50
@@ -211,6 +211,23 @@ try:
           m["mod4"] > 0.3 and m["mod3"] < 0, f"mod4 {m['mod4']}, mod3 {m['mod3']}")
 except FileNotFoundError:
     check("C12 mechinterp artifact", False, "missing")
+
+
+# ---- C13: P225 shadow-density identity (P-LAW1 theorem) ----
+import itertools as _it
+_H = [frozenset(j for j in range(12) if c[j]) for c in _it.product([0, 1], repeat=12)]
+_Sr = frozenset({1, 5})
+_rng = random.Random(7)
+c13_ok = True
+for _ in range(30):
+    n = _rng.randint(1, 11)
+    Wf = frozenset(_rng.randrange(12) for _ in range(n))
+    sc = sum(1 for S in _H if S & Wf == _Sr & Wf)
+    if sc != 2 ** (12 - len(Wf)):
+        c13_ok = False
+        break
+check("C13 P225 shadow-density identity (P-LAW1 theorem, exact per-window)",
+      c13_ok, f"last W size {n}")
 
 print()
 if FAILS:
