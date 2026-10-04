@@ -1,0 +1,62 @@
+{
+ "subject": "program author, non-number-theory, years post-graduation (target demographic per P235 lesson)",
+ "role": "design pilot #2 (n=1) — validates materials, NOT population claim (P239 discipline)",
+ "exam1": {
+  "score": "10/12",
+  "acc": 0.833,
+  "sure": {
+   "n": 8,
+   "correct": 8,
+   "acc": 1.0
+  },
+  "guess": {
+   "n": 4,
+   "correct": 2,
+   "acc": 0.5
+  },
+  "calibration_sure_minus_guess": 0.5
+ },
+ "scope_answer_verbatim": "中间的元音字母加第三位的辅音字母没有在原学习表里面出现过的会失灵，比如ab接um，ik接ok，但是it在原学习表里面没有我就不确定了，at,ip也是",
+ "scope_rubric_score": 2,
+ "scope_note": "subject explicitly states their method fails on (vowel, final) pairs absent from training, names it/at/ip; their only exam2 error (bit, pair it) is exactly the named failure — self-knowledge precisely calibrated",
+ "exam2": {
+  "score": "7/8",
+  "acc": 0.875,
+  "trained_pairs": "6/6",
+  "novel_pairs": "1/2",
+  "only_error": "21. bit (pair it — the pair the subject flagged in the scope answer)"
+ },
+ "masking_effect_exam1_minus_exam2": -0.04200000000000004,
+ "pair_signature": {
+  "trained_pairs_combined": "14/14 = 1.000",
+  "novel_pairs_combined": "3/6 = 0.500",
+  "reading": "exact (vowel, final)-pair lookup signature; feature-class rule not extracted"
+ },
+ "predictions": {
+  "Pa_learnability_acceptance": "PASS (10/12 >= 8/12 within 25-min budget)",
+  "P234_migrated_masking_asymmetry": "CONFIRMED at n=1: human 0.875 >> 1/3 under cipher masking (deepseek collapsed to 0.375)",
+  "Pb_trap_items": "NOT CONFIRMED (errors driven by novel-pair gaps, not initial-letter traps)",
+  "Pc_structural_transfer_drop_lt_025": "PASS (+0.042, only side whose exam2 >= exam1)",
+  "human_scope_weak_prediction": "REFUTED at n=1 (scope 2/2, explicit and correct)"
+ },
+ "model_comparison": {
+  "human(n=1)": {
+   "exam1": 0.833,
+   "exam2": 0.875
+  },
+  "deepseek-v4-flash": {
+   "exam1": 1.0,
+   "exam2": 0.375
+  },
+  "doubao-seed-2.1-lite": {
+   "exam1": 0.833,
+   "exam2": 0.625
+  },
+  "glm-5.3-flash": {
+   "exam1": 0.417,
+   "exam2": 0.0
+  }
+ },
+ "erratum": "exam page item 14 rendered bag (CY1CD) while registered key has gab (CD1CY) — hand-transcription bug, cell-identical (both voiced+open -> um), scoring unaffected; page fixed for future administration",
+ "learning_minutes": "not recorded"
+}
