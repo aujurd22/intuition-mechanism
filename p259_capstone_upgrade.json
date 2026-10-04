@@ -1,0 +1,203 @@
+{
+ "baselines": {
+  "u500_10": {
+   "FF": 210,
+   "BF": 209,
+   "L1": 200
+  },
+  "u500_11": {
+   "FF": 212,
+   "BF": 212,
+   "L1": 200
+  },
+  "u500_12": {
+   "FF": 210,
+   "BF": 210,
+   "L1": 199
+  },
+  "u500_13": {
+   "FF": 208,
+   "BF": 207,
+   "L1": 196
+  },
+  "u500_14": {
+   "FF": 215,
+   "BF": 215,
+   "L1": 204
+  },
+  "u500_15": {
+   "FF": 212,
+   "BF": 211,
+   "L1": 201
+  },
+  "u500_16": {
+   "FF": 212,
+   "BF": 211,
+   "L1": 202
+  },
+  "u500_17": {
+   "FF": 207,
+   "BF": 207,
+   "L1": 198
+  },
+  "u500_18": {
+   "FF": 212,
+   "BF": 213,
+   "L1": 202
+  },
+  "u500_19": {
+   "FF": 208,
+   "BF": 206,
+   "L1": 196
+  }
+ },
+ "models": {
+  "glm-5.3-flash": {
+   "rounds": [
+    {
+     "round": 1,
+     "dev_mean_excess": 11.3,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    \"\"\"\n    Online bin packing policy.\n\n    Strategy:\n      1. Exact fit: if some open bin has remaining capacity exactly equal to\n         the item, use it (zero waste is always optimal locally).\n      2. Otherwise, Best-Fit: place in the bin leaving the smallest residual.\n         Ties are broken by choosing the bin that currently has the most\n         free space before placement (keeps bins more uniformly filled,\n         which tends to reduce fragmentation across the stream).\n      3. If no open bin can hold the item, open a new bin.\n\n    Pure, stateless, causal: uses only the current item and current bin state.\n    \"\"\"\n    best_idx = -1\n    best_residual = None\n\n    for i, free in enumerate(bins):\n        if free < item:\n            continue\n        residual = free - item\n        if residual == 0:\n            # Perfect fit: cannot do better, take it immediately.\n            return i\n        if best_residual is None or residual < best_residual or \\\n           (residual == best_residual and free > bins[best_idx]):\n            best_residual = residual\n            best_idx = i\n\n    if best_idx == -1:\n        # No open bin fits: open a new bin.\n        return len(bins)\n    return best_idx\n"
+    },
+    {
+     "round": 2,
+     "dev_mean_excess": 10.3,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    \"\"\"\n    Online bin packing policy (improved Best-Fit variant).\n\n    Preference order among open bins that can hold the item:\n      1. Exact fit (residual == 0): zero waste, take immediately.\n      2. Residual == item: the bin becomes perfectly pairable with another\n         identical item later (very likely in OR-style streams).\n      3. Residual >= item: bin can still accept at least one more item of\n         this size; among these take the smallest residual (Best-Fit).\n      4. Otherwise (residual < item, likely dead space): take the smallest\n         residual, but only if no bin from rules 2-3 exists.\n\n    Ties broken by larger free space before placement (uniform fill).\n    Pure, stateless, causal.\n    \"\"\"\n    best_idx = -1\n    best_key = None  # (tier, residual, -free)\n\n    for i, free in enumerate(bins):\n        if free < item:\n            continue\n        residual = free - item\n        if residual == 0:\n            return i\n        if residual == item:\n            tier = 1\n        elif residual >= item:\n            tier = 2\n        else:\n            tier = 3\n        key = (tier, residual, -free)\n        if best_key is None or key < best_key:\n            best_key = key\n            best_idx = i\n\n    if best_idx == -1:\n        return len(bins)\n    return best_idx\n"
+    },
+    {
+     "round": 3,
+     "dev_mean_excess": 11.3,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    \"\"\"\n    Online bin packing policy (improved Best-Fit variant).\n\n    Preference order among open bins that can hold the item:\n      1. Exact fit (residual == 0): bin closes with zero waste.\n      2. Residual < item: bin closes too (residual becomes dead space\n         either way, so closing it now is free and removes clutter).\n      3. Residual == item: bin becomes perfectly pairable with another\n         identical item later (common in OR-style streams).\n      4. Otherwise (residual >= item): bin stays usable; take the\n         smallest residual (Best-Fit) so large residuals are preserved.\n\n    Ties broken by larger free space before placement (uniform fill).\n    Pure, stateless, causal.\n    \"\"\"\n    best_idx = -1\n    best_key = None  # (tier, residual, -free)\n\n    for i, free in enumerate(bins):\n        if free < item:\n            continue\n        residual = free - item\n        if residual == 0:\n            return i\n        if residual < item:\n            tier = 1\n        elif residual == item:\n            tier = 2\n        else:\n            tier = 3\n        key = (tier, residual, -free)\n        if best_key is None or key < best_key:\n            best_key = key\n            best_idx = i\n\n    if best_idx == -1:\n        return len(bins)\n    return best_idx\n"
+    },
+    {
+     "round": 4,
+     "dev_mean_excess": 11.5,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    \"\"\"\n    Online bin packing policy (refined Best-Fit variant).\n\n    Preference among open bins that can hold the item, by tier:\n      0. Exact fit (residual == 0): closes a bin with zero waste.\n      1. Dead bin (residual < item): the residual can never hold an\n         item this size again, so consuming it now is nearly free and\n         it removes clutter. Among these, take the smallest residual\n         (minimize the waste we commit to).\n      2. Usable bin whose new residual (residual - item) is itself\n         perfectly pairable (== 0) or still >= item (can hold another\n         item of this size). Among these, Best-Fit: smallest residual.\n      3. Usable bin leaving an awkward residual in (0, item) \u2014 a\n         fragment too small for this item size. Only used if no\n         better tier exists; again smallest residual first.\n\n    Ties broken by larger free space before placement (uniform fill).\n    Pure, stateless, causal.\n    \"\"\"\n    best_idx = -1\n    best_key = None\n\n    for i, free in enumerate(bins):\n        if free < item:\n            continue\n        residual = free - item\n        if residual == 0:\n            return i\n        if residual < item:\n            tier = 1\n        else:\n            r2 = residual - item\n            if r2 == 0 or r2 >= item:\n                tier = 2\n            else:\n                tier = 3\n        key = (tier, residual, -free)\n        if best_key is None or key < best_key:\n            best_key = key\n            best_idx = i\n\n    if best_idx == -1:\n        return len(bins)\n    return best_idx\n"
+    }
+   ],
+   "best_dev": 10.3,
+   "final_eval": {
+    "OR3_hold": {
+     "he_excess": [
+      7,
+      11,
+      11,
+      9,
+      10,
+      8,
+      8,
+      10,
+      10,
+      9
+     ],
+     "ff_excess": [
+      10,
+      12,
+      11,
+      12,
+      11,
+      11,
+      10,
+      9,
+      10,
+      12
+     ],
+     "bf_excess": [
+      9,
+      12,
+      11,
+      11,
+      11,
+      10,
+      9,
+      9,
+      11,
+      10
+     ],
+     "he_mean": 9.3,
+     "ff_mean": 10.8,
+     "bf_mean": 10.3
+    },
+    "OR3_dev": {
+     "he_excess": [
+      10,
+      12,
+      8,
+      10,
+      12,
+      11,
+      11,
+      11,
+      10,
+      8
+     ],
+     "ff_excess": [
+      13,
+      12,
+      10,
+      12,
+      13,
+      13,
+      13,
+      15,
+      11,
+      11
+     ],
+     "bf_excess": [
+      13,
+      11,
+      11,
+      11,
+      12,
+      12,
+      10,
+      12,
+      11,
+      10
+     ],
+     "he_mean": 10.3,
+     "ff_mean": 12.3,
+     "bf_mean": 11.3
+    },
+    "Weibull": {
+     "he_excess": [
+      68,
+      64,
+      69,
+      65,
+      63
+     ],
+     "ff_excess": [
+      86,
+      84,
+      87,
+      84,
+      79
+     ],
+     "bf_excess": [
+      82,
+      76,
+      79,
+      81,
+      78
+     ],
+     "he_mean": 65.8,
+     "ff_mean": 84.0,
+     "bf_mean": 79.2
+    },
+    "wilcoxon_vs_FF_hold": {
+     "stat": 2.0,
+     "p": 0.0312
+    },
+    "wilcoxon_vs_BF_hold": {
+     "stat": 3.5,
+     "p": 0.0273
+    }
+   }
+  }
+ }
+}
