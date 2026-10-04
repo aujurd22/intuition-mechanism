@@ -1,0 +1,5 @@
+{
+ "arm": "readout_only",
+ "seed": 34,
+ "final_test": 0.3448
+}

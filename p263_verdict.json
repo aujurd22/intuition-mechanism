@@ -1,0 +1,24 @@
+{
+ "summary": {
+  "control": {
+   "mean": 0.2539,
+   "std": 0.2713,
+   "gen_ratio": 0.25,
+   "n": 40
+  },
+  "readout_only": {
+   "mean": 0.2073,
+   "std": 0.1885,
+   "gen_ratio": 0.07,
+   "n": 40
+  },
+  "reweight": {
+   "mean": 0.0142,
+   "std": 0.0151,
+   "gen_ratio": 0.0,
+   "n": 40
+  }
+ },
+ "H_consolidation": "NOT CONFIRMED",
+ "note": "wiring alone insufficient \u2014 trunk must keep changing; consolidation hypothesis needs revision"
+}
