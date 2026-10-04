@@ -8,7 +8,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 262 numbered rows P1–P262, every row with prediction, verdict and artifacts).  This README is the
+(pre-registered experiment registry, 264 numbered rows P1–P264, every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
@@ -43,7 +43,7 @@ questions — one miss and it is a hallucination.
    That failure mode is itself a quantified result.
 
 **Entry points**: story-only → keep reading; reproduce numbers →
-[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (262 numbered experiments,
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (264 numbered experiments,
 each with prediction/verdict/artifacts); use the judge toolkit → the
 plugin section below.
 
@@ -484,6 +484,25 @@ after a simulator-equivalence check (the official policy reproduces our
 Best-Fit per-instance exactly). Honest scope: the Nature paper's exact
 heuristic is not public; the comparison is against the official
 repository's artifact.
+
+### Why identical learners split: the G6 arc
+
+Train forty copies of the same tiny model on the same composite rule and the
+outcomes scatter from 0.00 to 0.78. The arc that explains this took four
+exclusions. The bifurcation window is ep400-1000 (invisible at ep400,
+decidable at ep1000, r = 0.854). Inside that window, nothing converts a
+loser: auxiliary gradient pressure from step zero hurts, readout-only
+training does nothing significant (paired delta -0.047, p = 0.70), class
+reweighting collapsed for an implementation reason and was retracted rather
+than interpreted. And no static measure separates the groups at all —
+component probes, readout geometry, even FULL-task decodability of the
+trunk are equal (P254/P258/P264). What does separate them is the readout
+head's own behavior at ep1000 (r = 0.854): whichever head happens to be
+ahead keeps going. Functional self-continuation, with no static correlate
+anywhere in the trunk. The same ledger discipline applies to cheating: four
+task types x four models produced exactly one exploit ever, and that one
+needed the loophole in its face — the gate exists for accidental shadow
+convergence, not for deliberate cheating.
 
 ---
 
