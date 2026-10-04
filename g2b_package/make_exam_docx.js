@@ -1,9 +1,11 @@
 // G2B exam pages -> DOCX (real tables, send-friendly; mirrors 考页.md/学习页.md,
 // item 14 = ●1◆ per the registered answer key). Run: node make_exam_docx.js
+// NOTE: column widths are set PER CELL as percentages (Word-compatible);
+// the table-level width alone is not enough and WPS-only tolerance masked it.
 const docx = require("../human_package/node_modules/docx");
 const fs = require("fs");
 const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell,
-  WidthType, AlignmentType, BorderStyle, HeadingLevel } = docx;
+  WidthType, AlignmentType, BorderStyle, HeadingLevel, PageBreak } = docx;
 
 const FONT = "SimSun";
 const HEI = "SimHei";
@@ -16,12 +18,18 @@ function h1(t) { return new Paragraph({ heading: HeadingLevel.HEADING_1, spacing
 function h2(t) { return new Paragraph({ heading: HeadingLevel.HEADING_2, spacing: { ...LN, before: 200, after: 100 }, children: [new TextRun({ text: t, font: { name: HEI }, bold: true, size: 28 })] }); }
 function blank() { return new Paragraph({ spacing: LN, children: [] }); }
 
-const TO = { width: { size: 100, type: WidthType.PERCENTAGE }, margins: { top: 60, bottom: 60, left: 120, right: 120 } };
-function td(t, center) {
-  return new TableCell({ ...TO,
-    children: [p([txt(t)], center ? { alignment: AlignmentType.CENTER } : {})] });
+const MARGINS = { top: 60, bottom: 60, left: 120, right: 120 };
+function td(t, wpct, center) {
+  return new TableCell({
+    margins: MARGINS,
+    ...(wpct ? { width: { size: wpct, type: WidthType.PERCENTAGE } } : {}),
+    children: [p([txt(t)], center ? { alignment: AlignmentType.CENTER } : {})],
+  });
 }
-function table(rows) { return new Table({ ...TO, rows }); }
+function table(rows) {
+  return new Table({ width: { size: 100, type: WidthType.PERCENTAGE },
+    margins: MARGINS, rows });
+}
 
 // ---------- 学习页 ----------
 const study = [];
@@ -41,8 +49,8 @@ const TRAIN = [["bab","babum"],["kad","kadum"],["pag","pagum"],["dab","dabum"],
   ["kap","kapis"],["tap","tapis"],["bap","bapis"],["pak","pakis"],
   ["buk","bukok"],["dup","dupok"],["dik","dikok"],["tup","tupok"]];
 study.push(table([
-  new TableRow({ children: [td(`单数`), td(`复数`)] }),
-  ...TRAIN.map(([s, pl]) => new TableRow({ children: [td(s), td(pl)] })),
+  new TableRow({ children: [td(`单数`, 50, 1), td(`复数`, 50, 1)] }),
+  ...TRAIN.map(([s, pl]) => new TableRow({ children: [td(s, 50, 1), td(pl, 50, 1)] })),
 ]));
 study.push(blank());
 study.push(h2(`说明`));
@@ -57,9 +65,10 @@ exam.push(h2(`第一部分（12 题）`));
 exam.push(p([txt(`写出每个词的复数，并标注你的把握程度：`), bd(`有把握`), txt(` / `), bd(`在猜`), txt(`。`)]));
 const EX1 = ["bad","gad","pad","dig","pud","bid","bat","tak","dat","bik","dip","kit"];
 exam.push(table([
-  new TableRow({ children: [td(`题号`, 1), td(`单数`, 1), td(`复数（填写）`, 1), td(`把握程度（圈一项）`, 1)] }),
+  new TableRow({ children: [td(`题号`, 12, 1), td(`单数`, 22, 1),
+    td(`复数（填写）`, 36, 1), td(`把握程度（圈一项）`, 30, 1)] }),
   ...EX1.map((s, i) => new TableRow({ children: [
-    td(String(i + 1), 1), td(s, 1), td(``), td(`有把握 / 在猜`),
+    td(String(i + 1), 12, 1), td(s, 22, 1), td(``, 36), td(`有把握 / 在猜`, 30, 1),
   ] })),
 ]));
 exam.push(blank());
@@ -67,28 +76,30 @@ exam.push(p([bd(`第 13 题（文字题）`), txt(`：用一两句话回答—�
 exam.push(p([txt(`答：_______________________________________________`)]));
 exam.push(p([txt(`_______________________________________________________________`)]));
 exam.push(blank());
+exam.push(new Paragraph({ children: [new PageBreak()] }));  // keep the cipher legend table on one page
 exam.push(h2(`第二部分（8 题）`));
 exam.push(p([txt(`星语还有一种"符号写法"。密码表如下（考试期间可以随时查看）：`)]));
 const LEG = [["b","◆","k","▲","a","1"],["d","★","p","■","i","2"],["g","●","t","▼","u","3"]];
 exam.push(table([
-  new TableRow({ children: [td(`字母`, 1), td(`符号`, 1), td(`字母`, 1), td(`符号`, 1), td(`字母`, 1), td(`符号`, 1)] }),
-  ...LEG.map(r => new TableRow({ children: r.map(x => td(x, 1)) })),
+  new TableRow({ children: [td(`字母`, 17, 1), td(`符号`, 16, 1), td(`字母`, 17, 1),
+    td(`符号`, 16, 1), td(`字母`, 17, 1), td(`符号`, 17, 1)] }),
+  ...LEG.map(r => new TableRow({ children: r.map((x, i) => td(x, i % 2 ? 16 : 17, 1)) })),
 ]));
 exam.push(blank());
 exam.push(p([txt(`下面 8 个词是符号写法的新词。判断它们按照第一部分的方法该加哪个后缀，在表格里写下 `),
   bd(`um / is / ok`), txt(` 三者之一。`)]));
 const EX2 = ["●1◆","★1■","▲3★","●2★","■1▼","★1●","■2▲","◆2▼"];
 exam.push(table([
-  new TableRow({ children: [td(`题号`, 1), td(`单数（符号）`, 1), td(`后缀（um/is/ok）`, 1)] }),
+  new TableRow({ children: [td(`题号`, 12, 1), td(`单数（符号）`, 44, 1),
+    td(`后缀（um/is/ok）`, 44, 1)] }),
   ...EX2.map((s, i) => new TableRow({ children: [
-    td(String(i + 14), 1), td(s, 1), td(``),
+    td(String(i + 14), 12, 1), td(s, 44, 1), td(``, 44),
   ] })),
 ]));
 
 function build(kids) {
   return new Document({ sections: [{ properties: {}, children: kids }] });
 }
-const F = { line: 312 };
 Promise.all([
   Packer.toBuffer(build(study)).then(b => fs.writeFileSync(`学习页.docx`, b)),
   Packer.toBuffer(build(exam)).then(b => fs.writeFileSync(`考页.docx`, b)),
