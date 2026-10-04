@@ -1,0 +1,49 @@
+{
+ "n": 40,
+ "corr probe_full12@400": 0.314,
+ "corr probe_full12@700": 0.129,
+ "corr probe_full12@1000": 0.274,
+ "corr probe_full12@1300": 0.575,
+ "corr probe_mod3@400": 0.25,
+ "corr probe_mod3@700": 0.081,
+ "corr probe_mod3@1000": 0.178,
+ "corr probe_mod3@1300": 0.292,
+ "corr test@400": 0.264,
+ "corr test@700": 0.285,
+ "corr test@1000": 0.63,
+ "corr test@1300": 0.722,
+ "A_B": {
+  "full12@1000_win": 0.655,
+  "full12@1000_lose": 0.62,
+  "full12@400_win": 0.486,
+  "full12@400_lose": 0.424,
+  "reading": "A supported: full-task decodability also equal \u2014 the difference is trunk dynamics after ep1000, not static content"
+ },
+ "velocity": {
+  "1000_1300": {
+   "win": 0.011,
+   "lose": 0.0112,
+   "corr_final": -0.046
+  },
+  "1300_2000": {
+   "win": 0.0068,
+   "lose": 0.007,
+   "corr_final": -0.104
+  },
+  "2000_2500": {
+   "win": 0.0069,
+   "lose": 0.0059,
+   "corr_final": 0.144
+  },
+  "400_700": {
+   "win": 0.0102,
+   "lose": 0.01,
+   "corr_final": 0.07
+  },
+  "700_1000": {
+   "win": 0.0105,
+   "lose": 0.0104,
+   "corr_final": 0.098
+  }
+ }
+}
