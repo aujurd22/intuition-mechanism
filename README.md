@@ -503,7 +503,7 @@ partly temporal autocorrelation — same model, same test set, more steps),
 while every static trunk-content measure (component probes, readout
 geometry, full-task decodability, displacement velocity) is equal across
 groups. WHY the continuation happens is open — naming the mechanism would
-run ahead of the evidence. The same ledger discipline applies to cheating: four
+run ahead of the evidence. The same shape - quantity carries ~zero signal, direction carries all of it - shows up on the verifier side too (the label cliff); registered as a cross-layer law candidate, toy-scale caveat attached. The same ledger discipline applies to cheating: four
 task types x four models produced exactly one exploit ever, and that one
 needed the loophole in its face — the gate exists for accidental shadow
 convergence, not for deliberate cheating.
