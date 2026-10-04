@@ -1,0 +1,20 @@
+{
+ "correlations": {
+  "probe_mod3@400": -0.623,
+  "probe_mod3@1000": 0.122,
+  "probe_mod4@400": 0.008,
+  "probe_mod4@1000": 0.698,
+  "out_mod3@400": -0.327,
+  "out_mod3@1000": 0.279,
+  "test@400": -0.055,
+  "test@1000": 0.854
+ },
+ "winner_vs_loser": {
+  "n_win": 4,
+  "n_lose": 8,
+  "mod3_probe@1000 winners": 0.67,
+  "mod3_probe@1000 losers": 0.648
+ },
+ "H_rep": false,
+ "H_early": false
+}
