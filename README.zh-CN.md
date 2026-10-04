@@ -26,7 +26,7 @@
 2. **AI 行为上**：AI 嘴上说的规律和它实际用的规律**经常不是同一套**——让它解释自己的判断，写出来的规则考试只有 50 分（纯猜）；但它实际判题有 90 分。它"知道"自己说不出的东西。而且它说错的规则能**逐字预测**它错哪些题。
 3. **方法论上**：我们造了一条"提猜想 → 考试 → 喂错题 → 改猜想"的自动流水线。它能自我纠错，但在缺乏正面例子的数据上它会偷懒**背答案**——这个失败模式本身就是量化的新发现。
 
-**给不同读者的入口**：只想看懂故事 → 读本文即可；想复现数字 → 看 `docs/RESEARCH_PLAN.md`（P1 到 P264，每个编号实验都有预测、判定、存档文件）；想用我们的判官工具 → 看 `intuition_pack/` 插件节。
+**给不同读者的入口**：只想看懂故事 → 读本文即可；想复现数字 → 看 `docs/RESEARCH_PLAN.md`（P1 到 P268，每个编号实验都有预测、判定、存档文件）；想用我们的判官工具 → 看 `intuition_pack/` 插件节。
 
 ---
 
@@ -71,6 +71,20 @@
 ---
 
 ## 核心发现
+
+### 成果一览
+
+| 线 | 问题 | 判定 |
+|---|---|---|
+| 数学 | 为什么恰好这六个数 | 三层答案几乎闭合（类群→落域→单位），剩最后一环工具备齐 |
+| 判断 | AI 说得出自己用的规则吗 | 说不出——复杂规则代码执行=机遇水平，鸿沟由嵌套深度决定 |
+| 生成 | AI 能改进世界已知的边界吗 | **能**——FunSearch 官方套件上双模型双基线显著双杀（p<0.05），官方工件 p=0.003 |
+| 人机对照 | 人类和 AI 的直觉一样吗 | 都在记忆，钥匙不同：人用结构组合，模型用表面形式 |
+| G6 分岔 | 同样的模型为何有的学会有的学不会 | 窗口 ep400-1000；五种干预全败；静态量三层全等——读出功能自我延续 |
+| 跨层定律 | 量与方向哪个承载信号 | 量≈零、方向≈一切——验证器端与梯度端双实测（玩具规模警示随行）|
+| 记忆 | 哪些记忆该留给 agent | 六定律 + 控制器，生产环境验证（R/mind=0.500 边界）|
+| 洞见边界 | 洞见与幻觉怎么分 | 四道机械门：压缩/验证/迁移/新颖，代码把守 |
+
 
 ### 六行有理性定理
 
@@ -295,18 +309,23 @@ probe 矩阵     12+ 域判定完成（COMPRESSION ×3 / SATURATED ×6 / DISTRIB
 ## 仓库地图
 
 ```
+README.md / README.zh-CN.md   本文件（人话层 + 实验地图）
 docs/
-  RESEARCH_PLAN.md            注册表：P1-P264，每条含预测/判定/工件
-  DEEP_STRUCTURES.md          四层链 + SCR + verbalization gap + 边界综合
-  CHARACTER_OBSTRUCTION.md    genus 理论层（P132 修正 + P195 更正）
-  INTERESTINGNESS_FORMAL.md   双轴理论 + 判官景观
-  SHADOW_UNIFIED_THEOREM.md   影子统一定理 + 命题 4（标签必要性）
-  INSIGHT_BOUNDARY_BENCHMARK.md  基准正式规格 v1.2
-  NIGHT_SUMMARY_20261003.md   最近过夜会话总结（P185-P198）
-  THEOREM_FIVE_ROWS.md        六行定理陈述 + 证明标签
-intuition_pack/               MCP 插件（8 工具）
-sdb/                          Structure Discovery Benchmark
-p*.py, *.json                 ~170 实验脚本 + 430 份归档结果
+  RESEARCH_PLAN.md            注册表：P1-P268，每条含预测/判定/工件
+  SHADOW_UNIFIED_THEOREM.md   影子统一定理 + 命题 4/5（论文脊柱）
+  INSTRUMENT_BRIDGES.md       仪器桥梁注册表（6 座桥）
+  ...（其余 30+ 份专题文档见目录）
+experiments/                  全部 268 个实验：p*.py 脚本 + p*.json 工件存档
+                              （p263/p264/p265_seeds 为轨迹快照存档）
+papers/                       参考文献原文（OR-Library / Heegner 相关）
+formal/                       Lean 形式化（CWZ 勘误）
+registry_check.py             注册表 CI：数值复算 + 旗舰声明机械复验（一条命令）
+verify_certificate.py         六行定理证书链（50 位精度数值+代数双检）
+llm_client.py                 共享火山方舟客户端（双代码路径复算用）
+auto_scan_loop.py             每日域扫描基础设施（schtasks 07:30）
+intuition_pack/               MCP 插件：判官质检套件（见其 README）
+hallucination_gate/           MCP 插件：出端收费站 v2.1（见其 README）
+sdb/ g2b_package/ human_package/ poster/   各专项工具包
 ```
 
 ---

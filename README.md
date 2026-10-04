@@ -8,7 +8,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 264 numbered rows P1–P264, every row with prediction, verdict and artifacts).  This README is the
+(pre-registered experiment registry, 268 numbered rows P1–P268, every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
@@ -43,7 +43,7 @@ questions — one miss and it is a hallucination.
    That failure mode is itself a quantified result.
 
 **Entry points**: story-only → keep reading; reproduce numbers →
-[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (264 numbered experiments,
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (268 numbered experiments,
 each with prediction/verdict/artifacts); use the judge toolkit → the
 plugin section below.
 
@@ -376,6 +376,9 @@ ceiling), each with a registry pointer.
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
 | Shadow law | do inference and optimization both converge to shadows? | **YES — unified theorem** — exact shadow density + MDL preference + optimizer symmetry; the C∧V gate is the only fix |
 | Human intuition | can LLM-domain intuition exams be given to humans? | **NO — and that is a finding** — the six-row exam is opaque to untrained humans; on the redesigned learnable domain both species memorize, with different keys |
+| Capstone (external) | can the loop improve a boundary the world knows? | **YES** — on FunSearch's own OR3/Weibull suite both models' discovered heuristics beat First-Fit AND Best-Fit on held-out instances (Wilcoxon p<0.05) and the official public artifact (p=0.003), simulator-equivalence verified |
+| Direction law | does "quantity vs direction" repeat across scales? | **CANDIDATE REGISTERED** — verifier feedback and gradient dynamics both show quantity carries ~zero signal while direction carries all of it (toy-scale caveat) |
+| G6 (spontaneous experts) | why do identical learners bifurcate? | window located (ep400-1000, decidable at ep1000 r=0.854); FIVE levers excluded (aux, readout-only, reweight-void, geometry, screening); all static measures equal — functional self-continuation of the readout is the only predictor |
 
 ### Hallucination gate (v1)
 
@@ -539,21 +542,24 @@ convergence, not for deliberate cheating.
 ## 6. Repository map
 
 ```
+README.md / README.zh-CN.md   this file (plain-words layer + experiment map)
 docs/
-  RESEARCH_PLAN.md            the registry: P1-P249, every verdict + artifact
-  THEOREM_FIVE_ROWS.md        six-row theorem: statement + proof labels
-  CHARACTER_OBSTRUCTION.md    genus-theory layer (P132 closed + corrected)
-  DEEP_STRUCTURES.md          the two deep questions (P134 synthesis)
-  INTERESTINGNESS_FORMAL.md   two-axis theory, formal (P133)
-  MEMORY_GEOMETRY.md          six laws, five substrates
-  MEMORY_CONTROLLER.md        R1-R8 policy spec + DR interface layer
-  RAG_DESIGN_CONSTRAINTS.md   C1-C7 + DR1-DR10 design language
-  GEOMETRY_PROTOCOL.md        cross-substrate M1-M4 standard + law table
-  NIGHT_SUMMARY / HANDOFF     session summaries
-  fig_*.png                   the four figures above
-format_calibration.py         per-model judge calibration (P128-b)
-audit_provenance.py           registry artifact-citation audit
-p*.py, *.json                 ~100 experiment scripts + archived results
+  RESEARCH_PLAN.md            the registry: 268 numbered rows P1–P268
+  SHADOW_UNIFIED_THEOREM.md   shadow unified theorem + Props 4/5 (paper spine)
+  INSTRUMENT_BRIDGES.md       instrument bridge registry (6 bridges)
+  ...30+ topic documents (theorem lines, arc summaries, protocols)
+experiments/                  all 268 experiments: p*.py scripts + p*.json artifacts
+                              (p263/p264/p265_seeds hold trajectory snapshots)
+papers/                       reference literature (OR-Library, Heegner papers)
+formal/                       Lean formalization (CWZ erratum)
+registry_check.py             registry CI: numeric recomputation + flagship
+                              re-verification (single command)
+verify_certificate.py         six-row theorem certificate chain (50-dps)
+llm_client.py                 shared Volcano-Ark client (dual-code-path recompute)
+auto_scan_loop.py             daily domain-scan infrastructure (schtasks 07:30)
+intuition_pack/               MCP plugin: System-One judge QC suite (see its README)
+hallucination_gate/           MCP plugin: output toll booth v2.1 (see its README)
+sdb/ g2b_package/ human_package/ poster/  specialized toolkits
 ```
 
 ## 7. Law coupling
