@@ -198,6 +198,153 @@
      "p": 0.0273
     }
    }
+  },
+  "kimi-k2.8-preview": {
+   "rounds": [
+    {
+     "round": 1,
+     "dev_mean_excess": 13.2,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    # Best Fit, but avoid creating very small unusable remainders when\n    # another reasonably usable remainder is available.\n    limit = min(item // 2, capacity // 7)\n    best_index = -1\n    best_key = None\n\n    for i, remaining in enumerate(bins):\n        if remaining < item:\n            continue\n\n        leftover = remaining - item\n        is_fragment = 0 < leftover < limit\n        key = (is_fragment, leftover)\n\n        if best_key is None or key < best_key:\n            best_key = key\n            best_index = i\n\n    return best_index if best_index >= 0 else len(bins)\n"
+    },
+    {
+     "round": 2,
+     "dev_mean_excess": 11.3,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    # Best Fit: choose the feasible bin with the smallest leftover capacity.\n    # Ties are broken toward the larger remaining capacity, which tends to\n    # consolidate small residuals into fewer, fuller bins.\n    best_index = -1\n    best_leftover = None\n    best_remaining = -1\n\n    for i, remaining in enumerate(bins):\n        if remaining < item:\n            continue\n        leftover = remaining - item\n        if (best_leftover is None or leftover < best_leftover\n                or (leftover == best_leftover and remaining > best_remaining)):\n            best_leftover = leftover\n            best_remaining = remaining\n            best_index = i\n\n    return best_index if best_index >= 0 else len(bins)\n"
+    },
+    {
+     "round": 3,
+     "dev_mean_excess": 11.0,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    # Hybrid online rule:\n    #  - Large items (>= 1/4 of capacity): Best Fit, packing them as tightly\n    #    as possible so they don't fragment the open bins.\n    #  - Small items (< 1/4 of capacity): Worst Fit among feasible bins,\n    #    keeping nearly-full bins (and their tight residuals) intact for\n    #    future large items; this avoids sealing small unusable gaps early.\n    # Exact fits always win.\n    best_index = -1\n    best_leftover = None\n    worst_index = -1\n    worst_remaining = -1\n\n    small = 4 * item <= capacity\n\n    for i, remaining in enumerate(bins):\n        if remaining < item:\n            continue\n        if remaining == item:\n            return i\n        if small:\n            if remaining > worst_remaining:\n                worst_remaining = remaining\n                worst_index = i\n        else:\n            leftover = remaining - item\n            if best_leftover is None or leftover < best_leftover:\n                best_leftover = leftover\n                best_index = i\n\n    if small:\n        return worst_index if worst_index >= 0 else len(bins)\n    return best_index if best_index >= 0 else len(bins)\n"
+    },
+    {
+     "round": 4,
+     "dev_mean_excess": 11.3,
+     "err": null,
+     "code": "def place(item, bins, capacity):\n    # Space-aware hybrid online rule:\n    #  - Exact fits are always taken immediately.\n    #  - Large items (>= 1/4 of capacity): Best Fit, so they are packed\n    #    tightly and do not fragment open bins.\n    #  - Small items (< 1/4 of capacity): prefer a bin where, after\n    #    placement, the residual is still >= 1/4 of capacity (i.e. remains\n    #    \"usable\" by future large items); among such bins use Best Fit.\n    #    If no such bin exists, use Worst Fit so the resulting dead gap is\n    #    as large as possible (large gaps are more likely fillable later).\n    quarter = capacity / 4\n    small = item < quarter\n\n    best_index = -1\n    best_leftover = None\n    usable_index = -1\n    usable_leftover = None\n    worst_index = -1\n    worst_remaining = -1\n\n    for i, remaining in enumerate(bins):\n        if remaining < item:\n            continue\n        if remaining == item:\n            return i\n        leftover = remaining - item\n        if not small:\n            if best_leftover is None or leftover < best_leftover:\n                best_leftover = leftover\n                best_index = i\n        else:\n            if leftover >= quarter:\n                if usable_leftover is None or leftover < usable_leftover:\n                    usable_leftover = leftover\n                    usable_index = i\n            else:\n                if remaining > worst_remaining:\n                    worst_remaining = remaining\n                    worst_index = i\n\n    if not small:\n        return best_index if best_index >= 0 else len(bins)\n    if usable_index >= 0:\n        return usable_index\n    return worst_index if worst_index >= 0 else len(bins)\n"
+    }
+   ],
+   "best_dev": 11.0,
+   "final_eval": {
+    "OR3_hold": {
+     "he_excess": [
+      8,
+      9,
+      10,
+      10,
+      13,
+      8,
+      8,
+      8,
+      10,
+      7
+     ],
+     "ff_excess": [
+      10,
+      12,
+      11,
+      12,
+      11,
+      11,
+      10,
+      9,
+      10,
+      12
+     ],
+     "bf_excess": [
+      9,
+      12,
+      11,
+      11,
+      11,
+      10,
+      9,
+      9,
+      11,
+      10
+     ],
+     "he_mean": 9.1,
+     "ff_mean": 10.8,
+     "bf_mean": 10.3
+    },
+    "OR3_dev": {
+     "he_excess": [
+      10,
+      13,
+      7,
+      12,
+      12,
+      11,
+      11,
+      12,
+      11,
+      11
+     ],
+     "ff_excess": [
+      13,
+      12,
+      10,
+      12,
+      13,
+      13,
+      13,
+      15,
+      11,
+      11
+     ],
+     "bf_excess": [
+      13,
+      11,
+      11,
+      11,
+      12,
+      12,
+      10,
+      12,
+      11,
+      10
+     ],
+     "he_mean": 11.0,
+     "ff_mean": 12.3,
+     "bf_mean": 11.3
+    },
+    "Weibull": {
+     "he_excess": [
+      73,
+      67,
+      79,
+      70,
+      68
+     ],
+     "ff_excess": [
+      86,
+      84,
+      87,
+      84,
+      79
+     ],
+     "bf_excess": [
+      82,
+      76,
+      79,
+      81,
+      78
+     ],
+     "he_mean": 71.4,
+     "ff_mean": 84.0,
+     "bf_mean": 79.2
+    },
+    "wilcoxon_vs_FF_hold": {
+     "stat": 4.5,
+     "p": 0.0312
+    },
+    "wilcoxon_vs_BF_hold": {
+     "stat": 7.5,
+     "p": 0.0469
+    }
+   }
   }
  }
 }
