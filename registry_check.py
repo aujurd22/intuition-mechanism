@@ -71,6 +71,97 @@ try:
 except FileNotFoundError:
     print("[SKIP] p186c artifact")
 
+# --- P259/P262 flagship: external bin-packing claim, machine re-verification ---
+# The sprint's headline external claim must be as reproducible as the math rows:
+# re-execute the stored discovered heuristics on the OR3 holdout and re-derive
+# the double win over First-Fit / Best-Fit, plus the P262 simulator equivalence.
+try:
+    import random as _rand
+
+    cap_ds = json.load(open("funsearch_datasets.json", encoding="utf-8"))
+    cap_p259 = json.load(open("p259_capstone_upgrade.json", encoding="utf-8"))
+    HOLD = [f"u500_{i:02d}" for i in range(10, 20)]
+
+    def _ff(inst):
+        cap, items = inst["capacity"], inst["items"]
+        bins = []
+        for it in items:
+            for i in range(len(bins)):
+                if bins[i] >= it - 1e-9:
+                    bins[i] -= it
+                    break
+            else:
+                bins.append(cap - it)
+        return len(bins)
+
+    def _bf(inst):
+        cap, items = inst["capacity"], inst["items"]
+        bins = []
+        for it in items:
+            fits = [i for i in range(len(bins)) if bins[i] >= it - 1e-9]
+            if fits:
+                bins[min(fits, key=lambda k: bins[k])] -= it
+            else:
+                bins.append(cap - it)
+        return len(bins)
+
+    def _l1(inst):
+        return -(-sum(inst["items"]) // inst["capacity"])
+
+    def _sim(inst, place):
+        cap, items = inst["capacity"], inst["items"]
+        bins = []
+        for item in items:
+            i = int(place(item, list(bins), cap))
+            if i < 0 or i > len(bins):
+                raise ValueError("bad index")
+            if i == len(bins):
+                bins.append(cap - item)
+            else:
+                if bins[i] < item - 1e-9:
+                    raise ValueError("does not fit")
+                bins[i] -= item
+        return len(bins)
+
+    for model in ("glm-5.3-flash", "kimi-k2.8-preview"):
+        rounds = cap_p259["models"][model]["rounds"]
+        ok_rounds = [r for r in rounds if r["err"] is None
+                     and r["dev_mean_excess"] is not None]
+        best = min(ok_rounds, key=lambda r: r["dev_mean_excess"])
+        ns = {}
+        exec(best["code"], ns)
+        fn = ns["place"]
+        OR3i = cap_ds["OR3"]
+        he = [_sim(OR3i[k], fn) - _l1(OR3i[k]) for k in HOLD]
+        ff = [_ff(OR3i[k]) - _l1(OR3i[k]) for k in HOLD]
+        bf = [_bf(OR3i[k]) - _l1(OR3i[k]) for k in HOLD]
+        short = model.split("-")[0]
+        check(f"P259 flagship [{short}]: holdout excess < First-Fit",
+              sum(he) < sum(ff), True)
+        check(f"P259 flagship [{short}]: holdout excess < Best-Fit",
+              sum(he) < sum(bf), True)
+
+    # P262: FunSearch official policy (priority = -(bins-item), argmax over
+    # valid) must equal our Best-Fit per instance (simulator equivalence).
+    mism = 0
+    for dname in ("OR3", "Weibull 5k"):
+      for k, inst in cap_ds[dname].items():
+        cap, items = inst["capacity"], inst["items"]
+        bins_fs = [cap] * len(items)
+        used = set()
+        for item in items:
+            valid = [i for i in range(len(bins_fs)) if bins_fs[i] - item >= 0]
+            best = max(valid, key=lambda i: -(bins_fs[i] - item))
+            bins_fs[best] -= item
+            used.add(best)
+        if len(used) != _bf(inst):
+            mism += 1
+    check("P262 simulator equivalence: official policy == our Best-Fit (25/25)",
+          mism == 0, True)
+except Exception as ex:
+    print(f"[FAIL] P259/P262 flagship re-verification crashed: {ex}")
+    FAILS.append("P259/P262 flagship")
+
 print()
 if FAILS:
     print(f"REGISTRY CI: {len(FAILS)} FAILURES: {FAILS}")
