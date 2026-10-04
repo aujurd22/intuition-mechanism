@@ -1,0 +1,25 @@
+{
+ "summary": {
+  "control": {
+   "mean": 0.2241,
+   "std": 0.2836,
+   "gen_ratio": 0.3
+  },
+  "step0_aux": {
+   "mean": 0.269,
+   "std": 0.1845,
+   "gen_ratio": 0.2
+  },
+  "window_aux": {
+   "mean": 0.3138,
+   "std": 0.3103,
+   "gen_ratio": 0.3
+  },
+  "early_aux": {
+   "mean": 0.05,
+   "std": 0.0548,
+   "gen_ratio": 0.0
+  }
+ },
+ "h_window": "NOT CONFIRMED"
+}

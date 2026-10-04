@@ -1,0 +1,87 @@
+{
+ "deepseek-v4-flash": {
+  "labels": {
+   "9": "NO",
+   "11": "NO",
+   "13": "NO",
+   "15": "NO",
+   "17": "NO",
+   "19": "NO",
+   "21": "NO",
+   "25": "NO",
+   "27": "NO",
+   "29": "NO",
+   "33": "NO",
+   "37": "NO",
+   "39": "NO",
+   "51": "NO",
+   "57": "NO",
+   "69": "NO",
+   "87": "NO",
+   "93": "NO",
+   "99": "NO",
+   "111": "NO",
+   "123": "NO",
+   "141": "NO"
+  },
+  "model_wrong_set": [
+   13,
+   17
+  ],
+  "stated_rule_code": "def lands(d: int) -> bool:\n    # Rule: d is a perfect square or d is a prime number\n    if d < 2:\n        return d == 1  # 1 is a perfect square\n    # Check perfect square\n    root = int(d**0.5)\n    if root * root == d:\n        return True\n    # Check prime\n    if d % 2 == 0:\n        return False\n    for i in range(3, int(d**0.5) + 1, 2):\n        if d % i == 0:\n            return False\n    return True\n",
+  "exec_ok": true,
+  "exec_err": null,
+  "stated_vs_own_agreement": 14,
+  "stated_vs_truth_correct": 16,
+  "stated_rule_wrong_set": [
+   9,
+   11,
+   19,
+   25,
+   29,
+   37
+  ]
+ },
+ "doubao-seed-2.1-lite": {
+  "labels": {
+   "9": "NO",
+   "11": "LAND",
+   "13": "NO",
+   "15": "NO",
+   "17": "LAND",
+   "19": "LAND",
+   "21": "NO",
+   "25": "NO",
+   "27": "NO",
+   "29": "LAND",
+   "33": "NO",
+   "37": "LAND",
+   "39": "NO",
+   "51": "NO",
+   "57": "NO",
+   "69": "NO",
+   "87": "NO",
+   "93": "NO",
+   "99": "NO",
+   "111": "NO",
+   "123": "NO",
+   "141": "NO"
+  },
+  "model_wrong_set": [
+   11,
+   13,
+   19,
+   29,
+   37
+  ],
+  "stated_rule_code": "def lands(d: int) -> bool:\n    # your actual decision rule\n    ...\n",
+  "exec_ok": true,
+  "exec_err": null,
+  "stated_vs_own_agreement": 17,
+  "stated_vs_truth_correct": 20,
+  "stated_rule_wrong_set": [
+   13,
+   17
+  ]
+ }
+}
