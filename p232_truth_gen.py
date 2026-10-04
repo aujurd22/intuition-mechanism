@@ -61,7 +61,7 @@ def main():
 
     labeled = []
     for desc, body, expect_good in RULES:
-        ns = {}
+        ns = {"random": random}
         code = "def rule(lst):\n" + body + "\n    return sorted(s, reverse=True)[:5]\n"
         try:
             exec(code, ns)
@@ -75,9 +75,10 @@ def main():
             rng = random.Random(1000 + t)
             lst = [rng.randint(0, 100) for _ in range(20)]
             try:
-                sc += rule_fn(lst)
-            except Exception:
+                sc += sum(rule_fn(lst))
+            except Exception as _ex:
                 ok = False
+                print(f"  RULE RUNTIME ERR: {desc[:30]}: {_ex}")
                 break
         if not ok:
             labeled.append({"desc": desc, "good": None, "error": "runtime"})

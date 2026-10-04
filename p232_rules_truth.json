@@ -3,208 +3,208 @@
  "labeled": [
   {
    "desc": "sort descending, first five",
-   "good": null,
-   "error": "runtime"
+   "good": true,
+   "score_over_opt": 1.0
   },
   {
    "desc": "closest to 100",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "farthest from mean",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5090437304434099
   },
   {
    "desc": "last digit descending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6444325726932764
   },
   {
    "desc": "closest to mean",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6005494924826376
   },
   {
    "desc": "ascending first five",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "above 50, five largest",
-   "good": null,
-   "error": "runtime"
+   "good": true,
+   "score_over_opt": 1.0
   },
   {
    "desc": "divisor count descending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6946500801343204
   },
   {
    "desc": "square descending",
-   "good": null,
-   "error": "runtime"
+   "good": true,
+   "score_over_opt": 1.0
   },
   {
    "desc": "five largest odds",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.8753720522017858
   },
   {
    "desc": "five largest evens",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.8198885751354652
   },
   {
    "desc": "farthest from 50",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6129893917423491
   },
   {
    "desc": "five largest primes",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.8118751430970008
   },
   {
    "desc": "five smallest",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "mod 7 descending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6015416316873999
   },
   {
    "desc": "above median, five largest",
-   "good": null,
-   "error": "runtime"
+   "good": true,
+   "score_over_opt": 1.0
   },
   {
    "desc": "bit length descending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.943066473326719
   },
   {
    "desc": "largest digit sums",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.9027703579332977
   },
   {
    "desc": "random shuffle five",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5962756620621232
   },
   {
    "desc": "closest to 75",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.8548424025032436
   },
   {
    "desc": "largest squares",
-   "good": null,
-   "error": "runtime"
+   "good": true,
+   "score_over_opt": 1.0
   },
   {
    "desc": "every other number",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5871174540181638
   },
   {
    "desc": "descending even positions",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.8906357322750516
   },
   {
    "desc": "divisible by 3, five largest",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.7483019155918492
   },
   {
    "desc": "mod 10 ascending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5401053193925056
   },
   {
    "desc": "first five as-is",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5607876058917806
   },
   {
    "desc": "closest to 30",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.34373807524994276
   },
   {
    "desc": "farthest from 60",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.34236434404334887
   },
   {
    "desc": "closest mapping to 60..100",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.9094863771655347
   },
   {
    "desc": "five smallest dup",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "fewest digits first",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.4328016484774479
   },
   {
    "desc": "smallest digit sums",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.29672594062428453
   },
   {
    "desc": "divisible by 5, first five",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.39800045791040223
   },
   {
    "desc": "ascending by square",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "closest to zero",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.17660077844768376
   },
   {
    "desc": "every third number",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5787987483782341
   },
   {
    "desc": "five most frequent",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.5848279020071739
   },
   {
    "desc": "reverse digit sum sort",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.9027703579332977
   },
   {
    "desc": "most divisors",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6946500801343204
   },
   {
    "desc": "last five as-is",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.6071128749141419
   },
   {
    "desc": "tens digit ascending",
-   "good": null,
-   "error": "runtime"
+   "good": false,
+   "score_over_opt": 0.20750973059604674
   }
  ]
 }
