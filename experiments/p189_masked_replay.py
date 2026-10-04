@@ -8,6 +8,7 @@ Condition LABEL: same values with INT/NOT labels -> one-sentence rule.
 """
 import os, sys, json, re, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 import os as _os
 MODELS = _os.environ.get("P189_MODELS", "deepseek-v4-flash,doubao-seed-2.1-lite,kimi-k2.8-preview").split(",")
 ROWS = [8.0, 12.0, 20.0, 32.0, 104.0, 200.0]

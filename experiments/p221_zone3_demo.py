@@ -2,6 +2,7 @@
 goes through gate_zone3 and gets SHADOW-DETECTED with concrete failing rows."""
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hallucination_gate.gate import gate_zone3
 
 def main():

@@ -15,6 +15,8 @@ Prediction if the format effect is a deepseek-family property:
 forced > 50% (binomial) while absolute rho ~ 0.
 """
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 os.environ.setdefault("ARK_MODEL", "deepseek-v4-flash")
 import sys
 sys.path.insert(0, ".")

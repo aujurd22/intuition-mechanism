@@ -37,7 +37,7 @@ for f, pids in sorted(cited.items()):
         if os.path.exists(name) or os.path.exists("docs/" + name):
             return True
         try:
-            candidates = ["."] + [d for d in os.listdir(".")
+            candidates = [".", "experiments/data"] + [d for d in os.listdir(".")
                                   if os.path.isdir(d) and not d.startswith(".")]
             return any(fn.endswith(name)
                        for cand in candidates
@@ -49,6 +49,14 @@ for f, pids in sorted(cited.items()):
     else:
         missing.append((base, sorted(pids)))
 
-print(f"cited files: {len(cited)}, present: {present}, MISSING: {len(missing)}")
+# rows explicitly marked inline/absent (ARTIFACT-NOTE) are acknowledged
+acknowledged = [(f, pids) for f, pids in missing
+                if all("ARTIFACT-NOTE" in entries.get(p, "") for p in pids)]
+missing = [(f, pids) for f, pids in missing if (f, pids) not in acknowledged]
+
+print(f"cited files: {len(cited)}, present: {present}, "
+      f"acknowledged-absent: {len(acknowledged)}, MISSING: {len(missing)}")
+for f, pids in acknowledged:
+    print(f"  ABSENT-ACKNOWLEDGED {f}   cited by {','.join(pids)}")
 for f, pids in missing:
     print(f"  MISSING {f}   cited by {','.join(pids)}")

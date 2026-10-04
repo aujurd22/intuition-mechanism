@@ -28,6 +28,7 @@ import mpmath as mm
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from p19b_z12 import x12, rhs_identity  # noqa: E402
 from llm_client import ask_chat  # noqa: E402
 

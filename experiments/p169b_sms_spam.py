@@ -11,6 +11,7 @@ Jev reference: 96.5% acc, gate(>=0.95): coverage 63%, acc 95.5%, 432ms.
 """
 import sys, os, json, re, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 import llm_client
 
 # ---- load ----

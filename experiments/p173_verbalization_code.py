@@ -12,6 +12,7 @@ structure is uniquely hard to verbalize).
 """
 import sys, os, json, re, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 import llm_client
 
 items = json.load(open("codefix_items.json", encoding="utf-8"))

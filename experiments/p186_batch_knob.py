@@ -14,6 +14,7 @@ error ids — prediction: small chunks >> big chunks.
 import os, sys, json, re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 MODELS = ["deepseek-v4-flash", "doubao-seed-2.1-lite"]
 CHUNKS = [8, 32]
 SEEDS = [0, 1]

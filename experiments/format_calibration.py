@@ -19,6 +19,7 @@ absolute 1-10 rating of the union identities; recommendation:
 import os
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 import json, re, random
 from p33_n20 import params_for, DEG, NS
 from llm_client import ask_chat

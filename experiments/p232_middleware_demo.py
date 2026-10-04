@@ -5,6 +5,7 @@ Case 2: near-integer trap (d=978) — should ship ABSTAIN round 1.
 Case 3: non-row (d=11) — should pass round 1, ship VERIFIED."""
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hallucination_gate.middleware import gated_ask
 
 def main():

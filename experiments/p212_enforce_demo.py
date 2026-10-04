@@ -4,6 +4,7 @@ Case 2: glm on d=978 (near-integer trap) -> machine ABSTAINs -> ship honestly la
 Case 3: glm on d=5 (plain row) -> VERIFIED first pass -> ship with evidence."""
 import os, sys, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from hallucination_gate.gate import enforce
 from p33_n20 import params_for
 

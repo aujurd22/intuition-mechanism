@@ -22,6 +22,7 @@ import urllib.request
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import BASE, KEY  # noqa: E402
 from p17_llm import fmt, parse_digit, fewshot_prompt, SIGS  # noqa: E402
 from p15_envelope import make_dataset, poch_cum  # noqa: E402

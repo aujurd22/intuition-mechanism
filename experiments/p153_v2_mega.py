@@ -16,6 +16,7 @@ import random
 import re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 MODELS = ["deepseek-v4-flash", "doubao-seed-2.1-lite", "kimi-k2.8-preview"]
 SEEDS = [0, 1, 2]
 CHUNK = 10

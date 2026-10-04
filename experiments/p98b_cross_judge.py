@@ -4,6 +4,8 @@ minimax-m3.  Identical pair lists (deg-matched 19 + utility 8),
 identical prompts, swap-controlled.  Verdicts per judge, then
 agreement table."""
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 os.environ.setdefault("HF_HUB_OFFLINE", "0")
 import sys
 sys.path.insert(0, ".")

@@ -4,6 +4,7 @@ The model's raw claims pass through gate_claim; report the four-status ledger
 and what would have reached the user with/without the gate."""
 import os, sys, json, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 MODELS = ["doubao-seed-2.1-lite", "glm-5.3-flash"]
 PROBES = [5, 13, 17, 978, 11, 421]
 TRUTH = {5: "RATIONAL", 13: "RATIONAL", 17: "RATIONAL", 978: "NOT", 11: "NOT", 421: "NOT"}

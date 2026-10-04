@@ -25,6 +25,7 @@ from math import comb
 import mpmath as mm
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import ask  # noqa: E402
 
 mm.mp.dps = 50

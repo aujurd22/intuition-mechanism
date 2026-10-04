@@ -9,6 +9,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import ask_chat as ask  # noqa: E402
 
 PROMPT = """You are given six integer sequences grouped into three families. Each family is defined by a shared generation rule; the two members of a family are different instances of the SAME rule.

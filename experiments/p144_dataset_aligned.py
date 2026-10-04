@@ -10,6 +10,7 @@ Emotion 58.5% — text-classification family.
 """
 import sys, os, json, csv, random, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import ask_chat
 
 AG_LABELS = {1: "World", 2: "Sports", 3: "Business", 4: "Sci/Tech"}

@@ -8,6 +8,7 @@ verifier as ground-truth arbiter.
 import sys, os, json, re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from sympy import isprime
 from intuition_pack.verifiers import run_verifier, register_constraint
 

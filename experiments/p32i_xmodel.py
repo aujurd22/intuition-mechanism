@@ -31,6 +31,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import ask_chat  # noqa: E402
 from p32h_run import parse_answer  # noqa: E402
 
@@ -62,6 +63,7 @@ def truncate_terms(body, keep):
 
 def main():
     arm = sys.argv[1]
+    model_tag = sys.argv[2]
     assert arm in ("S", "T")
     design = json.load(open("p32h_design.json"))
     mats = open("p32h_materials.txt", encoding="utf-8").read()
@@ -83,7 +85,7 @@ def main():
                    "Reason carefully, keep it under 200 words, and end with "
                    "exactly one line: ANSWER: A (or B / C / NEW).")
 
-    out_path = f"p32i_arm{arm}_answers.json"
+    out_path = f"p32i_{model_tag}_arm{arm}_answers.json"
     answers = {}
     if os.path.exists(out_path):
         answers = json.load(open(out_path))
@@ -115,7 +117,7 @@ def main():
         else:
             new_n += 1
             n_new += hit
-    print(f"\narm {arm}: total {n_ok}/40 | existing {n_ex}/{ex_n} "
+    print(f"\narm {arm} [{model_tag}]: total {n_ok}/40 | existing {n_ex}/{ex_n} "
           f"| new {n_new}/{new_n}")
 
 

@@ -21,6 +21,7 @@ import mpmath as mm
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 from llm_client import ask_chat  # noqa: E402
 
 mm.mp.dps = 40

@@ -33,6 +33,7 @@ to dispositive).
 """
 import os, sys, json, random, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 from p33_n20 import params_for
 from llm_client import ask_chat

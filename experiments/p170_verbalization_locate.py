@@ -19,6 +19,7 @@ Outcomes:
 """
 import sys, os, json, re, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 setup = json.load(open("p156_underdet_setup.json", encoding="utf-8"))
 elicited = json.load(open("p156_elicited_rules.json", encoding="utf-8"))
 disc = setup["disc"]

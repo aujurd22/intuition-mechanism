@@ -3,6 +3,7 @@ same rule injection — only ask (Responses API, reasoning minimal) vs
 ask_chat (chat completions, thinking disabled) varies."""
 import os, sys, json, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root
 
 def parse(ans, n):
     m = {}

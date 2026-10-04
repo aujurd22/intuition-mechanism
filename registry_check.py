@@ -4,7 +4,8 @@ registry's stored numbers. Three historical bugs (nearest_integer, P172,
 P186) would ALL have been caught by this check had it existed.
 v1 coverage: P172/P195 locus, P185 landing, P188 character table, P196
 genus landing, P198/P205 truths, P186-c/d accuracies, P204 grid."""
-import json, sys
+import json, sys, os
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "experiments"))
 
 FAILS = []
 def check(name, actual, expected):
