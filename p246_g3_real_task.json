@@ -1,0 +1,83 @@
+{
+ "baseline_ms": 47.8,
+ "models": {
+  "kimi-k2.8-preview": {
+   "rounds": [
+    {
+     "round": 1,
+     "speedup": 142.9,
+     "n_fail": 0,
+     "err": null,
+     "fb": "Your submission PASSED correctness on all 200 hidden values. Time: 0.3 ms vs baseline 47.8 ms = speedup 142.9x. Make it faster while staying correct. Resubmit.",
+     "code": "import math\n\ndef eval_x6(d):\n    r = math.sqrt(d * (1.0 / 6.0))\n    pi = math.pi\n    q = math.exp(-2.0 * pi * r)\n    logA = 0.0\n    E = 0.0\n    p = q\n    n = 1\n    tol = 1e-35\n    log1p = math.log1p\n    while True:\n        p2 = p * p\n        p3 = p2 * p\n        p6 = p3 * p3\n        E += n * (p / (1.0 - p) + 3.0 * (p3 / (1.0 - p3))\n                  - 2.0 * (p2 / (1.0 - p2)) - 6.0 * (p6 / (1.0 - p6)))\n        logA += log1p(-p) + log1p(-p2) + log1p(-p3) + log1p(-p6)\n        if p < tol:\n            break\n        n += 1\n        p *= q\n    return 2.0 + (1.0 + 6.0 * E) * math.exp(pi * r - logA)"
+    },
+    {
+     "round": 2,
+     "speedup": 147.7,
+     "n_fail": 0,
+     "err": null,
+     "fb": "Your submission PASSED correctness on all 200 hidden values. Time: 0.3 ms vs baseline 47.8 ms = speedup 147.7x. Make it faster while staying correct. Resubmit.",
+     "code": "import math\n\ndef eval_x6(d):\n    pi = math.pi\n    t = pi * math.sqrt(d * 0.16666666666666666)\n    q = math.exp(-2.0 * t)\n    log1p = math.log1p\n    logA = 0.0\n    E = 0.0\n    p = q\n    n = 1.0\n    while True:\n        p2 = p * p\n        p3 = p2 * p\n        p6 = p3 * p3\n        E += n * (p / (1.0 - p) + 3.0 * (p3 / (1.0 - p3))\n                  - 2.0 * (p2 / (1.0 - p2)) - 6.0 * (p6 / (1.0 - p6)))\n        logA += log1p(-p) + log1p(-p2) + log1p(-p3) + log1p(-p6)\n        if p < 1e-35:\n            break\n        n += 1.0\n        p *= q\n    return 2.0 + (1.0 + 6.0 * E) * math.exp(t - logA)\n"
+    },
+    {
+     "round": 3,
+     "speedup": 297.5,
+     "n_fail": 1,
+     "err": null,
+     "fb": "Your submission FAILED correctness on 1 hidden values (relative error > 1e-9): d=1: ref=8.000000000, yours=7.999998758 (rel 1.6e-07). Improve truncation/precision. Resubmit.",
+     "code": "import math\n\ndef eval_x6(d):\n    pi = math.pi\n    t = pi * math.sqrt(d / 6.0)\n    q = math.exp(-2.0 * t)\n    log1p = math.log1p\n    logA = 0.0\n    E = 0.0\n    p = q\n    n = 1.0\n    while True:\n        p2 = p * p\n        p3 = p2 * p\n        E += n * (p / (1.0 - p) + 3.0 * (p3 / (1.0 - p3))\n                  - 2.0 * (p2 / (1.0 - p2))\n                  - 6.0 * (p3 * p3 / (1.0 - p3 * p3)))\n        logA += log1p(-p) + log1p(-p2) + log1p(-p3)\n        if p < 1e-12:\n            break\n        n += 1.0\n        p *= q\n    logA += log1p(-p * p)\n    return 2.0 + (1.0 + 6.0 * E) * math.exp(t - logA)\n"
+    }
+   ],
+   "best": {
+    "speedup": 147.7,
+    "round": 2
+   }
+  },
+  "glm-5.3-flash": {
+   "rounds": [
+    {
+     "round": 1,
+     "speedup": 71.4,
+     "n_fail": 0,
+     "err": null,
+     "fb": "Your submission PASSED correctness on all 200 hidden values. Time: 0.7 ms vs baseline 47.8 ms = speedup 71.4x. Make it faster while staying correct. Resubmit.",
+     "code": "import math\n\ndef eval_x6(d):\n    lq = -math.pi * math.sqrt(2.0 * d / 3.0)   # log(q), q = exp(-2*pi*sqrt(d/6))\n    q = math.exp(lq)\n    log1p = math.log1p\n\n    # S(k) = sum_{n>=1} n * x^n / (1 - x^n),  x = q^k\n    S = []\n    for k in (1, 2, 3, 6):\n        x = q ** k\n        s = 0.0\n        p = x\n        n = 1\n        while True:\n            t = n * p / (1.0 - p)\n            if t < 1e-35:\n                break\n            s += t\n            n += 1\n            p *= x\n        S.append(s)\n\n    Ec = 4.0 + 24.0 * (S[0] + 3.0 * S[2] - 2.0 * S[1] - 6.0 * S[3])\n\n    # log of W6 = eta(q) eta(q^2) eta(q^3) eta(q^6)\n    lw = 0.0\n    for k in (1, 2, 3, 6):\n        lw += (k * lq) * (1.0 / 24.0)   # x^(1/24) contribution\n        x = q ** k\n        p = x\n        while p > 1e-18:                # ln(1-p) ~ -p, tail negligible\n            lw += log1p(-p)\n            p *= x\n\n    W6 = math.exp(lw)\n    return Ec / (4.0 * W6) + 2.0\n"
+    },
+    {
+     "round": 2,
+     "speedup": 167.9,
+     "n_fail": 0,
+     "err": null,
+     "fb": "Your submission PASSED correctness on all 200 hidden values. Time: 0.3 ms vs baseline 47.8 ms = speedup 167.9x. Make it faster while staying correct. Resubmit.",
+     "code": "import math\n\ndef eval_x6(d):\n    exp = math.exp\n    log1p = math.log1p\n    lq = -math.pi * math.sqrt(2.0 * d / 3.0)   # log(q), q = exp(-2*pi*sqrt(d/6))\n    q = exp(lq)\n    q2 = q * q\n    q3 = q2 * q\n    q6 = q3 * q3\n\n    # EcS = S(1) + 3*S(3) - 2*S(2) - 6*S(6)\n    EcS = 0.0\n    for x, c in ((q, 1.0), (q2, -2.0), (q3, 3.0), (q6, -6.0)):\n        if x < 1e-37:\n            continue  # entire S(k) negligible\n        p = x\n        n = 1\n        s = 0.0\n        while True:\n            t = n * p / (1.0 - p)\n            if t < 1e-35:\n                break\n            s += t\n            n += 1\n            p *= x\n        EcS += c * s\n\n    # log W6 = sum_k [ k*lq/24 + sum_n log1p(-q^(k n)) ]\n    # sum of k/24 over k=1,2,3,6 is 1/2, so leading term is lq/2\n    lw = 0.5 * lq\n    for x in (q, q2, q3, q6):\n        p = x\n        while p > 1e-19:   # log1p(-p) ~ -p; tail below 1e-19 is negligible\n            lw += log1p(-p)\n            p *= x\n\n    return (4.0 + 24.0 * EcS) / (4.0 * exp(lw)) + 2.0\n"
+    },
+    {
+     "round": 3,
+     "speedup": 53.2,
+     "n_fail": 21,
+     "err": null,
+     "fb": "Your submission FAILED correctness on 21 hidden values (relative error > 1e-9): d=1: ref=8.000000000, yours=7.528553012 (rel 5.9e-02); d=2: ref=9.348469228, yours=9.247719063 (rel 1.1e-02); d=3: ref=12.000000000, yours=11.969823608 (rel 2.5e-03); d=4: ref=15.547351904, yours=15.536512528 (rel 7.0e-0",
+     "code": "import math\n\ndef eval_x6(d):\n    lq = -math.pi * math.sqrt(2.0 * d / 3.0)   # log(q), q = exp(-2*pi*sqrt(d/6))\n    q = math.exp(lq)\n    N = int(40.0 / (-lq)) + 1                  # q^N ~ e^-40: beyond this everything negligible\n\n    # S(k) = sum_{M>=1} sigma1(M) * q^(kM), so\n    # EcS = sum_M sigma1(M) * (q^M - 2 q^(2M) + 3 q^(3M) - 6 q^(6M))\n    sig = [0] * (N + 1)\n    for i in range(1, N + 1):\n        for j in range(i, N + 1, i):\n            sig[j] += i\n\n    EcS = 0.0\n    p = q\n    for m in range(1, N + 1):\n        c = 1.0\n        if m % 2 == 0:\n            c -= 2.0\n        if m % 3 == 0:\n            c += 3.0\n        if m % 6 == 0:\n            c -= 6.0\n        EcS += sig[m] * c * p\n        p *= q\n\n    # log W6 = lq/2 + sum_m a_m * log1p(-q^m), a_m = #{k in {1,2,3,6} : k | m}\n    lw = 0.5 * lq\n    p = q\n    log1p = math.log1p\n    for m in range(1, N + 1):\n        a = 1\n        if m % 2 == 0:\n            a += 1\n        if m % 3 == 0:\n            a += 1\n        if m % 6 == 0:\n            a += 1\n        for _ in range(a):\n            lw += log1p(-p)\n        p *= q\n\n    return (4.0 + 24.0 * EcS) / (4.0 * math.exp(lw)) + 2.0\n"
+    }
+   ],
+   "best": {
+    "speedup": 167.9,
+    "round": 2
+   }
+  }
+ },
+ "summary": {
+  "E1_generation_improves_boundary": true,
+  "E2_verifier_gated": true,
+  "best_per_model": {
+   "kimi-k2.8-preview": {
+    "speedup": 147.7,
+    "round": 2
+   },
+   "glm-5.3-flash": {
+    "speedup": 167.9,
+    "round": 2
+   }
+  }
+ }
+}
