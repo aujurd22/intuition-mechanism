@@ -1,0 +1,8 @@
+{
+ "arm": "control",
+ "seed": 27,
+ "screen_align": 0.0625,
+ "dropped": false,
+ "post_align": -0.0842,
+ "final_test": 0.0345
+}

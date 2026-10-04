@@ -1,0 +1,8 @@
+{
+ "arm": "all_lrdrop",
+ "seed": 2,
+ "screen_align": 0.299,
+ "dropped": true,
+ "post_align": 0.1287,
+ "final_test": 0.0172
+}

@@ -1,0 +1,22 @@
+{
+ "median": 0.0079,
+ "n": 40,
+ "H_marker_control_corr": 0.161,
+ "low_half_n": 20,
+ "H_causal_screen_lowhalf": {
+  "mean_delta": -0.0957,
+  "better": 8,
+  "worse": 12,
+  "wilcoxon_p": 0.55
+ },
+ "H_causal_all_allseeds": {
+  "mean_delta": -0.047,
+  "better": 18,
+  "worse": 21,
+  "wilcoxon_p": 0.8342
+ },
+ "mediation_post_align_delta_lowhalf": -0.0799,
+ "gen_ratio_control": 0.2,
+ "gen_ratio_screen_lrdrop": 0.12,
+ "gen_ratio_all_lrdrop": 0.07
+}
