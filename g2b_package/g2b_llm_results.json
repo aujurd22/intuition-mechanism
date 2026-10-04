@@ -1,0 +1,32 @@
+{
+ "deepseek-v4-flash": {
+  "exam1_acc": 1.0,
+  "exam1_parsed": 12,
+  "calibration_sure_minus_guess": null,
+  "scope_answer": "The rule appears to be: if the singular ends in a voiced stop (b, d, g) and the vowel before it is back (a, u), the plural suffix is -um; if the vowel is front (i), the suffix is -is. If the singular ends in a voiceless stop (p, t, k) and the vowel before it is back (a, u), the suffix is -is; if the vowel is front (i), the suffix is -ok. This method should hold for all words with the given alphabet and these consonant/vowel combinations, but it may fail if there are irregular forms or if the pat",
+  "exam2_acc": 0.375,
+  "exam2_parsed": 8,
+  "raw1": "1. badum SURE  \n2. gadum SURE  \n3. padum SURE  \n4. digis SURE  \n5. pudis SURE  \n6. bidis SURE  \n7. batis SURE  \n8. takis SURE  \n9. datis SURE  \n10. bikok SURE  \n11. dipok SURE  \n12. kitok SURE  \n\nSCOPE: The rule appears to be: if the singular ends in a voiced stop (b, d, g) and the vowel before it is back (a, u), the plural suffix is -um; if the vowel is front (i), the suffix is -is. If the singular ends in a voiceless stop (p, t, k) and the vowel before it is back (a, u), the suffix is -is; if the vowel is front (i), the suffix is -ok. This method should hold for all words with the given alphabet and these consonant/vowel combinations, but it may fail if there are irregular forms or if the pattern depends on something else (e.g., syllable stress or word length) not shown in the examples.",
+  "raw2": "14. um  \n15. ok  \n16. um  \n17. is  \n18. ok  \n19. um  \n20. is  \n21. ok"
+ },
+ "glm-5.3-flash": {
+  "exam1_acc": 0.417,
+  "exam1_parsed": 12,
+  "calibration_sure_minus_guess": null,
+  "scope_answer": "The suffix is determined by the noun's vowel: a\u2192-um, i\u2192-is, u\u2192-ok. This could fail if the rule actually depends on some other hidden feature (e.g., consonant class) that happens to correlate with the vowel in the 16 examples, or for words with vowels not seen in the data.",
+  "exam2_acc": 0.0,
+  "exam2_parsed": 8,
+  "raw1": "1. badum SURE\n2. gadum SURE\n3. padum SURE\n4. digis SURE\n5. pudok SURE\n6. bidis SURE\n7. batum SURE\n8. takum SURE\n9. datum SURE\n10. bikis SURE\n11. dipis SURE\n12. kitum SURE\nSCOPE: The suffix is determined by the noun's vowel: a\u2192-um, i\u2192-is, u\u2192-ok. This could fail if the rule actually depends on some other hidden feature (e.g., consonant class) that happens to correlate with the vowel in the 16 examples, or for words with vowels not seen in the data.",
+  "raw2": ""
+ },
+ "doubao-seed-2.1-lite": {
+  "exam1_acc": 0.833,
+  "exam1_parsed": 12,
+  "calibration_sure_minus_guess": null,
+  "scope_answer": "This method is valid for all words ending in the consonants b, d, g, k, p, t, as every observed example follows the rule based only on the final consonant. It could fail if unobserved consonant endings or vowel endings (not present in the training set) have different plural rules, or if there are hidden exceptions not captured in the 16 training examples.",
+  "exam2_acc": 0.625,
+  "exam2_parsed": 8,
+  "raw1": "1. badum SURE\n2. gadum SURE\n3. padum SURE\n4. digis SURE\n5. pudis SURE\n6. bidis SURE\n7. batum SURE\n8. takis SURE\n9. datum SURE\n10. bikok SURE\n11. dipok SURE\n12. kitok SURE\nSCOPE: This method is valid for all words ending in the consonants b, d, g, k, p, t, as every observed example follows the rule based only on the final consonant. It could fail if unobserved consonant endings or vowel endings (not present in the training set) have different plural rules, or if there are hidden exceptions not captured in the 16 training examples.",
+  "raw2": "We need infer Star-Speech plural suffix assignment likely based on final consonant? Need derive from known? We have words symbols. Need decide suffix among um,is,ok. Maybe rule based on ending sound? Let's map.\n\n14 \u25cf1\u25c6 = g a b = gab\n15 \u26051\u25cf = d a g = dag\n16 \u25b23\u2605 = k u d = kud\n17 \u25cf2\u2605 = g i d = gid\n18 \u26051\u25a0 = d a p = dap\n19 \u25a01\u25bc = p a t = pat\n20 \u25a02\u25b2 = p i k = pik\n21 \u25c62\u25bc = b i t = bit\n\nNeed know plural formation rule. Maybe Star-Speech suffixes determined by final consonant's place/voicing? We need infer likely from puzzle. Given suffixes um, is, ok. Maybe all words ending in certain consonant take corresponding suffix? Let's inspect final consonants:\n14 b\n15 g\n16 d\n17 d\n18 p\n19 t\n20 k\n21 t\n\nMaybe suffix agrees with final consonant? um after labial? is after dental? ok after velar? Let's see:\nb/p labial -> um? 14 b, 18 p, 19? t no.\nd/t dental/alveolar -> is? 16 d,17 d,19 t,21 t.\ng/k velar -> ok? 15 g,20 k.\nThis seems plausible: suffix um for labial endings (b,p), is for alveolar/dental (d,t), "
+ }
+}
