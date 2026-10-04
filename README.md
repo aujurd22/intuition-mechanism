@@ -426,6 +426,16 @@ overruled it). MCP registration in `hallucination_gate/server.py`.
   budget escapes the composite task's partial learning (both levers
   REFUTED); the "stable 0.69 local optimum" premise itself failed to
   replicate across 5 seeds — the program's third small-n lesson.
+- **Path dependency & evidence hierarchy (P243/P244/P247/P248/P249)** —
+  the composite-task outcome is invisible at ep400 but decidable at ep1000
+  (r = 0.854; the path-dependent event lives in the 400–1000 window);
+  the generation-side exploit is conditional on a capability gap (models
+  that reach the honest optimum don't cheat); the label-necessity
+  proposition is formalized (per-call cap + history non-accumulation +
+  cache realizability, with a regime corollary); and the evidence
+  hierarchy is three-tier — scalar feedback accumulates nothing, row
+  labels patch without transferring (27 transfer errors), numeric
+  evidence transfers (5).
 
 ---
 

@@ -88,7 +88,7 @@ exam.push(table([
 exam.push(blank());
 exam.push(p([txt(`下面 8 个词是符号写法的新词。判断它们按照第一部分的方法该加哪个后缀，在表格里写下 `),
   bd(`um / is / ok`), txt(` 三者之一。`)]));
-const EX2 = ["●1◆","★1■","▲3★","●2★","■1▼","★1●","■2▲","◆2▼"];
+const EX2 = ["●1◆","★1●","▲3★","●2★","★1■","■1▼","■2▲","◆2▼"];  // key order: gab,dag,kud,gid,dap,pat,pik,bit
 exam.push(table([
   new TableRow({ children: [td(`题号`, 12, 1), td(`单数（符号）`, 44, 1),
     td(`后缀（um/is/ok）`, 44, 1)] }),

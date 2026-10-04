@@ -1,0 +1,99 @@
+{
+ "results": [
+  {
+   "arm": "rich3",
+   "model": "deepseek-v4-flash",
+   "window_errs": [
+    4,
+    1,
+    7
+   ],
+   "transfer_errs": 8
+  },
+  {
+   "arm": "rich3",
+   "model": "doubao-seed-2.1-lite",
+   "window_errs": [
+    3,
+    12,
+    7
+   ],
+   "transfer_errs": 19
+  },
+  {
+   "arm": "rich10",
+   "model": "deepseek-v4-flash",
+   "window_errs": [
+    5,
+    2,
+    0
+   ],
+   "transfer_errs": 2
+  },
+  {
+   "arm": "rich10",
+   "model": "doubao-seed-2.1-lite",
+   "window_errs": [
+    7,
+    0,
+    3
+   ],
+   "transfer_errs": 3
+  }
+ ],
+ "truth": {
+  "9": "no",
+  "11": "no",
+  "13": "land",
+  "15": "no",
+  "17": "land",
+  "19": "no",
+  "21": "no",
+  "25": "no",
+  "27": "no",
+  "29": "no",
+  "33": "no",
+  "37": "no",
+  "39": "no",
+  "41": "no",
+  "43": "no",
+  "45": "no",
+  "47": "no",
+  "49": "no",
+  "51": "no",
+  "53": "no",
+  "57": "no",
+  "63": "no",
+  "69": "no",
+  "77": "no",
+  "87": "no",
+  "91": "no",
+  "93": "no",
+  "99": "no",
+  "111": "no",
+  "123": "no",
+  "141": "no"
+ },
+ "verdict": {
+  "summary": {
+   "rich3": {
+    "mean_window_errs": [
+     3.5,
+     6.5,
+     7.0
+    ],
+    "transfer_total": 27
+   },
+   "rich10": {
+    "mean_window_errs": [
+     6.0,
+     1.0,
+     1.5
+    ],
+    "transfer_total": 5
+   }
+  },
+  "premium_rich_minus_rich10": 22,
+  "reading": "numeric premium REAL on transfer"
+ }
+}
