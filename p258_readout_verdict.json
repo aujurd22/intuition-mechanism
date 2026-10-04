@@ -1,0 +1,23 @@
+{
+ "n": 40,
+ "correlations": {
+  "wiring3@400": 0.069,
+  "wiring3@1000": 0.273,
+  "wiring4@400": 0.374,
+  "wiring4@1000": 0.459,
+  "probe_mod3@400": 0.25,
+  "probe_mod3@1000": 0.178
+ },
+ "winner_vs_loser": {
+  "n_win": 10,
+  "n_lose": 30,
+  "wiring3@1000_win": 1.4352,
+  "wiring3@1000_lose": 1.4306,
+  "wiring3@400_win": 1.4164,
+  "wiring3@400_lose": 1.4191,
+  "probe_mod3@1000_win": 0.6477,
+  "probe_mod3@1000_lose": 0.6477
+ },
+ "H_wiring": false,
+ "bar_approx": 0.649
+}

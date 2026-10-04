@@ -1,0 +1,16 @@
+{
+ "seed": 27,
+ "snaps": {
+  "400": {
+   "wiring3": 1.4232,
+   "wiring4": 1.2775,
+   "probe_mod3": 0.4318
+  },
+  "1000": {
+   "wiring3": 1.4495,
+   "wiring4": 1.3007,
+   "probe_mod3": 0.3636
+  }
+ },
+ "final_test": 0.0
+}
