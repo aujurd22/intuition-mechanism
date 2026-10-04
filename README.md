@@ -8,7 +8,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 198 numbered rows P1–P198, every row with prediction, verdict and artifacts).  This README is the
+(pre-registered experiment registry, 262 numbered rows P1–P262, every row with prediction, verdict and artifacts).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
@@ -43,7 +43,7 @@ questions — one miss and it is a hallucination.
    That failure mode is itself a quantified result.
 
 **Entry points**: story-only → keep reading; reproduce numbers →
-[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (198 numbered experiments,
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (262 numbered experiments,
 each with prediction/verdict/artifacts); use the judge toolkit → the
 plugin section below.
 
@@ -466,6 +466,24 @@ this ladder from measurement into theorem: scalar feedback carries at
 most log₂(n+1) bits per round and does not accumulate; row labels
 accumulate but cover only the windows seen; transfer requires evidence
 you can read structure out of.
+
+### The capstone: beating the baselines on FunSearch's own benchmark
+
+The generation-side story closes on an external target. First run: the
+loop improved the repo's own evaluator (48 ms -> 0.3 ms, 147-168x) under
+holdout correctness gating — and when pushed for speed in the final round,
+both models broke correctness and were caught. Upgraded to FunSearch's own
+suite (the OR3 and Weibull-5k instances extracted verbatim from the
+official notebook), both models independently discovered heuristics that
+beat BOTH First-Fit and Best-Fit on held-out OR3 instances — excess over
+the L1 bound 9.3 (glm) and 9.1 (kimi) vs 10.3 / 10.8, Wilcoxon p<0.05 on
+all four comparisons — and the advantage transfers to the Weibull-5k
+dataset neither model ever saw. Head-to-head with the official public
+artifact: glm 9.80 vs 10.80 (p=0.003), kimi 10.05 vs 10.80 (p=0.081),
+after a simulator-equivalence check (the official policy reproduces our
+Best-Fit per-instance exactly). Honest scope: the Nature paper's exact
+heuristic is not public; the comparison is against the official
+repository's artifact.
 
 ---
 
