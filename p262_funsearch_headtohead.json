@@ -1,0 +1,308 @@
+{
+ "OR3": [
+  {
+   "instance": "u500_00",
+   "funsearch": 13,
+   "l1": 198,
+   "he_glm": 10,
+   "ff_glm": 13,
+   "bf_glm": 13,
+   "he_kimi": 10,
+   "ff_kimi": 13,
+   "bf_kimi": 13
+  },
+  {
+   "instance": "u500_01",
+   "funsearch": 11,
+   "l1": 201,
+   "he_glm": 12,
+   "ff_glm": 12,
+   "bf_glm": 11,
+   "he_kimi": 13,
+   "ff_kimi": 12,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_02",
+   "funsearch": 11,
+   "l1": 202,
+   "he_glm": 8,
+   "ff_glm": 10,
+   "bf_glm": 11,
+   "he_kimi": 7,
+   "ff_kimi": 10,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_03",
+   "funsearch": 11,
+   "l1": 204,
+   "he_glm": 10,
+   "ff_glm": 12,
+   "bf_glm": 11,
+   "he_kimi": 12,
+   "ff_kimi": 12,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_04",
+   "funsearch": 12,
+   "l1": 206,
+   "he_glm": 12,
+   "ff_glm": 13,
+   "bf_glm": 12,
+   "he_kimi": 12,
+   "ff_kimi": 13,
+   "bf_kimi": 12
+  },
+  {
+   "instance": "u500_05",
+   "funsearch": 12,
+   "l1": 206,
+   "he_glm": 11,
+   "ff_glm": 13,
+   "bf_glm": 12,
+   "he_kimi": 11,
+   "ff_kimi": 13,
+   "bf_kimi": 12
+  },
+  {
+   "instance": "u500_06",
+   "funsearch": 10,
+   "l1": 207,
+   "he_glm": 11,
+   "ff_glm": 13,
+   "bf_glm": 10,
+   "he_kimi": 11,
+   "ff_kimi": 13,
+   "bf_kimi": 10
+  },
+  {
+   "instance": "u500_07",
+   "funsearch": 12,
+   "l1": 204,
+   "he_glm": 11,
+   "ff_glm": 15,
+   "bf_glm": 12,
+   "he_kimi": 12,
+   "ff_kimi": 15,
+   "bf_kimi": 12
+  },
+  {
+   "instance": "u500_08",
+   "funsearch": 11,
+   "l1": 196,
+   "he_glm": 10,
+   "ff_glm": 11,
+   "bf_glm": 11,
+   "he_kimi": 11,
+   "ff_kimi": 11,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_09",
+   "funsearch": 10,
+   "l1": 202,
+   "he_glm": 8,
+   "ff_glm": 11,
+   "bf_glm": 10,
+   "he_kimi": 11,
+   "ff_kimi": 11,
+   "bf_kimi": 10
+  },
+  {
+   "instance": "u500_10",
+   "funsearch": 9,
+   "l1": 200,
+   "he_glm": 7,
+   "ff_glm": 10,
+   "bf_glm": 9,
+   "he_kimi": 8,
+   "ff_kimi": 10,
+   "bf_kimi": 9
+  },
+  {
+   "instance": "u500_11",
+   "funsearch": 12,
+   "l1": 200,
+   "he_glm": 11,
+   "ff_glm": 12,
+   "bf_glm": 12,
+   "he_kimi": 9,
+   "ff_kimi": 12,
+   "bf_kimi": 12
+  },
+  {
+   "instance": "u500_12",
+   "funsearch": 11,
+   "l1": 199,
+   "he_glm": 11,
+   "ff_glm": 11,
+   "bf_glm": 11,
+   "he_kimi": 10,
+   "ff_kimi": 11,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_13",
+   "funsearch": 11,
+   "l1": 196,
+   "he_glm": 9,
+   "ff_glm": 12,
+   "bf_glm": 11,
+   "he_kimi": 10,
+   "ff_kimi": 12,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_14",
+   "funsearch": 11,
+   "l1": 204,
+   "he_glm": 10,
+   "ff_glm": 11,
+   "bf_glm": 11,
+   "he_kimi": 13,
+   "ff_kimi": 11,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_15",
+   "funsearch": 10,
+   "l1": 201,
+   "he_glm": 8,
+   "ff_glm": 11,
+   "bf_glm": 10,
+   "he_kimi": 8,
+   "ff_kimi": 11,
+   "bf_kimi": 10
+  },
+  {
+   "instance": "u500_16",
+   "funsearch": 9,
+   "l1": 202,
+   "he_glm": 8,
+   "ff_glm": 10,
+   "bf_glm": 9,
+   "he_kimi": 8,
+   "ff_kimi": 10,
+   "bf_kimi": 9
+  },
+  {
+   "instance": "u500_17",
+   "funsearch": 9,
+   "l1": 198,
+   "he_glm": 10,
+   "ff_glm": 9,
+   "bf_glm": 9,
+   "he_kimi": 8,
+   "ff_kimi": 9,
+   "bf_kimi": 9
+  },
+  {
+   "instance": "u500_18",
+   "funsearch": 11,
+   "l1": 202,
+   "he_glm": 10,
+   "ff_glm": 10,
+   "bf_glm": 11,
+   "he_kimi": 10,
+   "ff_kimi": 10,
+   "bf_kimi": 11
+  },
+  {
+   "instance": "u500_19",
+   "funsearch": 10,
+   "l1": 196,
+   "he_glm": 9,
+   "ff_glm": 12,
+   "bf_glm": 10,
+   "he_kimi": 7,
+   "ff_kimi": 12,
+   "bf_kimi": 10
+  }
+ ],
+ "Weibull": [
+  {
+   "instance": "test_0",
+   "funsearch": 82,
+   "l1": 2012,
+   "he_glm": 68,
+   "ff_glm": 86,
+   "bf_glm": 82,
+   "he_kimi": 73,
+   "ff_kimi": 86,
+   "bf_kimi": 82
+  },
+  {
+   "instance": "test_1",
+   "funsearch": 76,
+   "l1": 1983,
+   "he_glm": 64,
+   "ff_glm": 84,
+   "bf_glm": 76,
+   "he_kimi": 67,
+   "ff_kimi": 84,
+   "bf_kimi": 76
+  },
+  {
+   "instance": "test_2",
+   "funsearch": 79,
+   "l1": 1978,
+   "he_glm": 69,
+   "ff_glm": 87,
+   "bf_glm": 79,
+   "he_kimi": 79,
+   "ff_kimi": 87,
+   "bf_kimi": 79
+  },
+  {
+   "instance": "test_3",
+   "funsearch": 81,
+   "l1": 1986,
+   "he_glm": 65,
+   "ff_glm": 84,
+   "bf_glm": 81,
+   "he_kimi": 70,
+   "ff_kimi": 84,
+   "bf_kimi": 81
+  },
+  {
+   "instance": "test_4",
+   "funsearch": 78,
+   "l1": 1980,
+   "he_glm": 63,
+   "ff_glm": 79,
+   "bf_glm": 78,
+   "he_kimi": 68,
+   "ff_kimi": 79,
+   "bf_kimi": 78
+  }
+ ],
+ "stats": {
+  "glm-5.3-flash": {
+   "OR3": {
+    "he_mean": 9.8,
+    "funsearch_mean": 10.8,
+    "wilcoxon_p": 0.0029
+   },
+   "Weibull": {
+    "he_mean": 65.8,
+    "funsearch_mean": 79.2,
+    "wilcoxon_p": 0.0625
+   }
+  },
+  "kimi-k2.8-preview": {
+   "OR3": {
+    "he_mean": 10.05,
+    "funsearch_mean": 10.8,
+    "wilcoxon_p": 0.0806
+   },
+   "Weibull": {
+    "he_mean": 71.4,
+    "funsearch_mean": 79.2,
+    "wilcoxon_p": 0.125
+   }
+  }
+ },
+ "mismatches": []
+}
