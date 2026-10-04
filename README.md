@@ -374,6 +374,8 @@ ceiling), each with a registry pointer.
 | Interestingness | is "interesting" mechanically decidable? | **TWO-AXIS THEORY, formalized (P133)** — surprise (degree-matched, locality clause) + utility (cross-family) + landscape theorem (model×format); every cell multi-run |
 | Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
+| Shadow law | do inference and optimization both converge to shadows? | **YES — UNIFIED THEOREM (P236)** — exact shadow density (P225) + MDL preference (P226) + optimizer symmetry (P231); the C∧V gate is the only fix |
+| Human intuition | can LLM-domain intuition exams be given to humans? | **NO — and that is a finding** — the six-row exam is opaque to non-number-theory humans (P235); opacity = missing representation (P238); learnable-domain redesign registered (P239) |
 
 ### Hallucination gate (v1)
 
@@ -396,6 +398,34 @@ Live demo (2 models x 6 probes incl. the 978 near-integer trap):
 intercepts wrong claims, downgrades trap sentences to abstain, and even
 **corrected a model's false negative** (the model said NOT, the verifier
 overruled it). MCP registration in `hallucination_gate/server.py`.
+
+### The 2026-10-04 wave: shadow theorem, human anchor, flow curve
+
+- **Shadow unified theorem (P236, the paper spine)** — for any metric M and
+  true constraint C, inference and optimization both converge to *shadows*
+  (M-equivalent but C-violating); the C∧V gate is the only fix. T1 exact
+  shadow density (P225), T2 MDL posterior mode = shortest shadow (P226),
+  T3 generation-side symmetry (P231: doubao "optimized" to an impossible
+  1.030× and was caught by the validity check). Judgment side CLOSED at
+  n=41×3 near-saturation (P232); discovery-loop production function v0:
+  1.15 bits/call, 2.9 calls/rule (P233).
+- **Validator-richness cliff (P240)** — discovery-loop flow vs verifier
+  evidence: unlabeled (scalar-only) feedback has NEGATIVE flow (models
+  thrash, revising rows that were correct); labeled feedback converges in
+  ~2 calls at 5-7 bits/call. The V in C∧V must carry constraint detail,
+  not just the score.
+- **Human anchor (P235/P238/P239)** — the six-row exam is opaque to
+  non-number-theory humans (n=1 design pilot, a negative control); upgraded
+  to bridge 7: species-domain opacity = missing representation. The
+  learnable-domain redesign ("Star-Speech" morphology, programmatic truth,
+  cipher masking that keeps information but breaks surface binding) is
+  registered pre-administration; n≥5 real subjects pending. LLM side runs
+  first: models ace the plain exam and collapse toward chance under cipher
+  masking — surface-form binding, exactly the predicted failure.
+- **G6 escape test (P237)** — neither a mod-3 auxiliary loss nor a 10×
+  budget escapes the composite task's partial learning (both levers
+  REFUTED); the "stable 0.69 local optimum" premise itself failed to
+  replicate across 5 seeds — the program's third small-n lesson.
 
 ---
 
@@ -420,6 +450,10 @@ overruled it). MCP registration in `hallucination_gate/server.py`.
   are annotated live-service probes).
 - **Subjects are declared**: native design-aware arms vs blind API
   judges reported separately, never mixed.
+- **Quantity claims need 5 seeds / 5 subjects**: two preliminary readings
+  died on 5-seed extension (P221-b grading, P186 platform); the "stable
+  0.69 local optimum" is the third (P237); human-subject conclusions stay
+  PROVISIONAL below n=5 real subjects (P235 lesson, enforced in P239).
 
 ## 6. Repository map
 

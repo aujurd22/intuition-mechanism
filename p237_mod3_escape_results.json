@@ -1,0 +1,128 @@
+{
+ "control": [
+  {
+   "arm": "control",
+   "seed": 0,
+   "final_test": 0.5862069129943848,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "control",
+   "seed": 1,
+   "final_test": 0.03448275849223137,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "control",
+   "seed": 2,
+   "final_test": 0.5862069129943848,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": 2100
+  },
+  {
+   "arm": "control",
+   "seed": 3,
+   "final_test": 0.24137930572032928,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "control",
+   "seed": 4,
+   "final_test": 0.0,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  }
+ ],
+ "aux": [
+  {
+   "arm": "aux",
+   "seed": 0,
+   "final_test": 0.0,
+   "final_train": 0.930232584476471,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "aux",
+   "seed": 1,
+   "final_test": 0.4482758641242981,
+   "final_train": 0.9534883499145508,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "aux",
+   "seed": 2,
+   "final_test": 0.06896551698446274,
+   "final_train": 0.9534883499145508,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "aux",
+   "seed": 3,
+   "final_test": 0.17241379618644714,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "aux",
+   "seed": 4,
+   "final_test": 0.22413793206214905,
+   "final_train": 0.7093023061752319,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  }
+ ],
+ "long": [
+  {
+   "arm": "long",
+   "seed": 0,
+   "final_test": 0.22413793206214905,
+   "final_train": 0.8837209343910217,
+   "tr99_epoch": 100,
+   "te90_epoch": 3000
+  },
+  {
+   "arm": "long",
+   "seed": 1,
+   "final_test": 0.48275861144065857,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": 15700
+  },
+  {
+   "arm": "long",
+   "seed": 2,
+   "final_test": 0.3103448152542114,
+   "final_train": 0.7093023061752319,
+   "tr99_epoch": 100,
+   "te90_epoch": 2100
+  },
+  {
+   "arm": "long",
+   "seed": 3,
+   "final_test": 0.4482758641242981,
+   "final_train": 1.0,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  },
+  {
+   "arm": "long",
+   "seed": 4,
+   "final_test": 0.36206895112991333,
+   "final_train": 0.9883720874786377,
+   "tr99_epoch": 100,
+   "te90_epoch": null
+  }
+ ]
+}

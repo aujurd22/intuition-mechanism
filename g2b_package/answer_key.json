@@ -1,0 +1,197 @@
+{
+ "rule": "voiced&a->um | voiced&{i,u}->is | voiceless&a->is | voiceless&{i,u}->ok",
+ "chance": 0.3333,
+ "cipher_legend": {
+  "b": "◆",
+  "d": "★",
+  "g": "●",
+  "k": "▲",
+  "p": "■",
+  "t": "▼",
+  "a": "1",
+  "i": "2",
+  "u": "3"
+ },
+ "train": [
+  {
+   "stem": "bab",
+   "plural": "babum"
+  },
+  {
+   "stem": "kad",
+   "plural": "kadum"
+  },
+  {
+   "stem": "pag",
+   "plural": "pagum"
+  },
+  {
+   "stem": "dab",
+   "plural": "dabum"
+  },
+  {
+   "stem": "big",
+   "plural": "bigis"
+  },
+  {
+   "stem": "pid",
+   "plural": "pidis"
+  },
+  {
+   "stem": "gub",
+   "plural": "gubis"
+  },
+  {
+   "stem": "bud",
+   "plural": "budis"
+  },
+  {
+   "stem": "kap",
+   "plural": "kapis"
+  },
+  {
+   "stem": "tap",
+   "plural": "tapis"
+  },
+  {
+   "stem": "bap",
+   "plural": "bapis"
+  },
+  {
+   "stem": "pak",
+   "plural": "pakis"
+  },
+  {
+   "stem": "buk",
+   "plural": "bukok"
+  },
+  {
+   "stem": "dup",
+   "plural": "dupok"
+  },
+  {
+   "stem": "dik",
+   "plural": "dikok"
+  },
+  {
+   "stem": "tup",
+   "plural": "tupok"
+  }
+ ],
+ "exam1": [
+  {
+   "stem": "bad",
+   "plural": "badum",
+   "final_class": "voiced",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "gad",
+   "plural": "gadum",
+   "final_class": "voiced",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "pad",
+   "plural": "padum",
+   "final_class": "voiced",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "dig",
+   "plural": "digis",
+   "final_class": "voiced",
+   "vowel_class": "closed"
+  },
+  {
+   "stem": "pud",
+   "plural": "pudis",
+   "final_class": "voiced",
+   "vowel_class": "closed"
+  },
+  {
+   "stem": "bid",
+   "plural": "bidis",
+   "final_class": "voiced",
+   "vowel_class": "closed"
+  },
+  {
+   "stem": "bat",
+   "plural": "batis",
+   "final_class": "voiceless",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "tak",
+   "plural": "takis",
+   "final_class": "voiceless",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "dat",
+   "plural": "datis",
+   "final_class": "voiceless",
+   "vowel_class": "open"
+  },
+  {
+   "stem": "bik",
+   "plural": "bikok",
+   "final_class": "voiceless",
+   "vowel_class": "closed"
+  },
+  {
+   "stem": "dip",
+   "plural": "dipok",
+   "final_class": "voiceless",
+   "vowel_class": "closed"
+  },
+  {
+   "stem": "kit",
+   "plural": "kitok",
+   "final_class": "voiceless",
+   "vowel_class": "closed"
+  }
+ ],
+ "exam2": [
+  {
+   "stem": "gab",
+   "cipher": "●1◆",
+   "plural": "gabum"
+  },
+  {
+   "stem": "dag",
+   "cipher": "★1●",
+   "plural": "dagum"
+  },
+  {
+   "stem": "kud",
+   "cipher": "▲3★",
+   "plural": "kudis"
+  },
+  {
+   "stem": "gid",
+   "cipher": "●2★",
+   "plural": "gidis"
+  },
+  {
+   "stem": "dap",
+   "cipher": "★1■",
+   "plural": "dapis"
+  },
+  {
+   "stem": "pat",
+   "cipher": "■1▼",
+   "plural": "patis"
+  },
+  {
+   "stem": "pik",
+   "cipher": "■2▲",
+   "plural": "pikok"
+  },
+  {
+   "stem": "bit",
+   "cipher": "◆2▼",
+   "plural": "bitok"
+  }
+ ]
+}
