@@ -496,10 +496,14 @@ training does nothing significant (paired delta -0.047, p = 0.70), class
 reweighting collapsed for an implementation reason and was retracted rather
 than interpreted. And no static measure separates the groups at all —
 component probes, readout geometry, even FULL-task decodability of the
-trunk are equal (P254/P258/P264). What does separate them is the readout
-head's own behavior at ep1000 (r = 0.854): whichever head happens to be
-ahead keeps going. Functional self-continuation, with no static correlate
-anywhere in the trunk. The same ledger discipline applies to cheating: four
+trunk are equal (P254/P258/P264). What is established: a stable functional
+bifurcation — once output behavior separates late in training, its
+continuation strongly predicts the eventual outcome (r = 0.854 at ep1000;
+partly temporal autocorrelation — same model, same test set, more steps),
+while every static trunk-content measure (component probes, readout
+geometry, full-task decodability, displacement velocity) is equal across
+groups. WHY the continuation happens is open — naming the mechanism would
+run ahead of the evidence. The same ledger discipline applies to cheating: four
 task types x four models produced exactly one exploit ever, and that one
 needed the loophole in its face — the gate exists for accidental shadow
 convergence, not for deliberate cheating.
