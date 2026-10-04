@@ -1,0 +1,89 @@
+{
+ "results_summary": [
+  {
+   "seed": 0,
+   "final_test": 0.5862
+  },
+  {
+   "seed": 1,
+   "final_test": 0.0345
+  },
+  {
+   "seed": 2,
+   "final_test": 0.5862
+  },
+  {
+   "seed": 3,
+   "final_test": 0.2414
+  },
+  {
+   "seed": 4,
+   "final_test": 0.0
+  },
+  {
+   "seed": 5,
+   "final_test": 0.0517
+  },
+  {
+   "seed": 6,
+   "final_test": 0.6897
+  },
+  {
+   "seed": 7,
+   "final_test": 0.0172
+  },
+  {
+   "seed": 8,
+   "final_test": 0.0172
+  },
+  {
+   "seed": 9,
+   "final_test": 0.0172
+  }
+ ],
+ "correlations": {
+  "train": {
+   "100": 0.0,
+   "200": -0.577,
+   "400": -0.282,
+   "800": 0.0
+  },
+  "mod4": {
+   "100": 0.0,
+   "200": -0.577,
+   "400": -0.264,
+   "800": 0.0
+  },
+  "mod3": {
+   "100": 0.0,
+   "200": -0.577,
+   "400": -0.319,
+   "800": 0.0
+  }
+ },
+ "verdict": {
+  "correlations": {
+   "train": {
+    "100": 0.0,
+    "200": -0.577,
+    "400": -0.282,
+    "800": 0.0
+   },
+   "mod4": {
+    "100": 0.0,
+    "200": -0.577,
+    "400": -0.264,
+    "800": 0.0
+   },
+   "mod3": {
+    "100": 0.0,
+    "200": -0.577,
+    "400": -0.319,
+    "800": 0.0
+   }
+  },
+  "H1_lockin_supported": false,
+  "H2_health_supported": false,
+  "note": "n=10, exploratory correlation (no significance claim); registered as PROPOSE-level path-dependency probe"
+ }
+}
