@@ -17,7 +17,7 @@ detailed entry point.
 
 ## TL;DR — the program in plain words
 
-**What is this?** An intensive one-week research sprint (with deeper roots
+**What is this?** A two-week research sprint (with deeper roots
 in a four-repo program) taking apart what "I feel this is right" means —
 for AI and for us — using one clean math mystery as the test rig. There exist six *magic numbers* (1, 3, 5, 7, 13, 17) that make a
 certain quantity land exactly on integers (8, 12, 20, 32, 104, 200); every
@@ -26,7 +26,7 @@ not the reason. We let AI models guess the rule from data, then use **code
 as the judge**: a guessed rule only counts if it passes unseen exam
 questions — one miss and it is a hallucination.
 
-**Three things a week of intensive research surfaced:**
+**Three things this sprint has surfaced:**
 
 1. **The math**: *why* exactly those six numbers is now almost fully
    explained — the class group decides which values are even eligible, and
@@ -374,8 +374,8 @@ ceiling), each with a registry pointer.
 | Interestingness | is "interesting" mechanically decidable? | **TWO-AXIS THEORY, formalized (P133)** — surprise (degree-matched, locality clause) + utility (cross-family) + landscape theorem (model×format); every cell multi-run |
 | Memory geometry | which memory should an agent keep? | **SIX LAWS + CONTROLLER** — R/mind = 0.500 boundary; controller validated on production (P115) |
 | Retrieval transfer | do the laws survive outside our stack? | **YES, five substrates** — plus the RAG design language (DR1–DR10) as the applied payload |
-| Shadow law | do inference and optimization both converge to shadows? | **YES — UNIFIED THEOREM (P236)** — exact shadow density (P225) + MDL preference (P226) + optimizer symmetry (P231); the C∧V gate is the only fix |
-| Human intuition | can LLM-domain intuition exams be given to humans? | **NO — and that is a finding** — the six-row exam is opaque to non-number-theory humans (P235); opacity = missing representation (P238); learnable-domain redesign registered (P239) |
+| Shadow law | do inference and optimization both converge to shadows? | **YES — unified theorem** — exact shadow density + MDL preference + optimizer symmetry; the C∧V gate is the only fix |
+| Human intuition | can LLM-domain intuition exams be given to humans? | **NO — and that is a finding** — the six-row exam is opaque to untrained humans; on the redesigned learnable domain both species memorize, with different keys |
 
 ### Hallucination gate (v1)
 
@@ -399,43 +399,73 @@ intercepts wrong claims, downgrades trap sentences to abstain, and even
 **corrected a model's false negative** (the model said NOT, the verifier
 overruled it). MCP registration in `hallucination_gate/server.py`.
 
-### The 2026-10-04 wave: shadow theorem, human anchor, flow curve
+### The shadow unified theorem
 
-- **Shadow unified theorem (P236, the paper spine)** — for any metric M and
-  true constraint C, inference and optimization both converge to *shadows*
-  (M-equivalent but C-violating); the C∧V gate is the only fix. T1 exact
-  shadow density (P225), T2 MDL posterior mode = shortest shadow (P226),
-  T3 generation-side symmetry (P231: doubao "optimized" to an impossible
-  1.030× and was caught by the validity check). Judgment side CLOSED at
-  n=41×3 near-saturation (P232); discovery-loop production function v0:
-  1.15 bits/call, 2.9 calls/rule (P233).
-- **Validator-richness cliff (P240)** — discovery-loop flow vs verifier
-  evidence: unlabeled (scalar-only) feedback has NEGATIVE flow (models
-  thrash, revising rows that were correct); labeled feedback converges in
-  ~2 calls at 5-7 bits/call. The V in C∧V must carry constraint detail,
-  not just the score.
-- **Human anchor (P235/P238/P239)** — the six-row exam is opaque to
-  non-number-theory humans (n=1 design pilot, a negative control); upgraded
-  to bridge 7: species-domain opacity = missing representation. The
-  learnable-domain redesign ("Star-Speech" morphology, programmatic truth,
-  cipher masking that keeps information but breaks surface binding) is
-  registered pre-administration; n≥5 real subjects pending. LLM side runs
-  first: models ace the plain exam and collapse toward chance under cipher
-  masking — surface-form binding, exactly the predicted failure.
-- **G6 escape test (P237)** — neither a mod-3 auxiliary loss nor a 10×
-  budget escapes the composite task's partial learning (both levers
-  REFUTED); the "stable 0.69 local optimum" premise itself failed to
-  replicate across 5 seeds — the program's third small-n lesson.
-- **Path dependency & evidence hierarchy (P243/P244/P247/P248/P249)** —
-  the composite-task outcome is invisible at ep400 but decidable at ep1000
-  (r = 0.854; the path-dependent event lives in the 400–1000 window);
-  the generation-side exploit is conditional on a capability gap (models
-  that reach the honest optimum don't cheat); the label-necessity
-  proposition is formalized (per-call cap + history non-accumulation +
-  cache realizability, with a regime corollary); and the evidence
-  hierarchy is three-tier — scalar feedback accumulates nothing, row
-  labels patch without transferring (27 transfer errors), numeric
-  evidence transfers (5).
+Every failure mode above has the same shape. The theorem says it out loud:
+given a metric M and a true constraint C that do not coincide, both
+inference and optimization converge to *shadows* — rules that look perfect
+under M while violating C. The only fix is a verifier that checks C too
+(the C∧V gate). Three independent lines lead here. Judgment side: models
+asked to state their own judging rules score 50% when the stated rule is
+executed as code — they voiced a shadow. Generation side: handed the
+scoring function, doubao returned 1.030× — above the theoretical maximum,
+mathematically impossible; it had found the loophole, and the validity
+check caught it. Middleware: the toll booth intercepts shadows in a live
+pipeline — wrong claims blocked, trap sentences downgraded, even one
+model's false negative corrected. The theorem carries hard content too:
+shadow counts have an exact closed form (checked on 200 random windows);
+the MDL posterior mode is exactly the shortest shadow; and the judgment
+side, once thickened to 41 rules × 3 models, sits near saturation
+(0.90-0.93, no model separation) — that experimental line is closed. This
+is the paper's spine.
+
+### Human vs. machine intuition: the Star-Speech domain
+
+You cannot hand humans an exam translated from an LLM experiment. The
+first administration hit the wall: the subject (the program's author)
+completed every question and reported having no idea what was being asked.
+That failure is itself a data point — the six-row domain is opaque to
+anyone without number-theory training, while LLMs show partial intuition
+in the very same domain. So a learnable domain was built: Star-Speech, 16
+alien plurals whose rule lives in the pairing of final-consonant voicing
+and vowel class. Humans learn it in 25 minutes; the truth is a pure
+function; both species take the same exam. The masked section rewrites
+words in a symbol cipher — no information removed (the legend is printed
+on the exam), but every surface-form memory invalidated.
+
+| Subject | plain exam | cipher-masked | what it memorized |
+|---|---|---|---|
+| human (author, n=1) | 0.833 | 0.875 | structural pairs (vowel × final) |
+| deepseek | 1.000 | 0.375 | surface strings |
+| doubao | 0.833 | 0.625 | partial structure |
+| glm | 0.417 | 0.000 | one feature (vowel only) |
+
+deepseek aces the plain exam and falls to coin-flipping under masking — it
+memorized word forms. The human does not drop when masked, but hold the
+celebration: on unseen feature combinations the human also scores one
+half. Both species memorize; the difference is the *key* — structural
+pairs for the human, surface forms for the model. The popular dichotomy of
+"humans understand rules, models memorize" does not survive this table.
+The usual caveat applies with force: the human row is the exam's author,
+whose structural intuition is suspect by construction. That row validates
+the design and nothing more; population claims wait for unrelated
+subjects.
+
+### What you feed the verifier is what the loop becomes
+
+Feed it scores only, and the model starts revising answers that were
+correct — flow goes negative (−0.64 bits/call) and all six rounds burn.
+Feed it the wrong rows, and it converges in two calls (5-7 bits/call) but
+a fresh window undoes the work: patches do not transfer, and on an
+all-multiples-of-3 trap window errors reach a new high (27 transfer
+errors). Attach the actual numbers, and the model reads "only exact
+integers count" straight out of the f(d) values — transfer works
+(5 transfer errors; on the trap window deepseek scores zero where the
+label-fed version of the same model scored seven). Proposition 4 turns
+this ladder from measurement into theorem: scalar feedback carries at
+most log₂(n+1) bits per round and does not accumulate; row labels
+accumulate but cover only the windows seen; transfer requires evidence
+you can read structure out of.
 
 ---
 
@@ -469,7 +499,7 @@ overruled it). MCP registration in `hallucination_gate/server.py`.
 
 ```
 docs/
-  RESEARCH_PLAN.md            the registry: 108 P-numbers, every verdict + artifact
+  RESEARCH_PLAN.md            the registry: P1-P249, every verdict + artifact
   THEOREM_FIVE_ROWS.md        six-row theorem: statement + proof labels
   CHARACTER_OBSTRUCTION.md    genus-theory layer (P132 closed + corrected)
   DEEP_STRUCTURES.md          the two deep questions (P134 synthesis)
