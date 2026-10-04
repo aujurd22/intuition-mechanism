@@ -1,15 +1,42 @@
-# hallucination-gate v1
+# hallucination-gate v2.1
 
-输出端收费站：任何 LLM 主张必须以四态之一出厂。
+输出端收费站（harness 组件）：任何 LLM 主张必须以四态之一出厂，且**错误主张永远到不了用户手里**。
 
-四态：VERIFIED（过验证门）/ REFUTED（否决，默认拦截）/ ABSTAIN（弃权）/ SPECULATION（猜测标签）。
+## 四态
 
-四区路由（幻觉解剖）：
-- zone 1 验证器可得域 → 执行机械验证器（复用 intuition_pack 验证器注册表）
-- zone 2 长尾事实 → ABSTAIN（引用策略 v2 接入点）
-- zone 3 影子规则 → ABSTAIN + 影子邻域对比（v2 接入点，P-LAW1 区）
-- zone 4 洞见前沿 → SPECULATION（不可消灭，只分拣）
+| 状态 | 含义 |
+|---|---|
+| VERIFIED | 过机械验证门，附证据出厂 |
+| REFUTED | 被否决——否定证据**自动喂回模型重新生成**（≤3 轮），用户只见改对后的答案或诚实弃权 |
+| ABSTAIN | 弃权，附机器证据（不带模型原文） |
+| SPECULATION | 洞见前沿的新颖主张，挂"待验证"标签出厂 |
 
-亮点：NEAR_INTEGER 三带判定（P142）映射到 ABSTAIN——近整数陷阱处机器自身置信 0.5，主张强制降级，不许以事实身份出厂。
+## 数据流（v2.1 enforce 循环）
 
-MCP 注册：见 server.py 头注释。
+模型主张 → 收费站 → REFUTED 则否定证据喂回 → 重生成 → 再过站 →
+只有 VERIFIED（附凭据）或 ABSTAIN（附机器证据）能到达用户。
+实测案例：模型的 d=421 惯性误报第 1 轮被拦、第 2 轮改对出厂；
+d=978 近整数陷阱自动降级 ABSTAIN；甚至纠正过一次模型的假阴性。
+
+## drop-in 中间件
+
+`middleware.py::gated_ask(question, ask_fn, domain, payload, max_rounds=3)`
+——包裹任意 `llm_client.ask()` 调用；3 案例端到端 demo 全对（拦截/降级/纠假阴性）。
+
+## 理论定位（影子统一定理推论）
+
+对任何指标 M 与真约束 C，推断与优化都收敛到"影子"——C∧V 门是唯一修复
+（命题 4：标签必要性已证；命题 5：数值证据可迁移而行标签不可）。
+跨层定律候选：反馈/更新的"量"携带近零信号，"方向与内容"携带全部信号
+（P240/P248 宏观 + P265 微观，见 docs/SHADOW_UNIFIED_THEOREM.md 跨层呼应节）。
+
+## 诚实边界
+
+当前验证器挂的是数学普查域（可机械执行）；任意代码域（测试执行当验证器）
+是同一模式的直接扩展，**尚未接线**。无法机械化的规格（需求理解、UI 手感），
+门保持沉默——这是域边界定律的诚实边界。
+
+## MCP 注册
+
+见 `server.py` 头注释；`gate.py` 为核心四态路由 + zone 判定；
+`audit_log.jsonl` 为出厂商审计日志。
