@@ -6,3 +6,4 @@ __pycache__/
 .env_ark
 node_modules/
 arc.env
+environment_files/
