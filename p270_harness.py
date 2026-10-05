@@ -96,7 +96,7 @@ def main():
     env = arc.make(game)
     obs = env.reset()
     g_prev = obs.frame
-    avail = obs.available_actions or ACTIONS
+    avail = [ACTIONS[i-1] for i in (obs.available_actions or [1,2,3,4])]
     levels_start = 0
     steps = 0
     precisions = []
@@ -168,7 +168,7 @@ def main():
             print("GAME WON", flush=True)
             break
         g_prev = res.frame
-        avail = getattr(res, "available_actions", None) or avail
+        avail = [ACTIONS[i-1] for i in (getattr(res, "available_actions", None) or [1,2,3,4])]
     sc = arc.get_scorecard()
     final = {"condition": cond, "steps": steps, "mean_precision": (
         round(sum(precisions)/len(precisions), 3) if precisions else None),
