@@ -1,1 +1,0 @@
-Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object {$_.CommandLine -like '*p270_harness*'} | ForEach-Object { Write-Host ('ALIVE PID ' + $_.ProcessId + ' created ' + $_.CreationDate + ' CPU=' + [math]::Round($_.UserModeTime/1e7,1) + 's') }

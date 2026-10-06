@@ -1,1 +1,0 @@
-Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object {$_.CommandLine -like '*p270_harness*'} | ForEach-Object { Write-Host ('KILL ' + $_.ProcessId); Stop-Process -Id $_.ProcessId -Force }
