@@ -16,7 +16,18 @@ from PIL import Image
 import arc_agi
 from arcengine.enums import GameAction
 
-ARK_KEY = os.environ.get("ARK_API_KEY") or "365afa63-6d4d-4646-836a-f7df8a5bccd5"
+def _load_key():
+    k = os.environ.get("ARK_API_KEY")
+    if k:
+        return k
+    envf = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env_ark")
+    if os.path.exists(envf):
+        for ln in open(envf, encoding="utf-8"):
+            ln = ln.strip()
+            if ln.startswith("ARK_API_KEY="):
+                return ln.split("=", 1)[1].strip()
+    return ""
+ARK_KEY = _load_key()
 ARK_URL = "https://ark.cn-beijing.volces.com/api/coding/v3/responses"
 MODEL = "glm-5.3-flash"
 PALETTE = {0: (255, 255, 255), 1: (204, 204, 204), 2: (153, 153, 153),
@@ -34,7 +45,19 @@ def glm_vision(prompt, png_bytes):
         {"type": "input_text", "text": prompt}]}]}
     req = urllib.request.Request(ARK_URL, data=json.dumps(body).encode(),
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {ARK_KEY}"})
-    r = json.loads(urllib.request.urlopen(req, timeout=120).read())
+    last = None
+    for attempt in range(4):
+        try:
+            r = json.loads(urllib.request.urlopen(req, timeout=600).read())
+            break
+        except Exception as ex:
+            last = ex
+            if attempt == 3:
+                raise
+            import time as _t
+            _t.sleep([5, 15, 30][attempt])
+    else:
+        raise RuntimeError("unreachable")
     out = r.get("output_text") or "".join(
         c.get("text", "") for o in r.get("output", [])
         for c in o.get("content", []) if isinstance(c, dict))
@@ -48,7 +71,7 @@ def render_png(grid):
     for r in range(64):
         for c in range(64):
             px[r, c] = PALETTE.get(int(g[r, c]), (255, 0, 255))
-    im = im.resize((512, 512), Image.NEAREST)
+    im = im.resize((384, 384), Image.NEAREST)
     buf = _io.BytesIO(); im.save(buf, "PNG")
     return buf.getvalue()
 
@@ -96,7 +119,7 @@ def main():
     env = arc.make(game)
     obs = env.reset()
     g_prev = obs.frame
-    avail = [ACTIONS[i-1] for i in (obs.available_actions or [1,2,3,4])]
+    avail = list(obs.available_actions or [1, 2, 3, 4])
     levels_start = 0
     steps = 0
     precisions = []
@@ -108,30 +131,35 @@ def main():
         grid_png = render_png(g_prev)
         if cond == "gate":
             prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧（调色板：0白 5黑 8红 9蓝 11黄 12橙，"
-                      "其它数字是其它颜色）。可用动作: " + ",".join(avail) + "。\n"
+                      "其它数字是其它颜色）。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作，并预测这个动作会导致哪些格子发生变化（最多 8 个，"
                       "每个格子给行、列和变化后的色号）。" + (evidence or ""))
         else:
-            prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧。可用动作: " + ",".join(avail) + "。\n"
+            prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作。")
         js = '严格只输出一个 JSON 对象：{"action":"ACTIONx"' + (
             ',"claims":[{"r":行,"c":列,"after":色号}]}' if cond == "gate" else "}")
-        resp = glm_vision(prompt + "\n" + js + "\n当前帧如上。", grid_png)
-        action, claims = parse_turn(resp, cond == "gate")
-        tries = 0
-        while action is None and tries < 1:
-            resp = glm_vision(prompt + "\n\n你上次的输出无法解析。再次只输出 JSON。", grid_png)
+        try:
+            resp = glm_vision(prompt + "\n" + js + "\n当前帧如上。", grid_png)
             action, claims = parse_turn(resp, cond == "gate")
-            tries += 1
+            tries = 0
+            while action is None and tries < 1:
+                resp = glm_vision(prompt + "\n\n你上次的输出无法解析。再次只输出 JSON。", grid_png)
+                action, claims = parse_turn(resp, cond == "gate")
+                tries += 1
+        except Exception as ex:
+            f_log({"step": steps, "event": "glm_error", "error": str(ex)[:120]})
+            print(f"[{steps}] glm error, skip", flush=True)
+            continue
         if action is None:
             f_log({"step": steps, "event": "unparseable", "raw": resp[:200]})
             print(f"[{steps}] unparseable, skip", flush=True)
             continue
         ai = ACTIONS.index(action) + 1
         if avail and ai not in avail:
-            ai = avail[(ai - 1) % len(avail)]
+            ai = avail[0]   # 无效动作 -> 回退到第一个可用动作
         try:
-            res = env.step(GameAction(ai))
+            res = env.step(ai)   # py3.13: GameAction(value) 构造有怪癖，直接传 int
         except Exception as ex:
             f_log({"step": steps, "event": "env_error", "error": str(ex)[:120]})
             print(f"[{steps}] env error {ex}", flush=True)
@@ -168,7 +196,7 @@ def main():
             print("GAME WON", flush=True)
             break
         g_prev = res.frame
-        avail = [ACTIONS[i-1] for i in (getattr(res, "available_actions", None) or [1,2,3,4])]
+        avail = list(getattr(res, "available_actions", None) or [1, 2, 3, 4])
     sc = arc.get_scorecard()
     final = {"condition": cond, "steps": steps, "mean_precision": (
         round(sum(precisions)/len(precisions), 3) if precisions else None),
