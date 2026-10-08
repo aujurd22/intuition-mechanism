@@ -1,0 +1,56 @@
+[
+ {
+  "arm": "vcnet-kwta",
+  "seed": 0,
+  "final": "FINAL arm=vcnet-kwta seed=0 acc=0.8804 fgsm_eps0.03=0.2948 params=224587",
+  "secs": 34
+ },
+ {
+  "arm": "vcnet-kwta",
+  "seed": 1,
+  "final": "FINAL arm=vcnet-kwta seed=1 acc=0.8829 fgsm_eps0.03=0.2963 params=224587",
+  "secs": 34
+ },
+ {
+  "arm": "vcnet-kwta",
+  "seed": 2,
+  "final": "FINAL arm=vcnet-kwta seed=2 acc=0.8850 fgsm_eps0.03=0.2798 params=224587",
+  "secs": 34
+ },
+ {
+  "arm": "vcnet-relu",
+  "seed": 0,
+  "final": "FINAL arm=vcnet-relu seed=0 acc=0.8896 fgsm_eps0.03=0.1455 params=224587",
+  "secs": 28
+ },
+ {
+  "arm": "vcnet-relu",
+  "seed": 1,
+  "final": "FINAL arm=vcnet-relu seed=1 acc=0.8918 fgsm_eps0.03=0.2045 params=224587",
+  "secs": 28
+ },
+ {
+  "arm": "vcnet-relu",
+  "seed": 2,
+  "final": "FINAL arm=vcnet-relu seed=2 acc=0.8885 fgsm_eps0.03=0.1591 params=224587",
+  "secs": 28
+ },
+ {
+  "arm": "plain",
+  "seed": 0,
+  "final": "FINAL arm=plain seed=0 acc=0.8813 fgsm_eps0.03=0.1001 params=242250",
+  "secs": 20
+ },
+ {
+  "arm": "plain",
+  "seed": 1,
+  "final": "FINAL arm=plain seed=1 acc=0.8844 fgsm_eps0.03=0.1088 params=242250",
+  "secs": 19
+ },
+ {
+  "arm": "plain",
+  "seed": 2,
+  "final": "FINAL arm=plain seed=2 acc=0.8859 fgsm_eps0.03=0.0951 params=242250",
+  "secs": 18
+ }
+]
