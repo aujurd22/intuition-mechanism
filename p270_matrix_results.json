@@ -5,5 +5,40 @@
   "exit": 1,
   "secs": 153.1,
   "tail": "[30] ACTION4 actual=2  levels=0"
+ },
+ {
+  "game": "30",
+  "arm": "gate",
+  "exit": "TIMEOUT",
+  "secs": 7200.0,
+  "tail": ""
+ },
+ {
+  "game": "30",
+  "arm": "pack",
+  "exit": 0,
+  "secs": 6.1,
+  "tail": "[30] ACTION6 actual=0  levels=0"
+ },
+ {
+  "game": "30",
+  "arm": "gate",
+  "exit": 0,
+  "secs": 5895.6,
+  "tail": "[30] ACTION6 actual=0  levels=0"
+ },
+ {
+  "game": "30",
+  "arm": "pack",
+  "exit": 0,
+  "secs": 4.8,
+  "tail": "[30] ACTION6 actual=0  levels=0"
+ },
+ {
+  "game": "30",
+  "arm": "gate",
+  "exit": 0,
+  "secs": 4475.2,
+  "tail": "[30] ACTION1 actual=200 PREC 0% REFUTED levels=0"
  }
 ]
