@@ -1,0 +1,20 @@
+{"step": 0, "action": "ACTION4", "actual_n": 52, "actual_sample": [[45, 34, 3], [45, 35, 3], [45, 36, 3], [45, 37, 3], [45, 38, 3], [45, 39, 12], [45, 40, 12], [45, 41, 12]], "levels_completed": 0, "win": true}
+{"step": 1, "action": "ACTION4", "actual_n": 52, "actual_sample": [[45, 39, 3], [45, 40, 3], [45, 41, 3], [45, 42, 3], [45, 43, 3], [45, 44, 12], [45, 45, 12], [45, 46, 12]], "levels_completed": 0, "win": true}
+{"step": 2, "action": "ACTION4", "actual_n": 52, "actual_sample": [[45, 44, 3], [45, 45, 3], [45, 46, 3], [45, 47, 3], [45, 48, 3], [45, 49, 12], [45, 50, 12], [45, 51, 12]], "levels_completed": 0, "win": true}
+{"step": 3, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 16, 3], [62, 16, 3]], "levels_completed": 0, "win": true}
+{"step": 4, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 17, 3], [62, 17, 3]], "levels_completed": 0, "win": true}
+{"step": 5, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 18, 3], [62, 18, 3]], "levels_completed": 0, "win": true}
+{"step": 6, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 19, 3], [62, 19, 3]], "levels_completed": 0, "win": true}
+{"step": 7, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 20, 3], [62, 20, 3]], "levels_completed": 0, "win": true}
+{"step": 8, "action": "ACTION4", "actual_n": 2, "actual_sample": [[61, 21, 3], [62, 21, 3]], "levels_completed": 0, "win": true}
+{"step": 9, "action": "ACTION2", "actual_n": 2, "actual_sample": [[61, 22, 3], [62, 22, 3]], "levels_completed": 0, "win": true}
+{"step": 10, "action": "ACTION2", "actual_n": 2, "actual_sample": [[61, 23, 3], [62, 23, 3]], "levels_completed": 0, "win": true}
+{"step": 11, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 44, 12], [45, 45, 12], [45, 46, 12], [45, 47, 12], [45, 48, 12], [45, 49, 3], [45, 50, 3], [45, 51, 3]], "levels_completed": 0, "win": true}
+{"step": 12, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 39, 12], [45, 40, 12], [45, 41, 12], [45, 42, 12], [45, 43, 12], [45, 44, 3], [45, 45, 3], [45, 46, 3]], "levels_completed": 0, "win": true}
+{"step": 13, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 34, 12], [45, 35, 12], [45, 36, 12], [45, 37, 12], [45, 38, 12], [45, 39, 3], [45, 40, 3], [45, 41, 3]], "levels_completed": 0, "win": true}
+{"step": 14, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 29, 12], [45, 30, 12], [45, 31, 12], [45, 32, 12], [45, 33, 12], [45, 34, 3], [45, 35, 3], [45, 36, 3]], "levels_completed": 0, "win": true}
+{"step": 15, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 24, 12], [45, 25, 12], [45, 26, 12], [45, 27, 12], [45, 28, 12], [45, 29, 3], [45, 30, 3], [45, 31, 3]], "levels_completed": 0, "win": true}
+{"step": 16, "action": "ACTION3", "actual_n": 52, "actual_sample": [[45, 19, 12], [45, 20, 12], [45, 21, 12], [45, 22, 12], [45, 23, 12], [45, 24, 3], [45, 25, 3], [45, 26, 3]], "levels_completed": 0, "win": true}
+{"step": 17, "action": "ACTION3", "actual_n": 2, "actual_sample": [[61, 30, 3], [62, 30, 3]], "levels_completed": 0, "win": true}
+{"step": 18, "action": "ACTION3", "actual_n": 2, "actual_sample": [[61, 31, 3], [62, 31, 3]], "levels_completed": 0, "win": true}
+{"step": 19, "action": "ACTION3", "actual_n": 2, "actual_sample": [[61, 32, 3], [62, 32, 3]], "levels_completed": 0, "win": true}

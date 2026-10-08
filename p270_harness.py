@@ -108,12 +108,24 @@ def parse_turn(text, gate):
                 pass
     return action, clean
 
+def spend_rows_low_yield(logfile, k):
+    """Last k recorded steps that were all low-yield (actual_n < 20)?"""
+    try:
+        rows = [json.loads(l) for l in open(logfile, encoding="utf-8")]
+    except (OSError, ValueError):
+        return []
+    tail = [r for r in rows if "actual_n" in r][-k:]
+    if len(tail) < k:
+        return []
+    return [r for r in tail if r.get("actual_n", 0) < 20]
+
+
 def main():
     cond = sys.argv[1] if len(sys.argv) > 1 else "gate"
     max_actions = int(sys.argv[2]) if len(sys.argv) > 2 else 120
     game = sys.argv[3] if len(sys.argv) > 3 else "ls20"
     logfile = f"p270_{cond}_{game}.jsonl"
-    logf = open(logfile, "w", encoding="utf-8")
+    logf = open(logfile, "w", encoding="utf-8", buffering=1)  # line-buffered: survives SIGKILL
 
     arc = arc_agi.Arcade()
     env = arc.make(game)
@@ -125,36 +137,117 @@ def main():
     precisions = []
     refuted = 0
     evidence = ""
-    f_log = lambda o: logf.write(json.dumps(o, ensure_ascii=False) + "\n") or logf.flush()
+    action = None  # pack arm may set it before the GLM block; gate arm starts fresh
+    f_log = lambda o: logf.write(json.dumps(o, ensure_ascii=False, default=str) + "\n") or logf.flush()
 
     while steps < max_actions:
         grid_png = render_png(g_prev)
-        if cond == "gate":
+        if cond == "pack":
+            # pack arm: the intuition-pack ranks the available actions
+            # from past (action -> actual diff) experience; GLM is only
+            # consulted when the pack abstains (insufficient evidence).
+            from intuition_pack.server import get_store
+            import json as _j
+            try:
+                pack = _j.loads(get_store().get(f"arc-action-{game}"))
+            except Exception:
+                pack = None
+            counts = {}
+            for e in (pack or {}).get("exemplars", []):
+                a = e["inputs"].get("action")
+                lab = e.get("label")
+                if a:
+                    c = counts.setdefault(a, {"R": 0, "N": 0})
+                    c["R" if lab == "RATIONAL" else "N"] += 1
+            def _score(a):
+                c = counts.get(a)
+                if not c or (c["R"] + c["N"]) < 2:
+                    return None  # ABSTAIN: not enough evidence
+                return c["R"] / (c["R"] + c["N"])
+            scored = [(a, _score(ACTIONS[a - 1])) for a in avail]
+            # staleness (v15.1 fix for the ACTION4 lock-in): if the last
+            # K steps produced no level progress, treat ALL evidence as
+            # stale — game state changed, so old confidences no longer
+            # apply. Reset by filtering exemplars to recent ones only.
+            K = 6
+            recent_low_yield = len(spend_rows_low_yield(logfile, K))
+            filter_recent = recent_low_yield >= K
+            if filter_recent:
+                kept = [e for e in (pack or {}).get("exemplars", [])
+                        if e["inputs"].get("step", 0) >= steps - K]
+                counts = {}
+                for e in kept:
+                    a = e["inputs"].get("action")
+                    lab = e.get("label")
+                    if a:
+                        c = counts.setdefault(a, {"R": 0, "N": 0})
+                        c["R" if lab == "RATIONAL" else "N"] += 1
+                def _score(a):
+                    c = counts.get(a)
+                    if not c or (c["R"] + c["N"]) < 2:
+                        return None
+                    return c["R"] / (c["R"] + c["N"])
+                # all actions become partially unknown again; try the
+                # least-recently-tried first
+                scored = [(a, _score(ACTIONS[a - 1])) for a in avail]
+            unknown = [a for a, s in scored if s is None]
+            # least-evidence first: order unknowns by times tried this
+            # run (tracked in f_log rows), so a dead action stops
+            # being retried before other unknowns
+            tried = {}
+            try:
+                for line in open(logfile, encoding="utf-8"):
+                    rj = json.loads(line)
+                    a = rj.get("action")
+                    if a:
+                        tried[a] = tried.get(a, 0) + 1
+            except (OSError, ValueError):
+                pass
+            unknown.sort(key=lambda a: tried.get(ACTIONS[a - 1], 0))
+            confident = [(a, s) for a, s in scored
+                         if s is not None and s >= 0.6]
+            if unknown:
+                # exploration: an untested action is the most informative
+                # choice — the pack knows nothing about it yet
+                action, claims = ACTIONS[unknown[0] - 1], []
+                print(f"[{steps}] PACK explore {action} (no evidence)",
+                      flush=True)
+            elif confident:
+                confident.sort(key=lambda t: -t[1])
+                action, claims = ACTIONS[confident[0][0] - 1], []
+                print(f"[{steps}] PACK choose {action} "
+                      f"conf={confident[0][1]:.2f}", flush=True)
+            else:
+                print(f"[{steps}] PACK abstain -> GLM", flush=True)
+        if cond in ("gate", "pack") and action is None:
             prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧（调色板：0白 5黑 8红 9蓝 11黄 12橙，"
                       "其它数字是其它颜色）。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作，并预测这个动作会导致哪些格子发生变化（最多 8 个，"
                       "每个格子给行、列和变化后的色号）。" + (evidence or ""))
-        else:
+        elif cond == "nogate" or action is None and cond == "pack":
             prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作。")
         js = '严格只输出一个 JSON 对象：{"action":"ACTIONx"' + (
             ',"claims":[{"r":行,"c":列,"after":色号}]}' if cond == "gate" else "}")
-        try:
-            resp = glm_vision(prompt + "\n" + js + "\n当前帧如上。", grid_png)
-            action, claims = parse_turn(resp, cond == "gate")
-            tries = 0
-            while action is None and tries < 1:
-                resp = glm_vision(prompt + "\n\n你上次的输出无法解析。再次只输出 JSON。", grid_png)
+        if cond == "pack" and action is not None:
+            pass  # pack decided: skip the GLM call entirely
+        else:
+            try:
+                resp = glm_vision(prompt + "\n" + js + "\n当前帧如上。", grid_png)
                 action, claims = parse_turn(resp, cond == "gate")
-                tries += 1
-        except Exception as ex:
-            f_log({"step": steps, "event": "glm_error", "error": str(ex)[:120]})
-            print(f"[{steps}] glm error, skip", flush=True)
-            continue
-        if action is None:
-            f_log({"step": steps, "event": "unparseable", "raw": resp[:200]})
-            print(f"[{steps}] unparseable, skip", flush=True)
-            continue
+                tries = 0
+                while action is None and tries < 1:
+                    resp = glm_vision(prompt + "\n\n你上次的输出无法解析。再次只输出 JSON。", grid_png)
+                    action, claims = parse_turn(resp, cond == "gate")
+                    tries += 1
+            except Exception as ex:
+                f_log({"step": steps, "event": "glm_error", "error": str(ex)[:120]})
+                print(f"[{steps}] glm error, skip", flush=True)
+                continue
+            if action is None:
+                f_log({"step": steps, "event": "unparseable", "raw": resp[:200]})
+                print(f"[{steps}] unparseable, skip", flush=True)
+                continue
         ai = ACTIONS.index(action) + 1
         if avail and ai not in avail:
             ai = avail[0]   # 无效动作 -> 回退到第一个可用动作
@@ -168,6 +261,32 @@ def main():
         actual = diff_cells(g_prev, g_new)
         rec = {"step": steps, "action": action, "actual_n": len(actual),
                "actual_sample": actual[:8]}
+        if cond == "pack":
+            # self-update: fold the fresh observation back into the pack
+            # so exploration accumulates (this is the flyloop cycle:
+            # experience -> memory -> prediction -> error -> update)
+            try:
+                from intuition_pack.pack import build_pack
+                from intuition_pack.server import get_store
+                lab = "RATIONAL" if len(actual) >= 20 else "NOT"
+                old = json.loads(get_store().get(f"arc-action-{game}"))
+                exs = old.get("exemplars", [])
+                exs = [e for e in exs
+                       if not (e["inputs"].get("action") == action
+                               and e["inputs"].get("step", 0) >= steps)]
+                exs.append(dict(d=len(exs),
+                                inputs={"action": action,
+                                        "actual_n": len(actual),
+                                        "actual_sample": actual[:8],
+                                        "step": steps},
+                                label=lab,
+                                note="live self-update"))
+                newp = build_pack(f"arc-action-{game}", old["charter"], exs,
+                                  old["verifier"], "p270 self-update")
+                get_store().put(f"arc-action-{game}", newp.to_json())
+            except Exception as ex2:
+                print(f"[{steps}] pack self-update failed: {ex2!r}"[:100],
+                      flush=True)
         if cond == "gate":
             if claims:
                 hit = sum(1 for (r, c, aft) in claims

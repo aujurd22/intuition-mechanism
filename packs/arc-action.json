@@ -1,0 +1,2073 @@
+{
+ "domain": "arc-action",
+ "charter": "ARC-AGI-3 action selection: a single evidence source \u2014 the actual frame diff reported by the game engine after the action executes. An action is RATIONAL when it produces a large state transition (actual_n >= 20 cells) and NOT when it repeats a low-yield small diff. The game engine is the only evidence source; no model opinion.",
+ "exemplars": [
+  {
+   "d": 3,
+   "inputs": {
+    "action": "ACTION2",
+    "actual_n": 52,
+    "actual_sample": [
+     [
+      40,
+      44,
+      3
+     ],
+     [
+      40,
+      45,
+      3
+     ],
+     [
+      40,
+      46,
+      3
+     ],
+     [
+      40,
+      47,
+      3
+     ],
+     [
+      40,
+      48,
+      3
+     ],
+     [
+      41,
+      44,
+      3
+     ],
+     [
+      41,
+      45,
+      3
+     ],
+     [
+      41,
+      46,
+      3
+     ]
+    ],
+    "step_parity": 3
+   },
+   "label": "RATIONAL",
+   "note": "large-diff transition"
+  },
+  {
+   "d": 4,
+   "inputs": {
+    "action": "ACTION2",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      17,
+      3
+     ],
+     [
+      62,
+      17,
+      3
+     ]
+    ],
+    "step_parity": 0
+   },
+   "label": "NOT",
+   "note": "low-yield repeat diff"
+  },
+  {
+   "d": 7,
+   "inputs": {
+    "action": "ACTION3",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      15,
+      3
+     ],
+     [
+      62,
+      15,
+      3
+     ]
+    ],
+    "step": 2
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 8,
+   "inputs": {
+    "action": "ACTION3",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      16,
+      3
+     ],
+     [
+      62,
+      16,
+      3
+     ]
+    ],
+    "step": 3
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 37,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 0
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 38,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 1
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 39,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 2
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 40,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 3
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 41,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 4
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 42,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 5
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 43,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 6
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 44,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 7
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 45,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 8
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 46,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 9
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 47,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 10
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 48,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 11
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 49,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 12
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 50,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 13
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 51,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 14
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 52,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 15
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 53,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 16
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 54,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 17
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 55,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 18
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 56,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 19
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 57,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 20
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 58,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 21
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 59,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 22
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 60,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 23
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 61,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 24
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 62,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 25
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 63,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 26
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 64,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 27
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 65,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 28
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 66,
+   "inputs": {
+    "action": "ACTION6",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 29
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 67,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      63,
+      5
+     ]
+    ],
+    "step": 0
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 68,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 50,
+    "actual_sample": [
+     [
+      34,
+      27,
+      15
+     ],
+     [
+      34,
+      28,
+      15
+     ],
+     [
+      34,
+      29,
+      15
+     ],
+     [
+      34,
+      30,
+      15
+     ],
+     [
+      34,
+      31,
+      15
+     ],
+     [
+      34,
+      32,
+      15
+     ],
+     [
+      34,
+      33,
+      15
+     ],
+     [
+      34,
+      34,
+      15
+     ]
+    ],
+    "step": 1
+   },
+   "label": "RATIONAL",
+   "note": "live self-update"
+  },
+  {
+   "d": 69,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      62,
+      5
+     ]
+    ],
+    "step": 2
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 70,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      61,
+      5
+     ]
+    ],
+    "step": 3
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 71,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 4
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 72,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      60,
+      5
+     ]
+    ],
+    "step": 5
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 73,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 6
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 74,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      59,
+      5
+     ]
+    ],
+    "step": 7
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 75,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      58,
+      5
+     ]
+    ],
+    "step": 8
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 76,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 9
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 77,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      57,
+      5
+     ]
+    ],
+    "step": 10
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 78,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      56,
+      5
+     ]
+    ],
+    "step": 11
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 79,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 12
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 80,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      55,
+      5
+     ]
+    ],
+    "step": 13
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 81,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      54,
+      5
+     ]
+    ],
+    "step": 14
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 82,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 15
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 83,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      53,
+      5
+     ]
+    ],
+    "step": 16
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 84,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      52,
+      5
+     ]
+    ],
+    "step": 17
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 85,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 18
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 86,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      51,
+      5
+     ]
+    ],
+    "step": 19
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 87,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 20
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 88,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      50,
+      5
+     ]
+    ],
+    "step": 21
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 89,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      49,
+      5
+     ]
+    ],
+    "step": 22
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 90,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 23
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 91,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      48,
+      5
+     ]
+    ],
+    "step": 24
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 92,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      47,
+      5
+     ]
+    ],
+    "step": 25
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 93,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 26
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 94,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      46,
+      5
+     ]
+    ],
+    "step": 27
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 95,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      45,
+      5
+     ]
+    ],
+    "step": 28
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 96,
+   "inputs": {
+    "action": "ACTION5",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 29
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 88,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 52,
+    "actual_sample": [
+     [
+      45,
+      34,
+      3
+     ],
+     [
+      45,
+      35,
+      3
+     ],
+     [
+      45,
+      36,
+      3
+     ],
+     [
+      45,
+      37,
+      3
+     ],
+     [
+      45,
+      38,
+      3
+     ],
+     [
+      45,
+      39,
+      12
+     ],
+     [
+      45,
+      40,
+      12
+     ],
+     [
+      45,
+      41,
+      12
+     ]
+    ],
+    "step": 0
+   },
+   "label": "RATIONAL",
+   "note": "live self-update"
+  },
+  {
+   "d": 89,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 52,
+    "actual_sample": [
+     [
+      45,
+      39,
+      3
+     ],
+     [
+      45,
+      40,
+      3
+     ],
+     [
+      45,
+      41,
+      3
+     ],
+     [
+      45,
+      42,
+      3
+     ],
+     [
+      45,
+      43,
+      3
+     ],
+     [
+      45,
+      44,
+      12
+     ],
+     [
+      45,
+      45,
+      12
+     ],
+     [
+      45,
+      46,
+      12
+     ]
+    ],
+    "step": 1
+   },
+   "label": "RATIONAL",
+   "note": "live self-update"
+  },
+  {
+   "d": 90,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 52,
+    "actual_sample": [
+     [
+      45,
+      44,
+      3
+     ],
+     [
+      45,
+      45,
+      3
+     ],
+     [
+      45,
+      46,
+      3
+     ],
+     [
+      45,
+      47,
+      3
+     ],
+     [
+      45,
+      48,
+      3
+     ],
+     [
+      45,
+      49,
+      12
+     ],
+     [
+      45,
+      50,
+      12
+     ],
+     [
+      45,
+      51,
+      12
+     ]
+    ],
+    "step": 2
+   },
+   "label": "RATIONAL",
+   "note": "live self-update"
+  },
+  {
+   "d": 91,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      16,
+      3
+     ],
+     [
+      62,
+      16,
+      3
+     ]
+    ],
+    "step": 3
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 92,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      17,
+      3
+     ],
+     [
+      62,
+      17,
+      3
+     ]
+    ],
+    "step": 4
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 93,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      18,
+      3
+     ],
+     [
+      62,
+      18,
+      3
+     ]
+    ],
+    "step": 5
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 94,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      19,
+      3
+     ],
+     [
+      62,
+      19,
+      3
+     ]
+    ],
+    "step": 6
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 95,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      20,
+      3
+     ],
+     [
+      62,
+      20,
+      3
+     ]
+    ],
+    "step": 7
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 96,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      21,
+      3
+     ],
+     [
+      62,
+      21,
+      3
+     ]
+    ],
+    "step": 8
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 97,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      22,
+      3
+     ],
+     [
+      62,
+      22,
+      3
+     ]
+    ],
+    "step": 9
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 98,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      23,
+      3
+     ],
+     [
+      62,
+      23,
+      3
+     ]
+    ],
+    "step": 10
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 99,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      24,
+      3
+     ],
+     [
+      62,
+      24,
+      3
+     ]
+    ],
+    "step": 11
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 100,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      25,
+      3
+     ],
+     [
+      62,
+      25,
+      3
+     ]
+    ],
+    "step": 12
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 101,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      26,
+      3
+     ],
+     [
+      62,
+      26,
+      3
+     ]
+    ],
+    "step": 13
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 102,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      27,
+      3
+     ],
+     [
+      62,
+      27,
+      3
+     ]
+    ],
+    "step": 14
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 103,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      28,
+      3
+     ],
+     [
+      62,
+      28,
+      3
+     ]
+    ],
+    "step": 15
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 104,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      29,
+      3
+     ],
+     [
+      62,
+      29,
+      3
+     ]
+    ],
+    "step": 16
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 105,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      30,
+      3
+     ],
+     [
+      62,
+      30,
+      3
+     ]
+    ],
+    "step": 17
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 106,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      31,
+      3
+     ],
+     [
+      62,
+      31,
+      3
+     ]
+    ],
+    "step": 18
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 107,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      32,
+      3
+     ],
+     [
+      62,
+      32,
+      3
+     ]
+    ],
+    "step": 19
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 108,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      33,
+      3
+     ],
+     [
+      62,
+      33,
+      3
+     ]
+    ],
+    "step": 20
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 109,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      34,
+      3
+     ],
+     [
+      62,
+      34,
+      3
+     ]
+    ],
+    "step": 21
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 110,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      35,
+      3
+     ],
+     [
+      62,
+      35,
+      3
+     ]
+    ],
+    "step": 22
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 111,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      36,
+      3
+     ],
+     [
+      62,
+      36,
+      3
+     ]
+    ],
+    "step": 23
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 112,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      37,
+      3
+     ],
+     [
+      62,
+      37,
+      3
+     ]
+    ],
+    "step": 24
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 113,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      38,
+      3
+     ],
+     [
+      62,
+      38,
+      3
+     ]
+    ],
+    "step": 25
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 114,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      39,
+      3
+     ],
+     [
+      62,
+      39,
+      3
+     ]
+    ],
+    "step": 26
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 115,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      40,
+      3
+     ],
+     [
+      62,
+      40,
+      3
+     ]
+    ],
+    "step": 27
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 116,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      41,
+      3
+     ],
+     [
+      62,
+      41,
+      3
+     ]
+    ],
+    "step": 28
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 117,
+   "inputs": {
+    "action": "ACTION4",
+    "actual_n": 2,
+    "actual_sample": [
+     [
+      61,
+      42,
+      3
+     ],
+     [
+      62,
+      42,
+      3
+     ]
+    ],
+    "step": 29
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 94,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      63,
+      5
+     ]
+    ],
+    "step": 0
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 95,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 1
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 96,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      62,
+      5
+     ]
+    ],
+    "step": 2
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 97,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      61,
+      5
+     ]
+    ],
+    "step": 3
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 98,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 4
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 99,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      60,
+      5
+     ]
+    ],
+    "step": 5
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 100,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 6
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 101,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      59,
+      5
+     ]
+    ],
+    "step": 7
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 102,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      58,
+      5
+     ]
+    ],
+    "step": 8
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 103,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 9
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 104,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      57,
+      5
+     ]
+    ],
+    "step": 10
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 105,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      56,
+      5
+     ]
+    ],
+    "step": 11
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 106,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 12
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 107,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      55,
+      5
+     ]
+    ],
+    "step": 13
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 108,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      54,
+      5
+     ]
+    ],
+    "step": 14
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 109,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 15
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 110,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      53,
+      5
+     ]
+    ],
+    "step": 16
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 111,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      52,
+      5
+     ]
+    ],
+    "step": 17
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 112,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 18
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 113,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      51,
+      5
+     ]
+    ],
+    "step": 19
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 114,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 20
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 115,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      50,
+      5
+     ]
+    ],
+    "step": 21
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 116,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      49,
+      5
+     ]
+    ],
+    "step": 22
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 117,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 0,
+    "actual_sample": [],
+    "step": 23
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  },
+  {
+   "d": 118,
+   "inputs": {
+    "action": "ACTION1",
+    "actual_n": 1,
+    "actual_sample": [
+     [
+      63,
+      48,
+      5
+     ]
+    ],
+    "step": 24
+   },
+   "label": "NOT",
+   "note": "live self-update"
+  }
+ ],
+ "verifier": {
+  "name": "frame-diff-execution",
+  "rule": "execution: replay/check the action's actual frame diff against the recorded actual_n (game-engine ground truth)",
+  "executed_by": "agent"
+ },
+ "version": 158,
+ "created_at": 1791475285.3958902,
+ "source": "p270 self-update",
+ "triggers": [
+  "arc-action",
+  "arc",
+  "action"
+ ]
+}
