@@ -217,6 +217,28 @@ def main():
                 action, claims = ACTIONS[confident[0][0] - 1], []
                 print(f"[{steps}] PACK choose {action} "
                       f"conf={confident[0][1]:.2f}", flush=True)
+                if cond == "hybrid":
+                    # hybrid arm: pack locked a confident action, but
+                    # GLM still adds claims refinement on top (the
+                    # claims are verified by the toll booth as usual)
+                    prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧。可用动作: "
+                              + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
+                              f"已选动作: {action}。请预测这个动作会导致哪些格子"
+                              "发生变化（最多 8 个，每个给行列和变化后色号）。"
+                              + (evidence or ""))
+                    js_h = ('严格只输出一个 JSON 对象：{"action":"' + action
+                            + '","claims":[{"r":行,"c":列,"after":色号}]}')
+                    try:
+                        resp = glm_vision(prompt + "\n" + js_h + "\n当前帧如上。",
+                                          grid_png)
+                        _a, claims = parse_turn(resp, True)
+                        if _a is not None and _a != action:
+                            claims = []  # GLM disagreed: keep pack choice,
+                            # discard unverified claims
+                    except Exception as ex:
+                        claims = []
+                        print(f"[{steps}] hybrid GLM claims failed: "
+                              f"{ex!r}"[:90], flush=True)
             else:
                 print(f"[{steps}] PACK abstain -> GLM", flush=True)
         if cond in ("gate", "pack") and action is None:
@@ -231,6 +253,8 @@ def main():
             ',"claims":[{"r":行,"c":列,"after":色号}]}' if cond == "gate" else "}")
         if cond == "pack" and action is not None:
             pass  # pack decided: skip the GLM call entirely
+        elif cond == "hybrid" and action is not None:
+            pass  # hybrid confident branch already ran GLM for claims
         else:
             try:
                 resp = glm_vision(prompt + "\n" + js + "\n当前帧如上。", grid_png)
