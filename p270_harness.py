@@ -206,7 +206,9 @@ def main():
                 pass
             unknown.sort(key=lambda a: tried.get(ACTIONS[a - 1], 0))
             confident = [(a, s) for a, s in scored
-                         if s is not None and s >= 0.6]
+                         if s is not None and s > 0.0]  # relative-best:
+            # any nonzero evidence beats abstain; the 0.6 absolute bar
+            # starved hybrid into permanent abstain on noisy domains
             if unknown:
                 # exploration: an untested action is the most informative
                 # choice — the pack knows nothing about it yet
@@ -295,7 +297,7 @@ def main():
                 from intuition_pack.server import get_store
                 lab = "RATIONAL" if len(actual) >= 20 else "NOT"
                 old = json.loads(get_store().get(f"arc-action-{game}"))
-                exs = old.get("exemplars", [])
+                exs = old.get("exemplars", [])[-60:]  # recency window
                 exs = [e for e in exs
                        if not (e["inputs"].get("action") == action
                                and e["inputs"].get("step", 0) >= steps)]
