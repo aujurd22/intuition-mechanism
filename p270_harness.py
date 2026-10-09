@@ -153,10 +153,11 @@ def main():
                 pack = _j.loads(get_store().get(f"arc-action-{game}"))
             except Exception:
                 pack = None
-            K = 6
+            K = 3
             recent_low = len(spend_rows_low_yield(logfile, K))
+            filter_recent = cond == "hybrid" and recent_low >= K
             exs = (pack or {}).get("exemplars", [])
-            if cond == "hybrid" and recent_low >= K:
+            if filter_recent:
                 # hybrid staleness: same reset as pack arm — K low-yield
                 # steps mean the game state changed, old evidence no
                 # longer applies; keep only recent exemplars
@@ -193,7 +194,25 @@ def main():
                          if s is not None and s > 0.0]  # relative-best:
             # any nonzero evidence beats abstain; the 0.6 absolute bar
             # starved hybrid into permanent abstain on noisy domains
-            if unknown:
+            tried = {}
+            try:
+                for line in open(logfile, encoding="utf-8"):
+                    rj = json.loads(line)
+                    a = rj.get("action")
+                    if a:
+                        tried[a] = tried.get(a, 0) + 1
+            except (OSError, ValueError):
+                pass
+            unknown = [a for a, s in scored if s is None]
+            # exploration: least-tried unknown first (avoid retrying a
+            # known-dead action while other unknowns exist)
+            unknown.sort(key=lambda a: tried.get(ACTIONS[a - 1], 0))
+            if unknown and (filter_recent if "filter_recent" in dir() else False):
+                # stale reset active: forced re-explore least-tried
+                action, claims = ACTIONS[unknown[0] - 1], []
+                print(f"[{steps}] PACK re-explore {action} (stale reset)",
+                      flush=True)
+            elif unknown:
                 # exploration: an untested action is the most informative
                 # choice — the pack knows nothing about it yet
                 action, claims = ACTIONS[unknown[0] - 1], []
