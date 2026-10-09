@@ -241,12 +241,12 @@ def main():
                               f"{ex!r}"[:90], flush=True)
             else:
                 print(f"[{steps}] PACK abstain -> GLM", flush=True)
-        if cond in ("gate", "pack") and action is None:
+        if cond in ("gate", "pack", "hybrid") and action is None:
             prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧（调色板：0白 5黑 8红 9蓝 11黄 12橙，"
                       "其它数字是其它颜色）。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作，并预测这个动作会导致哪些格子发生变化（最多 8 个，"
                       "每个格子给行、列和变化后的色号）。" + (evidence or ""))
-        elif cond == "nogate" or action is None and cond == "pack":
+        elif cond == "nogate":
             prompt = ("你在玩一个 64x64 的格子游戏。这是当前帧。可用动作: " + ",".join(ACTIONS[i-1] for i in avail) + "。\n"
                       "选择下一个动作。")
         js = '严格只输出一个 JSON 对象：{"action":"ACTIONx"' + (
