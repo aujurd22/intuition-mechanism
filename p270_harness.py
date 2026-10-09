@@ -142,10 +142,11 @@ def main():
 
     while steps < max_actions:
         grid_png = render_png(g_prev)
-        if cond == "pack":
-            # pack arm: the intuition-pack ranks the available actions
-            # from past (action -> actual diff) experience; GLM is only
-            # consulted when the pack abstains (insufficient evidence).
+        if cond in ("pack", "hybrid"):
+            # pack/hybrid arms: the intuition-pack ranks the available
+            # actions from past (action -> actual diff) experience; GLM
+            # is only consulted when the pack abstains (hybrid: or for
+            # claims refinement on a confident action).
             from intuition_pack.server import get_store
             import json as _j
             try:
