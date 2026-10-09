@@ -1,3 +1,5 @@
+*Re-submitted after an infrastructure failure in the first review run (OpenAI upstream 502/503; see the failed workflow log — unrelated to proposal content).*
+
 # MB-Sparse Spots-10: Does Mushroom-Body Microcircuit Sparsification Add Adversarial Robustness to a Cortical Macro-Architecture?
 
 | Section | Field | Proposal |
