@@ -153,8 +153,17 @@ def main():
                 pack = _j.loads(get_store().get(f"arc-action-{game}"))
             except Exception:
                 pack = None
+            K = 6
+            recent_low = len(spend_rows_low_yield(logfile, K))
+            exs = (pack or {}).get("exemplars", [])
+            if cond == "hybrid" and recent_low >= K:
+                # hybrid staleness: same reset as pack arm — K low-yield
+                # steps mean the game state changed, old evidence no
+                # longer applies; keep only recent exemplars
+                exs = [e for e in exs
+                       if e["inputs"].get("step", 0) >= steps - K]
             counts = {}
-            for e in (pack or {}).get("exemplars", []):
+            for e in exs:
                 a = e["inputs"].get("action")
                 lab = e.get("label")
                 if a:
@@ -166,31 +175,6 @@ def main():
                     return None  # ABSTAIN: not enough evidence
                 return c["R"] / (c["R"] + c["N"])
             scored = [(a, _score(ACTIONS[a - 1])) for a in avail]
-            # staleness (v15.1 fix for the ACTION4 lock-in): if the last
-            # K steps produced no level progress, treat ALL evidence as
-            # stale — game state changed, so old confidences no longer
-            # apply. Reset by filtering exemplars to recent ones only.
-            K = 6
-            recent_low_yield = len(spend_rows_low_yield(logfile, K))
-            filter_recent = recent_low_yield >= K
-            if filter_recent:
-                kept = [e for e in (pack or {}).get("exemplars", [])
-                        if e["inputs"].get("step", 0) >= steps - K]
-                counts = {}
-                for e in kept:
-                    a = e["inputs"].get("action")
-                    lab = e.get("label")
-                    if a:
-                        c = counts.setdefault(a, {"R": 0, "N": 0})
-                        c["R" if lab == "RATIONAL" else "N"] += 1
-                def _score(a):
-                    c = counts.get(a)
-                    if not c or (c["R"] + c["N"]) < 2:
-                        return None
-                    return c["R"] / (c["R"] + c["N"])
-                # all actions become partially unknown again; try the
-                # least-recently-tried first
-                scored = [(a, _score(ACTIONS[a - 1])) for a in avail]
             unknown = [a for a, s in scored if s is None]
             # least-evidence first: order unknowns by times tried this
             # run (tracked in f_log rows), so a dead action stops
