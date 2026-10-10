@@ -28,7 +28,7 @@ class Trans(nn.Module):
         self.enc = nn.TransformerEncoder(enc, layers)
         self.out = nn.Linear(d, P)
     def embed(self, ab):
-        idx = torch.arange(2).unsqueeze(0).expand(ab.shape[0], -1)
+        idx = torch.arange(2, device=ab.device).unsqueeze(0).expand(ab.shape[0], -1)
         h = self.emb(ab) + self.pos(idx)
         return self.enc(h)[:, 0]
     def forward(self, ab):
