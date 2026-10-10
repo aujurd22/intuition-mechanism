@@ -21,7 +21,12 @@ def main():
         fin = {}
         if os.path.exists(f"p270_{cond}_final.json"):
             fin = json.load(open(f"p270_{cond}_final.json", encoding="utf-8"))
-        sc = fin.get("scorecard", {})
+        sc = fin.get("scorecard") or {}
+        if isinstance(sc, str):
+            try:
+                sc = json.loads(sc)
+            except Exception:
+                sc = {}
         envs = sc.get("environments", [])
         levels = actions = 0
         score = 0.0
@@ -36,6 +41,12 @@ def main():
                      "score": round(score, 3), "games_completed": completed,
                      "final_state": (envs[0].get("runs", [{}])[-1].get("state")
                                      if envs and envs[0].get("runs") else None)}
+    for cond in ["nogate", "gate"]:
+        if isinstance(out[cond].get("scorecard"), str):
+            try:
+                out[cond]["scorecard"] = json.loads(out[cond]["scorecard"])
+            except Exception:
+                out[cond]["scorecard"] = {}
     # gate arm claim precision trajectory
     gate_rows = load_jsonl("p270_gate_ls20.jsonl") if os.path.exists(
         "p270_gate_ls20.jsonl") else []

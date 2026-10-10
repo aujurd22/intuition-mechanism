@@ -1,0 +1,39 @@
+{
+ "nogate": {
+  "steps_logged": 0,
+  "levels_completed": 0,
+  "actions": 0,
+  "score": 0.0,
+  "games_completed": 0,
+  "final_state": null
+ },
+ "gate": {
+  "steps_logged": 28,
+  "levels_completed": 0,
+  "actions": 30,
+  "score": 0.0,
+  "games_completed": 0,
+  "final_state": "NOT_FINISHED"
+ },
+ "H1_precision_early_vs_late": {
+  "early": 0.0,
+  "late": 0.0,
+  "improved": false
+ },
+ "H1_refuted_count": 27,
+ "H1_total_claimed_steps": 27,
+ "H2_headline": {
+  "levels_completed": {
+   "nogate": 0,
+   "gate": 0
+  },
+  "actions": {
+   "nogate": 0,
+   "gate": 30
+  },
+  "score": {
+   "nogate": 0.0,
+   "gate": 0.0
+  }
+ }
+}

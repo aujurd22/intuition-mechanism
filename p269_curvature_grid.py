@@ -75,21 +75,31 @@ if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     outdir = os.path.dirname(os.path.abspath(__file__))
     results = []
-    for s in range(n):
+    existing = []
+    if os.path.exists("p269_curvature_results.json"):
+        existing = json.load(open("p269_curvature_results.json", encoding="utf-8"))
+        existing = [r for r in existing if existing and lo <= r["seed"] < lo + n] if False else existing
+    for s in range(lo, hi):
         r = run(s)
         results.append(r)
-        json.dump(results, open("p269_curvature_results.json", "w"), indent=1)
+        merged = {r["seed"]: r for r in existing}
+        merged[r["seed"]] = r
+        json.dump(list(merged.values()), open("p269_curvature_results.json", "w"), indent=1)
         trj = r["test_traj"]
         late = [v for k, v in trj.items() if 1000 <= int(k) <= 2500]
         print(f"seed{s}: final={r['final_test']:.3f} late_min={min(late):.3f}", flush=True)
-    wins = [r for r in results if r["final_test"] >= 0.5]
-    lose = [r for r in results if r["final_test"] < 0.5]
+    allr = json.load(open("p269_curvature_results.json", encoding="utf-8"))
+    seen_seeds = {r["seed"]: r for r in allr}
+    rows = list(seen_seeds.values())
+    wins = [r for r in rows if r["final_test"] >= 0.5]
+    lose = [r for r in rows if r["final_test"] < 0.5]
+    print(f"total seeds on disk: {len(rows)} (win {len(wins)} / lose {len(lose)})")
     cmp_ = {}
     all_keys = sorted(results[0]["curvature"].keys())
     for k in all_keys:
         cmp_[k] = {"win": round(float(np.mean([r["curvature"][k] for r in wins])) if wins else 0, 2),
                    "lose": round(float(np.mean([r["curvature"][k] for r in lose])) if lose else 0, 2)}
-    verdict = {"n": len(results), "n_win": len(wins),
+    verdict = {"n": len(rows), "n_win": len(wins),
                "curvature_win_vs_lose": cmp_,
                "note": "fine grid (50 ep) — angles now measure true directional persistence"}
     json.dump(verdict, open("p269_curvature_verdict.json", "w"), indent=1)
