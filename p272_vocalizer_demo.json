@@ -1,0 +1,38 @@
+[
+ {
+  "question": "d=5 是不是那个著名的 landing row？",
+  "verdict": "RATIONAL",
+  "value": "20.0",
+  "mechanical_ms": 0.77,
+  "render_ms": 973.7,
+  "language": "d=5 的 1/x6 值为 20.0（RATIONAL）。",
+  "grounded_facts": "机械验证器判定 d=5 的 1/x6 值：20.0（RATIONAL）"
+ },
+ {
+  "question": "d=3 呢？",
+  "verdict": "RATIONAL",
+  "value": "12.0",
+  "mechanical_ms": 0.95,
+  "render_ms": 730.5,
+  "language": "1/x6=12.0",
+  "grounded_facts": "机械验证器判定 d=3 的 1/x6 值：12.0（RATIONAL）"
+ },
+ {
+  "question": "d=978 是 landing 吗？",
+  "verdict": "NEAR_INTEGER",
+  "value": "2.6253741264076874e+17",
+  "mechanical_ms": 0.41,
+  "render_ms": 1413.0,
+  "language": "机械验证器判定 d=978 的 1/x6 值为 2.6253741264076874e+17，属于 NEAR_INTEGER 类型，目前无法确定 d=978 是否为 landing。",
+  "grounded_facts": "机械验证器判定 d=978 的 1/x6 值：2.6253741264076874e+17（NEAR_INTEGER）"
+ },
+ {
+  "question": "d=11 呢？",
+  "verdict": "NOT",
+  "value": "72.46737587922817",
+  "mechanical_ms": 0.57,
+  "render_ms": 1085.9,
+  "language": "机械验证器判定，d=11 时 1/x6 的值为 72.46737587922817，结果为 NOT。",
+  "grounded_facts": "机械验证器判定 d=11 的 1/x6 值：72.46737587922817（NOT）"
+ }
+]
