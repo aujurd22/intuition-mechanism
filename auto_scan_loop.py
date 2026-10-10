@@ -159,6 +159,19 @@ def run_cycle():
                 for it in items)
             entry.update({"verdict": "COMPRESSION -> PACK BUILT",
                           "pack_version": version, "gate_ok": gate_ok})
+            # v3 upgrade 5: validator-surface auto-expansion — a built domain
+            # registers an execution verifier so the gate's zone-1 coverage
+            # grows with the scan (shrink-law: detector surface must track
+            # the shrinking compression-domain set)
+            vreg_f = os.path.join(ROOT, "packs", "auto_verifiers.json")
+            vreg = json.load(open(vreg_f, encoding="utf-8"))                 if os.path.exists(vreg_f) else {}
+            vreg[name] = {"verifier": "pytest_check",
+                          "rule": f"execution: exit 0 => PASS (domain {name})",
+                          "registered": time.strftime("%Y-%m-%d %H:%M"),
+                          "source": "auto_scan_loop"}
+            os.makedirs(os.path.dirname(vreg_f), exist_ok=True)
+            json.dump(vreg, open(vreg_f, "w", encoding="utf-8"), indent=1)
+            entry["verifier_registered"] = name
             dom["status"] = "built"
             print(f"{name}: single gain {gain} -> PACK BUILT v{version} "
                   f"(gate {'OK' if gate_ok else 'FAIL'})")
