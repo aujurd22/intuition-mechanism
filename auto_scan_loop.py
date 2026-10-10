@@ -168,6 +168,18 @@ def run_cycle():
             print(f"{name}: single gain {gain} -> no build")
         log.append(entry)
         changed = True
+        # error-driven pack self-expansion: every judged item joins the
+        # domain's error pool (dedup by id) — future probes can mine it
+        errs_f = os.path.join(ROOT, "packs", f"{name}_errors.json")
+        errs = json.load(open(errs_f, encoding="utf-8")) \
+            if os.path.exists(errs_f) else []
+        seen = {e.get("id") for e in errs}
+        new_errs = [it for it in items if it["id"] not in seen]
+        if new_errs:
+            errs.extend(new_errs)
+            os.makedirs(os.path.dirname(errs_f), exist_ok=True)
+            json.dump(errs, open(errs_f, "w", encoding="utf-8"), indent=1)
+            entry["error_pool_size"] = len(errs)
 
     if changed:
         json.dump(q, open(QUEUE, "w", encoding="utf-8"), indent=1,

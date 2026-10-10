@@ -1,0 +1,11 @@
+{
+ "vcnet-kwta": {
+  "pgd20_eps0.03": 0.0248
+ },
+ "vcnet-relu": {
+  "pgd20_eps0.03": 0.0152
+ },
+ "plain": {
+  "pgd20_eps0.03": 0.0019
+ }
+}

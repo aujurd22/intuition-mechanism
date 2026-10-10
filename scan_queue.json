@@ -2,7 +2,7 @@
  "domains": [
   {
    "domain": "csv_parser",
-   "status": "no-build",
+   "status": "queued",
    "items": [
     {
      "id": "csv_parser#1",
@@ -29,11 +29,12 @@
      "passes": false
     }
    ],
-   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier."
+   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier.",
+   "note": "requeued 2026-10-06: error-pool expansion round (P268 lead integration)"
   },
   {
    "domain": "queue_semantics",
-   "status": "saturated",
+   "status": "queued",
    "items": [
     {
      "id": "queue_semantics#0",
@@ -60,7 +61,8 @@
      "passes": true
     }
    ],
-   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier."
+   "charter": "Judge whether the CODE passes the TESTS (exactly). Confirm with the pytest_check verifier.",
+   "note": "requeued 2026-10-06: error-pool expansion round (P268 lead integration)"
   }
  ]
 }
