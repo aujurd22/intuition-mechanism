@@ -1,0 +1,64 @@
+{
+  "id": "P277",
+  "renumber_note": "Registration v3, revised BEFORE the full run. v2 removed edge-clipped objects (smoke: the left bowling pin sits at the left edge; its right-view copy is out of frame at ~364 px disparity). v3 additionally moves cross-view correspondence from the VLM to the geometry module: NCC template matching guided by the left bbox. Smoke showed the VLM's independent bbox localization in the two views has ~50+ px noise and near-identical y bounds -- its noise swamps the ~130 px disparity signal, so cross-view correspondence is precisely the kind of mechanical work the spatial-language architecture assigns to geometry. GT: dmin NOT added to the depth formula (disp1.png values ARE the view1<->view5 pixel offsets in shipped coordinates; verified by NCC template matching at 150 px measured vs 154 px map, 3%).",
+  "name": "Real-world stereo OOD: spatial language pipeline on Middlebury 2006",
+  "registered_before_run": "2026-10-11 (before any model call on these images)",
+  "question": "Does the P275/P276 architecture conclusion (geometry module emits numbers, recognition outsourced to a detector, LLM never produces coordinates) survive contact with REAL stereo images, where texture and lighting are uncontrolled?",
+  "data": {
+    "source": "Middlebury 2006 stereo datasets (vision.middlebury.edu, direct links)",
+    "pairs": "view1/view5 at Illum2/Exp1, rectified, radial distortion removed",
+    "scenes": ["Bowling1", "Lampshade1", "Monopoly", "Flowerpots"],
+    "calibration": "f = 3740 px at original resolution (3072 px wide) scaled to full-size by f_full = 3740 * W_full / 3072; baseline B = 160 mm between views 1 and 5; dmin.txt added to disparity maps",
+    "ground_truth": "GT disparity maps disp1.png sampled at the left bbox center (41 px window, nonzero median, plus dmin); Z_gt = f_full * B / disp_gt",
+    "metric_note": "Scores use RELATIVE depth error |Z_est-Z_gt|/Z_gt, which is invariant to the f_full scaling ambiguity (original-resolution assumption 3072 px)."
+  },
+  "objects": [
+    {"scene": "Bowling1", "desc": "green bowling ball"},
+    {"scene": "Bowling1", "desc": "right white bowling pin with red crown marking"},
+    {"scene": "Lampshade1", "desc": "yellow flat board"},
+    {"scene": "Lampshade1", "desc": "cardboard box with red arrows printed on it"},
+    {"scene": "Lampshade1", "desc": "green patterned cylindrical canister"},
+    {"scene": "Lampshade1", "desc": "white plaster cap shape"},
+    {"scene": "Monopoly", "desc": "wooden block standing in the middle of the Monopoly board"},
+    {"scene": "Monopoly", "desc": "Monopoly game board standing upright"},
+    {"scene": "Flowerpots", "desc": "the most centrally located flowerpot"},
+    {"scene": "Aloe", "desc": "the dark brown plant pot at the bottom right, in front of the aloe plant"},
+    {"scene": "Baby1", "desc": "the baby doll sitting on the green dotted box"},
+    {"scene": "Baby1", "desc": "the green dotted box the baby doll sits on"},
+    {"scene": "Bowling2", "desc": "the large green ball"},
+    {"scene": "Bowling2", "desc": "the white bowling pin with red stripes in the middle"},
+    {"scene": "Lampshade2", "desc": "the teddy bear in the wicker basket at the right"},
+    {"scene": "Lampshade2", "desc": "the gray knit beanie hat with MIDDLEBURY band at the front center"},
+    {"scene": "Midd2", "desc": "the blue plastic box with letter N printed on it, front center"},
+    {"scene": "Midd2", "desc": "the bright yellow angular plastic object at the right center"},
+    {"scene": "Plastic", "desc": "the white plaster cap shape in front center"},
+    {"scene": "Wood1", "desc": "the vertical wooden post in the center"}
+  ],
+  "arms": {
+    "SL": "VLM localizes the object in the LEFT view only (bbox, coarse) -> geometry module runs NCC template matching in the right view (mechanical correspondence, sub-noise of any model) -> disparity d -> Z = f_full * B / d. No depth number and no cross-view correspondence ever comes from a model.",
+    "Direct": "VLM sees the LEFT image only and directly estimates the object distance in meters. Current-default way."
+  },
+  "predictions": [
+    {
+      "id": "P-real-1",
+      "claim": "SL median relative depth error < 15% AND significantly smaller than Direct (one-sided sign-flip permutation p < 0.05).",
+      "falsifies": "If Direct <= SL or SL median >= 15%, the mechanical stereo layer does not carry to real images."
+    },
+    {
+      "id": "P-real-2",
+      "claim": "Direct (single-view) depth estimates show a systematic signed bias (median signed error away from zero) — the VLM has no metric depth scale from one image.",
+      "falsifies": "If Direct signed errors are centered on zero with small spread, single-view depth guessing is better than claimed."
+    },
+    {
+      "id": "P-real-3",
+      "claim": "Every SL failure is attributable to a mechanical stage (bbox parse failure, edge clipping, low NCC < 0.3, degenerate disparity) while Direct failures/errors are not attributable.",
+      "falsifies": "If SL fails opaquely, grounding does not transfer to the real pipeline."
+    }
+  ],
+  "fairness_notes": [
+    "Object list frozen above before any model call; the VLM is never shown the disparity maps or calibration.",
+    "Direct gets the same image resolution as SL's left view.",
+    "GT sampling uses the SL left bbox location - declared; a wrong-object bbox poisons GT too and falls into wrong_object attribution, which is conservative AGAINST SL only if the same wrong bbox also drives its own disparity... declared limitation.",
+    "Both arms use the same VLM (doubao-seed-2.1-lite vision)."
+  ]
+}

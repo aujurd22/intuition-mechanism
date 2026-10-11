@@ -1,0 +1,475 @@
+[
+ {
+  "scene": "Bowling1",
+  "obj": "green bowling ball",
+  "arm": "SL",
+  "bboxL": [
+   5,
+   97,
+   711,
+   746
+  ],
+  "disp_px": 94.0,
+  "ncc": 0.873,
+  "Z_est": 2.2795,
+  "Z_gt": 2.3007,
+  "rel_err": 0.0092,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Bowling1",
+  "obj": "green bowling ball",
+  "arm": "Direct",
+  "Z_est": 1.2,
+  "Z_gt": 2.3007,
+  "rel_err": 0.4784,
+  "signed_err": -0.4784,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "yellow flat board",
+  "arm": "SL",
+  "bboxL": [
+   375,
+   25,
+   835,
+   463
+  ],
+  "disp_px": 216.0,
+  "ncc": 0.435,
+  "Z_est": 0.992,
+  "Z_gt": 3.0146,
+  "rel_err": 0.6709,
+  "pass_": false,
+  "attribution": "geometry_error"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "yellow flat board",
+  "arm": "Direct",
+  "Z_est": 1.5,
+  "Z_gt": 3.0146,
+  "rel_err": 0.5024,
+  "signed_err": -0.5024,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "cardboard box with red arrows printed on it",
+  "arm": "SL",
+  "bboxL": [
+   319,
+   455,
+   912,
+   901
+  ],
+  "disp_px": 157.0,
+  "ncc": 0.934,
+  "Z_est": 1.3648,
+  "Z_gt": 1.3762,
+  "rel_err": 0.0083,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "cardboard box with red arrows printed on it",
+  "arm": "Direct",
+  "Z_est": 1.3,
+  "Z_gt": 1.3762,
+  "rel_err": 0.0554,
+  "signed_err": -0.0554,
+  "pass_": true,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "white plaster cap shape",
+  "arm": "SL",
+  "bboxL": [
+   213,
+   486,
+   876,
+   999
+  ],
+  "disp_px": 156.0,
+  "ncc": 0.823,
+  "Z_est": 1.3735,
+  "Z_gt": 1.3838,
+  "rel_err": 0.0074,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "white plaster cap shape",
+  "arm": "Direct",
+  "Z_est": 0.68,
+  "Z_gt": 1.3838,
+  "rel_err": 0.5086,
+  "signed_err": -0.5086,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Monopoly",
+  "obj": "wooden block standing in the middle of the Monopoly board",
+  "arm": "SL",
+  "bboxL": [
+   477,
+   288,
+   578,
+   883
+  ],
+  "disp_px": 421.0,
+  "ncc": 0.574,
+  "Z_est": 0.509,
+  "Z_gt": 3.0842,
+  "rel_err": 0.835,
+  "pass_": false,
+  "attribution": "geometry_error"
+ },
+ {
+  "scene": "Monopoly",
+  "obj": "wooden block standing in the middle of the Monopoly board",
+  "arm": "Direct",
+  "Z_est": 0.9,
+  "Z_gt": 3.0842,
+  "rel_err": 0.7082,
+  "signed_err": -0.7082,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Flowerpots",
+  "obj": "the most centrally located flowerpot",
+  "arm": "SL",
+  "bboxL": [
+   226,
+   173,
+   623,
+   603
+  ],
+  "disp_px": 132.0,
+  "ncc": 0.745,
+  "Z_est": 1.6233,
+  "Z_gt": 1.6278,
+  "rel_err": 0.0028,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Flowerpots",
+  "obj": "the most centrally located flowerpot",
+  "arm": "Direct",
+  "Z_est": 0.83,
+  "Z_gt": 1.6278,
+  "rel_err": 0.4901,
+  "signed_err": -0.4901,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Bowling1",
+  "obj": "right white bowling pin with red crown marking",
+  "arm": "SL",
+  "bboxL": [
+   666,
+   112,
+   925,
+   701
+  ],
+  "attribution": "degenerate_disp",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false,
+  "disp_px": -26.0,
+  "ncc": 0.804
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "green patterned cylindrical canister",
+  "arm": "SL",
+  "bboxL": null,
+  "attribution": "bbox_edge_clipped",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false
+ },
+ {
+  "scene": "Monopoly",
+  "obj": "Monopoly game board standing upright",
+  "arm": "SL",
+  "bboxL": null,
+  "attribution": "bbox_edge_clipped",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false
+ },
+ {
+  "scene": "Aloe",
+  "obj": "the dark brown plant pot at the bottom right, in front of the aloe plant",
+  "arm": "SL",
+  "bboxL": [
+   553,
+   726,
+   836,
+   976
+  ],
+  "disp_px": 95.0,
+  "ncc": 0.924,
+  "Z_est": 2.2555,
+  "Z_gt": 2.291,
+  "rel_err": 0.0155,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Aloe",
+  "obj": "the dark brown plant pot at the bottom right, in front of the aloe plant",
+  "arm": "Direct",
+  "Z_est": 1.1,
+  "Z_gt": 2.291,
+  "rel_err": 0.5199,
+  "signed_err": -0.5199,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Baby1",
+  "obj": "the baby doll sitting on the green dotted box",
+  "arm": "SL",
+  "bboxL": null,
+  "attribution": "bbox_edge_clipped",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false
+ },
+ {
+  "scene": "Baby1",
+  "obj": "the green dotted box the baby doll sits on",
+  "arm": "SL",
+  "bboxL": [
+   163,
+   601,
+   816,
+   999
+  ],
+  "disp_px": 120.0,
+  "ncc": 0.948,
+  "Z_est": 1.7856,
+  "Z_gt": 1.776,
+  "rel_err": 0.0054,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Baby1",
+  "obj": "the green dotted box the baby doll sits on",
+  "arm": "Direct",
+  "Z_est": 0.9,
+  "Z_gt": 1.776,
+  "rel_err": 0.4933,
+  "signed_err": -0.4933,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the large green ball",
+  "arm": "SL",
+  "bboxL": [
+   162,
+   82,
+   850,
+   910
+  ],
+  "disp_px": 143.0,
+  "ncc": 0.948,
+  "Z_est": 1.4984,
+  "Z_gt": 1.5062,
+  "rel_err": 0.0052,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the large green ball",
+  "arm": "Direct",
+  "Z_est": 1.1,
+  "Z_gt": 1.5062,
+  "rel_err": 0.2697,
+  "signed_err": -0.2697,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the white bowling pin with red stripes in the middle",
+  "arm": "SL",
+  "bboxL": [
+   170,
+   134,
+   408,
+   998
+  ],
+  "disp_px": 153.0,
+  "ncc": 0.859,
+  "Z_est": 1.4005,
+  "Z_gt": 1.3354,
+  "rel_err": 0.0487,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the white bowling pin with red stripes in the middle",
+  "arm": "Direct",
+  "Z_est": 0.8,
+  "Z_gt": 1.3354,
+  "rel_err": 0.4009,
+  "signed_err": -0.4009,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the teddy bear in the wicker basket at the right",
+  "arm": "SL",
+  "bboxL": [
+   332,
+   484,
+   995,
+   999
+  ],
+  "disp_px": 156.0,
+  "ncc": 0.782,
+  "Z_est": 1.3735,
+  "Z_gt": 1.3762,
+  "rel_err": 0.002,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the teddy bear in the wicker basket at the right",
+  "arm": "Direct",
+  "Z_est": 1.02,
+  "Z_gt": 1.3762,
+  "rel_err": 0.2589,
+  "signed_err": -0.2589,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the gray knit beanie hat with MIDDLEBURY band at the front center",
+  "arm": "SL",
+  "bboxL": [
+   332,
+   483,
+   994,
+   998
+  ],
+  "disp_px": 156.0,
+  "ncc": 0.783,
+  "Z_est": 1.3735,
+  "Z_gt": 1.3762,
+  "rel_err": 0.002,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the gray knit beanie hat with MIDDLEBURY band at the front center",
+  "arm": "Direct",
+  "Z_est": 0.79,
+  "Z_gt": 1.3762,
+  "rel_err": 0.426,
+  "signed_err": -0.426,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Midd2",
+  "obj": "the blue plastic box with letter N printed on it, front center",
+  "arm": "SL",
+  "bboxL": null,
+  "attribution": "bbox_parse",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false
+ },
+ {
+  "scene": "Midd2",
+  "obj": "the bright yellow angular plastic object at the right center",
+  "arm": "SL",
+  "bboxL": [
+   243,
+   795,
+   339,
+   843
+  ],
+  "disp_px": 119.0,
+  "ncc": 0.906,
+  "Z_est": 1.8006,
+  "Z_gt": 1.7739,
+  "rel_err": 0.015,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Midd2",
+  "obj": "the bright yellow angular plastic object at the right center",
+  "arm": "Direct",
+  "Z_est": 1.2,
+  "Z_gt": 1.7739,
+  "rel_err": 0.3235,
+  "signed_err": -0.3235,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Plastic",
+  "obj": "the white plaster cap shape in front center",
+  "arm": "SL",
+  "bboxL": [
+   383,
+   331,
+   676,
+   664
+  ],
+  "disp_px": 143.0,
+  "ncc": 0.765,
+  "Z_est": 1.4984,
+  "Z_gt": 1.5084,
+  "rel_err": 0.0067,
+  "pass_": true,
+  "attribution": "none"
+ },
+ {
+  "scene": "Plastic",
+  "obj": "the white plaster cap shape in front center",
+  "arm": "Direct",
+  "Z_est": 1.2,
+  "Z_gt": 1.5084,
+  "rel_err": 0.2045,
+  "signed_err": -0.2045,
+  "pass_": false,
+  "attribution": "not_attributable"
+ },
+ {
+  "scene": "Wood1",
+  "obj": "the vertical wooden post in the center",
+  "arm": "SL",
+  "bboxL": null,
+  "attribution": "bbox_parse",
+  "Z_est": null,
+  "rel_err": null,
+  "pass_": false
+ }
+]

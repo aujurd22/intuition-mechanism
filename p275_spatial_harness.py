@@ -185,15 +185,20 @@ def dist(a, b):
 
 
 def perm_p(paired_diffs, n=20000, seed=7):
-    """One-sided sign-flip permutation test: mean(d) > 0."""
+    """Sign-flip permutation test, TWO-sided on the mean: p = P(|null| >=
+    |obs|).  Direction-agnostic by design -- P277's first run showed a
+    one-sided ">0" test silently return ~0.95 when every observed diff was
+    negative, which read as 'no effect' when it was in fact a full-strength
+    effect in the observed direction.  Two-sided is the conservative choice
+    for pre-registered claims that only assert 'a difference exists'."""
     d = np.asarray(paired_diffs, dtype=float)
     d = d[~np.isnan(d)]
     if len(d) == 0:
         return float("nan")
     rng = np.random.default_rng(seed)
-    obs = d.mean()
+    obs = abs(d.mean())
     flips = rng.choice((-1, 1), size=(n, len(d)))
-    null = (flips * d).mean(axis=1)
+    null = np.abs((flips * d).mean(axis=1))
     return float((null >= obs).mean())
 
 
