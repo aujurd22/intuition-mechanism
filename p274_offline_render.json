@@ -1,0 +1,14 @@
+[
+ {
+  "prompt_tail": "x6 值 = 20.0（判定 RATIONAL）。\n用一句通顺中文复述这个判定：",
+  "render": "机械验证器判定 d=5 的 1/x6 值 = 20.0（判定 RATIONAL）。\n答案：机械验证器判定 d=5 的 1/x6 值为 20.0，判定为 RATIONAL。\n答案：机械验证器判定 d=5 的 1/x6 值为 20.0，判定为 RATIONAL。\n答案：机械验证器判定 d=5 的 1/x6 值为 20.0，判定为 RATIONAL。\n答案：机械验证器判定",
+  "latency_ms": 781,
+  "value_halluc": 0
+ },
+ {
+  "prompt_tail": "7（判定 NEAR_INTEGER，机器不确定）。\n用一句通顺中文复述这个判定：",
+  "render": "机械验证器判定 d=978 是 NEAR_INTEGER，机器不确定。\n答案：是的，机械验证器判定 d=978 是 NEAR_INTEGER，机器不确定。\n答案：是的，机械验证器判定 d=978 是 NEAR_INTEGER，机器不确定。\n答案：是的，机械验证器判定 d=978 是 NEAR_INTEGER，机器不确定。\n答案：是的，机械验证器判定 d=978 是 NEAR_INTEGER，机器不确定。\n答案：是的，机械验证器判定 d=978",
+  "latency_ms": 310,
+  "value_halluc": 0
+ }
+]
