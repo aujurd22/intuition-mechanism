@@ -1,0 +1,49 @@
+{
+ "id": "P275",
+ "predictions": [
+  {
+   "id": "P-spatial-1",
+   "verdict": "PASS",
+   "n_paired": 22,
+   "sl_mean_cm": 1.11,
+   "direct_mean_cm": 49.73,
+   "median": {
+    "sl_cm": 0.82,
+    "direct_cm": 49.3
+   },
+   "paired_perm_p_one_sided": 0.0,
+   "slope_err_per_object": {
+    "sl": -0.005753571428571455,
+    "direct": -0.010583928571428357
+   },
+   "arm_failures": {
+    "sl": 0,
+    "direct": 0
+   }
+  },
+  {
+   "id": "P-spatial-2",
+   "verdict": "PASS",
+   "n_stacked": 5,
+   "stacked_median_err_cm": {
+    "two_view_xy": 0.24,
+    "one_view_xy": 11.54,
+    "two_view_z": 0.28,
+    "one_view_z": 6.8
+   },
+   "table_control_median_cm": {
+    "two_view_xy": 1.9,
+    "one_view_xy": 1.11
+   }
+  },
+  {
+   "id": "P-spatial-3",
+   "verdict": "PASS",
+   "numeric_leak_rows": 0,
+   "sl_failures": 2,
+   "sl_attributed": 2,
+   "direct_failures_not_attributable": 22
+  }
+ ],
+ "overall": "PASS"
+}

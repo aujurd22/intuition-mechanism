@@ -73,6 +73,8 @@ def run(seed):
 
 if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+    lo = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    hi = int(sys.argv[3]) if len(sys.argv) > 3 else n
     outdir = os.path.dirname(os.path.abspath(__file__))
     results = []
     existing = []
@@ -82,9 +84,11 @@ if __name__ == "__main__":
     for s in range(lo, hi):
         r = run(s)
         results.append(r)
-        merged = {r["seed"]: r for r in existing}
-        merged[r["seed"]] = r
-        json.dump(list(merged.values()), open("p269_curvature_results.json", "w"), indent=1)
+        disk_f = "p269_curvature_results.json"
+        disk = json.load(open(disk_f, encoding="utf-8"))             if os.path.exists(disk_f) else []
+        md = {r["seed"]: r for r in disk}
+        md[r["seed"]] = r
+        json.dump(list(md.values()), open(disk_f, "w", encoding="utf-8"), indent=1)
         trj = r["test_traj"]
         late = [v for k, v in trj.items() if 1000 <= int(k) <= 2500]
         print(f"seed{s}: final={r['final_test']:.3f} late_min={min(late):.3f}", flush=True)

@@ -1,0 +1,33 @@
+{
+  "id": "P276",
+  "name": "Stacking-chain probe: does stereo z-recovery degrade with stack depth?",
+  "registered_before_run": "2026-10-11",
+  "question": "P275 showed a single off-plane probe needs two views. Does the stereo z-recovery survive a CHAIN of stacked objects (depth built on depth), and does the single-view plane prior fail exactly as predicted (error = accumulated stack height)?",
+  "environment": {
+    "reuse": "P275 renderer + geometry module unchanged (same two-view stereo rig, baseline 15 cm)",
+    "scenes": "12 synthetic tabletop scenes; free palette colors determine chain depth: 4 table objects -> 2 layers stacked on the tallest host, 5 -> 1 layer, 6 -> none. Chain depth 0/1/2 across 4 scenes each.",
+    "measurement": "scene-graph reconstruction only, zero LLM calls; two-view vs single-view (table-plane prior)"
+  },
+  "predictions": [
+    {
+      "id": "P-stack-1",
+      "claim": "Two-view z-error median < 2 cm for every chain layer, at depth 1 and depth 2 alike (no meaningful degradation with depth).",
+      "falsifies": "If z-error grows clearly with depth (layer2 >> layer1), triangulated z does not transfer through the chain and the spatial language needs explicit support for hierarchical depth."
+    },
+    {
+      "id": "P-stack-2",
+      "claim": "Single view + plane prior: z-error of layer k equals its true height above the table (collapsed to 0 by construction), and xy-error grows with chain depth (the off-plane centroid shifts the projected ray outward); two-view xy stays flat across depths.",
+      "falsifies": "If single-view xy does not degrade with depth, the plane prior is stronger than claimed; if two-view xy degrades, stereo has its own depth-transfer problem."
+    },
+    {
+      "id": "P-stack-3",
+      "claim": "Two-view xy error on chain layers stays < 2 cm median at all depths (stereo does not lose lateral accuracy off-plane).",
+      "falsifies": "Same as P-stack-2 second clause."
+    }
+  ],
+  "fairness_notes": [
+    "Same rig, same segmentation, same triangulation as P275 (no tuning between experiments).",
+    "Chain layers are smaller than their host (physically stackable, each layer's side visible from both views).",
+    "Zero LLM involvement: this probes the geometry module only."
+  ]
+}

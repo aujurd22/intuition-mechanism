@@ -1,0 +1,129 @@
+{
+ "seed": 27401,
+ "objects": [
+  {
+   "name": "blue_cylinder",
+   "kind": "cylinder",
+   "color": "blue",
+   "pos": [
+    -0.1263,
+    0.6513,
+    0.0
+   ],
+   "size": {
+    "r": 0.0383,
+    "h": 0.0673
+   },
+   "rgb": [
+    40,
+    70,
+    210
+   ]
+  },
+  {
+   "name": "purple_box",
+   "kind": "box",
+   "color": "purple",
+   "pos": [
+    0.1917,
+    0.5094,
+    0.0
+   ],
+   "size": {
+    "w": 0.0883,
+    "h": 0.0627
+   },
+   "rgb": [
+    150,
+    50,
+    200
+   ]
+  },
+  {
+   "name": "red_cylinder",
+   "kind": "cylinder",
+   "color": "red",
+   "pos": [
+    0.1776,
+    0.7562,
+    0.0
+   ],
+   "size": {
+    "r": 0.0342,
+    "h": 0.0639
+   },
+   "rgb": [
+    210,
+    40,
+    40
+   ]
+  },
+  {
+   "name": "orange_box",
+   "kind": "box",
+   "color": "orange",
+   "pos": [
+    0.0277,
+    0.3648,
+    0.0
+   ],
+   "size": {
+    "w": 0.0714,
+    "h": 0.0731
+   },
+   "rgb": [
+    240,
+    130,
+    20
+   ]
+  },
+  {
+   "name": "yellow_box",
+   "kind": "box",
+   "color": "yellow",
+   "pos": [
+    -0.0165,
+    0.5449,
+    0.0
+   ],
+   "size": {
+    "w": 0.0844,
+    "h": 0.0668
+   },
+   "rgb": [
+    230,
+    200,
+    30
+   ]
+  }
+ ],
+ "commands": [
+  {
+   "relation": "midpoint",
+   "source": "purple_box",
+   "refs": [
+    "blue_cylinder",
+    "red_cylinder"
+   ],
+   "offset_m": 0.0,
+   "target_true": [
+    0.0257,
+    0.7037
+   ],
+   "command": "把紫色盒子放到蓝色圆柱和红色圆柱的中间（两者连线中点）"
+  },
+  {
+   "relation": "right_of",
+   "source": "yellow_box",
+   "refs": [
+    "orange_box"
+   ],
+   "offset_m": 0.1,
+   "target_true": [
+    0.1277,
+    0.3648
+   ],
+   "command": "把黄色盒子移到橙色盒子的右边 10 cm 处"
+  }
+ ]
+}

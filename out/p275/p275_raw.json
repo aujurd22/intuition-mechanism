@@ -1,0 +1,962 @@
+{
+ "rows": [
+  {
+   "scene": 0,
+   "cmd": "把紫色盒子放到红色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "purple_box",
+    "relation": "midpoint",
+    "refs": [
+     "red_cylinder",
+     "blue_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.1303,
+    0.5923
+   ],
+   "err_m": 0.0033,
+   "err_cm": 0.33,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1189
+  },
+  {
+   "scene": 0,
+   "cmd": "把紫色盒子放到红色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    0.0
+   ],
+   "err_m": 0.5958,
+   "err_cm": 59.58,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1401
+  },
+  {
+   "scene": 0,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "yellow_box"
+    ]
+   },
+   "target_sl": [
+    0.1162,
+    0.5386
+   ],
+   "err_m": 0.0148,
+   "err_cm": 1.48,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1330
+  },
+  {
+   "scene": 0,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.0
+   ],
+   "err_m": 0.5598,
+   "err_cm": 55.98,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1335
+  },
+  {
+   "scene": 1,
+   "cmd": "把紫色盒子放到蓝色圆柱和红色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "purple_box",
+    "relation": "midpoint",
+    "refs": [
+     "blue_cylinder",
+     "red_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.0261,
+    0.7014
+   ],
+   "err_m": 0.0023,
+   "err_cm": 0.23,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 2255
+  },
+  {
+   "scene": 1,
+   "cmd": "把紫色盒子放到蓝色圆柱和红色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.2
+   ],
+   "err_m": 0.533,
+   "err_cm": 53.3,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 3292
+  },
+  {
+   "scene": 1,
+   "cmd": "把黄色盒子移到橙色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "yellow_box",
+    "relation": "right_of",
+    "refs": [
+     "orange_box"
+    ]
+   },
+   "target_sl": [
+    0.1288,
+    0.3466
+   ],
+   "err_m": 0.0182,
+   "err_cm": 1.82,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1018
+  },
+  {
+   "scene": 1,
+   "cmd": "把黄色盒子移到橙色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.1,
+    0.2
+   ],
+   "err_m": 0.1671,
+   "err_cm": 16.71,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2253
+  },
+  {
+   "scene": 2,
+   "cmd": "把橙色盒子移到蓝色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "orange_box",
+    "relation": "right_of",
+    "refs": [
+     "blue_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.1051,
+    0.4801
+   ],
+   "err_m": 0.0014,
+   "err_cm": 0.14,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1248
+  },
+  {
+   "scene": 2,
+   "cmd": "把橙色盒子移到蓝色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.1,
+    0.0
+   ],
+   "err_m": 0.4815,
+   "err_cm": 48.15,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1454
+  },
+  {
+   "scene": 3,
+   "cmd": "把蓝色圆柱移到紫色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "blue_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    0.1146,
+    0.8181
+   ],
+   "err_m": 0.0076,
+   "err_cm": 0.76,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 931
+  },
+  {
+   "scene": 3,
+   "cmd": "把蓝色圆柱移到紫色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.4
+   ],
+   "err_m": 0.4341,
+   "err_cm": 43.41,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1874
+  },
+  {
+   "scene": 3,
+   "cmd": "把绿色圆柱放到橙色盒子和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "green_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "orange_box",
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    -0.009,
+    0.6358
+   ],
+   "err_m": 0.0101,
+   "err_cm": 1.01,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1745
+  },
+  {
+   "scene": 3,
+   "cmd": "把绿色圆柱放到橙色盒子和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    0.0,
+    0.3
+   ],
+   "err_m": 0.3459,
+   "err_cm": 34.59,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1149
+  },
+  {
+   "scene": 4,
+   "cmd": "把黄色盒子移到红色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "yellow_box",
+    "relation": "right_of",
+    "refs": [
+     "red_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.283,
+    0.5285
+   ],
+   "err_m": 0.0038,
+   "err_cm": 0.38,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1007
+  },
+  {
+   "scene": 4,
+   "cmd": "把黄色盒子移到红色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.7,
+    0.0
+   ],
+   "err_m": 0.6763,
+   "err_cm": 67.63,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1641
+  },
+  {
+   "scene": 5,
+   "cmd": "把绿色圆柱放到蓝色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "green_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "blue_cylinder",
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    0.0595,
+    0.4996
+   ],
+   "err_m": 0.0091,
+   "err_cm": 0.91,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1770
+  },
+  {
+   "scene": 5,
+   "cmd": "把绿色圆柱放到蓝色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    -0.1
+   ],
+   "err_m": 0.6249,
+   "err_cm": 62.49,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2097
+  },
+  {
+   "scene": 5,
+   "cmd": "把绿色圆柱移到红色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "green_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "red_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.1162,
+    0.831
+   ],
+   "err_m": 0.0056,
+   "err_cm": 0.56,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 3282
+  },
+  {
+   "scene": 5,
+   "cmd": "把绿色圆柱移到红色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    0.4
+   ],
+   "err_m": 0.4358,
+   "err_cm": 43.58,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1504
+  },
+  {
+   "scene": 6,
+   "cmd": "把红色圆柱放到绿色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "green_cylinder",
+     "blue_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.0205,
+    0.524
+   ],
+   "err_m": 0.0005,
+   "err_cm": 0.05,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1705
+  },
+  {
+   "scene": 6,
+   "cmd": "把红色圆柱放到绿色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.0
+   ],
+   "err_m": 0.5538,
+   "err_cm": 55.38,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1832
+  },
+  {
+   "scene": 6,
+   "cmd": "把绿色圆柱移到紫色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "green_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    -0.1204,
+    0.5785
+   ],
+   "err_m": 0.0418,
+   "err_cm": 4.18,
+   "pass": false,
+   "pass_": false,
+   "attribution": "geometry_error",
+   "llm_ms": 1767
+  },
+  {
+   "scene": 6,
+   "cmd": "把绿色圆柱移到紫色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    -0.1
+   ],
+   "err_m": 0.6511,
+   "err_cm": 65.11,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1301
+  },
+  {
+   "scene": 7,
+   "cmd": "把红色圆柱移到蓝色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "blue_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.0188,
+    0.8295
+   ],
+   "err_m": 0.0046,
+   "err_cm": 0.46,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1475
+  },
+  {
+   "scene": 7,
+   "cmd": "把红色圆柱移到蓝色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.0,
+    0.4
+   ],
+   "err_m": 0.4256,
+   "err_cm": 42.56,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1400
+  },
+  {
+   "scene": 7,
+   "cmd": "把红色圆柱放到绿色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "green_cylinder",
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    0.0651,
+    0.6197
+   ],
+   "err_m": 0.0031,
+   "err_cm": 0.31,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 2444
+  },
+  {
+   "scene": 7,
+   "cmd": "把红色圆柱放到绿色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.3,
+    0.2
+   ],
+   "err_m": 0.4832,
+   "err_cm": 48.32,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2069
+  },
+  {
+   "scene": 8,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "yellow_box"
+    ]
+   },
+   "target_sl": [
+    0.3063,
+    0.6721
+   ],
+   "err_m": 0.0088,
+   "err_cm": 0.88,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 925
+  },
+  {
+   "scene": 8,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.6,
+    0.2
+   ],
+   "err_m": 0.5648,
+   "err_cm": 56.48,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1194
+  },
+  {
+   "scene": 8,
+   "cmd": "把橙色盒子放到蓝色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "orange_box",
+    "relation": "midpoint",
+    "refs": [
+     "blue_cylinder",
+     "purple_box"
+    ]
+   },
+   "target_sl": [
+    0.0589,
+    0.5657
+   ],
+   "err_m": 0.0091,
+   "err_cm": 0.91,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1885
+  },
+  {
+   "scene": 8,
+   "cmd": "把橙色盒子放到蓝色圆柱和紫色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.1
+   ],
+   "err_m": 0.4955,
+   "err_cm": 49.55,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2956
+  },
+  {
+   "scene": 9,
+   "cmd": "把紫色盒子移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "purple_box",
+    "relation": "right_of",
+    "refs": [
+     "green_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.105,
+    0.6458
+   ],
+   "err_m": 0.0039,
+   "err_cm": 0.39,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1340
+  },
+  {
+   "scene": 9,
+   "cmd": "把紫色盒子移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    0.2
+   ],
+   "err_m": 0.4557,
+   "err_cm": 45.57,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2004
+  },
+  {
+   "scene": 9,
+   "cmd": "把绿色圆柱放到紫色盒子和红色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "green_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "purple_box",
+     "red_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.0806,
+    0.7074
+   ],
+   "err_m": 0.0358,
+   "err_cm": 3.58,
+   "pass": false,
+   "pass_": false,
+   "attribution": "geometry_error",
+   "llm_ms": 1291
+  },
+  {
+   "scene": 9,
+   "cmd": "把绿色圆柱放到紫色盒子和红色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    -0.1,
+    0.3
+   ],
+   "err_m": 0.4359,
+   "err_cm": 43.59,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2424
+  },
+  {
+   "scene": 10,
+   "cmd": "把红色圆柱放到绿色圆柱和黄色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "green_cylinder",
+     "yellow_box"
+    ]
+   },
+   "target_sl": [
+    0.0325,
+    0.772
+   ],
+   "err_m": 0.0146,
+   "err_cm": 1.46,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1549
+  },
+  {
+   "scene": 10,
+   "cmd": "把红色圆柱放到绿色圆柱和黄色盒子的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.1,
+    0.3
+   ],
+   "err_m": 0.4906,
+   "err_cm": 49.06,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1624
+  },
+  {
+   "scene": 10,
+   "cmd": "把黄色盒子移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "yellow_box",
+    "relation": "right_of",
+    "refs": [
+     "green_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.312,
+    0.8354
+   ],
+   "err_m": 0.0072,
+   "err_cm": 0.72,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 870
+  },
+  {
+   "scene": 10,
+   "cmd": "把黄色盒子移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.6,
+    0.4
+   ],
+   "err_m": 0.5287,
+   "err_cm": 52.87,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1469
+  },
+  {
+   "scene": 11,
+   "cmd": "把红色圆柱放到橙色盒子和绿色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "midpoint",
+    "refs": [
+     "orange_box",
+     "green_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.0733,
+    0.6456
+   ],
+   "err_m": 0.0191,
+   "err_cm": 1.91,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1255
+  },
+  {
+   "scene": 11,
+   "cmd": "把红色圆柱放到橙色盒子和绿色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    0.1
+   ],
+   "err_m": 0.5442,
+   "err_cm": 54.42,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1293
+  },
+  {
+   "scene": 11,
+   "cmd": "把红色圆柱移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "green_cylinder"
+    ]
+   },
+   "target_sl": [
+    0.161,
+    0.8068
+   ],
+   "err_m": 0.0187,
+   "err_cm": 1.87,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1381
+  },
+  {
+   "scene": 11,
+   "cmd": "把红色圆柱移到绿色圆柱的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 6,
+   "arm": "Direct",
+   "target_direct": [
+    0.4,
+    0.4
+   ],
+   "err_m": 0.4568,
+   "err_cm": 45.68,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1269
+  }
+ ],
+ "graph_stats": {
+  "two": {
+   "purple_box": 0.0237,
+   "blue_cylinder": 0.0032,
+   "yellow_box": 0.015,
+   "red_cylinder": 0.0058,
+   "green_cylinder": 0.0187,
+   "orange_box": 0.023,
+   "orange_cylinder": 0.0024,
+   "yellow_cylinder": 0.0007,
+   "purple_cylinder": 0.0006
+  },
+  "one": {
+   "purple_box": 0.0223,
+   "blue_cylinder": 0.0035,
+   "yellow_box": 0.0149,
+   "red_cylinder": 0.0096,
+   "green_cylinder": 0.0045,
+   "orange_box": 0.0073,
+   "orange_cylinder": 0.2192,
+   "yellow_cylinder": 0.1772,
+   "purple_cylinder": 0.1154
+  },
+  "z_two": {
+   "purple_box": 0.0021,
+   "blue_cylinder": 0.0032,
+   "yellow_box": 0.0006,
+   "red_cylinder": 0.0061,
+   "green_cylinder": 0.0094,
+   "orange_box": 0.0181,
+   "orange_cylinder": 0.0028,
+   "yellow_cylinder": 0.0027,
+   "purple_cylinder": 0.0023
+  },
+  "z_one": {
+   "purple_box": 0.0,
+   "blue_cylinder": 0.0,
+   "yellow_box": 0.0,
+   "red_cylinder": 0.0,
+   "green_cylinder": 0.0,
+   "orange_box": 0.0,
+   "orange_cylinder": 0.0877,
+   "yellow_cylinder": 0.0887,
+   "purple_cylinder": 0.068
+  }
+ }
+}

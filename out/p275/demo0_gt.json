@@ -1,0 +1,110 @@
+{
+ "seed": 27400,
+ "objects": [
+  {
+   "name": "purple_box",
+   "kind": "box",
+   "color": "purple",
+   "pos": [
+    0.1148,
+    0.819,
+    0.0
+   ],
+   "size": {
+    "w": 0.0896,
+    "h": 0.057
+   },
+   "rgb": [
+    150,
+    50,
+    200
+   ]
+  },
+  {
+   "name": "blue_cylinder",
+   "kind": "cylinder",
+   "color": "blue",
+   "pos": [
+    -0.056,
+    0.3914,
+    0.0
+   ],
+   "size": {
+    "r": 0.0374,
+    "h": 0.0632
+   },
+   "rgb": [
+    40,
+    70,
+    210
+   ]
+  },
+  {
+   "name": "yellow_box",
+   "kind": "box",
+   "color": "yellow",
+   "pos": [
+    0.0158,
+    0.5534,
+    0.0
+   ],
+   "size": {
+    "w": 0.0794,
+    "h": 0.0479
+   },
+   "rgb": [
+    230,
+    200,
+    30
+   ]
+  },
+  {
+   "name": "red_cylinder",
+   "kind": "cylinder",
+   "color": "red",
+   "pos": [
+    -0.1984,
+    0.7911,
+    0.0
+   ],
+   "size": {
+    "r": 0.0363,
+    "h": 0.0799
+   },
+   "rgb": [
+    210,
+    40,
+    40
+   ]
+  }
+ ],
+ "commands": [
+  {
+   "relation": "midpoint",
+   "source": "purple_box",
+   "refs": [
+    "red_cylinder",
+    "blue_cylinder"
+   ],
+   "offset_m": 0.0,
+   "target_true": [
+    -0.1272,
+    0.5913
+   ],
+   "command": "把紫色盒子放到红色圆柱和蓝色圆柱的中间（两者连线中点）"
+  },
+  {
+   "relation": "right_of",
+   "source": "red_cylinder",
+   "refs": [
+    "yellow_box"
+   ],
+   "offset_m": 0.1,
+   "target_true": [
+    0.1158,
+    0.5534
+   ],
+   "command": "把红色圆柱移到黄色盒子的右边 10 cm 处"
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "per_layer": [
+  {
+   "depth": 1,
+   "scene": 0,
+   "two_xy": 0.0013,
+   "two_z": 0.0024,
+   "one_xy": 0.0754,
+   "one_z": 0.0734
+  },
+  {
+   "depth": 2,
+   "scene": 0,
+   "two_xy": 0.0051,
+   "two_z": 0.0013,
+   "one_xy": 0.159,
+   "one_z": 0.1284
+  },
+  {
+   "depth": 1,
+   "scene": 1,
+   "two_xy": 0.0024,
+   "two_z": 0.0036,
+   "one_xy": 0.2025,
+   "one_z": 0.0869
+  },
+  {
+   "depth": 1,
+   "scene": 3,
+   "two_xy": 0.0023,
+   "two_z": 0.0014,
+   "one_xy": 0.0922,
+   "one_z": 0.0741
+  },
+  {
+   "depth": 2,
+   "scene": 3,
+   "two_xy": 0.0051,
+   "two_z": 0.0015,
+   "one_xy": 0.1925,
+   "one_z": 0.1291
+  },
+  {
+   "depth": 1,
+   "scene": 4,
+   "two_xy": 0.0024,
+   "two_z": 0.0037,
+   "one_xy": 0.1967,
+   "one_z": 0.0814
+  },
+  {
+   "depth": 1,
+   "scene": 6,
+   "two_xy": 0.0019,
+   "two_z": 0.0015,
+   "one_xy": 0.1924,
+   "one_z": 0.0895
+  },
+  {
+   "depth": 2,
+   "scene": 6,
+   "two_xy": 0.0046,
+   "two_z": 0.0029,
+   "one_xy": 0.3595,
+   "one_z": 0.1445
+  },
+  {
+   "depth": 1,
+   "scene": 7,
+   "two_xy": 0.0025,
+   "two_z": 0.003,
+   "one_xy": 0.1538,
+   "one_z": 0.0741
+  },
+  {
+   "depth": 1,
+   "scene": 9,
+   "two_xy": 0.0021,
+   "two_z": 0.0022,
+   "one_xy": 0.2086,
+   "one_z": 0.0867
+  },
+  {
+   "depth": 2,
+   "scene": 9,
+   "two_xy": 0.0019,
+   "two_z": 0.0018,
+   "one_xy": 0.3907,
+   "one_z": 0.1417
+  },
+  {
+   "depth": 1,
+   "scene": 10,
+   "two_xy": 0.0012,
+   "two_z": 0.0019,
+   "one_xy": 0.0806,
+   "one_z": 0.0677
+  }
+ ]
+}

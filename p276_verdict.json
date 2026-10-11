@@ -1,0 +1,41 @@
+{
+ "id": "P276",
+ "n_layer_instances": 12,
+ "depth1_n": 8,
+ "depth2_n": 4,
+ "predictions": [
+  {
+   "id": "P-stack-1",
+   "verdict": "PASS",
+   "two_view_z_median_cm": {
+    "layer1": 0.23,
+    "layer2": 0.17
+   }
+  },
+  {
+   "id": "P-stack-2",
+   "verdict": "FAIL",
+   "one_view_z_median_cm": {
+    "layer1": 7.78,
+    "layer2": 13.54
+   },
+   "one_view_xy_median_cm": {
+    "layer1": 17.31,
+    "layer2": 27.6
+   },
+   "two_view_xy_median_cm": {
+    "layer1": 0.22,
+    "layer2": 0.48
+   }
+  },
+  {
+   "id": "P-stack-3",
+   "verdict": "PASS",
+   "two_view_xy_median_cm": {
+    "layer1": 0.22,
+    "layer2": 0.48
+   }
+  }
+ ],
+ "overall": "MIXED"
+}

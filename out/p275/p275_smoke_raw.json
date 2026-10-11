@@ -1,0 +1,117 @@
+{
+ "rows": [
+  {
+   "scene": 0,
+   "cmd": "把紫色盒子放到红色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "purple_box",
+    "relation": "midpoint",
+    "refs": [
+     "red_cylinder",
+     "blue_cylinder"
+    ]
+   },
+   "target_sl": [
+    -0.1303,
+    0.5923
+   ],
+   "err_m": 0.0033,
+   "err_cm": 0.33,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 2192
+  },
+  {
+   "scene": 0,
+   "cmd": "把紫色盒子放到红色圆柱和蓝色圆柱的中间（两者连线中点）",
+   "relation": "midpoint",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    -0.2,
+    0.1
+   ],
+   "err_m": 0.4967,
+   "err_cm": 49.67,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 2048
+  },
+  {
+   "scene": 0,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "SL",
+   "intent": {
+    "source": "red_cylinder",
+    "relation": "right_of",
+    "refs": [
+     "yellow_box"
+    ]
+   },
+   "target_sl": [
+    0.1162,
+    0.5386
+   ],
+   "err_m": 0.0148,
+   "err_cm": 1.48,
+   "pass": true,
+   "pass_": true,
+   "attribution": "none",
+   "llm_ms": 1780
+  },
+  {
+   "scene": 0,
+   "cmd": "把红色圆柱移到黄色盒子的右边 10 cm 处",
+   "relation": "right_of",
+   "n_objects": 5,
+   "arm": "Direct",
+   "target_direct": [
+    0.2,
+    0.0
+   ],
+   "err_m": 0.5598,
+   "err_cm": 55.98,
+   "pass": false,
+   "pass_": false,
+   "attribution": "not_attributable",
+   "llm_ms": 1365
+  }
+ ],
+ "graph_stats": {
+  "two": {
+   "purple_box": 0.016,
+   "blue_cylinder": 0.0051,
+   "yellow_box": 0.0148,
+   "red_cylinder": 0.0083,
+   "green_cylinder": 0.0031
+  },
+  "one": {
+   "purple_box": 0.015,
+   "blue_cylinder": 0.0131,
+   "yellow_box": 0.0198,
+   "red_cylinder": 0.0029,
+   "green_cylinder": 0.1856
+  },
+  "z_two": {
+   "purple_box": 0.0002,
+   "blue_cylinder": 0.0092,
+   "yellow_box": 0.0035,
+   "red_cylinder": 0.0041,
+   "green_cylinder": 0.0024
+  },
+  "z_one": {
+   "purple_box": 0.0,
+   "blue_cylinder": 0.0,
+   "yellow_box": 0.0,
+   "red_cylinder": 0.0,
+   "green_cylinder": 0.0799
+  }
+ }
+}

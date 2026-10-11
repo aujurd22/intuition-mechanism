@@ -1,0 +1,41 @@
+{
+  "id": "P275",
+  "renumber_note": "registered and frozen before the full run as 'P274'; renumbered P275 afterward because the concurrent offline-vocalizer line (commit 13a25b4) had already taken P274. Content NOT modified between run and renumber.",
+  "name": "Spatial Vocalizer: metric spatial language vs direct VLM numbers",
+  "registered_before_run": "2026-10-11",
+  "question": "Does converting camera data into an explicit mechanical spatial language (scene graph with metric positions, sizes, confidences) make an LLM arm beat a VLM that reads target coordinates straight off the image?",
+  "environment": {
+    "scenes": "12 synthetic tabletop scenes (4-6 table objects + 1 stacked probe), two pinhole views, baseline 15 cm, metric grid on table",
+    "tasks": "~22 commands: right_of (+10cm), front_of (+8cm), midpoint; ground-truth target from a fixed relation table, never from either arm",
+    "arms": {
+      "SL": "two-view triangulated scene graph (mechanical) -> LLM parses command to intention {source, relation, refs} with ZERO numbers -> target computed from the same fixed table",
+      "Direct": "single-view image (grid as scale reference) -> VLM outputs target_xy_m directly"
+    },
+    "pass_threshold_m": 0.03
+  },
+  "predictions": [
+    {
+      "id": "P-spatial-1",
+      "claim": "SL mean error < Direct mean error on paired tasks (one-sided sign-flip permutation p < 0.05); SL error shows no positive trend with scene object count while Direct does (descriptive).",
+      "falsifies": "If Direct <= SL or SL error also grows with complexity, the spatial-language layer is not carrying the metric load and the architecture claim fails."
+    },
+    {
+      "id": "P-spatial-2",
+      "claim": "For the stacked (off-plane) probe: two-view reconstruction keeps xy error < 2 cm and recovers height (z error < 2 cm); single view + table-plane prior collapses (xy error an order of magnitude larger, z error = full host height). Table-level objects: both fine (honest boundary: single view + calibration + plane prior suffices on a plane).",
+      "falsifies": "If two-view is not better on off-plane objects, multi-frame calibration is unnecessary in this regime and the multi-view claim is dropped."
+    },
+    {
+      "id": "P-spatial-3",
+      "claim": "SL intentions contain zero numeric coordinate fields (mechanical check: keys subset of {source, relation, refs}); every SL failure is attributable to wrong_object or geometry_error (100% coverage); Direct failures/misses carry no attribution.",
+      "falsifies": "If the render/parsing layer leaks numbers, grounding is broken and P272's architecture does not transfer to the spatial domain."
+    }
+  ],
+  "fairness_notes": [
+    "Both arms get the same declared coordinate frame and grid scale reference.",
+    "Direct gets ONE view (current default); SL needs two views by design -- that cost is part of the claim being tested (P-spatial-2 quantifies what the second view buys).",
+    "The relation table is shared: ground truth and SL use the SAME table, so SL has no hidden semantic advantage.",
+    "Recognition is solved by construction (unique color+kind); the test isolates metric spatial reasoning."
+  ],
+  "models": {"text": "doubao-seed-2.1-lite via ark coding endpoint (effort=minimal)", "vision": "same endpoint, image input"},
+  "scoring": "euclidean distance of predicted target to ground-truth target (meters), pass <= 3 cm; failures attributed (SL) or recorded raw (Direct)"
+}
