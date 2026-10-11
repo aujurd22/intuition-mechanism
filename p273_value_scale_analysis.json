@@ -1,0 +1,39 @@
+{
+ "rows": [
+  {
+   "level": "L1",
+   "render_value_halluc": 0,
+   "render_bad": [],
+   "explain_value_halluc": 1,
+   "explain_bad": [
+    1000
+   ],
+   "explain_latency": 1789
+  },
+  {
+   "level": "L2",
+   "render_value_halluc": 0,
+   "render_bad": [],
+   "explain_value_halluc": 0,
+   "explain_bad": [],
+   "explain_latency": 2105
+  },
+  {
+   "level": "L3",
+   "render_value_halluc": 0,
+   "render_bad": [],
+   "explain_value_halluc": 1,
+   "explain_bad": [
+    13571317
+   ],
+   "explain_latency": 22360
+  }
+ ],
+ "verdict": {
+  "render_total_value_halluc": 0,
+  "explain_total_value_halluc": 2,
+  "P_ground": "CONFIRMED",
+  "P_vocal_note": "render grounding flat at value scale across complexity",
+  "explain": "EXPLAIN degrades catastrophically with complexity — L3 hallucinated a mashed number (13571317) after 22s: P184 verbalization gap measured in a new form (values, not rule statements)"
+ }
+}

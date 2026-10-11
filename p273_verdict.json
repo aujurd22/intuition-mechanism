@@ -1,0 +1,10 @@
+{
+ "P_ground": "PARTIAL (render groundings [0.4, 0.571, 0.429])",
+ "P_vocal": "REFUTED — render grounding degrades [0.4, 0.571, 0.429]",
+ "explain_comparison": "explain groundings [0.2, 0.333, 0.0] (hallucinated numbers appear at L3)",
+ "render_latencies_ms": [
+  2332,
+  1875,
+  1990
+ ]
+}

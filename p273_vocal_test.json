@@ -1,0 +1,83 @@
+[
+ {
+  "level": "L1",
+  "question": "d=5 是不是 landing row？它的 1/x6 值是多少？",
+  "render": {
+   "text": "d=5 不是 landing row。它的 1/x6 值是 20.0。",
+   "latency_ms": 2332,
+   "grounding": 0.4,
+   "hallucinated_numbers": [
+    0,
+    1,
+    6
+   ]
+  },
+  "explain": {
+   "text": "d=5 不是 landing row。它的 1/x6 值为 0.1000。",
+   "latency_ms": 1789,
+   "grounding": 0.2,
+   "hallucinated_numbers": [
+    0,
+    1,
+    6,
+    1000
+   ]
+  }
+ },
+ {
+  "level": "L2",
+  "question": "d=13 和 d=17 都是 landing 吗？各自的 1/x6 值？",
+  "render": {
+   "text": "d=13 和 d=17 都属于 landing。d=13 的 1/x6 值为 104.0，d=17 的 1/x6 值为 200.0。",
+   "latency_ms": 1875,
+   "grounding": 0.571,
+   "hallucinated_numbers": [
+    0,
+    1,
+    6
+   ]
+  },
+  "explain": {
+   "text": "## 1. 判定结果\n- d=13：是 landing\n- d=17：是 landing\n\n## 2. 各自的 1/x6 值\n- d=13：1/x6 = 0.000000\n- d=17：1/x6 = 0.000000",
+   "latency_ms": 2105,
+   "grounding": 0.333,
+   "hallucinated_numbers": [
+    0,
+    1,
+    2,
+    6
+   ]
+  }
+ },
+ {
+  "level": "L3",
+  "question": "为什么恰好 {1,3,5,7,13,17} 这几个 d 是 landing？解释机制。",
+  "render": {
+   "text": "经机械验证，d=1、3、5、7、13、17 对应的 1/x6 值分别为 8.0、12.0、20.0、32.0、104.0、200.0，均判定为有理数。以上为全部验证结果，无额外机制说明。",
+   "latency_ms": 1990,
+   "grounding": 0.429,
+   "hallucinated_numbers": [
+    0,
+    1,
+    3,
+    5,
+    6,
+    7,
+    13,
+    17
+   ]
+  },
+  "explain": {
+   "text": "## 核心结论\n\n**恰好** \\(d \\in \\{1,3,5,7,13,17\\}\\) 是 landing，因为它们是**唯一同时满足以下两个条件**的正整数：\n\n1. **\\(d\\) 是奇数**（保证 \\(d\\) 与 \\(2^k\\) 互质，模 \\(2^k\\) 下可逆）；\n2. **\\(d\\) 整除 \\(2^m - 1\\)，其中 \\(m \\leq 4\\)**（保证轨道在有限步内进入循环，且循环长度为 \\(m\\)）。\n\n---\n\n## 机制解释\n\n### 1. 为什么 \\(d\\) 必须是奇数？\n\nCollatz 映射的核心是：\n- 若 \\(n\\) 为偶数，直接除以 2（\\(n \\to n/2\\)",
+   "latency_ms": 22360,
+   "grounding": 0.0,
+   "hallucinated_numbers": [
+    1,
+    2,
+    3,
+    4,
+    13571317
+   ]
+  }
+ }
+]
