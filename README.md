@@ -8,7 +8,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, rows P1–P280; every row carries a prediction, verdict and artifacts, and the **Registry integrity** section inside it declares the row count, the append-only ID rule and the historical ID collisions).  This README is the
+(pre-registered experiment registry, rows P1–P281; every row carries a prediction, verdict and artifacts, and the **Registry integrity** section inside it declares the row count, the append-only ID rule and the historical ID collisions).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
@@ -43,7 +43,7 @@ questions — one miss and it is a hallucination.
    That failure mode is itself a quantified result.
 
 **Entry points**: story-only → keep reading; reproduce numbers →
-[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (rows P1–P280,
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (rows P1–P281,
 each with prediction/verdict/artifacts; counts and ID-collision register inside); use the judge toolkit → the
 plugin section below.
 
@@ -544,7 +544,7 @@ convergence, not for deliberate cheating.
 ```
 README.md / README.zh-CN.md   this file (plain-words layer + experiment map)
 docs/
-  RESEARCH_PLAN.md            the registry: rows P1–P280 (see Registry integrity)
+  RESEARCH_PLAN.md            the registry: rows P1–P281 (see Registry integrity)
   SHADOW_UNIFIED_THEOREM.md   shadow unified theorem + Props 4/5 (paper spine)
   PAPER_V2_SPINE.md           paper v2 spine + evidence table + gap list (2026-10-26)
   VERIFICATION_PROTOCOL.md    verification gate for every verdict from P278 on
