@@ -8,7 +8,7 @@
 
 **Insight Mechanism Reproduction Program** — a Mushroom-Body Program track.
 **Canonical research state: [docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md)**
-(pre-registered experiment registry, 268 numbered rows P1–P268, every row with prediction, verdict and artifacts).  This README is the
+(pre-registered experiment registry, rows P1–P277; every row carries a prediction, verdict and artifacts, and the **Registry integrity** section inside it declares the row count, the append-only ID rule and the historical ID collisions).  This README is the
 detailed entry point.
 
 > Central question: can Ramanujan-style formula discovery be reduced to a
@@ -43,8 +43,8 @@ questions — one miss and it is a hallucination.
    That failure mode is itself a quantified result.
 
 **Entry points**: story-only → keep reading; reproduce numbers →
-[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (268 numbered experiments,
-each with prediction/verdict/artifacts); use the judge toolkit → the
+[docs/RESEARCH_PLAN.md](docs/RESEARCH_PLAN.md) (rows P1–P277,
+each with prediction/verdict/artifacts; counts and ID-collision register inside); use the judge toolkit → the
 plugin section below.
 
 ## What you get (the intuition-pack plugin, P140-P169)
@@ -147,7 +147,7 @@ what came out, what did the number verify (or refute)**.
 |---|---|---|---|
 | Masked replay (P189) | Is family formation the bottleneck? | 12 bare values, axis hidden: family pick 6/6 free; intension all fitting shadow rules | **Clustering is cheap, intension is expensive** — the bottleneck is explanation, not recognition |
 | Precision knob (P193) | Are the judge's stubborn errors display-driven or rule-internal? | Display precision 6 -> 12 digits (64x information): error set bit-identical | The ambiguity **lives in the rule** — aim ammunition at rules, not at data clarity |
-| Refinement loop + integration (P194/P198) | Parts built — does the circuit run assembled? | Full propose -> exam -> feedback -> revise loop on a real open edge: 2 rounds, 4 calls, zero errors; round-1 hypothesis (s = c*d') mechanically refuted | The loop **runs**; but with negative-example-dominant data it converges to memorization — **passing all verification is not discovering** |
+| Refinement loop + integration (P198) | Parts built — does the circuit run assembled? | Full propose -> exam -> feedback -> revise loop on a real open edge: 2 rounds, 4 calls, zero errors; round-1 hypothesis (s = c*d') mechanically refuted | The loop **runs**; but with negative-example-dominant data it converges to memorization — **passing all verification is not discovering** |
 | Pricing (P190) | Can discovery cost be quantified? | ~3.3 error-bits per accepted rule; d=421 the persistent sink; rule length uncorrelated with score | Discovery efficiency has **a unit price** — "how expensive is intuition" is now bookkeeping, not philosophy |
 | Representation x architecture grid (P204) | Does discovery hide in conv nets? | 2 tasks x 3 representations x 3 architectures, 3 seeds: on a modular rule the modular axis gives 1.000 to ANY architecture; conv nets partially substitute for a missing axis (0.774); on the real census rule the modular axis UNDERPERFORMS decimal (0.700 < 0.978) |
 | Anti-shadow causal (P217) | ✅ two-sided | Contrast data: +0.188 for the weak-rule model (support), -0.125 for the strong-rule model (harm) — intervention value depends on model state |
@@ -544,11 +544,12 @@ convergence, not for deliberate cheating.
 ```
 README.md / README.zh-CN.md   this file (plain-words layer + experiment map)
 docs/
-  RESEARCH_PLAN.md            the registry: 268 numbered rows P1–P268
+  RESEARCH_PLAN.md            the registry: rows P1–P277 (see Registry integrity)
   SHADOW_UNIFIED_THEOREM.md   shadow unified theorem + Props 4/5 (paper spine)
+  PAPER_V2_SPINE.md           paper v2 spine + evidence table + gap list (2026-10-26)
   INSTRUMENT_BRIDGES.md       instrument bridge registry (6 bridges)
   ...30+ topic documents (theorem lines, arc summaries, protocols)
-experiments/                  all 268 experiments: p*.py scripts + p*.json artifacts
+experiments/                  every registered experiment: p*.py scripts + p*.json artifacts
                               (p263/p264/p265_seeds hold trajectory snapshots)
 papers/                       reference literature (OR-Library, Heegner papers)
 formal/                       Lean formalization (CWZ erratum)

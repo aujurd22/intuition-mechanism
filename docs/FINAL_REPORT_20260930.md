@@ -1,5 +1,10 @@
 # FINAL NIGHT REPORT: 2026-09-29 evening → 2026-09-30 07:06
 
+> **Counts in this report are as-reported on the night of 2026-09-30.**
+> The authoritative ledger numbers live in `docs/RESEARCH_PLAN.md` §1
+> (Registry integrity); do not quote this report's counts as current.
+
+
 ## Executive summary
 
 ~28 hours of continuous autonomous research across three lines

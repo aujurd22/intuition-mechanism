@@ -1,62 +1,111 @@
-"""Provenance audit: every artifact filename cited in docs/RESEARCH_PLAN.md
-must exist in the repo (or be explicitly marked as inline/absent).
+"""Provenance audit v2 (2026-10-26): every artifact cited by a registry row must
+exist in the repo, or the row must say so with an ARTIFACT-NOTE.
 
-Extracts .json/.npy/.txt/.png/.md filenames from the registry rows and
-checks existence at the repo root and under docs/.  Reports missing ones
-with the P-number that cites them.
+v1 (kept below as history) was falsely clean:
+  - it scanned only json|npy|txt|png|csv|npz, so scripts (.py), jsonl logs (.jsonl)
+    and docs (.md) were never checked;
+  - a shorthand citation like "p232_four_model_probe.py/.json" reduced to
+    basename ".json", and the existence test was `fn.endswith(".json")`, which
+    matches ANY json in a directory — 27 shorthand citations passed vacuously;
+  - duplicate-ID rows were collapsed into a dict, so the first row of every
+    duplicated ID was never audited.
+
+v2: recursive file index, exact basename / relative-path matching, compound
+citations expanded, duplicate rows kept, and a non-zero exit when a citation is
+missing without an ARTIFACT-NOTE.
 """
-import re, os
+import os
+import re
+import sys
 
-text = open("docs/RESEARCH_PLAN.md", encoding="utf-8").read()
-rows = re.findall(r"^\| (P\d+[a-z]?(?:-[a-z0-9]+)?) \|", text, re.M)
-# map row-id -> row text
-entries = {}
-for m in re.finditer(r"^\| (P\d+[a-z]?(?:-[a-z0-9]+)?) \|(.*?)\|$",
-                     text, re.M | re.S):
-    entries[m.group(1)] = m.group(2)
+ROOT = os.path.dirname(os.path.abspath(__file__))
+PLAN = os.path.join(ROOT, "docs", "RESEARCH_PLAN.md")
+SKIP_DIRS = {".git", "__pycache__", ".pytest_cache", "node_modules"}
 
-cited = {}
-for pid, body in entries.items():
-    for f in re.findall(r"[\w/\\-]+\.(?:json|npy|txt|png|csv|npz)", body):
-        f = f.strip().split()[-1]
-        m = re.match(r"(.*batch)(\d+)-(\d+)(_.*)?$", f)
-        if m and int(m.group(3)) > int(m.group(2)):
-            pre, lo, hi, suf = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4) or ""
-            for i in range(lo, hi + 1):
-                cited.setdefault(f"{pre}{i}{suf}", set()).add(pid)
+# --- file index ----------------------------------------------------------
+basenames, relpaths = set(), set()
+for dirpath, dirnames, filenames in os.walk(ROOT):
+    dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+    for fn in filenames:
+        basenames.add(fn)
+        rel = os.path.relpath(os.path.join(dirpath, fn), ROOT).replace("\\", "/")
+        relpaths.add(rel)
+
+# --- registry rows (duplicates kept) ------------------------------------
+ID_RE = re.compile(r"^P\d+[a-z]?(?:[- ][A-Za-z0-9]+)*$")
+rows = []  # (row_id, body)
+with open(PLAN, encoding="utf-8") as f:
+    for line in f:
+        if not line.startswith("| "):
             continue
-        cited.setdefault(f, set()).add(pid)
+        cells = line.rstrip("\n").split("|")
+        if len(cells) < 3:
+            continue
+        rid = cells[1].strip()
+        if ID_RE.match(rid):
+            rows.append((rid, line))
 
-missing, present = [], 0
-for f, pids in sorted(cited.items()):
-    base = os.path.basename(f)
-    def exists_any(name):
-        # exact, then suffix match (model-suffixed artifacts like
-        # p144_doubao-seed-2.1-lite.json get mis-split by the citation
-        # regex at "2." — P149 audit false positive fix)
-        if os.path.exists(name) or os.path.exists("docs/" + name):
-            return True
-        try:
-            candidates = [".", "experiments/data"] + [d for d in os.listdir(".")
-                                  if os.path.isdir(d) and not d.startswith(".")]
-            return any(fn.endswith(name)
-                       for cand in candidates
-                       for fn in os.listdir(cand))
-        except OSError:
-            return False
-    if exists_any(base):
-        present += 1
+CITE_RE = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.\-/]*\.(?:json|npy|txt|png|csv|npz|py|jsonl|md)\b")
+
+
+def expand(tok):
+    """'a.py/.json' -> ['a.py', 'a.json'];  '/.json' -> [];  'out/p275/x.json' -> itself."""
+    tok = tok.strip("/")
+    if not tok:
+        return []
+    if "/." in tok:
+        head, tail = tok.split("/.", 1)
+        base, _, ext = head.rpartition(".")
+        out = [head]
+        if base:
+            out.append(base + "." + tail)
+        return out
+    return [tok]
+
+
+cited = {}  # filename -> set(row ids)
+for rid, body in rows:
+    for m in CITE_RE.finditer(body):
+        for f in expand(m.group(0)):
+            cited.setdefault(f, set()).add(rid)
+
+# Two known citation shapes are expanded, not reported:
+#  (a) batch ranges: "p32f_batch1-10_answers.json" means batch1 .. batch10
+#  (b) fragments: a token that is a SUFFIX of a citation that does exist is a
+#      piece of that citation (the P172 row even quotes "1-lite.json" as the
+#      false positive the old audit produced); it is reported, not counted.
+_BATCH = re.compile(r"^(.*batch)(\d+)-(\d+)(_\w+)?\.json$")
+for f in [k for k in cited if _BATCH.match(k)]:
+    m = _BATCH.match(f)
+    pre, lo, hi, suf = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4) or ""
+    rids = cited.pop(f)
+    for i in range(lo, hi + 1):
+        cited.setdefault(f"{pre}{i}{suf}.json", set()).update(rids)
+
+def exists(f):
+    return f in relpaths or os.path.basename(f) in basenames
+
+present, missing, acknowledged, fragments = [], [], [], []
+present_names = [f for f in cited if exists(f)]
+for f, rids in sorted(cited.items()):
+    if exists(f):
+        present.append(f)
+        continue
+    if any(p.endswith(f) and len(p) > len(f) for p in present_names):
+        fragments.append((f, sorted(rids)))
+        continue
+    if all("ARTIFACT-NOTE" in b for r, b in rows if r in rids):
+        acknowledged.append((f, sorted(rids)))
     else:
-        missing.append((base, sorted(pids)))
+        missing.append((f, sorted(rids)))
 
-# rows explicitly marked inline/absent (ARTIFACT-NOTE) are acknowledged
-acknowledged = [(f, pids) for f, pids in missing
-                if all("ARTIFACT-NOTE" in entries.get(p, "") for p in pids)]
-missing = [(f, pids) for f, pids in missing if (f, pids) not in acknowledged]
-
-print(f"cited files: {len(cited)}, present: {present}, "
-      f"acknowledged-absent: {len(acknowledged)}, MISSING: {len(missing)}")
-for f, pids in acknowledged:
-    print(f"  ABSENT-ACKNOWLEDGED {f}   cited by {','.join(pids)}")
-for f, pids in missing:
-    print(f"  MISSING {f}   cited by {','.join(pids)}")
+print(f"cited files: {len(cited)}, present: {len(present)}, "
+      f"acknowledged-absent: {len(acknowledged)}, fragment-of-present: {len(fragments)}, "
+      f"MISSING: {len(missing)}")
+for f, rids in fragments:
+    print(f"  FRAGMENT-OF-PRESENT {f}   cited by {','.join(rids)}")
+for f, rids in acknowledged:
+    print(f"  ABSENT-ACKNOWLEDGED {f}   cited by {','.join(rids)}")
+for f, rids in missing:
+    print(f"  MISSING {f}   cited by {','.join(rids)}")
+sys.exit(1 if missing else 0)

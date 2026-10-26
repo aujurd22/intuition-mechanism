@@ -1,10 +1,23 @@
 {
- "P_ground": "PARTIAL (render groundings [0.4, 0.571, 0.429])",
- "P_vocal": "REFUTED — render grounding degrades [0.4, 0.571, 0.429]",
- "explain_comparison": "explain groundings [0.2, 0.333, 0.0] (hallucinated numbers appear at L3)",
- "render_latencies_ms": [
-  2332,
-  1875,
-  1990
- ]
+ "_status": "SUPERSEDED-BY-VALUE-SCALE-REANALYSIS (2026-10-26). Raw readings are retained verbatim below; do not cite them as the verdict.",
+ "_superseded_by": "p273_value_scale_analysis.json",
+ "_why": "The raw grounding checker counts STRUCTURAL numbers as factual claims: the '1/x6' notation contributes 0/1/6, so the recorded grounding fractions (0.4, 0.571, 0.429) are false positives, not render failures. Re-analysis at value scale, from the saved texts, is authoritative.",
+ "_authoritative": {
+  "P_ground": "CONFIRMED",
+  "P_vocal": "CONFIRMED at value scale (render grounding flat across L1/L2/L3; only introspection/EXPLAIN degrades)",
+  "render_value_hallucinations": 0,
+  "explain_value_hallucinations": 2,
+  "explain_note": "EXPLAIN degrades catastrophically with complexity: L3 mashed a number ('13571317') after 22.4 s — the P184 verbalization gap measured in a new form (values, not rule statements)",
+  "see": "p273_value_scale_analysis.json"
+ },
+ "_raw_readings_retained": {
+  "P_ground": "PARTIAL (render groundings [0.4, 0.571, 0.429])",
+  "P_vocal": "REFUTED — render grounding degrades [0.4, 0.571, 0.429]",
+  "explain_comparison": "explain groundings [0.2, 0.333, 0.0] (hallucinated numbers appear at L3)",
+  "render_latencies_ms": [
+   2332,
+   1875,
+   1990
+  ]
+ }
 }
