@@ -1,0 +1,1 @@
+{"raw": "{\"objects\":[{\"label\":\"baby doll\",\"bbox\":[340,0,790,520]},{\"label\":\"open book\",\"bbox\":[60,505,990,985]},{\"label\":\"plush toy with dark head\",\"bbox\":[995,130,1100,660]},{\"label\":\"orange plush object\",\"bbox\":[990,620,1100,880]}]}", "model": "z-ai/glm-5.3-flash"}

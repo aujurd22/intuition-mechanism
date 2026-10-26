@@ -1,0 +1,280 @@
+{
+ "Baby2": {
+  "image_wh": [
+   1100,
+   985
+  ],
+  "candidates_stable": [
+   {
+    "label": "open book",
+    "bbox": [
+     60.0,
+     505.0,
+     990.0,
+     985.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 446400
+   },
+   {
+    "label": "baby doll",
+    "bbox": [
+     350.0,
+     0.0,
+     790.0,
+     520.0
+    ],
+    "iou_two_calls": 0.956,
+    "area_px": 228800
+   },
+   {
+    "label": "plush toy with dark head",
+    "bbox": [
+     990.0,
+     130.0,
+     1100.0,
+     660.0
+    ],
+    "iou_two_calls": 0.913,
+    "area_px": 58300
+   },
+   {
+    "label": "orange plush object",
+    "bbox": [
+     987.5,
+     620.0,
+     1100.0,
+     880.0
+    ],
+    "iou_two_calls": 0.957,
+    "area_px": 29250
+   }
+  ],
+  "candidates_all": [
+   {
+    "label": "open book",
+    "bbox": [
+     60.0,
+     505.0,
+     990.0,
+     985.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 446400
+   },
+   {
+    "label": "baby doll",
+    "bbox": [
+     350.0,
+     0.0,
+     790.0,
+     520.0
+    ],
+    "iou_two_calls": 0.956,
+    "area_px": 228800
+   },
+   {
+    "label": "plush toy with dark head",
+    "bbox": [
+     990.0,
+     130.0,
+     1100.0,
+     660.0
+    ],
+    "iou_two_calls": 0.913,
+    "area_px": 58300
+   },
+   {
+    "label": "orange plush object",
+    "bbox": [
+     987.5,
+     620.0,
+     1100.0,
+     880.0
+    ],
+    "iou_two_calls": 0.957,
+    "area_px": 29250
+   }
+  ],
+  "chosen": [
+   {
+    "label": "open book",
+    "bbox": [
+     60.0,
+     505.0,
+     990.0,
+     985.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 446400
+   },
+   {
+    "label": "baby doll",
+    "bbox": [
+     350.0,
+     0.0,
+     790.0,
+     520.0
+    ],
+    "iou_two_calls": 0.956,
+    "area_px": 228800
+   }
+  ]
+ },
+ "Cloth1": {
+  "image_wh": [
+   1100,
+   975
+  ],
+  "candidates_stable": [
+   {
+    "label": "Draped patterned printed fabric swatch",
+    "bbox": [
+     0.0,
+     0.0,
+     1100.0,
+     975.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 1072500
+   }
+  ],
+  "candidates_all": [
+   {
+    "label": "Draped patterned printed fabric swatch",
+    "bbox": [
+     0.0,
+     0.0,
+     1100.0,
+     975.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 1072500
+   }
+  ],
+  "chosen": [
+   {
+    "label": "Draped patterned printed fabric swatch",
+    "bbox": [
+     0.0,
+     0.0,
+     1100.0,
+     975.0
+    ],
+    "iou_two_calls": 1.0,
+    "area_px": 1072500
+   }
+  ]
+ },
+ "Cloth2": {
+  "image_wh": [
+   1100,
+   939
+  ],
+  "candidates_stable": [
+   {
+    "label": "white floral pillowcase with blue flowers",
+    "bbox": [
+     105.0,
+     0.0,
+     742.5,
+     939.0
+    ],
+    "iou_two_calls": 0.962,
+    "area_px": 598612
+   },
+   {
+    "label": "green ornate patterned pillowcase",
+    "bbox": [
+     582.5,
+     0.0,
+     1100.0,
+     939.0
+    ],
+    "iou_two_calls": 0.971,
+    "area_px": 485932
+   },
+   {
+    "label": "white sheet",
+    "bbox": [
+     0.0,
+     0.0,
+     350.0,
+     135.0
+    ],
+    "iou_two_calls": 0.929,
+    "area_px": 47250
+   }
+  ],
+  "candidates_all": [
+   {
+    "label": "white floral pillowcase with blue flowers",
+    "bbox": [
+     105.0,
+     0.0,
+     742.5,
+     939.0
+    ],
+    "iou_two_calls": 0.962,
+    "area_px": 598612
+   },
+   {
+    "label": "green ornate patterned pillowcase",
+    "bbox": [
+     582.5,
+     0.0,
+     1100.0,
+     939.0
+    ],
+    "iou_two_calls": 0.971,
+    "area_px": 485932
+   },
+   {
+    "label": "Scooby-Doo fleece blanket",
+    "bbox": [
+     0.0,
+     95.0,
+     312.5,
+     939.0
+    ],
+    "iou_two_calls": 0.866,
+    "area_px": 263750
+   },
+   {
+    "label": "white sheet",
+    "bbox": [
+     0.0,
+     0.0,
+     350.0,
+     135.0
+    ],
+    "iou_two_calls": 0.929,
+    "area_px": 47250
+   }
+  ],
+  "chosen": [
+   {
+    "label": "white floral pillowcase with blue flowers",
+    "bbox": [
+     105.0,
+     0.0,
+     742.5,
+     939.0
+    ],
+    "iou_two_calls": 0.962,
+    "area_px": 598612
+   },
+   {
+    "label": "green ornate patterned pillowcase",
+    "bbox": [
+     582.5,
+     0.0,
+     1100.0,
+     939.0
+    ],
+    "iou_two_calls": 0.971,
+    "area_px": 485932
+   }
+  ]
+ }
+}

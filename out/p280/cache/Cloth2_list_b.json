@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"objects\":[{\"label\":\"Scooby-Doo fleece blanket\",\"bbox\":[0,95,290,939]},{\"label\":\"white floral pillowcase\",\"bbox\":[95,0,745,939]},{\"label\":\"green patterned blanket\",\"bbox\":[575,0,1100,939]},{\"label\":\"white floral sheet\",\"bbox\":[0,0,350,140]}]}\n```", "model": "z-ai/glm-5.3-flash"}

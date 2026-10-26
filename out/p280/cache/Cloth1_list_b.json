@@ -1,0 +1,1 @@
+{"raw": "{\"objects\":[{\"label\":\"draped patterned fabric\",\"bbox\":[0,0,1100,975]},{\"label\":\"diagonal fold ridge\",\"bbox\":[90,60,430,975]},{\"label\":\"soft wrinkle fold (upper right)\",\"bbox\":[600,0,1100,220]}]}", "model": "z-ai/glm-5.3-flash"}

@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"objects\":[{\"label\":\"baby doll\",\"bbox\":[360,0,790,520]},{\"label\":\"open book\",\"bbox\":[60,505,990,985]},{\"label\":\"yellow plush toy\",\"bbox\":[985,130,1100,660]},{\"label\":\"orange plush toy\",\"bbox\":[985,620,1100,880]}]}\n```", "model": "z-ai/glm-5.3-flash"}

@@ -1,0 +1,42 @@
+{
+ "id": "P280",
+ "date": "2026-10-27",
+ "why": "P280 is the first prospective test in this program, and the first run where the external dependency itself blocked the design (the ARK CodingPlan subscription expired mid-run; the VLM was switched to Command Code / glm-5.3-flash and all rows were re-collected with one model). The record pins the two checks that keep the result honest: an independent recompute of the template stage, and a design gate that refuses to score a decimated input.",
+ "independent_recompute": {
+  "script": "verify/p280_indep.py",
+  "estimator": "from-scratch NCC matcher; does not import p280_run.py",
+  "templates_checked": 45,
+  "tolerance_px": 1.0,
+  "observed_max_abs_px": 0.0,
+  "status": "PASS"
+ },
+ "perturbation_test": {
+  "script": "verify/p280_perturb.py",
+  "perturbation": "decimate the raw file to 2 evaluable rows and run the real p280_verdict.py",
+  "expected": "design gate fires -> overall INCOMPLETE, every prediction NOT SCORED",
+  "observed": "INCOMPLETE / all NOT SCORED",
+  "status": "PASS"
+ },
+ "validity_clauses": [
+  "disparity < 0 invalid (rectified stereo, positive baseline)",
+  "fewer than two valid templates -> row non-evaluable",
+  "fewer than 4 evaluable rows -> INCOMPLETE, nothing scored",
+  "bbox stability gate: two temperature-0 calls per object, IoU >= 0.90 or the object is dropped"
+ ],
+ "declared_deviations": [
+  "5 evaluable rows instead of the designed 6 (Cloth1's object-list call returned a single object)",
+  "VLM switched from doubao-seed-2.1-lite to z-ai/glm-5.3-flash after the ARK CodingPlan subscription expired; Baby2's first-round cache was deleted so all rows use one model",
+  "scene list amended before the run: Art and Dolls are not in the 2006 FullSize set; frozen list is Baby2 / Cloth1 / Cloth2"
+ ],
+ "result": {
+  "overall": "MIXED",
+  "P280-1": "FAIL — R2 median 0.1212 vs R1 0.1619 (both under the bar in the median) but the paired comparison is 2 wins / 2 losses / 1 tie, sign test p = 1.0: the in-sample cluster advantage did not transfer",
+  "P280-2": "PASS — the majority-background class survives: Cloth1 and Cloth2 both keep rel_err >= 0.15 under R1 AND R2",
+  "P280-3": "PASS — random selection fails 2 of 5 rows (0.2353, 0.6972), so the control is discriminative here, unlike P279's cohort"
+ },
+ "hashes": {
+  "prereg_sha256": "031036a2c7beb0a79be62055297c968fd72026a15272e97a9810dc1593bd06ef",
+  "raw_sha256": "986b6bd521ea5ddc350963527252c1fa7a1c1b58ea6307a30ca1ec133bb7657e",
+  "objects_sha256": "5b338c88d4e2be576caf40edc9d76d302731f194de3042383ca8bfad6b131542"
+ }
+}

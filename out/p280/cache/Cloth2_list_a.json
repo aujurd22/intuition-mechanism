@@ -1,0 +1,1 @@
+{"raw": "{\"objects\":[{\"label\":\"Scooby-Doo fleece blanket\",\"bbox\":[0,95,335,939]},{\"label\":\"white floral pillowcase with blue flowers\",\"bbox\":[115,0,740,939]},{\"label\":\"green ornate patterned pillowcase\",\"bbox\":[590,0,1100,939]},{\"label\":\"white sheet\",\"bbox\":[0,0,350,130]}]}", "model": "z-ai/glm-5.3-flash"}
