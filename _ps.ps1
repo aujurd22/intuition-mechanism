@@ -1,0 +1,1 @@
+Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object {$_.CommandLine -like '*intuition-mechanism*' -or $_.CommandLine -like '*p282*' -or $_.CommandLine -like '*p270*'} | ForEach-Object { Write-Host ($_.ProcessId, '|', $_.CommandLine.Substring(0, [Math]::Min(100, $_.CommandLine.Length))) }

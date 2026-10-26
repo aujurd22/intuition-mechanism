@@ -60,14 +60,16 @@ INJECT_JS = """
     const ref = 'e' + (++i);
     e.setAttribute('data-ref', ref);
     const tag = e.tagName.toLowerCase();
-    const name = ((e.innerText && e.tagName !== 'SELECT' ? e.innerText :
-                  (e.tagName === 'SELECT' ?
-                     (e.options[e.selectedIndex] || {}).text || '' :
-                     (e.type === 'checkbox' && e.closest('label') ?
-                        e.closest('label').innerText : '')) ||
-                  e.placeholder || e.value ||
-                  e.getAttribute('aria-label') || e.id || '')
-                  .replace(/\s+/g, ' ').trim().slice(0, 40));
+    const idTag = e.id ? ' id=' + e.id : '';
+    const rawName = ((e.innerText && e.tagName !== 'SELECT' && e.tagName !== 'INPUT' ?
+                      e.innerText :
+                      (e.tagName === 'SELECT' ?
+                        (e.options[e.selectedIndex] || {}).text || '' :
+                        (e.type === 'checkbox' && e.closest('label') ?
+                          e.closest('label').innerText : ''))) ||
+                      e.getAttribute('aria-label') || '')
+                      .replace(/\s+/g, ' ').trim().slice(0, 40);
+    const name = idTag + (rawName ? ' "' + rawName + '"' : '');
     let extra = '';
     if (tag === 'input') {
       if (e.type === 'checkbox') extra = e.checked ? ' [checked]' : ' [unchecked]';

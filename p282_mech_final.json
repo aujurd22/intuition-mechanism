@@ -1,6 +1,6 @@
 {
  "steps": 13,
- "state_tokens": 434,
+ "state_tokens": 559,
  "gate_precisions": [
   0.0,
   0.0,
@@ -17,22 +17,22 @@
   1.0
  ],
  "latencies_ms": [
-  283,
+  281,
   259,
-  272,
-  266,
-  265,
-  265,
-  268,
-  271,
-  258,
-  258,
+  274,
+  267,
   262,
   268,
+  265,
+  270,
+  258,
+  257,
+  266,
+  267,
   265
  ],
  "fail": [],
  "workflow_complete": true,
  "gate_mean_prec": 0.846,
- "state_tokens_mean": 33.4
+ "state_tokens_mean": 43.0
 }

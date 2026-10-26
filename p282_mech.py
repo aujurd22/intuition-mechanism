@@ -42,7 +42,8 @@ def main():
                 else:
                     ok, err = False, "no empty box"
             elif kind == "check":
-                cands = [r for r, e in els.items() if e["name"] == action["name"]
+                cands = [r for r, e in els.items()
+                         if action["name"].lower() in e["name"].lower()
                          and "[unchecked]" in e["extra"]]
                 if cands:
                     pg.check(f'[data-ref="{cands[0]}"]')

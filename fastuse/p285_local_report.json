@@ -1,0 +1,107 @@
+{
+ "goal": "在测试站完成全部任务：用 admin/admin123 登录，然后进入复选框任务恰好勾选 alpha 和 delta 并提交，再进入表单任务下拉选 High、填 incident-42 并提交，最后进入报表任务点击数值最大那行的选择按钮",
+ "url": "http://127.0.0.1:8777/index.html",
+ "started": "2026-10-27 03:15",
+ "mode": "compact",
+ "steps": 36,
+ "llm_calls": 29,
+ "llm_ms": 31501.56259536743,
+ "reflex": 0,
+ "state_tokens": 808,
+ "claim_precisions": [
+  0.0,
+  0.0,
+  0.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  0.0,
+  1.0,
+  1.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "refuted": 14,
+ "actions_verified": 26,
+ "actions_unverified": 10,
+ "subgoals_done": 0,
+ "subgoals_total": 7,
+ "errors": [
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 1: batch-ran",
+  "subgoal 2: batch-ran",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 3: batch-ran",
+  "subgoal 4: batch-ran",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 5: exhausted",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 6: batch-ran",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 7: batch-ran"
+ ],
+ "subgoals": [
+  {
+   "subgoal": "在登录表单输入用户名 admin 和密码 admin123",
+   "done_when": "",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "点击登录按钮",
+   "done_when": "",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "进入复选框任务页面并勾选 alpha 和 delta 选项",
+   "done_when": "",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "提交复选框任务",
+   "done_when": "",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "进入表单任务页面并选择 High 选项",
+   "done_when": "",
+   "status": "exhausted"
+  },
+  {
+   "subgoal": "在表单中填写 incident-42 并提交",
+   "done_when": "",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "进入报表任务页面并点击数值最大那行的选择按钮",
+   "done_when": "",
+   "status": "batch-ran"
+  }
+ ],
+ "wall_s": 33.4
+}

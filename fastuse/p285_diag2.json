@@ -1,0 +1,52 @@
+{
+ "goal": "在测试站完成任务：用 admin/admin123 登录",
+ "url": "http://127.0.0.1:8777/index.html",
+ "started": "2026-10-27 02:59",
+ "mode": "compact",
+ "steps": 7,
+ "llm_calls": 13,
+ "llm_ms": 11120.756149291992,
+ "reflex": 0,
+ "state_tokens": 0,
+ "claim_precisions": [],
+ "refuted": 0,
+ "actions_verified": 0,
+ "actions_unverified": 0,
+ "subgoals_done": 0,
+ "subgoals_total": 3,
+ "errors": [
+  "fill: Page.fill: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "fill: Page.fill: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "json parse fail",
+  "fill: Page.fill: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "subgoal 1: batch-ran",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "json parse fail",
+  "subgoal 2: exhausted",
+  "click: Page.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "click: Page.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "click: Page.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "click: Page.click: Timeout 3000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-ref=\\\"e1\\\"]\")\n | refs@fail: ",
+  "subgoal 3: batch-ran"
+ ],
+ "subgoals": [
+  {
+   "subgoal": "输入用户名 admin",
+   "done_when": "用户名框内显示 admin",
+   "status": "batch-ran"
+  },
+  {
+   "subgoal": "输入密码 admin123",
+   "done_when": "密码框内显示 admin123",
+   "status": "exhausted"
+  },
+  {
+   "subgoal": "点击登录按钮",
+   "done_when": "页面跳转至测试站首页",
+   "status": "batch-ran"
+  }
+ ],
+ "wall_s": 33.5
+}
