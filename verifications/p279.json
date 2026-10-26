@@ -1,0 +1,30 @@
+{
+ "id": "P279",
+ "date": "2026-10-26",
+ "why": "P279 is pure arithmetic over the hash-pinned P278 measurements, so the risks are different from P278: the rule is in-sample by construction, and the two things that can silently go wrong are (a) the banked input drifting under the analysis, and (b) the clustering code disagreeing with a from-scratch implementation. The record below pins both.",
+ "independent_recompute": {
+  "script": "verify/p279_indep.py",
+  "estimator": "union-find connected components over pairwise |a-b| <= 5 px edges, instead of the sorted-gap scan used by p279_consensus_cluster.py",
+  "rows_checked": 14,
+  "tolerance_px": 1e-09,
+  "observed_max_abs_px": 0.0,
+  "status": "PASS"
+ },
+ "perturbation_test": {
+  "script": "verify/p279_perturb.py",
+  "perturbation": "one template disparity changed by +7 px in a copy of the banked raw file (breaks the frozen sha256)",
+  "expected": "hash gate fires -> overall INCONCLUSIVE, every prediction NOT SCORED",
+  "observed": "INCONCLUSIVE / gate.passed=false / all NOT SCORED",
+  "status": "PASS"
+ },
+ "validity_clauses": [
+  "disparity < 0 invalid (rectified stereo, positive baseline)",
+  "fewer than two valid templates -> row non-evaluable, not a control",
+  "the banked input hash must match the value frozen in the pre-registration before any scoring"
+ ],
+ "declared_weakness": "P279-4 (random-template negative control) FAILED: random picking passed 10 of 11 controls, so the control cohort cannot discriminate aggregation rules and P279-2's no-regression result is weak evidence. The strong parts of P279 are the board's 0.2963 -> 0.0059 and the confirmed negative on the block. Fixed by P280, whose fresh-scene cohort is required to be discriminative (P280-3).",
+ "hashes": {
+  "prereg_sha256": "3648b3a60eab16f054a4fc04666bd8cf4f3b70a9c35e13341214e4c9dcb529fa",
+  "raw_sha256": "376fc9914dd085790880fea5889a86af198a7a35e18c936af4e8921a870deb48"
+ }
+}

@@ -26,7 +26,7 @@
 2. **AI 行为上**：AI 嘴上说的规律和它实际用的规律**经常不是同一套**——让它解释自己的判断，写出来的规则考试只有 50 分（纯猜）；但它实际判题有 90 分。它"知道"自己说不出的东西。而且它说错的规则能**逐字预测**它错哪些题。
 3. **方法论上**：我们造了一条"提猜想 → 考试 → 喂错题 → 改猜想"的自动流水线。它能自我纠错，但在缺乏正面例子的数据上它会偷懒**背答案**——这个失败模式本身就是量化的新发现。
 
-**给不同读者的入口**：只想看懂故事 → 读本文即可；想复现数字 → 看 `docs/RESEARCH_PLAN.md`（P1 到 P278，每个编号实验都有预测、判定、存档文件；行数与历史编号碰撞见其 Registry integrity 小节）；想用我们的判官工具 → 看 `intuition_pack/` 插件节。
+**给不同读者的入口**：只想看懂故事 → 读本文即可；想复现数字 → 看 `docs/RESEARCH_PLAN.md`（P1 到 P280，每个编号实验都有预测、判定、存档文件；行数与历史编号碰撞见其 Registry integrity 小节）；想用我们的判官工具 → 看 `intuition_pack/` 插件节。
 
 ---
 
@@ -311,7 +311,7 @@ probe 矩阵     12+ 域判定完成（COMPRESSION ×3 / SATURATED ×6 / DISTRIB
 ```
 README.md / README.zh-CN.md   本文件（人话层 + 实验地图）
 docs/
-  RESEARCH_PLAN.md            注册表：P1–P278，每条含预测/判定/工件（行数见 Registry integrity）
+  RESEARCH_PLAN.md            注册表：P1–P280，每条含预测/判定/工件（行数见 Registry integrity）
   SHADOW_UNIFIED_THEOREM.md   影子统一定理 + 命题 4/5（论文脊柱）
   PAPER_V2_SPINE.md            论文 v2 脊柱 + 证据表 + 缺口清单（2026-10-26）
   VERIFICATION_PROTOCOL.md     验证协议：P278 起的 verdict 必须带独立复算与扰动测试

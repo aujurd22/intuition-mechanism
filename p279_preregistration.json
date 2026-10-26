@@ -1,0 +1,53 @@
+{
+ "id": "P279",
+ "name": "Consensus-cluster aggregation vs median on the banked P278 template measurements — and a registered NEGATIVE for the block",
+ "registered_before_run": "2026-10-26 (frozen before any arithmetic on the template sets; the frozen input is the already-published out/p278/p278_raw.json, hash-pinned below)",
+ "honest_label": "IN-SAMPLE RE-ANALYSIS. The rule was conceived after the 112 P278 template measurements were visible, so it cannot be a prospective test. Its job is to decide whether 'the object is a minority of the templates and the median throws it away' explains the data. The prospective test is P280 (fresh stereo pairs, frozen rule).",
+ "question": "P278 showed that the true disparity is present among the templates on every row, but the median of all templates picked a background value on the thin board (rel 0.2963). Does a plurality/consensus rule — take the largest cluster of mutually consistent template disparities — recover the board, leave the controls alone, and (as predicted) still fail on the block whose bbox admits only three samples?",
+ "inputs": {
+  "banked_raw": "out/p278/p278_raw.json (out/p278/p278_raw.json, sha256 pinned in 'frozen' below)",
+  "gt": "the P277 recorded Z_gt per row, unchanged",
+  "no_new_computation": "no model calls and no image matching: this experiment is arithmetic over the 112 banked template measurements"
+ },
+ "rule": {
+  "R1_baseline": "median of all valid template disparities (the P278 estimator), recomputed here for comparison",
+  "R2_consensus": "single-linkage clustering of the valid template disparities with a gap tolerance of 5 px; pick the cluster with the most members; ties broken by the higher mean NCC of the cluster, then by the lower median disparity; estimate = the median disparity of the chosen cluster",
+  "R3_negative_control": "one uniformly random valid template per row, seed 20261026",
+  "R4_ncc_single": "the single template with the highest NCC",
+  "validity_clause": "disparities < 0 are invalid (rectified stereo, positive baseline) and are dropped before aggregation; a row with fewer than two valid templates is non-evaluable, not a control"
+ },
+ "predictions": [
+  {
+   "id": "P279-1",
+   "claim": "FIX ON THE BOARD: under R2 the Lampshade1 yellow board reaches rel_err < 0.15 (P278's median gave 0.2963).",
+   "falsifies": "Board stays >= 0.15: the minority-object explanation is wrong even with a single-linkage plurality rule."
+  },
+  {
+   "id": "P279-2",
+   "claim": "NO REGRESSION: all 11 evaluable controls keep rel_err < 0.15 under R2 and shift by <= 0.05 of GT relative to R1.",
+   "falsifies": "Any evaluable control loses its pass or shifts >5%: the plurality rule is not safe as a default."
+  },
+  {
+   "id": "P279-3",
+   "claim": "REGISTERED NEGATIVE: the Monopoly block is NOT fixed under R2 (rel_err >= 0.15), because its bbox admits only three templates and, after the validity clause, the two survivors are singletons — the tie-break goes to the higher-NCC sample (421 px, NCC 0.617 vs 0.571). This prediction CONFIRMS the diagnosis 'three samples are structurally insufficient', it is not a failure.",
+   "falsifies": "If the block IS fixed under R2, the 'sample count' diagnosis is wrong and the block's recovery must have another explanation."
+  },
+  {
+   "id": "P279-4",
+   "claim": "NEGATIVE CONTROL: R3 (random template) fails at least 3 of the 11 evaluable controls, i.e. the rule is not trivially 'any pick works'.",
+   "falsifies": "Random picking passes 9+ controls: then the control cohort is too easy to discriminate rules and the comparison is uninformative."
+  },
+  {
+   "id": "P279-5",
+   "claim": "MECHANISM ON THE BOARD: the winning cluster has >= 3 members and its median lies within 15% of the true disparity, while the median of all templates does not — the object's templates form a plurality but not a majority.",
+   "falsifies": "Winning cluster has <3 members or its median is >15% from truth: the 'minority but plurality' story does not describe what happened."
+  }
+ ],
+ "gate": {
+  "hash_gate": "if the sha256 of out/p278/p278_raw.json does not equal the frozen value, the run is INCONCLUSIVE and no prediction is scored (same no-partial-credit rule as P278)"
+ },
+ "frozen": {
+  "banked_raw_sha256": "376fc9914dd085790880fea5889a86af198a7a35e18c936af4e8921a870deb48"
+ },
+ "artifacts_planned": ["p279_preregistration.json", "p279_consensus_cluster.py", "p279_verdict.json", "docs/P279_CONSENSUS_CLUSTER.md", "verify/p279_indep.py", "verify/p279_perturb.py", "verifications/p279.json"]
+}

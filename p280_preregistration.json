@@ -1,0 +1,44 @@
+{
+ "id": "P280",
+ "name": "PROSPECTIVE test of the consensus-cluster rule (P279) on three Middlebury 2006 pairs that P277 never touched",
+ "registered_before_run": "2026-10-26 — registered while P279 was still in-sample; NOT YET RUN (needs image download and VLM bbox calls). This row exists so the frozen rule and the frozen criteria cannot be adjusted after the data is seen.",
+ "status": "REGISTERED — NOT RUN",
+ "why_this_exists": "P279's rule was designed after the P278 template sets were visible, so it is in-sample by construction. The only way to turn it into evidence is a run where the rule, the scenes, the object list, the bar and the failure categories are all fixed before any image is looked at. That is this experiment.",
+ "frozen_rule": "R2 exactly as frozen in p279_preregistration.json: valid templates (disparity >= 0), single-linkage clustering with a 5 px gap tolerance, pick the largest cluster, ties by higher mean NCC then lower median, estimate = the cluster's median disparity; Z = f*B/d_est.",
+ "frozen_inputs": {
+  "scenes": ["Art", "Baby2", "Dolls"],
+  "scene_selection_rule": "the first three alphabetically among Middlebury 2006 datasets that P277 did not use (available but unused: Art, Baby2, Cloth1-4, Dolls, Laundry, Moebius, Reindeer, Rocks1-2, Midd1)",
+  "objects_per_scene": 2,
+  "object_selection_rule": "the two largest visible objects by the VLM's reported bbox area, chosen BEFORE any disparity is computed; the object list is frozen into out/p280/objects.json before the first template match",
+  "camera": "view1 / view5 at Illum2Exp1, f = 3740 px at 3072 px width scaled to the working width, baseline 160 mm, GT from the shipped disp1.png sampled at the left bbox centre (same as P277)",
+  "resize": "LANCZOS to 1100 px width (identical to P277/P278)"
+ },
+ "predictions": [
+  {
+   "id": "P280-1",
+   "claim": "ON FRESH DATA, R2's paired median relative error is < 0.15 and strictly below R1 (all-template median) on the same rows; one-sided sign test over rows, alpha 0.05.",
+   "falsifies": "R2 not below R1, or median >= 0.15: the P279 result was in-sample fitting and the rule does not transfer."
+  },
+  {
+   "id": "P280-2",
+   "claim": "AT LEAST ONE frontier row (bbox majority background, the P277 failure mode) is predicted to stay >= 0.15 under BOTH rules — the rule does not rescue the class it cannot see; the prediction is that this failure class survives on fresh data.",
+   "falsifies": "If no row fails under either rule, these three scenes contain no majority-background case and P280-2 is UNINFORMATIVE (recorded as such, not as a pass)."
+  },
+  {
+   "id": "P280-3",
+   "claim": "The random-template control (seed 20261026) fails >= 2 of the 6 rows — i.e. on harder fresh scenes the control cohort is discriminative, unlike P279's control cohort which random also passed 10/11.",
+   "falsifies": "Random passes 5-6 of 6: the fresh cohort is as easy as P279's and the rule comparison remains uninformative; record and stop."
+  }
+ ],
+ "gates": {
+  "bbox_stability": "the VLM bbox step is re-run once per object at temperature 0; IoU of the two bboxes must be >= 0.90, else that object is dropped as unstable (declared, not tuned)",
+  "hash": "out/p280/p280_raw.json is hash-pinned in the verification record before analysis"
+ },
+ "validity_clauses": [
+  "disparity < 0 invalid (rectified stereo, positive baseline)",
+  "fewer than two valid templates -> row non-evaluable, not a control",
+  "bbox touching the image edge or failing the IoU stability gate -> row dropped before analysis, counted"
+ ],
+ "cost_estimate": "6 VLM bbox calls x 2 (stability) + 6 arm-Direct calls; ~12-20 image downloads (~40 MB); no GPU",
+ "artifacts_planned": ["p280_preregistration.json", "p280_download.py", "p280_run.py", "p280_verdict.json", "docs/P280_PROSPECTIVE.md", "verify/p280_indep.py", "verify/p280_perturb.py", "verifications/p280.json"]
+}
