@@ -271,6 +271,20 @@ except Exception as ex:
     print(f"[FAIL] P259/P262 flagship re-verification crashed: {ex}")
     FAILS.append("P259/P262 flagship")
 
+# --- verification gate (from P278 forward) --------------------------------
+# A committed verdict is not enough: every verdict from P278 on must ship an
+# independent recompute script, a perturbation test and declared validity
+# clauses (see docs/VERIFICATION_PROTOCOL.md).  This closes the exact hole the
+# independent verifier found in P278: a gate that was computed but never wired.
+import subprocess as _subprocess
+_ver = _subprocess.run([sys.executable, os.path.join(_ROOT, "verify_verdict.py")],
+                       capture_output=True, text=True, cwd=_ROOT)
+check("verification gate: P278+ verdicts carry verification records",
+      _ver.returncode, 0)
+if _ver.returncode != 0:
+    print(_ver.stdout.strip())
+    print(_ver.stderr.strip())
+
 print()
 if FAILS:
     print(f"REGISTRY CI: {len(FAILS)} FAILURES: {FAILS}")

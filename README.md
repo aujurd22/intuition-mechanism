@@ -547,6 +547,7 @@ docs/
   RESEARCH_PLAN.md            the registry: rows P1–P278 (see Registry integrity)
   SHADOW_UNIFIED_THEOREM.md   shadow unified theorem + Props 4/5 (paper spine)
   PAPER_V2_SPINE.md           paper v2 spine + evidence table + gap list (2026-10-26)
+  VERIFICATION_PROTOCOL.md    verification gate for every verdict from P278 on
   INSTRUMENT_BRIDGES.md       instrument bridge registry (6 bridges)
   ...30+ topic documents (theorem lines, arc summaries, protocols)
 experiments/                  every registered experiment: p*.py scripts + p*.json artifacts

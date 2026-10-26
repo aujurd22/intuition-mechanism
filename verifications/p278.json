@@ -1,0 +1,41 @@
+{
+ "id": "P278",
+ "date": "2026-10-26",
+ "why": "P278 was the first experiment where the verdict was committed before any independent check; a read-only verifier then found an unimplemented gate clause and a mechanism claim resting on a physically impossible sample. This record makes the two checks that caught it part of the repository, and it is the template for every experiment from P278 forward.",
+ "independent_recompute": {
+  "script": "verify/p278_indep.py",
+  "estimator": "from-scratch NCC matcher; deliberately does not import p278_robust_template.py",
+  "positions_checked": 125,
+  "tolerance_px": 1.0,
+  "observed_max_abs_px": 1.0,
+  "note": "1 px occurs where a near-tie between adjacent disparities flips on floating-point summation order; it is inside the pre-registered +-1 px reproduction gate.",
+  "status": "PASS"
+ },
+ "perturbation_test": {
+  "script": "verify/p278_perturb.py",
+  "perturbation": "disp_recorded += 5 px on every row (breaks the +-1 px gate)",
+  "expected": "overall INCONCLUSIVE and every prediction NOT SCORED (pre-registration: no partial credit)",
+  "observed": "INCONCLUSIVE / all NOT SCORED / deviation text says FAILED",
+  "status": "PASS"
+ },
+ "validity_clauses": [
+  "disparity < 0 is invalid in rectified stereo with a positive baseline (the Monopoly -18 px sample)",
+  "a row with fewer than two usable templates is non-evaluable, not a control (Midd2)",
+  "a gate failure short-circuits every other prediction; it never yields a partial score"
+ ],
+ "external_check": {
+  "by": "read-only verification subagent (independent implementation, own temp scripts)",
+  "method": "own NCC matcher on 3 rows x 10 positions, perturbed-gate demo, counterfactual deletion of the fallback rule, statistics recomputation",
+  "agreed_on": "30/30 positions at 0 px, verdict reproducible from out/p278/p278_raw.json",
+  "found_and_fixed": [
+   "the reproduction gate was computed but never enforced (now a short-circuit, proven by verify/p278_perturb.py)",
+   "P-tmpl-1 PASS depended on an impossible -18 px sample (now PARTIAL, validity-checked)",
+   "a tautological control (median == centre) was counted as a win (now non-evaluable)",
+   "three wording errors and one unmeasured gloss ('centre lands on background')"
+  ]
+ },
+ "hashes": {
+  "prereg_sha256": "c6aef558309dcb1a97eab71a0a3708888a674fed759e0b5743f145c8bcb9dca4",
+  "raw_sha256": "376fc9914dd085790880fea5889a86af198a7a35e18c936af4e8921a870deb48"
+ }
+}

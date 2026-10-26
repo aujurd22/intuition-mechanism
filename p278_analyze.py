@@ -20,9 +20,11 @@ import hashlib
 import json
 import statistics
 
-RAW = "out/p278/p278_raw.json"
-PRE = "p278_preregistration.json"
-OUT = "p278_verdict.json"
+import os
+
+RAW = os.environ.get("P278_RAW", "out/p278/p278_raw.json")
+PRE = os.environ.get("P278_PRE", "p278_preregistration.json")
+OUT = os.environ.get("P278_OUT", "p278_verdict.json")
 BAR = 0.15          # identical to P277
 SHIFT_BAR = 0.05    # P-tmpl-3
 

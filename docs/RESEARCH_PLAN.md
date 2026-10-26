@@ -485,6 +485,15 @@ What the audit found and did:
   ARTIFACT-NOTE in place (P181, P218/P232, P242). Final state: 544 cited files, 540 present,
   3 acknowledged-absent (the pre-existing P70/P70-b pair plus P242), 1 fragment-of-present,
   0 missing — and the script exits non-zero if that ever changes.
+- **A verdict can now be rejected by a script.** From P278 on, a committed verdict must
+  also ship `verifications/p<ID>.json` (independent recompute that does not import the
+  estimator, a perturbation test that forces the registered gate to fire, and the data
+  validity clauses), plus frozen prereg/raw hashes; `verify_verdict.py` fails the CI when
+  any of that is missing or when a frozen hash no longer matches. The rule exists because
+  P278's first verdict shipped a gate that was computed but never wired and a mechanism
+  claim resting on a physically impossible sample; both were caught by an independent
+  read-only verifier and are fixed in commit 68a03f8. Rows before P278 are grandfathered.
+  Protocol: docs/VERIFICATION_PROTOCOL.md.
 - **README counts were a self-report**: "268 numbered rows P1–P268" matched neither the row
   count nor the ID range. The README now cites this section instead of restating a number.
 

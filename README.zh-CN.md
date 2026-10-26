@@ -314,6 +314,7 @@ docs/
   RESEARCH_PLAN.md            注册表：P1–P278，每条含预测/判定/工件（行数见 Registry integrity）
   SHADOW_UNIFIED_THEOREM.md   影子统一定理 + 命题 4/5（论文脊柱）
   PAPER_V2_SPINE.md            论文 v2 脊柱 + 证据表 + 缺口清单（2026-10-26）
+  VERIFICATION_PROTOCOL.md     验证协议：P278 起的 verdict 必须带独立复算与扰动测试
   INSTRUMENT_BRIDGES.md       仪器桥梁注册表（6 座桥）
   ...（其余 30+ 份专题文档见目录）
 experiments/                  全部已注册实验：p*.py 脚本 + p*.json 工件存档
