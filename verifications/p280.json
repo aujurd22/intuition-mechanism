@@ -30,7 +30,7 @@
  ],
  "result": {
   "overall": "MIXED",
-  "P280-1": "FAIL — R2 median 0.1212 vs R1 0.1619 (both under the bar in the median) but the paired comparison is 2 wins / 2 losses / 1 tie, sign test p = 1.0: the in-sample cluster advantage did not transfer",
+  "P280-1": "FAIL — R2 median 0.1212 vs R1 0.1619 (both under the bar in the median) but the paired comparison is 2 wins / 2 losses / 1 tie, exact sign test p = 0.6875 (ties dropped, n = 4): the in-sample cluster advantage did not transfer",
   "P280-2": "PASS — the majority-background class survives: Cloth1 and Cloth2 both keep rel_err >= 0.15 under R1 AND R2",
   "P280-3": "PASS — random selection fails 2 of 5 rows (0.2353, 0.6972), so the control is discriminative here, unlike P279's cohort"
  },

@@ -285,6 +285,17 @@ if _ver.returncode != 0:
     print(_ver.stdout.strip())
     print(_ver.stderr.strip())
 
+# --- paper evidence table: generated from artifacts, must be up to date ----
+# The paper may not retype numbers: docs/PAPER_EVIDENCE_TABLE.md is produced by
+# make_paper_tables.py from the JSON artifacts (with sha256 prefixes). This check
+# fails if the table is stale, an artifact is missing, or an extractor breaks.
+_tbl = _subprocess.run([sys.executable, os.path.join(_ROOT, "make_paper_tables.py"),
+                        "--check"], capture_output=True, text=True, cwd=_ROOT)
+check("paper evidence table: generated from artifacts and up to date",
+      _tbl.returncode, 0)
+if _tbl.returncode != 0:
+    print(_tbl.stdout.strip())
+
 print()
 if FAILS:
     print(f"REGISTRY CI: {len(FAILS)} FAILURES: {FAILS}")
