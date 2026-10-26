@@ -1,0 +1,54 @@
+{
+ "id": "P278",
+ "name": "Robust disparity by template aggregation: is P277's P-real-3 failure a centre-template artefact, and does median-of-9 fix it?",
+ "registered_before_run": "2026-10-26 (frozen before any recomputation on the P277 images; the only inputs inspected beforehand are the P277 recorded rows and its verdict file)",
+ "question": "P277's P-real-3 failed because two SL failures (Lampshade1 yellow board rel 0.671, Monopoly wooden block rel 0.835) were attributed to geometry_error rather than to a pre-registered mechanical category. The diagnosis on record is 'the bbox-centre template lands on background'. This experiment tests that diagnosis mechanistically and tests one mechanical fix: sample 9 templates on a 3x3 grid inside the same recorded bbox and aggregate their disparities by median. No model calls: the P277 VLM bboxes are reused verbatim, so the only thing that varies is the template-selection policy.",
+ "inputs": {
+  "bboxes": "out/p277/p277_raw.json, field bboxL (produced by the VLM in P277; reused unchanged)",
+  "images": "out/p277/<scene>/{Illum2Exp1/,}{view1,view5}.png, resized to TARGET_W=1100 with LANCZOS exactly as p277_real_stereo.load_view",
+  "gt": "P277 recorded Z_gt per row (sampled from disp1.png at the recorded bbox centre); NOT re-sampled, so the target depth is identical to P277",
+  "f_full": "3740.0 * W / 3072 (W=1100 resized width)",
+  "baseline_m": 0.16,
+  "cohort": "the 14 P277 SL rows that carry a bboxL and a rel_err (12 passing, 2 geometry_error). The 6 rows without bboxL are out of scope by construction (they never reached the template stage)."
+ },
+ "estimator": {
+  "template": "80x80 window (half=40) of the LEFT view, same size as P277",
+  "grid": "3x3 candidate centres at fractions 0.25/0.50/0.75 of bbox width and height; a candidate is used only if its 80x80 window lies fully inside the bbox",
+  "match": "identical to P277 match_disparity: NCC over integer disparity d in [-40, min(520, tx0)) step 2, then refine +-3 px",
+  "aggregation": "median of the available per-template disparities (float); Z = f_full * baseline / median_d",
+  "dispersion": "MAD = median(|d_i - median(d_i)|)"
+ },
+ "predictions": [
+  {
+   "id": "P-tmpl-1",
+   "claim": "MECHANISM: on both P277 geometry_error rows the centre template is an outlying measurement inside its own 3x3 grid: |d_centre - median_9| > 3 * MAD_9. On the 12 passing rows the centre is not an outlier by the same rule, in at most one exception.",
+   "falsifies": "If either failing row's centre is NOT an outlier, the 'centre template lands on background' diagnosis is wrong and P-real-3's failure needs another explanation. If two or more passing rows are outliers, the rule is too loose to carry the mechanism claim."
+  },
+  {
+   "id": "P-tmpl-2",
+   "claim": "FIX: median-of-9 gives rel_err < 0.15 on BOTH previously-failing rows (the same operational bar P277 used, GT unchanged).",
+   "falsifies": "If either row stays >= 0.15, the bbox is majority-background and robust aggregation cannot rescue it: the pipeline needs object masks, not a better template policy. Recorded as FAIL."
+  },
+  {
+   "id": "P-tmpl-3",
+   "claim": "NO REGRESSION: all 12 passing rows keep rel_err < 0.15 under median-of-9, and their |Z_median - Z_centre| / Z_gt <= 0.05.",
+   "falsifies": "Any passing row losing its pass, or shifting more than 5% of its relative depth, means the aggregator is not conservative enough for the default path; the fix would have to be gated on an outlier test instead."
+  },
+  {
+   "id": "P-tmpl-4",
+   "claim": "REPRODUCTION GATE (non-negotiable, checked first): the centre-template disparity recomputed here reproduces the P277 recorded disp_px within +-1 px on all 14 rows.",
+   "falsifies": "If reproduction fails, the local images or the resize path differ from the P277 run; the experiment is INCONCLUSIVE and no other prediction is scored (no partial credit)."
+  }
+ ],
+ "scoring": {
+  "rel_err": "|Z_est - Z_gt| / Z_gt",
+  "pass_bar": "0.15, identical to P277",
+  "group": "per-object verdicts only (n=2 targets is too small for a group test); the summary statistic reported is count of targets fixed and count of controls regressed"
+ },
+ "known_limits": [
+  "Reuses P277's VLM bbox, so it inherits that bbox's quality; the test isolates template selection, not localisation.",
+  "n=2 target rows: this can refute the mechanism or demonstrate a fix on two instances, but cannot estimate a fix rate.",
+  "The P277 verdict is NOT reopened: P-real-3 stays FAIL on the record. P278 is a new registered experiment with a new pre-registered bar."
+ ],
+ "artifacts_planned": ["p278_preregistration.json", "p278_robust_template.py", "p278_verdict.json", "out/p278/p278_raw.json", "docs/P278_ROBUST_TEMPLATE.md"]
+}

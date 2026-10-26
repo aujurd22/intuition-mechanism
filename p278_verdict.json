@@ -1,0 +1,322 @@
+{
+ "id": "P278",
+ "n_rows": 14,
+ "n_targets": 2,
+ "n_controls": 12,
+ "predictions": [
+  {
+   "id": "P-tmpl-4",
+   "verdict": "PASS",
+   "note": "reproduction gate: recomputed centre disparity vs P277 recorded",
+   "max_abs_px_diff": 0.0,
+   "rows_checked": 14
+  },
+  {
+   "id": "P-tmpl-1",
+   "verdict": "PASS",
+   "note": "centre template is a >3xMAD outlier inside its own 3x3 grid",
+   "target_outliers": {
+    "Lampshade1/yellow flat board": true,
+    "Monopoly/wooden block standing in": true
+   },
+   "control_outliers": [],
+   "control_outlier_count": 0
+  },
+  {
+   "id": "P-tmpl-2",
+   "verdict": "FAIL",
+   "note": "median-of-N disparity gives rel_err < 0.15 on both P277 failures",
+   "fixed": [
+    "Monopoly/wooden block standing in"
+   ],
+   "targets_detail": [
+    {
+     "row": "Lampshade1/yellow flat board",
+     "disp_centre": 216,
+     "disp_median": 101.0,
+     "mad": 30.0,
+     "rel_centre": 0.6709,
+     "rel_median": 0.2963,
+     "p277_attribution": "geometry_error"
+    },
+    {
+     "row": "Monopoly/wooden block standing in the middle of t",
+     "disp_centre": 421,
+     "disp_median": 71.0,
+     "mad": 89.0,
+     "rel_centre": 0.835,
+     "rel_median": 0.0215,
+     "p277_attribution": "geometry_error"
+    }
+   ]
+  },
+  {
+   "id": "P-tmpl-3",
+   "verdict": "PASS",
+   "note": "controls keep rel_err < 0.15 and shift <= 0.05 of GT",
+   "controls_regressed": [],
+   "controls_shifted": [],
+   "max_shift_over_gt": 0.0394
+  }
+ ],
+ "declared_prereg_gap": "The 3x3 grid requires an 80x80 template window inside the bbox; the Midd2 yellow-object bbox is 96x48 px, so no grid point fits. Rule adopted without touching any threshold: fall back to the P277 centre template (median == centre) and count the row as a zero-change control.",
+ "declared_deviation": "P278 ran on the DSH bundled Python (numpy 2.3.5, Pillow 12.3.0) instead of the P277 host env; the reproduction gate (P-tmpl-4) is what licenses the comparison, and it passed with max |diff| = 0.0 px.",
+ "overall": "MIXED",
+ "post_hoc_descriptive": {
+  "note": "Not part of the pre-registered scoring; reported because it explains the partial fix and motivates P279.",
+  "rows": [
+   {
+    "row": "Bowling1/green bowling ball",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     109,
+     104,
+     113,
+     87,
+     94,
+     93,
+     83,
+     91,
+     89
+    ],
+    "gt_disp": 93.1,
+    "n_templates_within_5px_of_gt": 4,
+    "median": 93.0
+   },
+   {
+    "row": "Lampshade1/yellow flat board",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     71,
+     72,
+     72,
+     220,
+     216,
+     211,
+     71,
+     101,
+     101
+    ],
+    "gt_disp": 71.1,
+    "n_templates_within_5px_of_gt": 4,
+    "median": 101.0
+   },
+   {
+    "row": "Lampshade1/cardboard box with red arrows prin",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     141,
+     151,
+     155,
+     148,
+     157,
+     159,
+     121,
+     120,
+     155
+    ],
+    "gt_disp": 155.7,
+    "n_templates_within_5px_of_gt": 5,
+    "median": 151.0
+   },
+   {
+    "row": "Lampshade1/white plaster cap shape",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     127,
+     148,
+     154,
+     150,
+     156,
+     161,
+     151,
+     158,
+     161
+    ],
+    "gt_disp": 154.8,
+    "n_templates_within_5px_of_gt": 5,
+    "median": 154.0
+   },
+   {
+    "row": "Monopoly/wooden block standing in the middl",
+    "grid_n": 3,
+    "grid_fallback": false,
+    "templates": [
+     -18,
+     421,
+     71
+    ],
+    "gt_disp": 69.5,
+    "n_templates_within_5px_of_gt": 1,
+    "median": 71.0
+   },
+   {
+    "row": "Flowerpots/the most centrally located flowerp",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     83,
+     109,
+     128,
+     129,
+     132,
+     135,
+     87,
+     131,
+     135
+    ],
+    "gt_disp": 131.6,
+    "n_templates_within_5px_of_gt": 6,
+    "median": 129.0
+   },
+   {
+    "row": "Aloe/the dark brown plant pot at the bo",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     105,
+     65,
+     66,
+     96,
+     95,
+     92,
+     98,
+     96,
+     109
+    ],
+    "gt_disp": 93.5,
+    "n_templates_within_5px_of_gt": 5,
+    "median": 96.0
+   },
+   {
+    "row": "Baby1/the green dotted box the baby doll",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     116,
+     116,
+     116,
+     120,
+     120,
+     120,
+     119,
+     119,
+     119
+    ],
+    "gt_disp": 120.6,
+    "n_templates_within_5px_of_gt": 9,
+    "median": 119.0
+   },
+   {
+    "row": "Bowling2/the large green ball",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     155,
+     157,
+     163,
+     138,
+     143,
+     136,
+     139,
+     141,
+     133
+    ],
+    "gt_disp": 142.3,
+    "n_templates_within_5px_of_gt": 4,
+    "median": 141.0
+   },
+   {
+    "row": "Bowling2/the white bowling pin with red str",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     53,
+     150,
+     151,
+     154,
+     153,
+     162,
+     154,
+     159,
+     162
+    ],
+    "gt_disp": 160.5,
+    "n_templates_within_5px_of_gt": 3,
+    "median": 154.0
+   },
+   {
+    "row": "Lampshade2/the teddy bear in the wicker baske",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     126,
+     145,
+     153,
+     151,
+     156,
+     162,
+     152,
+     159,
+     163
+    ],
+    "gt_disp": 155.7,
+    "n_templates_within_5px_of_gt": 5,
+    "median": 153.0
+   },
+   {
+    "row": "Lampshade2/the gray knit beanie hat with MIDD",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     126,
+     337,
+     152,
+     151,
+     156,
+     162,
+     152,
+     159,
+     163
+    ],
+    "gt_disp": 155.7,
+    "n_templates_within_5px_of_gt": 5,
+    "median": 156.0
+   },
+   {
+    "row": "Midd2/the bright yellow angular plastic ",
+    "grid_n": 1,
+    "grid_fallback": true,
+    "templates": [
+     119
+    ],
+    "gt_disp": 120.8,
+    "n_templates_within_5px_of_gt": 1,
+    "median": 119.0
+   },
+   {
+    "row": "Plastic/the white plaster cap shape in fro",
+    "grid_n": 9,
+    "grid_fallback": false,
+    "templates": [
+     139,
+     136,
+     134,
+     143,
+     143,
+     145,
+     149,
+     148,
+     512
+    ],
+    "gt_disp": 142.1,
+    "n_templates_within_5px_of_gt": 4,
+    "median": 143.0
+   }
+  ]
+ }
+}

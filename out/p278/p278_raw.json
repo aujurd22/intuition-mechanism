@@ -1,0 +1,1262 @@
+[
+ {
+  "scene": "Bowling1",
+  "obj": "green bowling ball",
+  "bboxL": [
+   5,
+   97,
+   711,
+   746
+  ],
+  "z_gt": 2.3007,
+  "f_full": 1339.19,
+  "disp_recorded": 94.0,
+  "disp_centre": 94,
+  "ncc_centre": 0.873,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 182,
+    "cy": 259,
+    "disp": 109,
+    "ncc": 0.777
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 182,
+    "cy": 422,
+    "disp": 104,
+    "ncc": 0.966
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 182,
+    "cy": 584,
+    "disp": 113,
+    "ncc": 0.984
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 358,
+    "cy": 259,
+    "disp": 87,
+    "ncc": 0.92
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 358,
+    "cy": 422,
+    "disp": 94,
+    "ncc": 0.873
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 358,
+    "cy": 584,
+    "disp": 93,
+    "ncc": 0.963
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 534,
+    "cy": 259,
+    "disp": 83,
+    "ncc": 0.812
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 534,
+    "cy": 422,
+    "disp": 91,
+    "ncc": 0.799
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 534,
+    "cy": 584,
+    "disp": 89,
+    "ncc": 0.868
+   }
+  ],
+  "disp_median": 93.0,
+  "mad": 6.0,
+  "z_centre": 2.2795,
+  "z_median": 2.304,
+  "rel_centre": 0.0092,
+  "rel_median": 0.0014,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "yellow flat board",
+  "bboxL": [
+   375,
+   25,
+   835,
+   463
+  ],
+  "z_gt": 3.0146,
+  "f_full": 1339.19,
+  "disp_recorded": 216.0,
+  "disp_centre": 216,
+  "ncc_centre": 0.435,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 490,
+    "cy": 134,
+    "disp": 71,
+    "ncc": 0.607
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 490,
+    "cy": 244,
+    "disp": 72,
+    "ncc": 0.666
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 490,
+    "cy": 354,
+    "disp": 72,
+    "ncc": 0.774
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 605,
+    "cy": 134,
+    "disp": 220,
+    "ncc": 0.464
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 605,
+    "cy": 244,
+    "disp": 216,
+    "ncc": 0.435
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 605,
+    "cy": 354,
+    "disp": 211,
+    "ncc": 0.625
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 720,
+    "cy": 134,
+    "disp": 71,
+    "ncc": 0.774
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 720,
+    "cy": 244,
+    "disp": 101,
+    "ncc": 0.971
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 720,
+    "cy": 354,
+    "disp": 101,
+    "ncc": 0.926
+   }
+  ],
+  "disp_median": 101.0,
+  "mad": 30.0,
+  "z_centre": 0.992,
+  "z_median": 2.1215,
+  "rel_centre": 0.6709,
+  "rel_median": 0.2963,
+  "was_p277_failure": true
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "cardboard box with red arrows printed on it",
+  "bboxL": [
+   319,
+   455,
+   912,
+   901
+  ],
+  "z_gt": 1.3762,
+  "f_full": 1339.19,
+  "disp_recorded": 157.0,
+  "disp_centre": 157,
+  "ncc_centre": 0.934,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 467,
+    "cy": 566,
+    "disp": 141,
+    "ncc": 0.704
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 467,
+    "cy": 678,
+    "disp": 151,
+    "ncc": 0.923
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 467,
+    "cy": 790,
+    "disp": 155,
+    "ncc": 0.902
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 616,
+    "cy": 566,
+    "disp": 148,
+    "ncc": 0.952
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 616,
+    "cy": 678,
+    "disp": 157,
+    "ncc": 0.941
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 616,
+    "cy": 790,
+    "disp": 159,
+    "ncc": 0.944
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 764,
+    "cy": 566,
+    "disp": 121,
+    "ncc": 0.979
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 764,
+    "cy": 678,
+    "disp": 120,
+    "ncc": 0.741
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 764,
+    "cy": 790,
+    "disp": 155,
+    "ncc": 0.948
+   }
+  ],
+  "disp_median": 151.0,
+  "mad": 6.0,
+  "z_centre": 1.3648,
+  "z_median": 1.419,
+  "rel_centre": 0.0083,
+  "rel_median": 0.0311,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Lampshade1",
+  "obj": "white plaster cap shape",
+  "bboxL": [
+   213,
+   486,
+   876,
+   999
+  ],
+  "z_gt": 1.3838,
+  "f_full": 1339.19,
+  "disp_recorded": 156.0,
+  "disp_centre": 156,
+  "ncc_centre": 0.823,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 379,
+    "cy": 614,
+    "disp": 127,
+    "ncc": 0.988
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 379,
+    "cy": 742,
+    "disp": 148,
+    "ncc": 0.939
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 379,
+    "cy": 871,
+    "disp": 154,
+    "ncc": 0.887
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 544,
+    "cy": 614,
+    "disp": 150,
+    "ncc": 0.923
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 544,
+    "cy": 742,
+    "disp": 156,
+    "ncc": 0.823
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 544,
+    "cy": 871,
+    "disp": 161,
+    "ncc": 0.887
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 710,
+    "cy": 614,
+    "disp": 151,
+    "ncc": 0.951
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 710,
+    "cy": 742,
+    "disp": 158,
+    "ncc": 0.974
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 710,
+    "cy": 871,
+    "disp": 161,
+    "ncc": 0.972
+   }
+  ],
+  "disp_median": 154.0,
+  "mad": 4.0,
+  "z_centre": 1.3735,
+  "z_median": 1.3914,
+  "rel_centre": 0.0074,
+  "rel_median": 0.0055,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Monopoly",
+  "obj": "wooden block standing in the middle of the Monopoly board",
+  "bboxL": [
+   477,
+   288,
+   578,
+   883
+  ],
+  "z_gt": 3.0842,
+  "f_full": 1339.19,
+  "disp_recorded": 421.0,
+  "disp_centre": 421,
+  "ncc_centre": 0.574,
+  "grid_n": 3,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 528,
+    "cy": 437,
+    "disp": -18,
+    "ncc": 0.477
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 528,
+    "cy": 586,
+    "disp": 421,
+    "ncc": 0.617
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 528,
+    "cy": 734,
+    "disp": 71,
+    "ncc": 0.571
+   }
+  ],
+  "disp_median": 71.0,
+  "mad": 89.0,
+  "z_centre": 0.509,
+  "z_median": 3.0179,
+  "rel_centre": 0.835,
+  "rel_median": 0.0215,
+  "was_p277_failure": true
+ },
+ {
+  "scene": "Flowerpots",
+  "obj": "the most centrally located flowerpot",
+  "bboxL": [
+   226,
+   173,
+   623,
+   603
+  ],
+  "z_gt": 1.6278,
+  "f_full": 1339.19,
+  "disp_recorded": 132.0,
+  "disp_centre": 132,
+  "ncc_centre": 0.745,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 325,
+    "cy": 280,
+    "disp": 83,
+    "ncc": 0.886
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 325,
+    "cy": 388,
+    "disp": 109,
+    "ncc": 0.95
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 325,
+    "cy": 496,
+    "disp": 128,
+    "ncc": 0.971
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 424,
+    "cy": 280,
+    "disp": 129,
+    "ncc": 0.734
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 424,
+    "cy": 388,
+    "disp": 132,
+    "ncc": 0.745
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 424,
+    "cy": 496,
+    "disp": 135,
+    "ncc": 0.816
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 524,
+    "cy": 280,
+    "disp": 87,
+    "ncc": 0.932
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 524,
+    "cy": 388,
+    "disp": 131,
+    "ncc": 0.848
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 524,
+    "cy": 496,
+    "disp": 135,
+    "ncc": 0.972
+   }
+  ],
+  "disp_median": 129.0,
+  "mad": 6.0,
+  "z_centre": 1.6233,
+  "z_median": 1.661,
+  "rel_centre": 0.0028,
+  "rel_median": 0.0204,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Aloe",
+  "obj": "the dark brown plant pot at the bottom right, in front of the aloe plant",
+  "bboxL": [
+   553,
+   726,
+   836,
+   976
+  ],
+  "z_gt": 2.291,
+  "f_full": 1339.19,
+  "disp_recorded": 95.0,
+  "disp_centre": 95,
+  "ncc_centre": 0.924,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 624,
+    "cy": 788,
+    "disp": 105,
+    "ncc": 0.759
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 624,
+    "cy": 851,
+    "disp": 65,
+    "ncc": 0.774
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 624,
+    "cy": 914,
+    "disp": 66,
+    "ncc": 0.734
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 694,
+    "cy": 788,
+    "disp": 96,
+    "ncc": 0.932
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 694,
+    "cy": 851,
+    "disp": 95,
+    "ncc": 0.924
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 694,
+    "cy": 914,
+    "disp": 92,
+    "ncc": 0.903
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 765,
+    "cy": 788,
+    "disp": 98,
+    "ncc": 0.892
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 765,
+    "cy": 851,
+    "disp": 96,
+    "ncc": 0.705
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 765,
+    "cy": 914,
+    "disp": 109,
+    "ncc": 0.974
+   }
+  ],
+  "disp_median": 96.0,
+  "mad": 4.0,
+  "z_centre": 2.2555,
+  "z_median": 2.232,
+  "rel_centre": 0.0155,
+  "rel_median": 0.0258,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Baby1",
+  "obj": "the green dotted box the baby doll sits on",
+  "bboxL": [
+   163,
+   601,
+   816,
+   999
+  ],
+  "z_gt": 1.776,
+  "f_full": 1339.19,
+  "disp_recorded": 120.0,
+  "disp_centre": 120,
+  "ncc_centre": 0.948,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 326,
+    "cy": 700,
+    "disp": 116,
+    "ncc": 0.861
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 326,
+    "cy": 800,
+    "disp": 116,
+    "ncc": 0.872
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 326,
+    "cy": 900,
+    "disp": 116,
+    "ncc": 0.861
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 490,
+    "cy": 700,
+    "disp": 120,
+    "ncc": 0.94
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 490,
+    "cy": 800,
+    "disp": 120,
+    "ncc": 0.947
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 490,
+    "cy": 900,
+    "disp": 120,
+    "ncc": 0.95
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 653,
+    "cy": 700,
+    "disp": 119,
+    "ncc": 0.907
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 653,
+    "cy": 800,
+    "disp": 119,
+    "ncc": 0.927
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 653,
+    "cy": 900,
+    "disp": 119,
+    "ncc": 0.941
+   }
+  ],
+  "disp_median": 119.0,
+  "mad": 1.0,
+  "z_centre": 1.7856,
+  "z_median": 1.8006,
+  "rel_centre": 0.0054,
+  "rel_median": 0.0138,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the large green ball",
+  "bboxL": [
+   162,
+   82,
+   850,
+   910
+  ],
+  "z_gt": 1.5062,
+  "f_full": 1339.19,
+  "disp_recorded": 143.0,
+  "disp_centre": 143,
+  "ncc_centre": 0.948,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 334,
+    "cy": 289,
+    "disp": 155,
+    "ncc": 0.978
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 334,
+    "cy": 496,
+    "disp": 157,
+    "ncc": 0.984
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 334,
+    "cy": 703,
+    "disp": 163,
+    "ncc": 0.984
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 506,
+    "cy": 289,
+    "disp": 138,
+    "ncc": 0.926
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 506,
+    "cy": 496,
+    "disp": 143,
+    "ncc": 0.948
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 506,
+    "cy": 703,
+    "disp": 136,
+    "ncc": 0.976
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 678,
+    "cy": 289,
+    "disp": 139,
+    "ncc": 0.848
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 678,
+    "cy": 496,
+    "disp": 141,
+    "ncc": 0.76
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 678,
+    "cy": 703,
+    "disp": 133,
+    "ncc": 0.976
+   }
+  ],
+  "disp_median": 141.0,
+  "mad": 5.0,
+  "z_centre": 1.4984,
+  "z_median": 1.5197,
+  "rel_centre": 0.0052,
+  "rel_median": 0.0089,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Bowling2",
+  "obj": "the white bowling pin with red stripes in the middle",
+  "bboxL": [
+   170,
+   134,
+   408,
+   998
+  ],
+  "z_gt": 1.3354,
+  "f_full": 1339.19,
+  "disp_recorded": 153.0,
+  "disp_centre": 153,
+  "ncc_centre": 0.859,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 230,
+    "cy": 350,
+    "disp": 53,
+    "ncc": 0.385
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 230,
+    "cy": 566,
+    "disp": 150,
+    "ncc": 0.991
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 230,
+    "cy": 782,
+    "disp": 151,
+    "ncc": 0.976
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 289,
+    "cy": 350,
+    "disp": 154,
+    "ncc": 0.929
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 289,
+    "cy": 566,
+    "disp": 153,
+    "ncc": 0.859
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 289,
+    "cy": 782,
+    "disp": 162,
+    "ncc": 0.972
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 348,
+    "cy": 350,
+    "disp": 154,
+    "ncc": 0.953
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 348,
+    "cy": 566,
+    "disp": 159,
+    "ncc": 0.985
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 348,
+    "cy": 782,
+    "disp": 162,
+    "ncc": 0.964
+   }
+  ],
+  "disp_median": 154.0,
+  "mad": 4.0,
+  "z_centre": 1.4005,
+  "z_median": 1.3914,
+  "rel_centre": 0.0487,
+  "rel_median": 0.0419,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the teddy bear in the wicker basket at the right",
+  "bboxL": [
+   332,
+   484,
+   995,
+   999
+  ],
+  "z_gt": 1.3762,
+  "f_full": 1339.19,
+  "disp_recorded": 156.0,
+  "disp_centre": 156,
+  "ncc_centre": 0.782,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 498,
+    "cy": 613,
+    "disp": 126,
+    "ncc": 0.976
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 498,
+    "cy": 742,
+    "disp": 145,
+    "ncc": 0.64
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 498,
+    "cy": 870,
+    "disp": 153,
+    "ncc": 0.814
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 664,
+    "cy": 613,
+    "disp": 151,
+    "ncc": 0.888
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 664,
+    "cy": 742,
+    "disp": 156,
+    "ncc": 0.783
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 664,
+    "cy": 870,
+    "disp": 162,
+    "ncc": 0.871
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 829,
+    "cy": 613,
+    "disp": 152,
+    "ncc": 0.969
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 829,
+    "cy": 742,
+    "disp": 159,
+    "ncc": 0.978
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 829,
+    "cy": 870,
+    "disp": 163,
+    "ncc": 0.964
+   }
+  ],
+  "disp_median": 153.0,
+  "mad": 6.0,
+  "z_centre": 1.3735,
+  "z_median": 1.4005,
+  "rel_centre": 0.0019,
+  "rel_median": 0.0176,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Lampshade2",
+  "obj": "the gray knit beanie hat with MIDDLEBURY band at the front center",
+  "bboxL": [
+   332,
+   483,
+   994,
+   998
+  ],
+  "z_gt": 1.3762,
+  "f_full": 1339.19,
+  "disp_recorded": 156.0,
+  "disp_centre": 156,
+  "ncc_centre": 0.783,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 498,
+    "cy": 612,
+    "disp": 126,
+    "ncc": 0.977
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 498,
+    "cy": 740,
+    "disp": 337,
+    "ncc": 0.629
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 498,
+    "cy": 869,
+    "disp": 152,
+    "ncc": 0.818
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 663,
+    "cy": 612,
+    "disp": 151,
+    "ncc": 0.886
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 663,
+    "cy": 740,
+    "disp": 156,
+    "ncc": 0.783
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 663,
+    "cy": 869,
+    "disp": 162,
+    "ncc": 0.868
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 828,
+    "cy": 612,
+    "disp": 152,
+    "ncc": 0.969
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 828,
+    "cy": 740,
+    "disp": 159,
+    "ncc": 0.977
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 828,
+    "cy": 869,
+    "disp": 163,
+    "ncc": 0.965
+   }
+  ],
+  "disp_median": 156.0,
+  "mad": 5.0,
+  "z_centre": 1.3735,
+  "z_median": 1.3735,
+  "rel_centre": 0.0019,
+  "rel_median": 0.0019,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Midd2",
+  "obj": "the bright yellow angular plastic object at the right center",
+  "bboxL": [
+   243,
+   795,
+   339,
+   843
+  ],
+  "z_gt": 1.7739,
+  "f_full": 1339.19,
+  "disp_recorded": 119.0,
+  "disp_centre": 119,
+  "ncc_centre": 0.906,
+  "grid_n": 1,
+  "grid_fallback": true,
+  "templates": [
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 291,
+    "cy": 819,
+    "disp": 119,
+    "ncc": 0.906
+   }
+  ],
+  "disp_median": 119.0,
+  "mad": 0.0,
+  "z_centre": 1.8006,
+  "z_median": 1.8006,
+  "rel_centre": 0.015,
+  "rel_median": 0.015,
+  "was_p277_failure": false
+ },
+ {
+  "scene": "Plastic",
+  "obj": "the white plaster cap shape in front center",
+  "bboxL": [
+   383,
+   331,
+   676,
+   664
+  ],
+  "z_gt": 1.5084,
+  "f_full": 1339.19,
+  "disp_recorded": 143.0,
+  "disp_centre": 143,
+  "ncc_centre": 0.765,
+  "grid_n": 9,
+  "grid_fallback": false,
+  "templates": [
+   {
+    "fx": 0.25,
+    "fy": 0.25,
+    "cx": 456,
+    "cy": 414,
+    "disp": 139,
+    "ncc": 0.99
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.5,
+    "cx": 456,
+    "cy": 498,
+    "disp": 136,
+    "ncc": 0.993
+   },
+   {
+    "fx": 0.25,
+    "fy": 0.75,
+    "cx": 456,
+    "cy": 581,
+    "disp": 134,
+    "ncc": 0.994
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.25,
+    "cx": 530,
+    "cy": 414,
+    "disp": 143,
+    "ncc": 0.567
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.5,
+    "cx": 530,
+    "cy": 498,
+    "disp": 143,
+    "ncc": 0.78
+   },
+   {
+    "fx": 0.5,
+    "fy": 0.75,
+    "cx": 530,
+    "cy": 581,
+    "disp": 145,
+    "ncc": 0.946
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.25,
+    "cx": 603,
+    "cy": 414,
+    "disp": 149,
+    "ncc": 0.835
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.5,
+    "cx": 603,
+    "cy": 498,
+    "disp": 148,
+    "ncc": 0.953
+   },
+   {
+    "fx": 0.75,
+    "fy": 0.75,
+    "cx": 603,
+    "cy": 581,
+    "disp": 512,
+    "ncc": 0.268
+   }
+  ],
+  "disp_median": 143.0,
+  "mad": 5.0,
+  "z_centre": 1.4984,
+  "z_median": 1.4984,
+  "rel_centre": 0.0066,
+  "rel_median": 0.0066,
+  "was_p277_failure": false
+ }
+]
