@@ -89,6 +89,39 @@ try:
 except FileNotFoundError:
     print("[SKIP] p273 artifacts")
 
+# --- P278: the robust-template experiment must stay reproducible -----------
+# The verdict must be re-derivable from out/p278/p278_raw.json, the frozen
+# pre-registration hash must match, and the claim precision (112 template
+# matches: 12x9 + 3 + 1) must hold. This is the assertion the independent
+# verification said was missing.
+try:
+    _r278 = json.load(open(os.path.join(_ROOT, "out", "p278", "p278_raw.json"),
+                           encoding="utf-8"))
+    _v278 = json.load(open(os.path.join(_ROOT, "p278_verdict.json"), encoding="utf-8"))
+    _repro = [abs(r["disp_centre"] - r["disp_recorded"]) for r in _r278
+              if r.get("disp_centre") is not None]
+    check("P278: gate max |diff| matches the raw file",
+          _v278["gate"]["max_abs_px_diff"], max(_repro))
+    check("P278: verdict polarity PASS/PARTIAL/FAIL/PASS",
+          [p["verdict"] for p in _v278["predictions"]],
+          ["PASS", "PARTIAL", "FAIL", "PASS"])
+    _rels = {r["scene"]: round(abs(r["f_full"] * 0.160 / r["disp_median"] - r["z_gt"])
+                               / r["z_gt"], 4)
+             for r in _r278 if r["was_p277_failure"]}
+    check("P278: target rel_median values recompute",
+          _rels, {"Lampshade1": 0.2963, "Monopoly": 0.0215})
+    check("P278: template composition is 12x9 + 3 + 1",
+          sorted(r["grid_n"] for r in _r278), sorted([9] * 12 + [3, 1]))
+    import hashlib as _hashlib
+    _sha = lambda p: _hashlib.sha256(
+        open(os.path.join(_ROOT, p), "rb").read()).hexdigest()
+    check("P278: frozen prereg hash matches",
+          _v278["hashes"]["prereg_sha256"], _sha("p278_preregistration.json"))
+    check("P278: frozen raw-data hash matches",
+          _v278["hashes"]["raw_sha256"], _sha("out/p278/p278_raw.json"))
+except FileNotFoundError:
+    print("[SKIP] p278 artifacts")
+
 # --- P195: corrected locus ---
 locus = json.load(open("p195_2elem_corrected.json", encoding="utf-8"))["locus_[1,1000]"]
 check("P195 locus == 22 rows 11U4x11", locus,

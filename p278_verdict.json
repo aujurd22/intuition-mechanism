@@ -3,65 +3,144 @@
  "n_rows": 14,
  "n_targets": 2,
  "n_controls": 12,
+ "hashes": {
+  "prereg_sha256": "c6aef558309dcb1a97eab71a0a3708888a674fed759e0b5743f145c8bcb9dca4",
+  "raw_sha256": "376fc9914dd085790880fea5889a86af198a7a35e18c936af4e8921a870deb48"
+ },
+ "gate": {
+  "prediction": "P-tmpl-4",
+  "max_abs_px_diff": 0.0,
+  "rows_checked": 14,
+  "passed": true
+ },
  "predictions": [
   {
    "id": "P-tmpl-4",
    "verdict": "PASS",
-   "note": "reproduction gate: recomputed centre disparity vs P277 recorded",
+   "note": "reproduction gate (short-circuits the rest on failure)",
    "max_abs_px_diff": 0.0,
    "rows_checked": 14
   },
   {
    "id": "P-tmpl-1",
-   "verdict": "PASS",
-   "note": "centre template is a >3xMAD outlier inside its own 3x3 grid",
-   "target_outliers": {
+   "verdict": "PARTIAL",
+   "note": "registered rule: centre template is a |delta| > 3*MAD outlier inside its own grid; PARTIAL because the post-hoc validity check removes an impossible negative-disparity sample on the block",
+   "target_outliers_registered": {
     "Lampshade1/yellow flat board": true,
     "Monopoly/wooden block standing in": true
    },
-   "control_outliers": [],
-   "control_outlier_count": 0
+   "control_outliers_registered": [],
+   "validity_check_targets": {
+    "Lampshade1/yellow flat board": {
+     "n_used": 9,
+     "n_dropped": 0,
+     "median": 101,
+     "mad": 30,
+     "centre_outlier": true,
+     "z_from_median": 2.1214891089108914,
+     "rel_from_median": 0.2963
+    },
+    "Monopoly/wooden block standing in": {
+     "n_used": 2,
+     "n_dropped": 1,
+     "median": 246.0,
+     "mad": 175.0,
+     "centre_outlier": false,
+     "z_from_median": 0.8710178861788619,
+     "rel_from_median": 0.7176
+    }
+   },
+   "registered_pass": true,
+   "validity_pass": false
   },
   {
    "id": "P-tmpl-2",
    "verdict": "FAIL",
-   "note": "median-of-N disparity gives rel_err < 0.15 on both P277 failures",
+   "note": "median of the available templates gives rel_err < 0.15 on both P277 failures",
    "fixed": [
     "Monopoly/wooden block standing in"
    ],
    "targets_detail": [
     {
      "row": "Lampshade1/yellow flat board",
+     "grid_n": 9,
      "disp_centre": 216,
      "disp_median": 101.0,
      "mad": 30.0,
      "rel_centre": 0.6709,
-     "rel_median": 0.2963,
-     "p277_attribution": "geometry_error"
+     "rel_median": 0.2963
     },
     {
      "row": "Monopoly/wooden block standing in the middle of t",
+     "grid_n": 3,
      "disp_centre": 421,
      "disp_median": 71.0,
      "mad": 89.0,
      "rel_centre": 0.835,
-     "rel_median": 0.0215,
-     "p277_attribution": "geometry_error"
+     "rel_median": 0.0215
     }
    ]
   },
   {
    "id": "P-tmpl-3",
    "verdict": "PASS",
-   "note": "controls keep rel_err < 0.15 and shift <= 0.05 of GT",
+   "note": "evaluable controls keep rel_err < 0.15 and shift <= 0.05 of GT; tautological controls are excluded from the pass count, not counted as wins",
+   "n_evaluable_controls": 11,
+   "tautological_controls_excluded": [
+    "Midd2/the bright yellow angula"
+   ],
    "controls_regressed": [],
    "controls_shifted": [],
-   "max_shift_over_gt": 0.0394
+   "max_shift_over_gt": 0.0394,
+   "shift_px_examples": [
+    [
+     6.0,
+     "Lampshade1/cardboard box with r"
+    ],
+    [
+     3.0,
+     "Flowerpots/the most centrally l"
+    ],
+    [
+     3.0,
+     "Lampshade2/the teddy bear in th"
+    ]
+   ]
   }
  ],
- "declared_prereg_gap": "The 3x3 grid requires an 80x80 template window inside the bbox; the Midd2 yellow-object bbox is 96x48 px, so no grid point fits. Rule adopted without touching any threshold: fall back to the P277 centre template (median == centre) and count the row as a zero-change control.",
- "declared_deviation": "P278 ran on the DSH bundled Python (numpy 2.3.5, Pillow 12.3.0) instead of the P277 host env; the reproduction gate (P-tmpl-4) is what licenses the comparison, and it passed with max |diff| = 0.0 px.",
  "overall": "MIXED",
+ "amendments": [
+  {
+   "id": "A1",
+   "kind": "pre-registration gap (declared at implementation)",
+   "text": "The 3x3 grid needs an 80x80 window inside the bbox. The Midd2 yellow-object bbox is 96x48 px, so no grid point fits; the fallback is the centre template (median == centre). No threshold was touched, and the row is now marked non-evaluable instead of 'zero-change control'."
+  },
+  {
+   "id": "A2",
+   "kind": "post-hoc robustness (weakens a verdict)",
+   "text": "A negative disparity is impossible in rectified stereo with a positive baseline. The Monopoly grid's -18 px sample is a matcher artefact; dropping it leaves {71, 421} -> median 246, MAD 175, |421-246| = 175 < 525, so the block's centre is NO LONGER an outlier. P-tmpl-1 is therefore reported PARTIAL, not PASS. The fix claim for the block (P-tmpl-2) also does not survive the filter (rel 0.717), so it stays FAIL."
+  },
+  {
+   "id": "A3",
+   "kind": "claim precision",
+   "text": "The estimator used the templates that fit: 12 rows x 9 + Monopoly x 3 + Midd2 x 1 = 112 template matches, not 14 x 9 = 126. 'median-of-9' was sloppy wording for 'median of the available templates'."
+  },
+  {
+   "id": "A4",
+   "kind": "post-hoc descriptive (not scored)",
+   "text": "Grid composition and GT-in-grid table, added after the run because it explains the partial fix: every row has at least one template within +-5 px of the true disparity."
+  },
+  {
+   "id": "A5",
+   "kind": "wording corrections vs the first draft",
+   "text": "(i) 'the 6 rows without bboxL' -> 5 rows have no bboxL and 1 (Bowling1 white pin) has a bbox but no rel_err (degenerate disparity, -26 px); exclusion is by missing rel_err. (ii) '~2 px shift' -> mean -1.3 px, largest two are -6 px (157->151) and -3 px (132->129). (iii) 'centre lands on background' -> the centre match is a NEARER, low-NCC (0.435/0.574) surface (0.99 m / 0.51 m against GT 3.01/3.08 m), i.e. the matcher locked onto a spurious patch; 'outlier' is the measured claim, 'background' was an unmeasured gloss."
+  },
+  {
+   "id": "A6",
+   "kind": "bookkeeping",
+   "text": "p278_preregistration.json's artifacts_planned omits p278_analyze.py (the frozen file is left untouched; this note is the correction)."
+  }
+ ],
  "post_hoc_descriptive": {
   "note": "Not part of the pre-registered scoring; reported because it explains the partial fix and motivates P279.",
   "rows": [
