@@ -1,0 +1,13 @@
+{"step": 1, "action": {"action": "fill", "text": "admin"}, "note": "reflex-fill username=admin", "state_tokens": 18, "gate_prec": 0.0, "latency_ms": 283, "ok": true}
+{"step": 2, "action": {"action": "fill", "text": "admin123"}, "note": "reflex-fill password=admin123", "state_tokens": 19, "gate_prec": 0.0, "latency_ms": 259, "ok": true}
+{"step": 3, "action": {"action": "click", "name": "登录"}, "note": "click 登录", "state_tokens": 21, "gate_prec": 1.0, "latency_ms": 272, "ok": true}
+{"step": 4, "action": {"action": "click", "name": "复选框任务"}, "note": "nav→checks", "state_tokens": 10, "gate_prec": 1.0, "latency_ms": 266, "ok": true}
+{"step": 5, "action": {"action": "check", "name": "alpha"}, "note": "check alpha", "state_tokens": 46, "gate_prec": 1.0, "latency_ms": 265, "ok": true}
+{"step": 6, "action": {"action": "check", "name": "delta"}, "note": "check delta", "state_tokens": 46, "gate_prec": 1.0, "latency_ms": 265, "ok": true}
+{"step": 7, "action": {"action": "click", "name": "提交"}, "note": "submit checks", "state_tokens": 45, "gate_prec": 1.0, "latency_ms": 268, "ok": true}
+{"step": 8, "action": {"action": "click", "name": "表单任务"}, "note": "nav→form", "state_tokens": 45, "gate_prec": 1.0, "latency_ms": 271, "ok": true}
+{"step": 9, "action": {"action": "select", "value": "high"}, "note": "select High", "state_tokens": 35, "gate_prec": 1.0, "latency_ms": 258, "ok": true}
+{"step": 10, "action": {"action": "fill", "text": "incident-42"}, "note": "fill incident-42", "state_tokens": 33, "gate_prec": 1.0, "latency_ms": 258, "ok": true}
+{"step": 11, "action": {"action": "click", "name": "提交表单"}, "note": "submit form", "state_tokens": 37, "gate_prec": 1.0, "latency_ms": 262, "ok": true}
+{"step": 12, "action": {"action": "click", "name": "报表任务"}, "note": "nav→report", "state_tokens": 37, "gate_prec": 1.0, "latency_ms": 268, "ok": true}
+{"step": 13, "action": {"action": "click", "name": "Vega"}, "note": "click Vega (93, max)", "state_tokens": 42, "gate_prec": 1.0, "latency_ms": 265, "ok": true}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>FastUse Test Bench</title>
+<style>
+body{font-family:Consolas,monospace;background:#101418;color:#d8dcd8;margin:0;padding:24px}
+.page{display:none;max-width:720px;margin:0 auto}
+.page.active{display:block}
+h1{color:#e8c87a;font-size:22px}
+input,select,button{font-family:inherit;font-size:15px;padding:8px;margin:6px 0;background:#1a2026;color:#d8dcd8;border:1px solid #3a444e;border-radius:4px}
+button{cursor:pointer}
+.msg{padding:10px;margin:10px 0;border-radius:4px}
+.ok{background:#12331c;color:#7ee787}
+.err{background:#331512;color:#f85149}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #3a444e;padding:6px 10px}
+label{display:block;margin:8px 0}
+nav a{color:#79c0ff;margin-right:16px}
+#banner{display:none}
+</style>
+</head>
+<body>
+<div id="banner" class="msg ok">ALL TASKS COMPLETE — WORKFLOW VERIFIED</div>
+
+<!-- 登录页 -->
+<div id="page-login" class="page active">
+<h1>登录</h1>
+<div id="login-msg" class="msg err" style="display:none"></div>
+<label>用户名 <input id="username" type="text" placeholder="admin"></label>
+<label>密码 <input id="password" type="password"></label>
+<button id="login-btn" onclick="doLogin()">登录</button>
+<p>提示：账号 admin / 密码 admin123</p>
+</div>
+
+<!-- 仪表盘 -->
+<div id="page-dash" class="page">
+<h1>控制台</h1>
+<p id="welcome">欢迎回来。</p>
+<nav>
+<a href="#" onclick="show('checks')">复选框任务</a>
+<a href="#" onclick="show('form')">表单任务</a>
+<a href="#" onclick="show('report')">报表任务</a>
+</nav>
+<div id="dash-msg" class="msg ok"></div>
+</div>
+
+<!-- 复选框任务 -->
+<div id="page-checks" class="page">
+<nav style="margin-bottom:16px">
+<a href="#" onclick="show('dash');return false;">控制台</a>
+<a href="#" onclick="show('checks');return false;">复选框任务</a>
+<a href="#" onclick="show('form');return false;">表单任务</a>
+<a href="#" onclick="show('report');return false;">报表任务</a>
+</nav>
+<h1>复选框任务</h1>
+<p>恰好勾选 <b>alpha</b> 和 <b>delta</b>（只勾这两个），然后提交。</p>
+<label><input type="checkbox" id="cb-alpha"> alpha</label>
+<label><input type="checkbox" id="cb-beta"> beta</label>
+<label><input type="checkbox" id="cb-gamma"> gamma</label>
+<label><input type="checkbox" id="cb-delta"> delta</label>
+<button id="cb-submit" onclick="doChecks()">提交</button>
+<div id="checks-msg" class="msg"></div>
+</div>
+
+<!-- 表单任务 -->
+<div id="page-form" class="page">
+<nav style="margin-bottom:16px">
+<a href="#" onclick="show('dash');return false;">控制台</a>
+<a href="#" onclick="show('checks');return false;">复选框任务</a>
+<a href="#" onclick="show('form');return false;">表单任务</a>
+<a href="#" onclick="show('report');return false;">报表任务</a>
+</nav>
+<h1>表单任务</h1>
+<p>下拉选 <b>Priority: High</b>，文本框填 <b>incident-42</b>，提交后记录确认号。</p>
+<label>优先级
+<select id="priority">
+<option value="">-- 选择 --</option>
+<option value="low">Low</option>
+<option value="high">High</option>
+<option value="critical">Critical</option>
+</select></label>
+<label>事件编号 <input id="incident" type="text"></label>
+<button id="form-submit" onclick="doForm()">提交表单</button>
+<div id="form-msg" class="msg"></div>
+</div>
+
+<!-- 报表任务 -->
+<div id="page-report" class="page">
+<nav style="margin-bottom:16px">
+<a href="#" onclick="show('dash');return false;">控制台</a>
+<a href="#" onclick="show('checks');return false;">复选框任务</a>
+<a href="#" onclick="show('form');return false;">表单任务</a>
+<a href="#" onclick="show('report');return false;">报表任务</a>
+</nav>
+<h1>报表任务</h1>
+<p>找出数值最大的行，点击该行的「选择」按钮。</p>
+<table>
+<tr><th>名称</th><th>数值</th><th></th></tr>
+<tr><td>Orion</td><td>47</td><td><button class="pick" data-name="Orion" data-val="47" onclick="pick(this)">选择</button></td></tr>
+<tr><td>Vega</td><td>93</td><td><button class="pick" data-name="Vega" data-val="93" onclick="pick(this)">选择</button></td></tr>
+<tr><td>Lyra</td><td>61</td><td><button class="pick" data-name="Lyra" data-val="61" onclick="pick(this)">选择</button></td></tr>
+<tr><td>Draco</td><td>29</td><td><button class="pick" data-name="Draco" data-val="29" onclick="pick(this)">选择</button></td></tr>
+</table>
+<div id="report-msg" class="msg"></div>
+</div>
+
+<script>
+let checksOk=false, formOk=false, reportOk=false;
+function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page-'+id).classList.add('active');}
+function doLogin(){
+const u=document.getElementById('username').value,p=document.getElementById('password').value;
+const m=document.getElementById('login-msg');
+if(u==='admin'&&p==='admin123'){m.style.display='none';show('dash');
+document.getElementById('welcome').textContent='欢迎回来，admin。会话 #'+Math.floor(Math.random()*9000+1000);}
+else{m.textContent='登录失败：用户名或密码错误';m.style.display='block';}}
+function doChecks(){
+const a=document.getElementById('cb-alpha').checked,b=document.getElementById('cb-beta').checked,
+g=document.getElementById('cb-gamma').checked,d=document.getElementById('cb-delta').checked;
+const m=document.getElementById('checks-msg');
+if(a&&d&&!b&&!g){checksOk=true;m.className='msg ok';m.textContent='CHECKS PASS';
+if(checksOk&&formOk&&reportOk)banner();}
+else{m.className='msg err';m.textContent='CHECKS FAIL：勾选组合错误（需要恰好 alpha+delta）';}}
+function doForm(){
+const p=document.getElementById('priority').value,i=document.getElementById('incident').value;
+const m=document.getElementById('form-msg');
+if(p==='high'&&i==='incident-42'){formOk=true;
+const ref='REF-'+Math.floor(Math.random()*90000+10000);
+m.className='msg ok';m.textContent='FORM PASS — 确认号 '+ref+'（请记住它）';
+window.__ref=ref;if(checksOk&&formOk&&reportOk)banner();}
+else{m.className='msg err';m.textContent='FORM FAIL：优先级必须是 High 且事件编号为 incident-42';}}
+function pick(btn){
+const m=document.getElementById('report-msg');
+const v=parseInt(btn.dataset.val);
+if(v===93){reportOk=true;m.className='msg ok';m.textContent='REPORT PASS — 已选择 Vega（93，最大值）';
+if(checksOk&&formOk&&reportOk)banner();}
+else{m.className='msg err';m.textContent='REPORT FAIL：'+btn.dataset.name+' 不是最大值（提示：比一比 47/93/61/29）';}}
+function banner(){document.getElementById('banner').style.display='block';}
+</script>
+</body>
+</html>
