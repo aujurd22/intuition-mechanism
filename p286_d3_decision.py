@@ -1,41 +1,66 @@
 # -*- coding: utf-8 -*-
-"""d3 decision adapter for FastUse — loads vllm-sr/d3-flash locally and turns
-compact state + sub-goal into action decisions with calibrated probabilities.
-
-The d3 model's native interface is model.system_one(state, questions) —
-state in (text/JSON/images), typed questions out with probabilities.
-FastUse's decision layer needs exactly this: given the compact element list,
-pick the next action (typed choice) with a probability.
-
-Usage (once weights are downloaded to D:/models/d3-flash):
-  from p286_d3_decision import D3Decision
-  d = D3Decision()
-  d.decide(state_lines, subgoal, available_actions) -> {action, ref, ...,
-      probability, raw}
+"""d3 decision adapter for FastUse — vllm-sr/d3-flash (Decision 3.0).
+Working interface (verified live): model.system_one(state, questions) with
+  choice questions -> {"type": "choice", "criteria": {opt: desc}, ...}
+  noul questions   -> {"type": "noul", "criteria": {"true":..., "false":...}}
+Returns calibrated probabilities per option.
 """
 import os
 import json
 
 MODEL_DIR = "D:/models/d3-flash"
+_MODEL = None
 
-class D3Decision:
-    def __init__(self, model_dir=MODEL_DIR, device="cuda"):
+
+def get_model(device="cuda"):
+    global _MODEL
+    if _MODEL is None:
         from transformers import AutoModel
-        self.model = AutoModel.from_pretrained(
-            model_dir, trust_remote_code=True).to(device).eval()
-        self.device = device
+        _MODEL = AutoModel.from_pretrained(
+            MODEL_DIR, trust_remote_code=True).to(device).eval()
+    return _MODEL
 
-    def decide(self, state_lines, subgoal, actions, image=None):
-        """state_lines: compact element list; actions: allowed action names
-        for the next step (click/fill/select/check/done); image optional."""
-        state = "\n".join(state_lines)
-        q_choice = {"question": ("Which single action best advances the "
-                                 "sub-goal?"),
-                    "options": actions}
-        q_conf = {"question": ("How confident are you in this action? "
-                               "Rate 0-100."), "type": "score"}
-        result = self.model.system_one(
-            state={"elements": state_lines, "subgoal": subgoal},
-            images=[image] if image else [],
-            questions={"next_action": q_choice, "confidence": q_conf})
-        return result
+
+def decide(state_lines, subgoal, image=None):
+    """One decision: compact state + sub-goal -> next action with calibrated
+    probability + feasibility.  Returns dict with choice/probabilities."""
+    model = get_model()
+    state_obj = {"elements": state_lines, "subgoal": subgoal}
+    kwargs = {}
+    if image:
+        kwargs["images"] = [image]
+    result = model.system_one(
+        state=state_obj,
+        questions={
+            "next_action": {
+                "type": "choice",
+                "criteria": {ln.split("]")[0][1:]: ln
+                             for ln in state_lines},
+                "instructions": ("pick the element ref whose action best "
+                                 "advances the sub-goal")},
+            "subgoal_feasible": {
+                "type": "noul",
+                "criteria": {"true": "the sub-goal can be completed from "
+                                     "this page",
+                             "false": "it cannot"},
+                "instructions": "judge feasibility on this page"}},
+        **kwargs)
+    answers = result.get("answers", {})
+    na = answers.get("next_action", {})
+    feas = answers.get("subgoal_feasible", {})
+    return {"choice": na.get("choice"),
+            "probabilities": na.get("probabilities", {}),
+            "confidence": na.get("confidence"),
+            "feasible": feas.get("noul"),
+            "usage": result.get("usage", {}),
+            "raw": result}
+
+
+if __name__ == "__main__":
+    d = get_model()
+    state = ['[e1] input id=username "用户名" value=""',
+             '[e2] input id=password "密码" value=""',
+             '[e3] button "登录"']
+    r = decide(state, "用 admin/admin123 登录")
+    print(json.dumps({k: v for k, v in r.items() if k != "raw"},
+                     ensure_ascii=False, indent=1, default=str))
