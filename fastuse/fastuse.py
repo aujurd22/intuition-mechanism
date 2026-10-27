@@ -27,6 +27,7 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from p282_fastuse import process, parse_state, do_action, gate, screenshot
+from p289_borrowed import enforce_claims, validate_action, set_of_marks
 
 CFG = {"llm_url": "http://127.0.0.1:8499/v1/chat/completions",
        "max_tokens": 300,
@@ -49,11 +50,10 @@ def llm(messages, max_tokens=None):
 
 PLAN_SYS = ("你是网页操作规划器。给定网页当前状态和总目标，输出完成总目标所需的"
             "全部子目标（最多 8 个，按顺序覆盖总目标的每一部分）。"
-            "子目标必须是任务导向的动作短语，不要照抄网页元素。"
-            "示例——总目标'用 user/1234 注册并提交'→ "
-            '{\"subgoals\":[\"在注册表单填写用户名 user 和密码 1234\",'
-            '\"点击注册按钮\",\"确认注册成功\"]}。'
-            "只输出 JSON：{\"subgoals\":[\"子目标1\",\"子目标2\"]}")
+            "只输出 JSON：{\"subgoals\":[{\"goal\":\"子目标描述（含要填的具体值）\","
+            "\"done_when\":\"完成后页面正文中会逐字出现的短文字\"}]}。"
+            "done_when 必须是字面文本（如 \"欢迎回来\"、\"CHECKS PASS\"、"
+            "\"控制台\"），不要写状态描述。")
 
 
 def plan(goal, state_lines):
@@ -65,11 +65,17 @@ def plan(goal, state_lines):
     if not m:
         return [goal], ms
     try:
-        subs = json.loads(m.group(0)).get("subgoals", [goal])
-        subs = [str(s) for s in subs][:8]
-        return subs or [goal], ms
+        subs = json.loads(m.group(0)).get("subgoals", [])
+        out_subs = []
+        for s in subs[:8]:
+            if isinstance(s, dict):
+                out_subs.append({"goal": str(s.get("goal", "")),
+                                 "done_when": str(s.get("done_when", ""))})
+            else:
+                out_subs.append({"goal": str(s), "done_when": ""})
+        return out_subs or [{"goal": goal, "done_when": ""}], ms
     except Exception:
-        return [goal], ms
+        return [{"goal": goal, "done_when": ""}], ms
 
 
 EXEC_SYS = ("你是网页操作执行器。把网页状态和子目标转成动作 JSON 序列。"
@@ -214,6 +220,17 @@ def run(url, goal, budget, report_path, screenshot_mode=False, local_site=False)
                         break
                     if a.get("action") == "done":
                         sg_done = True
+                        break
+                    # B2: claims 硬门 + B3: 结构化校验（fail-closed）
+                    v_ok, v_why = validate_action(a)
+                    if not v_ok:
+                        report["errors"].append(f"schema: {v_why}")
+                        tries += 1
+                        break
+                    ok_c, c_why = enforce_claims(a)
+                    if not ok_c:
+                        report["errors"].append(f"claims gate: {c_why}")
+                        tries += 1
                         break
                     claims = a.get("claims", [])
                     ok, err = do_action(pg, a)
